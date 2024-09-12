@@ -40,6 +40,8 @@ header:
     - '**/*.ftl'
     - '**/*.aird'
     - '**/*.basic'
+	- '**/*.xsd'
+	- '**/*.log'
     - '**/.classpath'
     - 'LICENSE'
     - 'Jenkinsfile'
