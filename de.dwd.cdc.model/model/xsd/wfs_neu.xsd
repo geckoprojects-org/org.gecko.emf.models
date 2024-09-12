@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:CDC="http://cdc.dwd.de" xmlns:gml="http://www.opengis.net/gml" elementFormDefault="qualified" targetNamespace="http://cdc.dwd.de">
+  <xsd:import namespace="http://www.opengis.net/gml" schemaLocation="https://cdc.dwd.de/geoserver/schemas/gml/3.1.1/base/gml.xsd"/>
+  <xsd:complexType name="OBS_DEU_PT1H_T2MType">
+    <xsd:complexContent>
+      <xsd:extension base="gml:AbstractFeatureType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="SDO_GEOM" nillable="true" type="gml:GeometryPropertyType"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="SDO_TYPE" nillable="true" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="1" name="SDO_GUID" nillable="false" type="xsd:decimal"/>
+          <xsd:element maxOccurs="1" minOccurs="1" name="SDO_CODE" nillable="false" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="1" name="SDO_NAME" nillable="false" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="1" name="ZEITSTEMPEL" nillable="false" type="xsd:dateTime"/>
+          <xsd:element maxOccurs="1" minOccurs="1" name="ZEITINTERVALL" nillable="false" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="1" name="WERT" nillable="false" type="xsd:decimal"/>
+          <xsd:element maxOccurs="1" minOccurs="1" name="EINHEIT" nillable="false" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="QUALITAET_BYTE" nillable="true" type="xsd:decimal"/>
+          <xsd:element maxOccurs="1" minOccurs="1" name="QUALITAET_NIVEAU" nillable="false" type="xsd:decimal"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="OBS_DEU_PT1H_T2M" substitutionGroup="gml:_Feature" type="CDC:OBS_DEU_PT1H_T2MType"/>
+</xsd:schema>

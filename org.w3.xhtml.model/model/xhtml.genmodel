@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2024 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"
+    modelDirectory="/org.w3.xhtml/src" modelPluginID="org.w3.xhtml" modelName="Xhtml"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="11.0" copyrightFields="false" usedGenPackages="../../org.eclipse.emf.ecore/model/XMLNamespace.genmodel#//namespace"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>xhtml.ecore</foreignModel>
+  <genPackages prefix="Xhtml" basePackage="org.w3" resource="XML" disposableProviderFactory="true"
+      loadInitialization="true" literalsInterface="false" ecorePackage="xhtml.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xhtml.ecore#//AlignType">
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//AlignType/left"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//AlignType/center"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//AlignType/right"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//AlignType/justify"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//AlignType/char"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xhtml.ecore#//DirType">
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//DirType/ltr"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//DirType/rtl"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xhtml.ecore#//DirType1">
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//DirType1/ltr"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//DirType1/rtl"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xhtml.ecore#//IsmapType">
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//IsmapType/ismap"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xhtml.ecore#//NohrefType">
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//NohrefType/nohref"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xhtml.ecore#//Scope">
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//Scope/row"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//Scope/col"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//Scope/rowgroup"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//Scope/colgroup"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xhtml.ecore#//Shape">
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//Shape/rect"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//Shape/circle"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//Shape/poly"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//Shape/default"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xhtml.ecore#//TFrame">
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//TFrame/void"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//TFrame/above"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//TFrame/below"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//TFrame/hsides"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//TFrame/lhs"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//TFrame/rhs"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//TFrame/vsides"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//TFrame/box"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//TFrame/border"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xhtml.ecore#//TRules">
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//TRules/none"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//TRules/groups"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//TRules/rows"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//TRules/cols"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//TRules/all"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xhtml.ecore#//ValignType">
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//ValignType/top"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//ValignType/middle"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//ValignType/bottom"/>
+      <genEnumLiterals ecoreEnumLiteral="xhtml.ecore#//ValignType/baseline"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="xhtml.ecore#//AlignTypeObject"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//Character"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//Charset"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//Charsets"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//ContentType"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//ContentTypes"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//Coords"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//Datetime"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//DirTypeObject"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//DirTypeObject1"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//IsmapTypeObject"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//LanguageCode"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//Length"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//LinkTypes"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//MediaDesc"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//MultiLength"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//NohrefTypeObject"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//Number"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//Pixels"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//ScopeObject"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//Script"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//ShapeObject"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//StyleSheet"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//TabindexNumber"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//Text"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//TFrameObject"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//TRulesObject"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//URI"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//UriList"/>
+    <genDataTypes ecoreDataType="xhtml.ecore#//ValignTypeObject"/>
+    <genClasses ecoreClass="xhtml.ecore#//AbbrType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AbbrType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AbbrType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AbbrType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AbbrType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AbbrType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AbbrType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AbbrType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//AContent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute xhtml.ecore#//AContent/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AContent/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/br"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/span"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/bdo"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/map"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/img"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/tt"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/i"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/b"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/big"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/small"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/em"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/strong"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/dfn"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/code"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/q"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/samp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/kbd"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/var"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/cite"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/abbr"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/acronym"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/sub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//AContent/sup"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//AcronymType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AcronymType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AcronymType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AcronymType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AcronymType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AcronymType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AcronymType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AcronymType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//AddressType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AddressType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AddressType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AddressType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AddressType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AddressType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AddressType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AddressType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//AreaType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AreaType/accesskey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AreaType/alt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AreaType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AreaType/coords"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AreaType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AreaType/href"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AreaType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AreaType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AreaType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AreaType/nohref"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AreaType/shape"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AreaType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AreaType/tabindex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AreaType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//AType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AType/accesskey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AType/charset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AType/coords"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AType/href"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AType/hreflang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AType/rel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AType/rev"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AType/shape"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AType/tabindex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AType/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//AType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//BdoType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BdoType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BdoType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BdoType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BdoType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BdoType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BdoType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BdoType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//BigType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BigType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BigType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BigType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BigType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BigType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BigType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BigType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//Block">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute xhtml.ecore#//Block/block"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Block/p"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Block/h1"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Block/h2"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Block/h3"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Block/h4"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Block/h5"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Block/h6"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Block/div"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Block/ul"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Block/ol"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Block/dl"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Block/pre"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Block/hr"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Block/blockquote"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Block/address"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Block/table"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//BlockquoteType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BlockquoteType/cite"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BlockquoteType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BlockquoteType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BlockquoteType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BlockquoteType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BlockquoteType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BlockquoteType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BlockquoteType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//BrType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BrType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BrType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BrType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BrType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//BType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//BType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//CaptionType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//CaptionType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//CaptionType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//CaptionType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//CaptionType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//CaptionType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//CaptionType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//CaptionType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//CiteType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//CiteType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//CiteType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//CiteType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//CiteType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//CiteType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//CiteType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//CiteType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//CodeType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//CodeType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//CodeType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//CodeType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//CodeType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//CodeType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//CodeType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//CodeType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//ColgroupType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//ColgroupType/col"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColgroupType/align"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColgroupType/char"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColgroupType/charoff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColgroupType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColgroupType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColgroupType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColgroupType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColgroupType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColgroupType/span"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColgroupType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColgroupType/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColgroupType/valign"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColgroupType/width"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//ColType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColType/align"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColType/char"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColType/charoff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColType/span"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColType/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColType/valign"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ColType/width"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//DdType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DdType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DdType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DdType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DdType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DdType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DdType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DdType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//DfnType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DfnType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DfnType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DfnType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DfnType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DfnType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DfnType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DfnType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//DivType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DivType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DivType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DivType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DivType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DivType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DivType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DivType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//DlType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute xhtml.ecore#//DlType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//DlType/dt"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//DlType/dd"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DlType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DlType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DlType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DlType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DlType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DlType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DlType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/a"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/abbr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/acronym"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/address"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/area"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/b"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/bdo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/big"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/blockquote"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/br"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/caption"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/cite"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/code"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/col"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/colgroup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/dd"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/dfn"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/div"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/dl"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/dt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/em"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/h1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/h2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/h3"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/h4"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/h5"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/h6"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/hr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/i"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/img"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/kbd"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/li"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/map"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/ol"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/p"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/pre"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/q"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/samp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/small"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/span"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/strong"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/sub"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/sup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/table"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/tbody"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/td"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/tfoot"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/th"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/thead"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/tr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/tt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/ul"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//DocumentRoot/var"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//DtType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DtType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DtType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DtType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DtType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DtType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DtType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//DtType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//EmType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//EmType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//EmType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//EmType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//EmType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//EmType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//EmType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//EmType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//Flow">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute xhtml.ecore#//Flow/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//Flow/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/p"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/h1"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/h2"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/h3"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/h4"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/h5"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/h6"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/div"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/ul"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/ol"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/dl"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/pre"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/hr"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/blockquote"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/address"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/table"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/a"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/br"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/span"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/bdo"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/map"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/img"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/tt"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/i"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/b"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/big"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/small"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/em"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/strong"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/dfn"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/code"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/q"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/samp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/kbd"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/var"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/cite"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/abbr"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/acronym"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/sub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Flow/sup"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//H1Type">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H1Type/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H1Type/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H1Type/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H1Type/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H1Type/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H1Type/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H1Type/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//H2Type">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H2Type/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H2Type/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H2Type/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H2Type/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H2Type/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H2Type/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H2Type/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//H3Type">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H3Type/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H3Type/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H3Type/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H3Type/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H3Type/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H3Type/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H3Type/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//H4Type">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H4Type/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H4Type/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H4Type/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H4Type/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H4Type/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H4Type/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H4Type/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//H5Type">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H5Type/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H5Type/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H5Type/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H5Type/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H5Type/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H5Type/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H5Type/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//H6Type">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H6Type/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H6Type/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H6Type/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H6Type/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H6Type/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H6Type/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//H6Type/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//HrType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//HrType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//HrType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//HrType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//HrType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//HrType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//HrType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//HrType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//ImgType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ImgType/alt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ImgType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ImgType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ImgType/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ImgType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ImgType/ismap"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ImgType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ImgType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ImgType/longdesc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ImgType/src"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ImgType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ImgType/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ImgType/usemap"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ImgType/width"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//Inline">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute xhtml.ecore#//Inline/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//Inline/inline"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/a"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/br"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/span"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/bdo"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/map"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/img"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/tt"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/i"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/b"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/big"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/small"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/em"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/strong"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/dfn"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/code"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/q"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/samp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/kbd"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/var"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/cite"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/abbr"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/acronym"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/sub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//Inline/sup"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//IType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//IType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//IType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//IType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//IType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//IType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//IType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//IType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//KbdType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//KbdType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//KbdType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//KbdType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//KbdType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//KbdType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//KbdType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//KbdType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//LiType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//LiType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//LiType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//LiType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//LiType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//LiType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//LiType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//LiType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//MapType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute xhtml.ecore#//MapType/block"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//MapType/p"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//MapType/h1"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//MapType/h2"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//MapType/h3"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//MapType/h4"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//MapType/h5"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//MapType/h6"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//MapType/div"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//MapType/ul"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//MapType/ol"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//MapType/dl"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//MapType/pre"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//MapType/hr"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//MapType/blockquote"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//MapType/address"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//MapType/table"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//MapType/area"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//MapType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//MapType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//MapType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//MapType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//MapType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//MapType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//MapType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//MapType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//OlType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//OlType/li"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//OlType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//OlType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//OlType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//OlType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//OlType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//OlType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//OlType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//PreContent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute xhtml.ecore#//PreContent/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//PreContent/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/a"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/tt"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/i"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/b"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/big"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/small"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/em"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/strong"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/dfn"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/code"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/q"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/samp"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/kbd"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/var"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/cite"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/abbr"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/acronym"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/sub"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/sup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/br"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/span"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/bdo"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//PreContent/map"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//PreType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//PreType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//PreType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//PreType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//PreType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//PreType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//PreType/space"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//PreType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//PreType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//PType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//PType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//PType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//PType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//PType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//PType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//PType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//PType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//QType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//QType/cite1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//QType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//QType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//QType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//QType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//QType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//QType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//QType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//SampType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SampType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SampType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SampType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SampType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SampType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SampType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SampType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//SmallType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SmallType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SmallType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SmallType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SmallType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SmallType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SmallType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SmallType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//SpanType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SpanType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SpanType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SpanType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SpanType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SpanType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SpanType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SpanType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//StrongType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//StrongType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//StrongType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//StrongType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//StrongType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//StrongType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//StrongType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//StrongType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//SubType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SubType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SubType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SubType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SubType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SubType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SubType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SubType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//SupType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SupType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SupType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SupType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SupType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SupType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SupType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//SupType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//TableType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//TableType/caption"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//TableType/col"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//TableType/colgroup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//TableType/thead"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//TableType/tfoot"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//TableType/tbody"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//TableType/tr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TableType/border"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TableType/cellpadding"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TableType/cellspacing"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TableType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TableType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TableType/frame"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TableType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TableType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TableType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TableType/rules"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TableType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TableType/summary"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TableType/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TableType/width"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//TbodyType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//TbodyType/tr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TbodyType/align"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TbodyType/char"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TbodyType/charoff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TbodyType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TbodyType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TbodyType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TbodyType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TbodyType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TbodyType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TbodyType/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TbodyType/valign"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//TdType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TdType/abbr1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TdType/align"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TdType/axis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TdType/char"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TdType/charoff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TdType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TdType/colspan"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TdType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TdType/headers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TdType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TdType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TdType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TdType/rowspan"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TdType/scope"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TdType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TdType/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TdType/valign"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//TfootType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//TfootType/tr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TfootType/align"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TfootType/char"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TfootType/charoff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TfootType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TfootType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TfootType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TfootType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TfootType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TfootType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TfootType/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TfootType/valign"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//TheadType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//TheadType/tr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TheadType/align"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TheadType/char"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TheadType/charoff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TheadType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TheadType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TheadType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TheadType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TheadType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TheadType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TheadType/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TheadType/valign"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//ThType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ThType/abbr1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ThType/align"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ThType/axis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ThType/char"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ThType/charoff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ThType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ThType/colspan"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ThType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ThType/headers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ThType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ThType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ThType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ThType/rowspan"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ThType/scope"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ThType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ThType/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//ThType/valign"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//TrType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute xhtml.ecore#//TrType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//TrType/th"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xhtml.ecore#//TrType/td"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TrType/align"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TrType/char"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TrType/charoff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TrType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TrType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TrType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TrType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TrType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TrType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TrType/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TrType/valign"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//TtType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TtType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TtType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TtType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TtType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TtType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TtType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//TtType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//UlType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xhtml.ecore#//UlType/li"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//UlType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//UlType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//UlType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//UlType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//UlType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//UlType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//UlType/title"/>
+    </genClasses>
+    <genClasses ecoreClass="xhtml.ecore#//VarType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//VarType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//VarType/dir"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//VarType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//VarType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//VarType/lang1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//VarType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xhtml.ecore#//VarType/title"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

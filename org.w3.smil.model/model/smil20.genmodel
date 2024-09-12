@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2024 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"
+    modelDirectory="/org.w3.smil.model/src" modelPluginID="org.w3.smil.model" modelName="Smil20"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="11.0" copyrightFields="false" usedGenPackages="../../org.eclipse.emf.ecore/model/XMLNamespace.genmodel#//namespace"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>smil20.ecore</foreignModel>
+  <foreignModel>smil-language.ecore</foreignModel>
+  <genPackages prefix="Smil20" basePackage="org.w3._2001" resource="XML" disposableProviderFactory="true"
+      contentTypeIdentifier="smil20" ecorePackage="smil20.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="smil20.ecore#//AccumulateType">
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//AccumulateType/none"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//AccumulateType/sum"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="smil20.ecore#//AdditiveType">
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//AdditiveType/replace"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//AdditiveType/sum"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="smil20.ecore#//AttributeTypeType">
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//AttributeTypeType/XML"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//AttributeTypeType/CSS"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//AttributeTypeType/auto"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="smil20.ecore#//CalcModeType">
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//CalcModeType/discrete"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//CalcModeType/linear"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//CalcModeType/paced"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="smil20.ecore#//FillDefaultType">
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//FillDefaultType/remove"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//FillDefaultType/freeze"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//FillDefaultType/hold"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//FillDefaultType/auto"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//FillDefaultType/inherit"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//FillDefaultType/transition"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="smil20.ecore#//FillTimingAttrsType">
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//FillTimingAttrsType/remove"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//FillTimingAttrsType/freeze"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//FillTimingAttrsType/hold"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//FillTimingAttrsType/auto"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//FillTimingAttrsType/default"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//FillTimingAttrsType/transition"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="smil20.ecore#//RestartDefaultType">
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//RestartDefaultType/never"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//RestartDefaultType/always"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//RestartDefaultType/whenNotActive"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//RestartDefaultType/inherit"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="smil20.ecore#//RestartTimingType">
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//RestartTimingType/never"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//RestartTimingType/always"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//RestartTimingType/whenNotActive"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//RestartTimingType/default"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="smil20.ecore#//SyncBehaviorDefaultType">
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//SyncBehaviorDefaultType/canSlip"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//SyncBehaviorDefaultType/locked"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//SyncBehaviorDefaultType/independent"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//SyncBehaviorDefaultType/inherit"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="smil20.ecore#//SyncBehaviorType">
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//SyncBehaviorType/canSlip"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//SyncBehaviorType/locked"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//SyncBehaviorType/independent"/>
+      <genEnumLiterals ecoreEnumLiteral="smil20.ecore#//SyncBehaviorType/default"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="smil20.ecore#//AccumulateTypeObject"/>
+    <genDataTypes ecoreDataType="smil20.ecore#//AdditiveTypeObject"/>
+    <genDataTypes ecoreDataType="smil20.ecore#//AttributeTypeTypeObject"/>
+    <genDataTypes ecoreDataType="smil20.ecore#//CalcModeTypeObject"/>
+    <genDataTypes ecoreDataType="smil20.ecore#//FillDefaultTypeObject"/>
+    <genDataTypes ecoreDataType="smil20.ecore#//FillTimingAttrsTypeObject"/>
+    <genDataTypes ecoreDataType="smil20.ecore#//NonNegativeDecimalType"/>
+    <genDataTypes ecoreDataType="smil20.ecore#//RestartDefaultTypeObject"/>
+    <genDataTypes ecoreDataType="smil20.ecore#//RestartTimingTypeObject"/>
+    <genDataTypes ecoreDataType="smil20.ecore#//SyncBehaviorDefaultTypeObject"/>
+    <genDataTypes ecoreDataType="smil20.ecore#//SyncBehaviorTypeObject"/>
+    <genClasses ecoreClass="smil20.ecore#//AnimateColorPrototype">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimateColorPrototype/accumulate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimateColorPrototype/additive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimateColorPrototype/attributeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimateColorPrototype/attributeType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimateColorPrototype/by"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimateColorPrototype/from"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimateColorPrototype/to"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimateColorPrototype/values"/>
+    </genClasses>
+    <genClasses ecoreClass="smil20.ecore#//AnimateMotionPrototype">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimateMotionPrototype/accumulate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimateMotionPrototype/additive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimateMotionPrototype/by"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimateMotionPrototype/from"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimateMotionPrototype/origin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimateMotionPrototype/to"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimateMotionPrototype/values"/>
+    </genClasses>
+    <genClasses ecoreClass="smil20.ecore#//AnimatePrototype">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimatePrototype/accumulate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimatePrototype/additive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimatePrototype/attributeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimatePrototype/attributeType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimatePrototype/by"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimatePrototype/from"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimatePrototype/to"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//AnimatePrototype/values"/>
+    </genClasses>
+    <genClasses ecoreClass="smil20.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference smil20.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference smil20.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smil20.ecore#//DocumentRoot/animate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smil20.ecore#//DocumentRoot/animateColor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smil20.ecore#//DocumentRoot/animateMotion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smil20.ecore#//DocumentRoot/set"/>
+    </genClasses>
+    <genClasses ecoreClass="smil20.ecore#//SetPrototype">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//SetPrototype/attributeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//SetPrototype/attributeType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil20.ecore#//SetPrototype/to"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Language" basePackage="org.w3._2001.smil20" resource="XML"
+      disposableProviderFactory="true" contentTypeIdentifier="smil20-language" ecorePackage="smil-language.ecore#/">
+    <genClasses ecoreClass="smil-language.ecore#//AnimateColorType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/alt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/begin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/calcMode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/dur"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/end"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/fill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/fillDefault"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/longdesc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/max"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/repeat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/repeatCount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/repeatDur"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/restart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/restartDefault"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/skipContent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/syncBehavior"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/syncBehaviorDefault"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/syncTolerance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/syncToleranceDefault"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/targetElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateColorType/anyAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="smil-language.ecore#//AnimateMotionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/alt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/begin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/calcMode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/dur"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/end"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/fill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/fillDefault"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/longdesc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/max"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/repeat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/repeatCount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/repeatDur"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/restart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/restartDefault"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/skipContent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/syncBehavior"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/syncBehaviorDefault"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/syncTolerance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/syncToleranceDefault"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/targetElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateMotionType/anyAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="smil-language.ecore#//AnimateType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/alt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/begin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/calcMode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/dur"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/end"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/fill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/fillDefault"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/longdesc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/max"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/repeat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/repeatCount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/repeatDur"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/restart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/restartDefault"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/skipContent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/syncBehavior"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/syncBehaviorDefault"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/syncTolerance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/syncToleranceDefault"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/targetElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute smil-language.ecore#//AnimateType/anyAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="smil-language.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference smil-language.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference smil-language.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smil-language.ecore#//DocumentRoot/animate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smil-language.ecore#//DocumentRoot/animateColor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smil-language.ecore#//DocumentRoot/animateMotion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference smil-language.ecore#//DocumentRoot/set"/>
+    </genClasses>
+    <genClasses ecoreClass="smil-language.ecore#//SetType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/alt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/begin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/dur"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/end"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/fill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/fillDefault"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/longdesc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/max"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/repeat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/repeatCount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/repeatDur"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/restart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/restartDefault"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/skipContent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/syncBehavior"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/syncBehaviorDefault"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/syncTolerance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/syncToleranceDefault"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/targetElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute smil-language.ecore#//SetType/anyAttribute"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

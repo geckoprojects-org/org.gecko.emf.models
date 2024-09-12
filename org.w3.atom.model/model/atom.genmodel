@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2024 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"
+    modelDirectory="/org.w3c.atom.model/src" modelPluginID="org.w3c.atom.model" modelName="Atom"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="11.0" copyrightFields="false" operationReflection="true" importOrganizing="true"
+    oSGiCompatible="true">
+  <foreignModel>atom.ecore</foreignModel>
+  <genPackages prefix="Atom" basePackage="org.w3._2005" resource="XML" disposableProviderFactory="true"
+      ecorePackage="atom.ecore#/">
+    <genDataTypes ecoreDataType="atom.ecore#//AtomEmailAddress"/>
+    <genDataTypes ecoreDataType="atom.ecore#//AtomLanguageTag"/>
+    <genDataTypes ecoreDataType="atom.ecore#//AtomMediaType"/>
+    <genClasses ecoreClass="atom.ecore#//AtomPersonConstruct">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute atom.ecore#//AtomPersonConstruct/group"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atom.ecore#//AtomPersonConstruct/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atom.ecore#//AtomPersonConstruct/uri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atom.ecore#//AtomPersonConstruct/email"/>
+    </genClasses>
+    <genClasses ecoreClass="atom.ecore#//LinkType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atom.ecore#//LinkType/href"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atom.ecore#//LinkType/hreflang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atom.ecore#//LinkType/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atom.ecore#//LinkType/rel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atom.ecore#//LinkType/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atom.ecore#//LinkType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="atom.ecore#//AtomDocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute atom.ecore#//AtomDocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference atom.ecore#//AtomDocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference atom.ecore#//AtomDocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference atom.ecore#//AtomDocumentRoot/author"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atom.ecore#//AtomDocumentRoot/email"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference atom.ecore#//AtomDocumentRoot/link"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atom.ecore#//AtomDocumentRoot/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atom.ecore#//AtomDocumentRoot/uri"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

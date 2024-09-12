@@ -1,0 +1,1088 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.camunda.bpm.modeler.runtime.engine/src" modelPluginID="org.camunda.bpm.modeler.runtime.engine.model"
+    redirection="" forceOverwrite="true" modelName="CamundaExtensions" modelPluginClass=""
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0" copyrightFields="false"
+    oSGiCompatible="true">
+  <foreignModel>camundaExtensions.ecore</foreignModel>
+  <genPackages prefix="CamundaExt" basePackage="org.camunda.bpm" resource="XML" disposableProviderFactory="true"
+      contentTypeIdentifier="bpmn#camunda" fileExtensions="bpmn" ecorePackage="camundaExtensions.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="camundaExtensions.ecore#//EventType">
+      <genEnumLiterals ecoreEnumLiteral="camundaExtensions.ecore#//EventType/create"/>
+      <genEnumLiterals ecoreEnumLiteral="camundaExtensions.ecore#//EventType/assignment"/>
+      <genEnumLiterals ecoreEnumLiteral="camundaExtensions.ecore#//EventType/complete"/>
+      <genEnumLiterals ecoreEnumLiteral="camundaExtensions.ecore#//EventType/delete"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="camundaExtensions.ecore#//EventType1">
+      <genEnumLiterals ecoreEnumLiteral="camundaExtensions.ecore#//EventType1/start"/>
+      <genEnumLiterals ecoreEnumLiteral="camundaExtensions.ecore#//EventType1/end"/>
+      <genEnumLiterals ecoreEnumLiteral="camundaExtensions.ecore#//EventType1/take"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="camundaExtensions.ecore#//HistoryType">
+      <genEnumLiterals ecoreEnumLiteral="camundaExtensions.ecore#//HistoryType/none"/>
+      <genEnumLiterals ecoreEnumLiteral="camundaExtensions.ecore#//HistoryType/activity"/>
+      <genEnumLiterals ecoreEnumLiteral="camundaExtensions.ecore#//HistoryType/audit"/>
+      <genEnumLiterals ecoreEnumLiteral="camundaExtensions.ecore#//HistoryType/full"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="camundaExtensions.ecore#//TypeType">
+      <genEnumLiterals ecoreEnumLiteral="camundaExtensions.ecore#//TypeType/mail"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="camundaExtensions.ecore#//ClassType"/>
+    <genDataTypes ecoreDataType="camundaExtensions.ecore#//EventTypeObject"/>
+    <genDataTypes ecoreDataType="camundaExtensions.ecore#//EventTypeObject1"/>
+    <genDataTypes ecoreDataType="camundaExtensions.ecore#//FormHandlerClassType"/>
+    <genDataTypes ecoreDataType="camundaExtensions.ecore#//HistoryTypeObject"/>
+    <genDataTypes ecoreDataType="camundaExtensions.ecore#//TExpression"/>
+    <genDataTypes ecoreDataType="camundaExtensions.ecore#//TypeTypeObject"/>
+    <genClasses ecoreClass="camundaExtensions.ecore#//DocumentRoot">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//DocumentRoot/executionListener"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//DocumentRoot/field"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//DocumentRoot/formProperty"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//DocumentRoot/in"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//DocumentRoot/out"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//DocumentRoot/taskListener"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/assignee"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/candidateGroups"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/candidateUsers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/collection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/delegateExpression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/dueDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/elementVariable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/formHandlerClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/formKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/history"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/initiator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/resultVariable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/async"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/actExpression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/priority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/resultVariableName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//DocumentRoot/failedJobRetryTimeCycle"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//DocumentRoot/formData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/followUpDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//DocumentRoot/properties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/exclusive"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//DocumentRoot/connector"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//DocumentRoot/inputOutput"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/asyncAfter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/asyncBefore"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//DocumentRoot/resource1"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//StartEvent"/>
+    <genClasses ecoreClass="camundaExtensions.ecore#//ExecutionListenerType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//ExecutionListenerType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference camundaExtensions.ecore#//ExecutionListenerType/field"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//ExecutionListenerType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//ExecutionListenerType/delegateExpression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//ExecutionListenerType/event"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//ExecutionListenerType/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//ExecutionListenerType/script"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//FieldType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FieldType/string"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FieldType/expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FieldType/expression1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FieldType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FieldType/stringValue"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//FormPropertyType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//FormPropertyType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FormPropertyType/datePattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FormPropertyType/expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FormPropertyType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FormPropertyType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FormPropertyType/readable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FormPropertyType/required"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FormPropertyType/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FormPropertyType/value1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FormPropertyType/variable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FormPropertyType/writable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FormPropertyType/default"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//InType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//InType/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//InType/sourceExpression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//InType/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//InType/variables"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//InType/businessKey"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//OutType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//OutType/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//OutType/sourceExpression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//OutType/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//OutType/variables"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//TaskListenerType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//TaskListenerType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference camundaExtensions.ecore#//TaskListenerType/field"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//TaskListenerType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//TaskListenerType/delegateExpression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//TaskListenerType/event"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//TaskListenerType/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//TaskListenerType/script"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//CallActivity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//CallActivity/calledElement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//CallActivity/calledElementBinding"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//CallActivity/calledElementVersion"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//BoundaryEvent"/>
+    <genClasses ecoreClass="camundaExtensions.ecore#//ValueType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//ValueType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//ValueType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//FormDataType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//FormDataType/formField"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//FormFieldType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FormFieldType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FormFieldType/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FormFieldType/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FormFieldType/defaultValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//FormFieldType/properties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//FormFieldType/validation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//FormFieldType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//PropertiesType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//PropertiesType/property"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//PropertyType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//PropertyType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//PropertyType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//PropertyType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//ValidationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//ValidationType/constraint"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//ConstraintType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//ConstraintType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//ConstraintType/config"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//UserTask"/>
+    <genClasses ecoreClass="camundaExtensions.ecore#//FormDataContainer"/>
+    <genClasses ecoreClass="camundaExtensions.ecore#//Expression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//Expression/body"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//Expression/mixed"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//ConnectorType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//ConnectorType/connectorId"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//ConnectorType/inputOutput"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//InputOutputType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//InputOutputType/inputParameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//InputOutputType/outputParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//ParameterType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//ParameterType/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//ParameterType/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference camundaExtensions.ecore#//ParameterType/script"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference camundaExtensions.ecore#//ParameterType/map"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference camundaExtensions.ecore#//ParameterType/list"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//ParameterType/text"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//ScriptType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//ScriptType/scriptFormat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//ScriptType/resource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//ScriptType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//ScriptType/text"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//MapType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference camundaExtensions.ecore#//MapType/entries"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//EntryType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//EntryType/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//EntryType/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference camundaExtensions.ecore#//EntryType/script"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference camundaExtensions.ecore#//EntryType/map"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference camundaExtensions.ecore#//EntryType/list"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//EntryType/text"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//ListType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//ListType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference camundaExtensions.ecore#//ListType/scripts"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference camundaExtensions.ecore#//ListType/maps"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference camundaExtensions.ecore#//ListType/lists"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//ListType/values"/>
+    </genClasses>
+    <genClasses ecoreClass="camundaExtensions.ecore#//FailedJobRetryTimeCycleType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FailedJobRetryTimeCycleType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute camundaExtensions.ecore#//FailedJobRetryTimeCycleType/text"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Bpmn2" ecorePackage="http://www.omg.org/spec/BPMN/20100524/MODEL#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.omg.org/spec/BPMN/20100524/MODEL#//ItemKind">
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//ItemKind/Physical"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//ItemKind/Information"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.omg.org/spec/BPMN/20100524/MODEL#//ProcessType">
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//ProcessType/None"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//ProcessType/Public"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//ProcessType/Private"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.omg.org/spec/BPMN/20100524/MODEL#//GatewayDirection">
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//GatewayDirection/Unspecified"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//GatewayDirection/Converging"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//GatewayDirection/Diverging"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//GatewayDirection/Mixed"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.omg.org/spec/BPMN/20100524/MODEL#//EventBasedGatewayType">
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//EventBasedGatewayType/Parallel"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//EventBasedGatewayType/Exclusive"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.omg.org/spec/BPMN/20100524/MODEL#//RelationshipDirection">
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//RelationshipDirection/None"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//RelationshipDirection/Forward"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//RelationshipDirection/Backward"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//RelationshipDirection/Both"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.omg.org/spec/BPMN/20100524/MODEL#//ChoreographyLoopType">
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//ChoreographyLoopType/None"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//ChoreographyLoopType/Standard"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//ChoreographyLoopType/MultiInstanceSequential"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//ChoreographyLoopType/MultiInstanceParallel"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.omg.org/spec/BPMN/20100524/MODEL#//AssociationDirection">
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//AssociationDirection/None"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//AssociationDirection/One"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//AssociationDirection/Both"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.omg.org/spec/BPMN/20100524/MODEL#//MultiInstanceBehavior">
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//MultiInstanceBehavior/None"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//MultiInstanceBehavior/One"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//MultiInstanceBehavior/All"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//MultiInstanceBehavior/Complex"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="http://www.omg.org/spec/BPMN/20100524/MODEL#//AdHocOrdering">
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//AdHocOrdering/Parallel"/>
+      <genEnumLiterals ecoreEnumLiteral="http://www.omg.org/spec/BPMN/20100524/MODEL#//AdHocOrdering/Sequential"/>
+    </genEnums>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/activity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/adHocSubProcess"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/flowElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/artifact"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/assignment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/association"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/auditing"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/baseElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/baseElementWithMixedContent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/boundaryEvent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/businessRuleTask"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/callableElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/callActivity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/callChoreography"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/callConversation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/conversationNode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/cancelEventDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/eventDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/rootElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/catchEvent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/category"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/categoryValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/choreography"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/collaboration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/choreographyActivity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/choreographyTask"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/compensateEventDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/complexBehaviorDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/complexGateway"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/conditionalEventDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/conversation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/conversationAssociation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/conversationLink"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/correlationKey"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/correlationProperty"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/correlationPropertyBinding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/correlationPropertyRetrievalExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/correlationSubscription"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/dataAssociation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/dataInput"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/dataInputAssociation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/dataObject"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/dataObjectReference"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/dataOutput"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/dataOutputAssociation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/dataState"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/dataStore"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/dataStoreReference"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/definitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/documentation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/endEvent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/endPoint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/error"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/errorEventDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/escalation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/escalationEventDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/event"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/eventBasedGateway"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/exclusiveGateway"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/extension"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/extensionElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/flowNode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/formalExpression"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/gateway"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/globalBusinessRuleTask"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/globalChoreographyTask"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/globalConversation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/globalManualTask"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/globalScriptTask"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/globalTask"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/globalUserTask"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/group"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/humanPerformer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/performer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/resourceRole"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/implicitThrowEvent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/import"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/inclusiveGateway"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/inputSet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/interface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/intermediateCatchEvent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/intermediateThrowEvent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/ioBinding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/ioSpecification"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/itemDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/lane"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/laneSet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/linkEventDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/loopCharacteristics"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/manualTask"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/message"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/messageEventDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/messageFlow"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/messageFlowAssociation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/monitoring"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/multiInstanceLoopCharacteristics"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/operation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/outputSet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/parallelGateway"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/participant"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/participantAssociation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/participantMultiplicity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/partnerEntity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/partnerRole"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/potentialOwner"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/process"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/property"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/receiveTask"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/relationship"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/rendering"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/resource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/resourceAssignmentExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/resourceParameter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/resourceParameterBinding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/script"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/scriptTask"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/sendTask"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/sequenceFlow"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/serviceTask"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/signal"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/signalEventDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/standardLoopCharacteristics"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/startEvent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/subChoreography"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/subConversation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/subProcess"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/task"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/terminateEventDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/text"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/textAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/throwEvent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/timerEventDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/transaction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DocumentRoot/userTask"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Interface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Interface/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Interface/operations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Interface/implementationRef"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//RootElement"/>
+    <genClasses image="false" ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//BaseElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//BaseElement/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//BaseElement/extensionDefinitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//BaseElement/extensionValues"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//BaseElement/documentation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//BaseElement/description"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ExtensionDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ExtensionDefinition/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ExtensionDefinition/extensionAttributeDefinitions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ExtensionDefinition/id"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ExtensionAttributeDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ExtensionAttributeDefinition/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ExtensionAttributeDefinition/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ExtensionAttributeDefinition/isReference"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ExtensionAttributeDefinition/extensionDefinition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ExtensionAttributeDefinition/id"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ExtensionAttributeValue">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ExtensionAttributeValue/valueRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ExtensionAttributeValue/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ExtensionAttributeValue/extensionAttributeDefinition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ExtensionAttributeValue/id"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Documentation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Documentation/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Documentation/textFormat"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Operation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Operation/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Operation/inMessageRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Operation/outMessageRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Operation/errorRefs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Operation/implementationRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Message">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Message/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Message/itemRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ItemDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ItemDefinition/itemKind"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ItemDefinition/structureRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ItemDefinition/isCollection"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ItemDefinition/import"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Import/importType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Import/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Import/namespace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Import/id"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Error">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Error/structureRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Error/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Error/errorCode"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//EndPoint"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Auditing"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//GlobalTask">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//GlobalTask/resources"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//CallableElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//CallableElement/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CallableElement/ioSpecification"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CallableElement/supportedInterfaceRefs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CallableElement/ioBinding"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//InputOutputSpecification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//InputOutputSpecification/inputSets"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//InputOutputSpecification/outputSets"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//InputOutputSpecification/dataInputs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//InputOutputSpecification/dataOutputs"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//InputSet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//InputSet/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//InputSet/dataInputRefs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//InputSet/optionalInputRefs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//InputSet/whileExecutingInputRefs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//InputSet/outputSetRefs"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//DataInput">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//DataInput/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//DataInput/isCollection"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DataInput/inputSetWithOptional"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DataInput/inputSetWithWhileExecuting"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DataInput/inputSetRefs"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ItemAwareElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ItemAwareElement/itemSubjectRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ItemAwareElement/dataState"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//DataState">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//DataState/name"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//OutputSet">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//OutputSet/dataOutputRefs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//OutputSet/optionalOutputRefs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//OutputSet/whileExecutingOutputRefs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//OutputSet/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//OutputSet/inputSetRefs"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//DataOutput">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//DataOutput/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//DataOutput/isCollection"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DataOutput/outputSetWithOptional"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DataOutput/outputSetWithWhileExecuting"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DataOutput/outputSetRefs"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//InputOutputBinding">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//InputOutputBinding/inputDataRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//InputOutputBinding/outputDataRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//InputOutputBinding/operationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//InputOutputBinding/id"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ResourceRole">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ResourceRole/resourceRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ResourceRole/resourceParameterBindings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ResourceRole/resourceAssignmentExpression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ResourceRole/name"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Resource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Resource/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Resource/resourceParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ResourceParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ResourceParameter/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ResourceParameter/isRequired"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ResourceParameter/type"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ResourceParameterBinding">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ResourceParameterBinding/expression"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ResourceParameterBinding/parameterRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ResourceParameterBinding/id"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Expression"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ResourceAssignmentExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ResourceAssignmentExpression/expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ResourceAssignmentExpression/id"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Monitoring"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Performer"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Process">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Process/processType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Process/isClosed"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Process/auditing"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Process/monitoring"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Process/properties"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Process/supports"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Process/definitionalCollaborationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Process/isExecutable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Process/resources"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Process/artifacts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Process/correlationSubscriptions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Process/decomposedBy"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Process/decomposes"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//FlowElementsContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//FlowElementsContainer/flowElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//FlowElementsContainer/laneSets"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//FlowElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//FlowElement/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//FlowElement/auditing"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//FlowElement/monitoring"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//FlowElement/categoryValueRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//CategoryValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//CategoryValue/value"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CategoryValue/categorizedFlowElements"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//LaneSet">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//LaneSet/lanes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//LaneSet/name"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Lane">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Lane/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Lane/childLaneSet"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Lane/partitionElementRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Lane/flowNodeRefs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Lane/partitionElement"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//FlowNode">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//FlowNode/outgoing"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//FlowNode/incoming"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//FlowNode/lanes"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//SequenceFlow">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//SequenceFlow/isImmediate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//SequenceFlow/conditionExpression"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//SequenceFlow/targetRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//SequenceFlow/sourceRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Property/name"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Collaboration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Collaboration/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Collaboration/isClosed"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Collaboration/choreographyRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Collaboration/artifacts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Collaboration/participantAssociations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Collaboration/messageFlowAssociations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Collaboration/conversationAssociations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Collaboration/participants"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Collaboration/messageFlows"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Collaboration/correlationKeys"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Collaboration/conversations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Collaboration/conversationLinks"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Choreography"/>
+    <genClasses image="false" ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Artifact"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ParticipantAssociation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ParticipantAssociation/innerParticipantRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ParticipantAssociation/outerParticipantRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Participant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Participant/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Participant/interfaceRefs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Participant/participantMultiplicity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Participant/endPointRefs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Participant/processRef"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//InteractionNode">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//InteractionNode/incomingConversationLinks"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//InteractionNode/outgoingConversationLinks"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ConversationLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ConversationLink/sourceRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ConversationLink/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ConversationLink/targetRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ParticipantMultiplicity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ParticipantMultiplicity/minimum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ParticipantMultiplicity/maximum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ParticipantMultiplicity/id"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//MessageFlowAssociation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//MessageFlowAssociation/innerMessageFlowRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//MessageFlowAssociation/outerMessageFlowRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//MessageFlow">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//MessageFlow/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//MessageFlow/sourceRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//MessageFlow/targetRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//MessageFlow/messageRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ConversationAssociation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ConversationAssociation/innerConversationNodeRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ConversationAssociation/outerConversationNodeRef"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ConversationNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ConversationNode/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ConversationNode/participantRefs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ConversationNode/messageFlowRefs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ConversationNode/correlationKeys"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//CorrelationKey">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CorrelationKey/correlationPropertyRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//CorrelationKey/name"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//CorrelationProperty">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CorrelationProperty/correlationPropertyRetrievalExpression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//CorrelationProperty/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CorrelationProperty/type"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//CorrelationPropertyRetrievalExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CorrelationPropertyRetrievalExpression/messagePath"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CorrelationPropertyRetrievalExpression/messageRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//FormalExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//FormalExpression/language"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//FormalExpression/body"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//FormalExpression/evaluatesToTypeRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//CorrelationSubscription">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CorrelationSubscription/correlationKeyRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CorrelationSubscription/correlationPropertyBinding"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//CorrelationPropertyBinding">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CorrelationPropertyBinding/dataPath"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CorrelationPropertyBinding/correlationPropertyRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//GlobalManualTask"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ManualTask"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Task"/>
+    <genClasses image="false" ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Activity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Activity/isForCompensation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Activity/loopCharacteristics"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Activity/resources"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Activity/default"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Activity/properties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Activity/ioSpecification"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Activity/boundaryEventRefs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Activity/dataInputAssociations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Activity/dataOutputAssociations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Activity/startQuantity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Activity/completionQuantity"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//LoopCharacteristics"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//BoundaryEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//BoundaryEvent/cancelActivity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//BoundaryEvent/attachedToRef"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//CatchEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//CatchEvent/parallelMultiple"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CatchEvent/outputSet"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CatchEvent/eventDefinitionRefs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CatchEvent/dataOutputAssociation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CatchEvent/dataOutputs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CatchEvent/eventDefinitions"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Event">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Event/properties"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//EventDefinition"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//DataOutputAssociation"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//DataAssociation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DataAssociation/transformation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DataAssociation/assignment"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DataAssociation/targetRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DataAssociation/sourceRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Assignment">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Assignment/from"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Assignment/to"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//DataInputAssociation"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//UserTask">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//UserTask/renderings"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//UserTask/implementation"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Rendering"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//HumanPerformer"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//PotentialOwner"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//GlobalUserTask">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//GlobalUserTask/implementation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//GlobalUserTask/renderings"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Gateway">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Gateway/gatewayDirection"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//EventBasedGateway">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//EventBasedGateway/instantiate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//EventBasedGateway/eventGatewayType"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ComplexGateway">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ComplexGateway/activationCondition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ComplexGateway/default"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ExclusiveGateway">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ExclusiveGateway/default"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//InclusiveGateway">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//InclusiveGateway/default"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ParallelGateway"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Relationship">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Relationship/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Relationship/direction"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Relationship/sources"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Relationship/targets"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Extension">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Extension/mustUnderstand"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Extension/definition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Extension/id"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//IntermediateCatchEvent"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//IntermediateThrowEvent"/>
+    <genClasses image="false" ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ThrowEvent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ThrowEvent/inputSet"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ThrowEvent/eventDefinitionRefs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ThrowEvent/dataInputAssociation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ThrowEvent/dataInputs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ThrowEvent/eventDefinitions"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//EndEvent"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//StartEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//StartEvent/isInterrupting"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//CancelEventDefinition"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ErrorEventDefinition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ErrorEventDefinition/errorRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//TerminateEventDefinition"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//EscalationEventDefinition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//EscalationEventDefinition/escalationRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Escalation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Escalation/structureRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Escalation/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Escalation/escalationCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Escalation/id"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//CompensateEventDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//CompensateEventDefinition/waitForCompletion"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CompensateEventDefinition/activityRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//TimerEventDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//TimerEventDefinition/timeDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//TimerEventDefinition/timeCycle"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//TimerEventDefinition/timeDuration"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//LinkEventDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//LinkEventDefinition/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//LinkEventDefinition/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//LinkEventDefinition/source"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//MessageEventDefinition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//MessageEventDefinition/messageRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//MessageEventDefinition/operationRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ConditionalEventDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ConditionalEventDefinition/condition"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//SignalEventDefinition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//SignalEventDefinition/signalRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Signal">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Signal/structureRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Signal/name"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ImplicitThrowEvent"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//DataObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//DataObject/isCollection"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//DataStore">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//DataStore/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//DataStore/capacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//DataStore/isUnlimited"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//DataStoreReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DataStoreReference/dataStoreRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//DataObjectReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//DataObjectReference/dataObjectRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//CallConversation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CallConversation/calledCollaborationRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CallConversation/participantAssociations"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Conversation"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//SubConversation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//SubConversation/conversationNodes"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//GlobalConversation"/>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//PartnerEntity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//PartnerEntity/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//PartnerEntity/participantRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//PartnerRole">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//PartnerRole/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//PartnerRole/participantRef"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ChoreographyActivity">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ChoreographyActivity/participantRefs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ChoreographyActivity/initiatingParticipantRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ChoreographyActivity/correlationKeys"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ChoreographyActivity/loopType"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//CallChoreography">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CallChoreography/calledChoreographyRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CallChoreography/participantAssociations"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//SubChoreography">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//SubChoreography/artifacts"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ChoreographyTask">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ChoreographyTask/messageFlowRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//GlobalChoreographyTask">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//GlobalChoreographyTask/initiatingParticipantRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//TextAnnotation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//TextAnnotation/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//TextAnnotation/textFormat"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Group">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Group/categoryValueRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Association">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Association/associationDirection"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Association/sourceRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Association/targetRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Category">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Category/categoryValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Category/name"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ServiceTask">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ServiceTask/implementation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ServiceTask/operationRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//SubProcess">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//SubProcess/triggeredByEvent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//SubProcess/artifacts"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//MultiInstanceLoopCharacteristics">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//MultiInstanceLoopCharacteristics/isSequential"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//MultiInstanceLoopCharacteristics/behavior"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//MultiInstanceLoopCharacteristics/loopCardinality"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//MultiInstanceLoopCharacteristics/loopDataInputRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//MultiInstanceLoopCharacteristics/loopDataOutputRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//MultiInstanceLoopCharacteristics/inputDataItem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//MultiInstanceLoopCharacteristics/outputDataItem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//MultiInstanceLoopCharacteristics/completionCondition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//MultiInstanceLoopCharacteristics/complexBehaviorDefinition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//MultiInstanceLoopCharacteristics/oneBehaviorEventRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//MultiInstanceLoopCharacteristics/noneBehaviorEventRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ComplexBehaviorDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ComplexBehaviorDefinition/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ComplexBehaviorDefinition/event"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//StandardLoopCharacteristics">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//StandardLoopCharacteristics/testBefore"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//StandardLoopCharacteristics/loopCondition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//StandardLoopCharacteristics/loopMaximum"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//CallActivity">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//CallActivity/calledElementRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//SendTask">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//SendTask/implementation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//SendTask/operationRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//SendTask/messageRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ReceiveTask">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ReceiveTask/implementation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ReceiveTask/instantiate"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ReceiveTask/operationRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//ReceiveTask/messageRef"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//ScriptTask">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ScriptTask/scriptFormat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//ScriptTask/script"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//BusinessRuleTask">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//BusinessRuleTask/implementation"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//AdHocSubProcess">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//AdHocSubProcess/completionCondition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//AdHocSubProcess/ordering"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//AdHocSubProcess/cancelRemainingInstances"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Transaction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Transaction/protocol"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Transaction/method"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//GlobalScriptTask">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//GlobalScriptTask/scriptLanguage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//GlobalScriptTask/script"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//GlobalBusinessRuleTask">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//GlobalBusinessRuleTask/implementation"/>
+    </genClasses>
+    <genClasses ecoreClass="http://www.omg.org/spec/BPMN/20100524/MODEL#//Definitions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Definitions/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Definitions/targetNamespace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Definitions/expressionLanguage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Definitions/typeLanguage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Definitions/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Definitions/extensions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Definitions/relationships"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Definitions/rootElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference http://www.omg.org/spec/BPMN/20100524/MODEL#//Definitions/diagrams"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Definitions/exporter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute http://www.omg.org/spec/BPMN/20100524/MODEL#//Definitions/exporterVersion"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Bpmdi" ecorePackage="../../org.omg.bpmn2.model/model/BPMNDI.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../org.omg.bpmn2.model/model/BPMNDI.ecore#//ParticipantBandKind">
+      <genEnumLiterals ecoreEnumLiteral="../../org.omg.bpmn2.model/model/BPMNDI.ecore#//ParticipantBandKind/top_initiating"/>
+      <genEnumLiterals ecoreEnumLiteral="../../org.omg.bpmn2.model/model/BPMNDI.ecore#//ParticipantBandKind/middle_initiating"/>
+      <genEnumLiterals ecoreEnumLiteral="../../org.omg.bpmn2.model/model/BPMNDI.ecore#//ParticipantBandKind/bottom_initiating"/>
+      <genEnumLiterals ecoreEnumLiteral="../../org.omg.bpmn2.model/model/BPMNDI.ecore#//ParticipantBandKind/top_non_initiating"/>
+      <genEnumLiterals ecoreEnumLiteral="../../org.omg.bpmn2.model/model/BPMNDI.ecore#//ParticipantBandKind/middle_non_initiating"/>
+      <genEnumLiterals ecoreEnumLiteral="../../org.omg.bpmn2.model/model/BPMNDI.ecore#//ParticipantBandKind/bottom_non_initiating"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../org.omg.bpmn2.model/model/BPMNDI.ecore#//MessageVisibleKind">
+      <genEnumLiterals ecoreEnumLiteral="../../org.omg.bpmn2.model/model/BPMNDI.ecore#//MessageVisibleKind/initiating"/>
+      <genEnumLiterals ecoreEnumLiteral="../../org.omg.bpmn2.model/model/BPMNDI.ecore#//MessageVisibleKind/non_initiating"/>
+    </genEnums>
+    <genClasses ecoreClass="../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNPlane">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNPlane/bpmnElement"/>
+    </genClasses>
+    <genClasses ecoreClass="../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNShape">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNShape/bpmnElement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNShape/isHorizontal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNShape/isExpanded"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNShape/isMarkerVisible"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNShape/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNShape/isMessageVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNShape/participantBandKind"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNShape/choreographyActivityShape"/>
+    </genClasses>
+    <genClasses ecoreClass="../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNLabel">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNLabel/labelStyle"/>
+    </genClasses>
+    <genClasses ecoreClass="../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNLabelStyle">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNLabelStyle/font"/>
+    </genClasses>
+    <genClasses ecoreClass="../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNEdge">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNEdge/label"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNEdge/bpmnElement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNEdge/sourceElement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNEdge/targetElement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNEdge/messageVisibleKind"/>
+    </genClasses>
+    <genClasses ecoreClass="../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNDiagram">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNDiagram/plane"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/BPMNDI.ecore#//BPMNDiagram/labelStyle"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Di" ecorePackage="../../org.omg.bpmn2.model/model/DI.ecore#/">
+    <genClasses image="false" ecoreClass="../../org.omg.bpmn2.model/model/DI.ecore#//DiagramElement">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/DI.ecore#//DiagramElement/owningDiagram"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/DI.ecore#//DiagramElement/owningElement"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/DI.ecore#//DiagramElement/ownedElement"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/DI.ecore#//DiagramElement/modelElement"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/DI.ecore#//DiagramElement/style"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../org.omg.bpmn2.model/model/DI.ecore#//Diagram">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.omg.bpmn2.model/model/DI.ecore#//Diagram/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.omg.bpmn2.model/model/DI.ecore#//Diagram/documentation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.omg.bpmn2.model/model/DI.ecore#//Diagram/resolution"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/DI.ecore#//Diagram/ownedStyle"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/DI.ecore#//Diagram/rootElement"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../org.omg.bpmn2.model/model/DI.ecore#//Style"/>
+    <genClasses image="false" ecoreClass="../../org.omg.bpmn2.model/model/DI.ecore#//Node"/>
+    <genClasses image="false" ecoreClass="../../org.omg.bpmn2.model/model/DI.ecore#//Edge">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/DI.ecore#//Edge/source"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/DI.ecore#//Edge/target"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/DI.ecore#//Edge/waypoint"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../org.omg.bpmn2.model/model/DI.ecore#//Shape">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/DI.ecore#//Shape/bounds"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../org.omg.bpmn2.model/model/DI.ecore#//LabeledEdge">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/DI.ecore#//LabeledEdge/ownedLabel"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../org.omg.bpmn2.model/model/DI.ecore#//Label">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/DI.ecore#//Label/bounds"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../org.omg.bpmn2.model/model/DI.ecore#//LabeledShape">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/DI.ecore#//LabeledShape/ownedLabel"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../org.omg.bpmn2.model/model/DI.ecore#//Plane">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.omg.bpmn2.model/model/DI.ecore#//Plane/planeElement"/>
+      <genOperations ecoreOperation="../../org.omg.bpmn2.model/model/DI.ecore#//Plane/plane_element_type">
+        <genParameters ecoreParameter="../../org.omg.bpmn2.model/model/DI.ecore#//Plane/plane_element_type/diagnostics"/>
+        <genParameters ecoreParameter="../../org.omg.bpmn2.model/model/DI.ecore#//Plane/plane_element_type/context"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Dc" ecorePackage="../../org.omg.bpmn2.model/model/DC.ecore#/">
+    <genClasses ecoreClass="../../org.omg.bpmn2.model/model/DC.ecore#//Font">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.omg.bpmn2.model/model/DC.ecore#//Font/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.omg.bpmn2.model/model/DC.ecore#//Font/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.omg.bpmn2.model/model/DC.ecore#//Font/isBold"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.omg.bpmn2.model/model/DC.ecore#//Font/isItalic"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.omg.bpmn2.model/model/DC.ecore#//Font/isUnderline"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.omg.bpmn2.model/model/DC.ecore#//Font/isStrikeThrough"/>
+      <genOperations ecoreOperation="../../org.omg.bpmn2.model/model/DC.ecore#//Font/non_negative_size">
+        <genParameters ecoreParameter="../../org.omg.bpmn2.model/model/DC.ecore#//Font/non_negative_size/diagnostics"/>
+        <genParameters ecoreParameter="../../org.omg.bpmn2.model/model/DC.ecore#//Font/non_negative_size/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="../../org.omg.bpmn2.model/model/DC.ecore#//Point">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.omg.bpmn2.model/model/DC.ecore#//Point/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.omg.bpmn2.model/model/DC.ecore#//Point/y"/>
+    </genClasses>
+    <genClasses ecoreClass="../../org.omg.bpmn2.model/model/DC.ecore#//Bounds">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.omg.bpmn2.model/model/DC.ecore#//Bounds/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.omg.bpmn2.model/model/DC.ecore#//Bounds/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.omg.bpmn2.model/model/DC.ecore#//Bounds/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.omg.bpmn2.model/model/DC.ecore#//Bounds/height"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

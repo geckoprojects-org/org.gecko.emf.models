@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2024 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"
+    modelDirectory="/org.omg.bpmn.model/src" modelPluginID="org.omg.bpmn.model" redirection=""
+    forceOverwrite="true" modelName="CamundaExtensions" modelPluginClass="" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="11.0" copyrightFields="false" usedGenPackages="../../org.omg.bpmn.model/model/BPMN20.genmodel#//bpmn2 ../../org.omg.bpmn.model/model/BPMN20.genmodel#//di ../../org.omg.bpmn.model/model/BPMN20.genmodel#//dc ../../org.omg.bpmn.model/model/BPMN20.genmodel#//di.1"
+    oSGiCompatible="true">
+  <foreignModel>CamundaExtensions.ecore</foreignModel>
+  <genPackages prefix="Camunda" basePackage="org.camunda.bpmn" resource="XML" disposableProviderFactory="true"
+      ecorePackage="CamundaExtensions.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="CamundaExtensions.ecore#//EventType">
+      <genEnumLiterals ecoreEnumLiteral="CamundaExtensions.ecore#//EventType/create"/>
+      <genEnumLiterals ecoreEnumLiteral="CamundaExtensions.ecore#//EventType/assignment"/>
+      <genEnumLiterals ecoreEnumLiteral="CamundaExtensions.ecore#//EventType/complete"/>
+      <genEnumLiterals ecoreEnumLiteral="CamundaExtensions.ecore#//EventType/delete"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="CamundaExtensions.ecore#//EventType1">
+      <genEnumLiterals ecoreEnumLiteral="CamundaExtensions.ecore#//EventType1/start"/>
+      <genEnumLiterals ecoreEnumLiteral="CamundaExtensions.ecore#//EventType1/end"/>
+      <genEnumLiterals ecoreEnumLiteral="CamundaExtensions.ecore#//EventType1/take"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="CamundaExtensions.ecore#//HistoryType">
+      <genEnumLiterals ecoreEnumLiteral="CamundaExtensions.ecore#//HistoryType/none"/>
+      <genEnumLiterals ecoreEnumLiteral="CamundaExtensions.ecore#//HistoryType/activity"/>
+      <genEnumLiterals ecoreEnumLiteral="CamundaExtensions.ecore#//HistoryType/audit"/>
+      <genEnumLiterals ecoreEnumLiteral="CamundaExtensions.ecore#//HistoryType/full"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="CamundaExtensions.ecore#//TypeType">
+      <genEnumLiterals ecoreEnumLiteral="CamundaExtensions.ecore#//TypeType/mail"/>
+      <genEnumLiterals ecoreEnumLiteral="CamundaExtensions.ecore#//TypeType/external"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="CamundaExtensions.ecore#//ClassType"/>
+    <genDataTypes ecoreDataType="CamundaExtensions.ecore#//EventTypeObject"/>
+    <genDataTypes ecoreDataType="CamundaExtensions.ecore#//EventTypeObject1"/>
+    <genDataTypes ecoreDataType="CamundaExtensions.ecore#//FormHandlerClassType"/>
+    <genDataTypes ecoreDataType="CamundaExtensions.ecore#//HistoryTypeObject"/>
+    <genDataTypes ecoreDataType="CamundaExtensions.ecore#//TExpression"/>
+    <genDataTypes ecoreDataType="CamundaExtensions.ecore#//TypeTypeObject"/>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//DocumentRoot">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//DocumentRoot/executionListener"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//DocumentRoot/field"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//DocumentRoot/formProperty"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//DocumentRoot/in"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//DocumentRoot/out"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//DocumentRoot/taskListener"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/assignee"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/candidateGroups"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/candidateUsers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/collection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/delegateExpression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/dueDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/elementVariable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/formHandlerClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/formKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/history"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/initiator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/resultVariable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/async"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/actExpression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/priority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/resultVariableName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//DocumentRoot/failedJobRetryTimeCycle"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//DocumentRoot/formData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/followUpDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//DocumentRoot/properties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/exclusive"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//DocumentRoot/connector"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//DocumentRoot/inputOutput"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/asyncAfter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/asyncBefore"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//DocumentRoot/resource1"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//StartEvent"/>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//ExecutionListenerType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//ExecutionListenerType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//ExecutionListenerType/field"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//ExecutionListenerType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//ExecutionListenerType/delegateExpression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//ExecutionListenerType/event"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//ExecutionListenerType/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//ExecutionListenerType/script"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//FieldType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FieldType/string"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FieldType/expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FieldType/expression1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FieldType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FieldType/stringValue"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//FormPropertyType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//FormPropertyType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FormPropertyType/datePattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FormPropertyType/expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FormPropertyType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FormPropertyType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FormPropertyType/readable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FormPropertyType/required"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FormPropertyType/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FormPropertyType/value1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FormPropertyType/variable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FormPropertyType/writable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FormPropertyType/default"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//InType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//InType/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//InType/sourceExpression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//InType/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//InType/variables"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//InType/businessKey"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//OutType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//OutType/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//OutType/sourceExpression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//OutType/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//OutType/variables"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//TaskListenerType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//TaskListenerType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//TaskListenerType/field"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//TaskListenerType/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//TaskListenerType/delegateExpression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//TaskListenerType/event"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//TaskListenerType/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//TaskListenerType/script"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//CallActivity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//CallActivity/calledElement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//CallActivity/calledElementBinding"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//CallActivity/calledElementVersion"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//BoundaryEvent"/>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//ValueType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//ValueType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//ValueType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//FormDataType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//FormDataType/formField"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//FormFieldType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FormFieldType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FormFieldType/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FormFieldType/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FormFieldType/defaultValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//FormFieldType/properties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//FormFieldType/validation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//FormFieldType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//PropertiesType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//PropertiesType/property"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//PropertyType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//PropertyType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//PropertyType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//PropertyType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//ValidationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//ValidationType/constraint"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//ConstraintType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//ConstraintType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//ConstraintType/config"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//UserTask"/>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//FormDataContainer"/>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//Expression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//Expression/body"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//Expression/mixed"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//ConnectorType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//ConnectorType/connectorId"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//ConnectorType/inputOutput"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//InputOutputType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//InputOutputType/inputParameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//InputOutputType/outputParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//ParameterType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//ParameterType/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//ParameterType/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//ParameterType/script"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//ParameterType/map"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//ParameterType/list"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//ParameterType/text"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//ScriptType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//ScriptType/scriptFormat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//ScriptType/resource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//ScriptType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//ScriptType/text"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//MapType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//MapType/entries"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//EntryType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//EntryType/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//EntryType/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//EntryType/script"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//EntryType/map"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//EntryType/list"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//EntryType/text"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//ListType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//ListType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//ListType/scripts"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//ListType/maps"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference CamundaExtensions.ecore#//ListType/lists"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//ListType/values"/>
+    </genClasses>
+    <genClasses ecoreClass="CamundaExtensions.ecore#//FailedJobRetryTimeCycleType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FailedJobRetryTimeCycleType/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CamundaExtensions.ecore#//FailedJobRetryTimeCycleType/text"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

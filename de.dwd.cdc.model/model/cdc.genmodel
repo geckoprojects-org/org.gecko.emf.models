@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2024 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"
+    modelDirectory="/de.dwd.cdc.model/src" modelPluginID="de.dwd.cdc.model" modelName="CSC"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="11.0" copyrightFields="false" usedGenPackages="../../org.w3.smil.model/model/smil20.genmodel#//smil20 ../../org.w3.smil.model/model/smil20.genmodel#//language ../../net.opengis.wfs.model/model/wfs.genmodel#//gml ../../org.w3.xlink.model/model/xlink.genmodel#//xlink ../../org.eclipse.emf.ecore/model/XMLNamespace.genmodel#//namespace"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>cdc.ecore</foreignModel>
+  <genPackages prefix="CDC" basePackage="de.dwd" resource="XML" disposableProviderFactory="true"
+      ecorePackage="cdc.ecore#/">
+    <genClasses ecoreClass="cdc.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute cdc.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference cdc.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference cdc.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cdc.ecore#//DocumentRoot/oBSDEUPT1HT2M"/>
+    </genClasses>
+    <genClasses ecoreClass="cdc.ecore#//OBSDEUPT1HT2MType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cdc.ecore#//OBSDEUPT1HT2MType/sDOGEOM"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cdc.ecore#//OBSDEUPT1HT2MType/sDOTYPE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cdc.ecore#//OBSDEUPT1HT2MType/sDOGUID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cdc.ecore#//OBSDEUPT1HT2MType/sDOCODE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cdc.ecore#//OBSDEUPT1HT2MType/sDONAME"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cdc.ecore#//OBSDEUPT1HT2MType/zEITSTEMPEL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cdc.ecore#//OBSDEUPT1HT2MType/zEITINTERVALL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cdc.ecore#//OBSDEUPT1HT2MType/wERT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cdc.ecore#//OBSDEUPT1HT2MType/eINHEIT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cdc.ecore#//OBSDEUPT1HT2MType/qUALITAETBYTE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cdc.ecore#//OBSDEUPT1HT2MType/qUALITAETNIVEAU"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

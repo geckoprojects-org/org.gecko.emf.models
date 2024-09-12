@@ -1,0 +1,274 @@
+/*
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
+ */
+package org.hl7.fhir.impl;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+import org.hl7.fhir.BodyStructureBodyLandmarkOrientation;
+import org.hl7.fhir.BodyStructureDistanceFromLandmark;
+import org.hl7.fhir.CodeableConcept;
+import org.hl7.fhir.FHIRPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Body Structure Body Landmark Orientation</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link org.hl7.fhir.impl.BodyStructureBodyLandmarkOrientationImpl#getLandmarkDescription <em>Landmark Description</em>}</li>
+ *   <li>{@link org.hl7.fhir.impl.BodyStructureBodyLandmarkOrientationImpl#getClockFacePosition <em>Clock Face Position</em>}</li>
+ *   <li>{@link org.hl7.fhir.impl.BodyStructureBodyLandmarkOrientationImpl#getDistanceFromLandmark <em>Distance From Landmark</em>}</li>
+ *   <li>{@link org.hl7.fhir.impl.BodyStructureBodyLandmarkOrientationImpl#getSurfaceOrientation <em>Surface Orientation</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class BodyStructureBodyLandmarkOrientationImpl extends BackboneElementImpl implements BodyStructureBodyLandmarkOrientation {
+	/**
+	 * The cached value of the '{@link #getLandmarkDescription() <em>Landmark Description</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLandmarkDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<CodeableConcept> landmarkDescription;
+
+	/**
+	 * The cached value of the '{@link #getClockFacePosition() <em>Clock Face Position</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClockFacePosition()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<CodeableConcept> clockFacePosition;
+
+	/**
+	 * The cached value of the '{@link #getDistanceFromLandmark() <em>Distance From Landmark</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDistanceFromLandmark()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<BodyStructureDistanceFromLandmark> distanceFromLandmark;
+
+	/**
+	 * The cached value of the '{@link #getSurfaceOrientation() <em>Surface Orientation</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSurfaceOrientation()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<CodeableConcept> surfaceOrientation;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BodyStructureBodyLandmarkOrientationImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return FHIRPackage.eINSTANCE.getBodyStructureBodyLandmarkOrientation();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<CodeableConcept> getLandmarkDescription() {
+		if (landmarkDescription == null) {
+			landmarkDescription = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__LANDMARK_DESCRIPTION);
+		}
+		return landmarkDescription;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<CodeableConcept> getClockFacePosition() {
+		if (clockFacePosition == null) {
+			clockFacePosition = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__CLOCK_FACE_POSITION);
+		}
+		return clockFacePosition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<BodyStructureDistanceFromLandmark> getDistanceFromLandmark() {
+		if (distanceFromLandmark == null) {
+			distanceFromLandmark = new EObjectContainmentEList<BodyStructureDistanceFromLandmark>(BodyStructureDistanceFromLandmark.class, this, FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__DISTANCE_FROM_LANDMARK);
+		}
+		return distanceFromLandmark;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<CodeableConcept> getSurfaceOrientation() {
+		if (surfaceOrientation == null) {
+			surfaceOrientation = new EObjectContainmentEList<CodeableConcept>(CodeableConcept.class, this, FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__SURFACE_ORIENTATION);
+		}
+		return surfaceOrientation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__LANDMARK_DESCRIPTION:
+				return ((InternalEList<?>)getLandmarkDescription()).basicRemove(otherEnd, msgs);
+			case FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__CLOCK_FACE_POSITION:
+				return ((InternalEList<?>)getClockFacePosition()).basicRemove(otherEnd, msgs);
+			case FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__DISTANCE_FROM_LANDMARK:
+				return ((InternalEList<?>)getDistanceFromLandmark()).basicRemove(otherEnd, msgs);
+			case FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__SURFACE_ORIENTATION:
+				return ((InternalEList<?>)getSurfaceOrientation()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__LANDMARK_DESCRIPTION:
+				return getLandmarkDescription();
+			case FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__CLOCK_FACE_POSITION:
+				return getClockFacePosition();
+			case FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__DISTANCE_FROM_LANDMARK:
+				return getDistanceFromLandmark();
+			case FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__SURFACE_ORIENTATION:
+				return getSurfaceOrientation();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__LANDMARK_DESCRIPTION:
+				getLandmarkDescription().clear();
+				getLandmarkDescription().addAll((Collection<? extends CodeableConcept>)newValue);
+				return;
+			case FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__CLOCK_FACE_POSITION:
+				getClockFacePosition().clear();
+				getClockFacePosition().addAll((Collection<? extends CodeableConcept>)newValue);
+				return;
+			case FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__DISTANCE_FROM_LANDMARK:
+				getDistanceFromLandmark().clear();
+				getDistanceFromLandmark().addAll((Collection<? extends BodyStructureDistanceFromLandmark>)newValue);
+				return;
+			case FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__SURFACE_ORIENTATION:
+				getSurfaceOrientation().clear();
+				getSurfaceOrientation().addAll((Collection<? extends CodeableConcept>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__LANDMARK_DESCRIPTION:
+				getLandmarkDescription().clear();
+				return;
+			case FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__CLOCK_FACE_POSITION:
+				getClockFacePosition().clear();
+				return;
+			case FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__DISTANCE_FROM_LANDMARK:
+				getDistanceFromLandmark().clear();
+				return;
+			case FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__SURFACE_ORIENTATION:
+				getSurfaceOrientation().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__LANDMARK_DESCRIPTION:
+				return landmarkDescription != null && !landmarkDescription.isEmpty();
+			case FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__CLOCK_FACE_POSITION:
+				return clockFacePosition != null && !clockFacePosition.isEmpty();
+			case FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__DISTANCE_FROM_LANDMARK:
+				return distanceFromLandmark != null && !distanceFromLandmark.isEmpty();
+			case FHIRPackage.BODY_STRUCTURE_BODY_LANDMARK_ORIENTATION__SURFACE_ORIENTATION:
+				return surfaceOrientation != null && !surfaceOrientation.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+} //BodyStructureBodyLandmarkOrientationImpl

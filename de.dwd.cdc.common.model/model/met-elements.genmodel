@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2024 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"
+    modelDirectory="/de.dwd.cdc.common.model/src" modelPluginID="de.dwd.cdc.common.model"
+    modelName="Met-Elements" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="11.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>met-elements.ecore</foreignModel>
+  <genPackages prefix="MetElements" basePackage="de.dwd.cdc" resource="XML" disposableProviderFactory="true"
+      ecorePackage="met-elements.ecore#/">
+    <genClasses ecoreClass="met-elements.ecore#//MetDefRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute met-elements.ecore#//MetDefRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference met-elements.ecore#//MetDefRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference met-elements.ecore#//MetDefRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference met-elements.ecore#//MetDefRoot/metElementDefinition"/>
+    </genClasses>
+    <genClasses ecoreClass="met-elements.ecore#//MetElementDefinitionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference met-elements.ecore#//MetElementDefinitionType/metElement"/>
+    </genClasses>
+    <genClasses ecoreClass="met-elements.ecore#//MetElementType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute met-elements.ecore#//MetElementType/shortName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute met-elements.ecore#//MetElementType/unitOfMeasurement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute met-elements.ecore#//MetElementType/description"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

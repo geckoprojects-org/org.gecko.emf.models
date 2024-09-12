@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2024 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"
+    modelDirectory="/com.dimc.pm.ochsner.model/src" modelPluginID="com.dimc.pm.ochsner.model"
+    modelName="XmlSOAP" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>soap-envelope.ecore</foreignModel>
+  <genPackages prefix="Envelope" basePackage="org.xmlsoap.schemas" resource="XML"
+      disposableProviderFactory="true" contentTypeIdentifier="soap" ecorePackage="soap-envelope.ecore#/">
+    <genDataTypes ecoreDataType="soap-envelope.ecore#//EncodingStyle"/>
+    <genDataTypes ecoreDataType="soap-envelope.ecore#//MustUnderstandType"/>
+    <genDataTypes ecoreDataType="soap-envelope.ecore#//MustUnderstandTypeObject"/>
+    <genClasses ecoreClass="soap-envelope.ecore#//Body">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute soap-envelope.ecore#//Body/any"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute soap-envelope.ecore#//Body/anyAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="soap-envelope.ecore#//Detail">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute soap-envelope.ecore#//Detail/any"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute soap-envelope.ecore#//Detail/anyAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="soap-envelope.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute soap-envelope.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference soap-envelope.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference soap-envelope.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soap-envelope.ecore#//DocumentRoot/body"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soap-envelope.ecore#//DocumentRoot/envelope"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soap-envelope.ecore#//DocumentRoot/fault"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soap-envelope.ecore#//DocumentRoot/header"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soap-envelope.ecore#//DocumentRoot/actor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soap-envelope.ecore#//DocumentRoot/encodingStyle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soap-envelope.ecore#//DocumentRoot/mustUnderstand"/>
+    </genClasses>
+    <genClasses ecoreClass="soap-envelope.ecore#//Envelope">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soap-envelope.ecore#//Envelope/header"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soap-envelope.ecore#//Envelope/body"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute soap-envelope.ecore#//Envelope/any"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute soap-envelope.ecore#//Envelope/anyAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="soap-envelope.ecore#//Fault">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soap-envelope.ecore#//Fault/faultcode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soap-envelope.ecore#//Fault/faultstring"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soap-envelope.ecore#//Fault/faultactor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soap-envelope.ecore#//Fault/detail"/>
+    </genClasses>
+    <genClasses ecoreClass="soap-envelope.ecore#//Header">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute soap-envelope.ecore#//Header/any"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute soap-envelope.ecore#//Header/anyAttribute"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
