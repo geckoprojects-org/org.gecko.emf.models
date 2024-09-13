@@ -24,3 +24,9 @@ This is the RDF MetaModel. The ecores *rdf.ecore* and *rdfs.ecore* have been gen
 Some manual modifcations are neccessary in the ecore. The main problems are errors because of bi-directional feature references. Therefore the classes with the *_*-reference are wrapper classes, for the container. E.G. *subject* became *Subject*. The EOpposite is *Statement*. So in *Statement*, the *subject* feature was set from type *Resource* to the wrapper class *Subject*. Now in *Subject*, the EOpposite can be set to *subject::Subject*. 
 
 This wrapping pattern, can be used for all errors. Important is to realize, that e.g. in *Resource* or *Class*, there is a need to add correspinding EReferences with type of the wrapper. After that the corresponding EOpposite is able to be set. 
+
+## Generate Code
+
+The GenModel *rdf.genmodel* needs to be deactivate *Operation Reflection* in the *Model* section on GenModel-level!
+
+Otherwise you will endup with error in the generated code.

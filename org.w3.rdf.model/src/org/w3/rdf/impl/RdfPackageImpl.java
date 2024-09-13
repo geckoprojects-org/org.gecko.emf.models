@@ -1,15 +1,23 @@
 /**
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
  */
 package org.w3.rdf.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
-import org.eclipse.emf.ecore.EGenericType;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
@@ -19,8 +27,11 @@ import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.uml2.types.TypesPackage;
 
 import org.eclipse.uml2.uml.UMLPackage;
+
 import org.w3.owl.OwlPackage;
+
 import org.w3.owl.impl.OwlPackageImpl;
+
 import org.w3.rdf.Alt;
 import org.w3.rdf.Bag;
 import org.w3.rdf.First;
@@ -36,8 +47,9 @@ import org.w3.rdf.RdfFactory;
 import org.w3.rdf.RdfPackage;
 import org.w3.rdf.Rest;
 import org.w3.rdf.Seq;
-import org.w3.rdf.util.RdfValidator;
+
 import org.w3.rdfs.RdfsPackage;
+
 import org.w3.rdfs.impl.RdfsPackageImpl;
 
 /**
@@ -226,16 +238,6 @@ public class RdfPackageImpl extends EPackageImpl implements RdfPackage {
 		theRdfPackage.initializePackageContents();
 		theOwlPackage.initializePackageContents();
 		theRdfsPackage.initializePackageContents();
-
-		// Register package validator
-		EValidator.Registry.INSTANCE.put
-			(theRdfPackage,
-			 new EValidator.Descriptor() {
-				 @Override
-				 public EValidator getEValidator() {
-					 return RdfValidator.INSTANCE;
-				 }
-			 });
 
 		// Mark meta-data to indicate it can't be changed
 		theRdfPackage.freeze();
@@ -521,16 +523,6 @@ public class RdfPackageImpl extends EPackageImpl implements RdfPackage {
 	 * @generated
 	 */
 	@Override
-	public EOperation getSeq__Unnamed5__DiagnosticChain_Map() {
-		return seqEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getRDFObject() {
 		return rdfObjectEClass;
 	}
@@ -672,7 +664,6 @@ public class RdfPackageImpl extends EPackageImpl implements RdfPackage {
 		createEReference(firstEClass, FIRST__FIRST);
 
 		seqEClass = createEClass(SEQ);
-		createEOperation(seqEClass, SEQ___UNNAMED5__DIAGNOSTICCHAIN_MAP);
 
 		rdfObjectEClass = createEClass(RDF_OBJECT);
 		createEReference(rdfObjectEClass, RDF_OBJECT__STATEMENT);
@@ -729,7 +720,7 @@ public class RdfPackageImpl extends EPackageImpl implements RdfPackage {
 		rdfuriEClass.getESuperTypes().add(this.getIRI());
 		rdfPropertyEClass.getESuperTypes().add(theRdfsPackage.getRDFResource());
 
-		// Initialize classes, features, and operations; add parameters
+		// Initialize classes and features; add operations and parameters
 		initEClass(rdfListEClass, RDFList.class, "RDFList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRDFList_Rest(), this.getRest(), this.getRest_Parent(), "rest", null, 0, -1, RDFList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRDFList_First(), this.getFirst(), this.getFirst_Parent(), "first", null, 0, 1, RDFList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -769,22 +760,13 @@ public class RdfPackageImpl extends EPackageImpl implements RdfPackage {
 
 		initEClass(seqEClass, Seq.class, "Seq", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getSeq__Unnamed5__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "unnamed5", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
-		EGenericType g1 = createEGenericType(ecorePackage.getEMap());
-		EGenericType g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(rdfObjectEClass, RDFObject.class, "RDFObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRDFObject_Statement(), this.getRDFStatement(), this.getRDFStatement_Object(), "statement", null, 1, 1, RDFObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(rdfuriEClass, org.w3.rdf.RDFURI.class, "RDFURI", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(rdfPropertyEClass, RDFProperty.class, "RDFProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRDFProperty_Domain(), theRdfsPackage.getRDFDomain(), null, "domain", null, 1, 1, RDFProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getRDFProperty_Domain(), theRdfsPackage.getDomain(), null, "domain", null, 1, 1, RDFProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRDFProperty_SubPropertyOf(), theRdfsPackage.getSubPropertyOf(), theRdfsPackage.getSubPropertyOf_Property(), "subPropertyOf", null, 1, 1, RDFProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getRDFProperty_Range(), theRdfsPackage.getRange(), null, "range", null, 1, 1, RDFProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 

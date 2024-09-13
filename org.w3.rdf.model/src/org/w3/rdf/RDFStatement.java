@@ -1,6 +1,19 @@
-/**
+/*
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
  */
 package org.w3.rdf;
+
+import org.osgi.annotation.versioning.ProviderType;
 
 import org.w3.rdfs.RDFResource;
 
@@ -26,15 +39,12 @@ import org.w3.rdfs.RDFResource;
  * @model
  * @generated
  */
+@ProviderType
 public interface RDFStatement extends RDFResource {
 	/**
 	 * Returns the value of the '<em><b>Predicate</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link org.w3.rdf.RDFPredicate#getStatement <em>Statement</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Predicate</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Predicate</em>' reference.
 	 * @see #setPredicate(RDFPredicate)
@@ -59,10 +69,6 @@ public interface RDFStatement extends RDFResource {
 	 * Returns the value of the '<em><b>Object</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link org.w3.rdf.RDFObject#getStatement <em>Statement</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Object</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Object</em>' reference.
 	 * @see #setObject(RDFObject)
@@ -87,10 +93,6 @@ public interface RDFStatement extends RDFResource {
 	 * Returns the value of the '<em><b>Subject</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link org.w3.rdf.RDFSubject#getStatement <em>Statement</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Subject</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Subject</em>' reference.
 	 * @see #setSubject(RDFSubject)

@@ -1,4 +1,15 @@
 /**
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
  */
 package org.w3.rdfs.util;
 
@@ -8,7 +19,9 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
+
 import org.w3.rdf.RDFProperty;
+
 import org.w3.rdfs.*;
 
 /**
@@ -92,8 +105,8 @@ public class RdfsAdapterFactory extends AdapterFactoryImpl {
 				return createRDFClassAdapter();
 			}
 			@Override
-			public Adapter caseRDFDomain(RDFDomain object) {
-				return createRDFDomainAdapter();
+			public Adapter caseDomain(Domain object) {
+				return createDomainAdapter();
 			}
 			@Override
 			public Adapter caseSubPropertyOf(SubPropertyOf object) {
@@ -236,16 +249,16 @@ public class RdfsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.w3.rdfs.RDFDomain <em>RDF Domain</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.w3.rdfs.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.w3.rdfs.RDFDomain
+	 * @see org.w3.rdfs.Domain
 	 * @generated
 	 */
-	public Adapter createRDFDomainAdapter() {
+	public Adapter createDomainAdapter() {
 		return null;
 	}
 

@@ -1,4 +1,15 @@
 /**
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
  */
 package org.w3.owl.impl;
 
@@ -15,6 +26,7 @@ import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.uml2.types.TypesPackage;
 
 import org.eclipse.uml2.uml.UMLPackage;
+
 import org.w3.owl.AllDifferent;
 import org.w3.owl.AllDisjointClasses;
 import org.w3.owl.AllDisjointProperties;
@@ -50,9 +62,13 @@ import org.w3.owl.Type;
 import org.w3.owl.TypedThing;
 import org.w3.owl.rational;
 import org.w3.owl.real;
+
 import org.w3.rdf.RdfPackage;
+
 import org.w3.rdf.impl.RdfPackageImpl;
+
 import org.w3.rdfs.RdfsPackage;
+
 import org.w3.rdfs.impl.RdfsPackageImpl;
 
 /**
@@ -1060,7 +1076,7 @@ public class OwlPackageImpl extends EPackageImpl implements OwlPackage {
 		deprecatedPropertyEClass.getESuperTypes().add(theRdfPackage.getRDFProperty());
 		propertyChainAxiomEClass.getESuperTypes().add(this.getObjectProperty());
 
-		// Initialize classes, features, and operations; add parameters
+		// Initialize classes and features; add operations and parameters
 		initEClass(nothingEClass, Nothing.class, "Nothing", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(thingEClass, Thing.class, "Thing", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -1,10 +1,24 @@
-/**
+/*
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
  */
 package org.w3.owl;
 
 import java.math.BigInteger;
 
 import org.eclipse.emf.common.util.EList;
+
+import org.osgi.annotation.versioning.ProviderType;
+
 import org.w3.rdfs.RDFResource;
 
 /**
@@ -34,14 +48,11 @@ import org.w3.rdfs.RDFResource;
  * @model
  * @generated
  */
+@ProviderType
 public interface Restriction extends org.w3.owl.Class {
 	/**
 	 * Returns the value of the '<em><b>Cardinality</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Cardinality</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cardinality</em>' attribute.
 	 * @see #setCardinality(BigInteger)
@@ -64,10 +75,6 @@ public interface Restriction extends org.w3.owl.Class {
 	/**
 	 * Returns the value of the '<em><b>Max Cardinality</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Max Cardinality</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Max Cardinality</em>' attribute.
 	 * @see #setMaxCardinality(BigInteger)
@@ -90,10 +97,6 @@ public interface Restriction extends org.w3.owl.Class {
 	/**
 	 * Returns the value of the '<em><b>Max Qualified Cardinality</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Max Qualified Cardinality</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Max Qualified Cardinality</em>' attribute.
 	 * @see #setMaxQualifiedCardinality(BigInteger)
@@ -116,10 +119,6 @@ public interface Restriction extends org.w3.owl.Class {
 	/**
 	 * Returns the value of the '<em><b>Min Cardinality</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Min Cardinality</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Min Cardinality</em>' attribute.
 	 * @see #setMinCardinality(BigInteger)
@@ -142,10 +141,6 @@ public interface Restriction extends org.w3.owl.Class {
 	/**
 	 * Returns the value of the '<em><b>Min Qualified Cardinality</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Min Qualified Cardinality</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Min Qualified Cardinality</em>' attribute.
 	 * @see #setMinQualifiedCardinality(BigInteger)
@@ -168,10 +163,6 @@ public interface Restriction extends org.w3.owl.Class {
 	/**
 	 * Returns the value of the '<em><b>Qualified Cardinality</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Qualified Cardinality</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Qualified Cardinality</em>' attribute.
 	 * @see #setQualifiedCardinality(BigInteger)
@@ -194,10 +185,6 @@ public interface Restriction extends org.w3.owl.Class {
 	/**
 	 * Returns the value of the '<em><b>Has Self</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Has Self</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Has Self</em>' reference.
 	 * @see #setHasSelf(RDFResource)
@@ -221,10 +208,6 @@ public interface Restriction extends org.w3.owl.Class {
 	 * Returns the value of the '<em><b>On Properites</b></em>' reference list.
 	 * The list contents are of type {@link org.w3.rdfs.RDFResource}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>On Properites</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>On Properites</em>' reference list.
 	 * @see org.w3.owl.OwlPackage#getRestriction_OnProperites()

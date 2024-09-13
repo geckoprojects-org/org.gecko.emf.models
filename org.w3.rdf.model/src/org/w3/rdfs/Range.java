@@ -1,8 +1,22 @@
-/**
+/*
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
  */
 package org.w3.rdfs;
 
 import org.eclipse.emf.ecore.EObject;
+
+import org.osgi.annotation.versioning.ProviderType;
+
 import org.w3.rdf.RDFProperty;
 
 /**
@@ -11,7 +25,7 @@ import org.w3.rdf.RDFProperty;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * A range of the subject property.
+ * A range of the subject property. E.g. "Child" (domain) hasParent "Mother", "Father" (range). "Mother" (domain) hasChild "Child" (range).
  * <!-- end-model-doc -->
  *
  * <p>
@@ -26,14 +40,11 @@ import org.w3.rdf.RDFProperty;
  * @model
  * @generated
  */
+@ProviderType
 public interface Range extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Property</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Property</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Property</em>' reference.
 	 * @see #setProperty(RDFProperty)
@@ -56,10 +67,6 @@ public interface Range extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Range</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Range</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Range</em>' reference.
 	 * @see #setRange(RDFClass)

@@ -1,8 +1,21 @@
-/**
+/*
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
  */
 package org.w3.rdfs;
 
 import org.eclipse.emf.ecore.EObject;
+
+import org.osgi.annotation.versioning.ProviderType;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,15 +38,12 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
+@ProviderType
 public interface Member extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Resource</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link org.w3.rdfs.RDFResource#getRdfMembers <em>Rdf Members</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Resource</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Resource</em>' reference.
 	 * @see #setResource(RDFResource)
@@ -57,10 +67,6 @@ public interface Member extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Member</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Member</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Member</em>' reference.
 	 * @see #setMember(RDFResource)

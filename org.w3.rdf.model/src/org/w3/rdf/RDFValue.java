@@ -1,10 +1,24 @@
-/**
+/*
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
  */
 package org.w3.rdf;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
+
+import org.osgi.annotation.versioning.ProviderType;
+
 import org.w3.rdfs.RDFResource;
 
 /**
@@ -28,14 +42,11 @@ import org.w3.rdfs.RDFResource;
  * @model
  * @generated
  */
+@ProviderType
 public interface RDFValue extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Resource</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Resource</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Resource</em>' reference.
 	 * @see #setResource(RDFResource)
@@ -59,10 +70,6 @@ public interface RDFValue extends EObject {
 	 * Returns the value of the '<em><b>Value</b></em>' reference list.
 	 * The list contents are of type {@link org.w3.rdfs.RDFResource}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Value</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' reference list.
 	 * @see org.w3.rdf.RdfPackage#getRDFValue_Value()

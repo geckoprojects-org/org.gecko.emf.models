@@ -1,4 +1,15 @@
 /**
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
  */
 package org.w3.owl.util;
 
@@ -19,6 +30,7 @@ import org.eclipse.uml2.uml.ParameterableElement;
 import org.eclipse.uml2.uml.RedefinableElement;
 import org.eclipse.uml2.uml.StructuredClassifier;
 import org.eclipse.uml2.uml.TemplateableElement;
+
 import org.w3.owl.AllDifferent;
 import org.w3.owl.AllDisjointClasses;
 import org.w3.owl.AllDisjointProperties;
@@ -53,7 +65,9 @@ import org.w3.owl.Type;
 import org.w3.owl.TypedThing;
 import org.w3.owl.rational;
 import org.w3.owl.real;
+
 import org.w3.rdf.RDFProperty;
+
 import org.w3.rdfs.RDFClass;
 import org.w3.rdfs.RDFDatatype;
 import org.w3.rdfs.RDFLiteral;

@@ -1,4 +1,15 @@
 /**
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
  */
 package org.w3.rdfs.util;
 
@@ -6,7 +17,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
+
 import org.w3.rdf.RDFProperty;
+
 import org.w3.rdfs.*;
 
 /**
@@ -105,9 +118,9 @@ public class RdfsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RdfsPackage.RDF_DOMAIN: {
-				RDFDomain rdfDomain = (RDFDomain)theEObject;
-				T result = caseRDFDomain(rdfDomain);
+			case RdfsPackage.DOMAIN: {
+				Domain domain = (Domain)theEObject;
+				T result = caseDomain(domain);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -259,17 +272,17 @@ public class RdfsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>RDF Domain</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Domain</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>RDF Domain</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Domain</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRDFDomain(RDFDomain object) {
+	public T caseDomain(Domain object) {
 		return null;
 	}
 

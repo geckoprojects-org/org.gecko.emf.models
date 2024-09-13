@@ -1,8 +1,22 @@
-/**
+/*
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
  */
 package org.w3.owl;
 
 import org.eclipse.emf.common.util.EList;
+
+import org.osgi.annotation.versioning.ProviderType;
+
 import org.w3.rdf.RDFProperty;
 
 /**
@@ -25,15 +39,12 @@ import org.w3.rdf.RDFProperty;
  * @model
  * @generated
  */
+@ProviderType
 public interface Class extends Type {
 	/**
 	 * Returns the value of the '<em><b>Has Key</b></em>' reference list.
 	 * The list contents are of type {@link org.w3.rdf.RDFProperty}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Has Key</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Has Key</em>' reference list.
 	 * @see org.w3.owl.OwlPackage#getClass_HasKey()

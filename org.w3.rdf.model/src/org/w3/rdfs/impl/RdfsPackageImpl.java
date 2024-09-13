@@ -1,4 +1,15 @@
 /**
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
  */
 package org.w3.rdfs.impl;
 
@@ -15,18 +26,23 @@ import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.uml2.types.TypesPackage;
 
 import org.eclipse.uml2.uml.UMLPackage;
+
 import org.w3.owl.OwlPackage;
+
 import org.w3.owl.impl.OwlPackageImpl;
+
 import org.w3.rdf.RdfPackage;
+
 import org.w3.rdf.impl.RdfPackageImpl;
+
 import org.w3.rdfs.ContainerMembershipProperty;
+import org.w3.rdfs.Domain;
 import org.w3.rdfs.IsDefinedBy;
 import org.w3.rdfs.Member;
 import org.w3.rdfs.RDFClass;
 import org.w3.rdfs.RDFComment;
 import org.w3.rdfs.RDFContainer;
 import org.w3.rdfs.RDFDatatype;
-import org.w3.rdfs.RDFDomain;
 import org.w3.rdfs.RDFLabel;
 import org.w3.rdfs.RDFLiteral;
 import org.w3.rdfs.RDFResource;
@@ -91,7 +107,7 @@ public class RdfsPackageImpl extends EPackageImpl implements RdfsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass rdfDomainEClass = null;
+	private EClass domainEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -421,8 +437,8 @@ public class RdfsPackageImpl extends EPackageImpl implements RdfsPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getRDFDomain() {
-		return rdfDomainEClass;
+	public EClass getDomain() {
+		return domainEClass;
 	}
 
 	/**
@@ -431,8 +447,8 @@ public class RdfsPackageImpl extends EPackageImpl implements RdfsPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRDFDomain_Property() {
-		return (EReference)rdfDomainEClass.getEStructuralFeatures().get(0);
+	public EReference getDomain_Property() {
+		return (EReference)domainEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -441,8 +457,8 @@ public class RdfsPackageImpl extends EPackageImpl implements RdfsPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRDFDomain_Domain() {
-		return (EReference)rdfDomainEClass.getEStructuralFeatures().get(1);
+	public EReference getDomain_Domain() {
+		return (EReference)domainEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -689,9 +705,9 @@ public class RdfsPackageImpl extends EPackageImpl implements RdfsPackage {
 		rdfClassEClass = createEClass(RDF_CLASS);
 		createEReference(rdfClassEClass, RDF_CLASS__SUB_CLASS_OF);
 
-		rdfDomainEClass = createEClass(RDF_DOMAIN);
-		createEReference(rdfDomainEClass, RDF_DOMAIN__PROPERTY);
-		createEReference(rdfDomainEClass, RDF_DOMAIN__DOMAIN);
+		domainEClass = createEClass(DOMAIN);
+		createEReference(domainEClass, DOMAIN__PROPERTY);
+		createEReference(domainEClass, DOMAIN__DOMAIN);
 
 		subPropertyOfEClass = createEClass(SUB_PROPERTY_OF);
 		createEReference(subPropertyOfEClass, SUB_PROPERTY_OF__PROPERTY);
@@ -759,7 +775,7 @@ public class RdfsPackageImpl extends EPackageImpl implements RdfsPackage {
 		rdfDatatypeEClass.getESuperTypes().add(this.getRDFClass());
 		containerMembershipPropertyEClass.getESuperTypes().add(theRdfPackage.getRDFProperty());
 
-		// Initialize classes, features, and operations; add parameters
+		// Initialize classes and features; add operations and parameters
 		initEClass(seeAlsoEClass, SeeAlso.class, "SeeAlso", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSeeAlso_Resource(), this.getRDFResource(), this.getRDFResource_SeeAlso(), "resource", null, 1, 1, SeeAlso.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getSeeAlso_SeeAlso(), this.getRDFResource(), null, "seeAlso", null, 1, 1, SeeAlso.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -785,9 +801,9 @@ public class RdfsPackageImpl extends EPackageImpl implements RdfsPackage {
 		initEClass(rdfClassEClass, RDFClass.class, "RDFClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRDFClass_SubClassOf(), this.getSubClassOf(), this.getSubClassOf_RdfClass(), "subClassOf", null, 1, 1, RDFClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(rdfDomainEClass, RDFDomain.class, "RDFDomain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRDFDomain_Property(), theRdfPackage.getRDFProperty(), null, "property", null, 1, 1, RDFDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getRDFDomain_Domain(), this.getRDFClass(), null, "domain", null, 1, 1, RDFDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDomain_Property(), theRdfPackage.getRDFProperty(), null, "property", null, 1, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getDomain_Domain(), this.getRDFClass(), null, "domain", null, 1, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(subPropertyOfEClass, SubPropertyOf.class, "SubPropertyOf", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSubPropertyOf_Property(), theRdfPackage.getRDFProperty(), theRdfPackage.getRDFProperty_SubPropertyOf(), "property", null, 1, 1, SubPropertyOf.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

@@ -1,8 +1,22 @@
-/**
+/*
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
  */
 package org.w3.owl;
 
+import org.osgi.annotation.versioning.ProviderType;
+
 import org.w3.rdf.RDFProperty;
+
 import org.w3.rdfs.RDFResource;
 
 /**
@@ -28,14 +42,11 @@ import org.w3.rdfs.RDFResource;
  * @model
  * @generated
  */
+@ProviderType
 public interface NegativePropertyAssertion extends RDFResource {
 	/**
 	 * Returns the value of the '<em><b>Source Individual</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Source Individual</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source Individual</em>' reference.
 	 * @see #setSourceIndividual(Thing)
@@ -58,10 +69,6 @@ public interface NegativePropertyAssertion extends RDFResource {
 	/**
 	 * Returns the value of the '<em><b>Target Individual</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Target Individual</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target Individual</em>' reference.
 	 * @see #setTargetIndividual(Thing)
@@ -84,10 +91,6 @@ public interface NegativePropertyAssertion extends RDFResource {
 	/**
 	 * Returns the value of the '<em><b>Target Value</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Target Value</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target Value</em>' reference.
 	 * @see #setTargetValue(Datatype)
@@ -110,10 +113,6 @@ public interface NegativePropertyAssertion extends RDFResource {
 	/**
 	 * Returns the value of the '<em><b>Assertion Property</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Assertion Property</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Assertion Property</em>' reference.
 	 * @see #setAssertionProperty(RDFProperty)

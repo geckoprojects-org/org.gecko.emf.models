@@ -1,8 +1,21 @@
-/**
+/*
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
  */
 package org.w3.rdf;
 
-import org.w3.rdfs.RDFDomain;
+import org.osgi.annotation.versioning.ProviderType;
+
+import org.w3.rdfs.Domain;
 import org.w3.rdfs.RDFResource;
 import org.w3.rdfs.Range;
 import org.w3.rdfs.SubPropertyOf;
@@ -29,22 +42,19 @@ import org.w3.rdfs.SubPropertyOf;
  * @model
  * @generated
  */
+@ProviderType
 public interface RDFProperty extends RDFResource {
 	/**
 	 * Returns the value of the '<em><b>Domain</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Domain</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Domain</em>' reference.
-	 * @see #setDomain(RDFDomain)
+	 * @see #setDomain(Domain)
 	 * @see org.w3.rdf.RdfPackage#getRDFProperty_Domain()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	RDFDomain getDomain();
+	Domain getDomain();
 
 	/**
 	 * Sets the value of the '{@link org.w3.rdf.RDFProperty#getDomain <em>Domain</em>}' reference.
@@ -54,16 +64,12 @@ public interface RDFProperty extends RDFResource {
 	 * @see #getDomain()
 	 * @generated
 	 */
-	void setDomain(RDFDomain value);
+	void setDomain(Domain value);
 
 	/**
 	 * Returns the value of the '<em><b>Sub Property Of</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link org.w3.rdfs.SubPropertyOf#getProperty <em>Property</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Sub Property Of</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sub Property Of</em>' reference.
 	 * @see #setSubPropertyOf(SubPropertyOf)
@@ -87,10 +93,6 @@ public interface RDFProperty extends RDFResource {
 	/**
 	 * Returns the value of the '<em><b>Range</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Range</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Range</em>' reference.
 	 * @see #setRange(Range)

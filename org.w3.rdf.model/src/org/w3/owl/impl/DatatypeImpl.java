@@ -1,4 +1,15 @@
-/**
+/*
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
  */
 package org.w3.owl.impl;
 
@@ -17,11 +28,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.w3.owl.Datatype;
 import org.w3.owl.OwlPackage;
+
 import org.w3.rdf.RDFType;
 import org.w3.rdf.RDFValue;
 import org.w3.rdf.RdfPackage;
+
 import org.w3.rdfs.IsDefinedBy;
 import org.w3.rdfs.Member;
 import org.w3.rdfs.RDFClass;

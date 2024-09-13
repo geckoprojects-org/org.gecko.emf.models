@@ -1,4 +1,15 @@
-/**
+/*
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
  */
 package org.w3.rdf.impl;
 
@@ -9,12 +20,15 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.w3.rdf.RDFProperty;
 import org.w3.rdf.RdfPackage;
-import org.w3.rdfs.RDFDomain;
+
+import org.w3.rdfs.Domain;
 import org.w3.rdfs.Range;
 import org.w3.rdfs.RdfsPackage;
 import org.w3.rdfs.SubPropertyOf;
+
 import org.w3.rdfs.impl.RDFResourceImpl;
 
 /**
@@ -41,7 +55,7 @@ public class RDFPropertyImpl extends RDFResourceImpl implements RDFProperty {
 	 * @generated
 	 * @ordered
 	 */
-	protected RDFDomain domain;
+	protected Domain domain;
 
 	/**
 	 * The cached value of the '{@link #getSubPropertyOf() <em>Sub Property Of</em>}' reference.
@@ -88,10 +102,10 @@ public class RDFPropertyImpl extends RDFResourceImpl implements RDFProperty {
 	 * @generated
 	 */
 	@Override
-	public RDFDomain getDomain() {
+	public Domain getDomain() {
 		if (domain != null && domain.eIsProxy()) {
 			InternalEObject oldDomain = (InternalEObject)domain;
-			domain = (RDFDomain)eResolveProxy(oldDomain);
+			domain = (Domain)eResolveProxy(oldDomain);
 			if (domain != oldDomain) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RdfPackage.RDF_PROPERTY__DOMAIN, oldDomain, domain));
@@ -105,7 +119,7 @@ public class RDFPropertyImpl extends RDFResourceImpl implements RDFProperty {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RDFDomain basicGetDomain() {
+	public Domain basicGetDomain() {
 		return domain;
 	}
 
@@ -115,8 +129,8 @@ public class RDFPropertyImpl extends RDFResourceImpl implements RDFProperty {
 	 * @generated
 	 */
 	@Override
-	public void setDomain(RDFDomain newDomain) {
-		RDFDomain oldDomain = domain;
+	public void setDomain(Domain newDomain) {
+		Domain oldDomain = domain;
 		domain = newDomain;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, RdfPackage.RDF_PROPERTY__DOMAIN, oldDomain, domain));
@@ -284,7 +298,7 @@ public class RDFPropertyImpl extends RDFResourceImpl implements RDFProperty {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case RdfPackage.RDF_PROPERTY__DOMAIN:
-				setDomain((RDFDomain)newValue);
+				setDomain((Domain)newValue);
 				return;
 			case RdfPackage.RDF_PROPERTY__SUB_PROPERTY_OF:
 				setSubPropertyOf((SubPropertyOf)newValue);
@@ -305,7 +319,7 @@ public class RDFPropertyImpl extends RDFResourceImpl implements RDFProperty {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case RdfPackage.RDF_PROPERTY__DOMAIN:
-				setDomain((RDFDomain)null);
+				setDomain((Domain)null);
 				return;
 			case RdfPackage.RDF_PROPERTY__SUB_PROPERTY_OF:
 				setSubPropertyOf((SubPropertyOf)null);

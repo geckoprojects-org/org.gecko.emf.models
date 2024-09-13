@@ -1,10 +1,24 @@
-/**
+/*
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
  */
 package org.w3.rdfs;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
+
+import org.osgi.annotation.versioning.ProviderType;
+
 import org.w3.rdf.RDFType;
 import org.w3.rdf.RDFValue;
 
@@ -34,15 +48,12 @@ import org.w3.rdf.RDFValue;
  * @model
  * @generated
  */
+@ProviderType
 public interface RDFResource extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Rdf Comment</b></em>' containment reference.
 	 * It is bidirectional and its opposite is '{@link org.w3.rdfs.RDFComment#getResource <em>Resource</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Rdf Comment</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rdf Comment</em>' containment reference.
 	 * @see #setRdfComment(RDFComment)
@@ -66,10 +77,6 @@ public interface RDFResource extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Is Defined By</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Is Defined By</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Defined By</em>' reference.
 	 * @see #setIsDefinedBy(IsDefinedBy)
@@ -93,10 +100,6 @@ public interface RDFResource extends EObject {
 	 * Returns the value of the '<em><b>See Also</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link org.w3.rdfs.SeeAlso#getResource <em>Resource</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>See Also</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>See Also</em>' reference.
 	 * @see #setSeeAlso(SeeAlso)
@@ -122,10 +125,6 @@ public interface RDFResource extends EObject {
 	 * The list contents are of type {@link org.w3.rdfs.Member}.
 	 * It is bidirectional and its opposite is '{@link org.w3.rdfs.Member#getResource <em>Resource</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Rdf Members</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rdf Members</em>' reference list.
 	 * @see org.w3.rdfs.RdfsPackage#getRDFResource_RdfMembers()
@@ -139,10 +138,6 @@ public interface RDFResource extends EObject {
 	 * Returns the value of the '<em><b>Rdf Label</b></em>' containment reference.
 	 * It is bidirectional and its opposite is '{@link org.w3.rdfs.RDFLabel#getResource <em>Resource</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Rdf Label</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rdf Label</em>' containment reference.
 	 * @see #setRdfLabel(RDFLabel)
@@ -167,10 +162,6 @@ public interface RDFResource extends EObject {
 	 * Returns the value of the '<em><b>Rdf Type</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link org.w3.rdf.RDFType#getResource <em>Resource</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Rdf Type</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rdf Type</em>' reference.
 	 * @see #setRdfType(RDFType)
@@ -195,10 +186,6 @@ public interface RDFResource extends EObject {
 	 * Returns the value of the '<em><b>Rdf Value</b></em>' reference list.
 	 * The list contents are of type {@link org.w3.rdf.RDFValue}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Rdf Value</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rdf Value</em>' reference list.
 	 * @see org.w3.rdfs.RdfsPackage#getRDFResource_RdfValue()

@@ -8,8 +8,7 @@ src=src-gen
 	model/fhir.genmodel;\
 		generate=geckoEMF;\
 		genmodel=model/fhir.genmodel;\
-		output=src-gen;\
-		logfile=test.log
+		output=src-gen
 # Add this attribute to find some logging information
 
 # If this is not done with a instruction namespace, bnd would think you like

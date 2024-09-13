@@ -4,11 +4,11 @@
     modelDirectory="/org.w3.rdf.model/src" modelPluginID="org.w3.rdf.model" modelName="Rdf"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
     complianceLevel="11.0" copyrightFields="false" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.uml2.types/model/Types.genmodel#//types ../../org.eclipse.uml2.uml/model/UML.genmodel#//uml ../../org.eclipse.emf.ecore/model/XMLType.genmodel#//type"
-    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+    importOrganizing="true" oSGiCompatible="true">
   <foreignModel>owl.ecore</foreignModel>
   <foreignModel>rdfs.ecore</foreignModel>
   <foreignModel>rdf.ecore</foreignModel>
-  <genPackages prefix="Owl" basePackage="org.w3" disposableProviderFactory="true"
+  <genPackages prefix="Owl" basePackage="org.w3" resource="XML" disposableProviderFactory="true"
       ecorePackage="owl.ecore#/">
     <genClasses ecoreClass="owl.ecore#//Nothing"/>
     <genClasses ecoreClass="owl.ecore#//Thing"/>
@@ -74,7 +74,7 @@
       <nestedGenPackages prefix="BlankNodes" disposableProviderFactory="true" ecorePackage="owl.ecore#//AuxiliaryElements/BlankNodes"/>
     </nestedGenPackages>
   </genPackages>
-  <genPackages prefix="Rdfs" basePackage="org.w3" disposableProviderFactory="true"
+  <genPackages prefix="Rdfs" basePackage="org.w3" resource="XML" disposableProviderFactory="true"
       ecorePackage="rdfs.ecore#/">
     <genClasses ecoreClass="rdfs.ecore#//SeeAlso">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdfs.ecore#//SeeAlso/resource"/>
@@ -135,7 +135,7 @@
       <nestedGenPackages prefix="URIReferences" disposableProviderFactory="true" ecorePackage="rdfs.ecore#//AuxiliaryElements/URIReferences"/>
     </nestedGenPackages>
   </genPackages>
-  <genPackages prefix="Rdf" basePackage="org.w3" disposableProviderFactory="true"
+  <genPackages prefix="Rdf" basePackage="org.w3" resource="XML" disposableProviderFactory="true"
       ecorePackage="rdf.ecore#/">
     <genDataTypes ecoreDataType="rdf.ecore#//PrimitiveLiteral"/>
     <genClasses ecoreClass="rdf.ecore#//RDFList">
@@ -173,12 +173,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//First/parent"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//First/first"/>
     </genClasses>
-    <genClasses ecoreClass="rdf.ecore#//Seq">
-      <genOperations ecoreOperation="rdf.ecore#//Seq/unnamed5">
-        <genParameters ecoreParameter="rdf.ecore#//Seq/unnamed5/diagnostics"/>
-        <genParameters ecoreParameter="rdf.ecore#//Seq/unnamed5/context"/>
-      </genOperations>
-    </genClasses>
+    <genClasses ecoreClass="rdf.ecore#//Seq"/>
     <genClasses ecoreClass="rdf.ecore#//RDFObject">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rdf.ecore#//RDFObject/statement"/>
     </genClasses>

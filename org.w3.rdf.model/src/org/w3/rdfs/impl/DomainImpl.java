@@ -1,4 +1,15 @@
-/**
+/*
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
  */
 package org.w3.rdfs.impl;
 
@@ -9,26 +20,28 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.w3.rdf.RDFProperty;
+
+import org.w3.rdfs.Domain;
 import org.w3.rdfs.RDFClass;
-import org.w3.rdfs.RDFDomain;
 import org.w3.rdfs.RdfsPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>RDF Domain</b></em>'.
+ * An implementation of the model object '<em><b>Domain</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.w3.rdfs.impl.RDFDomainImpl#getProperty <em>Property</em>}</li>
- *   <li>{@link org.w3.rdfs.impl.RDFDomainImpl#getDomain <em>Domain</em>}</li>
+ *   <li>{@link org.w3.rdfs.impl.DomainImpl#getProperty <em>Property</em>}</li>
+ *   <li>{@link org.w3.rdfs.impl.DomainImpl#getDomain <em>Domain</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RDFDomainImpl extends MinimalEObjectImpl.Container implements RDFDomain {
+public class DomainImpl extends MinimalEObjectImpl.Container implements Domain {
 	/**
 	 * The cached value of the '{@link #getProperty() <em>Property</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -54,7 +67,7 @@ public class RDFDomainImpl extends MinimalEObjectImpl.Container implements RDFDo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RDFDomainImpl() {
+	protected DomainImpl() {
 		super();
 	}
 
@@ -65,7 +78,7 @@ public class RDFDomainImpl extends MinimalEObjectImpl.Container implements RDFDo
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return RdfsPackage.Literals.RDF_DOMAIN;
+		return RdfsPackage.Literals.DOMAIN;
 	}
 
 	/**
@@ -80,7 +93,7 @@ public class RDFDomainImpl extends MinimalEObjectImpl.Container implements RDFDo
 			property = (RDFProperty)eResolveProxy(oldProperty);
 			if (property != oldProperty) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RdfsPackage.RDF_DOMAIN__PROPERTY, oldProperty, property));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RdfsPackage.DOMAIN__PROPERTY, oldProperty, property));
 			}
 		}
 		return property;
@@ -105,7 +118,7 @@ public class RDFDomainImpl extends MinimalEObjectImpl.Container implements RDFDo
 		RDFProperty oldProperty = property;
 		property = newProperty;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RdfsPackage.RDF_DOMAIN__PROPERTY, oldProperty, property));
+			eNotify(new ENotificationImpl(this, Notification.SET, RdfsPackage.DOMAIN__PROPERTY, oldProperty, property));
 	}
 
 	/**
@@ -120,7 +133,7 @@ public class RDFDomainImpl extends MinimalEObjectImpl.Container implements RDFDo
 			domain = (RDFClass)eResolveProxy(oldDomain);
 			if (domain != oldDomain) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RdfsPackage.RDF_DOMAIN__DOMAIN, oldDomain, domain));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RdfsPackage.DOMAIN__DOMAIN, oldDomain, domain));
 			}
 		}
 		return domain;
@@ -145,7 +158,7 @@ public class RDFDomainImpl extends MinimalEObjectImpl.Container implements RDFDo
 		RDFClass oldDomain = domain;
 		domain = newDomain;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RdfsPackage.RDF_DOMAIN__DOMAIN, oldDomain, domain));
+			eNotify(new ENotificationImpl(this, Notification.SET, RdfsPackage.DOMAIN__DOMAIN, oldDomain, domain));
 	}
 
 	/**
@@ -156,10 +169,10 @@ public class RDFDomainImpl extends MinimalEObjectImpl.Container implements RDFDo
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case RdfsPackage.RDF_DOMAIN__PROPERTY:
+			case RdfsPackage.DOMAIN__PROPERTY:
 				if (resolve) return getProperty();
 				return basicGetProperty();
-			case RdfsPackage.RDF_DOMAIN__DOMAIN:
+			case RdfsPackage.DOMAIN__DOMAIN:
 				if (resolve) return getDomain();
 				return basicGetDomain();
 		}
@@ -174,10 +187,10 @@ public class RDFDomainImpl extends MinimalEObjectImpl.Container implements RDFDo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case RdfsPackage.RDF_DOMAIN__PROPERTY:
+			case RdfsPackage.DOMAIN__PROPERTY:
 				setProperty((RDFProperty)newValue);
 				return;
-			case RdfsPackage.RDF_DOMAIN__DOMAIN:
+			case RdfsPackage.DOMAIN__DOMAIN:
 				setDomain((RDFClass)newValue);
 				return;
 		}
@@ -192,10 +205,10 @@ public class RDFDomainImpl extends MinimalEObjectImpl.Container implements RDFDo
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case RdfsPackage.RDF_DOMAIN__PROPERTY:
+			case RdfsPackage.DOMAIN__PROPERTY:
 				setProperty((RDFProperty)null);
 				return;
-			case RdfsPackage.RDF_DOMAIN__DOMAIN:
+			case RdfsPackage.DOMAIN__DOMAIN:
 				setDomain((RDFClass)null);
 				return;
 		}
@@ -210,12 +223,12 @@ public class RDFDomainImpl extends MinimalEObjectImpl.Container implements RDFDo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case RdfsPackage.RDF_DOMAIN__PROPERTY:
+			case RdfsPackage.DOMAIN__PROPERTY:
 				return property != null;
-			case RdfsPackage.RDF_DOMAIN__DOMAIN:
+			case RdfsPackage.DOMAIN__DOMAIN:
 				return domain != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //RDFDomainImpl
+} //DomainImpl

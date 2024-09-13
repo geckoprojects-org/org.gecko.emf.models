@@ -10,6 +10,7 @@
 
 # Needed because we enabled library 'gecko-dimc'
 # Activate baselining
+mavenCentral: true
 dimcBaselining: false
 github-project: org.gecko.emf.models
 base-version: 1.0.0

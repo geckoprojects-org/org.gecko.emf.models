@@ -1,9 +1,0 @@
--runrequires: \
-	bnd.identity;id='org.eclipse.uml2',\
-	bnd.identity;id='org.eclipse.uml2.codegen.ecore',\
-	bnd.identity;id='org.eclipse.uml2.common',\
-	bnd.identity;id='org.eclipse.uml2.types',\
-	bnd.identity;id='org.eclipse.uml2.uml',\
-	bnd.identity;id='org.eclipse.uml2.uml.profile.standard'
--runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
--runee: JavaSE-17

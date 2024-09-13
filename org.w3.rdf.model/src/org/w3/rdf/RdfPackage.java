@@ -1,13 +1,28 @@
-/**
+/*
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
  */
 package org.w3.rdf;
+
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
-import org.eclipse.emf.ecore.EOperation;
-import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
+import org.gecko.emf.osgi.annotation.provide.EPackage;
+
+import org.osgi.annotation.versioning.ProviderType;
+
 import org.w3.rdfs.RdfsPackage;
 
 /**
@@ -17,7 +32,6 @@ import org.w3.rdfs.RdfsPackage;
  * <ul>
  *   <li>each class,</li>
  *   <li>each feature of each class,</li>
- *   <li>each operation of each class,</li>
  *   <li>each enum,</li>
  *   <li>and each data type</li>
  * </ul>
@@ -29,7 +43,9 @@ import org.w3.rdfs.RdfsPackage;
  * @model kind="package"
  * @generated
  */
-public interface RdfPackage extends EPackage {
+@ProviderType
+@EPackage(uri = RdfPackage.eNS_URI, genModel = "/model/rdf.genmodel", genModelSourceLocations = {"model/rdf.genmodel","org.w3.rdf.model/model/rdf.genmodel"}, ecore="/model/rdf.ecore", ecoreSourceLocations="/model/rdf.ecore")
+public interface RdfPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -163,15 +179,6 @@ public interface RdfPackage extends EPackage {
 	int RDF_LIST_FEATURE_COUNT = RdfsPackage.RDF_RESOURCE_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>RDF List</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RDF_LIST_OPERATION_COUNT = RdfsPackage.RDF_RESOURCE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.w3.rdf.impl.RestImpl <em>Rest</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -281,15 +288,6 @@ public interface RdfPackage extends EPackage {
 	int REST_FEATURE_COUNT = RDF_LIST_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Rest</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REST_OPERATION_COUNT = RDF_LIST_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.w3.rdf.impl.AltImpl <em>Alt</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -379,15 +377,6 @@ public interface RdfPackage extends EPackage {
 	 * @ordered
 	 */
 	int ALT_FEATURE_COUNT = RdfsPackage.RDF_CONTAINER_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Alt</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALT_OPERATION_COUNT = RdfsPackage.RDF_CONTAINER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.w3.rdf.impl.BagImpl <em>Bag</em>}' class.
@@ -481,15 +470,6 @@ public interface RdfPackage extends EPackage {
 	int BAG_FEATURE_COUNT = RdfsPackage.RDF_CONTAINER_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Bag</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BAG_OPERATION_COUNT = RdfsPackage.RDF_CONTAINER_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.w3.rdf.impl.IRIImpl <em>IRI</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -518,15 +498,6 @@ public interface RdfPackage extends EPackage {
 	int IRI_FEATURE_COUNT = 1;
 
 	/**
-	 * The number of operations of the '<em>IRI</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IRI_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link org.w3.rdf.impl.RDFSubjectImpl <em>RDF Subject</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -553,15 +524,6 @@ public interface RdfPackage extends EPackage {
 	 * @ordered
 	 */
 	int RDF_SUBJECT_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>RDF Subject</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RDF_SUBJECT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.w3.rdf.impl.RDFStatementImpl <em>RDF Statement</em>}' class.
@@ -673,15 +635,6 @@ public interface RdfPackage extends EPackage {
 	int RDF_STATEMENT_FEATURE_COUNT = RdfsPackage.RDF_RESOURCE_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of operations of the '<em>RDF Statement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RDF_STATEMENT_OPERATION_COUNT = RdfsPackage.RDF_RESOURCE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.w3.rdf.impl.RDFPredicateImpl <em>RDF Predicate</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -708,15 +661,6 @@ public interface RdfPackage extends EPackage {
 	 * @ordered
 	 */
 	int RDF_PREDICATE_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>RDF Predicate</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RDF_PREDICATE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.w3.rdf.impl.RDFTypeImpl <em>RDF Type</em>}' class.
@@ -756,15 +700,6 @@ public interface RdfPackage extends EPackage {
 	int RDF_TYPE_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>RDF Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RDF_TYPE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link org.w3.rdf.impl.RDFValueImpl <em>RDF Value</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -802,15 +737,6 @@ public interface RdfPackage extends EPackage {
 	int RDF_VALUE_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>RDF Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RDF_VALUE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link org.w3.rdf.impl.FirstImpl <em>First</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -846,15 +772,6 @@ public interface RdfPackage extends EPackage {
 	 * @ordered
 	 */
 	int FIRST_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>First</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIRST_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.w3.rdf.impl.SeqImpl <em>Seq</em>}' class.
@@ -948,24 +865,6 @@ public interface RdfPackage extends EPackage {
 	int SEQ_FEATURE_COUNT = RdfsPackage.RDF_CONTAINER_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Unnamed5</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEQ___UNNAMED5__DIAGNOSTICCHAIN_MAP = RdfsPackage.RDF_CONTAINER_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Seq</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEQ_OPERATION_COUNT = RdfsPackage.RDF_CONTAINER_OPERATION_COUNT + 1;
-
-	/**
 	 * The meta object id for the '{@link org.w3.rdf.impl.RDFObjectImpl <em>RDF Object</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -994,15 +893,6 @@ public interface RdfPackage extends EPackage {
 	int RDF_OBJECT_FEATURE_COUNT = 1;
 
 	/**
-	 * The number of operations of the '<em>RDF Object</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RDF_OBJECT_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link org.w3.rdf.impl.RDFURIImpl <em>RDFURI</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1029,15 +919,6 @@ public interface RdfPackage extends EPackage {
 	 * @ordered
 	 */
 	int RDFURI_FEATURE_COUNT = IRI_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>RDFURI</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RDFURI_OPERATION_COUNT = IRI_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.w3.rdf.impl.RDFPropertyImpl <em>RDF Property</em>}' class.
@@ -1147,15 +1028,6 @@ public interface RdfPackage extends EPackage {
 	 * @ordered
 	 */
 	int RDF_PROPERTY_FEATURE_COUNT = RdfsPackage.RDF_RESOURCE_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>RDF Property</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RDF_PROPERTY_OPERATION_COUNT = RdfsPackage.RDF_RESOURCE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '<em>Primitive Literal</em>' data type.
@@ -1454,16 +1326,6 @@ public interface RdfPackage extends EPackage {
 	EClass getSeq();
 
 	/**
-	 * Returns the meta object for the '{@link org.w3.rdf.Seq#unnamed5(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Unnamed5</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Unnamed5</em>' operation.
-	 * @see org.w3.rdf.Seq#unnamed5(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getSeq__Unnamed5__DiagnosticChain_Map();
-
-	/**
 	 * Returns the meta object for class '{@link org.w3.rdf.RDFObject <em>RDF Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1563,7 +1425,6 @@ public interface RdfPackage extends EPackage {
 	 * <ul>
 	 *   <li>each class,</li>
 	 *   <li>each feature of each class,</li>
-	 *   <li>each operation of each class,</li>
 	 *   <li>each enum,</li>
 	 *   <li>and each data type</li>
 	 * </ul>
@@ -1810,14 +1671,6 @@ public interface RdfPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SEQ = eINSTANCE.getSeq();
-
-		/**
-		 * The meta object literal for the '<em><b>Unnamed5</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SEQ___UNNAMED5__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSeq__Unnamed5__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link org.w3.rdf.impl.RDFObjectImpl <em>RDF Object</em>}' class.

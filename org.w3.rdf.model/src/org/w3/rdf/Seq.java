@@ -1,10 +1,20 @@
-/**
+/*
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
  */
 package org.w3.rdf;
 
-import java.util.Map;
+import org.osgi.annotation.versioning.ProviderType;
 
-import org.eclipse.emf.common.util.DiagnosticChain;
 import org.w3.rdfs.RDFContainer;
 
 /**
@@ -21,18 +31,6 @@ import org.w3.rdfs.RDFContainer;
  * @model
  * @generated
  */
+@ProviderType
 public interface Seq extends RDFContainer {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * ordered
-	 * @param diagnostics The chain of diagnostics to which problems are to be appended.
-	 * @param context The cache of context-specific information.
-	 * <!-- end-model-doc -->
-	 * @model
-	 * @generated
-	 */
-	boolean unnamed5(DiagnosticChain diagnostics, Map<Object, Object> context);
-
 } // Seq

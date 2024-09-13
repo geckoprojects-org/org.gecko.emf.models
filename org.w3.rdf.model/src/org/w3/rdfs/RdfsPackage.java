@@ -1,11 +1,27 @@
-/**
+/*
+ * Copyright (c) 2012 - 2024 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
  */
 package org.w3.rdfs;
 
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
+import org.gecko.emf.osgi.annotation.provide.EPackage;
+
+import org.osgi.annotation.versioning.ProviderType;
+
 import org.w3.rdf.RdfPackage;
 
 /**
@@ -15,7 +31,6 @@ import org.w3.rdf.RdfPackage;
  * <ul>
  *   <li>each class,</li>
  *   <li>each feature of each class,</li>
- *   <li>each operation of each class,</li>
  *   <li>each enum,</li>
  *   <li>and each data type</li>
  * </ul>
@@ -27,7 +42,9 @@ import org.w3.rdf.RdfPackage;
  * @model kind="package"
  * @generated
  */
-public interface RdfsPackage extends EPackage {
+@ProviderType
+@EPackage(uri = RdfsPackage.eNS_URI, genModel = "/model/rdf.genmodel", genModelSourceLocations = {"model/rdf.genmodel","org.w3.rdf.model/model/rdf.genmodel"}, ecore="/model/rdfs.ecore", ecoreSourceLocations="/model/rdfs.ecore")
+public interface RdfsPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -42,7 +59,7 @@ public interface RdfsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.w3.org/2000/01/rdf-schema";
+	String eNS_URI = "http://www.w3.org/2000/01/rdf-schema#";
 
 	/**
 	 * The package namespace name.
@@ -96,15 +113,6 @@ public interface RdfsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SEE_ALSO_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>See Also</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEE_ALSO_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.w3.rdfs.impl.RDFResourceImpl <em>RDF Resource</em>}' class.
@@ -189,15 +197,6 @@ public interface RdfsPackage extends EPackage {
 	int RDF_RESOURCE_FEATURE_COUNT = 7;
 
 	/**
-	 * The number of operations of the '<em>RDF Resource</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RDF_RESOURCE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link org.w3.rdfs.impl.RDFLabelImpl <em>RDF Label</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -235,15 +234,6 @@ public interface RdfsPackage extends EPackage {
 	int RDF_LABEL_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>RDF Label</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RDF_LABEL_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link org.w3.rdfs.impl.RDFLiteralImpl <em>RDF Literal</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -270,15 +260,6 @@ public interface RdfsPackage extends EPackage {
 	 * @ordered
 	 */
 	int RDF_LITERAL_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>RDF Literal</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RDF_LITERAL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.w3.rdfs.impl.RDFClassImpl <em>RDF Class</em>}' class.
@@ -372,15 +353,6 @@ public interface RdfsPackage extends EPackage {
 	int RDF_CLASS_FEATURE_COUNT = RDF_RESOURCE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>RDF Class</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RDF_CLASS_OPERATION_COUNT = RDF_RESOURCE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.w3.rdfs.impl.RDFContainerImpl <em>RDF Container</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -472,23 +444,14 @@ public interface RdfsPackage extends EPackage {
 	int RDF_CONTAINER_FEATURE_COUNT = RDF_CLASS_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>RDF Container</em>' class.
+	 * The meta object id for the '{@link org.w3.rdfs.impl.DomainImpl <em>Domain</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RDF_CONTAINER_OPERATION_COUNT = RDF_CLASS_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.w3.rdfs.impl.RDFDomainImpl <em>RDF Domain</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.w3.rdfs.impl.RDFDomainImpl
-	 * @see org.w3.rdfs.impl.RdfsPackageImpl#getRDFDomain()
+	 * @see org.w3.rdfs.impl.DomainImpl
+	 * @see org.w3.rdfs.impl.RdfsPackageImpl#getDomain()
 	 * @generated
 	 */
-	int RDF_DOMAIN = 6;
+	int DOMAIN = 6;
 
 	/**
 	 * The feature id for the '<em><b>Property</b></em>' reference.
@@ -497,7 +460,7 @@ public interface RdfsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RDF_DOMAIN__PROPERTY = 0;
+	int DOMAIN__PROPERTY = 0;
 
 	/**
 	 * The feature id for the '<em><b>Domain</b></em>' reference.
@@ -506,25 +469,16 @@ public interface RdfsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RDF_DOMAIN__DOMAIN = 1;
+	int DOMAIN__DOMAIN = 1;
 
 	/**
-	 * The number of structural features of the '<em>RDF Domain</em>' class.
+	 * The number of structural features of the '<em>Domain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RDF_DOMAIN_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>RDF Domain</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RDF_DOMAIN_OPERATION_COUNT = 0;
+	int DOMAIN_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link org.w3.rdfs.impl.SubPropertyOfImpl <em>Sub Property Of</em>}' class.
@@ -564,15 +518,6 @@ public interface RdfsPackage extends EPackage {
 	int SUB_PROPERTY_OF_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Sub Property Of</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUB_PROPERTY_OF_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link org.w3.rdfs.impl.MemberImpl <em>Member</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -610,15 +555,6 @@ public interface RdfsPackage extends EPackage {
 	int MEMBER_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Member</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEMBER_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link org.w3.rdfs.impl.SubClassOfImpl <em>Sub Class Of</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -654,15 +590,6 @@ public interface RdfsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUB_CLASS_OF_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Sub Class Of</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUB_CLASS_OF_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.w3.rdfs.impl.IsDefinedByImpl <em>Is Defined By</em>}' class.
@@ -711,15 +638,6 @@ public interface RdfsPackage extends EPackage {
 	int IS_DEFINED_BY_FEATURE_COUNT = SEE_ALSO_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Is Defined By</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IS_DEFINED_BY_OPERATION_COUNT = SEE_ALSO_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.w3.rdfs.impl.RDFCommentImpl <em>RDF Comment</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -755,15 +673,6 @@ public interface RdfsPackage extends EPackage {
 	 * @ordered
 	 */
 	int RDF_COMMENT_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>RDF Comment</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RDF_COMMENT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.w3.rdfs.impl.RDFDatatypeImpl <em>RDF Datatype</em>}' class.
@@ -855,15 +764,6 @@ public interface RdfsPackage extends EPackage {
 	 * @ordered
 	 */
 	int RDF_DATATYPE_FEATURE_COUNT = RDF_CLASS_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>RDF Datatype</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RDF_DATATYPE_OPERATION_COUNT = RDF_CLASS_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.w3.rdfs.impl.ContainerMembershipPropertyImpl <em>Container Membership Property</em>}' class.
@@ -975,15 +875,6 @@ public interface RdfsPackage extends EPackage {
 	int CONTAINER_MEMBERSHIP_PROPERTY_FEATURE_COUNT = RdfPackage.RDF_PROPERTY_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Container Membership Property</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTAINER_MEMBERSHIP_PROPERTY_OPERATION_COUNT = RdfPackage.RDF_PROPERTY_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.w3.rdfs.impl.RangeImpl <em>Range</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1019,15 +910,6 @@ public interface RdfsPackage extends EPackage {
 	 * @ordered
 	 */
 	int RANGE_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Range</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RANGE_OPERATION_COUNT = 0;
 
 
 	/**
@@ -1234,36 +1116,36 @@ public interface RdfsPackage extends EPackage {
 	EReference getRDFClass_SubClassOf();
 
 	/**
-	 * Returns the meta object for class '{@link org.w3.rdfs.RDFDomain <em>RDF Domain</em>}'.
+	 * Returns the meta object for class '{@link org.w3.rdfs.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>RDF Domain</em>'.
-	 * @see org.w3.rdfs.RDFDomain
+	 * @return the meta object for class '<em>Domain</em>'.
+	 * @see org.w3.rdfs.Domain
 	 * @generated
 	 */
-	EClass getRDFDomain();
+	EClass getDomain();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.w3.rdfs.RDFDomain#getProperty <em>Property</em>}'.
+	 * Returns the meta object for the reference '{@link org.w3.rdfs.Domain#getProperty <em>Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Property</em>'.
-	 * @see org.w3.rdfs.RDFDomain#getProperty()
-	 * @see #getRDFDomain()
+	 * @see org.w3.rdfs.Domain#getProperty()
+	 * @see #getDomain()
 	 * @generated
 	 */
-	EReference getRDFDomain_Property();
+	EReference getDomain_Property();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.w3.rdfs.RDFDomain#getDomain <em>Domain</em>}'.
+	 * Returns the meta object for the reference '{@link org.w3.rdfs.Domain#getDomain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Domain</em>'.
-	 * @see org.w3.rdfs.RDFDomain#getDomain()
-	 * @see #getRDFDomain()
+	 * @see org.w3.rdfs.Domain#getDomain()
+	 * @see #getDomain()
 	 * @generated
 	 */
-	EReference getRDFDomain_Domain();
+	EReference getDomain_Domain();
 
 	/**
 	 * Returns the meta object for class '{@link org.w3.rdfs.SubPropertyOf <em>Sub Property Of</em>}'.
@@ -1481,7 +1363,6 @@ public interface RdfsPackage extends EPackage {
 	 * <ul>
 	 *   <li>each class,</li>
 	 *   <li>each feature of each class,</li>
-	 *   <li>each operation of each class,</li>
 	 *   <li>each enum,</li>
 	 *   <li>and each data type</li>
 	 * </ul>
@@ -1654,14 +1535,14 @@ public interface RdfsPackage extends EPackage {
 		EReference RDF_CLASS__SUB_CLASS_OF = eINSTANCE.getRDFClass_SubClassOf();
 
 		/**
-		 * The meta object literal for the '{@link org.w3.rdfs.impl.RDFDomainImpl <em>RDF Domain</em>}' class.
+		 * The meta object literal for the '{@link org.w3.rdfs.impl.DomainImpl <em>Domain</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.w3.rdfs.impl.RDFDomainImpl
-		 * @see org.w3.rdfs.impl.RdfsPackageImpl#getRDFDomain()
+		 * @see org.w3.rdfs.impl.DomainImpl
+		 * @see org.w3.rdfs.impl.RdfsPackageImpl#getDomain()
 		 * @generated
 		 */
-		EClass RDF_DOMAIN = eINSTANCE.getRDFDomain();
+		EClass DOMAIN = eINSTANCE.getDomain();
 
 		/**
 		 * The meta object literal for the '<em><b>Property</b></em>' reference feature.
@@ -1669,7 +1550,7 @@ public interface RdfsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RDF_DOMAIN__PROPERTY = eINSTANCE.getRDFDomain_Property();
+		EReference DOMAIN__PROPERTY = eINSTANCE.getDomain_Property();
 
 		/**
 		 * The meta object literal for the '<em><b>Domain</b></em>' reference feature.
@@ -1677,7 +1558,7 @@ public interface RdfsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RDF_DOMAIN__DOMAIN = eINSTANCE.getRDFDomain_Domain();
+		EReference DOMAIN__DOMAIN = eINSTANCE.getDomain_Domain();
 
 		/**
 		 * The meta object literal for the '{@link org.w3.rdfs.impl.SubPropertyOfImpl <em>Sub Property Of</em>}' class.
