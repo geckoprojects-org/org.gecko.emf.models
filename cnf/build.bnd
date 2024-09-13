@@ -10,6 +10,7 @@
 
 # Needed because we enabled library 'gecko-dimc'
 # Activate baselining
+mavenCentral: true
 dimcBaselining: false
 github-project: org.gecko.emf.models
 base-version: 1.0.0
@@ -33,6 +34,15 @@ javac.target: 11
         readOnly=true; \
         poll.time=-1; \
         name="Central"
+
+-plugin.2.DIM: \
+    aQute.bnd.repository.maven.provider.MavenBndRepository; \
+        snapshotUrl=https://devel.data-in-motion.biz/nexus/repository/dim-snapshot/; \
+        releaseUrl=https://devel.data-in-motion.biz/nexus/repository/maven-releases/; \
+        index=${.}/dim-uml.mvn; \
+        readOnly=true; \
+        poll.time=-1; \
+        name="DIM UML2"
         
 -plugin.0.Local: \
 	aQute.bnd.deployer.repository.LocalIndexedRepo; \

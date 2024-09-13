@@ -1,6 +1,36 @@
-[![CI Build](https://github.com/geckoprojects-org/org.gecko.emf.models/actions/workflows/build.yml/badge.svg)](https://github.com/geckoprojects-org/org.gecko.emf.models/actions/workflows/build.yml)[![License](https://github.com/geckoprojects-org/org.gecko.emf.models/actions/workflows/license.yml/badge.svg)](https://github.com/geckoprojects-org/org.gecko.emf.models/actions/workflows/license.yml )[![Sonar](https://github.com/geckoprojects-org/org.gecko.emf.models/actions/workflows/sonar.yml/badge.svg)](https://github.com/geckoprojects-org/org.gecko.emf.models/actions/workflows/sonar.yml )[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=geckoprojects-org_org.gecko.emf.models&metric=bugs)](https://sonarcloud.io/dashboard?id=geckoprojects-org_org.gecko.emf.models)[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=geckoprojects-org_org.gecko.emf.models&metric=code_smells)](https://sonarcloud.io/dashboard?id=geckoprojects-org_org.gecko.emf.models)[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=geckoprojects-org_org.gecko.emf.models&metric=coverage)](https://sonarcloud.io/dashboard?id=geckoprojects-org_org.gecko.emf.models)[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=geckoprojects-org_org.gecko.emf.models&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=geckoprojects-org_org.gecko.emf.models)[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=geckoprojects-org_org.gecko.emf.models&metric=alert_status)](https://sonarcloud.io/dashboard?id=geckoprojects-org_org.gecko.emf.models)[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=geckoprojects-org_org.gecko.emf.models&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=geckoprojects-org_org.gecko.emf.models)[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=geckoprojects-org_org.gecko.emf.models&metric=security_rating)](https://sonarcloud.io/dashboard?id=geckoprojects-org_org.gecko.emf.models)[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=geckoprojects-org_org.gecko.emf.models&metric=sqale_index)](https://sonarcloud.io/dashboard?id=geckoprojects-org_org.gecko.emf.models)[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=geckoprojects-org_org.gecko.emf.models&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=geckoprojects-org_org.gecko.emf.models)
+[![CI Build](https://github.com/geckoprojects-org/org.gecko.emf.models/actions/workflows/build.yml/badge.svg)](https://github.com/geckoprojects-org/org.gecko.emf.models/actions/workflows/build.yml)[![License](https://github.com/geckoprojects-org/org.gecko.emf.models/actions/workflows/license.yml/badge.svg)](https://github.com/geckoprojects-org/org.gecko.emf.models/actions/workflows/license.yml )
 
-# org.gecko.emf.models
+# Geckoprojects EMF Models
+This project contains a set of EMF models that are generated out of XSD's.
+The packages contain generated code. We tried to reuse some basic model like xhtml or atom.
+
+## Gecko EMF Model Bndtools Library
+To ease the use of these models in bndtools, we created a bnd workspace library to integrate all dependencies.
+
+Please use this dependency:
+
+`org.geckoprojects.emf.model:org.gecko.emf.models.library:<version>`
+
+To integrate the workspace library just add:
+
+`-library: geckoEMFModels` 
+
+to you `build.bnd`
+
+## Gecko EMF Model Maven BOM
+To ease the use of these models in Maven, we created a BOM that contains all dependencies.
+
+Please use the following coordinates on Maven Central:
+
+```
+<dependency>
+	<groupId>org.geckoprojects.emf.model</groupId>
+	<artifactId>org.gecko.emf.models.bom</artifactId>
+	<version>${emf.models.version}</version>
+	<type>pom</type>
+	<scope>import</scope>
+</dependency>
+```
 
 ## Links
 
