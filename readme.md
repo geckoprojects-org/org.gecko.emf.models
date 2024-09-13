@@ -4,7 +4,7 @@
 This project contains a set of EMF models that are generated out of XSD's.
 The packages contain generated code. We tried to reuse some basic model like xhtml or atom.
 
-## Gecko EMF Model Library
+## Gecko EMF Model Bndtools Library
 To ease the use of these models in bndtools, we created a bnd workspace library to integrate all dependencies.
 
 Please use this dependency:
@@ -16,6 +16,21 @@ To integrate the workspace library just add:
 `-library: geckoEMFModels` 
 
 to you `build.bnd`
+
+## Gecko EMF Model Maven BOM
+To ease the use of these models in Maven, we created a BOM that contains all dependencies.
+
+Please use the following coordinates on Maven Central:
+
+```
+<dependency>
+	<groupId>org.geckoprojects.emf.model</groupId>
+	<artifactId>org.gecko.emf.models.bom</artifactId>
+	<version>${emf.models.version}</version>
+	<type>pom</type>
+	<scope>import</scope>
+</dependency>
+```
 
 ## Links
 
