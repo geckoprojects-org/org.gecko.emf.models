@@ -15,7 +15,10 @@
 	bnd.identity;id='org.w3.xhtml.model',\
 	bnd.identity;id='org.w3.xlink.model',\
 	bnd.identity;id='org.xmlsoap.model',\
-	bnd.identity;id='org.w3.rdf.model'
+	bnd.identity;id='org.w3.rdf.model',\
+	bnd.identity;id='de.dwd.cdc.common.model',\
+	bnd.identity;id='de.dwd.cdc.forecast.model',\
+	bnd.identity;id='de.dwd.cdc.model'
 -runbundles: \
 	net.opengis.gml3.model;version=snapshot,\
 	net.opengis.kml.model;version=snapshot,\
@@ -41,4 +44,7 @@
 	org.eclipse.uml2.common;version='[2.5.0,2.5.1)',\
 	org.eclipse.uml2.types;version='[2.5.0,2.5.1)',\
 	org.eclipse.uml2.uml;version='[5.5.0,5.5.1)',\
-	org.w3.rdf.model;version=snapshot
+	org.w3.rdf.model;version=snapshot,\
+	de.dwd.cdc.common.model;version=snapshot,\
+	de.dwd.cdc.forecast.model;version=snapshot,\
+	de.dwd.cdc.model;version=snapshot
