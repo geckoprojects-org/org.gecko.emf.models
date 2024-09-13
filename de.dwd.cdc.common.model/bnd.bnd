@@ -7,10 +7,6 @@
 	model/met-elements.genmodel;\
 		generate=geckoEMF;\
 		genmodel=model/met-elements.genmodel;\
-		output=src,\
-	model/dwd-weather.genmodel;\
-		generate=geckoEMF;\
-		genmodel=model/dwd-weather.genmodel;\
 		output=src
 # Add this attribute to find some logging information
 #		logfile=test.log;\
@@ -26,4 +22,4 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	org.osgi.service.condition;version=latest
 
 Bundle-Name: DWD CDC Common Models
-Bundle-Description: Ecore and generated code for DWD Common Models like Meterologicaöl Definitions
+Bundle-Description: Ecore and generated code for DWD Common Models like Meterological Definitions
