@@ -13,5 +13,5 @@ gecko-base:\
         bnd.library     = geckoEMFModels; \
         path            = template
         
-Bundle-Name: Gecko EMF Model Library
-Bundle-Description: Workspce library for dependencies to all models
+Bundle-Name: Gecko EMF Model Workspace Library
+Bundle-Description: Workspace library for dependencies to all models

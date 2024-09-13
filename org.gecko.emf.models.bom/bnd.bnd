@@ -1,0 +1,9 @@
+-include: \
+	${.}/../org.gecko.emf.models.library/buildpath.bnd
+
+-diffignore: */pom.properties
+
+-resourceonly: true
+
+Bundle-Name: Gecko EMF Model BOM
+Bundle-Description: Maven BOM with dependencies to all models
