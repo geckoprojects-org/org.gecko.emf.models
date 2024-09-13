@@ -1,0 +1,36 @@
+/**
+ */
+package org.w3.owl.impl;
+
+import org.eclipse.emf.ecore.EClass;
+import org.w3.owl.OwlPackage;
+import org.w3.owl.Thing;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Thing</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * @generated
+ */
+public class ThingImpl extends TypedThingImpl implements Thing {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ThingImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return OwlPackage.Literals.THING;
+	}
+
+} //ThingImpl

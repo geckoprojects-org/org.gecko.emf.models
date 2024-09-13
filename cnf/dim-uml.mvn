@@ -1,0 +1,9 @@
+org.eclipse.uml2:org.eclipse.uml2.common:2.5.0
+org.eclipse.uml2:org.eclipse.uml2.codegen.ecore:2.5.2
+org.eclipse.uml2:org.eclipse.uml2.types:2.5.0
+org.eclipse.uml2:org.eclipse.uml2:5.5.3
+org.eclipse.uml2:org.eclipse.uml2.uml:5.5.0
+org.eclipse.uml2:org.eclipse.uml2.uml.resources:5.5.0
+org.eclipse.uml2:org.eclipse.uml2.uml.ecore.importer:3.5.0
+org.eclipse.uml2:org.eclipse.uml2.uml.ecore.exporter:3.5.0
+org.eclipse.uml2:org.eclipse.uml2.uml.profile.standard:1.5.0

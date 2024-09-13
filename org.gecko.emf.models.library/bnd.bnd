@@ -1,0 +1,17 @@
+-resourceonly: true
+-include: ${.}/buildpath.bnd	
+mavendeps: ${sjoin;\n; ${template;-maven-dependencies;${@}}}
+
+-includeresource: resources,\
+	{template/geckoEMFModels.maven=resources/template/geckoEMFModels.maven}	
+	
+Provide-Capability: \
+	${gecko-base}
+
+gecko-base:\
+    bnd.library;\
+        bnd.library     = geckoEMFModels; \
+        path            = template
+        
+Bundle-Name: Gecko EMF Model Library
+Bundle-Description: Workspce library for dependencies to all models

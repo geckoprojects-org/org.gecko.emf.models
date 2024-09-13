@@ -66,7 +66,7 @@
 [INFO] subtask Generating package serialization /org.hl7.fhir.model/src-gen/org/hl7/fhir/impl/fhir.ecore
 [INFO] internaly worked 1.0 on null
 [INFO] subtask 
-[INFO] Setting Uri Handler: org.gecko.emf.osgi.codegen.ResourceUriHandler@679234
+[INFO] Setting Uri Handler: org.gecko.emf.osgi.codegen.ResourceUriHandler@bb67bca
 [INFO] toPlatformResourceURI: /org.hl7.fhir.model/src-gen/org/hl7/fhir/impl/fhir.ecore
 [INFO] toPlatformResourceURI esult: /org.hl7.fhir.model/src-gen/org/hl7/fhir/impl/fhir.ecore
 [INFO] Asked to handle resource://org.hl7.fhir.model/../org.w3.xhtml.model/model/xhtml.ecore
