@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/de.xoev.common/src" modelPluginID="de.xoev.common"
+    modelName="Latinchars" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.xsd.ecore.importer" complianceLevel="11.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>latinchars.xsd</foreignModel>
+  <genPackages prefix="Datatypes" basePackage="de.xoev.latinchars._11" resource="XML"
+      disposableProviderFactory="true" ecorePackage="latinchars.ecore#/">
+    <genDataTypes ecoreDataType="latinchars.ecore#//StringLatin"/>
+  </genPackages>
+</genmodel:GenModel>

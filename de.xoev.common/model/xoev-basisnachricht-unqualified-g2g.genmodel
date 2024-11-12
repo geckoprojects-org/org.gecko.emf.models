@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2024 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"
+    modelDirectory="/de.xoev.common/src" modelPluginID="de.xoev.common" modelName="XOEV-Basisnachricht-unqualified-g2g"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="11.0" copyrightFields="false" usedGenPackages="din-91379-datatypes.genmodel#//din91379 xoev-code.genmodel#//code"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>xoev-basisnachricht-unqualified.ecore</foreignModel>
+  <foreignModel>xoev-code.ecore</foreignModel>
+  <genPackages prefix="Unqualified" basePackage="de.xoev.basisnachricht" resource="XML"
+      disposableProviderFactory="true" ecorePackage="xoev-basisnachricht-unqualified.ecore#/">
+    <genDataTypes ecoreDataType="xoev-basisnachricht-unqualified.ecore#//UUID"/>
+    <genClasses ecoreClass="xoev-basisnachricht-unqualified.ecore#//BehoerdeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xoev-basisnachricht-unqualified.ecore#//BehoerdeType/verzeichnisdienst"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xoev-basisnachricht-unqualified.ecore#//BehoerdeType/kennung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xoev-basisnachricht-unqualified.ecore#//BehoerdeType/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xoev-basisnachricht-unqualified.ecore#//BehoerdeType/erreichbarkeit"/>
+    </genClasses>
+    <genClasses ecoreClass="xoev-basisnachricht-unqualified.ecore#//CodeKommunikationKanalType"/>
+    <genClasses ecoreClass="xoev-basisnachricht-unqualified.ecore#//CodeVerzeichnisdienstType"/>
+    <genClasses ecoreClass="xoev-basisnachricht-unqualified.ecore#//IdentifikationNachrichtType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xoev-basisnachricht-unqualified.ecore#//IdentifikationNachrichtType/nachrichtenUUID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xoev-basisnachricht-unqualified.ecore#//IdentifikationNachrichtType/nachrichtentyp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xoev-basisnachricht-unqualified.ecore#//IdentifikationNachrichtType/erstellungszeitpunkt"/>
+    </genClasses>
+    <genClasses ecoreClass="xoev-basisnachricht-unqualified.ecore#//KommunikationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xoev-basisnachricht-unqualified.ecore#//KommunikationType/kanal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xoev-basisnachricht-unqualified.ecore#//KommunikationType/kennung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xoev-basisnachricht-unqualified.ecore#//KommunikationType/zusatz"/>
+    </genClasses>
+    <genClasses ecoreClass="xoev-basisnachricht-unqualified.ecore#//NachrichtenkopfG2GType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xoev-basisnachricht-unqualified.ecore#//NachrichtenkopfG2GType/identifikationNachricht"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xoev-basisnachricht-unqualified.ecore#//NachrichtenkopfG2GType/leser"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xoev-basisnachricht-unqualified.ecore#//NachrichtenkopfG2GType/autor"/>
+    </genClasses>
+    <genClasses ecoreClass="xoev-basisnachricht-unqualified.ecore#//NachrichtG2GType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xoev-basisnachricht-unqualified.ecore#//NachrichtG2GType/nachrichtenkopfG2g"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xoev-basisnachricht-unqualified.ecore#//NachrichtG2GType/produkt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xoev-basisnachricht-unqualified.ecore#//NachrichtG2GType/produkthersteller"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xoev-basisnachricht-unqualified.ecore#//NachrichtG2GType/produktversion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xoev-basisnachricht-unqualified.ecore#//NachrichtG2GType/standard"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xoev-basisnachricht-unqualified.ecore#//NachrichtG2GType/test"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xoev-basisnachricht-unqualified.ecore#//NachrichtG2GType/version"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

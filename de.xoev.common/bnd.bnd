@@ -1,0 +1,43 @@
+# sets the usually required buildpath using the bnd library, you can extend it with the normal -buildpath to your liking
+-library: enable-emf
+
+# The code generation takes a bit of time and makes the build a bit slower.
+# It might be a good idea to put comments around it, when you don't need it
+#-generate:\
+#	model/din-91379-datatypes.genmodel;\
+#		generate=geckoEMF;\
+#		genmodel=model/din-91379-datatypes.genmodel;\
+#		output=src,\
+#	model/xoev-code.genmodel;\
+#		generate=geckoEMF;\
+#		genmodel=model/xoev-code.genmodel;\
+#		output=src,\
+#	model/xoev-basisnachricht-unqualified-g2g.genmodel;\
+#		generate=geckoEMF;\
+#		genmodel=model/xoev-basisnachricht-unqualified-g2g.genmodel;\
+#		output=src,\
+#	model/xoev-basisnachricht-kommunikation.genmodel;\
+#		generate=geckoEMF;\
+#		genmodel=model/xoev-basisnachricht-kommunikation.genmodel;\
+#		output=src,\
+#	model/xoev-basisnachricht-behoerde.genmodel;\
+#		generate=geckoEMF;\
+#		genmodel=model/xoev-basisnachricht-behoerde.genmodel;\
+#		output=src,\
+#	model/xoev-basisnachricht-g2g.genmodel;\
+#		generate=geckoEMF;\
+#		genmodel=model/xoev-basisnachricht-g2g.genmodel;\
+#		output=src
+# Add this attribute to find some logging information
+#		logfile=test.log;\
+
+# If this is not done with a instruction namespace, bnd would think you like
+# to take full control over whats exported and imported and will ignore @Export
+# Bundle Annotations		
+-includeresource.model: model=model
+
+Bundle-Version: 1.0.0.SNAPSHOT
+
+-buildpath: \
+	org.osgi.service.condition;version=latest
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2024 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"
+    modelDirectory="/de.xoev.common/src" modelPluginID="de.xoev.common" modelName="XOEV-Basisnachricht-G2G"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="11.0" copyrightFields="false" usedGenPackages="din-91379-datatypes.genmodel#//din91379 xoev-basisnachricht-behoerde.genmodel#//behoerde xoev-basisnachricht-kommunikation.genmodel#//kommunikation xoev-code.genmodel#//code"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>xoev-basisnachricht-g2g.ecore</foreignModel>
+  <foreignModel>xoev-basisnachricht-behoerde.ecore</foreignModel>
+  <foreignModel>xoev-code.ecore</foreignModel>
+  <foreignModel>xoev-basisnachricht-kommunikation.ecore</foreignModel>
+  <genPackages prefix="G2G" basePackage="de.xoev.basisnachricht" resource="XML" disposableProviderFactory="true"
+      ecorePackage="xoev-basisnachricht-g2g.ecore#/">
+    <genDataTypes ecoreDataType="xoev-basisnachricht-g2g.ecore#//UUID"/>
+    <genClasses ecoreClass="xoev-basisnachricht-g2g.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute xoev-basisnachricht-g2g.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xoev-basisnachricht-g2g.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xoev-basisnachricht-g2g.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xoev-basisnachricht-g2g.ecore#//DocumentRoot/autor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xoev-basisnachricht-g2g.ecore#//DocumentRoot/identifikationNachricht"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xoev-basisnachricht-g2g.ecore#//DocumentRoot/leser"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xoev-basisnachricht-g2g.ecore#//DocumentRoot/nachrichtenkopfG2g"/>
+    </genClasses>
+    <genClasses ecoreClass="xoev-basisnachricht-g2g.ecore#//IdentifikationNachrichtType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xoev-basisnachricht-g2g.ecore#//IdentifikationNachrichtType/nachrichtenUUID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xoev-basisnachricht-g2g.ecore#//IdentifikationNachrichtType/nachrichtentyp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xoev-basisnachricht-g2g.ecore#//IdentifikationNachrichtType/erstellungszeitpunkt"/>
+    </genClasses>
+    <genClasses ecoreClass="xoev-basisnachricht-g2g.ecore#//NachrichtenkopfG2GType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xoev-basisnachricht-g2g.ecore#//NachrichtenkopfG2GType/identifikationNachricht"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xoev-basisnachricht-g2g.ecore#//NachrichtenkopfG2GType/leser"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xoev-basisnachricht-g2g.ecore#//NachrichtenkopfG2GType/autor"/>
+    </genClasses>
+    <genClasses ecoreClass="xoev-basisnachricht-g2g.ecore#//NachrichtG2GType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xoev-basisnachricht-g2g.ecore#//NachrichtG2GType/nachrichtenkopfG2g"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xoev-basisnachricht-g2g.ecore#//NachrichtG2GType/produkt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xoev-basisnachricht-g2g.ecore#//NachrichtG2GType/produkthersteller"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xoev-basisnachricht-g2g.ecore#//NachrichtG2GType/produktversion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xoev-basisnachricht-g2g.ecore#//NachrichtG2GType/standard"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xoev-basisnachricht-g2g.ecore#//NachrichtG2GType/test"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xoev-basisnachricht-g2g.ecore#//NachrichtG2GType/version"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
