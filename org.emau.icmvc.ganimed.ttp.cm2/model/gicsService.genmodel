@@ -1,0 +1,1178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2024 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"
+    modelDirectory="/org.emau.icmvc.ganimed.ttp.cm2/src" modelPluginID="org.emau.icmvc.ganimed.ttp.cm2"
+    modelName="GicsService" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="11.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>cm2.ecore</foreignModel>
+  <foreignModel>config.ecore</foreignModel>
+  <genPackages prefix="Cm2" basePackage="org.emau.icmvc.ganimed.ttp" resource="XML"
+      disposableProviderFactory="true" literalsInterface="false" ecorePackage="cm2.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cm2.ecore#//ConsentStatus">
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//ConsentStatus/ACCEPTED"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//ConsentStatus/DECLINED"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//ConsentStatus/UNKNOWN"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//ConsentStatus/NOTASKED"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//ConsentStatus/NOTCHOSEN"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//ConsentStatus/WITHDRAWN"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//ConsentStatus/INVALIDATED"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//ConsentStatus/REFUSED"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//ConsentStatus/EXPIRED"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//ConsentStatus/OBJECTED"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//ConsentStatus/ACCEPTEDOPTOUT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cm2.ecore#//ConsentStatusType">
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//ConsentStatusType/ACCEPTED"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//ConsentStatusType/DECLINED"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//ConsentStatusType/UNKNOWN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cm2.ecore#//ConsentTemplateType">
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//ConsentTemplateType/CONSENT"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//ConsentTemplateType/CONSENTOPTOUT"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//ConsentTemplateType/REVOCATION"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//ConsentTemplateType/OBJECTION"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//ConsentTemplateType/REFUSAL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cm2.ecore#//FreeTextType">
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//FreeTextType/STRING"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//FreeTextType/DATE"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//FreeTextType/INTEGER"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//FreeTextType/DOUBLE"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//FreeTextType/BOOLEAN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cm2.ecore#//QcProblemStatus">
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemStatus/OPENEXTERN"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemStatus/OPENINTERN"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemStatus/CANCELEDEXTERN"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemStatus/CANCELEDINTERN"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemStatus/CLOSEDEXTERN"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemStatus/CLOSEDINTERN"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemStatus/DELETEDINTERN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cm2.ecore#//QcProblemTypeError">
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeError/MISSING"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeError/MISSINGPART"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeError/ILLEGIBLE"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeError/WRONGPARTICIPANT"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeError/INCONSISTENT"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeError/IMPLAUSIBLE"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeError/OTHER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cm2.ecore#//QcProblemTypeField">
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeField/TEMPLATENAME"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeField/TEMPLATEVERSION"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeField/MODULESTATUS"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeField/SIGNERIDVALUE"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeField/SIGNATUREPARTICIPANTLOCATION"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeField/SIGNATUREPARTICIPANTDATE"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeField/SIGNATUREPARTICIPANTDIGITAL"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeField/SIGNATUREPARTICIPANTPAPER"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeField/SIGNATUREPHYSICIANLOCATION"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeField/SIGNATUREPHYSICIANDATE"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeField/SIGNATUREPHYSICIANDIGITAL"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeField/SIGNATUREPHYSICIANPAPER"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeField/IDATFIRSTNAME"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeField/IDATLASTNAME"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeField/IDATBIRTHDATE"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeField/IDATGENDER"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeField/IDATBIRTHPLACE"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeField/IDATOTHER"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeField/SCAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeField/OTHER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cm2.ecore#//QcProblemTypeOccurrence">
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeOccurrence/PAPER"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeOccurrence/DIGITAL"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemTypeOccurrence/BOTH"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cm2.ecore#//QcTypeStatus">
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcTypeStatus/VALID"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcTypeStatus/INVALID"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="cm2.ecore#//ConsentStatusObject"/>
+    <genDataTypes ecoreDataType="cm2.ecore#//ConsentStatusTypeObject"/>
+    <genDataTypes ecoreDataType="cm2.ecore#//ConsentTemplateTypeObject"/>
+    <genDataTypes ecoreDataType="cm2.ecore#//FreeTextTypeObject"/>
+    <genDataTypes ecoreDataType="cm2.ecore#//QcProblemStatusObject"/>
+    <genDataTypes ecoreDataType="cm2.ecore#//QcProblemTypeErrorObject"/>
+    <genDataTypes ecoreDataType="cm2.ecore#//QcProblemTypeFieldObject"/>
+    <genDataTypes ecoreDataType="cm2.ecore#//QcProblemTypeOccurrenceObject"/>
+    <genDataTypes ecoreDataType="cm2.ecore#//QcTypeStatusObject"/>
+    <genClasses image="false" ecoreClass="cm2.ecore#//AbstractMap"/>
+    <genClasses ecoreClass="cm2.ecore#//AddAlias">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//AddAlias/domainName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AddAlias/originalSignerId"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AddAlias/aliasSignerId"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//AddAliasResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//AddConsent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AddConsent/consent"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//AddConsentOptOut">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AddConsentOptOut/consentTemplateKey"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AddConsentOptOut/signerIds"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//AddConsentOptOutResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AddConsentOptOutResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//AddConsentResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//AddScanToConsent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AddScanToConsent/consentKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//AddScanToConsent/scanBase64"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//AddScanToConsent/fileType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//AddScanToConsent/fileName"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//AddScanToConsentResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//AddSignerIdToConsent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AddSignerIdToConsent/consentKey"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AddSignerIdToConsent/signerId"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//AddSignerIdToConsentResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//AddSignerIdToSignerId">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//AddSignerIdToSignerId/domainName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AddSignerIdToSignerId/existentSignerId"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AddSignerIdToSignerId/newSignerId"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//AddSignerIdToSignerIdResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//AssignedModuleDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//AssignedModuleDTO/comment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//AssignedModuleDTO/defaultConsentStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//AssignedModuleDTO/displayCheckboxes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AssignedModuleDTO/expirationProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//AssignedModuleDTO/externProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//AssignedModuleDTO/mandatory"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AssignedModuleDTO/module"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//AssignedModuleDTO/orderNumber"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AssignedModuleDTO/parent"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//AssignedPolicyDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//AssignedPolicyDTO/comment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AssignedPolicyDTO/expirationProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//AssignedPolicyDTO/externProperties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AssignedPolicyDTO/policy"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ChildrenType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ChildrenType/entry"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ConsentDateValuesDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentDateValuesDTO/consentExpirationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentDateValuesDTO/gicsConsentDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentDateValuesDTO/legalConsentDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentDateValuesDTO/maxPolicyExpirationDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentDateValuesDTO/moduleExpirations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentDateValuesDTO/policyExpirations"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ConsentDTO">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentDTO/freeTextVals"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentDTO/patientSignatureBase64"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentDTO/physicianSignatureBase64"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentDTO/scans"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ConsentKeyDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentKeyDTO/consentDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentKeyDTO/consentTemplateKey"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentKeyDTO/signerIds"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ConsentLightDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentLightDTO/comment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentLightDTO/consentDates"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentLightDTO/creationDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentLightDTO/expirationProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentLightDTO/externProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentLightDTO/hasPatientSignature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentLightDTO/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentLightDTO/moduleStates"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentLightDTO/patientSignatureIsFromGuardian"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentLightDTO/patientSigningDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentLightDTO/patientSigningPlace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentLightDTO/physicianId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentLightDTO/physicianSigningDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentLightDTO/physicianSigningPlace"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentLightDTO/qualityControl"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentLightDTO/templateType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentLightDTO/updateDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentLightDTO/validFromDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentLightDTO/validFromProperties"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ConsentScanDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentScanDTO/base64"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentScanDTO/consentKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentScanDTO/fileName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentScanDTO/fileType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentScanDTO/uploadDate"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ConsentTemplateDTO">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentTemplateDTO/assignedModules"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentTemplateDTO/comment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentTemplateDTO/creationDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentTemplateDTO/expirationProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentTemplateDTO/externProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentTemplateDTO/finalised"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentTemplateDTO/footer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentTemplateDTO/freeTextDefs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentTemplateDTO/header"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentTemplateDTO/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentTemplateDTO/label"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentTemplateDTO/mappedConsentTemplates"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentTemplateDTO/mappedObjectionTemplates"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentTemplateDTO/mappedOptOutConsentTemplates"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentTemplateDTO/mappedRefusalTemplates"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentTemplateDTO/mappedRevocationTemplates"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentTemplateDTO/scanBase64"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentTemplateDTO/scanFileType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentTemplateDTO/structure"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentTemplateDTO/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentTemplateDTO/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentTemplateDTO/updateDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentTemplateDTO/validFromProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentTemplateDTO/versionLabel"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ConsentTemplateKeyDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentTemplateKeyDTO/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentTemplateKeyDTO/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ConsentTemplateKeyDTO/version"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ConsentTemplateStructureDTO">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentTemplateStructureDTO/children"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ConsentTemplateStructureDTO/firstLevelModules"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//CountConsentsForDomainWithFilter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//CountConsentsForDomainWithFilter/domainName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//CountConsentsForDomainWithFilter/config"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//CountConsentsForDomainWithFilterResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//CountConsentsForDomainWithFilterResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//CountSignedPolicies">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//CountSignedPolicies/domainName"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//CountSignedPoliciesResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//CountSignedPoliciesResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//DeactivateAlias">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//DeactivateAlias/domainName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DeactivateAlias/originalSignerId"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DeactivateAlias/aliasSignerId"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//DeactivateAliasResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addAlias"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addAliasResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addConsent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addConsentOptOut"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addConsentOptOutResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addConsentResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addScanToConsent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addScanToConsentResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addSignerIdToConsent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addSignerIdToConsentResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addSignerIdToSignerId"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addSignerIdToSignerIdResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/countConsentsForDomainWithFilter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/countConsentsForDomainWithFilterResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/countSignedPolicies"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/countSignedPoliciesResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/deactivateAlias"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/deactivateAliasResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/duplicateEntryException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getAliasesForSignerId"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getAliasesForSignerIdResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getAliasesForSignerIds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getAliasesForSignerIdsResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getAllConsentedIdsFor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getAllConsentedIdsForResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getAllConsentsForConsentTemplate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getAllConsentsForConsentTemplateResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getAllConsentsForDomain"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getAllConsentsForDomainResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getAllConsentsForDomainWithoutScan"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getAllConsentsForDomainWithoutScanResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getAllConsentsForSignerIds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getAllConsentsForSignerIdsResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getAllIdsForSignerIdType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getAllIdsForSignerIdTypeResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getConsent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getConsentDates"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getConsentDatesResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getConsentLight"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getConsentLightResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getConsentResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getConsentsForDomainPaginated"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getConsentsForDomainPaginatedResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getConsentStatusType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getConsentStatusTypeFromExcludingToExcluding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getConsentStatusTypeFromExcludingToExcludingResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getConsentStatusTypeFromExcludingToIncluding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getConsentStatusTypeFromExcludingToIncludingResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getConsentStatusTypeFromIncludingToExcluding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getConsentStatusTypeFromIncludingToExcludingResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getConsentStatusTypeFromIncludingToIncluding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getConsentStatusTypeFromIncludingToIncludingResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getConsentStatusTypeResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getConsentTemplate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getConsentTemplateResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getCurrentConsentForSignerIdsAndCT"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getCurrentConsentForSignerIdsAndCTResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getCurrentConsentTemplate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getCurrentConsentTemplateResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getCurrentPolicyStatesForSignerIds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getCurrentPolicyStatesForSignerIdsResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getDomain"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getDomainResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getMappedTemplatesForSignerId"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getMappedTemplatesForSignerIdResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getModule"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getModuleResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getObjectByFhirID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getObjectByFhirIDResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getPolicy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getPolicyResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getPolicyStatesForPolicyAndSignerIds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getPolicyStatesForPolicyAndSignerIdsResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getPolicyStatesForPolicyNameAndSignerIds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getPolicyStatesForPolicyNameAndSignerIdsResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getPolicyStatesForSignerIds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getPolicyStatesForSignerIdsResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getQCHistoryForConsent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getQCHistoryForConsentResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getQCProblemHistoryForQCProblem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getQCProblemHistoryForQCProblemResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getSignerIdsForAlias"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getSignerIdsForAliasResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getSignerIdType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getSignerIdTypeResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getTemplatesWithPolicies"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/getTemplatesWithPoliciesResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/illegalArgumentException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/inconsistentStatusException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/internalException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/invalidFreeTextException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/invalidParameterException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/invalidVersionException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/isConsented"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/isConsentedFromExcludingToExcluding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/isConsentedFromExcludingToExcludingResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/isConsentedFromExcludingToIncluding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/isConsentedFromExcludingToIncludingResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/isConsentedFromIncludingToExcluding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/isConsentedFromIncludingToExcludingResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/isConsentedFromIncludingToIncluding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/isConsentedFromIncludingToIncludingResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/isConsentedResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/listConsentTemplates"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/listConsentTemplatesResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/listCurrentConsentTemplates"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/listCurrentConsentTemplatesResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/listDomains"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/listDomainsResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/listModules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/listModulesResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/listPolicies"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/listPoliciesResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/listSignerIdTypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/listSignerIdTypesResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/mandatoryFieldsException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/missingRequiredObjectException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/refuseConsent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/refuseConsentResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/removeScanFromConsent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/removeScanFromConsentResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/requirementsNotFullfilledException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/setQCForConsent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/setQCForConsentResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/unknownAliasException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/unknownConsentException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/unknownConsentTemplateException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/unknownDomainException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/unknownFhirIdObjectException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/unknownIDException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/unknownModuleException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/unknownPolicyException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/unknownSignerIdException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/unknownSignerIdTypeException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/updateConsentInUse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/updateConsentInUseResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/validateConsent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/validateConsentResponse"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//DomainDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//DomainDTO/comment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DomainDTO/config"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//DomainDTO/creationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//DomainDTO/ctVersionConverter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DomainDTO/expirationProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//DomainDTO/externProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//DomainDTO/finalised"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//DomainDTO/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//DomainDTO/logo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//DomainDTO/moduleVersionConverter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//DomainDTO/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//DomainDTO/policyVersionConverter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//DomainDTO/signerIdTypes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//DomainDTO/updateDate"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//DuplicateEntryException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//DuplicateEntryException/message"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//EntryType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//EntryType/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//EntryType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//EntryType1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//EntryType1/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//EntryType1/value"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//EntryType2">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//EntryType2/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//EntryType2/value"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//EntryType3">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//EntryType3/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//EntryType3/value"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//EntryType4">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//EntryType4/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//EntryType4/value"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ExpirationPropertiesDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ExpirationPropertiesDTO/fixedExpirationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ExpirationPropertiesDTO/validPeriod"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="cm2.ecore#//FhirIdDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//FhirIdDTO/fhirID"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//FreeTextDefDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//FreeTextDefDTO/comment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//FreeTextDefDTO/converterString"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//FreeTextDefDTO/creationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//FreeTextDefDTO/externProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//FreeTextDefDTO/finalised"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//FreeTextDefDTO/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//FreeTextDefDTO/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//FreeTextDefDTO/pos"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//FreeTextDefDTO/required"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//FreeTextDefDTO/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//FreeTextDefDTO/updateDate"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//FreeTextValDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//FreeTextValDTO/freeTextDefName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//FreeTextValDTO/value"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetAliasesForSignerId">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetAliasesForSignerId/domainName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetAliasesForSignerId/originalSignerId"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetAliasesForSignerIdResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetAliasesForSignerIdResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetAliasesForSignerIds">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetAliasesForSignerIds/domainName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetAliasesForSignerIds/originalSignerIds"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetAliasesForSignerIdsResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetAliasesForSignerIdsResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetAllConsentedIdsFor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetAllConsentedIdsFor/signerIdTypeName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetAllConsentedIdsFor/policyKey"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetAllConsentedIdsFor/config"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetAllConsentedIdsForResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetAllConsentedIdsForResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetAllConsentsForConsentTemplate">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetAllConsentsForConsentTemplate/consentTemplateKey"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetAllConsentsForConsentTemplateResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetAllConsentsForConsentTemplateResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetAllConsentsForDomain">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetAllConsentsForDomain/domainName"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetAllConsentsForDomainResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetAllConsentsForDomainResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetAllConsentsForDomainWithoutScan">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetAllConsentsForDomainWithoutScan/domainName"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetAllConsentsForDomainWithoutScanResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetAllConsentsForDomainWithoutScanResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetAllConsentsForSignerIds">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetAllConsentsForSignerIds/domainName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetAllConsentsForSignerIds/signerIds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetAllConsentsForSignerIds/useAliases"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetAllConsentsForSignerIdsResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetAllConsentsForSignerIdsResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetAllIdsForSignerIdType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetAllIdsForSignerIdType/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetAllIdsForSignerIdType/signerIdTypeName"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetAllIdsForSignerIdTypeResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetAllIdsForSignerIdTypeResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetConsent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetConsent/consentKey"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetConsentDates">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetConsentDates/consentKey"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetConsentDatesResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetConsentDatesResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetConsentLight">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetConsentLight/consentKey"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetConsentLightResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetConsentLightResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetConsentResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetConsentResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetConsentsForDomainPaginated">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentsForDomainPaginated/domainName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetConsentsForDomainPaginated/config"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetConsentsForDomainPaginatedResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetConsentsForDomainPaginatedResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetConsentStatusType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetConsentStatusType/signerIds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetConsentStatusType/policyKey"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetConsentStatusType/config"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetConsentStatusTypeFromExcludingToExcluding">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetConsentStatusTypeFromExcludingToExcluding/signerIds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentStatusTypeFromExcludingToExcluding/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentStatusTypeFromExcludingToExcluding/policyName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentStatusTypeFromExcludingToExcluding/versionFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentStatusTypeFromExcludingToExcluding/versionTo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetConsentStatusTypeFromExcludingToExcluding/config"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetConsentStatusTypeFromExcludingToExcludingResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentStatusTypeFromExcludingToExcludingResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetConsentStatusTypeFromExcludingToIncluding">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetConsentStatusTypeFromExcludingToIncluding/signerIds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentStatusTypeFromExcludingToIncluding/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentStatusTypeFromExcludingToIncluding/policyName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentStatusTypeFromExcludingToIncluding/versionFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentStatusTypeFromExcludingToIncluding/versionTo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetConsentStatusTypeFromExcludingToIncluding/config"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetConsentStatusTypeFromExcludingToIncludingResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentStatusTypeFromExcludingToIncludingResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetConsentStatusTypeFromIncludingToExcluding">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetConsentStatusTypeFromIncludingToExcluding/signerIds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentStatusTypeFromIncludingToExcluding/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentStatusTypeFromIncludingToExcluding/policyName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentStatusTypeFromIncludingToExcluding/versionFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentStatusTypeFromIncludingToExcluding/versionTo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetConsentStatusTypeFromIncludingToExcluding/config"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetConsentStatusTypeFromIncludingToExcludingResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentStatusTypeFromIncludingToExcludingResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetConsentStatusTypeFromIncludingToIncluding">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetConsentStatusTypeFromIncludingToIncluding/signerIds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentStatusTypeFromIncludingToIncluding/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentStatusTypeFromIncludingToIncluding/policyName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentStatusTypeFromIncludingToIncluding/versionFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentStatusTypeFromIncludingToIncluding/versionTo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetConsentStatusTypeFromIncludingToIncluding/config"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetConsentStatusTypeFromIncludingToIncludingResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentStatusTypeFromIncludingToIncludingResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetConsentStatusTypeResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetConsentStatusTypeResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetConsentTemplate">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetConsentTemplate/consentTemplateKey"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetConsentTemplateResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetConsentTemplateResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetCurrentConsentForSignerIdsAndCT">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetCurrentConsentForSignerIdsAndCT/consentTemplateKey"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetCurrentConsentForSignerIdsAndCT/signerIds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetCurrentConsentForSignerIdsAndCT/ignoreVersionNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetCurrentConsentForSignerIdsAndCT/useAliases"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetCurrentConsentForSignerIdsAndCTResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetCurrentConsentForSignerIdsAndCTResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetCurrentConsentTemplate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetCurrentConsentTemplate/consentTemplateName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetCurrentConsentTemplate/domainName"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetCurrentConsentTemplateResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetCurrentConsentTemplateResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetCurrentPolicyStatesForSignerIds">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetCurrentPolicyStatesForSignerIds/domainName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetCurrentPolicyStatesForSignerIds/signerIds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetCurrentPolicyStatesForSignerIds/config"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetCurrentPolicyStatesForSignerIdsResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetCurrentPolicyStatesForSignerIdsResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetDomain">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetDomain/domainName"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetDomainResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetDomainResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetMappedTemplatesForSignerId">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetMappedTemplatesForSignerId/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetMappedTemplatesForSignerId/ctType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetMappedTemplatesForSignerId/signerId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetMappedTemplatesForSignerId/useAliases"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetMappedTemplatesForSignerIdResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetMappedTemplatesForSignerIdResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetModule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetModule/moduleKey"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetModuleResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetModuleResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetObjectByFhirID">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetObjectByFhirID/clazz"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetObjectByFhirID/fhirID"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetObjectByFhirIDResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetObjectByFhirIDResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetPolicy">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetPolicy/policyKey"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetPolicyResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetPolicyResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetPolicyStatesForPolicyAndSignerIds">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetPolicyStatesForPolicyAndSignerIds/policyKey"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetPolicyStatesForPolicyAndSignerIds/signerIds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetPolicyStatesForPolicyAndSignerIds/useAliases"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetPolicyStatesForPolicyAndSignerIdsResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetPolicyStatesForPolicyAndSignerIdsResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetPolicyStatesForPolicyNameAndSignerIds">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetPolicyStatesForPolicyNameAndSignerIds/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetPolicyStatesForPolicyNameAndSignerIds/policyName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetPolicyStatesForPolicyNameAndSignerIds/signerIds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetPolicyStatesForPolicyNameAndSignerIds/useAliases"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetPolicyStatesForPolicyNameAndSignerIdsResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetPolicyStatesForPolicyNameAndSignerIdsResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetPolicyStatesForSignerIds">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetPolicyStatesForSignerIds/domainName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetPolicyStatesForSignerIds/signerIds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetPolicyStatesForSignerIds/useAliases"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetPolicyStatesForSignerIdsResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetPolicyStatesForSignerIdsResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetQCHistoryForConsent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetQCHistoryForConsent/consentKey"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetQCHistoryForConsentResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetQCHistoryForConsentResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetQCProblemHistoryForQCProblem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetQCProblemHistoryForQCProblem/qcProblem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetQCProblemHistoryForQCProblem/consentKey"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetQCProblemHistoryForQCProblemResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetQCProblemHistoryForQCProblemResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetSignerIdsForAlias">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetSignerIdsForAlias/domainName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetSignerIdsForAlias/aliasSignerId"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetSignerIdsForAliasResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetSignerIdsForAliasResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetSignerIdType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetSignerIdType/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//GetSignerIdType/signerIdTypeName"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetSignerIdTypeResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetSignerIdTypeResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetTemplatesWithPolicies">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetTemplatesWithPolicies/policyKeyDTOs"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//GetTemplatesWithPoliciesResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//GetTemplatesWithPoliciesResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//HashMap"/>
+    <genClasses ecoreClass="cm2.ecore#//IllegalArgumentException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IllegalArgumentException/message"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//InconsistentStatusException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//InconsistentStatusException/message"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//InternalException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//InternalException/message"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//InvalidFreeTextException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//InvalidFreeTextException/message"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//InvalidParameterException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//InvalidParameterException/parameterName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//InvalidParameterException/message"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//InvalidVersionException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//InvalidVersionException/message"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//IsConsented">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//IsConsented/signerIds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//IsConsented/policyKey"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//IsConsented/config"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//IsConsentedFromExcludingToExcluding">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//IsConsentedFromExcludingToExcluding/signerIds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IsConsentedFromExcludingToExcluding/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IsConsentedFromExcludingToExcluding/policyName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IsConsentedFromExcludingToExcluding/versionFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IsConsentedFromExcludingToExcluding/versionTo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//IsConsentedFromExcludingToExcluding/config"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//IsConsentedFromExcludingToExcludingResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IsConsentedFromExcludingToExcludingResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//IsConsentedFromExcludingToIncluding">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//IsConsentedFromExcludingToIncluding/signerIds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IsConsentedFromExcludingToIncluding/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IsConsentedFromExcludingToIncluding/policyName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IsConsentedFromExcludingToIncluding/versionFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IsConsentedFromExcludingToIncluding/versionTo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//IsConsentedFromExcludingToIncluding/config"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//IsConsentedFromExcludingToIncludingResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IsConsentedFromExcludingToIncludingResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//IsConsentedFromIncludingToExcluding">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//IsConsentedFromIncludingToExcluding/signerIds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IsConsentedFromIncludingToExcluding/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IsConsentedFromIncludingToExcluding/policyName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IsConsentedFromIncludingToExcluding/versionFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IsConsentedFromIncludingToExcluding/versionTo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//IsConsentedFromIncludingToExcluding/config"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//IsConsentedFromIncludingToExcludingResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IsConsentedFromIncludingToExcludingResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//IsConsentedFromIncludingToIncluding">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//IsConsentedFromIncludingToIncluding/signerIds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IsConsentedFromIncludingToIncluding/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IsConsentedFromIncludingToIncluding/policyName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IsConsentedFromIncludingToIncluding/versionFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IsConsentedFromIncludingToIncluding/versionTo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//IsConsentedFromIncludingToIncluding/config"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//IsConsentedFromIncludingToIncludingResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IsConsentedFromIncludingToIncludingResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//IsConsentedResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IsConsentedResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//Label">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//Label/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//Label/value"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ListConsentTemplates">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ListConsentTemplates/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ListConsentTemplates/onlyFinal"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ListConsentTemplatesResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ListConsentTemplatesResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ListCurrentConsentTemplates">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ListCurrentConsentTemplates/domainName"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ListCurrentConsentTemplatesResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ListCurrentConsentTemplatesResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ListDomains"/>
+    <genClasses ecoreClass="cm2.ecore#//ListDomainsResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ListDomainsResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ListModules">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ListModules/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ListModules/onlyFinal"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ListModulesResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ListModulesResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ListPolicies">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ListPolicies/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ListPolicies/onlyFinal"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ListPoliciesResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ListPoliciesResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ListSignerIdTypes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ListSignerIdTypes/domainName"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ListSignerIdTypesResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ListSignerIdTypesResponse/return"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//MandatoryFieldsException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//MandatoryFieldsException/message"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//MissingRequiredObjectException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//MissingRequiredObjectException/message"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ModuleDTO">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ModuleDTO/assignedPolicies"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ModuleDTO/comment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ModuleDTO/creationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ModuleDTO/externProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ModuleDTO/finalised"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ModuleDTO/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ModuleDTO/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ModuleDTO/shortText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ModuleDTO/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ModuleDTO/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ModuleDTO/updateDate"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ModuleExpirationsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ModuleExpirationsType/entry"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ModuleKeyDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ModuleKeyDTO/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ModuleKeyDTO/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ModuleKeyDTO/version"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ModuleKeyDTOArray">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ModuleKeyDTOArray/item"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ModuleStateDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ModuleStateDTO/consentState"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ModuleStateDTO/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ModuleStateDTO/policyKeys"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ModuleStatesType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ModuleStatesType/entry"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//PolicyDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//PolicyDTO/comment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//PolicyDTO/creationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//PolicyDTO/externProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//PolicyDTO/finalised"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//PolicyDTO/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//PolicyDTO/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//PolicyDTO/updateDate"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//PolicyExpirationsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//PolicyExpirationsType/entry"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//PolicyKeyDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//PolicyKeyDTO/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//PolicyKeyDTO/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//PolicyKeyDTO/version"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//Qcdto">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//Qcdto/comment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//Qcdto/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//Qcdto/externProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//Qcdto/inspector"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//Qcdto/problems"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//Qcdto/type"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//QcHistoryDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//QcHistoryDTO/endDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//QcHistoryDTO/startDate"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//QcProblemDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//QcProblemDTO/commentExtern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//QcProblemDTO/commentIntern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//QcProblemDTO/createdAt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//QcProblemDTO/formValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//QcProblemDTO/ref"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//QcProblemDTO/scanValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//QcProblemDTO/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//QcProblemDTO/updatedAt"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//QcProblemHistoryDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//QcProblemHistoryDTO/endDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//QcProblemHistoryDTO/startDate"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//QCProblemType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//QCProblemType/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//QCProblemType/action"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//QCProblemType/error"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//QCProblemType/field"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//QCProblemType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//QCProblemType/occurrence"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//QCProblemTypeAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//QCProblemTypeAction/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//QCProblemTypeAction/id"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//QCType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//QCType/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//QCType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//QCType/status"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//RefuseConsent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//RefuseConsent/consentTemplateKey"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//RefuseConsent/signerIds"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//RefuseConsentResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//RemoveScanFromConsent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//RemoveScanFromConsent/consentKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//RemoveScanFromConsent/fhirId"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//RemoveScanFromConsentResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//RequirementsNotFullfilledException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//RequirementsNotFullfilledException/message"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType/domains"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType1/modules"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType2">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType2/signerIdTypes"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType3">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType3/policies"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType4">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType4/currentConsentTemplates"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType5">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType5/templates"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType6">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ReturnType6/consentIds"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType7">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType7/consents"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType8">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType8/consents"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType9">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType9/signedPolicies"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType10">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType10/consents"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType11">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType11/signedPolicies"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType12">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType12/signedPolicies"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType13">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType13/signedPolicies"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType14">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType14/qcHistories"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType15">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType15/signerIds"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType16">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType16/consentTemplates"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType17">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType17/qcProblemHistories"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType18">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType18/templates"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType19">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType19/consents"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType20">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ReturnType20/signerIds"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType21">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType21/consents"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType22">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType22/entry"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ReturnType23">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ReturnType23/aliases"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//SetQCForConsent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//SetQCForConsent/consentKey"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//SetQCForConsent/qc"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//SetQCForConsentResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//SignedPolicyDTO">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//SignedPolicyDTO/consentKey"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//SignedPolicyDTO/policyKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//SignedPolicyDTO/status"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//SignerIdDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//SignerIdDTO/creationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//SignerIdDTO/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//SignerIdDTO/idType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//SignerIdDTO/orderNumber"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//SignerIdDTOArray">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//SignerIdDTOArray/item"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//SignerIdTypeDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//SignerIdTypeDTO/comment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//SignerIdTypeDTO/createTimestamp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//SignerIdTypeDTO/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//SignerIdTypeDTO/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//SignerIdTypeDTO/updateTimestamp"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//UnknownAliasException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UnknownAliasException/message"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//UnknownConsentException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UnknownConsentException/message"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//UnknownConsentTemplateException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UnknownConsentTemplateException/message"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//UnknownDomainException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UnknownDomainException/message"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//UnknownFhirIdObjectException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UnknownFhirIdObjectException/message"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//UnknownIDException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UnknownIDException/message"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//UnknownModuleException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UnknownModuleException/message"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//UnknownPolicyException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UnknownPolicyException/message"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//UnknownSignerIdException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UnknownSignerIdException/message"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//UnknownSignerIdTypeException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UnknownSignerIdTypeException/message"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//UpdateConsentInUse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//UpdateConsentInUse/consentKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UpdateConsentInUse/externProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UpdateConsentInUse/comment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//UpdateConsentInUse/scan"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//UpdateConsentInUseResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//ValidateConsent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ValidateConsent/consent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ValidateConsent/allowRevoke"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ValidateConsent/validateScan"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ValidateConsentResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//ValidFromPropertiesDTO">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ValidFromPropertiesDTO/fixedValidFromDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ValidFromPropertiesDTO/invalidPeriod"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Config" basePackage="org.emau.icmvc.ganimed.ttp.cm2" resource="XML"
+      disposableProviderFactory="true" ecorePackage="config.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="config.ecore#//ConsentField">
+      <genEnumLiterals ecoreEnumLiteral="config.ecore#//ConsentField/NONE"/>
+      <genEnumLiterals ecoreEnumLiteral="config.ecore#//ConsentField/DATE"/>
+      <genEnumLiterals ecoreEnumLiteral="config.ecore#//ConsentField/CTVERSION"/>
+      <genEnumLiterals ecoreEnumLiteral="config.ecore#//ConsentField/CTNAME"/>
+      <genEnumLiterals ecoreEnumLiteral="config.ecore#//ConsentField/CTLABEL"/>
+      <genEnumLiterals ecoreEnumLiteral="config.ecore#//ConsentField/SIGNERID"/>
+      <genEnumLiterals ecoreEnumLiteral="config.ecore#//ConsentField/QCTYPE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="config.ecore#//IdMatchingType">
+      <genEnumLiterals ecoreEnumLiteral="config.ecore#//IdMatchingType/ATLEASTONE"/>
+      <genEnumLiterals ecoreEnumLiteral="config.ecore#//IdMatchingType/ATLEASTALL"/>
+      <genEnumLiterals ecoreEnumLiteral="config.ecore#//IdMatchingType/EXACT"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="config.ecore#//ConsentFieldObject"/>
+    <genDataTypes ecoreDataType="config.ecore#//IdMatchingTypeObject"/>
+    <genClasses ecoreClass="config.ecore#//ApplicationConfig">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//ApplicationConfig/templateTypes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//ApplicationConfig/chromedriverPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//ApplicationConfig/enableChromePdfExport"/>
+    </genClasses>
+    <genClasses ecoreClass="config.ecore#//CheckConsentConfig">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//CheckConsentConfig/idMatchingType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//CheckConsentConfig/ignoreVersionNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//CheckConsentConfig/requestDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//CheckConsentConfig/unknownStateIsConsideredAsDecline"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//CheckConsentConfig/useAliases"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//CheckConsentConfig/useHistoricalData"/>
+    </genClasses>
+    <genClasses ecoreClass="config.ecore#//DomainConfig">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//DomainConfig/qualityControl"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//DomainConfig/statistic"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//DomainConfig/policies"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//DomainConfig/scans"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//DomainConfig/notifications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//DomainConfig/application"/>
+    </genClasses>
+    <genClasses ecoreClass="config.ecore#//EntryType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//EntryType/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//EntryType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="config.ecore#//FilterType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//FilterType/entry"/>
+    </genClasses>
+    <genClasses ecoreClass="config.ecore#//NotificationsConfig">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//NotificationsConfig/sendFromWeb"/>
+    </genClasses>
+    <genClasses ecoreClass="config.ecore#//PaginationConfig">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//PaginationConfig/endDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//PaginationConfig/filter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//PaginationConfig/filterFieldsAreTreatedAsConjunction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//PaginationConfig/filterIsCaseSensitive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//PaginationConfig/firstEntry"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//PaginationConfig/pageSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//PaginationConfig/sortField"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//PaginationConfig/sortIsAscending"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//PaginationConfig/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//PaginationConfig/templateType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//PaginationConfig/useAliases"/>
+    </genClasses>
+    <genClasses ecoreClass="config.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference config.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference config.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//DocumentRoot/domainConfig"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//DocumentRoot/domainConfig1"/>
+    </genClasses>
+    <genClasses ecoreClass="config.ecore#//PoliciesConfig">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//PoliciesConfig/permanentRevoke"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//PoliciesConfig/takeHighestVersionInsteadOfNewest"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//PoliciesConfig/takeMostSpecificValidityInsteadOfShortest"/>
+    </genClasses>
+    <genClasses ecoreClass="config.ecore#//QualityControlConfig">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//QualityControlConfig/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//QualityControlConfig/problemType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference config.ecore#//QualityControlConfig/problemTypeAction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//QualityControlConfig/defaultType"/>
+    </genClasses>
+    <genClasses ecoreClass="config.ecore#//ScansConfig">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//ScansConfig/mandatory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//ScansConfig/sizeLimit"/>
+    </genClasses>
+    <genClasses ecoreClass="config.ecore#//StatisticConfig">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//StatisticConfig/calculateDocumentDetails"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute config.ecore#//StatisticConfig/calculatePolicyDetails"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
