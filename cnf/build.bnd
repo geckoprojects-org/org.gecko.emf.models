@@ -27,7 +27,7 @@ javac.target: 11
 -jpms-module-info:
 
 -fixupmessages: \
-  "workspace :No metadata for revision';restrict:=error;is:=warning
+  "No metadata for revision';is:=warning
     
 -plugin.2.Central: \
     aQute.bnd.repository.maven.provider.MavenBndRepository; \
