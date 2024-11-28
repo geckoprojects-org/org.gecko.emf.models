@@ -22,10 +22,13 @@ base-version: 1.0.0
 javac.source: 11
 javac.target: 11
 
--require-bnd "(version>=6.3.1)"
+-require-bnd "(version>=7.0.0)"
 
 -jpms-module-info:
 
+-fixupmessages: \
+  "No metadata for revision';restrict:=error;is:=warning
+    
 -plugin.2.Central: \
     aQute.bnd.repository.maven.provider.MavenBndRepository; \
         snapshotUrl="https://oss.sonatype.org/content/repositories/snapshots/"; \
