@@ -90,6 +90,78 @@ public interface Cm2Factory extends EFactory {
 	AddConsentResponse createAddConsentResponse();
 
 	/**
+	 * Returns a new object of class '<em>Add Consent Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Add Consent Template</em>'.
+	 * @generated
+	 */
+	AddConsentTemplate createAddConsentTemplate();
+
+	/**
+	 * Returns a new object of class '<em>Add Consent Template Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Add Consent Template Response</em>'.
+	 * @generated
+	 */
+	AddConsentTemplateResponse createAddConsentTemplateResponse();
+
+	/**
+	 * Returns a new object of class '<em>Add Domain</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Add Domain</em>'.
+	 * @generated
+	 */
+	AddDomain createAddDomain();
+
+	/**
+	 * Returns a new object of class '<em>Add Domain Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Add Domain Response</em>'.
+	 * @generated
+	 */
+	AddDomainResponse createAddDomainResponse();
+
+	/**
+	 * Returns a new object of class '<em>Add Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Add Module</em>'.
+	 * @generated
+	 */
+	AddModule createAddModule();
+
+	/**
+	 * Returns a new object of class '<em>Add Module Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Add Module Response</em>'.
+	 * @generated
+	 */
+	AddModuleResponse createAddModuleResponse();
+
+	/**
+	 * Returns a new object of class '<em>Add Policy</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Add Policy</em>'.
+	 * @generated
+	 */
+	AddPolicy createAddPolicy();
+
+	/**
+	 * Returns a new object of class '<em>Add Policy Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Add Policy Response</em>'.
+	 * @generated
+	 */
+	AddPolicyResponse createAddPolicyResponse();
+
+	/**
 	 * Returns a new object of class '<em>Add Scan To Consent</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -106,6 +178,24 @@ public interface Cm2Factory extends EFactory {
 	 * @generated
 	 */
 	AddScanToConsentResponse createAddScanToConsentResponse();
+
+	/**
+	 * Returns a new object of class '<em>Add Signer Id Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Add Signer Id Type</em>'.
+	 * @generated
+	 */
+	AddSignerIdType createAddSignerIdType();
+
+	/**
+	 * Returns a new object of class '<em>Add Signer Id Type Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Add Signer Id Type Response</em>'.
+	 * @generated
+	 */
+	AddSignerIdTypeResponse createAddSignerIdTypeResponse();
 
 	/**
 	 * Returns a new object of class '<em>Add Signer Id To Consent</em>'.
@@ -297,6 +387,96 @@ public interface Cm2Factory extends EFactory {
 	DeactivateAliasResponse createDeactivateAliasResponse();
 
 	/**
+	 * Returns a new object of class '<em>Delete Consent Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Delete Consent Template</em>'.
+	 * @generated
+	 */
+	DeleteConsentTemplate createDeleteConsentTemplate();
+
+	/**
+	 * Returns a new object of class '<em>Delete Consent Template Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Delete Consent Template Response</em>'.
+	 * @generated
+	 */
+	DeleteConsentTemplateResponse createDeleteConsentTemplateResponse();
+
+	/**
+	 * Returns a new object of class '<em>Delete Domain</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Delete Domain</em>'.
+	 * @generated
+	 */
+	DeleteDomain createDeleteDomain();
+
+	/**
+	 * Returns a new object of class '<em>Delete Domain Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Delete Domain Response</em>'.
+	 * @generated
+	 */
+	DeleteDomainResponse createDeleteDomainResponse();
+
+	/**
+	 * Returns a new object of class '<em>Delete Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Delete Module</em>'.
+	 * @generated
+	 */
+	DeleteModule createDeleteModule();
+
+	/**
+	 * Returns a new object of class '<em>Delete Module Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Delete Module Response</em>'.
+	 * @generated
+	 */
+	DeleteModuleResponse createDeleteModuleResponse();
+
+	/**
+	 * Returns a new object of class '<em>Delete Policy</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Delete Policy</em>'.
+	 * @generated
+	 */
+	DeletePolicy createDeletePolicy();
+
+	/**
+	 * Returns a new object of class '<em>Delete Policy Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Delete Policy Response</em>'.
+	 * @generated
+	 */
+	DeletePolicyResponse createDeletePolicyResponse();
+
+	/**
+	 * Returns a new object of class '<em>Delete Signer Id Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Delete Signer Id Type</em>'.
+	 * @generated
+	 */
+	DeleteSignerIdType createDeleteSignerIdType();
+
+	/**
+	 * Returns a new object of class '<em>Delete Signer Id Type Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Delete Signer Id Type Response</em>'.
+	 * @generated
+	 */
+	DeleteSignerIdTypeResponse createDeleteSignerIdTypeResponse();
+
+	/**
 	 * Returns a new object of class '<em>Document Root</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -376,6 +556,105 @@ public interface Cm2Factory extends EFactory {
 	 * @generated
 	 */
 	ExpirationPropertiesDTO createExpirationPropertiesDTO();
+
+	/**
+	 * Returns a new object of class '<em>Finalise All For Domain</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Finalise All For Domain</em>'.
+	 * @generated
+	 */
+	FinaliseAllForDomain createFinaliseAllForDomain();
+
+	/**
+	 * Returns a new object of class '<em>Finalise All For Domain Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Finalise All For Domain Response</em>'.
+	 * @generated
+	 */
+	FinaliseAllForDomainResponse createFinaliseAllForDomainResponse();
+
+	/**
+	 * Returns a new object of class '<em>Finalise Domain</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Finalise Domain</em>'.
+	 * @generated
+	 */
+	FinaliseDomain createFinaliseDomain();
+
+	/**
+	 * Returns a new object of class '<em>Finalise Domain Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Finalise Domain Response</em>'.
+	 * @generated
+	 */
+	FinaliseDomainResponse createFinaliseDomainResponse();
+
+	/**
+	 * Returns a new object of class '<em>Finalise Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Finalise Module</em>'.
+	 * @generated
+	 */
+	FinaliseModule createFinaliseModule();
+
+	/**
+	 * Returns a new object of class '<em>Finalise Module Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Finalise Module Response</em>'.
+	 * @generated
+	 */
+	FinaliseModuleResponse createFinaliseModuleResponse();
+
+	/**
+	 * Returns a new object of class '<em>Finalise Policy</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Finalise Policy</em>'.
+	 * @generated
+	 */
+	FinalisePolicy createFinalisePolicy();
+
+	/**
+	 * Returns a new object of class '<em>Finalise Policy Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Finalise Policy Response</em>'.
+	 * @generated
+	 */
+	FinalisePolicyResponse createFinalisePolicyResponse();
+
+	/**
+	 * Returns a new object of class '<em>Finalise Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Finalise Template</em>'.
+	 * @generated
+	 */
+	FinaliseTemplate createFinaliseTemplate();
+
+	/**
+	 * Returns a new object of class '<em>Finalise Template Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Finalise Template Response</em>'.
+	 * @generated
+	 */
+	FinaliseTemplateResponse createFinaliseTemplateResponse();
+
+	/**
+	 * Returns a new object of class '<em>Free Text Converter String Exception</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Free Text Converter String Exception</em>'.
+	 * @generated
+	 */
+	FreeTextConverterStringException createFreeTextConverterStringException();
 
 	/**
 	 * Returns a new object of class '<em>Free Text Def DTO</em>'.
@@ -1044,6 +1323,15 @@ public interface Cm2Factory extends EFactory {
 	InternalException createInternalException();
 
 	/**
+	 * Returns a new object of class '<em>Illegal Composition Exception</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Illegal Composition Exception</em>'.
+	 * @generated
+	 */
+	IllegalCompositionException createIllegalCompositionException();
+
+	/**
 	 * Returns a new object of class '<em>Invalid Free Text Exception</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1060,6 +1348,15 @@ public interface Cm2Factory extends EFactory {
 	 * @generated
 	 */
 	InvalidParameterException createInvalidParameterException();
+
+	/**
+	 * Returns a new object of class '<em>Invalid Properties Exception</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Invalid Properties Exception</em>'.
+	 * @generated
+	 */
+	InvalidPropertiesException createInvalidPropertiesException();
 
 	/**
 	 * Returns a new object of class '<em>Invalid Version Exception</em>'.
@@ -1348,6 +1645,15 @@ public interface Cm2Factory extends EFactory {
 	 * @generated
 	 */
 	ModuleStatesType createModuleStatesType();
+
+	/**
+	 * Returns a new object of class '<em>Object In Use Exception</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Object In Use Exception</em>'.
+	 * @generated
+	 */
+	ObjectInUseException createObjectInUseException();
 
 	/**
 	 * Returns a new object of class '<em>Policy DTO</em>'.
@@ -1863,6 +2169,168 @@ public interface Cm2Factory extends EFactory {
 	UpdateConsentInUseResponse createUpdateConsentInUseResponse();
 
 	/**
+	 * Returns a new object of class '<em>Update Consent Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Update Consent Template</em>'.
+	 * @generated
+	 */
+	UpdateConsentTemplate createUpdateConsentTemplate();
+
+	/**
+	 * Returns a new object of class '<em>Update Consent Template In Use</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Update Consent Template In Use</em>'.
+	 * @generated
+	 */
+	UpdateConsentTemplateInUse createUpdateConsentTemplateInUse();
+
+	/**
+	 * Returns a new object of class '<em>Update Consent Template In Use Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Update Consent Template In Use Response</em>'.
+	 * @generated
+	 */
+	UpdateConsentTemplateInUseResponse createUpdateConsentTemplateInUseResponse();
+
+	/**
+	 * Returns a new object of class '<em>Update Consent Template Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Update Consent Template Response</em>'.
+	 * @generated
+	 */
+	UpdateConsentTemplateResponse createUpdateConsentTemplateResponse();
+
+	/**
+	 * Returns a new object of class '<em>Update Domain</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Update Domain</em>'.
+	 * @generated
+	 */
+	UpdateDomain createUpdateDomain();
+
+	/**
+	 * Returns a new object of class '<em>Update Domain In Use</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Update Domain In Use</em>'.
+	 * @generated
+	 */
+	UpdateDomainInUse createUpdateDomainInUse();
+
+	/**
+	 * Returns a new object of class '<em>Update Domain In Use Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Update Domain In Use Response</em>'.
+	 * @generated
+	 */
+	UpdateDomainInUseResponse createUpdateDomainInUseResponse();
+
+	/**
+	 * Returns a new object of class '<em>Update Domain Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Update Domain Response</em>'.
+	 * @generated
+	 */
+	UpdateDomainResponse createUpdateDomainResponse();
+
+	/**
+	 * Returns a new object of class '<em>Update Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Update Module</em>'.
+	 * @generated
+	 */
+	UpdateModule createUpdateModule();
+
+	/**
+	 * Returns a new object of class '<em>Update Module In Use</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Update Module In Use</em>'.
+	 * @generated
+	 */
+	UpdateModuleInUse createUpdateModuleInUse();
+
+	/**
+	 * Returns a new object of class '<em>Update Module In Use Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Update Module In Use Response</em>'.
+	 * @generated
+	 */
+	UpdateModuleInUseResponse createUpdateModuleInUseResponse();
+
+	/**
+	 * Returns a new object of class '<em>Update Module Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Update Module Response</em>'.
+	 * @generated
+	 */
+	UpdateModuleResponse createUpdateModuleResponse();
+
+	/**
+	 * Returns a new object of class '<em>Update Policy</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Update Policy</em>'.
+	 * @generated
+	 */
+	UpdatePolicy createUpdatePolicy();
+
+	/**
+	 * Returns a new object of class '<em>Update Policy In Use</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Update Policy In Use</em>'.
+	 * @generated
+	 */
+	UpdatePolicyInUse createUpdatePolicyInUse();
+
+	/**
+	 * Returns a new object of class '<em>Update Policy In Use Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Update Policy In Use Response</em>'.
+	 * @generated
+	 */
+	UpdatePolicyInUseResponse createUpdatePolicyInUseResponse();
+
+	/**
+	 * Returns a new object of class '<em>Update Policy Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Update Policy Response</em>'.
+	 * @generated
+	 */
+	UpdatePolicyResponse createUpdatePolicyResponse();
+
+	/**
+	 * Returns a new object of class '<em>Update Signer Id Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Update Signer Id Type</em>'.
+	 * @generated
+	 */
+	UpdateSignerIdType createUpdateSignerIdType();
+
+	/**
+	 * Returns a new object of class '<em>Update Signer Id Type Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Update Signer Id Type Response</em>'.
+	 * @generated
+	 */
+	UpdateSignerIdTypeResponse createUpdateSignerIdTypeResponse();
+
+	/**
 	 * Returns a new object of class '<em>Validate Consent</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1888,6 +2356,15 @@ public interface Cm2Factory extends EFactory {
 	 * @generated
 	 */
 	ValidFromPropertiesDTO createValidFromPropertiesDTO();
+
+	/**
+	 * Returns a new object of class '<em>Version Converter Class Exception</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Version Converter Class Exception</em>'.
+	 * @generated
+	 */
+	VersionConverterClassException createVersionConverterClassException();
 
 	/**
 	 * Returns the package supported by this factory.

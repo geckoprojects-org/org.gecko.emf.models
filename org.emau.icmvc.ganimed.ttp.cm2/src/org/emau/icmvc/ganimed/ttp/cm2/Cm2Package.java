@@ -335,6 +335,284 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	int ADD_CONSENT_RESPONSE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.AddConsentTemplateImpl <em>Add Consent Template</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.AddConsentTemplateImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getAddConsentTemplate()
+	 * @generated
+	 */
+	int ADD_CONSENT_TEMPLATE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Consent Template</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_CONSENT_TEMPLATE__CONSENT_TEMPLATE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Finalise Related Entities</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_CONSENT_TEMPLATE__FINALISE_RELATED_ENTITIES = 1;
+
+	/**
+	 * The number of structural features of the '<em>Add Consent Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_CONSENT_TEMPLATE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Add Consent Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_CONSENT_TEMPLATE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.AddConsentTemplateResponseImpl <em>Add Consent Template Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.AddConsentTemplateResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getAddConsentTemplateResponse()
+	 * @generated
+	 */
+	int ADD_CONSENT_TEMPLATE_RESPONSE = 8;
+
+	/**
+	 * The number of structural features of the '<em>Add Consent Template Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_CONSENT_TEMPLATE_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Add Consent Template Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_CONSENT_TEMPLATE_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.AddDomainImpl <em>Add Domain</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.AddDomainImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getAddDomain()
+	 * @generated
+	 */
+	int ADD_DOMAIN = 9;
+
+	/**
+	 * The feature id for the '<em><b>Domain</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_DOMAIN__DOMAIN = 0;
+
+	/**
+	 * The number of structural features of the '<em>Add Domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_DOMAIN_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Add Domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_DOMAIN_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.AddDomainResponseImpl <em>Add Domain Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.AddDomainResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getAddDomainResponse()
+	 * @generated
+	 */
+	int ADD_DOMAIN_RESPONSE = 10;
+
+	/**
+	 * The number of structural features of the '<em>Add Domain Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_DOMAIN_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Add Domain Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_DOMAIN_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.AddModuleImpl <em>Add Module</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.AddModuleImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getAddModule()
+	 * @generated
+	 */
+	int ADD_MODULE = 11;
+
+	/**
+	 * The feature id for the '<em><b>Module</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_MODULE__MODULE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Finalise Related Entities</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_MODULE__FINALISE_RELATED_ENTITIES = 1;
+
+	/**
+	 * The number of structural features of the '<em>Add Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_MODULE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Add Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_MODULE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.AddModuleResponseImpl <em>Add Module Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.AddModuleResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getAddModuleResponse()
+	 * @generated
+	 */
+	int ADD_MODULE_RESPONSE = 12;
+
+	/**
+	 * The number of structural features of the '<em>Add Module Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_MODULE_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Add Module Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_MODULE_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.AddPolicyImpl <em>Add Policy</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.AddPolicyImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getAddPolicy()
+	 * @generated
+	 */
+	int ADD_POLICY = 13;
+
+	/**
+	 * The feature id for the '<em><b>Policy</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_POLICY__POLICY = 0;
+
+	/**
+	 * The number of structural features of the '<em>Add Policy</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_POLICY_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Add Policy</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_POLICY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.AddPolicyResponseImpl <em>Add Policy Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.AddPolicyResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getAddPolicyResponse()
+	 * @generated
+	 */
+	int ADD_POLICY_RESPONSE = 14;
+
+	/**
+	 * The number of structural features of the '<em>Add Policy Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_POLICY_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Add Policy Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_POLICY_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.AddScanToConsentImpl <em>Add Scan To Consent</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -342,7 +620,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getAddScanToConsent()
 	 * @generated
 	 */
-	int ADD_SCAN_TO_CONSENT = 7;
+	int ADD_SCAN_TO_CONSENT = 15;
 
 	/**
 	 * The feature id for the '<em><b>Consent Key</b></em>' containment reference.
@@ -406,7 +684,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getAddScanToConsentResponse()
 	 * @generated
 	 */
-	int ADD_SCAN_TO_CONSENT_RESPONSE = 8;
+	int ADD_SCAN_TO_CONSENT_RESPONSE = 16;
 
 	/**
 	 * The number of structural features of the '<em>Add Scan To Consent Response</em>' class.
@@ -427,6 +705,80 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	int ADD_SCAN_TO_CONSENT_RESPONSE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.AddSignerIdTypeImpl <em>Add Signer Id Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.AddSignerIdTypeImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getAddSignerIdType()
+	 * @generated
+	 */
+	int ADD_SIGNER_ID_TYPE = 17;
+
+	/**
+	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_SIGNER_ID_TYPE__DOMAIN_NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Signer Id Type Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_SIGNER_ID_TYPE__SIGNER_ID_TYPE_NAME = 1;
+
+	/**
+	 * The number of structural features of the '<em>Add Signer Id Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_SIGNER_ID_TYPE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Add Signer Id Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_SIGNER_ID_TYPE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.AddSignerIdTypeResponseImpl <em>Add Signer Id Type Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.AddSignerIdTypeResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getAddSignerIdTypeResponse()
+	 * @generated
+	 */
+	int ADD_SIGNER_ID_TYPE_RESPONSE = 18;
+
+	/**
+	 * The number of structural features of the '<em>Add Signer Id Type Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_SIGNER_ID_TYPE_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Add Signer Id Type Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADD_SIGNER_ID_TYPE_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.AddSignerIdToConsentImpl <em>Add Signer Id To Consent</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -434,7 +786,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getAddSignerIdToConsent()
 	 * @generated
 	 */
-	int ADD_SIGNER_ID_TO_CONSENT = 9;
+	int ADD_SIGNER_ID_TO_CONSENT = 19;
 
 	/**
 	 * The feature id for the '<em><b>Consent Key</b></em>' containment reference.
@@ -480,7 +832,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getAddSignerIdToConsentResponse()
 	 * @generated
 	 */
-	int ADD_SIGNER_ID_TO_CONSENT_RESPONSE = 10;
+	int ADD_SIGNER_ID_TO_CONSENT_RESPONSE = 20;
 
 	/**
 	 * The number of structural features of the '<em>Add Signer Id To Consent Response</em>' class.
@@ -508,7 +860,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getAddSignerIdToSignerId()
 	 * @generated
 	 */
-	int ADD_SIGNER_ID_TO_SIGNER_ID = 11;
+	int ADD_SIGNER_ID_TO_SIGNER_ID = 21;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -563,7 +915,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getAddSignerIdToSignerIdResponse()
 	 * @generated
 	 */
-	int ADD_SIGNER_ID_TO_SIGNER_ID_RESPONSE = 12;
+	int ADD_SIGNER_ID_TO_SIGNER_ID_RESPONSE = 22;
 
 	/**
 	 * The number of structural features of the '<em>Add Signer Id To Signer Id Response</em>' class.
@@ -591,7 +943,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getFhirIdDTO()
 	 * @generated
 	 */
-	int FHIR_ID_DTO = 39;
+	int FHIR_ID_DTO = 59;
 
 	/**
 	 * The feature id for the '<em><b>Fhir ID</b></em>' attribute.
@@ -628,7 +980,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getAssignedModuleDTO()
 	 * @generated
 	 */
-	int ASSIGNED_MODULE_DTO = 13;
+	int ASSIGNED_MODULE_DTO = 23;
 
 	/**
 	 * The feature id for the '<em><b>Fhir ID</b></em>' attribute.
@@ -746,7 +1098,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getAssignedPolicyDTO()
 	 * @generated
 	 */
-	int ASSIGNED_POLICY_DTO = 14;
+	int ASSIGNED_POLICY_DTO = 24;
 
 	/**
 	 * The feature id for the '<em><b>Fhir ID</b></em>' attribute.
@@ -819,7 +1171,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getChildrenType()
 	 * @generated
 	 */
-	int CHILDREN_TYPE = 15;
+	int CHILDREN_TYPE = 25;
 
 	/**
 	 * The feature id for the '<em><b>Entry</b></em>' containment reference list.
@@ -856,7 +1208,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getConsentDateValuesDTO()
 	 * @generated
 	 */
-	int CONSENT_DATE_VALUES_DTO = 16;
+	int CONSENT_DATE_VALUES_DTO = 26;
 
 	/**
 	 * The feature id for the '<em><b>Consent Expiration Date</b></em>' attribute.
@@ -938,7 +1290,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getConsentLightDTO()
 	 * @generated
 	 */
-	int CONSENT_LIGHT_DTO = 19;
+	int CONSENT_LIGHT_DTO = 29;
 
 	/**
 	 * The feature id for the '<em><b>Fhir ID</b></em>' attribute.
@@ -1146,7 +1498,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getConsentDTO()
 	 * @generated
 	 */
-	int CONSENT_DTO = 17;
+	int CONSENT_DTO = 27;
 
 	/**
 	 * The feature id for the '<em><b>Fhir ID</b></em>' attribute.
@@ -1390,7 +1742,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getConsentKeyDTO()
 	 * @generated
 	 */
-	int CONSENT_KEY_DTO = 18;
+	int CONSENT_KEY_DTO = 28;
 
 	/**
 	 * The feature id for the '<em><b>Consent Date</b></em>' attribute.
@@ -1445,7 +1797,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getConsentScanDTO()
 	 * @generated
 	 */
-	int CONSENT_SCAN_DTO = 20;
+	int CONSENT_SCAN_DTO = 30;
 
 	/**
 	 * The feature id for the '<em><b>Fhir ID</b></em>' attribute.
@@ -1527,7 +1879,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getConsentTemplateDTO()
 	 * @generated
 	 */
-	int CONSENT_TEMPLATE_DTO = 21;
+	int CONSENT_TEMPLATE_DTO = 31;
 
 	/**
 	 * The feature id for the '<em><b>Fhir ID</b></em>' attribute.
@@ -1780,7 +2132,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getConsentTemplateKeyDTO()
 	 * @generated
 	 */
-	int CONSENT_TEMPLATE_KEY_DTO = 22;
+	int CONSENT_TEMPLATE_KEY_DTO = 32;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -1835,7 +2187,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getConsentTemplateStructureDTO()
 	 * @generated
 	 */
-	int CONSENT_TEMPLATE_STRUCTURE_DTO = 23;
+	int CONSENT_TEMPLATE_STRUCTURE_DTO = 33;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference.
@@ -1881,7 +2233,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getCountConsentsForDomainWithFilter()
 	 * @generated
 	 */
-	int COUNT_CONSENTS_FOR_DOMAIN_WITH_FILTER = 24;
+	int COUNT_CONSENTS_FOR_DOMAIN_WITH_FILTER = 34;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -1927,7 +2279,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getCountConsentsForDomainWithFilterResponse()
 	 * @generated
 	 */
-	int COUNT_CONSENTS_FOR_DOMAIN_WITH_FILTER_RESPONSE = 25;
+	int COUNT_CONSENTS_FOR_DOMAIN_WITH_FILTER_RESPONSE = 35;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' attribute.
@@ -1964,7 +2316,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getCountSignedPolicies()
 	 * @generated
 	 */
-	int COUNT_SIGNED_POLICIES = 26;
+	int COUNT_SIGNED_POLICIES = 36;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -2001,7 +2353,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getCountSignedPoliciesResponse()
 	 * @generated
 	 */
-	int COUNT_SIGNED_POLICIES_RESPONSE = 27;
+	int COUNT_SIGNED_POLICIES_RESPONSE = 37;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' attribute.
@@ -2038,7 +2390,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getDeactivateAlias()
 	 * @generated
 	 */
-	int DEACTIVATE_ALIAS = 28;
+	int DEACTIVATE_ALIAS = 38;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -2093,7 +2445,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getDeactivateAliasResponse()
 	 * @generated
 	 */
-	int DEACTIVATE_ALIAS_RESPONSE = 29;
+	int DEACTIVATE_ALIAS_RESPONSE = 39;
 
 	/**
 	 * The number of structural features of the '<em>Deactivate Alias Response</em>' class.
@@ -2114,6 +2466,340 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	int DEACTIVATE_ALIAS_RESPONSE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DeleteConsentTemplateImpl <em>Delete Consent Template</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.DeleteConsentTemplateImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getDeleteConsentTemplate()
+	 * @generated
+	 */
+	int DELETE_CONSENT_TEMPLATE = 40;
+
+	/**
+	 * The feature id for the '<em><b>Consent Template Key</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_CONSENT_TEMPLATE__CONSENT_TEMPLATE_KEY = 0;
+
+	/**
+	 * The number of structural features of the '<em>Delete Consent Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_CONSENT_TEMPLATE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Delete Consent Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_CONSENT_TEMPLATE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DeleteConsentTemplateResponseImpl <em>Delete Consent Template Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.DeleteConsentTemplateResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getDeleteConsentTemplateResponse()
+	 * @generated
+	 */
+	int DELETE_CONSENT_TEMPLATE_RESPONSE = 41;
+
+	/**
+	 * The number of structural features of the '<em>Delete Consent Template Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_CONSENT_TEMPLATE_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Delete Consent Template Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_CONSENT_TEMPLATE_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DeleteDomainImpl <em>Delete Domain</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.DeleteDomainImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getDeleteDomain()
+	 * @generated
+	 */
+	int DELETE_DOMAIN = 42;
+
+	/**
+	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_DOMAIN__DOMAIN_NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Delete Domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_DOMAIN_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Delete Domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_DOMAIN_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DeleteDomainResponseImpl <em>Delete Domain Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.DeleteDomainResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getDeleteDomainResponse()
+	 * @generated
+	 */
+	int DELETE_DOMAIN_RESPONSE = 43;
+
+	/**
+	 * The number of structural features of the '<em>Delete Domain Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_DOMAIN_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Delete Domain Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_DOMAIN_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DeleteModuleImpl <em>Delete Module</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.DeleteModuleImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getDeleteModule()
+	 * @generated
+	 */
+	int DELETE_MODULE = 44;
+
+	/**
+	 * The feature id for the '<em><b>Module Key</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_MODULE__MODULE_KEY = 0;
+
+	/**
+	 * The number of structural features of the '<em>Delete Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_MODULE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Delete Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_MODULE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DeleteModuleResponseImpl <em>Delete Module Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.DeleteModuleResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getDeleteModuleResponse()
+	 * @generated
+	 */
+	int DELETE_MODULE_RESPONSE = 45;
+
+	/**
+	 * The number of structural features of the '<em>Delete Module Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_MODULE_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Delete Module Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_MODULE_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DeletePolicyImpl <em>Delete Policy</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.DeletePolicyImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getDeletePolicy()
+	 * @generated
+	 */
+	int DELETE_POLICY = 46;
+
+	/**
+	 * The feature id for the '<em><b>Policy Key</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_POLICY__POLICY_KEY = 0;
+
+	/**
+	 * The number of structural features of the '<em>Delete Policy</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_POLICY_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Delete Policy</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_POLICY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DeletePolicyResponseImpl <em>Delete Policy Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.DeletePolicyResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getDeletePolicyResponse()
+	 * @generated
+	 */
+	int DELETE_POLICY_RESPONSE = 47;
+
+	/**
+	 * The number of structural features of the '<em>Delete Policy Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_POLICY_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Delete Policy Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_POLICY_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DeleteSignerIdTypeImpl <em>Delete Signer Id Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.DeleteSignerIdTypeImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getDeleteSignerIdType()
+	 * @generated
+	 */
+	int DELETE_SIGNER_ID_TYPE = 48;
+
+	/**
+	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_SIGNER_ID_TYPE__DOMAIN_NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Signer Id Type Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_SIGNER_ID_TYPE__SIGNER_ID_TYPE_NAME = 1;
+
+	/**
+	 * The number of structural features of the '<em>Delete Signer Id Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_SIGNER_ID_TYPE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Delete Signer Id Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_SIGNER_ID_TYPE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DeleteSignerIdTypeResponseImpl <em>Delete Signer Id Type Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.DeleteSignerIdTypeResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getDeleteSignerIdTypeResponse()
+	 * @generated
+	 */
+	int DELETE_SIGNER_ID_TYPE_RESPONSE = 49;
+
+	/**
+	 * The number of structural features of the '<em>Delete Signer Id Type Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_SIGNER_ID_TYPE_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Delete Signer Id Type Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE_SIGNER_ID_TYPE_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl <em>Document Root</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2121,7 +2807,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getDocumentRoot()
 	 * @generated
 	 */
-	int DOCUMENT_ROOT = 30;
+	int DOCUMENT_ROOT = 50;
 
 	/**
 	 * The feature id for the '<em><b>Mixed</b></em>' attribute list.
@@ -3393,13 +4079,490 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	int DOCUMENT_ROOT__VALIDATE_CONSENT_RESPONSE = 140;
 
 	/**
+	 * The feature id for the '<em><b>Add Consent Template</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__ADD_CONSENT_TEMPLATE = 141;
+
+	/**
+	 * The feature id for the '<em><b>Add Consent Template Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__ADD_CONSENT_TEMPLATE_RESPONSE = 142;
+
+	/**
+	 * The feature id for the '<em><b>Add Module</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__ADD_MODULE = 143;
+
+	/**
+	 * The feature id for the '<em><b>Add Module Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__ADD_MODULE_RESPONSE = 144;
+
+	/**
+	 * The feature id for the '<em><b>Add Domain</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__ADD_DOMAIN = 145;
+
+	/**
+	 * The feature id for the '<em><b>Add Domain Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__ADD_DOMAIN_RESPONSE = 146;
+
+	/**
+	 * The feature id for the '<em><b>Add Policy</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__ADD_POLICY = 147;
+
+	/**
+	 * The feature id for the '<em><b>Add Policy Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__ADD_POLICY_RESPONSE = 148;
+
+	/**
+	 * The feature id for the '<em><b>Add Signer Id Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__ADD_SIGNER_ID_TYPE = 149;
+
+	/**
+	 * The feature id for the '<em><b>Add Signer Id Type Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__ADD_SIGNER_ID_TYPE_RESPONSE = 150;
+
+	/**
+	 * The feature id for the '<em><b>Delete Consent Template</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__DELETE_CONSENT_TEMPLATE = 151;
+
+	/**
+	 * The feature id for the '<em><b>Delete Consent Template Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__DELETE_CONSENT_TEMPLATE_RESPONSE = 152;
+
+	/**
+	 * The feature id for the '<em><b>Delete Domain</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__DELETE_DOMAIN = 153;
+
+	/**
+	 * The feature id for the '<em><b>Delete Domain Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__DELETE_DOMAIN_RESPONSE = 154;
+
+	/**
+	 * The feature id for the '<em><b>Delete Module</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__DELETE_MODULE = 155;
+
+	/**
+	 * The feature id for the '<em><b>Delete Module Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__DELETE_MODULE_RESPONSE = 156;
+
+	/**
+	 * The feature id for the '<em><b>Delete Policy</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__DELETE_POLICY = 157;
+
+	/**
+	 * The feature id for the '<em><b>Delete Policy Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__DELETE_POLICY_RESPONSE = 158;
+
+	/**
+	 * The feature id for the '<em><b>Delete Signer Id Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__DELETE_SIGNER_ID_TYPE = 159;
+
+	/**
+	 * The feature id for the '<em><b>Delete Signer Id Type Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__DELETE_SIGNER_ID_TYPE_RESPONSE = 160;
+
+	/**
+	 * The feature id for the '<em><b>Update Consent Template</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE = 161;
+
+	/**
+	 * The feature id for the '<em><b>Update Consent Template Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE_RESPONSE = 162;
+
+	/**
+	 * The feature id for the '<em><b>Update Consent Template In Use</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE_IN_USE = 163;
+
+	/**
+	 * The feature id for the '<em><b>Update Consent Template In Use Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE_IN_USE_RESPONSE = 164;
+
+	/**
+	 * The feature id for the '<em><b>Update Domain</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__UPDATE_DOMAIN = 165;
+
+	/**
+	 * The feature id for the '<em><b>Update Domain Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__UPDATE_DOMAIN_RESPONSE = 166;
+
+	/**
+	 * The feature id for the '<em><b>Update Domain In Use</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__UPDATE_DOMAIN_IN_USE = 167;
+
+	/**
+	 * The feature id for the '<em><b>Update Domain In Use Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__UPDATE_DOMAIN_IN_USE_RESPONSE = 168;
+
+	/**
+	 * The feature id for the '<em><b>Update Module</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__UPDATE_MODULE = 169;
+
+	/**
+	 * The feature id for the '<em><b>Update Module Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__UPDATE_MODULE_RESPONSE = 170;
+
+	/**
+	 * The feature id for the '<em><b>Update Module In Use</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__UPDATE_MODULE_IN_USE = 171;
+
+	/**
+	 * The feature id for the '<em><b>Update Module In Use Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__UPDATE_MODULE_IN_USE_RESPONSE = 172;
+
+	/**
+	 * The feature id for the '<em><b>Update Policy</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__UPDATE_POLICY = 173;
+
+	/**
+	 * The feature id for the '<em><b>Update Policy Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__UPDATE_POLICY_RESPONSE = 174;
+
+	/**
+	 * The feature id for the '<em><b>Update Policy In Use</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__UPDATE_POLICY_IN_USE = 175;
+
+	/**
+	 * The feature id for the '<em><b>Update Policy In Use Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__UPDATE_POLICY_IN_USE_RESPONSE = 176;
+
+	/**
+	 * The feature id for the '<em><b>Finalise All For Domain</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__FINALISE_ALL_FOR_DOMAIN = 177;
+
+	/**
+	 * The feature id for the '<em><b>Finalise All For Domain Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__FINALISE_ALL_FOR_DOMAIN_RESPONSE = 178;
+
+	/**
+	 * The feature id for the '<em><b>Finalise Domain</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__FINALISE_DOMAIN = 179;
+
+	/**
+	 * The feature id for the '<em><b>Finalise Domain Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__FINALISE_DOMAIN_RESPONSE = 180;
+
+	/**
+	 * The feature id for the '<em><b>Finalise Module</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__FINALISE_MODULE = 181;
+
+	/**
+	 * The feature id for the '<em><b>Finalise Module Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__FINALISE_MODULE_RESPONSE = 182;
+
+	/**
+	 * The feature id for the '<em><b>Finalise Policy</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__FINALISE_POLICY = 183;
+
+	/**
+	 * The feature id for the '<em><b>Finalise Policy Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__FINALISE_POLICY_RESPONSE = 184;
+
+	/**
+	 * The feature id for the '<em><b>Finalise Template</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__FINALISE_TEMPLATE = 185;
+
+	/**
+	 * The feature id for the '<em><b>Finalise Template Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__FINALISE_TEMPLATE_RESPONSE = 186;
+
+	/**
+	 * The feature id for the '<em><b>Free Text Converter String Exception</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__FREE_TEXT_CONVERTER_STRING_EXCEPTION = 187;
+
+	/**
+	 * The feature id for the '<em><b>Illegal Composition Exception</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__ILLEGAL_COMPOSITION_EXCEPTION = 188;
+
+	/**
+	 * The feature id for the '<em><b>Invalid Properties Exception</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__INVALID_PROPERTIES_EXCEPTION = 189;
+
+	/**
+	 * The feature id for the '<em><b>Object In Use Exception</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__OBJECT_IN_USE_EXCEPTION = 190;
+
+	/**
+	 * The feature id for the '<em><b>Update Signer Id Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__UPDATE_SIGNER_ID_TYPE = 191;
+
+	/**
+	 * The feature id for the '<em><b>Update Signer Id Type Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__UPDATE_SIGNER_ID_TYPE_RESPONSE = 192;
+
+	/**
+	 * The feature id for the '<em><b>Version Converter Class Exception</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__VERSION_CONVERTER_CLASS_EXCEPTION = 193;
+
+	/**
 	 * The number of structural features of the '<em>Document Root</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOCUMENT_ROOT_FEATURE_COUNT = 141;
+	int DOCUMENT_ROOT_FEATURE_COUNT = 194;
 
 	/**
 	 * The number of operations of the '<em>Document Root</em>' class.
@@ -3418,7 +4581,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getDomainDTO()
 	 * @generated
 	 */
-	int DOMAIN_DTO = 31;
+	int DOMAIN_DTO = 51;
 
 	/**
 	 * The feature id for the '<em><b>Fhir ID</b></em>' attribute.
@@ -3581,7 +4744,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getDuplicateEntryException()
 	 * @generated
 	 */
-	int DUPLICATE_ENTRY_EXCEPTION = 32;
+	int DUPLICATE_ENTRY_EXCEPTION = 52;
 
 	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -3618,7 +4781,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getEntryType()
 	 * @generated
 	 */
-	int ENTRY_TYPE = 33;
+	int ENTRY_TYPE = 53;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' containment reference.
@@ -3664,7 +4827,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getEntryType1()
 	 * @generated
 	 */
-	int ENTRY_TYPE1 = 34;
+	int ENTRY_TYPE1 = 54;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' containment reference.
@@ -3710,7 +4873,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getEntryType2()
 	 * @generated
 	 */
-	int ENTRY_TYPE2 = 35;
+	int ENTRY_TYPE2 = 55;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' containment reference.
@@ -3756,7 +4919,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getEntryType3()
 	 * @generated
 	 */
-	int ENTRY_TYPE3 = 36;
+	int ENTRY_TYPE3 = 56;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' containment reference.
@@ -3802,7 +4965,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getEntryType4()
 	 * @generated
 	 */
-	int ENTRY_TYPE4 = 37;
+	int ENTRY_TYPE4 = 57;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' containment reference.
@@ -3848,7 +5011,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getExpirationPropertiesDTO()
 	 * @generated
 	 */
-	int EXPIRATION_PROPERTIES_DTO = 38;
+	int EXPIRATION_PROPERTIES_DTO = 58;
 
 	/**
 	 * The feature id for the '<em><b>Fixed Expiration Date</b></em>' attribute.
@@ -3887,6 +5050,386 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	int EXPIRATION_PROPERTIES_DTO_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.FinaliseAllForDomainImpl <em>Finalise All For Domain</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.FinaliseAllForDomainImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getFinaliseAllForDomain()
+	 * @generated
+	 */
+	int FINALISE_ALL_FOR_DOMAIN = 60;
+
+	/**
+	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_ALL_FOR_DOMAIN__DOMAIN_NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Finalise All For Domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_ALL_FOR_DOMAIN_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Finalise All For Domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_ALL_FOR_DOMAIN_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.FinaliseAllForDomainResponseImpl <em>Finalise All For Domain Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.FinaliseAllForDomainResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getFinaliseAllForDomainResponse()
+	 * @generated
+	 */
+	int FINALISE_ALL_FOR_DOMAIN_RESPONSE = 61;
+
+	/**
+	 * The number of structural features of the '<em>Finalise All For Domain Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_ALL_FOR_DOMAIN_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Finalise All For Domain Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_ALL_FOR_DOMAIN_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.FinaliseDomainImpl <em>Finalise Domain</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.FinaliseDomainImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getFinaliseDomain()
+	 * @generated
+	 */
+	int FINALISE_DOMAIN = 62;
+
+	/**
+	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_DOMAIN__DOMAIN_NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Finalise Domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_DOMAIN_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Finalise Domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_DOMAIN_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.FinaliseDomainResponseImpl <em>Finalise Domain Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.FinaliseDomainResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getFinaliseDomainResponse()
+	 * @generated
+	 */
+	int FINALISE_DOMAIN_RESPONSE = 63;
+
+	/**
+	 * The number of structural features of the '<em>Finalise Domain Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_DOMAIN_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Finalise Domain Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_DOMAIN_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.FinaliseModuleImpl <em>Finalise Module</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.FinaliseModuleImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getFinaliseModule()
+	 * @generated
+	 */
+	int FINALISE_MODULE = 64;
+
+	/**
+	 * The feature id for the '<em><b>Module Key</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_MODULE__MODULE_KEY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Finalise Related Entities</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_MODULE__FINALISE_RELATED_ENTITIES = 1;
+
+	/**
+	 * The number of structural features of the '<em>Finalise Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_MODULE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Finalise Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_MODULE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.FinaliseModuleResponseImpl <em>Finalise Module Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.FinaliseModuleResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getFinaliseModuleResponse()
+	 * @generated
+	 */
+	int FINALISE_MODULE_RESPONSE = 65;
+
+	/**
+	 * The number of structural features of the '<em>Finalise Module Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_MODULE_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Finalise Module Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_MODULE_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.FinalisePolicyImpl <em>Finalise Policy</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.FinalisePolicyImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getFinalisePolicy()
+	 * @generated
+	 */
+	int FINALISE_POLICY = 66;
+
+	/**
+	 * The feature id for the '<em><b>Policy Key</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_POLICY__POLICY_KEY = 0;
+
+	/**
+	 * The number of structural features of the '<em>Finalise Policy</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_POLICY_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Finalise Policy</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_POLICY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.FinalisePolicyResponseImpl <em>Finalise Policy Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.FinalisePolicyResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getFinalisePolicyResponse()
+	 * @generated
+	 */
+	int FINALISE_POLICY_RESPONSE = 67;
+
+	/**
+	 * The number of structural features of the '<em>Finalise Policy Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_POLICY_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Finalise Policy Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_POLICY_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.FinaliseTemplateImpl <em>Finalise Template</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.FinaliseTemplateImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getFinaliseTemplate()
+	 * @generated
+	 */
+	int FINALISE_TEMPLATE = 68;
+
+	/**
+	 * The feature id for the '<em><b>Consent Template Key</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_TEMPLATE__CONSENT_TEMPLATE_KEY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Finalise Related Entities</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_TEMPLATE__FINALISE_RELATED_ENTITIES = 1;
+
+	/**
+	 * The number of structural features of the '<em>Finalise Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_TEMPLATE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Finalise Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_TEMPLATE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.FinaliseTemplateResponseImpl <em>Finalise Template Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.FinaliseTemplateResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getFinaliseTemplateResponse()
+	 * @generated
+	 */
+	int FINALISE_TEMPLATE_RESPONSE = 69;
+
+	/**
+	 * The number of structural features of the '<em>Finalise Template Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_TEMPLATE_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Finalise Template Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINALISE_TEMPLATE_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.FreeTextConverterStringExceptionImpl <em>Free Text Converter String Exception</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.FreeTextConverterStringExceptionImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getFreeTextConverterStringException()
+	 * @generated
+	 */
+	int FREE_TEXT_CONVERTER_STRING_EXCEPTION = 70;
+
+	/**
+	 * The feature id for the '<em><b>Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FREE_TEXT_CONVERTER_STRING_EXCEPTION__MESSAGE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Free Text Converter String Exception</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FREE_TEXT_CONVERTER_STRING_EXCEPTION_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Free Text Converter String Exception</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FREE_TEXT_CONVERTER_STRING_EXCEPTION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.FreeTextDefDTOImpl <em>Free Text Def DTO</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3894,7 +5437,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getFreeTextDefDTO()
 	 * @generated
 	 */
-	int FREE_TEXT_DEF_DTO = 40;
+	int FREE_TEXT_DEF_DTO = 71;
 
 	/**
 	 * The feature id for the '<em><b>Fhir ID</b></em>' attribute.
@@ -4030,7 +5573,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getFreeTextValDTO()
 	 * @generated
 	 */
-	int FREE_TEXT_VAL_DTO = 41;
+	int FREE_TEXT_VAL_DTO = 72;
 
 	/**
 	 * The feature id for the '<em><b>Fhir ID</b></em>' attribute.
@@ -4085,7 +5628,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetAliasesForSignerId()
 	 * @generated
 	 */
-	int GET_ALIASES_FOR_SIGNER_ID = 42;
+	int GET_ALIASES_FOR_SIGNER_ID = 73;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -4131,7 +5674,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetAliasesForSignerIdResponse()
 	 * @generated
 	 */
-	int GET_ALIASES_FOR_SIGNER_ID_RESPONSE = 43;
+	int GET_ALIASES_FOR_SIGNER_ID_RESPONSE = 74;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -4168,7 +5711,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetAliasesForSignerIds()
 	 * @generated
 	 */
-	int GET_ALIASES_FOR_SIGNER_IDS = 44;
+	int GET_ALIASES_FOR_SIGNER_IDS = 75;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -4214,7 +5757,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetAliasesForSignerIdsResponse()
 	 * @generated
 	 */
-	int GET_ALIASES_FOR_SIGNER_IDS_RESPONSE = 45;
+	int GET_ALIASES_FOR_SIGNER_IDS_RESPONSE = 76;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -4251,7 +5794,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetAllConsentedIdsFor()
 	 * @generated
 	 */
-	int GET_ALL_CONSENTED_IDS_FOR = 46;
+	int GET_ALL_CONSENTED_IDS_FOR = 77;
 
 	/**
 	 * The feature id for the '<em><b>Signer Id Type Name</b></em>' attribute.
@@ -4306,7 +5849,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetAllConsentedIdsForResponse()
 	 * @generated
 	 */
-	int GET_ALL_CONSENTED_IDS_FOR_RESPONSE = 47;
+	int GET_ALL_CONSENTED_IDS_FOR_RESPONSE = 78;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -4343,7 +5886,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetAllConsentsForConsentTemplate()
 	 * @generated
 	 */
-	int GET_ALL_CONSENTS_FOR_CONSENT_TEMPLATE = 48;
+	int GET_ALL_CONSENTS_FOR_CONSENT_TEMPLATE = 79;
 
 	/**
 	 * The feature id for the '<em><b>Consent Template Key</b></em>' containment reference.
@@ -4380,7 +5923,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetAllConsentsForConsentTemplateResponse()
 	 * @generated
 	 */
-	int GET_ALL_CONSENTS_FOR_CONSENT_TEMPLATE_RESPONSE = 49;
+	int GET_ALL_CONSENTS_FOR_CONSENT_TEMPLATE_RESPONSE = 80;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -4417,7 +5960,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetAllConsentsForDomain()
 	 * @generated
 	 */
-	int GET_ALL_CONSENTS_FOR_DOMAIN = 50;
+	int GET_ALL_CONSENTS_FOR_DOMAIN = 81;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -4454,7 +5997,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetAllConsentsForDomainResponse()
 	 * @generated
 	 */
-	int GET_ALL_CONSENTS_FOR_DOMAIN_RESPONSE = 51;
+	int GET_ALL_CONSENTS_FOR_DOMAIN_RESPONSE = 82;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -4491,7 +6034,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetAllConsentsForDomainWithoutScan()
 	 * @generated
 	 */
-	int GET_ALL_CONSENTS_FOR_DOMAIN_WITHOUT_SCAN = 52;
+	int GET_ALL_CONSENTS_FOR_DOMAIN_WITHOUT_SCAN = 83;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -4528,7 +6071,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetAllConsentsForDomainWithoutScanResponse()
 	 * @generated
 	 */
-	int GET_ALL_CONSENTS_FOR_DOMAIN_WITHOUT_SCAN_RESPONSE = 53;
+	int GET_ALL_CONSENTS_FOR_DOMAIN_WITHOUT_SCAN_RESPONSE = 84;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -4565,7 +6108,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetAllConsentsForSignerIds()
 	 * @generated
 	 */
-	int GET_ALL_CONSENTS_FOR_SIGNER_IDS = 54;
+	int GET_ALL_CONSENTS_FOR_SIGNER_IDS = 85;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -4620,7 +6163,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetAllConsentsForSignerIdsResponse()
 	 * @generated
 	 */
-	int GET_ALL_CONSENTS_FOR_SIGNER_IDS_RESPONSE = 55;
+	int GET_ALL_CONSENTS_FOR_SIGNER_IDS_RESPONSE = 86;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -4657,7 +6200,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetAllIdsForSignerIdType()
 	 * @generated
 	 */
-	int GET_ALL_IDS_FOR_SIGNER_ID_TYPE = 56;
+	int GET_ALL_IDS_FOR_SIGNER_ID_TYPE = 87;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -4703,7 +6246,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetAllIdsForSignerIdTypeResponse()
 	 * @generated
 	 */
-	int GET_ALL_IDS_FOR_SIGNER_ID_TYPE_RESPONSE = 57;
+	int GET_ALL_IDS_FOR_SIGNER_ID_TYPE_RESPONSE = 88;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -4740,7 +6283,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetConsent()
 	 * @generated
 	 */
-	int GET_CONSENT = 58;
+	int GET_CONSENT = 89;
 
 	/**
 	 * The feature id for the '<em><b>Consent Key</b></em>' containment reference.
@@ -4777,7 +6320,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetConsentDates()
 	 * @generated
 	 */
-	int GET_CONSENT_DATES = 59;
+	int GET_CONSENT_DATES = 90;
 
 	/**
 	 * The feature id for the '<em><b>Consent Key</b></em>' containment reference.
@@ -4814,7 +6357,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetConsentDatesResponse()
 	 * @generated
 	 */
-	int GET_CONSENT_DATES_RESPONSE = 60;
+	int GET_CONSENT_DATES_RESPONSE = 91;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -4851,7 +6394,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetConsentLight()
 	 * @generated
 	 */
-	int GET_CONSENT_LIGHT = 61;
+	int GET_CONSENT_LIGHT = 92;
 
 	/**
 	 * The feature id for the '<em><b>Consent Key</b></em>' containment reference.
@@ -4888,7 +6431,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetConsentLightResponse()
 	 * @generated
 	 */
-	int GET_CONSENT_LIGHT_RESPONSE = 62;
+	int GET_CONSENT_LIGHT_RESPONSE = 93;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -4925,7 +6468,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetConsentResponse()
 	 * @generated
 	 */
-	int GET_CONSENT_RESPONSE = 63;
+	int GET_CONSENT_RESPONSE = 94;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -4962,7 +6505,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetConsentsForDomainPaginated()
 	 * @generated
 	 */
-	int GET_CONSENTS_FOR_DOMAIN_PAGINATED = 64;
+	int GET_CONSENTS_FOR_DOMAIN_PAGINATED = 95;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -5008,7 +6551,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetConsentsForDomainPaginatedResponse()
 	 * @generated
 	 */
-	int GET_CONSENTS_FOR_DOMAIN_PAGINATED_RESPONSE = 65;
+	int GET_CONSENTS_FOR_DOMAIN_PAGINATED_RESPONSE = 96;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -5045,7 +6588,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetConsentStatusType()
 	 * @generated
 	 */
-	int GET_CONSENT_STATUS_TYPE = 66;
+	int GET_CONSENT_STATUS_TYPE = 97;
 
 	/**
 	 * The feature id for the '<em><b>Signer Ids</b></em>' containment reference list.
@@ -5100,7 +6643,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetConsentStatusTypeFromExcludingToExcluding()
 	 * @generated
 	 */
-	int GET_CONSENT_STATUS_TYPE_FROM_EXCLUDING_TO_EXCLUDING = 67;
+	int GET_CONSENT_STATUS_TYPE_FROM_EXCLUDING_TO_EXCLUDING = 98;
 
 	/**
 	 * The feature id for the '<em><b>Signer Ids</b></em>' containment reference list.
@@ -5182,7 +6725,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetConsentStatusTypeFromExcludingToExcludingResponse()
 	 * @generated
 	 */
-	int GET_CONSENT_STATUS_TYPE_FROM_EXCLUDING_TO_EXCLUDING_RESPONSE = 68;
+	int GET_CONSENT_STATUS_TYPE_FROM_EXCLUDING_TO_EXCLUDING_RESPONSE = 99;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' attribute.
@@ -5219,7 +6762,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetConsentStatusTypeFromExcludingToIncluding()
 	 * @generated
 	 */
-	int GET_CONSENT_STATUS_TYPE_FROM_EXCLUDING_TO_INCLUDING = 69;
+	int GET_CONSENT_STATUS_TYPE_FROM_EXCLUDING_TO_INCLUDING = 100;
 
 	/**
 	 * The feature id for the '<em><b>Signer Ids</b></em>' containment reference list.
@@ -5301,7 +6844,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetConsentStatusTypeFromExcludingToIncludingResponse()
 	 * @generated
 	 */
-	int GET_CONSENT_STATUS_TYPE_FROM_EXCLUDING_TO_INCLUDING_RESPONSE = 70;
+	int GET_CONSENT_STATUS_TYPE_FROM_EXCLUDING_TO_INCLUDING_RESPONSE = 101;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' attribute.
@@ -5338,7 +6881,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetConsentStatusTypeFromIncludingToExcluding()
 	 * @generated
 	 */
-	int GET_CONSENT_STATUS_TYPE_FROM_INCLUDING_TO_EXCLUDING = 71;
+	int GET_CONSENT_STATUS_TYPE_FROM_INCLUDING_TO_EXCLUDING = 102;
 
 	/**
 	 * The feature id for the '<em><b>Signer Ids</b></em>' containment reference list.
@@ -5420,7 +6963,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetConsentStatusTypeFromIncludingToExcludingResponse()
 	 * @generated
 	 */
-	int GET_CONSENT_STATUS_TYPE_FROM_INCLUDING_TO_EXCLUDING_RESPONSE = 72;
+	int GET_CONSENT_STATUS_TYPE_FROM_INCLUDING_TO_EXCLUDING_RESPONSE = 103;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' attribute.
@@ -5457,7 +7000,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetConsentStatusTypeFromIncludingToIncluding()
 	 * @generated
 	 */
-	int GET_CONSENT_STATUS_TYPE_FROM_INCLUDING_TO_INCLUDING = 73;
+	int GET_CONSENT_STATUS_TYPE_FROM_INCLUDING_TO_INCLUDING = 104;
 
 	/**
 	 * The feature id for the '<em><b>Signer Ids</b></em>' containment reference list.
@@ -5539,7 +7082,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetConsentStatusTypeFromIncludingToIncludingResponse()
 	 * @generated
 	 */
-	int GET_CONSENT_STATUS_TYPE_FROM_INCLUDING_TO_INCLUDING_RESPONSE = 74;
+	int GET_CONSENT_STATUS_TYPE_FROM_INCLUDING_TO_INCLUDING_RESPONSE = 105;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' attribute.
@@ -5576,7 +7119,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetConsentStatusTypeResponse()
 	 * @generated
 	 */
-	int GET_CONSENT_STATUS_TYPE_RESPONSE = 75;
+	int GET_CONSENT_STATUS_TYPE_RESPONSE = 106;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' attribute.
@@ -5613,7 +7156,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetConsentTemplate()
 	 * @generated
 	 */
-	int GET_CONSENT_TEMPLATE = 76;
+	int GET_CONSENT_TEMPLATE = 107;
 
 	/**
 	 * The feature id for the '<em><b>Consent Template Key</b></em>' containment reference.
@@ -5650,7 +7193,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetConsentTemplateResponse()
 	 * @generated
 	 */
-	int GET_CONSENT_TEMPLATE_RESPONSE = 77;
+	int GET_CONSENT_TEMPLATE_RESPONSE = 108;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -5687,7 +7230,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetCurrentConsentForSignerIdsAndCT()
 	 * @generated
 	 */
-	int GET_CURRENT_CONSENT_FOR_SIGNER_IDS_AND_CT = 78;
+	int GET_CURRENT_CONSENT_FOR_SIGNER_IDS_AND_CT = 109;
 
 	/**
 	 * The feature id for the '<em><b>Consent Template Key</b></em>' containment reference.
@@ -5751,7 +7294,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetCurrentConsentForSignerIdsAndCTResponse()
 	 * @generated
 	 */
-	int GET_CURRENT_CONSENT_FOR_SIGNER_IDS_AND_CT_RESPONSE = 79;
+	int GET_CURRENT_CONSENT_FOR_SIGNER_IDS_AND_CT_RESPONSE = 110;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -5788,7 +7331,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetCurrentConsentTemplate()
 	 * @generated
 	 */
-	int GET_CURRENT_CONSENT_TEMPLATE = 80;
+	int GET_CURRENT_CONSENT_TEMPLATE = 111;
 
 	/**
 	 * The feature id for the '<em><b>Consent Template Name</b></em>' attribute.
@@ -5834,7 +7377,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetCurrentConsentTemplateResponse()
 	 * @generated
 	 */
-	int GET_CURRENT_CONSENT_TEMPLATE_RESPONSE = 81;
+	int GET_CURRENT_CONSENT_TEMPLATE_RESPONSE = 112;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -5871,7 +7414,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetCurrentPolicyStatesForSignerIds()
 	 * @generated
 	 */
-	int GET_CURRENT_POLICY_STATES_FOR_SIGNER_IDS = 82;
+	int GET_CURRENT_POLICY_STATES_FOR_SIGNER_IDS = 113;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -5926,7 +7469,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetCurrentPolicyStatesForSignerIdsResponse()
 	 * @generated
 	 */
-	int GET_CURRENT_POLICY_STATES_FOR_SIGNER_IDS_RESPONSE = 83;
+	int GET_CURRENT_POLICY_STATES_FOR_SIGNER_IDS_RESPONSE = 114;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -5963,7 +7506,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetDomain()
 	 * @generated
 	 */
-	int GET_DOMAIN = 84;
+	int GET_DOMAIN = 115;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -6000,7 +7543,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetDomainResponse()
 	 * @generated
 	 */
-	int GET_DOMAIN_RESPONSE = 85;
+	int GET_DOMAIN_RESPONSE = 116;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -6037,7 +7580,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetMappedTemplatesForSignerId()
 	 * @generated
 	 */
-	int GET_MAPPED_TEMPLATES_FOR_SIGNER_ID = 86;
+	int GET_MAPPED_TEMPLATES_FOR_SIGNER_ID = 117;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -6101,7 +7644,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetMappedTemplatesForSignerIdResponse()
 	 * @generated
 	 */
-	int GET_MAPPED_TEMPLATES_FOR_SIGNER_ID_RESPONSE = 87;
+	int GET_MAPPED_TEMPLATES_FOR_SIGNER_ID_RESPONSE = 118;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -6138,7 +7681,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetModule()
 	 * @generated
 	 */
-	int GET_MODULE = 88;
+	int GET_MODULE = 119;
 
 	/**
 	 * The feature id for the '<em><b>Module Key</b></em>' containment reference.
@@ -6175,7 +7718,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetModuleResponse()
 	 * @generated
 	 */
-	int GET_MODULE_RESPONSE = 89;
+	int GET_MODULE_RESPONSE = 120;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -6212,7 +7755,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetObjectByFhirID()
 	 * @generated
 	 */
-	int GET_OBJECT_BY_FHIR_ID = 90;
+	int GET_OBJECT_BY_FHIR_ID = 121;
 
 	/**
 	 * The feature id for the '<em><b>Clazz</b></em>' attribute.
@@ -6258,7 +7801,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetObjectByFhirIDResponse()
 	 * @generated
 	 */
-	int GET_OBJECT_BY_FHIR_ID_RESPONSE = 91;
+	int GET_OBJECT_BY_FHIR_ID_RESPONSE = 122;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -6295,7 +7838,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetPolicy()
 	 * @generated
 	 */
-	int GET_POLICY = 92;
+	int GET_POLICY = 123;
 
 	/**
 	 * The feature id for the '<em><b>Policy Key</b></em>' containment reference.
@@ -6332,7 +7875,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetPolicyResponse()
 	 * @generated
 	 */
-	int GET_POLICY_RESPONSE = 93;
+	int GET_POLICY_RESPONSE = 124;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -6369,7 +7912,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetPolicyStatesForPolicyAndSignerIds()
 	 * @generated
 	 */
-	int GET_POLICY_STATES_FOR_POLICY_AND_SIGNER_IDS = 94;
+	int GET_POLICY_STATES_FOR_POLICY_AND_SIGNER_IDS = 125;
 
 	/**
 	 * The feature id for the '<em><b>Policy Key</b></em>' containment reference.
@@ -6424,7 +7967,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetPolicyStatesForPolicyAndSignerIdsResponse()
 	 * @generated
 	 */
-	int GET_POLICY_STATES_FOR_POLICY_AND_SIGNER_IDS_RESPONSE = 95;
+	int GET_POLICY_STATES_FOR_POLICY_AND_SIGNER_IDS_RESPONSE = 126;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -6461,7 +8004,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetPolicyStatesForPolicyNameAndSignerIds()
 	 * @generated
 	 */
-	int GET_POLICY_STATES_FOR_POLICY_NAME_AND_SIGNER_IDS = 96;
+	int GET_POLICY_STATES_FOR_POLICY_NAME_AND_SIGNER_IDS = 127;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -6525,7 +8068,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetPolicyStatesForPolicyNameAndSignerIdsResponse()
 	 * @generated
 	 */
-	int GET_POLICY_STATES_FOR_POLICY_NAME_AND_SIGNER_IDS_RESPONSE = 97;
+	int GET_POLICY_STATES_FOR_POLICY_NAME_AND_SIGNER_IDS_RESPONSE = 128;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -6562,7 +8105,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetPolicyStatesForSignerIds()
 	 * @generated
 	 */
-	int GET_POLICY_STATES_FOR_SIGNER_IDS = 98;
+	int GET_POLICY_STATES_FOR_SIGNER_IDS = 129;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -6617,7 +8160,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetPolicyStatesForSignerIdsResponse()
 	 * @generated
 	 */
-	int GET_POLICY_STATES_FOR_SIGNER_IDS_RESPONSE = 99;
+	int GET_POLICY_STATES_FOR_SIGNER_IDS_RESPONSE = 130;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -6654,7 +8197,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetQCHistoryForConsent()
 	 * @generated
 	 */
-	int GET_QC_HISTORY_FOR_CONSENT = 100;
+	int GET_QC_HISTORY_FOR_CONSENT = 131;
 
 	/**
 	 * The feature id for the '<em><b>Consent Key</b></em>' containment reference.
@@ -6691,7 +8234,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetQCHistoryForConsentResponse()
 	 * @generated
 	 */
-	int GET_QC_HISTORY_FOR_CONSENT_RESPONSE = 101;
+	int GET_QC_HISTORY_FOR_CONSENT_RESPONSE = 132;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -6728,7 +8271,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetQCProblemHistoryForQCProblem()
 	 * @generated
 	 */
-	int GET_QC_PROBLEM_HISTORY_FOR_QC_PROBLEM = 102;
+	int GET_QC_PROBLEM_HISTORY_FOR_QC_PROBLEM = 133;
 
 	/**
 	 * The feature id for the '<em><b>Qc Problem</b></em>' containment reference.
@@ -6774,7 +8317,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetQCProblemHistoryForQCProblemResponse()
 	 * @generated
 	 */
-	int GET_QC_PROBLEM_HISTORY_FOR_QC_PROBLEM_RESPONSE = 103;
+	int GET_QC_PROBLEM_HISTORY_FOR_QC_PROBLEM_RESPONSE = 134;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -6811,7 +8354,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetSignerIdsForAlias()
 	 * @generated
 	 */
-	int GET_SIGNER_IDS_FOR_ALIAS = 104;
+	int GET_SIGNER_IDS_FOR_ALIAS = 135;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -6857,7 +8400,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetSignerIdsForAliasResponse()
 	 * @generated
 	 */
-	int GET_SIGNER_IDS_FOR_ALIAS_RESPONSE = 105;
+	int GET_SIGNER_IDS_FOR_ALIAS_RESPONSE = 136;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -6894,7 +8437,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetSignerIdType()
 	 * @generated
 	 */
-	int GET_SIGNER_ID_TYPE = 106;
+	int GET_SIGNER_ID_TYPE = 137;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -6940,7 +8483,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetSignerIdTypeResponse()
 	 * @generated
 	 */
-	int GET_SIGNER_ID_TYPE_RESPONSE = 107;
+	int GET_SIGNER_ID_TYPE_RESPONSE = 138;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -6977,7 +8520,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetTemplatesWithPolicies()
 	 * @generated
 	 */
-	int GET_TEMPLATES_WITH_POLICIES = 108;
+	int GET_TEMPLATES_WITH_POLICIES = 139;
 
 	/**
 	 * The feature id for the '<em><b>Policy Key DT Os</b></em>' containment reference list.
@@ -7014,7 +8557,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getGetTemplatesWithPoliciesResponse()
 	 * @generated
 	 */
-	int GET_TEMPLATES_WITH_POLICIES_RESPONSE = 109;
+	int GET_TEMPLATES_WITH_POLICIES_RESPONSE = 140;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -7051,7 +8594,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getHashMap()
 	 * @generated
 	 */
-	int HASH_MAP = 110;
+	int HASH_MAP = 141;
 
 	/**
 	 * The number of structural features of the '<em>Hash Map</em>' class.
@@ -7079,7 +8622,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getIllegalArgumentException()
 	 * @generated
 	 */
-	int ILLEGAL_ARGUMENT_EXCEPTION = 111;
+	int ILLEGAL_ARGUMENT_EXCEPTION = 142;
 
 	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -7116,7 +8659,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getInconsistentStatusException()
 	 * @generated
 	 */
-	int INCONSISTENT_STATUS_EXCEPTION = 112;
+	int INCONSISTENT_STATUS_EXCEPTION = 143;
 
 	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -7153,7 +8696,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getInternalException()
 	 * @generated
 	 */
-	int INTERNAL_EXCEPTION = 113;
+	int INTERNAL_EXCEPTION = 144;
 
 	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -7183,6 +8726,61 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	int INTERNAL_EXCEPTION_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.IllegalCompositionExceptionImpl <em>Illegal Composition Exception</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.IllegalCompositionExceptionImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getIllegalCompositionException()
+	 * @generated
+	 */
+	int ILLEGAL_COMPOSITION_EXCEPTION = 145;
+
+	/**
+	 * The feature id for the '<em><b>Illegal Item Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ILLEGAL_COMPOSITION_EXCEPTION__ILLEGAL_ITEM_TYPE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Illegal Item</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ILLEGAL_COMPOSITION_EXCEPTION__ILLEGAL_ITEM = 1;
+
+	/**
+	 * The feature id for the '<em><b>Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ILLEGAL_COMPOSITION_EXCEPTION__MESSAGE = 2;
+
+	/**
+	 * The number of structural features of the '<em>Illegal Composition Exception</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ILLEGAL_COMPOSITION_EXCEPTION_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Illegal Composition Exception</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ILLEGAL_COMPOSITION_EXCEPTION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.InvalidFreeTextExceptionImpl <em>Invalid Free Text Exception</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7190,7 +8788,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getInvalidFreeTextException()
 	 * @generated
 	 */
-	int INVALID_FREE_TEXT_EXCEPTION = 114;
+	int INVALID_FREE_TEXT_EXCEPTION = 146;
 
 	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -7227,7 +8825,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getInvalidParameterException()
 	 * @generated
 	 */
-	int INVALID_PARAMETER_EXCEPTION = 115;
+	int INVALID_PARAMETER_EXCEPTION = 147;
 
 	/**
 	 * The feature id for the '<em><b>Parameter Name</b></em>' attribute.
@@ -7266,6 +8864,43 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	int INVALID_PARAMETER_EXCEPTION_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.InvalidPropertiesExceptionImpl <em>Invalid Properties Exception</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.InvalidPropertiesExceptionImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getInvalidPropertiesException()
+	 * @generated
+	 */
+	int INVALID_PROPERTIES_EXCEPTION = 148;
+
+	/**
+	 * The feature id for the '<em><b>Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INVALID_PROPERTIES_EXCEPTION__MESSAGE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Invalid Properties Exception</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INVALID_PROPERTIES_EXCEPTION_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Invalid Properties Exception</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INVALID_PROPERTIES_EXCEPTION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.InvalidVersionExceptionImpl <em>Invalid Version Exception</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7273,7 +8908,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getInvalidVersionException()
 	 * @generated
 	 */
-	int INVALID_VERSION_EXCEPTION = 116;
+	int INVALID_VERSION_EXCEPTION = 149;
 
 	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -7310,7 +8945,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getIsConsented()
 	 * @generated
 	 */
-	int IS_CONSENTED = 117;
+	int IS_CONSENTED = 150;
 
 	/**
 	 * The feature id for the '<em><b>Signer Ids</b></em>' containment reference list.
@@ -7365,7 +9000,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getIsConsentedFromExcludingToExcluding()
 	 * @generated
 	 */
-	int IS_CONSENTED_FROM_EXCLUDING_TO_EXCLUDING = 118;
+	int IS_CONSENTED_FROM_EXCLUDING_TO_EXCLUDING = 151;
 
 	/**
 	 * The feature id for the '<em><b>Signer Ids</b></em>' containment reference list.
@@ -7447,7 +9082,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getIsConsentedFromExcludingToExcludingResponse()
 	 * @generated
 	 */
-	int IS_CONSENTED_FROM_EXCLUDING_TO_EXCLUDING_RESPONSE = 119;
+	int IS_CONSENTED_FROM_EXCLUDING_TO_EXCLUDING_RESPONSE = 152;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' attribute.
@@ -7484,7 +9119,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getIsConsentedFromExcludingToIncluding()
 	 * @generated
 	 */
-	int IS_CONSENTED_FROM_EXCLUDING_TO_INCLUDING = 120;
+	int IS_CONSENTED_FROM_EXCLUDING_TO_INCLUDING = 153;
 
 	/**
 	 * The feature id for the '<em><b>Signer Ids</b></em>' containment reference list.
@@ -7566,7 +9201,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getIsConsentedFromExcludingToIncludingResponse()
 	 * @generated
 	 */
-	int IS_CONSENTED_FROM_EXCLUDING_TO_INCLUDING_RESPONSE = 121;
+	int IS_CONSENTED_FROM_EXCLUDING_TO_INCLUDING_RESPONSE = 154;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' attribute.
@@ -7603,7 +9238,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getIsConsentedFromIncludingToExcluding()
 	 * @generated
 	 */
-	int IS_CONSENTED_FROM_INCLUDING_TO_EXCLUDING = 122;
+	int IS_CONSENTED_FROM_INCLUDING_TO_EXCLUDING = 155;
 
 	/**
 	 * The feature id for the '<em><b>Signer Ids</b></em>' containment reference list.
@@ -7685,7 +9320,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getIsConsentedFromIncludingToExcludingResponse()
 	 * @generated
 	 */
-	int IS_CONSENTED_FROM_INCLUDING_TO_EXCLUDING_RESPONSE = 123;
+	int IS_CONSENTED_FROM_INCLUDING_TO_EXCLUDING_RESPONSE = 156;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' attribute.
@@ -7722,7 +9357,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getIsConsentedFromIncludingToIncluding()
 	 * @generated
 	 */
-	int IS_CONSENTED_FROM_INCLUDING_TO_INCLUDING = 124;
+	int IS_CONSENTED_FROM_INCLUDING_TO_INCLUDING = 157;
 
 	/**
 	 * The feature id for the '<em><b>Signer Ids</b></em>' containment reference list.
@@ -7804,7 +9439,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getIsConsentedFromIncludingToIncludingResponse()
 	 * @generated
 	 */
-	int IS_CONSENTED_FROM_INCLUDING_TO_INCLUDING_RESPONSE = 125;
+	int IS_CONSENTED_FROM_INCLUDING_TO_INCLUDING_RESPONSE = 158;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' attribute.
@@ -7841,7 +9476,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getIsConsentedResponse()
 	 * @generated
 	 */
-	int IS_CONSENTED_RESPONSE = 126;
+	int IS_CONSENTED_RESPONSE = 159;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' attribute.
@@ -7878,7 +9513,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getLabel()
 	 * @generated
 	 */
-	int LABEL = 127;
+	int LABEL = 160;
 
 	/**
 	 * The feature id for the '<em><b>Lang</b></em>' attribute.
@@ -7924,7 +9559,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getListConsentTemplates()
 	 * @generated
 	 */
-	int LIST_CONSENT_TEMPLATES = 128;
+	int LIST_CONSENT_TEMPLATES = 161;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -7970,7 +9605,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getListConsentTemplatesResponse()
 	 * @generated
 	 */
-	int LIST_CONSENT_TEMPLATES_RESPONSE = 129;
+	int LIST_CONSENT_TEMPLATES_RESPONSE = 162;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -8007,7 +9642,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getListCurrentConsentTemplates()
 	 * @generated
 	 */
-	int LIST_CURRENT_CONSENT_TEMPLATES = 130;
+	int LIST_CURRENT_CONSENT_TEMPLATES = 163;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -8044,7 +9679,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getListCurrentConsentTemplatesResponse()
 	 * @generated
 	 */
-	int LIST_CURRENT_CONSENT_TEMPLATES_RESPONSE = 131;
+	int LIST_CURRENT_CONSENT_TEMPLATES_RESPONSE = 164;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -8081,7 +9716,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getListDomains()
 	 * @generated
 	 */
-	int LIST_DOMAINS = 132;
+	int LIST_DOMAINS = 165;
 
 	/**
 	 * The number of structural features of the '<em>List Domains</em>' class.
@@ -8109,7 +9744,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getListDomainsResponse()
 	 * @generated
 	 */
-	int LIST_DOMAINS_RESPONSE = 133;
+	int LIST_DOMAINS_RESPONSE = 166;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -8146,7 +9781,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getListModules()
 	 * @generated
 	 */
-	int LIST_MODULES = 134;
+	int LIST_MODULES = 167;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -8192,7 +9827,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getListModulesResponse()
 	 * @generated
 	 */
-	int LIST_MODULES_RESPONSE = 135;
+	int LIST_MODULES_RESPONSE = 168;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -8229,7 +9864,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getListPolicies()
 	 * @generated
 	 */
-	int LIST_POLICIES = 136;
+	int LIST_POLICIES = 169;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -8275,7 +9910,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getListPoliciesResponse()
 	 * @generated
 	 */
-	int LIST_POLICIES_RESPONSE = 137;
+	int LIST_POLICIES_RESPONSE = 170;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -8312,7 +9947,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getListSignerIdTypes()
 	 * @generated
 	 */
-	int LIST_SIGNER_ID_TYPES = 138;
+	int LIST_SIGNER_ID_TYPES = 171;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -8349,7 +9984,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getListSignerIdTypesResponse()
 	 * @generated
 	 */
-	int LIST_SIGNER_ID_TYPES_RESPONSE = 139;
+	int LIST_SIGNER_ID_TYPES_RESPONSE = 172;
 
 	/**
 	 * The feature id for the '<em><b>Return</b></em>' containment reference.
@@ -8386,7 +10021,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getMandatoryFieldsException()
 	 * @generated
 	 */
-	int MANDATORY_FIELDS_EXCEPTION = 140;
+	int MANDATORY_FIELDS_EXCEPTION = 173;
 
 	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -8423,7 +10058,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getMissingRequiredObjectException()
 	 * @generated
 	 */
-	int MISSING_REQUIRED_OBJECT_EXCEPTION = 141;
+	int MISSING_REQUIRED_OBJECT_EXCEPTION = 174;
 
 	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -8460,7 +10095,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getModuleDTO()
 	 * @generated
 	 */
-	int MODULE_DTO = 142;
+	int MODULE_DTO = 175;
 
 	/**
 	 * The feature id for the '<em><b>Fhir ID</b></em>' attribute.
@@ -8596,7 +10231,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getModuleExpirationsType()
 	 * @generated
 	 */
-	int MODULE_EXPIRATIONS_TYPE = 143;
+	int MODULE_EXPIRATIONS_TYPE = 176;
 
 	/**
 	 * The feature id for the '<em><b>Entry</b></em>' containment reference list.
@@ -8633,7 +10268,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getModuleKeyDTO()
 	 * @generated
 	 */
-	int MODULE_KEY_DTO = 144;
+	int MODULE_KEY_DTO = 177;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -8688,7 +10323,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getModuleKeyDTOArray()
 	 * @generated
 	 */
-	int MODULE_KEY_DTO_ARRAY = 145;
+	int MODULE_KEY_DTO_ARRAY = 178;
 
 	/**
 	 * The feature id for the '<em><b>Item</b></em>' containment reference list.
@@ -8725,7 +10360,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getModuleStateDTO()
 	 * @generated
 	 */
-	int MODULE_STATE_DTO = 146;
+	int MODULE_STATE_DTO = 179;
 
 	/**
 	 * The feature id for the '<em><b>Consent State</b></em>' attribute.
@@ -8780,7 +10415,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getModuleStatesType()
 	 * @generated
 	 */
-	int MODULE_STATES_TYPE = 147;
+	int MODULE_STATES_TYPE = 180;
 
 	/**
 	 * The feature id for the '<em><b>Entry</b></em>' containment reference list.
@@ -8810,6 +10445,43 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	int MODULE_STATES_TYPE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.ObjectInUseExceptionImpl <em>Object In Use Exception</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.ObjectInUseExceptionImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getObjectInUseException()
+	 * @generated
+	 */
+	int OBJECT_IN_USE_EXCEPTION = 181;
+
+	/**
+	 * The feature id for the '<em><b>Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJECT_IN_USE_EXCEPTION__MESSAGE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Object In Use Exception</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJECT_IN_USE_EXCEPTION_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Object In Use Exception</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJECT_IN_USE_EXCEPTION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.PolicyDTOImpl <em>Policy DTO</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8817,7 +10489,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getPolicyDTO()
 	 * @generated
 	 */
-	int POLICY_DTO = 148;
+	int POLICY_DTO = 182;
 
 	/**
 	 * The feature id for the '<em><b>Fhir ID</b></em>' attribute.
@@ -8917,7 +10589,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getPolicyExpirationsType()
 	 * @generated
 	 */
-	int POLICY_EXPIRATIONS_TYPE = 149;
+	int POLICY_EXPIRATIONS_TYPE = 183;
 
 	/**
 	 * The feature id for the '<em><b>Entry</b></em>' containment reference list.
@@ -8954,7 +10626,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getPolicyKeyDTO()
 	 * @generated
 	 */
-	int POLICY_KEY_DTO = 150;
+	int POLICY_KEY_DTO = 184;
 
 	/**
 	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
@@ -9009,7 +10681,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getQcdto()
 	 * @generated
 	 */
-	int QCDTO = 151;
+	int QCDTO = 185;
 
 	/**
 	 * The feature id for the '<em><b>Fhir ID</b></em>' attribute.
@@ -9100,7 +10772,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getQcHistoryDTO()
 	 * @generated
 	 */
-	int QC_HISTORY_DTO = 152;
+	int QC_HISTORY_DTO = 186;
 
 	/**
 	 * The feature id for the '<em><b>Fhir ID</b></em>' attribute.
@@ -9209,7 +10881,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getQcProblemDTO()
 	 * @generated
 	 */
-	int QC_PROBLEM_DTO = 153;
+	int QC_PROBLEM_DTO = 187;
 
 	/**
 	 * The feature id for the '<em><b>Fhir ID</b></em>' attribute.
@@ -9318,7 +10990,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getQcProblemHistoryDTO()
 	 * @generated
 	 */
-	int QC_PROBLEM_HISTORY_DTO = 154;
+	int QC_PROBLEM_HISTORY_DTO = 188;
 
 	/**
 	 * The feature id for the '<em><b>Fhir ID</b></em>' attribute.
@@ -9445,7 +11117,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getQCProblemType()
 	 * @generated
 	 */
-	int QC_PROBLEM_TYPE = 155;
+	int QC_PROBLEM_TYPE = 189;
 
 	/**
 	 * The feature id for the '<em><b>Label</b></em>' containment reference list.
@@ -9527,7 +11199,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getQCProblemTypeAction()
 	 * @generated
 	 */
-	int QC_PROBLEM_TYPE_ACTION = 156;
+	int QC_PROBLEM_TYPE_ACTION = 190;
 
 	/**
 	 * The feature id for the '<em><b>Label</b></em>' containment reference list.
@@ -9573,7 +11245,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getQCType()
 	 * @generated
 	 */
-	int QC_TYPE = 157;
+	int QC_TYPE = 191;
 
 	/**
 	 * The feature id for the '<em><b>Label</b></em>' containment reference list.
@@ -9628,7 +11300,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getRefuseConsent()
 	 * @generated
 	 */
-	int REFUSE_CONSENT = 158;
+	int REFUSE_CONSENT = 192;
 
 	/**
 	 * The feature id for the '<em><b>Consent Template Key</b></em>' containment reference.
@@ -9674,7 +11346,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getRefuseConsentResponse()
 	 * @generated
 	 */
-	int REFUSE_CONSENT_RESPONSE = 159;
+	int REFUSE_CONSENT_RESPONSE = 193;
 
 	/**
 	 * The number of structural features of the '<em>Refuse Consent Response</em>' class.
@@ -9702,7 +11374,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getRemoveScanFromConsent()
 	 * @generated
 	 */
-	int REMOVE_SCAN_FROM_CONSENT = 160;
+	int REMOVE_SCAN_FROM_CONSENT = 194;
 
 	/**
 	 * The feature id for the '<em><b>Consent Key</b></em>' containment reference.
@@ -9748,7 +11420,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getRemoveScanFromConsentResponse()
 	 * @generated
 	 */
-	int REMOVE_SCAN_FROM_CONSENT_RESPONSE = 161;
+	int REMOVE_SCAN_FROM_CONSENT_RESPONSE = 195;
 
 	/**
 	 * The number of structural features of the '<em>Remove Scan From Consent Response</em>' class.
@@ -9776,7 +11448,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getRequirementsNotFullfilledException()
 	 * @generated
 	 */
-	int REQUIREMENTS_NOT_FULLFILLED_EXCEPTION = 162;
+	int REQUIREMENTS_NOT_FULLFILLED_EXCEPTION = 196;
 
 	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -9813,7 +11485,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType()
 	 * @generated
 	 */
-	int RETURN_TYPE = 163;
+	int RETURN_TYPE = 197;
 
 	/**
 	 * The feature id for the '<em><b>Domains</b></em>' containment reference list.
@@ -9850,7 +11522,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType1()
 	 * @generated
 	 */
-	int RETURN_TYPE1 = 164;
+	int RETURN_TYPE1 = 198;
 
 	/**
 	 * The feature id for the '<em><b>Modules</b></em>' containment reference list.
@@ -9887,7 +11559,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType2()
 	 * @generated
 	 */
-	int RETURN_TYPE2 = 165;
+	int RETURN_TYPE2 = 199;
 
 	/**
 	 * The feature id for the '<em><b>Signer Id Types</b></em>' containment reference list.
@@ -9924,7 +11596,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType3()
 	 * @generated
 	 */
-	int RETURN_TYPE3 = 166;
+	int RETURN_TYPE3 = 200;
 
 	/**
 	 * The feature id for the '<em><b>Policies</b></em>' containment reference list.
@@ -9961,7 +11633,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType4()
 	 * @generated
 	 */
-	int RETURN_TYPE4 = 167;
+	int RETURN_TYPE4 = 201;
 
 	/**
 	 * The feature id for the '<em><b>Current Consent Templates</b></em>' containment reference list.
@@ -9998,7 +11670,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType5()
 	 * @generated
 	 */
-	int RETURN_TYPE5 = 168;
+	int RETURN_TYPE5 = 202;
 
 	/**
 	 * The feature id for the '<em><b>Templates</b></em>' containment reference list.
@@ -10035,7 +11707,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType6()
 	 * @generated
 	 */
-	int RETURN_TYPE6 = 169;
+	int RETURN_TYPE6 = 203;
 
 	/**
 	 * The feature id for the '<em><b>Consent Ids</b></em>' attribute list.
@@ -10072,7 +11744,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType7()
 	 * @generated
 	 */
-	int RETURN_TYPE7 = 170;
+	int RETURN_TYPE7 = 204;
 
 	/**
 	 * The feature id for the '<em><b>Consents</b></em>' containment reference list.
@@ -10109,7 +11781,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType8()
 	 * @generated
 	 */
-	int RETURN_TYPE8 = 171;
+	int RETURN_TYPE8 = 205;
 
 	/**
 	 * The feature id for the '<em><b>Consents</b></em>' containment reference list.
@@ -10146,7 +11818,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType9()
 	 * @generated
 	 */
-	int RETURN_TYPE9 = 172;
+	int RETURN_TYPE9 = 206;
 
 	/**
 	 * The feature id for the '<em><b>Signed Policies</b></em>' containment reference list.
@@ -10183,7 +11855,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType10()
 	 * @generated
 	 */
-	int RETURN_TYPE10 = 173;
+	int RETURN_TYPE10 = 207;
 
 	/**
 	 * The feature id for the '<em><b>Consents</b></em>' containment reference list.
@@ -10220,7 +11892,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType11()
 	 * @generated
 	 */
-	int RETURN_TYPE11 = 174;
+	int RETURN_TYPE11 = 208;
 
 	/**
 	 * The feature id for the '<em><b>Signed Policies</b></em>' containment reference list.
@@ -10257,7 +11929,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType12()
 	 * @generated
 	 */
-	int RETURN_TYPE12 = 175;
+	int RETURN_TYPE12 = 209;
 
 	/**
 	 * The feature id for the '<em><b>Signed Policies</b></em>' containment reference list.
@@ -10294,7 +11966,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType13()
 	 * @generated
 	 */
-	int RETURN_TYPE13 = 176;
+	int RETURN_TYPE13 = 210;
 
 	/**
 	 * The feature id for the '<em><b>Signed Policies</b></em>' containment reference list.
@@ -10331,7 +12003,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType14()
 	 * @generated
 	 */
-	int RETURN_TYPE14 = 177;
+	int RETURN_TYPE14 = 211;
 
 	/**
 	 * The feature id for the '<em><b>Qc Histories</b></em>' containment reference list.
@@ -10368,7 +12040,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType15()
 	 * @generated
 	 */
-	int RETURN_TYPE15 = 178;
+	int RETURN_TYPE15 = 212;
 
 	/**
 	 * The feature id for the '<em><b>Signer Ids</b></em>' containment reference list.
@@ -10405,7 +12077,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType16()
 	 * @generated
 	 */
-	int RETURN_TYPE16 = 179;
+	int RETURN_TYPE16 = 213;
 
 	/**
 	 * The feature id for the '<em><b>Consent Templates</b></em>' containment reference list.
@@ -10442,7 +12114,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType17()
 	 * @generated
 	 */
-	int RETURN_TYPE17 = 180;
+	int RETURN_TYPE17 = 214;
 
 	/**
 	 * The feature id for the '<em><b>Qc Problem Histories</b></em>' containment reference list.
@@ -10479,7 +12151,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType18()
 	 * @generated
 	 */
-	int RETURN_TYPE18 = 181;
+	int RETURN_TYPE18 = 215;
 
 	/**
 	 * The feature id for the '<em><b>Templates</b></em>' containment reference list.
@@ -10516,7 +12188,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType19()
 	 * @generated
 	 */
-	int RETURN_TYPE19 = 182;
+	int RETURN_TYPE19 = 216;
 
 	/**
 	 * The feature id for the '<em><b>Consents</b></em>' containment reference list.
@@ -10553,7 +12225,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType20()
 	 * @generated
 	 */
-	int RETURN_TYPE20 = 183;
+	int RETURN_TYPE20 = 217;
 
 	/**
 	 * The feature id for the '<em><b>Signer Ids</b></em>' attribute list.
@@ -10590,7 +12262,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType21()
 	 * @generated
 	 */
-	int RETURN_TYPE21 = 184;
+	int RETURN_TYPE21 = 218;
 
 	/**
 	 * The feature id for the '<em><b>Consents</b></em>' containment reference list.
@@ -10627,7 +12299,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType22()
 	 * @generated
 	 */
-	int RETURN_TYPE22 = 185;
+	int RETURN_TYPE22 = 219;
 
 	/**
 	 * The feature id for the '<em><b>Entry</b></em>' containment reference list.
@@ -10664,7 +12336,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getReturnType23()
 	 * @generated
 	 */
-	int RETURN_TYPE23 = 186;
+	int RETURN_TYPE23 = 220;
 
 	/**
 	 * The feature id for the '<em><b>Aliases</b></em>' containment reference list.
@@ -10701,7 +12373,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getSetQCForConsent()
 	 * @generated
 	 */
-	int SET_QC_FOR_CONSENT = 187;
+	int SET_QC_FOR_CONSENT = 221;
 
 	/**
 	 * The feature id for the '<em><b>Consent Key</b></em>' containment reference.
@@ -10747,7 +12419,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getSetQCForConsentResponse()
 	 * @generated
 	 */
-	int SET_QC_FOR_CONSENT_RESPONSE = 188;
+	int SET_QC_FOR_CONSENT_RESPONSE = 222;
 
 	/**
 	 * The number of structural features of the '<em>Set QC For Consent Response</em>' class.
@@ -10775,7 +12447,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getSignedPolicyDTO()
 	 * @generated
 	 */
-	int SIGNED_POLICY_DTO = 189;
+	int SIGNED_POLICY_DTO = 223;
 
 	/**
 	 * The feature id for the '<em><b>Fhir ID</b></em>' attribute.
@@ -10839,7 +12511,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getSignerIdDTO()
 	 * @generated
 	 */
-	int SIGNER_ID_DTO = 190;
+	int SIGNER_ID_DTO = 224;
 
 	/**
 	 * The feature id for the '<em><b>Fhir ID</b></em>' attribute.
@@ -10912,7 +12584,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getSignerIdDTOArray()
 	 * @generated
 	 */
-	int SIGNER_ID_DTO_ARRAY = 191;
+	int SIGNER_ID_DTO_ARRAY = 225;
 
 	/**
 	 * The feature id for the '<em><b>Item</b></em>' containment reference list.
@@ -10949,7 +12621,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getSignerIdTypeDTO()
 	 * @generated
 	 */
-	int SIGNER_ID_TYPE_DTO = 192;
+	int SIGNER_ID_TYPE_DTO = 226;
 
 	/**
 	 * The feature id for the '<em><b>Fhir ID</b></em>' attribute.
@@ -11031,7 +12703,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUnknownAliasException()
 	 * @generated
 	 */
-	int UNKNOWN_ALIAS_EXCEPTION = 193;
+	int UNKNOWN_ALIAS_EXCEPTION = 227;
 
 	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -11068,7 +12740,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUnknownConsentException()
 	 * @generated
 	 */
-	int UNKNOWN_CONSENT_EXCEPTION = 194;
+	int UNKNOWN_CONSENT_EXCEPTION = 228;
 
 	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -11105,7 +12777,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUnknownConsentTemplateException()
 	 * @generated
 	 */
-	int UNKNOWN_CONSENT_TEMPLATE_EXCEPTION = 195;
+	int UNKNOWN_CONSENT_TEMPLATE_EXCEPTION = 229;
 
 	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -11142,7 +12814,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUnknownDomainException()
 	 * @generated
 	 */
-	int UNKNOWN_DOMAIN_EXCEPTION = 196;
+	int UNKNOWN_DOMAIN_EXCEPTION = 230;
 
 	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -11179,7 +12851,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUnknownFhirIdObjectException()
 	 * @generated
 	 */
-	int UNKNOWN_FHIR_ID_OBJECT_EXCEPTION = 197;
+	int UNKNOWN_FHIR_ID_OBJECT_EXCEPTION = 231;
 
 	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -11216,7 +12888,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUnknownIDException()
 	 * @generated
 	 */
-	int UNKNOWN_ID_EXCEPTION = 198;
+	int UNKNOWN_ID_EXCEPTION = 232;
 
 	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -11253,7 +12925,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUnknownModuleException()
 	 * @generated
 	 */
-	int UNKNOWN_MODULE_EXCEPTION = 199;
+	int UNKNOWN_MODULE_EXCEPTION = 233;
 
 	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -11290,7 +12962,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUnknownPolicyException()
 	 * @generated
 	 */
-	int UNKNOWN_POLICY_EXCEPTION = 200;
+	int UNKNOWN_POLICY_EXCEPTION = 234;
 
 	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -11327,7 +12999,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUnknownSignerIdException()
 	 * @generated
 	 */
-	int UNKNOWN_SIGNER_ID_EXCEPTION = 201;
+	int UNKNOWN_SIGNER_ID_EXCEPTION = 235;
 
 	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -11364,7 +13036,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUnknownSignerIdTypeException()
 	 * @generated
 	 */
-	int UNKNOWN_SIGNER_ID_TYPE_EXCEPTION = 202;
+	int UNKNOWN_SIGNER_ID_TYPE_EXCEPTION = 236;
 
 	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -11401,7 +13073,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUpdateConsentInUse()
 	 * @generated
 	 */
-	int UPDATE_CONSENT_IN_USE = 203;
+	int UPDATE_CONSENT_IN_USE = 237;
 
 	/**
 	 * The feature id for the '<em><b>Consent Key</b></em>' containment reference.
@@ -11465,7 +13137,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUpdateConsentInUseResponse()
 	 * @generated
 	 */
-	int UPDATE_CONSENT_IN_USE_RESPONSE = 204;
+	int UPDATE_CONSENT_IN_USE_RESPONSE = 238;
 
 	/**
 	 * The number of structural features of the '<em>Update Consent In Use Response</em>' class.
@@ -11486,6 +13158,762 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	int UPDATE_CONSENT_IN_USE_RESPONSE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateConsentTemplateImpl <em>Update Consent Template</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateConsentTemplateImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUpdateConsentTemplate()
+	 * @generated
+	 */
+	int UPDATE_CONSENT_TEMPLATE = 239;
+
+	/**
+	 * The feature id for the '<em><b>Consent Template</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_CONSENT_TEMPLATE__CONSENT_TEMPLATE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Finalise Related Entities</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_CONSENT_TEMPLATE__FINALISE_RELATED_ENTITIES = 1;
+
+	/**
+	 * The number of structural features of the '<em>Update Consent Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_CONSENT_TEMPLATE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Update Consent Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_CONSENT_TEMPLATE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateConsentTemplateInUseImpl <em>Update Consent Template In Use</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateConsentTemplateInUseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUpdateConsentTemplateInUse()
+	 * @generated
+	 */
+	int UPDATE_CONSENT_TEMPLATE_IN_USE = 240;
+
+	/**
+	 * The feature id for the '<em><b>Consent Template</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_CONSENT_TEMPLATE_IN_USE__CONSENT_TEMPLATE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Update Consent Template In Use</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_CONSENT_TEMPLATE_IN_USE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Update Consent Template In Use</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_CONSENT_TEMPLATE_IN_USE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateConsentTemplateInUseResponseImpl <em>Update Consent Template In Use Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateConsentTemplateInUseResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUpdateConsentTemplateInUseResponse()
+	 * @generated
+	 */
+	int UPDATE_CONSENT_TEMPLATE_IN_USE_RESPONSE = 241;
+
+	/**
+	 * The number of structural features of the '<em>Update Consent Template In Use Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_CONSENT_TEMPLATE_IN_USE_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Update Consent Template In Use Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_CONSENT_TEMPLATE_IN_USE_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateConsentTemplateResponseImpl <em>Update Consent Template Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateConsentTemplateResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUpdateConsentTemplateResponse()
+	 * @generated
+	 */
+	int UPDATE_CONSENT_TEMPLATE_RESPONSE = 242;
+
+	/**
+	 * The number of structural features of the '<em>Update Consent Template Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_CONSENT_TEMPLATE_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Update Consent Template Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_CONSENT_TEMPLATE_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateDomainImpl <em>Update Domain</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateDomainImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUpdateDomain()
+	 * @generated
+	 */
+	int UPDATE_DOMAIN = 243;
+
+	/**
+	 * The feature id for the '<em><b>Domain</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_DOMAIN__DOMAIN = 0;
+
+	/**
+	 * The number of structural features of the '<em>Update Domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_DOMAIN_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Update Domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_DOMAIN_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateDomainInUseImpl <em>Update Domain In Use</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateDomainInUseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUpdateDomainInUse()
+	 * @generated
+	 */
+	int UPDATE_DOMAIN_IN_USE = 244;
+
+	/**
+	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_DOMAIN_IN_USE__DOMAIN_NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_DOMAIN_IN_USE__LABEL = 1;
+
+	/**
+	 * The feature id for the '<em><b>Logo</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_DOMAIN_IN_USE__LOGO = 2;
+
+	/**
+	 * The feature id for the '<em><b>Extern Properties</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_DOMAIN_IN_USE__EXTERN_PROPERTIES = 3;
+
+	/**
+	 * The feature id for the '<em><b>Expiration Properties</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_DOMAIN_IN_USE__EXPIRATION_PROPERTIES = 4;
+
+	/**
+	 * The feature id for the '<em><b>Comment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_DOMAIN_IN_USE__COMMENT = 5;
+
+	/**
+	 * The feature id for the '<em><b>Config</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_DOMAIN_IN_USE__CONFIG = 6;
+
+	/**
+	 * The number of structural features of the '<em>Update Domain In Use</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_DOMAIN_IN_USE_FEATURE_COUNT = 7;
+
+	/**
+	 * The number of operations of the '<em>Update Domain In Use</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_DOMAIN_IN_USE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateDomainInUseResponseImpl <em>Update Domain In Use Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateDomainInUseResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUpdateDomainInUseResponse()
+	 * @generated
+	 */
+	int UPDATE_DOMAIN_IN_USE_RESPONSE = 245;
+
+	/**
+	 * The number of structural features of the '<em>Update Domain In Use Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_DOMAIN_IN_USE_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Update Domain In Use Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_DOMAIN_IN_USE_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateDomainResponseImpl <em>Update Domain Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateDomainResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUpdateDomainResponse()
+	 * @generated
+	 */
+	int UPDATE_DOMAIN_RESPONSE = 246;
+
+	/**
+	 * The number of structural features of the '<em>Update Domain Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_DOMAIN_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Update Domain Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_DOMAIN_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateModuleImpl <em>Update Module</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateModuleImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUpdateModule()
+	 * @generated
+	 */
+	int UPDATE_MODULE = 247;
+
+	/**
+	 * The feature id for the '<em><b>Module</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_MODULE__MODULE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Finalise Related Entities</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_MODULE__FINALISE_RELATED_ENTITIES = 1;
+
+	/**
+	 * The number of structural features of the '<em>Update Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_MODULE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Update Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_MODULE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateModuleInUseImpl <em>Update Module In Use</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateModuleInUseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUpdateModuleInUse()
+	 * @generated
+	 */
+	int UPDATE_MODULE_IN_USE = 248;
+
+	/**
+	 * The feature id for the '<em><b>Module Key</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_MODULE_IN_USE__MODULE_KEY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_MODULE_IN_USE__LABEL = 1;
+
+	/**
+	 * The feature id for the '<em><b>Short Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_MODULE_IN_USE__SHORT_TEXT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Extern Properties</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_MODULE_IN_USE__EXTERN_PROPERTIES = 3;
+
+	/**
+	 * The feature id for the '<em><b>Comment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_MODULE_IN_USE__COMMENT = 4;
+
+	/**
+	 * The feature id for the '<em><b>Assigned Policies</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_MODULE_IN_USE__ASSIGNED_POLICIES = 5;
+
+	/**
+	 * The number of structural features of the '<em>Update Module In Use</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_MODULE_IN_USE_FEATURE_COUNT = 6;
+
+	/**
+	 * The number of operations of the '<em>Update Module In Use</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_MODULE_IN_USE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateModuleInUseResponseImpl <em>Update Module In Use Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateModuleInUseResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUpdateModuleInUseResponse()
+	 * @generated
+	 */
+	int UPDATE_MODULE_IN_USE_RESPONSE = 249;
+
+	/**
+	 * The number of structural features of the '<em>Update Module In Use Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_MODULE_IN_USE_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Update Module In Use Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_MODULE_IN_USE_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateModuleResponseImpl <em>Update Module Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateModuleResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUpdateModuleResponse()
+	 * @generated
+	 */
+	int UPDATE_MODULE_RESPONSE = 250;
+
+	/**
+	 * The number of structural features of the '<em>Update Module Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_MODULE_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Update Module Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_MODULE_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.UpdatePolicyImpl <em>Update Policy</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.UpdatePolicyImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUpdatePolicy()
+	 * @generated
+	 */
+	int UPDATE_POLICY = 251;
+
+	/**
+	 * The feature id for the '<em><b>Policy</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_POLICY__POLICY = 0;
+
+	/**
+	 * The number of structural features of the '<em>Update Policy</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_POLICY_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Update Policy</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_POLICY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.UpdatePolicyInUseImpl <em>Update Policy In Use</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.UpdatePolicyInUseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUpdatePolicyInUse()
+	 * @generated
+	 */
+	int UPDATE_POLICY_IN_USE = 252;
+
+	/**
+	 * The feature id for the '<em><b>Policy Key</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_POLICY_IN_USE__POLICY_KEY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_POLICY_IN_USE__LABEL = 1;
+
+	/**
+	 * The feature id for the '<em><b>Extern Properties</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_POLICY_IN_USE__EXTERN_PROPERTIES = 2;
+
+	/**
+	 * The feature id for the '<em><b>Comment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_POLICY_IN_USE__COMMENT = 3;
+
+	/**
+	 * The number of structural features of the '<em>Update Policy In Use</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_POLICY_IN_USE_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Update Policy In Use</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_POLICY_IN_USE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.UpdatePolicyInUseResponseImpl <em>Update Policy In Use Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.UpdatePolicyInUseResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUpdatePolicyInUseResponse()
+	 * @generated
+	 */
+	int UPDATE_POLICY_IN_USE_RESPONSE = 253;
+
+	/**
+	 * The number of structural features of the '<em>Update Policy In Use Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_POLICY_IN_USE_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Update Policy In Use Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_POLICY_IN_USE_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.UpdatePolicyResponseImpl <em>Update Policy Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.UpdatePolicyResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUpdatePolicyResponse()
+	 * @generated
+	 */
+	int UPDATE_POLICY_RESPONSE = 254;
+
+	/**
+	 * The number of structural features of the '<em>Update Policy Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_POLICY_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Update Policy Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_POLICY_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateSignerIdTypeImpl <em>Update Signer Id Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateSignerIdTypeImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUpdateSignerIdType()
+	 * @generated
+	 */
+	int UPDATE_SIGNER_ID_TYPE = 255;
+
+	/**
+	 * The feature id for the '<em><b>Domain Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_SIGNER_ID_TYPE__DOMAIN_NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Signer Id Type Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_SIGNER_ID_TYPE__SIGNER_ID_TYPE_NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_SIGNER_ID_TYPE__LABEL = 2;
+
+	/**
+	 * The feature id for the '<em><b>Comment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_SIGNER_ID_TYPE__COMMENT = 3;
+
+	/**
+	 * The number of structural features of the '<em>Update Signer Id Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_SIGNER_ID_TYPE_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Update Signer Id Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_SIGNER_ID_TYPE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateSignerIdTypeResponseImpl <em>Update Signer Id Type Response</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.UpdateSignerIdTypeResponseImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getUpdateSignerIdTypeResponse()
+	 * @generated
+	 */
+	int UPDATE_SIGNER_ID_TYPE_RESPONSE = 256;
+
+	/**
+	 * The number of structural features of the '<em>Update Signer Id Type Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_SIGNER_ID_TYPE_RESPONSE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Update Signer Id Type Response</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_SIGNER_ID_TYPE_RESPONSE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.ValidateConsentImpl <em>Validate Consent</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11493,7 +13921,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getValidateConsent()
 	 * @generated
 	 */
-	int VALIDATE_CONSENT = 205;
+	int VALIDATE_CONSENT = 257;
 
 	/**
 	 * The feature id for the '<em><b>Consent</b></em>' containment reference.
@@ -11548,7 +13976,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getValidateConsentResponse()
 	 * @generated
 	 */
-	int VALIDATE_CONSENT_RESPONSE = 206;
+	int VALIDATE_CONSENT_RESPONSE = 258;
 
 	/**
 	 * The number of structural features of the '<em>Validate Consent Response</em>' class.
@@ -11576,7 +14004,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getValidFromPropertiesDTO()
 	 * @generated
 	 */
-	int VALID_FROM_PROPERTIES_DTO = 207;
+	int VALID_FROM_PROPERTIES_DTO = 259;
 
 	/**
 	 * The feature id for the '<em><b>Fixed Valid From Date</b></em>' attribute.
@@ -11615,6 +14043,43 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	int VALID_FROM_PROPERTIES_DTO_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.impl.VersionConverterClassExceptionImpl <em>Version Converter Class Exception</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.VersionConverterClassExceptionImpl
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getVersionConverterClassException()
+	 * @generated
+	 */
+	int VERSION_CONVERTER_CLASS_EXCEPTION = 260;
+
+	/**
+	 * The feature id for the '<em><b>Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSION_CONVERTER_CLASS_EXCEPTION__MESSAGE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Version Converter Class Exception</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSION_CONVERTER_CLASS_EXCEPTION_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Version Converter Class Exception</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERSION_CONVERTER_CLASS_EXCEPTION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.ConsentStatus <em>Consent Status</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11622,7 +14087,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getConsentStatus()
 	 * @generated
 	 */
-	int CONSENT_STATUS = 208;
+	int CONSENT_STATUS = 261;
 
 	/**
 	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.ConsentStatusType <em>Consent Status Type</em>}' enum.
@@ -11632,7 +14097,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getConsentStatusType()
 	 * @generated
 	 */
-	int CONSENT_STATUS_TYPE = 209;
+	int CONSENT_STATUS_TYPE = 262;
 
 	/**
 	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.ConsentTemplateType <em>Consent Template Type</em>}' enum.
@@ -11642,7 +14107,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getConsentTemplateType()
 	 * @generated
 	 */
-	int CONSENT_TEMPLATE_TYPE = 210;
+	int CONSENT_TEMPLATE_TYPE = 263;
 
 	/**
 	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.FreeTextType <em>Free Text Type</em>}' enum.
@@ -11652,7 +14117,17 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getFreeTextType()
 	 * @generated
 	 */
-	int FREE_TEXT_TYPE = 211;
+	int FREE_TEXT_TYPE = 264;
+
+	/**
+	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.ItemType <em>Item Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.ItemType
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getItemType()
+	 * @generated
+	 */
+	int ITEM_TYPE = 265;
 
 	/**
 	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.QcProblemStatus <em>Qc Problem Status</em>}' enum.
@@ -11662,7 +14137,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getQcProblemStatus()
 	 * @generated
 	 */
-	int QC_PROBLEM_STATUS = 212;
+	int QC_PROBLEM_STATUS = 266;
 
 	/**
 	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.QcProblemTypeError <em>Qc Problem Type Error</em>}' enum.
@@ -11672,7 +14147,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getQcProblemTypeError()
 	 * @generated
 	 */
-	int QC_PROBLEM_TYPE_ERROR = 213;
+	int QC_PROBLEM_TYPE_ERROR = 267;
 
 	/**
 	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.QcProblemTypeField <em>Qc Problem Type Field</em>}' enum.
@@ -11682,7 +14157,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getQcProblemTypeField()
 	 * @generated
 	 */
-	int QC_PROBLEM_TYPE_FIELD = 214;
+	int QC_PROBLEM_TYPE_FIELD = 268;
 
 	/**
 	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.QcProblemTypeOccurrence <em>Qc Problem Type Occurrence</em>}' enum.
@@ -11692,7 +14167,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getQcProblemTypeOccurrence()
 	 * @generated
 	 */
-	int QC_PROBLEM_TYPE_OCCURRENCE = 215;
+	int QC_PROBLEM_TYPE_OCCURRENCE = 269;
 
 	/**
 	 * The meta object id for the '{@link org.emau.icmvc.ganimed.ttp.cm2.QcTypeStatus <em>Qc Type Status</em>}' enum.
@@ -11702,7 +14177,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getQcTypeStatus()
 	 * @generated
 	 */
-	int QC_TYPE_STATUS = 216;
+	int QC_TYPE_STATUS = 270;
 
 	/**
 	 * The meta object id for the '<em>Consent Status Object</em>' data type.
@@ -11712,7 +14187,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getConsentStatusObject()
 	 * @generated
 	 */
-	int CONSENT_STATUS_OBJECT = 217;
+	int CONSENT_STATUS_OBJECT = 271;
 
 	/**
 	 * The meta object id for the '<em>Consent Status Type Object</em>' data type.
@@ -11722,7 +14197,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getConsentStatusTypeObject()
 	 * @generated
 	 */
-	int CONSENT_STATUS_TYPE_OBJECT = 218;
+	int CONSENT_STATUS_TYPE_OBJECT = 272;
 
 	/**
 	 * The meta object id for the '<em>Consent Template Type Object</em>' data type.
@@ -11732,7 +14207,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getConsentTemplateTypeObject()
 	 * @generated
 	 */
-	int CONSENT_TEMPLATE_TYPE_OBJECT = 219;
+	int CONSENT_TEMPLATE_TYPE_OBJECT = 273;
 
 	/**
 	 * The meta object id for the '<em>Free Text Type Object</em>' data type.
@@ -11742,7 +14217,17 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getFreeTextTypeObject()
 	 * @generated
 	 */
-	int FREE_TEXT_TYPE_OBJECT = 220;
+	int FREE_TEXT_TYPE_OBJECT = 274;
+
+	/**
+	 * The meta object id for the '<em>Item Type Object</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.ItemType
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getItemTypeObject()
+	 * @generated
+	 */
+	int ITEM_TYPE_OBJECT = 275;
 
 	/**
 	 * The meta object id for the '<em>Qc Problem Status Object</em>' data type.
@@ -11752,7 +14237,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getQcProblemStatusObject()
 	 * @generated
 	 */
-	int QC_PROBLEM_STATUS_OBJECT = 221;
+	int QC_PROBLEM_STATUS_OBJECT = 276;
 
 	/**
 	 * The meta object id for the '<em>Qc Problem Type Error Object</em>' data type.
@@ -11762,7 +14247,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getQcProblemTypeErrorObject()
 	 * @generated
 	 */
-	int QC_PROBLEM_TYPE_ERROR_OBJECT = 222;
+	int QC_PROBLEM_TYPE_ERROR_OBJECT = 277;
 
 	/**
 	 * The meta object id for the '<em>Qc Problem Type Field Object</em>' data type.
@@ -11772,7 +14257,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getQcProblemTypeFieldObject()
 	 * @generated
 	 */
-	int QC_PROBLEM_TYPE_FIELD_OBJECT = 223;
+	int QC_PROBLEM_TYPE_FIELD_OBJECT = 278;
 
 	/**
 	 * The meta object id for the '<em>Qc Problem Type Occurrence Object</em>' data type.
@@ -11782,7 +14267,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getQcProblemTypeOccurrenceObject()
 	 * @generated
 	 */
-	int QC_PROBLEM_TYPE_OCCURRENCE_OBJECT = 224;
+	int QC_PROBLEM_TYPE_OCCURRENCE_OBJECT = 279;
 
 	/**
 	 * The meta object id for the '<em>Qc Type Status Object</em>' data type.
@@ -11792,7 +14277,7 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @see org.emau.icmvc.ganimed.ttp.cm2.impl.Cm2PackageImpl#getQcTypeStatusObject()
 	 * @generated
 	 */
-	int QC_TYPE_STATUS_OBJECT = 225;
+	int QC_TYPE_STATUS_OBJECT = 280;
 
 
 	/**
@@ -11943,6 +14428,152 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	EClass getAddConsentResponse();
 
 	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplate <em>Add Consent Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Add Consent Template</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplate
+	 * @generated
+	 */
+	EClass getAddConsentTemplate();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplate#getConsentTemplate <em>Consent Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Consent Template</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplate#getConsentTemplate()
+	 * @see #getAddConsentTemplate()
+	 * @generated
+	 */
+	EReference getAddConsentTemplate_ConsentTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplate#isFinaliseRelatedEntities <em>Finalise Related Entities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Finalise Related Entities</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplate#isFinaliseRelatedEntities()
+	 * @see #getAddConsentTemplate()
+	 * @generated
+	 */
+	EAttribute getAddConsentTemplate_FinaliseRelatedEntities();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplateResponse <em>Add Consent Template Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Add Consent Template Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplateResponse
+	 * @generated
+	 */
+	EClass getAddConsentTemplateResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddDomain <em>Add Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Add Domain</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddDomain
+	 * @generated
+	 */
+	EClass getAddDomain();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.AddDomain#getDomain <em>Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Domain</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddDomain#getDomain()
+	 * @see #getAddDomain()
+	 * @generated
+	 */
+	EReference getAddDomain_Domain();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddDomainResponse <em>Add Domain Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Add Domain Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddDomainResponse
+	 * @generated
+	 */
+	EClass getAddDomainResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddModule <em>Add Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Add Module</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddModule
+	 * @generated
+	 */
+	EClass getAddModule();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.AddModule#getModule <em>Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Module</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddModule#getModule()
+	 * @see #getAddModule()
+	 * @generated
+	 */
+	EReference getAddModule_Module();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.AddModule#isFinaliseRelatedEntities <em>Finalise Related Entities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Finalise Related Entities</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddModule#isFinaliseRelatedEntities()
+	 * @see #getAddModule()
+	 * @generated
+	 */
+	EAttribute getAddModule_FinaliseRelatedEntities();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddModuleResponse <em>Add Module Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Add Module Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddModuleResponse
+	 * @generated
+	 */
+	EClass getAddModuleResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddPolicy <em>Add Policy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Add Policy</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddPolicy
+	 * @generated
+	 */
+	EClass getAddPolicy();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.AddPolicy#getPolicy <em>Policy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Policy</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddPolicy#getPolicy()
+	 * @see #getAddPolicy()
+	 * @generated
+	 */
+	EReference getAddPolicy_Policy();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddPolicyResponse <em>Add Policy Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Add Policy Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddPolicyResponse
+	 * @generated
+	 */
+	EClass getAddPolicyResponse();
+
+	/**
 	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddScanToConsent <em>Add Scan To Consent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12005,6 +14636,48 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EClass getAddScanToConsentResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdType <em>Add Signer Id Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Add Signer Id Type</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdType
+	 * @generated
+	 */
+	EClass getAddSignerIdType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdType#getDomainName <em>Domain Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Domain Name</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdType#getDomainName()
+	 * @see #getAddSignerIdType()
+	 * @generated
+	 */
+	EAttribute getAddSignerIdType_DomainName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdType#getSignerIdTypeName <em>Signer Id Type Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Signer Id Type Name</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdType#getSignerIdTypeName()
+	 * @see #getAddSignerIdType()
+	 * @generated
+	 */
+	EAttribute getAddSignerIdType_SignerIdTypeName();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdTypeResponse <em>Add Signer Id Type Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Add Signer Id Type Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdTypeResponse
+	 * @generated
+	 */
+	EClass getAddSignerIdTypeResponse();
 
 	/**
 	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdToConsent <em>Add Signer Id To Consent</em>}'.
@@ -13238,6 +15911,172 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EClass getDeactivateAliasResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.DeleteConsentTemplate <em>Delete Consent Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Delete Consent Template</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeleteConsentTemplate
+	 * @generated
+	 */
+	EClass getDeleteConsentTemplate();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DeleteConsentTemplate#getConsentTemplateKey <em>Consent Template Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Consent Template Key</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeleteConsentTemplate#getConsentTemplateKey()
+	 * @see #getDeleteConsentTemplate()
+	 * @generated
+	 */
+	EReference getDeleteConsentTemplate_ConsentTemplateKey();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.DeleteConsentTemplateResponse <em>Delete Consent Template Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Delete Consent Template Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeleteConsentTemplateResponse
+	 * @generated
+	 */
+	EClass getDeleteConsentTemplateResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.DeleteDomain <em>Delete Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Delete Domain</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeleteDomain
+	 * @generated
+	 */
+	EClass getDeleteDomain();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.DeleteDomain#getDomainName <em>Domain Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Domain Name</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeleteDomain#getDomainName()
+	 * @see #getDeleteDomain()
+	 * @generated
+	 */
+	EAttribute getDeleteDomain_DomainName();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.DeleteDomainResponse <em>Delete Domain Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Delete Domain Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeleteDomainResponse
+	 * @generated
+	 */
+	EClass getDeleteDomainResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.DeleteModule <em>Delete Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Delete Module</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeleteModule
+	 * @generated
+	 */
+	EClass getDeleteModule();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DeleteModule#getModuleKey <em>Module Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Module Key</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeleteModule#getModuleKey()
+	 * @see #getDeleteModule()
+	 * @generated
+	 */
+	EReference getDeleteModule_ModuleKey();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.DeleteModuleResponse <em>Delete Module Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Delete Module Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeleteModuleResponse
+	 * @generated
+	 */
+	EClass getDeleteModuleResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.DeletePolicy <em>Delete Policy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Delete Policy</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeletePolicy
+	 * @generated
+	 */
+	EClass getDeletePolicy();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DeletePolicy#getPolicyKey <em>Policy Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Policy Key</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeletePolicy#getPolicyKey()
+	 * @see #getDeletePolicy()
+	 * @generated
+	 */
+	EReference getDeletePolicy_PolicyKey();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.DeletePolicyResponse <em>Delete Policy Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Delete Policy Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeletePolicyResponse
+	 * @generated
+	 */
+	EClass getDeletePolicyResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdType <em>Delete Signer Id Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Delete Signer Id Type</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdType
+	 * @generated
+	 */
+	EClass getDeleteSignerIdType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdType#getDomainName <em>Domain Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Domain Name</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdType#getDomainName()
+	 * @see #getDeleteSignerIdType()
+	 * @generated
+	 */
+	EAttribute getDeleteSignerIdType_DomainName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdType#getSignerIdTypeName <em>Signer Id Type Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Signer Id Type Name</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdType#getSignerIdTypeName()
+	 * @see #getDeleteSignerIdType()
+	 * @generated
+	 */
+	EAttribute getDeleteSignerIdType_SignerIdTypeName();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdTypeResponse <em>Delete Signer Id Type Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Delete Signer Id Type Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdTypeResponse
+	 * @generated
+	 */
+	EClass getDeleteSignerIdTypeResponse();
 
 	/**
 	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot <em>Document Root</em>}'.
@@ -14801,6 +17640,589 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	EReference getDocumentRoot_ValidateConsentResponse();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddConsentTemplate <em>Add Consent Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Add Consent Template</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddConsentTemplate()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_AddConsentTemplate();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddConsentTemplateResponse <em>Add Consent Template Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Add Consent Template Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddConsentTemplateResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_AddConsentTemplateResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddModule <em>Add Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Add Module</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddModule()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_AddModule();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddModuleResponse <em>Add Module Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Add Module Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddModuleResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_AddModuleResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddDomain <em>Add Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Add Domain</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddDomain()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_AddDomain();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddDomainResponse <em>Add Domain Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Add Domain Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddDomainResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_AddDomainResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddPolicy <em>Add Policy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Add Policy</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddPolicy()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_AddPolicy();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddPolicyResponse <em>Add Policy Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Add Policy Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddPolicyResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_AddPolicyResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddSignerIdType <em>Add Signer Id Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Add Signer Id Type</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddSignerIdType()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_AddSignerIdType();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddSignerIdTypeResponse <em>Add Signer Id Type Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Add Signer Id Type Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddSignerIdTypeResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_AddSignerIdTypeResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteConsentTemplate <em>Delete Consent Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Delete Consent Template</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteConsentTemplate()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_DeleteConsentTemplate();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteConsentTemplateResponse <em>Delete Consent Template Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Delete Consent Template Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteConsentTemplateResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_DeleteConsentTemplateResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteDomain <em>Delete Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Delete Domain</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteDomain()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_DeleteDomain();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteDomainResponse <em>Delete Domain Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Delete Domain Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteDomainResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_DeleteDomainResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteModule <em>Delete Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Delete Module</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteModule()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_DeleteModule();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteModuleResponse <em>Delete Module Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Delete Module Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteModuleResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_DeleteModuleResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeletePolicy <em>Delete Policy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Delete Policy</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeletePolicy()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_DeletePolicy();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeletePolicyResponse <em>Delete Policy Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Delete Policy Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeletePolicyResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_DeletePolicyResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteSignerIdType <em>Delete Signer Id Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Delete Signer Id Type</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteSignerIdType()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_DeleteSignerIdType();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteSignerIdTypeResponse <em>Delete Signer Id Type Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Delete Signer Id Type Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteSignerIdTypeResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_DeleteSignerIdTypeResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateConsentTemplate <em>Update Consent Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Update Consent Template</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateConsentTemplate()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_UpdateConsentTemplate();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateConsentTemplateResponse <em>Update Consent Template Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Update Consent Template Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateConsentTemplateResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_UpdateConsentTemplateResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateConsentTemplateInUse <em>Update Consent Template In Use</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Update Consent Template In Use</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateConsentTemplateInUse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_UpdateConsentTemplateInUse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateConsentTemplateInUseResponse <em>Update Consent Template In Use Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Update Consent Template In Use Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateConsentTemplateInUseResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_UpdateConsentTemplateInUseResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateDomain <em>Update Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Update Domain</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateDomain()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_UpdateDomain();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateDomainResponse <em>Update Domain Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Update Domain Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateDomainResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_UpdateDomainResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateDomainInUse <em>Update Domain In Use</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Update Domain In Use</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateDomainInUse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_UpdateDomainInUse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateDomainInUseResponse <em>Update Domain In Use Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Update Domain In Use Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateDomainInUseResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_UpdateDomainInUseResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateModule <em>Update Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Update Module</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateModule()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_UpdateModule();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateModuleResponse <em>Update Module Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Update Module Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateModuleResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_UpdateModuleResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateModuleInUse <em>Update Module In Use</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Update Module In Use</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateModuleInUse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_UpdateModuleInUse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateModuleInUseResponse <em>Update Module In Use Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Update Module In Use Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateModuleInUseResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_UpdateModuleInUseResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdatePolicy <em>Update Policy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Update Policy</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdatePolicy()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_UpdatePolicy();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdatePolicyResponse <em>Update Policy Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Update Policy Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdatePolicyResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_UpdatePolicyResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdatePolicyInUse <em>Update Policy In Use</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Update Policy In Use</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdatePolicyInUse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_UpdatePolicyInUse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdatePolicyInUseResponse <em>Update Policy In Use Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Update Policy In Use Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdatePolicyInUseResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_UpdatePolicyInUseResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseAllForDomain <em>Finalise All For Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Finalise All For Domain</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseAllForDomain()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_FinaliseAllForDomain();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseAllForDomainResponse <em>Finalise All For Domain Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Finalise All For Domain Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseAllForDomainResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_FinaliseAllForDomainResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseDomain <em>Finalise Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Finalise Domain</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseDomain()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_FinaliseDomain();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseDomainResponse <em>Finalise Domain Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Finalise Domain Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseDomainResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_FinaliseDomainResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseModule <em>Finalise Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Finalise Module</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseModule()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_FinaliseModule();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseModuleResponse <em>Finalise Module Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Finalise Module Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseModuleResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_FinaliseModuleResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinalisePolicy <em>Finalise Policy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Finalise Policy</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinalisePolicy()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_FinalisePolicy();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinalisePolicyResponse <em>Finalise Policy Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Finalise Policy Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinalisePolicyResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_FinalisePolicyResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseTemplate <em>Finalise Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Finalise Template</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseTemplate()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_FinaliseTemplate();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseTemplateResponse <em>Finalise Template Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Finalise Template Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseTemplateResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_FinaliseTemplateResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFreeTextConverterStringException <em>Free Text Converter String Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Free Text Converter String Exception</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFreeTextConverterStringException()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_FreeTextConverterStringException();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getIllegalCompositionException <em>Illegal Composition Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Illegal Composition Exception</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getIllegalCompositionException()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_IllegalCompositionException();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getInvalidPropertiesException <em>Invalid Properties Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Invalid Properties Exception</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getInvalidPropertiesException()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_InvalidPropertiesException();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getObjectInUseException <em>Object In Use Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Object In Use Exception</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getObjectInUseException()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_ObjectInUseException();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateSignerIdType <em>Update Signer Id Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Update Signer Id Type</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateSignerIdType()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_UpdateSignerIdType();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateSignerIdTypeResponse <em>Update Signer Id Type Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Update Signer Id Type Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateSignerIdTypeResponse()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_UpdateSignerIdTypeResponse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getVersionConverterClassException <em>Version Converter Class Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Version Converter Class Exception</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getVersionConverterClassException()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EReference getDocumentRoot_VersionConverterClassException();
+
+	/**
 	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.DomainDTO <em>Domain DTO</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -15197,6 +18619,204 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getFhirIdDTO_FhirID();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseAllForDomain <em>Finalise All For Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Finalise All For Domain</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseAllForDomain
+	 * @generated
+	 */
+	EClass getFinaliseAllForDomain();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseAllForDomain#getDomainName <em>Domain Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Domain Name</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseAllForDomain#getDomainName()
+	 * @see #getFinaliseAllForDomain()
+	 * @generated
+	 */
+	EAttribute getFinaliseAllForDomain_DomainName();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseAllForDomainResponse <em>Finalise All For Domain Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Finalise All For Domain Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseAllForDomainResponse
+	 * @generated
+	 */
+	EClass getFinaliseAllForDomainResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseDomain <em>Finalise Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Finalise Domain</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseDomain
+	 * @generated
+	 */
+	EClass getFinaliseDomain();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseDomain#getDomainName <em>Domain Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Domain Name</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseDomain#getDomainName()
+	 * @see #getFinaliseDomain()
+	 * @generated
+	 */
+	EAttribute getFinaliseDomain_DomainName();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseDomainResponse <em>Finalise Domain Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Finalise Domain Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseDomainResponse
+	 * @generated
+	 */
+	EClass getFinaliseDomainResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseModule <em>Finalise Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Finalise Module</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseModule
+	 * @generated
+	 */
+	EClass getFinaliseModule();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseModule#getModuleKey <em>Module Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Module Key</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseModule#getModuleKey()
+	 * @see #getFinaliseModule()
+	 * @generated
+	 */
+	EReference getFinaliseModule_ModuleKey();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseModule#isFinaliseRelatedEntities <em>Finalise Related Entities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Finalise Related Entities</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseModule#isFinaliseRelatedEntities()
+	 * @see #getFinaliseModule()
+	 * @generated
+	 */
+	EAttribute getFinaliseModule_FinaliseRelatedEntities();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseModuleResponse <em>Finalise Module Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Finalise Module Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseModuleResponse
+	 * @generated
+	 */
+	EClass getFinaliseModuleResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.FinalisePolicy <em>Finalise Policy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Finalise Policy</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinalisePolicy
+	 * @generated
+	 */
+	EClass getFinalisePolicy();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.FinalisePolicy#getPolicyKey <em>Policy Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Policy Key</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinalisePolicy#getPolicyKey()
+	 * @see #getFinalisePolicy()
+	 * @generated
+	 */
+	EReference getFinalisePolicy_PolicyKey();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.FinalisePolicyResponse <em>Finalise Policy Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Finalise Policy Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinalisePolicyResponse
+	 * @generated
+	 */
+	EClass getFinalisePolicyResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplate <em>Finalise Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Finalise Template</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplate
+	 * @generated
+	 */
+	EClass getFinaliseTemplate();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplate#getConsentTemplateKey <em>Consent Template Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Consent Template Key</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplate#getConsentTemplateKey()
+	 * @see #getFinaliseTemplate()
+	 * @generated
+	 */
+	EReference getFinaliseTemplate_ConsentTemplateKey();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplate#isFinaliseRelatedEntities <em>Finalise Related Entities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Finalise Related Entities</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplate#isFinaliseRelatedEntities()
+	 * @see #getFinaliseTemplate()
+	 * @generated
+	 */
+	EAttribute getFinaliseTemplate_FinaliseRelatedEntities();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplateResponse <em>Finalise Template Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Finalise Template Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplateResponse
+	 * @generated
+	 */
+	EClass getFinaliseTemplateResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.FreeTextConverterStringException <em>Free Text Converter String Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Free Text Converter String Exception</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FreeTextConverterStringException
+	 * @generated
+	 */
+	EClass getFreeTextConverterStringException();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.FreeTextConverterStringException#getMessage <em>Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Message</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FreeTextConverterStringException#getMessage()
+	 * @see #getFreeTextConverterStringException()
+	 * @generated
+	 */
+	EAttribute getFreeTextConverterStringException_Message();
 
 	/**
 	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.FreeTextDefDTO <em>Free Text Def DTO</em>}'.
@@ -17413,6 +21033,49 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getInternalException_Message();
 
 	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.IllegalCompositionException <em>Illegal Composition Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Illegal Composition Exception</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.IllegalCompositionException
+	 * @generated
+	 */
+	EClass getIllegalCompositionException();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.IllegalCompositionException#getIllegalItemType <em>Illegal Item Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Illegal Item Type</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.IllegalCompositionException#getIllegalItemType()
+	 * @see #getIllegalCompositionException()
+	 * @generated
+	 */
+	EAttribute getIllegalCompositionException_IllegalItemType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.IllegalCompositionException#getIllegalItem <em>Illegal Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Illegal Item</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.IllegalCompositionException#getIllegalItem()
+	 * @see #getIllegalCompositionException()
+	 * @generated
+	 */
+	EAttribute getIllegalCompositionException_IllegalItem();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.IllegalCompositionException#getMessage <em>Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Message</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.IllegalCompositionException#getMessage()
+	 * @see #getIllegalCompositionException()
+	 * @generated
+	 */
+	EAttribute getIllegalCompositionException_Message();
+
+	/**
 	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.InvalidFreeTextException <em>Invalid Free Text Exception</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17464,6 +21127,27 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getInvalidParameterException_Message();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.InvalidPropertiesException <em>Invalid Properties Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Invalid Properties Exception</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.InvalidPropertiesException
+	 * @generated
+	 */
+	EClass getInvalidPropertiesException();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.InvalidPropertiesException#getMessage <em>Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Message</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.InvalidPropertiesException#getMessage()
+	 * @see #getInvalidPropertiesException()
+	 * @generated
+	 */
+	EAttribute getInvalidPropertiesException_Message();
 
 	/**
 	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.InvalidVersionException <em>Invalid Version Exception</em>}'.
@@ -18565,6 +22249,27 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EReference getModuleStatesType_Entry();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.ObjectInUseException <em>Object In Use Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Object In Use Exception</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.ObjectInUseException
+	 * @generated
+	 */
+	EClass getObjectInUseException();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.ObjectInUseException#getMessage <em>Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Message</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.ObjectInUseException#getMessage()
+	 * @see #getObjectInUseException()
+	 * @generated
+	 */
+	EAttribute getObjectInUseException_Message();
 
 	/**
 	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.PolicyDTO <em>Policy DTO</em>}'.
@@ -20215,6 +23920,494 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	EClass getUpdateConsentInUseResponse();
 
 	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplate <em>Update Consent Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Update Consent Template</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplate
+	 * @generated
+	 */
+	EClass getUpdateConsentTemplate();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplate#getConsentTemplate <em>Consent Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Consent Template</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplate#getConsentTemplate()
+	 * @see #getUpdateConsentTemplate()
+	 * @generated
+	 */
+	EReference getUpdateConsentTemplate_ConsentTemplate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplate#isFinaliseRelatedEntities <em>Finalise Related Entities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Finalise Related Entities</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplate#isFinaliseRelatedEntities()
+	 * @see #getUpdateConsentTemplate()
+	 * @generated
+	 */
+	EAttribute getUpdateConsentTemplate_FinaliseRelatedEntities();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateInUse <em>Update Consent Template In Use</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Update Consent Template In Use</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateInUse
+	 * @generated
+	 */
+	EClass getUpdateConsentTemplateInUse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateInUse#getConsentTemplate <em>Consent Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Consent Template</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateInUse#getConsentTemplate()
+	 * @see #getUpdateConsentTemplateInUse()
+	 * @generated
+	 */
+	EReference getUpdateConsentTemplateInUse_ConsentTemplate();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateInUseResponse <em>Update Consent Template In Use Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Update Consent Template In Use Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateInUseResponse
+	 * @generated
+	 */
+	EClass getUpdateConsentTemplateInUseResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateResponse <em>Update Consent Template Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Update Consent Template Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateResponse
+	 * @generated
+	 */
+	EClass getUpdateConsentTemplateResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateDomain <em>Update Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Update Domain</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateDomain
+	 * @generated
+	 */
+	EClass getUpdateDomain();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateDomain#getDomain <em>Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Domain</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateDomain#getDomain()
+	 * @see #getUpdateDomain()
+	 * @generated
+	 */
+	EReference getUpdateDomain_Domain();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse <em>Update Domain In Use</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Update Domain In Use</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse
+	 * @generated
+	 */
+	EClass getUpdateDomainInUse();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse#getDomainName <em>Domain Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Domain Name</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse#getDomainName()
+	 * @see #getUpdateDomainInUse()
+	 * @generated
+	 */
+	EAttribute getUpdateDomainInUse_DomainName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse#getLabel <em>Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Label</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse#getLabel()
+	 * @see #getUpdateDomainInUse()
+	 * @generated
+	 */
+	EAttribute getUpdateDomainInUse_Label();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse#getLogo <em>Logo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Logo</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse#getLogo()
+	 * @see #getUpdateDomainInUse()
+	 * @generated
+	 */
+	EAttribute getUpdateDomainInUse_Logo();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse#getExternProperties <em>Extern Properties</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Extern Properties</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse#getExternProperties()
+	 * @see #getUpdateDomainInUse()
+	 * @generated
+	 */
+	EAttribute getUpdateDomainInUse_ExternProperties();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse#getExpirationProperties <em>Expiration Properties</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Expiration Properties</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse#getExpirationProperties()
+	 * @see #getUpdateDomainInUse()
+	 * @generated
+	 */
+	EReference getUpdateDomainInUse_ExpirationProperties();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse#getComment <em>Comment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Comment</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse#getComment()
+	 * @see #getUpdateDomainInUse()
+	 * @generated
+	 */
+	EAttribute getUpdateDomainInUse_Comment();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse#getConfig <em>Config</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Config</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse#getConfig()
+	 * @see #getUpdateDomainInUse()
+	 * @generated
+	 */
+	EReference getUpdateDomainInUse_Config();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUseResponse <em>Update Domain In Use Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Update Domain In Use Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUseResponse
+	 * @generated
+	 */
+	EClass getUpdateDomainInUseResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainResponse <em>Update Domain Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Update Domain Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainResponse
+	 * @generated
+	 */
+	EClass getUpdateDomainResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateModule <em>Update Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Update Module</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateModule
+	 * @generated
+	 */
+	EClass getUpdateModule();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateModule#getModule <em>Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Module</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateModule#getModule()
+	 * @see #getUpdateModule()
+	 * @generated
+	 */
+	EReference getUpdateModule_Module();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateModule#isFinaliseRelatedEntities <em>Finalise Related Entities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Finalise Related Entities</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateModule#isFinaliseRelatedEntities()
+	 * @see #getUpdateModule()
+	 * @generated
+	 */
+	EAttribute getUpdateModule_FinaliseRelatedEntities();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUse <em>Update Module In Use</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Update Module In Use</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUse
+	 * @generated
+	 */
+	EClass getUpdateModuleInUse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUse#getModuleKey <em>Module Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Module Key</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUse#getModuleKey()
+	 * @see #getUpdateModuleInUse()
+	 * @generated
+	 */
+	EReference getUpdateModuleInUse_ModuleKey();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUse#getLabel <em>Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Label</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUse#getLabel()
+	 * @see #getUpdateModuleInUse()
+	 * @generated
+	 */
+	EAttribute getUpdateModuleInUse_Label();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUse#getShortText <em>Short Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Short Text</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUse#getShortText()
+	 * @see #getUpdateModuleInUse()
+	 * @generated
+	 */
+	EAttribute getUpdateModuleInUse_ShortText();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUse#getExternProperties <em>Extern Properties</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Extern Properties</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUse#getExternProperties()
+	 * @see #getUpdateModuleInUse()
+	 * @generated
+	 */
+	EAttribute getUpdateModuleInUse_ExternProperties();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUse#getComment <em>Comment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Comment</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUse#getComment()
+	 * @see #getUpdateModuleInUse()
+	 * @generated
+	 */
+	EAttribute getUpdateModuleInUse_Comment();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUse#getAssignedPolicies <em>Assigned Policies</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Assigned Policies</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUse#getAssignedPolicies()
+	 * @see #getUpdateModuleInUse()
+	 * @generated
+	 */
+	EReference getUpdateModuleInUse_AssignedPolicies();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUseResponse <em>Update Module In Use Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Update Module In Use Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUseResponse
+	 * @generated
+	 */
+	EClass getUpdateModuleInUseResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleResponse <em>Update Module Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Update Module Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleResponse
+	 * @generated
+	 */
+	EClass getUpdateModuleResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicy <em>Update Policy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Update Policy</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicy
+	 * @generated
+	 */
+	EClass getUpdatePolicy();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicy#getPolicy <em>Policy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Policy</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicy#getPolicy()
+	 * @see #getUpdatePolicy()
+	 * @generated
+	 */
+	EReference getUpdatePolicy_Policy();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUse <em>Update Policy In Use</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Update Policy In Use</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUse
+	 * @generated
+	 */
+	EClass getUpdatePolicyInUse();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUse#getPolicyKey <em>Policy Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Policy Key</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUse#getPolicyKey()
+	 * @see #getUpdatePolicyInUse()
+	 * @generated
+	 */
+	EReference getUpdatePolicyInUse_PolicyKey();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUse#getLabel <em>Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Label</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUse#getLabel()
+	 * @see #getUpdatePolicyInUse()
+	 * @generated
+	 */
+	EAttribute getUpdatePolicyInUse_Label();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUse#getExternProperties <em>Extern Properties</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Extern Properties</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUse#getExternProperties()
+	 * @see #getUpdatePolicyInUse()
+	 * @generated
+	 */
+	EAttribute getUpdatePolicyInUse_ExternProperties();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUse#getComment <em>Comment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Comment</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUse#getComment()
+	 * @see #getUpdatePolicyInUse()
+	 * @generated
+	 */
+	EAttribute getUpdatePolicyInUse_Comment();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUseResponse <em>Update Policy In Use Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Update Policy In Use Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUseResponse
+	 * @generated
+	 */
+	EClass getUpdatePolicyInUseResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyResponse <em>Update Policy Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Update Policy Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyResponse
+	 * @generated
+	 */
+	EClass getUpdatePolicyResponse();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdType <em>Update Signer Id Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Update Signer Id Type</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdType
+	 * @generated
+	 */
+	EClass getUpdateSignerIdType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdType#getDomainName <em>Domain Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Domain Name</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdType#getDomainName()
+	 * @see #getUpdateSignerIdType()
+	 * @generated
+	 */
+	EAttribute getUpdateSignerIdType_DomainName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdType#getSignerIdTypeName <em>Signer Id Type Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Signer Id Type Name</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdType#getSignerIdTypeName()
+	 * @see #getUpdateSignerIdType()
+	 * @generated
+	 */
+	EAttribute getUpdateSignerIdType_SignerIdTypeName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdType#getLabel <em>Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Label</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdType#getLabel()
+	 * @see #getUpdateSignerIdType()
+	 * @generated
+	 */
+	EAttribute getUpdateSignerIdType_Label();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdType#getComment <em>Comment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Comment</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdType#getComment()
+	 * @see #getUpdateSignerIdType()
+	 * @generated
+	 */
+	EAttribute getUpdateSignerIdType_Comment();
+
+	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdTypeResponse <em>Update Signer Id Type Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Update Signer Id Type Response</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdTypeResponse
+	 * @generated
+	 */
+	EClass getUpdateSignerIdTypeResponse();
+
+	/**
 	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.ValidateConsent <em>Validate Consent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20300,6 +24493,27 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getValidFromPropertiesDTO_InvalidPeriod();
 
 	/**
+	 * Returns the meta object for class '{@link org.emau.icmvc.ganimed.ttp.cm2.VersionConverterClassException <em>Version Converter Class Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Version Converter Class Exception</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.VersionConverterClassException
+	 * @generated
+	 */
+	EClass getVersionConverterClassException();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.emau.icmvc.ganimed.ttp.cm2.VersionConverterClassException#getMessage <em>Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Message</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.VersionConverterClassException#getMessage()
+	 * @see #getVersionConverterClassException()
+	 * @generated
+	 */
+	EAttribute getVersionConverterClassException_Message();
+
+	/**
 	 * Returns the meta object for enum '{@link org.emau.icmvc.ganimed.ttp.cm2.ConsentStatus <em>Consent Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20338,6 +24552,16 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EEnum getFreeTextType();
+
+	/**
+	 * Returns the meta object for enum '{@link org.emau.icmvc.ganimed.ttp.cm2.ItemType <em>Item Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Item Type</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.ItemType
+	 * @generated
+	 */
+	EEnum getItemType();
 
 	/**
 	 * Returns the meta object for enum '{@link org.emau.icmvc.ganimed.ttp.cm2.QcProblemStatus <em>Qc Problem Status</em>}'.
@@ -20436,6 +24660,18 @@ public interface Cm2Package extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EDataType getFreeTextTypeObject();
+
+	/**
+	 * Returns the meta object for data type '{@link org.emau.icmvc.ganimed.ttp.cm2.ItemType <em>Item Type Object</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Item Type Object</em>'.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.ItemType
+	 * @model instanceClass="org.emau.icmvc.ganimed.ttp.cm2.ItemType"
+	 *        extendedMetaData="name='itemType:Object' baseType='itemType'"
+	 * @generated
+	 */
+	EDataType getItemTypeObject();
 
 	/**
 	 * Returns the meta object for data type '{@link org.emau.icmvc.ganimed.ttp.cm2.QcProblemStatus <em>Qc Problem Status Object</em>}'.

@@ -28,12 +28,22 @@ import org.emau.icmvc.ganimed.ttp.cm2.AddConsent;
 import org.emau.icmvc.ganimed.ttp.cm2.AddConsentOptOut;
 import org.emau.icmvc.ganimed.ttp.cm2.AddConsentOptOutResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AddConsentResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplate;
+import org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplateResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.AddDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddModule;
+import org.emau.icmvc.ganimed.ttp.cm2.AddModuleResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddPolicy;
+import org.emau.icmvc.ganimed.ttp.cm2.AddPolicyResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AddScanToConsent;
 import org.emau.icmvc.ganimed.ttp.cm2.AddScanToConsentResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdToConsent;
 import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdToConsentResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdToSignerId;
 import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdToSignerIdResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdType;
+import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdTypeResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AssignedModuleDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.AssignedPolicyDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.ChildrenType;
@@ -56,6 +66,16 @@ import org.emau.icmvc.ganimed.ttp.cm2.CountSignedPolicies;
 import org.emau.icmvc.ganimed.ttp.cm2.CountSignedPoliciesResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.DeactivateAlias;
 import org.emau.icmvc.ganimed.ttp.cm2.DeactivateAliasResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteConsentTemplate;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteConsentTemplateResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteModule;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteModuleResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeletePolicy;
+import org.emau.icmvc.ganimed.ttp.cm2.DeletePolicyResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdType;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdTypeResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot;
 import org.emau.icmvc.ganimed.ttp.cm2.DomainDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.DuplicateEntryException;
@@ -65,6 +85,17 @@ import org.emau.icmvc.ganimed.ttp.cm2.EntryType2;
 import org.emau.icmvc.ganimed.ttp.cm2.EntryType3;
 import org.emau.icmvc.ganimed.ttp.cm2.EntryType4;
 import org.emau.icmvc.ganimed.ttp.cm2.ExpirationPropertiesDTO;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseAllForDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseAllForDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseModule;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseModuleResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FinalisePolicy;
+import org.emau.icmvc.ganimed.ttp.cm2.FinalisePolicyResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplate;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplateResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FreeTextConverterStringException;
 import org.emau.icmvc.ganimed.ttp.cm2.FreeTextDefDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.FreeTextType;
 import org.emau.icmvc.ganimed.ttp.cm2.FreeTextValDTO;
@@ -137,10 +168,12 @@ import org.emau.icmvc.ganimed.ttp.cm2.GetSignerIdsForAliasResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.GetTemplatesWithPolicies;
 import org.emau.icmvc.ganimed.ttp.cm2.GetTemplatesWithPoliciesResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.HashMap;
+import org.emau.icmvc.ganimed.ttp.cm2.IllegalCompositionException;
 import org.emau.icmvc.ganimed.ttp.cm2.InconsistentStatusException;
 import org.emau.icmvc.ganimed.ttp.cm2.InternalException;
 import org.emau.icmvc.ganimed.ttp.cm2.InvalidFreeTextException;
 import org.emau.icmvc.ganimed.ttp.cm2.InvalidParameterException;
+import org.emau.icmvc.ganimed.ttp.cm2.InvalidPropertiesException;
 import org.emau.icmvc.ganimed.ttp.cm2.InvalidVersionException;
 import org.emau.icmvc.ganimed.ttp.cm2.IsConsented;
 import org.emau.icmvc.ganimed.ttp.cm2.IsConsentedFromExcludingToExcluding;
@@ -152,6 +185,7 @@ import org.emau.icmvc.ganimed.ttp.cm2.IsConsentedFromIncludingToExcludingRespons
 import org.emau.icmvc.ganimed.ttp.cm2.IsConsentedFromIncludingToIncluding;
 import org.emau.icmvc.ganimed.ttp.cm2.IsConsentedFromIncludingToIncludingResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.IsConsentedResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.ItemType;
 import org.emau.icmvc.ganimed.ttp.cm2.Label;
 import org.emau.icmvc.ganimed.ttp.cm2.ListConsentTemplates;
 import org.emau.icmvc.ganimed.ttp.cm2.ListConsentTemplatesResponse;
@@ -173,6 +207,7 @@ import org.emau.icmvc.ganimed.ttp.cm2.ModuleKeyDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.ModuleKeyDTOArray;
 import org.emau.icmvc.ganimed.ttp.cm2.ModuleStateDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.ModuleStatesType;
+import org.emau.icmvc.ganimed.ttp.cm2.ObjectInUseException;
 import org.emau.icmvc.ganimed.ttp.cm2.PolicyDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.PolicyExpirationsType;
 import org.emau.icmvc.ganimed.ttp.cm2.PolicyKeyDTO;
@@ -235,9 +270,28 @@ import org.emau.icmvc.ganimed.ttp.cm2.UnknownSignerIdException;
 import org.emau.icmvc.ganimed.ttp.cm2.UnknownSignerIdTypeException;
 import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentInUse;
 import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplate;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateInUse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateModule;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicy;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdType;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdTypeResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.ValidFromPropertiesDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.ValidateConsent;
 import org.emau.icmvc.ganimed.ttp.cm2.ValidateConsentResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.VersionConverterClassException;
 
 /**
  * <!-- begin-user-doc -->
@@ -289,8 +343,18 @@ public class Cm2FactoryImpl extends EFactoryImpl implements Cm2Factory {
 			case Cm2Package.ADD_CONSENT_OPT_OUT: return createAddConsentOptOut();
 			case Cm2Package.ADD_CONSENT_OPT_OUT_RESPONSE: return createAddConsentOptOutResponse();
 			case Cm2Package.ADD_CONSENT_RESPONSE: return createAddConsentResponse();
+			case Cm2Package.ADD_CONSENT_TEMPLATE: return createAddConsentTemplate();
+			case Cm2Package.ADD_CONSENT_TEMPLATE_RESPONSE: return createAddConsentTemplateResponse();
+			case Cm2Package.ADD_DOMAIN: return createAddDomain();
+			case Cm2Package.ADD_DOMAIN_RESPONSE: return createAddDomainResponse();
+			case Cm2Package.ADD_MODULE: return createAddModule();
+			case Cm2Package.ADD_MODULE_RESPONSE: return createAddModuleResponse();
+			case Cm2Package.ADD_POLICY: return createAddPolicy();
+			case Cm2Package.ADD_POLICY_RESPONSE: return createAddPolicyResponse();
 			case Cm2Package.ADD_SCAN_TO_CONSENT: return createAddScanToConsent();
 			case Cm2Package.ADD_SCAN_TO_CONSENT_RESPONSE: return createAddScanToConsentResponse();
+			case Cm2Package.ADD_SIGNER_ID_TYPE: return createAddSignerIdType();
+			case Cm2Package.ADD_SIGNER_ID_TYPE_RESPONSE: return createAddSignerIdTypeResponse();
 			case Cm2Package.ADD_SIGNER_ID_TO_CONSENT: return createAddSignerIdToConsent();
 			case Cm2Package.ADD_SIGNER_ID_TO_CONSENT_RESPONSE: return createAddSignerIdToConsentResponse();
 			case Cm2Package.ADD_SIGNER_ID_TO_SIGNER_ID: return createAddSignerIdToSignerId();
@@ -312,6 +376,16 @@ public class Cm2FactoryImpl extends EFactoryImpl implements Cm2Factory {
 			case Cm2Package.COUNT_SIGNED_POLICIES_RESPONSE: return createCountSignedPoliciesResponse();
 			case Cm2Package.DEACTIVATE_ALIAS: return createDeactivateAlias();
 			case Cm2Package.DEACTIVATE_ALIAS_RESPONSE: return createDeactivateAliasResponse();
+			case Cm2Package.DELETE_CONSENT_TEMPLATE: return createDeleteConsentTemplate();
+			case Cm2Package.DELETE_CONSENT_TEMPLATE_RESPONSE: return createDeleteConsentTemplateResponse();
+			case Cm2Package.DELETE_DOMAIN: return createDeleteDomain();
+			case Cm2Package.DELETE_DOMAIN_RESPONSE: return createDeleteDomainResponse();
+			case Cm2Package.DELETE_MODULE: return createDeleteModule();
+			case Cm2Package.DELETE_MODULE_RESPONSE: return createDeleteModuleResponse();
+			case Cm2Package.DELETE_POLICY: return createDeletePolicy();
+			case Cm2Package.DELETE_POLICY_RESPONSE: return createDeletePolicyResponse();
+			case Cm2Package.DELETE_SIGNER_ID_TYPE: return createDeleteSignerIdType();
+			case Cm2Package.DELETE_SIGNER_ID_TYPE_RESPONSE: return createDeleteSignerIdTypeResponse();
 			case Cm2Package.DOCUMENT_ROOT: return createDocumentRoot();
 			case Cm2Package.DOMAIN_DTO: return createDomainDTO();
 			case Cm2Package.DUPLICATE_ENTRY_EXCEPTION: return createDuplicateEntryException();
@@ -321,6 +395,17 @@ public class Cm2FactoryImpl extends EFactoryImpl implements Cm2Factory {
 			case Cm2Package.ENTRY_TYPE3: return createEntryType3();
 			case Cm2Package.ENTRY_TYPE4: return createEntryType4();
 			case Cm2Package.EXPIRATION_PROPERTIES_DTO: return createExpirationPropertiesDTO();
+			case Cm2Package.FINALISE_ALL_FOR_DOMAIN: return createFinaliseAllForDomain();
+			case Cm2Package.FINALISE_ALL_FOR_DOMAIN_RESPONSE: return createFinaliseAllForDomainResponse();
+			case Cm2Package.FINALISE_DOMAIN: return createFinaliseDomain();
+			case Cm2Package.FINALISE_DOMAIN_RESPONSE: return createFinaliseDomainResponse();
+			case Cm2Package.FINALISE_MODULE: return createFinaliseModule();
+			case Cm2Package.FINALISE_MODULE_RESPONSE: return createFinaliseModuleResponse();
+			case Cm2Package.FINALISE_POLICY: return createFinalisePolicy();
+			case Cm2Package.FINALISE_POLICY_RESPONSE: return createFinalisePolicyResponse();
+			case Cm2Package.FINALISE_TEMPLATE: return createFinaliseTemplate();
+			case Cm2Package.FINALISE_TEMPLATE_RESPONSE: return createFinaliseTemplateResponse();
+			case Cm2Package.FREE_TEXT_CONVERTER_STRING_EXCEPTION: return createFreeTextConverterStringException();
 			case Cm2Package.FREE_TEXT_DEF_DTO: return createFreeTextDefDTO();
 			case Cm2Package.FREE_TEXT_VAL_DTO: return createFreeTextValDTO();
 			case Cm2Package.GET_ALIASES_FOR_SIGNER_ID: return createGetAliasesForSignerId();
@@ -395,8 +480,10 @@ public class Cm2FactoryImpl extends EFactoryImpl implements Cm2Factory {
 			case Cm2Package.ILLEGAL_ARGUMENT_EXCEPTION: return createIllegalArgumentException();
 			case Cm2Package.INCONSISTENT_STATUS_EXCEPTION: return createInconsistentStatusException();
 			case Cm2Package.INTERNAL_EXCEPTION: return createInternalException();
+			case Cm2Package.ILLEGAL_COMPOSITION_EXCEPTION: return createIllegalCompositionException();
 			case Cm2Package.INVALID_FREE_TEXT_EXCEPTION: return createInvalidFreeTextException();
 			case Cm2Package.INVALID_PARAMETER_EXCEPTION: return createInvalidParameterException();
+			case Cm2Package.INVALID_PROPERTIES_EXCEPTION: return createInvalidPropertiesException();
 			case Cm2Package.INVALID_VERSION_EXCEPTION: return createInvalidVersionException();
 			case Cm2Package.IS_CONSENTED: return createIsConsented();
 			case Cm2Package.IS_CONSENTED_FROM_EXCLUDING_TO_EXCLUDING: return createIsConsentedFromExcludingToExcluding();
@@ -429,6 +516,7 @@ public class Cm2FactoryImpl extends EFactoryImpl implements Cm2Factory {
 			case Cm2Package.MODULE_KEY_DTO_ARRAY: return createModuleKeyDTOArray();
 			case Cm2Package.MODULE_STATE_DTO: return createModuleStateDTO();
 			case Cm2Package.MODULE_STATES_TYPE: return createModuleStatesType();
+			case Cm2Package.OBJECT_IN_USE_EXCEPTION: return createObjectInUseException();
 			case Cm2Package.POLICY_DTO: return createPolicyDTO();
 			case Cm2Package.POLICY_EXPIRATIONS_TYPE: return createPolicyExpirationsType();
 			case Cm2Package.POLICY_KEY_DTO: return createPolicyKeyDTO();
@@ -486,9 +574,28 @@ public class Cm2FactoryImpl extends EFactoryImpl implements Cm2Factory {
 			case Cm2Package.UNKNOWN_SIGNER_ID_TYPE_EXCEPTION: return createUnknownSignerIdTypeException();
 			case Cm2Package.UPDATE_CONSENT_IN_USE: return createUpdateConsentInUse();
 			case Cm2Package.UPDATE_CONSENT_IN_USE_RESPONSE: return createUpdateConsentInUseResponse();
+			case Cm2Package.UPDATE_CONSENT_TEMPLATE: return createUpdateConsentTemplate();
+			case Cm2Package.UPDATE_CONSENT_TEMPLATE_IN_USE: return createUpdateConsentTemplateInUse();
+			case Cm2Package.UPDATE_CONSENT_TEMPLATE_IN_USE_RESPONSE: return createUpdateConsentTemplateInUseResponse();
+			case Cm2Package.UPDATE_CONSENT_TEMPLATE_RESPONSE: return createUpdateConsentTemplateResponse();
+			case Cm2Package.UPDATE_DOMAIN: return createUpdateDomain();
+			case Cm2Package.UPDATE_DOMAIN_IN_USE: return createUpdateDomainInUse();
+			case Cm2Package.UPDATE_DOMAIN_IN_USE_RESPONSE: return createUpdateDomainInUseResponse();
+			case Cm2Package.UPDATE_DOMAIN_RESPONSE: return createUpdateDomainResponse();
+			case Cm2Package.UPDATE_MODULE: return createUpdateModule();
+			case Cm2Package.UPDATE_MODULE_IN_USE: return createUpdateModuleInUse();
+			case Cm2Package.UPDATE_MODULE_IN_USE_RESPONSE: return createUpdateModuleInUseResponse();
+			case Cm2Package.UPDATE_MODULE_RESPONSE: return createUpdateModuleResponse();
+			case Cm2Package.UPDATE_POLICY: return createUpdatePolicy();
+			case Cm2Package.UPDATE_POLICY_IN_USE: return createUpdatePolicyInUse();
+			case Cm2Package.UPDATE_POLICY_IN_USE_RESPONSE: return createUpdatePolicyInUseResponse();
+			case Cm2Package.UPDATE_POLICY_RESPONSE: return createUpdatePolicyResponse();
+			case Cm2Package.UPDATE_SIGNER_ID_TYPE: return createUpdateSignerIdType();
+			case Cm2Package.UPDATE_SIGNER_ID_TYPE_RESPONSE: return createUpdateSignerIdTypeResponse();
 			case Cm2Package.VALIDATE_CONSENT: return createValidateConsent();
 			case Cm2Package.VALIDATE_CONSENT_RESPONSE: return createValidateConsentResponse();
 			case Cm2Package.VALID_FROM_PROPERTIES_DTO: return createValidFromPropertiesDTO();
+			case Cm2Package.VERSION_CONVERTER_CLASS_EXCEPTION: return createVersionConverterClassException();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -510,6 +617,8 @@ public class Cm2FactoryImpl extends EFactoryImpl implements Cm2Factory {
 				return createConsentTemplateTypeFromString(eDataType, initialValue);
 			case Cm2Package.FREE_TEXT_TYPE:
 				return createFreeTextTypeFromString(eDataType, initialValue);
+			case Cm2Package.ITEM_TYPE:
+				return createItemTypeFromString(eDataType, initialValue);
 			case Cm2Package.QC_PROBLEM_STATUS:
 				return createQcProblemStatusFromString(eDataType, initialValue);
 			case Cm2Package.QC_PROBLEM_TYPE_ERROR:
@@ -528,6 +637,8 @@ public class Cm2FactoryImpl extends EFactoryImpl implements Cm2Factory {
 				return createConsentTemplateTypeObjectFromString(eDataType, initialValue);
 			case Cm2Package.FREE_TEXT_TYPE_OBJECT:
 				return createFreeTextTypeObjectFromString(eDataType, initialValue);
+			case Cm2Package.ITEM_TYPE_OBJECT:
+				return createItemTypeObjectFromString(eDataType, initialValue);
 			case Cm2Package.QC_PROBLEM_STATUS_OBJECT:
 				return createQcProblemStatusObjectFromString(eDataType, initialValue);
 			case Cm2Package.QC_PROBLEM_TYPE_ERROR_OBJECT:
@@ -559,6 +670,8 @@ public class Cm2FactoryImpl extends EFactoryImpl implements Cm2Factory {
 				return convertConsentTemplateTypeToString(eDataType, instanceValue);
 			case Cm2Package.FREE_TEXT_TYPE:
 				return convertFreeTextTypeToString(eDataType, instanceValue);
+			case Cm2Package.ITEM_TYPE:
+				return convertItemTypeToString(eDataType, instanceValue);
 			case Cm2Package.QC_PROBLEM_STATUS:
 				return convertQcProblemStatusToString(eDataType, instanceValue);
 			case Cm2Package.QC_PROBLEM_TYPE_ERROR:
@@ -577,6 +690,8 @@ public class Cm2FactoryImpl extends EFactoryImpl implements Cm2Factory {
 				return convertConsentTemplateTypeObjectToString(eDataType, instanceValue);
 			case Cm2Package.FREE_TEXT_TYPE_OBJECT:
 				return convertFreeTextTypeObjectToString(eDataType, instanceValue);
+			case Cm2Package.ITEM_TYPE_OBJECT:
+				return convertItemTypeObjectToString(eDataType, instanceValue);
 			case Cm2Package.QC_PROBLEM_STATUS_OBJECT:
 				return convertQcProblemStatusObjectToString(eDataType, instanceValue);
 			case Cm2Package.QC_PROBLEM_TYPE_ERROR_OBJECT:
@@ -664,6 +779,94 @@ public class Cm2FactoryImpl extends EFactoryImpl implements Cm2Factory {
 	 * @generated
 	 */
 	@Override
+	public AddConsentTemplate createAddConsentTemplate() {
+		AddConsentTemplateImpl addConsentTemplate = new AddConsentTemplateImpl();
+		return addConsentTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AddConsentTemplateResponse createAddConsentTemplateResponse() {
+		AddConsentTemplateResponseImpl addConsentTemplateResponse = new AddConsentTemplateResponseImpl();
+		return addConsentTemplateResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AddDomain createAddDomain() {
+		AddDomainImpl addDomain = new AddDomainImpl();
+		return addDomain;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AddDomainResponse createAddDomainResponse() {
+		AddDomainResponseImpl addDomainResponse = new AddDomainResponseImpl();
+		return addDomainResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AddModule createAddModule() {
+		AddModuleImpl addModule = new AddModuleImpl();
+		return addModule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AddModuleResponse createAddModuleResponse() {
+		AddModuleResponseImpl addModuleResponse = new AddModuleResponseImpl();
+		return addModuleResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AddPolicy createAddPolicy() {
+		AddPolicyImpl addPolicy = new AddPolicyImpl();
+		return addPolicy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AddPolicyResponse createAddPolicyResponse() {
+		AddPolicyResponseImpl addPolicyResponse = new AddPolicyResponseImpl();
+		return addPolicyResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public AddScanToConsent createAddScanToConsent() {
 		AddScanToConsentImpl addScanToConsent = new AddScanToConsentImpl();
 		return addScanToConsent;
@@ -678,6 +881,28 @@ public class Cm2FactoryImpl extends EFactoryImpl implements Cm2Factory {
 	public AddScanToConsentResponse createAddScanToConsentResponse() {
 		AddScanToConsentResponseImpl addScanToConsentResponse = new AddScanToConsentResponseImpl();
 		return addScanToConsentResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AddSignerIdType createAddSignerIdType() {
+		AddSignerIdTypeImpl addSignerIdType = new AddSignerIdTypeImpl();
+		return addSignerIdType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AddSignerIdTypeResponse createAddSignerIdTypeResponse() {
+		AddSignerIdTypeResponseImpl addSignerIdTypeResponse = new AddSignerIdTypeResponseImpl();
+		return addSignerIdTypeResponse;
 	}
 
 	/**
@@ -917,6 +1142,116 @@ public class Cm2FactoryImpl extends EFactoryImpl implements Cm2Factory {
 	 * @generated
 	 */
 	@Override
+	public DeleteConsentTemplate createDeleteConsentTemplate() {
+		DeleteConsentTemplateImpl deleteConsentTemplate = new DeleteConsentTemplateImpl();
+		return deleteConsentTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeleteConsentTemplateResponse createDeleteConsentTemplateResponse() {
+		DeleteConsentTemplateResponseImpl deleteConsentTemplateResponse = new DeleteConsentTemplateResponseImpl();
+		return deleteConsentTemplateResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeleteDomain createDeleteDomain() {
+		DeleteDomainImpl deleteDomain = new DeleteDomainImpl();
+		return deleteDomain;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeleteDomainResponse createDeleteDomainResponse() {
+		DeleteDomainResponseImpl deleteDomainResponse = new DeleteDomainResponseImpl();
+		return deleteDomainResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeleteModule createDeleteModule() {
+		DeleteModuleImpl deleteModule = new DeleteModuleImpl();
+		return deleteModule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeleteModuleResponse createDeleteModuleResponse() {
+		DeleteModuleResponseImpl deleteModuleResponse = new DeleteModuleResponseImpl();
+		return deleteModuleResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeletePolicy createDeletePolicy() {
+		DeletePolicyImpl deletePolicy = new DeletePolicyImpl();
+		return deletePolicy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeletePolicyResponse createDeletePolicyResponse() {
+		DeletePolicyResponseImpl deletePolicyResponse = new DeletePolicyResponseImpl();
+		return deletePolicyResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeleteSignerIdType createDeleteSignerIdType() {
+		DeleteSignerIdTypeImpl deleteSignerIdType = new DeleteSignerIdTypeImpl();
+		return deleteSignerIdType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeleteSignerIdTypeResponse createDeleteSignerIdTypeResponse() {
+		DeleteSignerIdTypeResponseImpl deleteSignerIdTypeResponse = new DeleteSignerIdTypeResponseImpl();
+		return deleteSignerIdTypeResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public DocumentRoot createDocumentRoot() {
 		DocumentRootImpl documentRoot = new DocumentRootImpl();
 		return documentRoot;
@@ -1008,6 +1343,127 @@ public class Cm2FactoryImpl extends EFactoryImpl implements Cm2Factory {
 	public ExpirationPropertiesDTO createExpirationPropertiesDTO() {
 		ExpirationPropertiesDTOImpl expirationPropertiesDTO = new ExpirationPropertiesDTOImpl();
 		return expirationPropertiesDTO;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FinaliseAllForDomain createFinaliseAllForDomain() {
+		FinaliseAllForDomainImpl finaliseAllForDomain = new FinaliseAllForDomainImpl();
+		return finaliseAllForDomain;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FinaliseAllForDomainResponse createFinaliseAllForDomainResponse() {
+		FinaliseAllForDomainResponseImpl finaliseAllForDomainResponse = new FinaliseAllForDomainResponseImpl();
+		return finaliseAllForDomainResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FinaliseDomain createFinaliseDomain() {
+		FinaliseDomainImpl finaliseDomain = new FinaliseDomainImpl();
+		return finaliseDomain;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FinaliseDomainResponse createFinaliseDomainResponse() {
+		FinaliseDomainResponseImpl finaliseDomainResponse = new FinaliseDomainResponseImpl();
+		return finaliseDomainResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FinaliseModule createFinaliseModule() {
+		FinaliseModuleImpl finaliseModule = new FinaliseModuleImpl();
+		return finaliseModule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FinaliseModuleResponse createFinaliseModuleResponse() {
+		FinaliseModuleResponseImpl finaliseModuleResponse = new FinaliseModuleResponseImpl();
+		return finaliseModuleResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FinalisePolicy createFinalisePolicy() {
+		FinalisePolicyImpl finalisePolicy = new FinalisePolicyImpl();
+		return finalisePolicy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FinalisePolicyResponse createFinalisePolicyResponse() {
+		FinalisePolicyResponseImpl finalisePolicyResponse = new FinalisePolicyResponseImpl();
+		return finalisePolicyResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FinaliseTemplate createFinaliseTemplate() {
+		FinaliseTemplateImpl finaliseTemplate = new FinaliseTemplateImpl();
+		return finaliseTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FinaliseTemplateResponse createFinaliseTemplateResponse() {
+		FinaliseTemplateResponseImpl finaliseTemplateResponse = new FinaliseTemplateResponseImpl();
+		return finaliseTemplateResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FreeTextConverterStringException createFreeTextConverterStringException() {
+		FreeTextConverterStringExceptionImpl freeTextConverterStringException = new FreeTextConverterStringExceptionImpl();
+		return freeTextConverterStringException;
 	}
 
 	/**
@@ -1830,6 +2286,17 @@ public class Cm2FactoryImpl extends EFactoryImpl implements Cm2Factory {
 	 * @generated
 	 */
 	@Override
+	public IllegalCompositionException createIllegalCompositionException() {
+		IllegalCompositionExceptionImpl illegalCompositionException = new IllegalCompositionExceptionImpl();
+		return illegalCompositionException;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public InvalidFreeTextException createInvalidFreeTextException() {
 		InvalidFreeTextExceptionImpl invalidFreeTextException = new InvalidFreeTextExceptionImpl();
 		return invalidFreeTextException;
@@ -1844,6 +2311,17 @@ public class Cm2FactoryImpl extends EFactoryImpl implements Cm2Factory {
 	public InvalidParameterException createInvalidParameterException() {
 		InvalidParameterExceptionImpl invalidParameterException = new InvalidParameterExceptionImpl();
 		return invalidParameterException;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public InvalidPropertiesException createInvalidPropertiesException() {
+		InvalidPropertiesExceptionImpl invalidPropertiesException = new InvalidPropertiesExceptionImpl();
+		return invalidPropertiesException;
 	}
 
 	/**
@@ -2196,6 +2674,17 @@ public class Cm2FactoryImpl extends EFactoryImpl implements Cm2Factory {
 	public ModuleStatesType createModuleStatesType() {
 		ModuleStatesTypeImpl moduleStatesType = new ModuleStatesTypeImpl();
 		return moduleStatesType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ObjectInUseException createObjectInUseException() {
+		ObjectInUseExceptionImpl objectInUseException = new ObjectInUseExceptionImpl();
+		return objectInUseException;
 	}
 
 	/**
@@ -2831,6 +3320,204 @@ public class Cm2FactoryImpl extends EFactoryImpl implements Cm2Factory {
 	 * @generated
 	 */
 	@Override
+	public UpdateConsentTemplate createUpdateConsentTemplate() {
+		UpdateConsentTemplateImpl updateConsentTemplate = new UpdateConsentTemplateImpl();
+		return updateConsentTemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateConsentTemplateInUse createUpdateConsentTemplateInUse() {
+		UpdateConsentTemplateInUseImpl updateConsentTemplateInUse = new UpdateConsentTemplateInUseImpl();
+		return updateConsentTemplateInUse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateConsentTemplateInUseResponse createUpdateConsentTemplateInUseResponse() {
+		UpdateConsentTemplateInUseResponseImpl updateConsentTemplateInUseResponse = new UpdateConsentTemplateInUseResponseImpl();
+		return updateConsentTemplateInUseResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateConsentTemplateResponse createUpdateConsentTemplateResponse() {
+		UpdateConsentTemplateResponseImpl updateConsentTemplateResponse = new UpdateConsentTemplateResponseImpl();
+		return updateConsentTemplateResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateDomain createUpdateDomain() {
+		UpdateDomainImpl updateDomain = new UpdateDomainImpl();
+		return updateDomain;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateDomainInUse createUpdateDomainInUse() {
+		UpdateDomainInUseImpl updateDomainInUse = new UpdateDomainInUseImpl();
+		return updateDomainInUse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateDomainInUseResponse createUpdateDomainInUseResponse() {
+		UpdateDomainInUseResponseImpl updateDomainInUseResponse = new UpdateDomainInUseResponseImpl();
+		return updateDomainInUseResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateDomainResponse createUpdateDomainResponse() {
+		UpdateDomainResponseImpl updateDomainResponse = new UpdateDomainResponseImpl();
+		return updateDomainResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateModule createUpdateModule() {
+		UpdateModuleImpl updateModule = new UpdateModuleImpl();
+		return updateModule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateModuleInUse createUpdateModuleInUse() {
+		UpdateModuleInUseImpl updateModuleInUse = new UpdateModuleInUseImpl();
+		return updateModuleInUse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateModuleInUseResponse createUpdateModuleInUseResponse() {
+		UpdateModuleInUseResponseImpl updateModuleInUseResponse = new UpdateModuleInUseResponseImpl();
+		return updateModuleInUseResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateModuleResponse createUpdateModuleResponse() {
+		UpdateModuleResponseImpl updateModuleResponse = new UpdateModuleResponseImpl();
+		return updateModuleResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdatePolicy createUpdatePolicy() {
+		UpdatePolicyImpl updatePolicy = new UpdatePolicyImpl();
+		return updatePolicy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdatePolicyInUse createUpdatePolicyInUse() {
+		UpdatePolicyInUseImpl updatePolicyInUse = new UpdatePolicyInUseImpl();
+		return updatePolicyInUse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdatePolicyInUseResponse createUpdatePolicyInUseResponse() {
+		UpdatePolicyInUseResponseImpl updatePolicyInUseResponse = new UpdatePolicyInUseResponseImpl();
+		return updatePolicyInUseResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdatePolicyResponse createUpdatePolicyResponse() {
+		UpdatePolicyResponseImpl updatePolicyResponse = new UpdatePolicyResponseImpl();
+		return updatePolicyResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateSignerIdType createUpdateSignerIdType() {
+		UpdateSignerIdTypeImpl updateSignerIdType = new UpdateSignerIdTypeImpl();
+		return updateSignerIdType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateSignerIdTypeResponse createUpdateSignerIdTypeResponse() {
+		UpdateSignerIdTypeResponseImpl updateSignerIdTypeResponse = new UpdateSignerIdTypeResponseImpl();
+		return updateSignerIdTypeResponse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ValidateConsent createValidateConsent() {
 		ValidateConsentImpl validateConsent = new ValidateConsentImpl();
 		return validateConsent;
@@ -2856,6 +3543,17 @@ public class Cm2FactoryImpl extends EFactoryImpl implements Cm2Factory {
 	public ValidFromPropertiesDTO createValidFromPropertiesDTO() {
 		ValidFromPropertiesDTOImpl validFromPropertiesDTO = new ValidFromPropertiesDTOImpl();
 		return validFromPropertiesDTO;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public VersionConverterClassException createVersionConverterClassException() {
+		VersionConverterClassExceptionImpl versionConverterClassException = new VersionConverterClassExceptionImpl();
+		return versionConverterClassException;
 	}
 
 	/**
@@ -2935,6 +3633,26 @@ public class Cm2FactoryImpl extends EFactoryImpl implements Cm2Factory {
 	 * @generated
 	 */
 	public String convertFreeTextTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ItemType createItemTypeFromString(EDataType eDataType, String initialValue) {
+		ItemType result = ItemType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertItemTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -3108,6 +3826,24 @@ public class Cm2FactoryImpl extends EFactoryImpl implements Cm2Factory {
 	 */
 	public String convertFreeTextTypeObjectToString(EDataType eDataType, Object instanceValue) {
 		return convertFreeTextTypeToString(Cm2Package.eINSTANCE.getFreeTextType(), instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ItemType createItemTypeObjectFromString(EDataType eDataType, String initialValue) {
+		return createItemTypeFromString(Cm2Package.eINSTANCE.getItemType(), initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertItemTypeObjectToString(EDataType eDataType, Object instanceValue) {
+		return convertItemTypeToString(Cm2Package.eINSTANCE.getItemType(), instanceValue);
 	}
 
 	/**

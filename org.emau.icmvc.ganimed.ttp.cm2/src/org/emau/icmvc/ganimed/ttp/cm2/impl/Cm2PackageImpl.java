@@ -31,12 +31,22 @@ import org.emau.icmvc.ganimed.ttp.cm2.AddConsent;
 import org.emau.icmvc.ganimed.ttp.cm2.AddConsentOptOut;
 import org.emau.icmvc.ganimed.ttp.cm2.AddConsentOptOutResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AddConsentResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplate;
+import org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplateResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.AddDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddModule;
+import org.emau.icmvc.ganimed.ttp.cm2.AddModuleResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddPolicy;
+import org.emau.icmvc.ganimed.ttp.cm2.AddPolicyResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AddScanToConsent;
 import org.emau.icmvc.ganimed.ttp.cm2.AddScanToConsentResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdToConsent;
 import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdToConsentResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdToSignerId;
 import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdToSignerIdResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdType;
+import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdTypeResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AssignedModuleDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.AssignedPolicyDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.ChildrenType;
@@ -59,6 +69,16 @@ import org.emau.icmvc.ganimed.ttp.cm2.CountSignedPolicies;
 import org.emau.icmvc.ganimed.ttp.cm2.CountSignedPoliciesResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.DeactivateAlias;
 import org.emau.icmvc.ganimed.ttp.cm2.DeactivateAliasResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteConsentTemplate;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteConsentTemplateResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteModule;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteModuleResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeletePolicy;
+import org.emau.icmvc.ganimed.ttp.cm2.DeletePolicyResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdType;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdTypeResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot;
 import org.emau.icmvc.ganimed.ttp.cm2.DomainDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.DuplicateEntryException;
@@ -69,6 +89,17 @@ import org.emau.icmvc.ganimed.ttp.cm2.EntryType3;
 import org.emau.icmvc.ganimed.ttp.cm2.EntryType4;
 import org.emau.icmvc.ganimed.ttp.cm2.ExpirationPropertiesDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.FhirIdDTO;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseAllForDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseAllForDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseModule;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseModuleResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FinalisePolicy;
+import org.emau.icmvc.ganimed.ttp.cm2.FinalisePolicyResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplate;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplateResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FreeTextConverterStringException;
 import org.emau.icmvc.ganimed.ttp.cm2.FreeTextDefDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.FreeTextType;
 import org.emau.icmvc.ganimed.ttp.cm2.FreeTextValDTO;
@@ -141,10 +172,12 @@ import org.emau.icmvc.ganimed.ttp.cm2.GetSignerIdsForAliasResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.GetTemplatesWithPolicies;
 import org.emau.icmvc.ganimed.ttp.cm2.GetTemplatesWithPoliciesResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.HashMap;
+import org.emau.icmvc.ganimed.ttp.cm2.IllegalCompositionException;
 import org.emau.icmvc.ganimed.ttp.cm2.InconsistentStatusException;
 import org.emau.icmvc.ganimed.ttp.cm2.InternalException;
 import org.emau.icmvc.ganimed.ttp.cm2.InvalidFreeTextException;
 import org.emau.icmvc.ganimed.ttp.cm2.InvalidParameterException;
+import org.emau.icmvc.ganimed.ttp.cm2.InvalidPropertiesException;
 import org.emau.icmvc.ganimed.ttp.cm2.InvalidVersionException;
 import org.emau.icmvc.ganimed.ttp.cm2.IsConsented;
 import org.emau.icmvc.ganimed.ttp.cm2.IsConsentedFromExcludingToExcluding;
@@ -156,6 +189,7 @@ import org.emau.icmvc.ganimed.ttp.cm2.IsConsentedFromIncludingToExcludingRespons
 import org.emau.icmvc.ganimed.ttp.cm2.IsConsentedFromIncludingToIncluding;
 import org.emau.icmvc.ganimed.ttp.cm2.IsConsentedFromIncludingToIncludingResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.IsConsentedResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.ItemType;
 import org.emau.icmvc.ganimed.ttp.cm2.Label;
 import org.emau.icmvc.ganimed.ttp.cm2.ListConsentTemplates;
 import org.emau.icmvc.ganimed.ttp.cm2.ListConsentTemplatesResponse;
@@ -177,6 +211,7 @@ import org.emau.icmvc.ganimed.ttp.cm2.ModuleKeyDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.ModuleKeyDTOArray;
 import org.emau.icmvc.ganimed.ttp.cm2.ModuleStateDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.ModuleStatesType;
+import org.emau.icmvc.ganimed.ttp.cm2.ObjectInUseException;
 import org.emau.icmvc.ganimed.ttp.cm2.PolicyDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.PolicyExpirationsType;
 import org.emau.icmvc.ganimed.ttp.cm2.PolicyKeyDTO;
@@ -239,9 +274,28 @@ import org.emau.icmvc.ganimed.ttp.cm2.UnknownSignerIdException;
 import org.emau.icmvc.ganimed.ttp.cm2.UnknownSignerIdTypeException;
 import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentInUse;
 import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplate;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateInUse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateModule;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicy;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdType;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdTypeResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.ValidFromPropertiesDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.ValidateConsent;
 import org.emau.icmvc.ganimed.ttp.cm2.ValidateConsentResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.VersionConverterClassException;
 
 import org.emau.icmvc.ganimed.ttp.cm2.config.ConfigPackage;
 
@@ -308,6 +362,62 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass addConsentTemplateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass addConsentTemplateResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass addDomainEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass addDomainResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass addModuleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass addModuleResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass addPolicyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass addPolicyResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass addScanToConsentEClass = null;
 
 	/**
@@ -316,6 +426,20 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	 * @generated
 	 */
 	private EClass addScanToConsentResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass addSignerIdTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass addSignerIdTypeResponseEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -469,6 +593,76 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass deleteConsentTemplateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass deleteConsentTemplateResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass deleteDomainEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass deleteDomainResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass deleteModuleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass deleteModuleResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass deletePolicyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass deletePolicyResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass deleteSignerIdTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass deleteSignerIdTypeResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass documentRootEClass = null;
 
 	/**
@@ -533,6 +727,83 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	 * @generated
 	 */
 	private EClass fhirIdDTOEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass finaliseAllForDomainEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass finaliseAllForDomainResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass finaliseDomainEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass finaliseDomainResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass finaliseModuleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass finaliseModuleResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass finalisePolicyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass finalisePolicyResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass finaliseTemplateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass finaliseTemplateResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass freeTextConverterStringExceptionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1057,6 +1328,13 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass illegalCompositionExceptionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass invalidFreeTextExceptionEClass = null;
 
 	/**
@@ -1065,6 +1343,13 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	 * @generated
 	 */
 	private EClass invalidParameterExceptionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass invalidPropertiesExceptionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1289,6 +1574,13 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	 * @generated
 	 */
 	private EClass moduleStatesTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass objectInUseExceptionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1694,6 +1986,132 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass updateConsentTemplateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass updateConsentTemplateInUseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass updateConsentTemplateInUseResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass updateConsentTemplateResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass updateDomainEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass updateDomainInUseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass updateDomainInUseResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass updateDomainResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass updateModuleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass updateModuleInUseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass updateModuleInUseResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass updateModuleResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass updatePolicyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass updatePolicyInUseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass updatePolicyInUseResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass updatePolicyResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass updateSignerIdTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass updateSignerIdTypeResponseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass validateConsentEClass = null;
 
 	/**
@@ -1709,6 +2127,13 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	 * @generated
 	 */
 	private EClass validFromPropertiesDTOEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass versionConverterClassExceptionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1737,6 +2162,13 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	 * @generated
 	 */
 	private EEnum freeTextTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum itemTypeEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1800,6 +2232,13 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	 * @generated
 	 */
 	private EDataType freeTextTypeObjectEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType itemTypeObjectEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2051,6 +2490,146 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	 * @generated
 	 */
 	@Override
+	public EClass getAddConsentTemplate() {
+		return addConsentTemplateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAddConsentTemplate_ConsentTemplate() {
+		return (EReference)addConsentTemplateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAddConsentTemplate_FinaliseRelatedEntities() {
+		return (EAttribute)addConsentTemplateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAddConsentTemplateResponse() {
+		return addConsentTemplateResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAddDomain() {
+		return addDomainEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAddDomain_Domain() {
+		return (EReference)addDomainEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAddDomainResponse() {
+		return addDomainResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAddModule() {
+		return addModuleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAddModule_Module() {
+		return (EReference)addModuleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAddModule_FinaliseRelatedEntities() {
+		return (EAttribute)addModuleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAddModuleResponse() {
+		return addModuleResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAddPolicy() {
+		return addPolicyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getAddPolicy_Policy() {
+		return (EReference)addPolicyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAddPolicyResponse() {
+		return addPolicyResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getAddScanToConsent() {
 		return addScanToConsentEClass;
 	}
@@ -2103,6 +2682,46 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	@Override
 	public EClass getAddScanToConsentResponse() {
 		return addScanToConsentResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAddSignerIdType() {
+		return addSignerIdTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAddSignerIdType_DomainName() {
+		return (EAttribute)addSignerIdTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAddSignerIdType_SignerIdTypeName() {
+		return (EAttribute)addSignerIdTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAddSignerIdTypeResponse() {
+		return addSignerIdTypeResponseEClass;
 	}
 
 	/**
@@ -3243,6 +3862,166 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	@Override
 	public EClass getDeactivateAliasResponse() {
 		return deactivateAliasResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDeleteConsentTemplate() {
+		return deleteConsentTemplateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDeleteConsentTemplate_ConsentTemplateKey() {
+		return (EReference)deleteConsentTemplateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDeleteConsentTemplateResponse() {
+		return deleteConsentTemplateResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDeleteDomain() {
+		return deleteDomainEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDeleteDomain_DomainName() {
+		return (EAttribute)deleteDomainEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDeleteDomainResponse() {
+		return deleteDomainResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDeleteModule() {
+		return deleteModuleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDeleteModule_ModuleKey() {
+		return (EReference)deleteModuleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDeleteModuleResponse() {
+		return deleteModuleResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDeletePolicy() {
+		return deletePolicyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDeletePolicy_PolicyKey() {
+		return (EReference)deletePolicyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDeletePolicyResponse() {
+		return deletePolicyResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDeleteSignerIdType() {
+		return deleteSignerIdTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDeleteSignerIdType_DomainName() {
+		return (EAttribute)deleteSignerIdTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDeleteSignerIdType_SignerIdTypeName() {
+		return (EAttribute)deleteSignerIdTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDeleteSignerIdTypeResponse() {
+		return deleteSignerIdTypeResponseEClass;
 	}
 
 	/**
@@ -4671,6 +5450,536 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	 * @generated
 	 */
 	@Override
+	public EReference getDocumentRoot_AddConsentTemplate() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(141);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_AddConsentTemplateResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(142);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_AddModule() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(143);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_AddModuleResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(144);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_AddDomain() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(145);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_AddDomainResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(146);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_AddPolicy() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(147);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_AddPolicyResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(148);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_AddSignerIdType() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(149);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_AddSignerIdTypeResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(150);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_DeleteConsentTemplate() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(151);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_DeleteConsentTemplateResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(152);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_DeleteDomain() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(153);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_DeleteDomainResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(154);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_DeleteModule() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(155);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_DeleteModuleResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(156);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_DeletePolicy() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(157);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_DeletePolicyResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(158);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_DeleteSignerIdType() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(159);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_DeleteSignerIdTypeResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(160);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_UpdateConsentTemplate() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(161);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_UpdateConsentTemplateResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(162);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_UpdateConsentTemplateInUse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(163);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_UpdateConsentTemplateInUseResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(164);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_UpdateDomain() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(165);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_UpdateDomainResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(166);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_UpdateDomainInUse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(167);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_UpdateDomainInUseResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(168);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_UpdateModule() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(169);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_UpdateModuleResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(170);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_UpdateModuleInUse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(171);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_UpdateModuleInUseResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(172);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_UpdatePolicy() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(173);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_UpdatePolicyResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(174);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_UpdatePolicyInUse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(175);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_UpdatePolicyInUseResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(176);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_FinaliseAllForDomain() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(177);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_FinaliseAllForDomainResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(178);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_FinaliseDomain() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(179);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_FinaliseDomainResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(180);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_FinaliseModule() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(181);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_FinaliseModuleResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(182);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_FinalisePolicy() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(183);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_FinalisePolicyResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(184);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_FinaliseTemplate() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(185);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_FinaliseTemplateResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(186);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_FreeTextConverterStringException() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(187);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_IllegalCompositionException() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(188);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_InvalidPropertiesException() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(189);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_ObjectInUseException() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(190);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_UpdateSignerIdType() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(191);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_UpdateSignerIdTypeResponse() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(192);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDocumentRoot_VersionConverterClassException() {
+		return (EReference)documentRootEClass.getEStructuralFeatures().get(193);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getDomainDTO() {
 		return domainDTOEClass;
 	}
@@ -5033,6 +6342,196 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	@Override
 	public EAttribute getFhirIdDTO_FhirID() {
 		return (EAttribute)fhirIdDTOEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFinaliseAllForDomain() {
+		return finaliseAllForDomainEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFinaliseAllForDomain_DomainName() {
+		return (EAttribute)finaliseAllForDomainEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFinaliseAllForDomainResponse() {
+		return finaliseAllForDomainResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFinaliseDomain() {
+		return finaliseDomainEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFinaliseDomain_DomainName() {
+		return (EAttribute)finaliseDomainEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFinaliseDomainResponse() {
+		return finaliseDomainResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFinaliseModule() {
+		return finaliseModuleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getFinaliseModule_ModuleKey() {
+		return (EReference)finaliseModuleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFinaliseModule_FinaliseRelatedEntities() {
+		return (EAttribute)finaliseModuleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFinaliseModuleResponse() {
+		return finaliseModuleResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFinalisePolicy() {
+		return finalisePolicyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getFinalisePolicy_PolicyKey() {
+		return (EReference)finalisePolicyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFinalisePolicyResponse() {
+		return finalisePolicyResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFinaliseTemplate() {
+		return finaliseTemplateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getFinaliseTemplate_ConsentTemplateKey() {
+		return (EReference)finaliseTemplateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFinaliseTemplate_FinaliseRelatedEntities() {
+		return (EAttribute)finaliseTemplateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFinaliseTemplateResponse() {
+		return finaliseTemplateResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFreeTextConverterStringException() {
+		return freeTextConverterStringExceptionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFreeTextConverterStringException_Message() {
+		return (EAttribute)freeTextConverterStringExceptionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -7121,6 +8620,46 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	 * @generated
 	 */
 	@Override
+	public EClass getIllegalCompositionException() {
+		return illegalCompositionExceptionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIllegalCompositionException_IllegalItemType() {
+		return (EAttribute)illegalCompositionExceptionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIllegalCompositionException_IllegalItem() {
+		return (EAttribute)illegalCompositionExceptionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getIllegalCompositionException_Message() {
+		return (EAttribute)illegalCompositionExceptionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getInvalidFreeTextException() {
 		return invalidFreeTextExceptionEClass;
 	}
@@ -7163,6 +8702,26 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	@Override
 	public EAttribute getInvalidParameterException_Message() {
 		return (EAttribute)invalidParameterExceptionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getInvalidPropertiesException() {
+		return invalidPropertiesExceptionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getInvalidPropertiesException_Message() {
+		return (EAttribute)invalidPropertiesExceptionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -8193,6 +9752,26 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	@Override
 	public EReference getModuleStatesType_Entry() {
 		return (EReference)moduleStatesTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getObjectInUseException() {
+		return objectInUseExceptionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getObjectInUseException_Message() {
+		return (EAttribute)objectInUseExceptionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -9751,6 +11330,466 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	 * @generated
 	 */
 	@Override
+	public EClass getUpdateConsentTemplate() {
+		return updateConsentTemplateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getUpdateConsentTemplate_ConsentTemplate() {
+		return (EReference)updateConsentTemplateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUpdateConsentTemplate_FinaliseRelatedEntities() {
+		return (EAttribute)updateConsentTemplateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUpdateConsentTemplateInUse() {
+		return updateConsentTemplateInUseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getUpdateConsentTemplateInUse_ConsentTemplate() {
+		return (EReference)updateConsentTemplateInUseEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUpdateConsentTemplateInUseResponse() {
+		return updateConsentTemplateInUseResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUpdateConsentTemplateResponse() {
+		return updateConsentTemplateResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUpdateDomain() {
+		return updateDomainEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getUpdateDomain_Domain() {
+		return (EReference)updateDomainEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUpdateDomainInUse() {
+		return updateDomainInUseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUpdateDomainInUse_DomainName() {
+		return (EAttribute)updateDomainInUseEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUpdateDomainInUse_Label() {
+		return (EAttribute)updateDomainInUseEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUpdateDomainInUse_Logo() {
+		return (EAttribute)updateDomainInUseEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUpdateDomainInUse_ExternProperties() {
+		return (EAttribute)updateDomainInUseEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getUpdateDomainInUse_ExpirationProperties() {
+		return (EReference)updateDomainInUseEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUpdateDomainInUse_Comment() {
+		return (EAttribute)updateDomainInUseEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getUpdateDomainInUse_Config() {
+		return (EReference)updateDomainInUseEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUpdateDomainInUseResponse() {
+		return updateDomainInUseResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUpdateDomainResponse() {
+		return updateDomainResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUpdateModule() {
+		return updateModuleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getUpdateModule_Module() {
+		return (EReference)updateModuleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUpdateModule_FinaliseRelatedEntities() {
+		return (EAttribute)updateModuleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUpdateModuleInUse() {
+		return updateModuleInUseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getUpdateModuleInUse_ModuleKey() {
+		return (EReference)updateModuleInUseEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUpdateModuleInUse_Label() {
+		return (EAttribute)updateModuleInUseEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUpdateModuleInUse_ShortText() {
+		return (EAttribute)updateModuleInUseEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUpdateModuleInUse_ExternProperties() {
+		return (EAttribute)updateModuleInUseEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUpdateModuleInUse_Comment() {
+		return (EAttribute)updateModuleInUseEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getUpdateModuleInUse_AssignedPolicies() {
+		return (EReference)updateModuleInUseEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUpdateModuleInUseResponse() {
+		return updateModuleInUseResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUpdateModuleResponse() {
+		return updateModuleResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUpdatePolicy() {
+		return updatePolicyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getUpdatePolicy_Policy() {
+		return (EReference)updatePolicyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUpdatePolicyInUse() {
+		return updatePolicyInUseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getUpdatePolicyInUse_PolicyKey() {
+		return (EReference)updatePolicyInUseEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUpdatePolicyInUse_Label() {
+		return (EAttribute)updatePolicyInUseEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUpdatePolicyInUse_ExternProperties() {
+		return (EAttribute)updatePolicyInUseEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUpdatePolicyInUse_Comment() {
+		return (EAttribute)updatePolicyInUseEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUpdatePolicyInUseResponse() {
+		return updatePolicyInUseResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUpdatePolicyResponse() {
+		return updatePolicyResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUpdateSignerIdType() {
+		return updateSignerIdTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUpdateSignerIdType_DomainName() {
+		return (EAttribute)updateSignerIdTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUpdateSignerIdType_SignerIdTypeName() {
+		return (EAttribute)updateSignerIdTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUpdateSignerIdType_Label() {
+		return (EAttribute)updateSignerIdTypeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getUpdateSignerIdType_Comment() {
+		return (EAttribute)updateSignerIdTypeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getUpdateSignerIdTypeResponse() {
+		return updateSignerIdTypeResponseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getValidateConsent() {
 		return validateConsentEClass;
 	}
@@ -9831,6 +11870,26 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	 * @generated
 	 */
 	@Override
+	public EClass getVersionConverterClassException() {
+		return versionConverterClassExceptionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getVersionConverterClassException_Message() {
+		return (EAttribute)versionConverterClassExceptionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getConsentStatus() {
 		return consentStatusEEnum;
 	}
@@ -9863,6 +11922,16 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	@Override
 	public EEnum getFreeTextType() {
 		return freeTextTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getItemType() {
+		return itemTypeEEnum;
 	}
 
 	/**
@@ -9953,6 +12022,16 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 	@Override
 	public EDataType getFreeTextTypeObject() {
 		return freeTextTypeObjectEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getItemTypeObject() {
+		return itemTypeObjectEDataType;
 	}
 
 	/**
@@ -10055,6 +12134,28 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 
 		addConsentResponseEClass = createEClass(ADD_CONSENT_RESPONSE);
 
+		addConsentTemplateEClass = createEClass(ADD_CONSENT_TEMPLATE);
+		createEReference(addConsentTemplateEClass, ADD_CONSENT_TEMPLATE__CONSENT_TEMPLATE);
+		createEAttribute(addConsentTemplateEClass, ADD_CONSENT_TEMPLATE__FINALISE_RELATED_ENTITIES);
+
+		addConsentTemplateResponseEClass = createEClass(ADD_CONSENT_TEMPLATE_RESPONSE);
+
+		addDomainEClass = createEClass(ADD_DOMAIN);
+		createEReference(addDomainEClass, ADD_DOMAIN__DOMAIN);
+
+		addDomainResponseEClass = createEClass(ADD_DOMAIN_RESPONSE);
+
+		addModuleEClass = createEClass(ADD_MODULE);
+		createEReference(addModuleEClass, ADD_MODULE__MODULE);
+		createEAttribute(addModuleEClass, ADD_MODULE__FINALISE_RELATED_ENTITIES);
+
+		addModuleResponseEClass = createEClass(ADD_MODULE_RESPONSE);
+
+		addPolicyEClass = createEClass(ADD_POLICY);
+		createEReference(addPolicyEClass, ADD_POLICY__POLICY);
+
+		addPolicyResponseEClass = createEClass(ADD_POLICY_RESPONSE);
+
 		addScanToConsentEClass = createEClass(ADD_SCAN_TO_CONSENT);
 		createEReference(addScanToConsentEClass, ADD_SCAN_TO_CONSENT__CONSENT_KEY);
 		createEAttribute(addScanToConsentEClass, ADD_SCAN_TO_CONSENT__SCAN_BASE64);
@@ -10062,6 +12163,12 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 		createEAttribute(addScanToConsentEClass, ADD_SCAN_TO_CONSENT__FILE_NAME);
 
 		addScanToConsentResponseEClass = createEClass(ADD_SCAN_TO_CONSENT_RESPONSE);
+
+		addSignerIdTypeEClass = createEClass(ADD_SIGNER_ID_TYPE);
+		createEAttribute(addSignerIdTypeEClass, ADD_SIGNER_ID_TYPE__DOMAIN_NAME);
+		createEAttribute(addSignerIdTypeEClass, ADD_SIGNER_ID_TYPE__SIGNER_ID_TYPE_NAME);
+
+		addSignerIdTypeResponseEClass = createEClass(ADD_SIGNER_ID_TYPE_RESPONSE);
 
 		addSignerIdToConsentEClass = createEClass(ADD_SIGNER_ID_TO_CONSENT);
 		createEReference(addSignerIdToConsentEClass, ADD_SIGNER_ID_TO_CONSENT__CONSENT_KEY);
@@ -10197,6 +12304,32 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 		createEReference(deactivateAliasEClass, DEACTIVATE_ALIAS__ALIAS_SIGNER_ID);
 
 		deactivateAliasResponseEClass = createEClass(DEACTIVATE_ALIAS_RESPONSE);
+
+		deleteConsentTemplateEClass = createEClass(DELETE_CONSENT_TEMPLATE);
+		createEReference(deleteConsentTemplateEClass, DELETE_CONSENT_TEMPLATE__CONSENT_TEMPLATE_KEY);
+
+		deleteConsentTemplateResponseEClass = createEClass(DELETE_CONSENT_TEMPLATE_RESPONSE);
+
+		deleteDomainEClass = createEClass(DELETE_DOMAIN);
+		createEAttribute(deleteDomainEClass, DELETE_DOMAIN__DOMAIN_NAME);
+
+		deleteDomainResponseEClass = createEClass(DELETE_DOMAIN_RESPONSE);
+
+		deleteModuleEClass = createEClass(DELETE_MODULE);
+		createEReference(deleteModuleEClass, DELETE_MODULE__MODULE_KEY);
+
+		deleteModuleResponseEClass = createEClass(DELETE_MODULE_RESPONSE);
+
+		deletePolicyEClass = createEClass(DELETE_POLICY);
+		createEReference(deletePolicyEClass, DELETE_POLICY__POLICY_KEY);
+
+		deletePolicyResponseEClass = createEClass(DELETE_POLICY_RESPONSE);
+
+		deleteSignerIdTypeEClass = createEClass(DELETE_SIGNER_ID_TYPE);
+		createEAttribute(deleteSignerIdTypeEClass, DELETE_SIGNER_ID_TYPE__DOMAIN_NAME);
+		createEAttribute(deleteSignerIdTypeEClass, DELETE_SIGNER_ID_TYPE__SIGNER_ID_TYPE_NAME);
+
+		deleteSignerIdTypeResponseEClass = createEClass(DELETE_SIGNER_ID_TYPE_RESPONSE);
 
 		documentRootEClass = createEClass(DOCUMENT_ROOT);
 		createEAttribute(documentRootEClass, DOCUMENT_ROOT__MIXED);
@@ -10340,6 +12473,59 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 		createEReference(documentRootEClass, DOCUMENT_ROOT__UPDATE_CONSENT_IN_USE_RESPONSE);
 		createEReference(documentRootEClass, DOCUMENT_ROOT__VALIDATE_CONSENT);
 		createEReference(documentRootEClass, DOCUMENT_ROOT__VALIDATE_CONSENT_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__ADD_CONSENT_TEMPLATE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__ADD_CONSENT_TEMPLATE_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__ADD_MODULE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__ADD_MODULE_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__ADD_DOMAIN);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__ADD_DOMAIN_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__ADD_POLICY);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__ADD_POLICY_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__ADD_SIGNER_ID_TYPE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__ADD_SIGNER_ID_TYPE_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__DELETE_CONSENT_TEMPLATE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__DELETE_CONSENT_TEMPLATE_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__DELETE_DOMAIN);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__DELETE_DOMAIN_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__DELETE_MODULE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__DELETE_MODULE_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__DELETE_POLICY);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__DELETE_POLICY_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__DELETE_SIGNER_ID_TYPE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__DELETE_SIGNER_ID_TYPE_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE_IN_USE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE_IN_USE_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__UPDATE_DOMAIN);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__UPDATE_DOMAIN_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__UPDATE_DOMAIN_IN_USE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__UPDATE_DOMAIN_IN_USE_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__UPDATE_MODULE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__UPDATE_MODULE_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__UPDATE_MODULE_IN_USE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__UPDATE_MODULE_IN_USE_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__UPDATE_POLICY);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__UPDATE_POLICY_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__UPDATE_POLICY_IN_USE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__UPDATE_POLICY_IN_USE_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__FINALISE_ALL_FOR_DOMAIN);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__FINALISE_ALL_FOR_DOMAIN_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__FINALISE_DOMAIN);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__FINALISE_DOMAIN_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__FINALISE_MODULE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__FINALISE_MODULE_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__FINALISE_POLICY);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__FINALISE_POLICY_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__FINALISE_TEMPLATE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__FINALISE_TEMPLATE_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__FREE_TEXT_CONVERTER_STRING_EXCEPTION);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__ILLEGAL_COMPOSITION_EXCEPTION);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__INVALID_PROPERTIES_EXCEPTION);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__OBJECT_IN_USE_EXCEPTION);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__UPDATE_SIGNER_ID_TYPE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__UPDATE_SIGNER_ID_TYPE_RESPONSE);
+		createEReference(documentRootEClass, DOCUMENT_ROOT__VERSION_CONVERTER_CLASS_EXCEPTION);
 
 		domainDTOEClass = createEClass(DOMAIN_DTO);
 		createEAttribute(domainDTOEClass, DOMAIN_DTO__COMMENT);
@@ -10386,6 +12572,36 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 
 		fhirIdDTOEClass = createEClass(FHIR_ID_DTO);
 		createEAttribute(fhirIdDTOEClass, FHIR_ID_DTO__FHIR_ID);
+
+		finaliseAllForDomainEClass = createEClass(FINALISE_ALL_FOR_DOMAIN);
+		createEAttribute(finaliseAllForDomainEClass, FINALISE_ALL_FOR_DOMAIN__DOMAIN_NAME);
+
+		finaliseAllForDomainResponseEClass = createEClass(FINALISE_ALL_FOR_DOMAIN_RESPONSE);
+
+		finaliseDomainEClass = createEClass(FINALISE_DOMAIN);
+		createEAttribute(finaliseDomainEClass, FINALISE_DOMAIN__DOMAIN_NAME);
+
+		finaliseDomainResponseEClass = createEClass(FINALISE_DOMAIN_RESPONSE);
+
+		finaliseModuleEClass = createEClass(FINALISE_MODULE);
+		createEReference(finaliseModuleEClass, FINALISE_MODULE__MODULE_KEY);
+		createEAttribute(finaliseModuleEClass, FINALISE_MODULE__FINALISE_RELATED_ENTITIES);
+
+		finaliseModuleResponseEClass = createEClass(FINALISE_MODULE_RESPONSE);
+
+		finalisePolicyEClass = createEClass(FINALISE_POLICY);
+		createEReference(finalisePolicyEClass, FINALISE_POLICY__POLICY_KEY);
+
+		finalisePolicyResponseEClass = createEClass(FINALISE_POLICY_RESPONSE);
+
+		finaliseTemplateEClass = createEClass(FINALISE_TEMPLATE);
+		createEReference(finaliseTemplateEClass, FINALISE_TEMPLATE__CONSENT_TEMPLATE_KEY);
+		createEAttribute(finaliseTemplateEClass, FINALISE_TEMPLATE__FINALISE_RELATED_ENTITIES);
+
+		finaliseTemplateResponseEClass = createEClass(FINALISE_TEMPLATE_RESPONSE);
+
+		freeTextConverterStringExceptionEClass = createEClass(FREE_TEXT_CONVERTER_STRING_EXCEPTION);
+		createEAttribute(freeTextConverterStringExceptionEClass, FREE_TEXT_CONVERTER_STRING_EXCEPTION__MESSAGE);
 
 		freeTextDefDTOEClass = createEClass(FREE_TEXT_DEF_DTO);
 		createEAttribute(freeTextDefDTOEClass, FREE_TEXT_DEF_DTO__COMMENT);
@@ -10669,12 +12885,20 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 		internalExceptionEClass = createEClass(INTERNAL_EXCEPTION);
 		createEAttribute(internalExceptionEClass, INTERNAL_EXCEPTION__MESSAGE);
 
+		illegalCompositionExceptionEClass = createEClass(ILLEGAL_COMPOSITION_EXCEPTION);
+		createEAttribute(illegalCompositionExceptionEClass, ILLEGAL_COMPOSITION_EXCEPTION__ILLEGAL_ITEM_TYPE);
+		createEAttribute(illegalCompositionExceptionEClass, ILLEGAL_COMPOSITION_EXCEPTION__ILLEGAL_ITEM);
+		createEAttribute(illegalCompositionExceptionEClass, ILLEGAL_COMPOSITION_EXCEPTION__MESSAGE);
+
 		invalidFreeTextExceptionEClass = createEClass(INVALID_FREE_TEXT_EXCEPTION);
 		createEAttribute(invalidFreeTextExceptionEClass, INVALID_FREE_TEXT_EXCEPTION__MESSAGE);
 
 		invalidParameterExceptionEClass = createEClass(INVALID_PARAMETER_EXCEPTION);
 		createEAttribute(invalidParameterExceptionEClass, INVALID_PARAMETER_EXCEPTION__PARAMETER_NAME);
 		createEAttribute(invalidParameterExceptionEClass, INVALID_PARAMETER_EXCEPTION__MESSAGE);
+
+		invalidPropertiesExceptionEClass = createEClass(INVALID_PROPERTIES_EXCEPTION);
+		createEAttribute(invalidPropertiesExceptionEClass, INVALID_PROPERTIES_EXCEPTION__MESSAGE);
 
 		invalidVersionExceptionEClass = createEClass(INVALID_VERSION_EXCEPTION);
 		createEAttribute(invalidVersionExceptionEClass, INVALID_VERSION_EXCEPTION__MESSAGE);
@@ -10810,6 +13034,9 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 
 		moduleStatesTypeEClass = createEClass(MODULE_STATES_TYPE);
 		createEReference(moduleStatesTypeEClass, MODULE_STATES_TYPE__ENTRY);
+
+		objectInUseExceptionEClass = createEClass(OBJECT_IN_USE_EXCEPTION);
+		createEAttribute(objectInUseExceptionEClass, OBJECT_IN_USE_EXCEPTION__MESSAGE);
 
 		policyDTOEClass = createEClass(POLICY_DTO);
 		createEAttribute(policyDTOEClass, POLICY_DTO__COMMENT);
@@ -11023,6 +13250,70 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 
 		updateConsentInUseResponseEClass = createEClass(UPDATE_CONSENT_IN_USE_RESPONSE);
 
+		updateConsentTemplateEClass = createEClass(UPDATE_CONSENT_TEMPLATE);
+		createEReference(updateConsentTemplateEClass, UPDATE_CONSENT_TEMPLATE__CONSENT_TEMPLATE);
+		createEAttribute(updateConsentTemplateEClass, UPDATE_CONSENT_TEMPLATE__FINALISE_RELATED_ENTITIES);
+
+		updateConsentTemplateInUseEClass = createEClass(UPDATE_CONSENT_TEMPLATE_IN_USE);
+		createEReference(updateConsentTemplateInUseEClass, UPDATE_CONSENT_TEMPLATE_IN_USE__CONSENT_TEMPLATE);
+
+		updateConsentTemplateInUseResponseEClass = createEClass(UPDATE_CONSENT_TEMPLATE_IN_USE_RESPONSE);
+
+		updateConsentTemplateResponseEClass = createEClass(UPDATE_CONSENT_TEMPLATE_RESPONSE);
+
+		updateDomainEClass = createEClass(UPDATE_DOMAIN);
+		createEReference(updateDomainEClass, UPDATE_DOMAIN__DOMAIN);
+
+		updateDomainInUseEClass = createEClass(UPDATE_DOMAIN_IN_USE);
+		createEAttribute(updateDomainInUseEClass, UPDATE_DOMAIN_IN_USE__DOMAIN_NAME);
+		createEAttribute(updateDomainInUseEClass, UPDATE_DOMAIN_IN_USE__LABEL);
+		createEAttribute(updateDomainInUseEClass, UPDATE_DOMAIN_IN_USE__LOGO);
+		createEAttribute(updateDomainInUseEClass, UPDATE_DOMAIN_IN_USE__EXTERN_PROPERTIES);
+		createEReference(updateDomainInUseEClass, UPDATE_DOMAIN_IN_USE__EXPIRATION_PROPERTIES);
+		createEAttribute(updateDomainInUseEClass, UPDATE_DOMAIN_IN_USE__COMMENT);
+		createEReference(updateDomainInUseEClass, UPDATE_DOMAIN_IN_USE__CONFIG);
+
+		updateDomainInUseResponseEClass = createEClass(UPDATE_DOMAIN_IN_USE_RESPONSE);
+
+		updateDomainResponseEClass = createEClass(UPDATE_DOMAIN_RESPONSE);
+
+		updateModuleEClass = createEClass(UPDATE_MODULE);
+		createEReference(updateModuleEClass, UPDATE_MODULE__MODULE);
+		createEAttribute(updateModuleEClass, UPDATE_MODULE__FINALISE_RELATED_ENTITIES);
+
+		updateModuleInUseEClass = createEClass(UPDATE_MODULE_IN_USE);
+		createEReference(updateModuleInUseEClass, UPDATE_MODULE_IN_USE__MODULE_KEY);
+		createEAttribute(updateModuleInUseEClass, UPDATE_MODULE_IN_USE__LABEL);
+		createEAttribute(updateModuleInUseEClass, UPDATE_MODULE_IN_USE__SHORT_TEXT);
+		createEAttribute(updateModuleInUseEClass, UPDATE_MODULE_IN_USE__EXTERN_PROPERTIES);
+		createEAttribute(updateModuleInUseEClass, UPDATE_MODULE_IN_USE__COMMENT);
+		createEReference(updateModuleInUseEClass, UPDATE_MODULE_IN_USE__ASSIGNED_POLICIES);
+
+		updateModuleInUseResponseEClass = createEClass(UPDATE_MODULE_IN_USE_RESPONSE);
+
+		updateModuleResponseEClass = createEClass(UPDATE_MODULE_RESPONSE);
+
+		updatePolicyEClass = createEClass(UPDATE_POLICY);
+		createEReference(updatePolicyEClass, UPDATE_POLICY__POLICY);
+
+		updatePolicyInUseEClass = createEClass(UPDATE_POLICY_IN_USE);
+		createEReference(updatePolicyInUseEClass, UPDATE_POLICY_IN_USE__POLICY_KEY);
+		createEAttribute(updatePolicyInUseEClass, UPDATE_POLICY_IN_USE__LABEL);
+		createEAttribute(updatePolicyInUseEClass, UPDATE_POLICY_IN_USE__EXTERN_PROPERTIES);
+		createEAttribute(updatePolicyInUseEClass, UPDATE_POLICY_IN_USE__COMMENT);
+
+		updatePolicyInUseResponseEClass = createEClass(UPDATE_POLICY_IN_USE_RESPONSE);
+
+		updatePolicyResponseEClass = createEClass(UPDATE_POLICY_RESPONSE);
+
+		updateSignerIdTypeEClass = createEClass(UPDATE_SIGNER_ID_TYPE);
+		createEAttribute(updateSignerIdTypeEClass, UPDATE_SIGNER_ID_TYPE__DOMAIN_NAME);
+		createEAttribute(updateSignerIdTypeEClass, UPDATE_SIGNER_ID_TYPE__SIGNER_ID_TYPE_NAME);
+		createEAttribute(updateSignerIdTypeEClass, UPDATE_SIGNER_ID_TYPE__LABEL);
+		createEAttribute(updateSignerIdTypeEClass, UPDATE_SIGNER_ID_TYPE__COMMENT);
+
+		updateSignerIdTypeResponseEClass = createEClass(UPDATE_SIGNER_ID_TYPE_RESPONSE);
+
 		validateConsentEClass = createEClass(VALIDATE_CONSENT);
 		createEReference(validateConsentEClass, VALIDATE_CONSENT__CONSENT);
 		createEAttribute(validateConsentEClass, VALIDATE_CONSENT__ALLOW_REVOKE);
@@ -11034,11 +13325,15 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 		createEAttribute(validFromPropertiesDTOEClass, VALID_FROM_PROPERTIES_DTO__FIXED_VALID_FROM_DATE);
 		createEAttribute(validFromPropertiesDTOEClass, VALID_FROM_PROPERTIES_DTO__INVALID_PERIOD);
 
+		versionConverterClassExceptionEClass = createEClass(VERSION_CONVERTER_CLASS_EXCEPTION);
+		createEAttribute(versionConverterClassExceptionEClass, VERSION_CONVERTER_CLASS_EXCEPTION__MESSAGE);
+
 		// Create enums
 		consentStatusEEnum = createEEnum(CONSENT_STATUS);
 		consentStatusTypeEEnum = createEEnum(CONSENT_STATUS_TYPE);
 		consentTemplateTypeEEnum = createEEnum(CONSENT_TEMPLATE_TYPE);
 		freeTextTypeEEnum = createEEnum(FREE_TEXT_TYPE);
+		itemTypeEEnum = createEEnum(ITEM_TYPE);
 		qcProblemStatusEEnum = createEEnum(QC_PROBLEM_STATUS);
 		qcProblemTypeErrorEEnum = createEEnum(QC_PROBLEM_TYPE_ERROR);
 		qcProblemTypeFieldEEnum = createEEnum(QC_PROBLEM_TYPE_FIELD);
@@ -11050,6 +13345,7 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 		consentStatusTypeObjectEDataType = createEDataType(CONSENT_STATUS_TYPE_OBJECT);
 		consentTemplateTypeObjectEDataType = createEDataType(CONSENT_TEMPLATE_TYPE_OBJECT);
 		freeTextTypeObjectEDataType = createEDataType(FREE_TEXT_TYPE_OBJECT);
+		itemTypeObjectEDataType = createEDataType(ITEM_TYPE_OBJECT);
 		qcProblemStatusObjectEDataType = createEDataType(QC_PROBLEM_STATUS_OBJECT);
 		qcProblemTypeErrorObjectEDataType = createEDataType(QC_PROBLEM_TYPE_ERROR_OBJECT);
 		qcProblemTypeFieldObjectEDataType = createEDataType(QC_PROBLEM_TYPE_FIELD_OBJECT);
@@ -11131,6 +13427,28 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 
 		initEClass(addConsentResponseEClass, AddConsentResponse.class, "AddConsentResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(addConsentTemplateEClass, AddConsentTemplate.class, "AddConsentTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAddConsentTemplate_ConsentTemplate(), this.getConsentTemplateDTO(), null, "consentTemplate", null, 1, 1, AddConsentTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAddConsentTemplate_FinaliseRelatedEntities(), theXMLTypePackage.getBoolean(), "finaliseRelatedEntities", null, 1, 1, AddConsentTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(addConsentTemplateResponseEClass, AddConsentTemplateResponse.class, "AddConsentTemplateResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(addDomainEClass, AddDomain.class, "AddDomain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAddDomain_Domain(), this.getDomainDTO(), null, "domain", null, 1, 1, AddDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(addDomainResponseEClass, AddDomainResponse.class, "AddDomainResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(addModuleEClass, AddModule.class, "AddModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAddModule_Module(), this.getModuleDTO(), null, "module", null, 1, 1, AddModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAddModule_FinaliseRelatedEntities(), theXMLTypePackage.getBoolean(), "finaliseRelatedEntities", null, 1, 1, AddModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(addModuleResponseEClass, AddModuleResponse.class, "AddModuleResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(addPolicyEClass, AddPolicy.class, "AddPolicy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAddPolicy_Policy(), this.getPolicyDTO(), null, "policy", null, 1, 1, AddPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(addPolicyResponseEClass, AddPolicyResponse.class, "AddPolicyResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(addScanToConsentEClass, AddScanToConsent.class, "AddScanToConsent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAddScanToConsent_ConsentKey(), this.getConsentKeyDTO(), null, "consentKey", null, 1, 1, AddScanToConsent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAddScanToConsent_ScanBase64(), theXMLTypePackage.getString(), "scanBase64", null, 1, 1, AddScanToConsent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -11138,6 +13456,12 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 		initEAttribute(getAddScanToConsent_FileName(), theXMLTypePackage.getString(), "fileName", null, 1, 1, AddScanToConsent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(addScanToConsentResponseEClass, AddScanToConsentResponse.class, "AddScanToConsentResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(addSignerIdTypeEClass, AddSignerIdType.class, "AddSignerIdType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAddSignerIdType_DomainName(), theXMLTypePackage.getString(), "domainName", null, 1, 1, AddSignerIdType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAddSignerIdType_SignerIdTypeName(), theXMLTypePackage.getString(), "signerIdTypeName", null, 1, 1, AddSignerIdType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(addSignerIdTypeResponseEClass, AddSignerIdTypeResponse.class, "AddSignerIdTypeResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(addSignerIdToConsentEClass, AddSignerIdToConsent.class, "AddSignerIdToConsent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAddSignerIdToConsent_ConsentKey(), this.getConsentKeyDTO(), null, "consentKey", null, 1, 1, AddSignerIdToConsent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -11273,6 +13597,32 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 		initEReference(getDeactivateAlias_AliasSignerId(), this.getSignerIdDTO(), null, "aliasSignerId", null, 1, 1, DeactivateAlias.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(deactivateAliasResponseEClass, DeactivateAliasResponse.class, "DeactivateAliasResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(deleteConsentTemplateEClass, DeleteConsentTemplate.class, "DeleteConsentTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDeleteConsentTemplate_ConsentTemplateKey(), this.getConsentTemplateKeyDTO(), null, "consentTemplateKey", null, 1, 1, DeleteConsentTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(deleteConsentTemplateResponseEClass, DeleteConsentTemplateResponse.class, "DeleteConsentTemplateResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(deleteDomainEClass, DeleteDomain.class, "DeleteDomain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDeleteDomain_DomainName(), theXMLTypePackage.getString(), "domainName", null, 1, 1, DeleteDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(deleteDomainResponseEClass, DeleteDomainResponse.class, "DeleteDomainResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(deleteModuleEClass, DeleteModule.class, "DeleteModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDeleteModule_ModuleKey(), this.getModuleKeyDTO(), null, "moduleKey", null, 1, 1, DeleteModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(deleteModuleResponseEClass, DeleteModuleResponse.class, "DeleteModuleResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(deletePolicyEClass, DeletePolicy.class, "DeletePolicy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDeletePolicy_PolicyKey(), this.getPolicyKeyDTO(), null, "policyKey", null, 1, 1, DeletePolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(deletePolicyResponseEClass, DeletePolicyResponse.class, "DeletePolicyResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(deleteSignerIdTypeEClass, DeleteSignerIdType.class, "DeleteSignerIdType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDeleteSignerIdType_DomainName(), theXMLTypePackage.getString(), "domainName", null, 1, 1, DeleteSignerIdType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDeleteSignerIdType_SignerIdTypeName(), theXMLTypePackage.getString(), "signerIdTypeName", null, 1, 1, DeleteSignerIdType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(deleteSignerIdTypeResponseEClass, DeleteSignerIdTypeResponse.class, "DeleteSignerIdTypeResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(documentRootEClass, DocumentRoot.class, "DocumentRoot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDocumentRoot_Mixed(), ecorePackage.getEFeatureMapEntry(), "mixed", null, 0, -1, null, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -11416,6 +13766,59 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 		initEReference(getDocumentRoot_UpdateConsentInUseResponse(), this.getUpdateConsentInUseResponse(), null, "updateConsentInUseResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getDocumentRoot_ValidateConsent(), this.getValidateConsent(), null, "validateConsent", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getDocumentRoot_ValidateConsentResponse(), this.getValidateConsentResponse(), null, "validateConsentResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_AddConsentTemplate(), this.getAddConsentTemplate(), null, "addConsentTemplate", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_AddConsentTemplateResponse(), this.getAddConsentTemplateResponse(), null, "addConsentTemplateResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_AddModule(), this.getAddModule(), null, "addModule", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_AddModuleResponse(), this.getAddModuleResponse(), null, "addModuleResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_AddDomain(), this.getAddDomain(), null, "addDomain", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_AddDomainResponse(), this.getAddDomainResponse(), null, "addDomainResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_AddPolicy(), this.getAddPolicy(), null, "addPolicy", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_AddPolicyResponse(), this.getAddPolicyResponse(), null, "addPolicyResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_AddSignerIdType(), this.getAddSignerIdType(), null, "addSignerIdType", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_AddSignerIdTypeResponse(), this.getAddSignerIdTypeResponse(), null, "addSignerIdTypeResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_DeleteConsentTemplate(), this.getDeleteConsentTemplate(), null, "deleteConsentTemplate", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_DeleteConsentTemplateResponse(), this.getDeleteConsentTemplateResponse(), null, "deleteConsentTemplateResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_DeleteDomain(), this.getDeleteDomain(), null, "deleteDomain", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_DeleteDomainResponse(), this.getDeleteDomainResponse(), null, "deleteDomainResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_DeleteModule(), this.getDeleteModule(), null, "deleteModule", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_DeleteModuleResponse(), this.getDeleteModuleResponse(), null, "deleteModuleResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_DeletePolicy(), this.getDeletePolicy(), null, "deletePolicy", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_DeletePolicyResponse(), this.getDeletePolicyResponse(), null, "deletePolicyResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_DeleteSignerIdType(), this.getDeleteSignerIdType(), null, "deleteSignerIdType", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_DeleteSignerIdTypeResponse(), this.getDeleteSignerIdTypeResponse(), null, "deleteSignerIdTypeResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_UpdateConsentTemplate(), this.getUpdateConsentTemplate(), null, "updateConsentTemplate", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_UpdateConsentTemplateResponse(), this.getUpdateConsentTemplateResponse(), null, "updateConsentTemplateResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_UpdateConsentTemplateInUse(), this.getUpdateConsentTemplateInUse(), null, "updateConsentTemplateInUse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_UpdateConsentTemplateInUseResponse(), this.getUpdateConsentTemplateInUseResponse(), null, "updateConsentTemplateInUseResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_UpdateDomain(), this.getUpdateDomain(), null, "updateDomain", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_UpdateDomainResponse(), this.getUpdateDomainResponse(), null, "updateDomainResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_UpdateDomainInUse(), this.getUpdateDomainInUse(), null, "updateDomainInUse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_UpdateDomainInUseResponse(), this.getUpdateDomainInUseResponse(), null, "updateDomainInUseResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_UpdateModule(), this.getUpdateModule(), null, "updateModule", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_UpdateModuleResponse(), this.getUpdateModuleResponse(), null, "updateModuleResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_UpdateModuleInUse(), this.getUpdateModuleInUse(), null, "updateModuleInUse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_UpdateModuleInUseResponse(), this.getUpdateModuleInUseResponse(), null, "updateModuleInUseResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_UpdatePolicy(), this.getUpdatePolicy(), null, "updatePolicy", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_UpdatePolicyResponse(), this.getUpdatePolicyResponse(), null, "updatePolicyResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_UpdatePolicyInUse(), this.getUpdatePolicyInUse(), null, "updatePolicyInUse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_UpdatePolicyInUseResponse(), this.getUpdatePolicyInUseResponse(), null, "updatePolicyInUseResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_FinaliseAllForDomain(), this.getFinaliseAllForDomain(), null, "finaliseAllForDomain", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_FinaliseAllForDomainResponse(), this.getFinaliseAllForDomainResponse(), null, "finaliseAllForDomainResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_FinaliseDomain(), this.getFinaliseDomain(), null, "finaliseDomain", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_FinaliseDomainResponse(), this.getFinaliseDomainResponse(), null, "finaliseDomainResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_FinaliseModule(), this.getFinaliseModule(), null, "finaliseModule", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_FinaliseModuleResponse(), this.getFinaliseModuleResponse(), null, "finaliseModuleResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_FinalisePolicy(), this.getFinalisePolicy(), null, "finalisePolicy", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_FinalisePolicyResponse(), this.getFinalisePolicyResponse(), null, "finalisePolicyResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_FinaliseTemplate(), this.getFinaliseTemplate(), null, "finaliseTemplate", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_FinaliseTemplateResponse(), this.getFinaliseTemplateResponse(), null, "finaliseTemplateResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_FreeTextConverterStringException(), this.getFreeTextConverterStringException(), null, "freeTextConverterStringException", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_IllegalCompositionException(), this.getIllegalCompositionException(), null, "illegalCompositionException", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_InvalidPropertiesException(), this.getInvalidPropertiesException(), null, "invalidPropertiesException", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_ObjectInUseException(), this.getObjectInUseException(), null, "objectInUseException", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_UpdateSignerIdType(), this.getUpdateSignerIdType(), null, "updateSignerIdType", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_UpdateSignerIdTypeResponse(), this.getUpdateSignerIdTypeResponse(), null, "updateSignerIdTypeResponse", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentRoot_VersionConverterClassException(), this.getVersionConverterClassException(), null, "versionConverterClassException", null, 0, -2, null, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(domainDTOEClass, DomainDTO.class, "DomainDTO", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDomainDTO_Comment(), theXMLTypePackage.getString(), "comment", null, 0, 1, DomainDTO.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -11462,6 +13865,36 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 
 		initEClass(fhirIdDTOEClass, FhirIdDTO.class, "FhirIdDTO", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFhirIdDTO_FhirID(), theXMLTypePackage.getString(), "fhirID", null, 0, 1, FhirIdDTO.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(finaliseAllForDomainEClass, FinaliseAllForDomain.class, "FinaliseAllForDomain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFinaliseAllForDomain_DomainName(), theXMLTypePackage.getString(), "domainName", null, 1, 1, FinaliseAllForDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(finaliseAllForDomainResponseEClass, FinaliseAllForDomainResponse.class, "FinaliseAllForDomainResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(finaliseDomainEClass, FinaliseDomain.class, "FinaliseDomain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFinaliseDomain_DomainName(), theXMLTypePackage.getString(), "domainName", null, 1, 1, FinaliseDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(finaliseDomainResponseEClass, FinaliseDomainResponse.class, "FinaliseDomainResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(finaliseModuleEClass, FinaliseModule.class, "FinaliseModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFinaliseModule_ModuleKey(), this.getModuleKeyDTO(), null, "moduleKey", null, 1, 1, FinaliseModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFinaliseModule_FinaliseRelatedEntities(), theXMLTypePackage.getBoolean(), "finaliseRelatedEntities", null, 1, 1, FinaliseModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(finaliseModuleResponseEClass, FinaliseModuleResponse.class, "FinaliseModuleResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(finalisePolicyEClass, FinalisePolicy.class, "FinalisePolicy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFinalisePolicy_PolicyKey(), this.getPolicyKeyDTO(), null, "policyKey", null, 1, 1, FinalisePolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(finalisePolicyResponseEClass, FinalisePolicyResponse.class, "FinalisePolicyResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(finaliseTemplateEClass, FinaliseTemplate.class, "FinaliseTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFinaliseTemplate_ConsentTemplateKey(), this.getConsentTemplateKeyDTO(), null, "consentTemplateKey", null, 1, 1, FinaliseTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFinaliseTemplate_FinaliseRelatedEntities(), theXMLTypePackage.getBoolean(), "finaliseRelatedEntities", null, 1, 1, FinaliseTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(finaliseTemplateResponseEClass, FinaliseTemplateResponse.class, "FinaliseTemplateResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(freeTextConverterStringExceptionEClass, FreeTextConverterStringException.class, "FreeTextConverterStringException", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFreeTextConverterStringException_Message(), theXMLTypePackage.getString(), "message", null, 0, 1, FreeTextConverterStringException.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(freeTextDefDTOEClass, FreeTextDefDTO.class, "FreeTextDefDTO", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFreeTextDefDTO_Comment(), theXMLTypePackage.getString(), "comment", null, 0, 1, FreeTextDefDTO.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -11745,12 +14178,20 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 		initEClass(internalExceptionEClass, InternalException.class, "InternalException", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInternalException_Message(), theXMLTypePackage.getString(), "message", null, 0, 1, InternalException.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(illegalCompositionExceptionEClass, IllegalCompositionException.class, "IllegalCompositionException", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIllegalCompositionException_IllegalItemType(), this.getItemType(), "illegalItemType", null, 0, 1, IllegalCompositionException.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIllegalCompositionException_IllegalItem(), theXMLTypePackage.getString(), "illegalItem", null, 0, 1, IllegalCompositionException.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIllegalCompositionException_Message(), theXMLTypePackage.getString(), "message", null, 0, 1, IllegalCompositionException.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(invalidFreeTextExceptionEClass, InvalidFreeTextException.class, "InvalidFreeTextException", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInvalidFreeTextException_Message(), theXMLTypePackage.getString(), "message", null, 0, 1, InvalidFreeTextException.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(invalidParameterExceptionEClass, InvalidParameterException.class, "InvalidParameterException", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInvalidParameterException_ParameterName(), theXMLTypePackage.getString(), "parameterName", null, 0, 1, InvalidParameterException.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInvalidParameterException_Message(), theXMLTypePackage.getString(), "message", null, 0, 1, InvalidParameterException.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(invalidPropertiesExceptionEClass, InvalidPropertiesException.class, "InvalidPropertiesException", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getInvalidPropertiesException_Message(), theXMLTypePackage.getString(), "message", null, 0, 1, InvalidPropertiesException.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(invalidVersionExceptionEClass, InvalidVersionException.class, "InvalidVersionException", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInvalidVersionException_Message(), theXMLTypePackage.getString(), "message", null, 0, 1, InvalidVersionException.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -11886,6 +14327,9 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 
 		initEClass(moduleStatesTypeEClass, ModuleStatesType.class, "ModuleStatesType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getModuleStatesType_Entry(), this.getEntryType1(), null, "entry", null, 0, -1, ModuleStatesType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(objectInUseExceptionEClass, ObjectInUseException.class, "ObjectInUseException", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getObjectInUseException_Message(), theXMLTypePackage.getString(), "message", null, 0, 1, ObjectInUseException.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(policyDTOEClass, PolicyDTO.class, "PolicyDTO", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPolicyDTO_Comment(), theXMLTypePackage.getString(), "comment", null, 0, 1, PolicyDTO.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -12099,6 +14543,70 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 
 		initEClass(updateConsentInUseResponseEClass, UpdateConsentInUseResponse.class, "UpdateConsentInUseResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(updateConsentTemplateEClass, UpdateConsentTemplate.class, "UpdateConsentTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getUpdateConsentTemplate_ConsentTemplate(), this.getConsentTemplateDTO(), null, "consentTemplate", null, 1, 1, UpdateConsentTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdateConsentTemplate_FinaliseRelatedEntities(), theXMLTypePackage.getBoolean(), "finaliseRelatedEntities", null, 1, 1, UpdateConsentTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(updateConsentTemplateInUseEClass, UpdateConsentTemplateInUse.class, "UpdateConsentTemplateInUse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getUpdateConsentTemplateInUse_ConsentTemplate(), this.getConsentTemplateDTO(), null, "consentTemplate", null, 1, 1, UpdateConsentTemplateInUse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(updateConsentTemplateInUseResponseEClass, UpdateConsentTemplateInUseResponse.class, "UpdateConsentTemplateInUseResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(updateConsentTemplateResponseEClass, UpdateConsentTemplateResponse.class, "UpdateConsentTemplateResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(updateDomainEClass, UpdateDomain.class, "UpdateDomain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getUpdateDomain_Domain(), this.getDomainDTO(), null, "domain", null, 1, 1, UpdateDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(updateDomainInUseEClass, UpdateDomainInUse.class, "UpdateDomainInUse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getUpdateDomainInUse_DomainName(), theXMLTypePackage.getString(), "domainName", null, 1, 1, UpdateDomainInUse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdateDomainInUse_Label(), theXMLTypePackage.getString(), "label", null, 1, 1, UpdateDomainInUse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdateDomainInUse_Logo(), theXMLTypePackage.getString(), "logo", null, 1, 1, UpdateDomainInUse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdateDomainInUse_ExternProperties(), theXMLTypePackage.getString(), "externProperties", null, 1, 1, UpdateDomainInUse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUpdateDomainInUse_ExpirationProperties(), this.getExpirationPropertiesDTO(), null, "expirationProperties", null, 1, 1, UpdateDomainInUse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdateDomainInUse_Comment(), theXMLTypePackage.getString(), "comment", null, 1, 1, UpdateDomainInUse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUpdateDomainInUse_Config(), theConfigPackage.getDomainConfig(), null, "config", null, 0, 1, UpdateDomainInUse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(updateDomainInUseResponseEClass, UpdateDomainInUseResponse.class, "UpdateDomainInUseResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(updateDomainResponseEClass, UpdateDomainResponse.class, "UpdateDomainResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(updateModuleEClass, UpdateModule.class, "UpdateModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getUpdateModule_Module(), this.getModuleDTO(), null, "module", null, 1, 1, UpdateModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdateModule_FinaliseRelatedEntities(), theXMLTypePackage.getBoolean(), "finaliseRelatedEntities", null, 1, 1, UpdateModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(updateModuleInUseEClass, UpdateModuleInUse.class, "UpdateModuleInUse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getUpdateModuleInUse_ModuleKey(), this.getModuleKeyDTO(), null, "moduleKey", null, 1, 1, UpdateModuleInUse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdateModuleInUse_Label(), theXMLTypePackage.getString(), "label", null, 1, 1, UpdateModuleInUse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdateModuleInUse_ShortText(), theXMLTypePackage.getString(), "shortText", null, 1, 1, UpdateModuleInUse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdateModuleInUse_ExternProperties(), theXMLTypePackage.getString(), "externProperties", null, 1, 1, UpdateModuleInUse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdateModuleInUse_Comment(), theXMLTypePackage.getString(), "comment", null, 1, 1, UpdateModuleInUse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUpdateModuleInUse_AssignedPolicies(), this.getAssignedPolicyDTO(), null, "assignedPolicies", null, 1, -1, UpdateModuleInUse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(updateModuleInUseResponseEClass, UpdateModuleInUseResponse.class, "UpdateModuleInUseResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(updateModuleResponseEClass, UpdateModuleResponse.class, "UpdateModuleResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(updatePolicyEClass, UpdatePolicy.class, "UpdatePolicy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getUpdatePolicy_Policy(), this.getPolicyDTO(), null, "policy", null, 1, 1, UpdatePolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(updatePolicyInUseEClass, UpdatePolicyInUse.class, "UpdatePolicyInUse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getUpdatePolicyInUse_PolicyKey(), this.getPolicyKeyDTO(), null, "policyKey", null, 1, 1, UpdatePolicyInUse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatePolicyInUse_Label(), theXMLTypePackage.getString(), "label", null, 1, 1, UpdatePolicyInUse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatePolicyInUse_ExternProperties(), theXMLTypePackage.getString(), "externProperties", null, 1, 1, UpdatePolicyInUse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatePolicyInUse_Comment(), theXMLTypePackage.getString(), "comment", null, 1, 1, UpdatePolicyInUse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(updatePolicyInUseResponseEClass, UpdatePolicyInUseResponse.class, "UpdatePolicyInUseResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(updatePolicyResponseEClass, UpdatePolicyResponse.class, "UpdatePolicyResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(updateSignerIdTypeEClass, UpdateSignerIdType.class, "UpdateSignerIdType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getUpdateSignerIdType_DomainName(), theXMLTypePackage.getString(), "domainName", null, 1, 1, UpdateSignerIdType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdateSignerIdType_SignerIdTypeName(), theXMLTypePackage.getString(), "signerIdTypeName", null, 1, 1, UpdateSignerIdType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdateSignerIdType_Label(), theXMLTypePackage.getString(), "label", null, 1, 1, UpdateSignerIdType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdateSignerIdType_Comment(), theXMLTypePackage.getString(), "comment", null, 1, 1, UpdateSignerIdType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(updateSignerIdTypeResponseEClass, UpdateSignerIdTypeResponse.class, "UpdateSignerIdTypeResponse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(validateConsentEClass, ValidateConsent.class, "ValidateConsent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getValidateConsent_Consent(), this.getConsentDTO(), null, "consent", null, 1, 1, ValidateConsent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getValidateConsent_AllowRevoke(), theXMLTypePackage.getBoolean(), "allowRevoke", null, 1, 1, ValidateConsent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -12109,6 +14617,9 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 		initEClass(validFromPropertiesDTOEClass, ValidFromPropertiesDTO.class, "ValidFromPropertiesDTO", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getValidFromPropertiesDTO_FixedValidFromDate(), theXMLTypePackage.getDateTime(), "fixedValidFromDate", null, 0, 1, ValidFromPropertiesDTO.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getValidFromPropertiesDTO_InvalidPeriod(), theXMLTypePackage.getString(), "invalidPeriod", null, 0, 1, ValidFromPropertiesDTO.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(versionConverterClassExceptionEClass, VersionConverterClassException.class, "VersionConverterClassException", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVersionConverterClassException_Message(), theXMLTypePackage.getString(), "message", null, 0, 1, VersionConverterClassException.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(consentStatusEEnum, ConsentStatus.class, "ConsentStatus");
@@ -12142,6 +14653,10 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 		addEEnumLiteral(freeTextTypeEEnum, FreeTextType.INTEGER);
 		addEEnumLiteral(freeTextTypeEEnum, FreeTextType.DOUBLE);
 		addEEnumLiteral(freeTextTypeEEnum, FreeTextType.BOOLEAN);
+
+		initEEnum(itemTypeEEnum, ItemType.class, "ItemType");
+		addEEnumLiteral(itemTypeEEnum, ItemType.POLICY);
+		addEEnumLiteral(itemTypeEEnum, ItemType.MODULE);
 
 		initEEnum(qcProblemStatusEEnum, QcProblemStatus.class, "QcProblemStatus");
 		addEEnumLiteral(qcProblemStatusEEnum, QcProblemStatus.OPENEXTERN);
@@ -12197,6 +14712,7 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 		initEDataType(consentStatusTypeObjectEDataType, ConsentStatusType.class, "ConsentStatusTypeObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(consentTemplateTypeObjectEDataType, ConsentTemplateType.class, "ConsentTemplateTypeObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(freeTextTypeObjectEDataType, FreeTextType.class, "FreeTextTypeObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(itemTypeObjectEDataType, ItemType.class, "ItemTypeObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(qcProblemStatusObjectEDataType, QcProblemStatus.class, "QcProblemStatusObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(qcProblemTypeErrorObjectEDataType, QcProblemTypeError.class, "QcProblemTypeErrorObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(qcProblemTypeFieldObjectEDataType, QcProblemTypeField.class, "QcProblemTypeFieldObject", IS_SERIALIZABLE, IS_GENERATED_INSTANCE_CLASS);
@@ -12318,6 +14834,104 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 			   "kind", "empty"
 		   });
 		addAnnotation
+		  (addConsentTemplateEClass,
+		   source,
+		   new String[] {
+			   "name", "addConsentTemplate",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getAddConsentTemplate_ConsentTemplate(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "consentTemplate"
+		   });
+		addAnnotation
+		  (getAddConsentTemplate_FinaliseRelatedEntities(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "finaliseRelatedEntities"
+		   });
+		addAnnotation
+		  (addConsentTemplateResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "addConsentTemplateResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (addDomainEClass,
+		   source,
+		   new String[] {
+			   "name", "addDomain",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getAddDomain_Domain(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "domain"
+		   });
+		addAnnotation
+		  (addDomainResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "addDomainResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (addModuleEClass,
+		   source,
+		   new String[] {
+			   "name", "addModule",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getAddModule_Module(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "module"
+		   });
+		addAnnotation
+		  (getAddModule_FinaliseRelatedEntities(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "finaliseRelatedEntities"
+		   });
+		addAnnotation
+		  (addModuleResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "addModuleResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (addPolicyEClass,
+		   source,
+		   new String[] {
+			   "name", "addPolicy",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getAddPolicy_Policy(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "policy"
+		   });
+		addAnnotation
+		  (addPolicyResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "addPolicyResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
 		  (addScanToConsentEClass,
 		   source,
 		   new String[] {
@@ -12357,6 +14971,34 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 		   source,
 		   new String[] {
 			   "name", "addScanToConsentResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (addSignerIdTypeEClass,
+		   source,
+		   new String[] {
+			   "name", "addSignerIdType",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getAddSignerIdType_DomainName(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "domainName"
+		   });
+		addAnnotation
+		  (getAddSignerIdType_SignerIdTypeName(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "signerIdTypeName"
+		   });
+		addAnnotation
+		  (addSignerIdTypeResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "addSignerIdTypeResponse",
 			   "kind", "empty"
 		   });
 		addAnnotation
@@ -13194,6 +15836,118 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 		   source,
 		   new String[] {
 			   "name", "deactivateAliasResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (deleteConsentTemplateEClass,
+		   source,
+		   new String[] {
+			   "name", "deleteConsentTemplate",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getDeleteConsentTemplate_ConsentTemplateKey(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "consentTemplateKey"
+		   });
+		addAnnotation
+		  (deleteConsentTemplateResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "deleteConsentTemplateResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (deleteDomainEClass,
+		   source,
+		   new String[] {
+			   "name", "deleteDomain",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getDeleteDomain_DomainName(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "domainName"
+		   });
+		addAnnotation
+		  (deleteDomainResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "deleteDomainResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (deleteModuleEClass,
+		   source,
+		   new String[] {
+			   "name", "deleteModule",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getDeleteModule_ModuleKey(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "moduleKey"
+		   });
+		addAnnotation
+		  (deleteModuleResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "deleteModuleResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (deletePolicyEClass,
+		   source,
+		   new String[] {
+			   "name", "deletePolicy",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getDeletePolicy_PolicyKey(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "policyKey"
+		   });
+		addAnnotation
+		  (deletePolicyResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "deletePolicyResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (deleteSignerIdTypeEClass,
+		   source,
+		   new String[] {
+			   "name", "deleteSignerIdType",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getDeleteSignerIdType_DomainName(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "domainName"
+		   });
+		addAnnotation
+		  (getDeleteSignerIdType_SignerIdTypeName(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "signerIdTypeName"
+		   });
+		addAnnotation
+		  (deleteSignerIdTypeResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "deleteSignerIdTypeResponse",
 			   "kind", "empty"
 		   });
 		addAnnotation
@@ -14329,6 +17083,430 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 			   "namespace", "##targetNamespace"
 		   });
 		addAnnotation
+		  (getDocumentRoot_AddConsentTemplate(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_AddConsentTemplateResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_AddModule(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_AddModuleResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_AddDomain(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_AddDomainResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_AddPolicy(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_AddPolicyResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_AddSignerIdType(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_AddSignerIdTypeResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_DeleteConsentTemplate(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_DeleteConsentTemplateResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_DeleteDomain(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_DeleteDomainResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_DeleteModule(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_DeleteModuleResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_DeletePolicy(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_DeletePolicyResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_DeleteSignerIdType(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_DeleteSignerIdTypeResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_UpdateConsentTemplate(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_UpdateConsentTemplateResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_UpdateConsentTemplateInUse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_UpdateConsentTemplateInUseResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_UpdateDomain(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_UpdateDomainResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_UpdateDomainInUse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_UpdateDomainInUseResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_UpdateModule(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_UpdateModuleResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_UpdateModuleInUse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_UpdateModuleInUseResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_UpdatePolicy(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_UpdatePolicyResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_UpdatePolicyInUse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_UpdatePolicyInUseResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_FinaliseAllForDomain(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_FinaliseAllForDomainResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_FinaliseDomain(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_FinaliseDomainResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_FinaliseModule(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_FinaliseModuleResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_FinalisePolicy(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_FinalisePolicyResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_FinaliseTemplate(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_FinaliseTemplateResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_FreeTextConverterStringException(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_IllegalCompositionException(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_InvalidPropertiesException(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_ObjectInUseException(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_UpdateSignerIdType(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_UpdateSignerIdTypeResponse(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAliasResponse",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (getDocumentRoot_VersionConverterClassException(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "addAlias",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
 		  (domainDTOEClass,
 		   source,
 		   new String[] {
@@ -14586,6 +17764,139 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 		   new String[] {
 			   "kind", "element",
 			   "name", "fhirID"
+		   });
+		addAnnotation
+		  (finaliseAllForDomainEClass,
+		   source,
+		   new String[] {
+			   "name", "finaliseAllForDomain",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getFinaliseAllForDomain_DomainName(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "domainName"
+		   });
+		addAnnotation
+		  (finaliseAllForDomainResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "finaliseAllForDomainResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (finaliseDomainEClass,
+		   source,
+		   new String[] {
+			   "name", "finaliseDomain",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getFinaliseDomain_DomainName(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "domainName"
+		   });
+		addAnnotation
+		  (finaliseDomainResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "finaliseDomainResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (finaliseModuleEClass,
+		   source,
+		   new String[] {
+			   "name", "finaliseModule",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getFinaliseModule_ModuleKey(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "moduleKey"
+		   });
+		addAnnotation
+		  (getFinaliseModule_FinaliseRelatedEntities(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "finaliseRelatedEntities"
+		   });
+		addAnnotation
+		  (finaliseModuleResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "finaliseModuleResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (finalisePolicyEClass,
+		   source,
+		   new String[] {
+			   "name", "finalisePolicy",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getFinalisePolicy_PolicyKey(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "policyKey"
+		   });
+		addAnnotation
+		  (finalisePolicyResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "finalisePolicyResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (finaliseTemplateEClass,
+		   source,
+		   new String[] {
+			   "name", "finaliseTemplate",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getFinaliseTemplate_ConsentTemplateKey(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "consentTemplateKey"
+		   });
+		addAnnotation
+		  (getFinaliseTemplate_FinaliseRelatedEntities(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "finaliseRelatedEntities"
+		   });
+		addAnnotation
+		  (finaliseTemplateResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "finaliseTemplateResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (freeTextConverterStringExceptionEClass,
+		   source,
+		   new String[] {
+			   "name", "FreeTextConverterStringException",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getFreeTextConverterStringException_Message(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "message"
 		   });
 		addAnnotation
 		  (freeTextDefDTOEClass,
@@ -16057,6 +19368,34 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 			   "name", "message"
 		   });
 		addAnnotation
+		  (illegalCompositionExceptionEClass,
+		   source,
+		   new String[] {
+			   "name", "IllegalCompositionException",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getIllegalCompositionException_IllegalItemType(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "illegalItemType"
+		   });
+		addAnnotation
+		  (getIllegalCompositionException_IllegalItem(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "illegalItem"
+		   });
+		addAnnotation
+		  (getIllegalCompositionException_Message(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "message"
+		   });
+		addAnnotation
 		  (invalidFreeTextExceptionEClass,
 		   source,
 		   new String[] {
@@ -16086,6 +19425,20 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 		   });
 		addAnnotation
 		  (getInvalidParameterException_Message(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "message"
+		   });
+		addAnnotation
+		  (invalidPropertiesExceptionEClass,
+		   source,
+		   new String[] {
+			   "name", "InvalidPropertiesException",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getInvalidPropertiesException_Message(),
 		   source,
 		   new String[] {
 			   "kind", "element",
@@ -16398,6 +19751,19 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 		   new String[] {
 			   "kind", "element",
 			   "name", "return"
+		   });
+		addAnnotation
+		  (itemTypeEEnum,
+		   source,
+		   new String[] {
+			   "name", "itemType"
+		   });
+		addAnnotation
+		  (itemTypeObjectEDataType,
+		   source,
+		   new String[] {
+			   "name", "itemType:Object",
+			   "baseType", "itemType"
 		   });
 		addAnnotation
 		  (labelEClass,
@@ -16811,6 +20177,20 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 		   new String[] {
 			   "kind", "element",
 			   "name", "entry"
+		   });
+		addAnnotation
+		  (objectInUseExceptionEClass,
+		   source,
+		   new String[] {
+			   "name", "ObjectInUseException",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getObjectInUseException_Message(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "message"
 		   });
 		addAnnotation
 		  (policyDTOEClass,
@@ -17963,6 +21343,328 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 			   "kind", "empty"
 		   });
 		addAnnotation
+		  (updateConsentTemplateEClass,
+		   source,
+		   new String[] {
+			   "name", "updateConsentTemplate",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getUpdateConsentTemplate_ConsentTemplate(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "consentTemplate"
+		   });
+		addAnnotation
+		  (getUpdateConsentTemplate_FinaliseRelatedEntities(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "finaliseRelatedEntities"
+		   });
+		addAnnotation
+		  (updateConsentTemplateInUseEClass,
+		   source,
+		   new String[] {
+			   "name", "updateConsentTemplateInUse",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getUpdateConsentTemplateInUse_ConsentTemplate(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "consentTemplate"
+		   });
+		addAnnotation
+		  (updateConsentTemplateInUseResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "updateConsentTemplateInUseResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (updateConsentTemplateResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "updateConsentTemplateResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (updateDomainEClass,
+		   source,
+		   new String[] {
+			   "name", "updateDomain",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getUpdateDomain_Domain(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "domain"
+		   });
+		addAnnotation
+		  (updateDomainInUseEClass,
+		   source,
+		   new String[] {
+			   "name", "updateDomainInUse",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getUpdateDomainInUse_DomainName(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "domainName"
+		   });
+		addAnnotation
+		  (getUpdateDomainInUse_Label(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "label"
+		   });
+		addAnnotation
+		  (getUpdateDomainInUse_Logo(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "logo"
+		   });
+		addAnnotation
+		  (getUpdateDomainInUse_ExternProperties(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "externProperties"
+		   });
+		addAnnotation
+		  (getUpdateDomainInUse_ExpirationProperties(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "expirationProperties"
+		   });
+		addAnnotation
+		  (getUpdateDomainInUse_Comment(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "comment"
+		   });
+		addAnnotation
+		  (getUpdateDomainInUse_Config(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "config"
+		   });
+		addAnnotation
+		  (updateDomainInUseResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "updateDomainInUseResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (updateDomainResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "updateDomainResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (updateModuleEClass,
+		   source,
+		   new String[] {
+			   "name", "updateModule",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getUpdateModule_Module(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "module"
+		   });
+		addAnnotation
+		  (getUpdateModule_FinaliseRelatedEntities(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "finaliseRelatedEntities"
+		   });
+		addAnnotation
+		  (updateModuleInUseEClass,
+		   source,
+		   new String[] {
+			   "name", "updateModuleInUse",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getUpdateModuleInUse_ModuleKey(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "moduleKey"
+		   });
+		addAnnotation
+		  (getUpdateModuleInUse_Label(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "label"
+		   });
+		addAnnotation
+		  (getUpdateModuleInUse_ShortText(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "shortText"
+		   });
+		addAnnotation
+		  (getUpdateModuleInUse_ExternProperties(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "externProperties"
+		   });
+		addAnnotation
+		  (getUpdateModuleInUse_Comment(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "comment"
+		   });
+		addAnnotation
+		  (getUpdateModuleInUse_AssignedPolicies(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "assignedPolicies"
+		   });
+		addAnnotation
+		  (updateModuleInUseResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "updateModuleInUseResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (updateModuleResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "updateModuleResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (updatePolicyEClass,
+		   source,
+		   new String[] {
+			   "name", "updatePolicy",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getUpdatePolicy_Policy(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "policy"
+		   });
+		addAnnotation
+		  (updatePolicyInUseEClass,
+		   source,
+		   new String[] {
+			   "name", "updatePolicyInUse",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getUpdatePolicyInUse_PolicyKey(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "policyKey"
+		   });
+		addAnnotation
+		  (getUpdatePolicyInUse_Label(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "label"
+		   });
+		addAnnotation
+		  (getUpdatePolicyInUse_ExternProperties(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "externProperties"
+		   });
+		addAnnotation
+		  (getUpdatePolicyInUse_Comment(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "comment"
+		   });
+		addAnnotation
+		  (updatePolicyInUseResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "updatePolicyInUseResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (updatePolicyResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "updatePolicyResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
+		  (updateSignerIdTypeEClass,
+		   source,
+		   new String[] {
+			   "name", "updateSignerIdType",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getUpdateSignerIdType_DomainName(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "domainName"
+		   });
+		addAnnotation
+		  (getUpdateSignerIdType_SignerIdTypeName(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "signerIdTypeName"
+		   });
+		addAnnotation
+		  (getUpdateSignerIdType_Label(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "label"
+		   });
+		addAnnotation
+		  (getUpdateSignerIdType_Comment(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "comment"
+		   });
+		addAnnotation
+		  (updateSignerIdTypeResponseEClass,
+		   source,
+		   new String[] {
+			   "name", "updateSignerIdTypeResponse",
+			   "kind", "empty"
+		   });
+		addAnnotation
 		  (validateConsentEClass,
 		   source,
 		   new String[] {
@@ -18017,6 +21719,20 @@ public class Cm2PackageImpl extends EPackageImpl implements Cm2Package {
 		   new String[] {
 			   "kind", "element",
 			   "name", "invalidPeriod"
+		   });
+		addAnnotation
+		  (versionConverterClassExceptionEClass,
+		   source,
+		   new String[] {
+			   "name", "VersionConverterClassException",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getVersionConverterClassException_Message(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "message"
 		   });
 	}
 

@@ -41,6 +41,10 @@
       <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//FreeTextType/DOUBLE"/>
       <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//FreeTextType/BOOLEAN"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cm2.ecore#//ItemType">
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//ItemType/POLICY"/>
+      <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//ItemType/MODULE"/>
+    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="cm2.ecore#//QcProblemStatus">
       <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemStatus/OPENEXTERN"/>
       <genEnumLiterals ecoreEnumLiteral="cm2.ecore#//QcProblemStatus/OPENINTERN"/>
@@ -94,6 +98,7 @@
     <genDataTypes ecoreDataType="cm2.ecore#//ConsentStatusTypeObject"/>
     <genDataTypes ecoreDataType="cm2.ecore#//ConsentTemplateTypeObject"/>
     <genDataTypes ecoreDataType="cm2.ecore#//FreeTextTypeObject"/>
+    <genDataTypes ecoreDataType="cm2.ecore#//ItemTypeObject"/>
     <genDataTypes ecoreDataType="cm2.ecore#//QcProblemStatusObject"/>
     <genDataTypes ecoreDataType="cm2.ecore#//QcProblemTypeErrorObject"/>
     <genDataTypes ecoreDataType="cm2.ecore#//QcProblemTypeFieldObject"/>
@@ -117,6 +122,24 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AddConsentOptOutResponse/return"/>
     </genClasses>
     <genClasses ecoreClass="cm2.ecore#//AddConsentResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//AddConsentTemplate">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AddConsentTemplate/consentTemplate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//AddConsentTemplate/finaliseRelatedEntities"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//AddConsentTemplateResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//AddDomain">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AddDomain/domain"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//AddDomainResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//AddModule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AddModule/module"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//AddModule/finaliseRelatedEntities"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//AddModuleResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//AddPolicy">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AddPolicy/policy"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//AddPolicyResponse"/>
     <genClasses ecoreClass="cm2.ecore#//AddScanToConsent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AddScanToConsent/consentKey"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//AddScanToConsent/scanBase64"/>
@@ -124,6 +147,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//AddScanToConsent/fileName"/>
     </genClasses>
     <genClasses ecoreClass="cm2.ecore#//AddScanToConsentResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//AddSignerIdType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//AddSignerIdType/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//AddSignerIdType/signerIdTypeName"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//AddSignerIdTypeResponse"/>
     <genClasses ecoreClass="cm2.ecore#//AddSignerIdToConsent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AddSignerIdToConsent/consentKey"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//AddSignerIdToConsent/signerId"/>
@@ -256,6 +284,27 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DeactivateAlias/aliasSignerId"/>
     </genClasses>
     <genClasses ecoreClass="cm2.ecore#//DeactivateAliasResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//DeleteConsentTemplate">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DeleteConsentTemplate/consentTemplateKey"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//DeleteConsentTemplateResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//DeleteDomain">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//DeleteDomain/domainName"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//DeleteDomainResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//DeleteModule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DeleteModule/moduleKey"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//DeleteModuleResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//DeletePolicy">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DeletePolicy/policyKey"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//DeletePolicyResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//DeleteSignerIdType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//DeleteSignerIdType/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//DeleteSignerIdType/signerIdTypeName"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//DeleteSignerIdTypeResponse"/>
     <genClasses ecoreClass="cm2.ecore#//DocumentRoot">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//DocumentRoot/mixed"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/xMLNSPrefixMap"/>
@@ -398,6 +447,59 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/updateConsentInUseResponse"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/validateConsent"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/validateConsentResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addConsentTemplate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addConsentTemplateResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addModule"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addModuleResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addDomain"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addDomainResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addPolicy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addPolicyResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addSignerIdType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/addSignerIdTypeResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/deleteConsentTemplate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/deleteConsentTemplateResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/deleteDomain"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/deleteDomainResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/deleteModule"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/deleteModuleResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/deletePolicy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/deletePolicyResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/deleteSignerIdType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/deleteSignerIdTypeResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/updateConsentTemplate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/updateConsentTemplateResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/updateConsentTemplateInUse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/updateConsentTemplateInUseResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/updateDomain"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/updateDomainResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/updateDomainInUse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/updateDomainInUseResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/updateModule"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/updateModuleResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/updateModuleInUse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/updateModuleInUseResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/updatePolicy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/updatePolicyResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/updatePolicyInUse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/updatePolicyInUseResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/finaliseAllForDomain"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/finaliseAllForDomainResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/finaliseDomain"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/finaliseDomainResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/finaliseModule"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/finaliseModuleResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/finalisePolicy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/finalisePolicyResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/finaliseTemplate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/finaliseTemplateResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/freeTextConverterStringException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/illegalCompositionException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/invalidPropertiesException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/objectInUseException"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/updateSignerIdType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/updateSignerIdTypeResponse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//DocumentRoot/versionConverterClassException"/>
     </genClasses>
     <genClasses ecoreClass="cm2.ecore#//DomainDTO">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//DomainDTO/comment"/>
@@ -444,6 +546,31 @@
     </genClasses>
     <genClasses image="false" ecoreClass="cm2.ecore#//FhirIdDTO">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//FhirIdDTO/fhirID"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//FinaliseAllForDomain">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//FinaliseAllForDomain/domainName"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//FinaliseAllForDomainResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//FinaliseDomain">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//FinaliseDomain/domainName"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//FinaliseDomainResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//FinaliseModule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//FinaliseModule/moduleKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//FinaliseModule/finaliseRelatedEntities"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//FinaliseModuleResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//FinalisePolicy">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//FinalisePolicy/policyKey"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//FinalisePolicyResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//FinaliseTemplate">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//FinaliseTemplate/consentTemplateKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//FinaliseTemplate/finaliseRelatedEntities"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//FinaliseTemplateResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//FreeTextConverterStringException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//FreeTextConverterStringException/message"/>
     </genClasses>
     <genClasses ecoreClass="cm2.ecore#//FreeTextDefDTO">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//FreeTextDefDTO/comment"/>
@@ -726,12 +853,20 @@
     <genClasses ecoreClass="cm2.ecore#//InternalException">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//InternalException/message"/>
     </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//IllegalCompositionException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IllegalCompositionException/illegalItemType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IllegalCompositionException/illegalItem"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//IllegalCompositionException/message"/>
+    </genClasses>
     <genClasses ecoreClass="cm2.ecore#//InvalidFreeTextException">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//InvalidFreeTextException/message"/>
     </genClasses>
     <genClasses ecoreClass="cm2.ecore#//InvalidParameterException">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//InvalidParameterException/parameterName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//InvalidParameterException/message"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//InvalidPropertiesException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//InvalidPropertiesException/message"/>
     </genClasses>
     <genClasses ecoreClass="cm2.ecore#//InvalidVersionException">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//InvalidVersionException/message"/>
@@ -866,6 +1001,9 @@
     </genClasses>
     <genClasses ecoreClass="cm2.ecore#//ModuleStatesType">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ModuleStatesType/entry"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//ObjectInUseException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ObjectInUseException/message"/>
     </genClasses>
     <genClasses ecoreClass="cm2.ecore#//PolicyDTO">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//PolicyDTO/comment"/>
@@ -1075,6 +1213,61 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//UpdateConsentInUse/scan"/>
     </genClasses>
     <genClasses ecoreClass="cm2.ecore#//UpdateConsentInUseResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//UpdateConsentTemplate">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//UpdateConsentTemplate/consentTemplate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UpdateConsentTemplate/finaliseRelatedEntities"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//UpdateConsentTemplateInUse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//UpdateConsentTemplateInUse/consentTemplate"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//UpdateConsentTemplateInUseResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//UpdateConsentTemplateResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//UpdateDomain">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//UpdateDomain/domain"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//UpdateDomainInUse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UpdateDomainInUse/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UpdateDomainInUse/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UpdateDomainInUse/logo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UpdateDomainInUse/externProperties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//UpdateDomainInUse/expirationProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UpdateDomainInUse/comment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//UpdateDomainInUse/config"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//UpdateDomainInUseResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//UpdateDomainResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//UpdateModule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//UpdateModule/module"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UpdateModule/finaliseRelatedEntities"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//UpdateModuleInUse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//UpdateModuleInUse/moduleKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UpdateModuleInUse/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UpdateModuleInUse/shortText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UpdateModuleInUse/externProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UpdateModuleInUse/comment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//UpdateModuleInUse/assignedPolicies"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//UpdateModuleInUseResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//UpdateModuleResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//UpdatePolicy">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//UpdatePolicy/policy"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//UpdatePolicyInUse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//UpdatePolicyInUse/policyKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UpdatePolicyInUse/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UpdatePolicyInUse/externProperties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UpdatePolicyInUse/comment"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//UpdatePolicyInUseResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//UpdatePolicyResponse"/>
+    <genClasses ecoreClass="cm2.ecore#//UpdateSignerIdType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UpdateSignerIdType/domainName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UpdateSignerIdType/signerIdTypeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UpdateSignerIdType/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//UpdateSignerIdType/comment"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//UpdateSignerIdTypeResponse"/>
     <genClasses ecoreClass="cm2.ecore#//ValidateConsent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cm2.ecore#//ValidateConsent/consent"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ValidateConsent/allowRevoke"/>
@@ -1084,6 +1277,9 @@
     <genClasses ecoreClass="cm2.ecore#//ValidFromPropertiesDTO">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ValidFromPropertiesDTO/fixedValidFromDate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//ValidFromPropertiesDTO/invalidPeriod"/>
+    </genClasses>
+    <genClasses ecoreClass="cm2.ecore#//VersionConverterClassException">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cm2.ecore#//VersionConverterClassException/message"/>
     </genClasses>
   </genPackages>
   <genPackages prefix="Config" basePackage="org.emau.icmvc.ganimed.ttp.cm2" resource="XML"
