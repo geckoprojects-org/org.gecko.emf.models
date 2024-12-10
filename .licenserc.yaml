@@ -45,6 +45,7 @@ header:
     - '**/*.txt'
     - '**/*.rdf'
     - '**/*.log'
+	- '**/*.wsdl'
     - '**/.classpath'
     - 'LICENSE'
     - 'Jenkinsfile'
