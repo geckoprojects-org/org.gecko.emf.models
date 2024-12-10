@@ -36,12 +36,22 @@ import org.emau.icmvc.ganimed.ttp.cm2.AddConsent;
 import org.emau.icmvc.ganimed.ttp.cm2.AddConsentOptOut;
 import org.emau.icmvc.ganimed.ttp.cm2.AddConsentOptOutResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AddConsentResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplate;
+import org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplateResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.AddDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddModule;
+import org.emau.icmvc.ganimed.ttp.cm2.AddModuleResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddPolicy;
+import org.emau.icmvc.ganimed.ttp.cm2.AddPolicyResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AddScanToConsent;
 import org.emau.icmvc.ganimed.ttp.cm2.AddScanToConsentResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdToConsent;
 import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdToConsentResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdToSignerId;
 import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdToSignerIdResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdType;
+import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdTypeResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.Cm2Package;
 import org.emau.icmvc.ganimed.ttp.cm2.CountConsentsForDomainWithFilter;
 import org.emau.icmvc.ganimed.ttp.cm2.CountConsentsForDomainWithFilterResponse;
@@ -49,8 +59,29 @@ import org.emau.icmvc.ganimed.ttp.cm2.CountSignedPolicies;
 import org.emau.icmvc.ganimed.ttp.cm2.CountSignedPoliciesResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.DeactivateAlias;
 import org.emau.icmvc.ganimed.ttp.cm2.DeactivateAliasResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteConsentTemplate;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteConsentTemplateResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteModule;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteModuleResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeletePolicy;
+import org.emau.icmvc.ganimed.ttp.cm2.DeletePolicyResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdType;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdTypeResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot;
 import org.emau.icmvc.ganimed.ttp.cm2.DuplicateEntryException;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseAllForDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseAllForDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseModule;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseModuleResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FinalisePolicy;
+import org.emau.icmvc.ganimed.ttp.cm2.FinalisePolicyResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplate;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplateResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FreeTextConverterStringException;
 import org.emau.icmvc.ganimed.ttp.cm2.GetAliasesForSignerId;
 import org.emau.icmvc.ganimed.ttp.cm2.GetAliasesForSignerIdResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.GetAliasesForSignerIds;
@@ -119,10 +150,12 @@ import org.emau.icmvc.ganimed.ttp.cm2.GetSignerIdsForAlias;
 import org.emau.icmvc.ganimed.ttp.cm2.GetSignerIdsForAliasResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.GetTemplatesWithPolicies;
 import org.emau.icmvc.ganimed.ttp.cm2.GetTemplatesWithPoliciesResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.IllegalCompositionException;
 import org.emau.icmvc.ganimed.ttp.cm2.InconsistentStatusException;
 import org.emau.icmvc.ganimed.ttp.cm2.InternalException;
 import org.emau.icmvc.ganimed.ttp.cm2.InvalidFreeTextException;
 import org.emau.icmvc.ganimed.ttp.cm2.InvalidParameterException;
+import org.emau.icmvc.ganimed.ttp.cm2.InvalidPropertiesException;
 import org.emau.icmvc.ganimed.ttp.cm2.InvalidVersionException;
 import org.emau.icmvc.ganimed.ttp.cm2.IsConsented;
 import org.emau.icmvc.ganimed.ttp.cm2.IsConsentedFromExcludingToExcluding;
@@ -148,6 +181,7 @@ import org.emau.icmvc.ganimed.ttp.cm2.ListSignerIdTypes;
 import org.emau.icmvc.ganimed.ttp.cm2.ListSignerIdTypesResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.MandatoryFieldsException;
 import org.emau.icmvc.ganimed.ttp.cm2.MissingRequiredObjectException;
+import org.emau.icmvc.ganimed.ttp.cm2.ObjectInUseException;
 import org.emau.icmvc.ganimed.ttp.cm2.RefuseConsent;
 import org.emau.icmvc.ganimed.ttp.cm2.RefuseConsentResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.RemoveScanFromConsent;
@@ -167,8 +201,27 @@ import org.emau.icmvc.ganimed.ttp.cm2.UnknownSignerIdException;
 import org.emau.icmvc.ganimed.ttp.cm2.UnknownSignerIdTypeException;
 import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentInUse;
 import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplate;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateInUse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateModule;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicy;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdType;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdTypeResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.ValidateConsent;
 import org.emau.icmvc.ganimed.ttp.cm2.ValidateConsentResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.VersionConverterClassException;
 
 /**
  * <!-- begin-user-doc -->
@@ -319,6 +372,59 @@ import org.emau.icmvc.ganimed.ttp.cm2.ValidateConsentResponse;
  *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getUpdateConsentInUseResponse <em>Update Consent In Use Response</em>}</li>
  *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getValidateConsent <em>Validate Consent</em>}</li>
  *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getValidateConsentResponse <em>Validate Consent Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getAddConsentTemplate <em>Add Consent Template</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getAddConsentTemplateResponse <em>Add Consent Template Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getAddModule <em>Add Module</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getAddModuleResponse <em>Add Module Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getAddDomain <em>Add Domain</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getAddDomainResponse <em>Add Domain Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getAddPolicy <em>Add Policy</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getAddPolicyResponse <em>Add Policy Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getAddSignerIdType <em>Add Signer Id Type</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getAddSignerIdTypeResponse <em>Add Signer Id Type Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getDeleteConsentTemplate <em>Delete Consent Template</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getDeleteConsentTemplateResponse <em>Delete Consent Template Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getDeleteDomain <em>Delete Domain</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getDeleteDomainResponse <em>Delete Domain Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getDeleteModule <em>Delete Module</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getDeleteModuleResponse <em>Delete Module Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getDeletePolicy <em>Delete Policy</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getDeletePolicyResponse <em>Delete Policy Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getDeleteSignerIdType <em>Delete Signer Id Type</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getDeleteSignerIdTypeResponse <em>Delete Signer Id Type Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getUpdateConsentTemplate <em>Update Consent Template</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getUpdateConsentTemplateResponse <em>Update Consent Template Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getUpdateConsentTemplateInUse <em>Update Consent Template In Use</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getUpdateConsentTemplateInUseResponse <em>Update Consent Template In Use Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getUpdateDomain <em>Update Domain</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getUpdateDomainResponse <em>Update Domain Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getUpdateDomainInUse <em>Update Domain In Use</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getUpdateDomainInUseResponse <em>Update Domain In Use Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getUpdateModule <em>Update Module</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getUpdateModuleResponse <em>Update Module Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getUpdateModuleInUse <em>Update Module In Use</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getUpdateModuleInUseResponse <em>Update Module In Use Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getUpdatePolicy <em>Update Policy</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getUpdatePolicyResponse <em>Update Policy Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getUpdatePolicyInUse <em>Update Policy In Use</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getUpdatePolicyInUseResponse <em>Update Policy In Use Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getFinaliseAllForDomain <em>Finalise All For Domain</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getFinaliseAllForDomainResponse <em>Finalise All For Domain Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getFinaliseDomain <em>Finalise Domain</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getFinaliseDomainResponse <em>Finalise Domain Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getFinaliseModule <em>Finalise Module</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getFinaliseModuleResponse <em>Finalise Module Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getFinalisePolicy <em>Finalise Policy</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getFinalisePolicyResponse <em>Finalise Policy Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getFinaliseTemplate <em>Finalise Template</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getFinaliseTemplateResponse <em>Finalise Template Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getFreeTextConverterStringException <em>Free Text Converter String Exception</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getIllegalCompositionException <em>Illegal Composition Exception</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getInvalidPropertiesException <em>Invalid Properties Exception</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getObjectInUseException <em>Object In Use Exception</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getUpdateSignerIdType <em>Update Signer Id Type</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getUpdateSignerIdTypeResponse <em>Update Signer Id Type Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.impl.DocumentRootImpl#getVersionConverterClassException <em>Version Converter Class Exception</em>}</li>
  * </ul>
  *
  * @generated
@@ -4420,6 +4526,1543 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	@Override
+	public AddConsentTemplate getAddConsentTemplate() {
+		return (AddConsentTemplate)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_AddConsentTemplate(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAddConsentTemplate(AddConsentTemplate newAddConsentTemplate, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_AddConsentTemplate(), newAddConsentTemplate, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAddConsentTemplate(AddConsentTemplate newAddConsentTemplate) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_AddConsentTemplate(), newAddConsentTemplate);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AddConsentTemplateResponse getAddConsentTemplateResponse() {
+		return (AddConsentTemplateResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_AddConsentTemplateResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAddConsentTemplateResponse(AddConsentTemplateResponse newAddConsentTemplateResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_AddConsentTemplateResponse(), newAddConsentTemplateResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAddConsentTemplateResponse(AddConsentTemplateResponse newAddConsentTemplateResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_AddConsentTemplateResponse(), newAddConsentTemplateResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AddModule getAddModule() {
+		return (AddModule)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_AddModule(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAddModule(AddModule newAddModule, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_AddModule(), newAddModule, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAddModule(AddModule newAddModule) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_AddModule(), newAddModule);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AddModuleResponse getAddModuleResponse() {
+		return (AddModuleResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_AddModuleResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAddModuleResponse(AddModuleResponse newAddModuleResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_AddModuleResponse(), newAddModuleResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAddModuleResponse(AddModuleResponse newAddModuleResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_AddModuleResponse(), newAddModuleResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AddDomain getAddDomain() {
+		return (AddDomain)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_AddDomain(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAddDomain(AddDomain newAddDomain, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_AddDomain(), newAddDomain, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAddDomain(AddDomain newAddDomain) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_AddDomain(), newAddDomain);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AddDomainResponse getAddDomainResponse() {
+		return (AddDomainResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_AddDomainResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAddDomainResponse(AddDomainResponse newAddDomainResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_AddDomainResponse(), newAddDomainResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAddDomainResponse(AddDomainResponse newAddDomainResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_AddDomainResponse(), newAddDomainResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AddPolicy getAddPolicy() {
+		return (AddPolicy)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_AddPolicy(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAddPolicy(AddPolicy newAddPolicy, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_AddPolicy(), newAddPolicy, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAddPolicy(AddPolicy newAddPolicy) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_AddPolicy(), newAddPolicy);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AddPolicyResponse getAddPolicyResponse() {
+		return (AddPolicyResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_AddPolicyResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAddPolicyResponse(AddPolicyResponse newAddPolicyResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_AddPolicyResponse(), newAddPolicyResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAddPolicyResponse(AddPolicyResponse newAddPolicyResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_AddPolicyResponse(), newAddPolicyResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AddSignerIdType getAddSignerIdType() {
+		return (AddSignerIdType)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_AddSignerIdType(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAddSignerIdType(AddSignerIdType newAddSignerIdType, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_AddSignerIdType(), newAddSignerIdType, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAddSignerIdType(AddSignerIdType newAddSignerIdType) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_AddSignerIdType(), newAddSignerIdType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public AddSignerIdTypeResponse getAddSignerIdTypeResponse() {
+		return (AddSignerIdTypeResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_AddSignerIdTypeResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAddSignerIdTypeResponse(AddSignerIdTypeResponse newAddSignerIdTypeResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_AddSignerIdTypeResponse(), newAddSignerIdTypeResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAddSignerIdTypeResponse(AddSignerIdTypeResponse newAddSignerIdTypeResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_AddSignerIdTypeResponse(), newAddSignerIdTypeResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeleteConsentTemplate getDeleteConsentTemplate() {
+		return (DeleteConsentTemplate)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_DeleteConsentTemplate(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDeleteConsentTemplate(DeleteConsentTemplate newDeleteConsentTemplate, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_DeleteConsentTemplate(), newDeleteConsentTemplate, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDeleteConsentTemplate(DeleteConsentTemplate newDeleteConsentTemplate) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_DeleteConsentTemplate(), newDeleteConsentTemplate);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeleteConsentTemplateResponse getDeleteConsentTemplateResponse() {
+		return (DeleteConsentTemplateResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_DeleteConsentTemplateResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDeleteConsentTemplateResponse(DeleteConsentTemplateResponse newDeleteConsentTemplateResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_DeleteConsentTemplateResponse(), newDeleteConsentTemplateResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDeleteConsentTemplateResponse(DeleteConsentTemplateResponse newDeleteConsentTemplateResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_DeleteConsentTemplateResponse(), newDeleteConsentTemplateResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeleteDomain getDeleteDomain() {
+		return (DeleteDomain)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_DeleteDomain(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDeleteDomain(DeleteDomain newDeleteDomain, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_DeleteDomain(), newDeleteDomain, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDeleteDomain(DeleteDomain newDeleteDomain) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_DeleteDomain(), newDeleteDomain);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeleteDomainResponse getDeleteDomainResponse() {
+		return (DeleteDomainResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_DeleteDomainResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDeleteDomainResponse(DeleteDomainResponse newDeleteDomainResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_DeleteDomainResponse(), newDeleteDomainResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDeleteDomainResponse(DeleteDomainResponse newDeleteDomainResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_DeleteDomainResponse(), newDeleteDomainResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeleteModule getDeleteModule() {
+		return (DeleteModule)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_DeleteModule(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDeleteModule(DeleteModule newDeleteModule, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_DeleteModule(), newDeleteModule, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDeleteModule(DeleteModule newDeleteModule) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_DeleteModule(), newDeleteModule);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeleteModuleResponse getDeleteModuleResponse() {
+		return (DeleteModuleResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_DeleteModuleResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDeleteModuleResponse(DeleteModuleResponse newDeleteModuleResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_DeleteModuleResponse(), newDeleteModuleResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDeleteModuleResponse(DeleteModuleResponse newDeleteModuleResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_DeleteModuleResponse(), newDeleteModuleResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeletePolicy getDeletePolicy() {
+		return (DeletePolicy)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_DeletePolicy(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDeletePolicy(DeletePolicy newDeletePolicy, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_DeletePolicy(), newDeletePolicy, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDeletePolicy(DeletePolicy newDeletePolicy) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_DeletePolicy(), newDeletePolicy);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeletePolicyResponse getDeletePolicyResponse() {
+		return (DeletePolicyResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_DeletePolicyResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDeletePolicyResponse(DeletePolicyResponse newDeletePolicyResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_DeletePolicyResponse(), newDeletePolicyResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDeletePolicyResponse(DeletePolicyResponse newDeletePolicyResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_DeletePolicyResponse(), newDeletePolicyResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeleteSignerIdType getDeleteSignerIdType() {
+		return (DeleteSignerIdType)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_DeleteSignerIdType(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDeleteSignerIdType(DeleteSignerIdType newDeleteSignerIdType, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_DeleteSignerIdType(), newDeleteSignerIdType, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDeleteSignerIdType(DeleteSignerIdType newDeleteSignerIdType) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_DeleteSignerIdType(), newDeleteSignerIdType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DeleteSignerIdTypeResponse getDeleteSignerIdTypeResponse() {
+		return (DeleteSignerIdTypeResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_DeleteSignerIdTypeResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDeleteSignerIdTypeResponse(DeleteSignerIdTypeResponse newDeleteSignerIdTypeResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_DeleteSignerIdTypeResponse(), newDeleteSignerIdTypeResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDeleteSignerIdTypeResponse(DeleteSignerIdTypeResponse newDeleteSignerIdTypeResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_DeleteSignerIdTypeResponse(), newDeleteSignerIdTypeResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateConsentTemplate getUpdateConsentTemplate() {
+		return (UpdateConsentTemplate)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_UpdateConsentTemplate(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUpdateConsentTemplate(UpdateConsentTemplate newUpdateConsentTemplate, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_UpdateConsentTemplate(), newUpdateConsentTemplate, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUpdateConsentTemplate(UpdateConsentTemplate newUpdateConsentTemplate) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_UpdateConsentTemplate(), newUpdateConsentTemplate);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateConsentTemplateResponse getUpdateConsentTemplateResponse() {
+		return (UpdateConsentTemplateResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_UpdateConsentTemplateResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUpdateConsentTemplateResponse(UpdateConsentTemplateResponse newUpdateConsentTemplateResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_UpdateConsentTemplateResponse(), newUpdateConsentTemplateResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUpdateConsentTemplateResponse(UpdateConsentTemplateResponse newUpdateConsentTemplateResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_UpdateConsentTemplateResponse(), newUpdateConsentTemplateResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateConsentTemplateInUse getUpdateConsentTemplateInUse() {
+		return (UpdateConsentTemplateInUse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_UpdateConsentTemplateInUse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUpdateConsentTemplateInUse(UpdateConsentTemplateInUse newUpdateConsentTemplateInUse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_UpdateConsentTemplateInUse(), newUpdateConsentTemplateInUse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUpdateConsentTemplateInUse(UpdateConsentTemplateInUse newUpdateConsentTemplateInUse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_UpdateConsentTemplateInUse(), newUpdateConsentTemplateInUse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateConsentTemplateInUseResponse getUpdateConsentTemplateInUseResponse() {
+		return (UpdateConsentTemplateInUseResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_UpdateConsentTemplateInUseResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUpdateConsentTemplateInUseResponse(UpdateConsentTemplateInUseResponse newUpdateConsentTemplateInUseResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_UpdateConsentTemplateInUseResponse(), newUpdateConsentTemplateInUseResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUpdateConsentTemplateInUseResponse(UpdateConsentTemplateInUseResponse newUpdateConsentTemplateInUseResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_UpdateConsentTemplateInUseResponse(), newUpdateConsentTemplateInUseResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateDomain getUpdateDomain() {
+		return (UpdateDomain)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_UpdateDomain(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUpdateDomain(UpdateDomain newUpdateDomain, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_UpdateDomain(), newUpdateDomain, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUpdateDomain(UpdateDomain newUpdateDomain) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_UpdateDomain(), newUpdateDomain);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateDomainResponse getUpdateDomainResponse() {
+		return (UpdateDomainResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_UpdateDomainResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUpdateDomainResponse(UpdateDomainResponse newUpdateDomainResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_UpdateDomainResponse(), newUpdateDomainResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUpdateDomainResponse(UpdateDomainResponse newUpdateDomainResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_UpdateDomainResponse(), newUpdateDomainResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateDomainInUse getUpdateDomainInUse() {
+		return (UpdateDomainInUse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_UpdateDomainInUse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUpdateDomainInUse(UpdateDomainInUse newUpdateDomainInUse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_UpdateDomainInUse(), newUpdateDomainInUse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUpdateDomainInUse(UpdateDomainInUse newUpdateDomainInUse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_UpdateDomainInUse(), newUpdateDomainInUse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateDomainInUseResponse getUpdateDomainInUseResponse() {
+		return (UpdateDomainInUseResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_UpdateDomainInUseResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUpdateDomainInUseResponse(UpdateDomainInUseResponse newUpdateDomainInUseResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_UpdateDomainInUseResponse(), newUpdateDomainInUseResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUpdateDomainInUseResponse(UpdateDomainInUseResponse newUpdateDomainInUseResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_UpdateDomainInUseResponse(), newUpdateDomainInUseResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateModule getUpdateModule() {
+		return (UpdateModule)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_UpdateModule(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUpdateModule(UpdateModule newUpdateModule, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_UpdateModule(), newUpdateModule, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUpdateModule(UpdateModule newUpdateModule) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_UpdateModule(), newUpdateModule);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateModuleResponse getUpdateModuleResponse() {
+		return (UpdateModuleResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_UpdateModuleResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUpdateModuleResponse(UpdateModuleResponse newUpdateModuleResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_UpdateModuleResponse(), newUpdateModuleResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUpdateModuleResponse(UpdateModuleResponse newUpdateModuleResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_UpdateModuleResponse(), newUpdateModuleResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateModuleInUse getUpdateModuleInUse() {
+		return (UpdateModuleInUse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_UpdateModuleInUse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUpdateModuleInUse(UpdateModuleInUse newUpdateModuleInUse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_UpdateModuleInUse(), newUpdateModuleInUse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUpdateModuleInUse(UpdateModuleInUse newUpdateModuleInUse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_UpdateModuleInUse(), newUpdateModuleInUse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateModuleInUseResponse getUpdateModuleInUseResponse() {
+		return (UpdateModuleInUseResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_UpdateModuleInUseResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUpdateModuleInUseResponse(UpdateModuleInUseResponse newUpdateModuleInUseResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_UpdateModuleInUseResponse(), newUpdateModuleInUseResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUpdateModuleInUseResponse(UpdateModuleInUseResponse newUpdateModuleInUseResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_UpdateModuleInUseResponse(), newUpdateModuleInUseResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdatePolicy getUpdatePolicy() {
+		return (UpdatePolicy)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_UpdatePolicy(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUpdatePolicy(UpdatePolicy newUpdatePolicy, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_UpdatePolicy(), newUpdatePolicy, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUpdatePolicy(UpdatePolicy newUpdatePolicy) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_UpdatePolicy(), newUpdatePolicy);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdatePolicyResponse getUpdatePolicyResponse() {
+		return (UpdatePolicyResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_UpdatePolicyResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUpdatePolicyResponse(UpdatePolicyResponse newUpdatePolicyResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_UpdatePolicyResponse(), newUpdatePolicyResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUpdatePolicyResponse(UpdatePolicyResponse newUpdatePolicyResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_UpdatePolicyResponse(), newUpdatePolicyResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdatePolicyInUse getUpdatePolicyInUse() {
+		return (UpdatePolicyInUse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_UpdatePolicyInUse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUpdatePolicyInUse(UpdatePolicyInUse newUpdatePolicyInUse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_UpdatePolicyInUse(), newUpdatePolicyInUse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUpdatePolicyInUse(UpdatePolicyInUse newUpdatePolicyInUse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_UpdatePolicyInUse(), newUpdatePolicyInUse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdatePolicyInUseResponse getUpdatePolicyInUseResponse() {
+		return (UpdatePolicyInUseResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_UpdatePolicyInUseResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUpdatePolicyInUseResponse(UpdatePolicyInUseResponse newUpdatePolicyInUseResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_UpdatePolicyInUseResponse(), newUpdatePolicyInUseResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUpdatePolicyInUseResponse(UpdatePolicyInUseResponse newUpdatePolicyInUseResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_UpdatePolicyInUseResponse(), newUpdatePolicyInUseResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FinaliseAllForDomain getFinaliseAllForDomain() {
+		return (FinaliseAllForDomain)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseAllForDomain(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFinaliseAllForDomain(FinaliseAllForDomain newFinaliseAllForDomain, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseAllForDomain(), newFinaliseAllForDomain, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFinaliseAllForDomain(FinaliseAllForDomain newFinaliseAllForDomain) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseAllForDomain(), newFinaliseAllForDomain);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FinaliseAllForDomainResponse getFinaliseAllForDomainResponse() {
+		return (FinaliseAllForDomainResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseAllForDomainResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFinaliseAllForDomainResponse(FinaliseAllForDomainResponse newFinaliseAllForDomainResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseAllForDomainResponse(), newFinaliseAllForDomainResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFinaliseAllForDomainResponse(FinaliseAllForDomainResponse newFinaliseAllForDomainResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseAllForDomainResponse(), newFinaliseAllForDomainResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FinaliseDomain getFinaliseDomain() {
+		return (FinaliseDomain)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseDomain(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFinaliseDomain(FinaliseDomain newFinaliseDomain, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseDomain(), newFinaliseDomain, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFinaliseDomain(FinaliseDomain newFinaliseDomain) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseDomain(), newFinaliseDomain);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FinaliseDomainResponse getFinaliseDomainResponse() {
+		return (FinaliseDomainResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseDomainResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFinaliseDomainResponse(FinaliseDomainResponse newFinaliseDomainResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseDomainResponse(), newFinaliseDomainResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFinaliseDomainResponse(FinaliseDomainResponse newFinaliseDomainResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseDomainResponse(), newFinaliseDomainResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FinaliseModule getFinaliseModule() {
+		return (FinaliseModule)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseModule(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFinaliseModule(FinaliseModule newFinaliseModule, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseModule(), newFinaliseModule, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFinaliseModule(FinaliseModule newFinaliseModule) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseModule(), newFinaliseModule);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FinaliseModuleResponse getFinaliseModuleResponse() {
+		return (FinaliseModuleResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseModuleResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFinaliseModuleResponse(FinaliseModuleResponse newFinaliseModuleResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseModuleResponse(), newFinaliseModuleResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFinaliseModuleResponse(FinaliseModuleResponse newFinaliseModuleResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseModuleResponse(), newFinaliseModuleResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FinalisePolicy getFinalisePolicy() {
+		return (FinalisePolicy)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_FinalisePolicy(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFinalisePolicy(FinalisePolicy newFinalisePolicy, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_FinalisePolicy(), newFinalisePolicy, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFinalisePolicy(FinalisePolicy newFinalisePolicy) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_FinalisePolicy(), newFinalisePolicy);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FinalisePolicyResponse getFinalisePolicyResponse() {
+		return (FinalisePolicyResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_FinalisePolicyResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFinalisePolicyResponse(FinalisePolicyResponse newFinalisePolicyResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_FinalisePolicyResponse(), newFinalisePolicyResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFinalisePolicyResponse(FinalisePolicyResponse newFinalisePolicyResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_FinalisePolicyResponse(), newFinalisePolicyResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FinaliseTemplate getFinaliseTemplate() {
+		return (FinaliseTemplate)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseTemplate(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFinaliseTemplate(FinaliseTemplate newFinaliseTemplate, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseTemplate(), newFinaliseTemplate, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFinaliseTemplate(FinaliseTemplate newFinaliseTemplate) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseTemplate(), newFinaliseTemplate);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FinaliseTemplateResponse getFinaliseTemplateResponse() {
+		return (FinaliseTemplateResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseTemplateResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFinaliseTemplateResponse(FinaliseTemplateResponse newFinaliseTemplateResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseTemplateResponse(), newFinaliseTemplateResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFinaliseTemplateResponse(FinaliseTemplateResponse newFinaliseTemplateResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_FinaliseTemplateResponse(), newFinaliseTemplateResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FreeTextConverterStringException getFreeTextConverterStringException() {
+		return (FreeTextConverterStringException)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_FreeTextConverterStringException(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFreeTextConverterStringException(FreeTextConverterStringException newFreeTextConverterStringException, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_FreeTextConverterStringException(), newFreeTextConverterStringException, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFreeTextConverterStringException(FreeTextConverterStringException newFreeTextConverterStringException) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_FreeTextConverterStringException(), newFreeTextConverterStringException);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public IllegalCompositionException getIllegalCompositionException() {
+		return (IllegalCompositionException)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_IllegalCompositionException(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetIllegalCompositionException(IllegalCompositionException newIllegalCompositionException, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_IllegalCompositionException(), newIllegalCompositionException, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIllegalCompositionException(IllegalCompositionException newIllegalCompositionException) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_IllegalCompositionException(), newIllegalCompositionException);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public InvalidPropertiesException getInvalidPropertiesException() {
+		return (InvalidPropertiesException)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_InvalidPropertiesException(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetInvalidPropertiesException(InvalidPropertiesException newInvalidPropertiesException, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_InvalidPropertiesException(), newInvalidPropertiesException, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setInvalidPropertiesException(InvalidPropertiesException newInvalidPropertiesException) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_InvalidPropertiesException(), newInvalidPropertiesException);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ObjectInUseException getObjectInUseException() {
+		return (ObjectInUseException)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_ObjectInUseException(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetObjectInUseException(ObjectInUseException newObjectInUseException, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_ObjectInUseException(), newObjectInUseException, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setObjectInUseException(ObjectInUseException newObjectInUseException) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_ObjectInUseException(), newObjectInUseException);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateSignerIdType getUpdateSignerIdType() {
+		return (UpdateSignerIdType)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_UpdateSignerIdType(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUpdateSignerIdType(UpdateSignerIdType newUpdateSignerIdType, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_UpdateSignerIdType(), newUpdateSignerIdType, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUpdateSignerIdType(UpdateSignerIdType newUpdateSignerIdType) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_UpdateSignerIdType(), newUpdateSignerIdType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public UpdateSignerIdTypeResponse getUpdateSignerIdTypeResponse() {
+		return (UpdateSignerIdTypeResponse)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_UpdateSignerIdTypeResponse(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUpdateSignerIdTypeResponse(UpdateSignerIdTypeResponse newUpdateSignerIdTypeResponse, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_UpdateSignerIdTypeResponse(), newUpdateSignerIdTypeResponse, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setUpdateSignerIdTypeResponse(UpdateSignerIdTypeResponse newUpdateSignerIdTypeResponse) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_UpdateSignerIdTypeResponse(), newUpdateSignerIdTypeResponse);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public VersionConverterClassException getVersionConverterClassException() {
+		return (VersionConverterClassException)getMixed().get(Cm2Package.eINSTANCE.getDocumentRoot_VersionConverterClassException(), true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetVersionConverterClassException(VersionConverterClassException newVersionConverterClassException, NotificationChain msgs) {
+		return ((FeatureMap.Internal)getMixed()).basicAdd(Cm2Package.eINSTANCE.getDocumentRoot_VersionConverterClassException(), newVersionConverterClassException, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setVersionConverterClassException(VersionConverterClassException newVersionConverterClassException) {
+		((FeatureMap.Internal)getMixed()).set(Cm2Package.eINSTANCE.getDocumentRoot_VersionConverterClassException(), newVersionConverterClassException);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case Cm2Package.DOCUMENT_ROOT__MIXED:
@@ -4704,6 +6347,112 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 				return basicSetValidateConsent(null, msgs);
 			case Cm2Package.DOCUMENT_ROOT__VALIDATE_CONSENT_RESPONSE:
 				return basicSetValidateConsentResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__ADD_CONSENT_TEMPLATE:
+				return basicSetAddConsentTemplate(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__ADD_CONSENT_TEMPLATE_RESPONSE:
+				return basicSetAddConsentTemplateResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__ADD_MODULE:
+				return basicSetAddModule(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__ADD_MODULE_RESPONSE:
+				return basicSetAddModuleResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__ADD_DOMAIN:
+				return basicSetAddDomain(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__ADD_DOMAIN_RESPONSE:
+				return basicSetAddDomainResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__ADD_POLICY:
+				return basicSetAddPolicy(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__ADD_POLICY_RESPONSE:
+				return basicSetAddPolicyResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__ADD_SIGNER_ID_TYPE:
+				return basicSetAddSignerIdType(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__ADD_SIGNER_ID_TYPE_RESPONSE:
+				return basicSetAddSignerIdTypeResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__DELETE_CONSENT_TEMPLATE:
+				return basicSetDeleteConsentTemplate(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__DELETE_CONSENT_TEMPLATE_RESPONSE:
+				return basicSetDeleteConsentTemplateResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__DELETE_DOMAIN:
+				return basicSetDeleteDomain(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__DELETE_DOMAIN_RESPONSE:
+				return basicSetDeleteDomainResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__DELETE_MODULE:
+				return basicSetDeleteModule(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__DELETE_MODULE_RESPONSE:
+				return basicSetDeleteModuleResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__DELETE_POLICY:
+				return basicSetDeletePolicy(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__DELETE_POLICY_RESPONSE:
+				return basicSetDeletePolicyResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__DELETE_SIGNER_ID_TYPE:
+				return basicSetDeleteSignerIdType(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__DELETE_SIGNER_ID_TYPE_RESPONSE:
+				return basicSetDeleteSignerIdTypeResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE:
+				return basicSetUpdateConsentTemplate(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE_RESPONSE:
+				return basicSetUpdateConsentTemplateResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE_IN_USE:
+				return basicSetUpdateConsentTemplateInUse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE_IN_USE_RESPONSE:
+				return basicSetUpdateConsentTemplateInUseResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_DOMAIN:
+				return basicSetUpdateDomain(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_DOMAIN_RESPONSE:
+				return basicSetUpdateDomainResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_DOMAIN_IN_USE:
+				return basicSetUpdateDomainInUse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_DOMAIN_IN_USE_RESPONSE:
+				return basicSetUpdateDomainInUseResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_MODULE:
+				return basicSetUpdateModule(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_MODULE_RESPONSE:
+				return basicSetUpdateModuleResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_MODULE_IN_USE:
+				return basicSetUpdateModuleInUse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_MODULE_IN_USE_RESPONSE:
+				return basicSetUpdateModuleInUseResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_POLICY:
+				return basicSetUpdatePolicy(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_POLICY_RESPONSE:
+				return basicSetUpdatePolicyResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_POLICY_IN_USE:
+				return basicSetUpdatePolicyInUse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_POLICY_IN_USE_RESPONSE:
+				return basicSetUpdatePolicyInUseResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_ALL_FOR_DOMAIN:
+				return basicSetFinaliseAllForDomain(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_ALL_FOR_DOMAIN_RESPONSE:
+				return basicSetFinaliseAllForDomainResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_DOMAIN:
+				return basicSetFinaliseDomain(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_DOMAIN_RESPONSE:
+				return basicSetFinaliseDomainResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_MODULE:
+				return basicSetFinaliseModule(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_MODULE_RESPONSE:
+				return basicSetFinaliseModuleResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_POLICY:
+				return basicSetFinalisePolicy(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_POLICY_RESPONSE:
+				return basicSetFinalisePolicyResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_TEMPLATE:
+				return basicSetFinaliseTemplate(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_TEMPLATE_RESPONSE:
+				return basicSetFinaliseTemplateResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__FREE_TEXT_CONVERTER_STRING_EXCEPTION:
+				return basicSetFreeTextConverterStringException(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__ILLEGAL_COMPOSITION_EXCEPTION:
+				return basicSetIllegalCompositionException(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__INVALID_PROPERTIES_EXCEPTION:
+				return basicSetInvalidPropertiesException(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__OBJECT_IN_USE_EXCEPTION:
+				return basicSetObjectInUseException(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_SIGNER_ID_TYPE:
+				return basicSetUpdateSignerIdType(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_SIGNER_ID_TYPE_RESPONSE:
+				return basicSetUpdateSignerIdTypeResponse(null, msgs);
+			case Cm2Package.DOCUMENT_ROOT__VERSION_CONVERTER_CLASS_EXCEPTION:
+				return basicSetVersionConverterClassException(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -5001,6 +6750,112 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 				return getValidateConsent();
 			case Cm2Package.DOCUMENT_ROOT__VALIDATE_CONSENT_RESPONSE:
 				return getValidateConsentResponse();
+			case Cm2Package.DOCUMENT_ROOT__ADD_CONSENT_TEMPLATE:
+				return getAddConsentTemplate();
+			case Cm2Package.DOCUMENT_ROOT__ADD_CONSENT_TEMPLATE_RESPONSE:
+				return getAddConsentTemplateResponse();
+			case Cm2Package.DOCUMENT_ROOT__ADD_MODULE:
+				return getAddModule();
+			case Cm2Package.DOCUMENT_ROOT__ADD_MODULE_RESPONSE:
+				return getAddModuleResponse();
+			case Cm2Package.DOCUMENT_ROOT__ADD_DOMAIN:
+				return getAddDomain();
+			case Cm2Package.DOCUMENT_ROOT__ADD_DOMAIN_RESPONSE:
+				return getAddDomainResponse();
+			case Cm2Package.DOCUMENT_ROOT__ADD_POLICY:
+				return getAddPolicy();
+			case Cm2Package.DOCUMENT_ROOT__ADD_POLICY_RESPONSE:
+				return getAddPolicyResponse();
+			case Cm2Package.DOCUMENT_ROOT__ADD_SIGNER_ID_TYPE:
+				return getAddSignerIdType();
+			case Cm2Package.DOCUMENT_ROOT__ADD_SIGNER_ID_TYPE_RESPONSE:
+				return getAddSignerIdTypeResponse();
+			case Cm2Package.DOCUMENT_ROOT__DELETE_CONSENT_TEMPLATE:
+				return getDeleteConsentTemplate();
+			case Cm2Package.DOCUMENT_ROOT__DELETE_CONSENT_TEMPLATE_RESPONSE:
+				return getDeleteConsentTemplateResponse();
+			case Cm2Package.DOCUMENT_ROOT__DELETE_DOMAIN:
+				return getDeleteDomain();
+			case Cm2Package.DOCUMENT_ROOT__DELETE_DOMAIN_RESPONSE:
+				return getDeleteDomainResponse();
+			case Cm2Package.DOCUMENT_ROOT__DELETE_MODULE:
+				return getDeleteModule();
+			case Cm2Package.DOCUMENT_ROOT__DELETE_MODULE_RESPONSE:
+				return getDeleteModuleResponse();
+			case Cm2Package.DOCUMENT_ROOT__DELETE_POLICY:
+				return getDeletePolicy();
+			case Cm2Package.DOCUMENT_ROOT__DELETE_POLICY_RESPONSE:
+				return getDeletePolicyResponse();
+			case Cm2Package.DOCUMENT_ROOT__DELETE_SIGNER_ID_TYPE:
+				return getDeleteSignerIdType();
+			case Cm2Package.DOCUMENT_ROOT__DELETE_SIGNER_ID_TYPE_RESPONSE:
+				return getDeleteSignerIdTypeResponse();
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE:
+				return getUpdateConsentTemplate();
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE_RESPONSE:
+				return getUpdateConsentTemplateResponse();
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE_IN_USE:
+				return getUpdateConsentTemplateInUse();
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE_IN_USE_RESPONSE:
+				return getUpdateConsentTemplateInUseResponse();
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_DOMAIN:
+				return getUpdateDomain();
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_DOMAIN_RESPONSE:
+				return getUpdateDomainResponse();
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_DOMAIN_IN_USE:
+				return getUpdateDomainInUse();
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_DOMAIN_IN_USE_RESPONSE:
+				return getUpdateDomainInUseResponse();
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_MODULE:
+				return getUpdateModule();
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_MODULE_RESPONSE:
+				return getUpdateModuleResponse();
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_MODULE_IN_USE:
+				return getUpdateModuleInUse();
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_MODULE_IN_USE_RESPONSE:
+				return getUpdateModuleInUseResponse();
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_POLICY:
+				return getUpdatePolicy();
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_POLICY_RESPONSE:
+				return getUpdatePolicyResponse();
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_POLICY_IN_USE:
+				return getUpdatePolicyInUse();
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_POLICY_IN_USE_RESPONSE:
+				return getUpdatePolicyInUseResponse();
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_ALL_FOR_DOMAIN:
+				return getFinaliseAllForDomain();
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_ALL_FOR_DOMAIN_RESPONSE:
+				return getFinaliseAllForDomainResponse();
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_DOMAIN:
+				return getFinaliseDomain();
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_DOMAIN_RESPONSE:
+				return getFinaliseDomainResponse();
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_MODULE:
+				return getFinaliseModule();
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_MODULE_RESPONSE:
+				return getFinaliseModuleResponse();
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_POLICY:
+				return getFinalisePolicy();
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_POLICY_RESPONSE:
+				return getFinalisePolicyResponse();
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_TEMPLATE:
+				return getFinaliseTemplate();
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_TEMPLATE_RESPONSE:
+				return getFinaliseTemplateResponse();
+			case Cm2Package.DOCUMENT_ROOT__FREE_TEXT_CONVERTER_STRING_EXCEPTION:
+				return getFreeTextConverterStringException();
+			case Cm2Package.DOCUMENT_ROOT__ILLEGAL_COMPOSITION_EXCEPTION:
+				return getIllegalCompositionException();
+			case Cm2Package.DOCUMENT_ROOT__INVALID_PROPERTIES_EXCEPTION:
+				return getInvalidPropertiesException();
+			case Cm2Package.DOCUMENT_ROOT__OBJECT_IN_USE_EXCEPTION:
+				return getObjectInUseException();
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_SIGNER_ID_TYPE:
+				return getUpdateSignerIdType();
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_SIGNER_ID_TYPE_RESPONSE:
+				return getUpdateSignerIdTypeResponse();
+			case Cm2Package.DOCUMENT_ROOT__VERSION_CONVERTER_CLASS_EXCEPTION:
+				return getVersionConverterClassException();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -5435,6 +7290,165 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 				return;
 			case Cm2Package.DOCUMENT_ROOT__VALIDATE_CONSENT_RESPONSE:
 				setValidateConsentResponse((ValidateConsentResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__ADD_CONSENT_TEMPLATE:
+				setAddConsentTemplate((AddConsentTemplate)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__ADD_CONSENT_TEMPLATE_RESPONSE:
+				setAddConsentTemplateResponse((AddConsentTemplateResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__ADD_MODULE:
+				setAddModule((AddModule)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__ADD_MODULE_RESPONSE:
+				setAddModuleResponse((AddModuleResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__ADD_DOMAIN:
+				setAddDomain((AddDomain)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__ADD_DOMAIN_RESPONSE:
+				setAddDomainResponse((AddDomainResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__ADD_POLICY:
+				setAddPolicy((AddPolicy)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__ADD_POLICY_RESPONSE:
+				setAddPolicyResponse((AddPolicyResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__ADD_SIGNER_ID_TYPE:
+				setAddSignerIdType((AddSignerIdType)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__ADD_SIGNER_ID_TYPE_RESPONSE:
+				setAddSignerIdTypeResponse((AddSignerIdTypeResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_CONSENT_TEMPLATE:
+				setDeleteConsentTemplate((DeleteConsentTemplate)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_CONSENT_TEMPLATE_RESPONSE:
+				setDeleteConsentTemplateResponse((DeleteConsentTemplateResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_DOMAIN:
+				setDeleteDomain((DeleteDomain)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_DOMAIN_RESPONSE:
+				setDeleteDomainResponse((DeleteDomainResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_MODULE:
+				setDeleteModule((DeleteModule)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_MODULE_RESPONSE:
+				setDeleteModuleResponse((DeleteModuleResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_POLICY:
+				setDeletePolicy((DeletePolicy)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_POLICY_RESPONSE:
+				setDeletePolicyResponse((DeletePolicyResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_SIGNER_ID_TYPE:
+				setDeleteSignerIdType((DeleteSignerIdType)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_SIGNER_ID_TYPE_RESPONSE:
+				setDeleteSignerIdTypeResponse((DeleteSignerIdTypeResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE:
+				setUpdateConsentTemplate((UpdateConsentTemplate)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE_RESPONSE:
+				setUpdateConsentTemplateResponse((UpdateConsentTemplateResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE_IN_USE:
+				setUpdateConsentTemplateInUse((UpdateConsentTemplateInUse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE_IN_USE_RESPONSE:
+				setUpdateConsentTemplateInUseResponse((UpdateConsentTemplateInUseResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_DOMAIN:
+				setUpdateDomain((UpdateDomain)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_DOMAIN_RESPONSE:
+				setUpdateDomainResponse((UpdateDomainResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_DOMAIN_IN_USE:
+				setUpdateDomainInUse((UpdateDomainInUse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_DOMAIN_IN_USE_RESPONSE:
+				setUpdateDomainInUseResponse((UpdateDomainInUseResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_MODULE:
+				setUpdateModule((UpdateModule)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_MODULE_RESPONSE:
+				setUpdateModuleResponse((UpdateModuleResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_MODULE_IN_USE:
+				setUpdateModuleInUse((UpdateModuleInUse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_MODULE_IN_USE_RESPONSE:
+				setUpdateModuleInUseResponse((UpdateModuleInUseResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_POLICY:
+				setUpdatePolicy((UpdatePolicy)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_POLICY_RESPONSE:
+				setUpdatePolicyResponse((UpdatePolicyResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_POLICY_IN_USE:
+				setUpdatePolicyInUse((UpdatePolicyInUse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_POLICY_IN_USE_RESPONSE:
+				setUpdatePolicyInUseResponse((UpdatePolicyInUseResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_ALL_FOR_DOMAIN:
+				setFinaliseAllForDomain((FinaliseAllForDomain)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_ALL_FOR_DOMAIN_RESPONSE:
+				setFinaliseAllForDomainResponse((FinaliseAllForDomainResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_DOMAIN:
+				setFinaliseDomain((FinaliseDomain)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_DOMAIN_RESPONSE:
+				setFinaliseDomainResponse((FinaliseDomainResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_MODULE:
+				setFinaliseModule((FinaliseModule)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_MODULE_RESPONSE:
+				setFinaliseModuleResponse((FinaliseModuleResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_POLICY:
+				setFinalisePolicy((FinalisePolicy)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_POLICY_RESPONSE:
+				setFinalisePolicyResponse((FinalisePolicyResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_TEMPLATE:
+				setFinaliseTemplate((FinaliseTemplate)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_TEMPLATE_RESPONSE:
+				setFinaliseTemplateResponse((FinaliseTemplateResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FREE_TEXT_CONVERTER_STRING_EXCEPTION:
+				setFreeTextConverterStringException((FreeTextConverterStringException)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__ILLEGAL_COMPOSITION_EXCEPTION:
+				setIllegalCompositionException((IllegalCompositionException)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__INVALID_PROPERTIES_EXCEPTION:
+				setInvalidPropertiesException((InvalidPropertiesException)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__OBJECT_IN_USE_EXCEPTION:
+				setObjectInUseException((ObjectInUseException)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_SIGNER_ID_TYPE:
+				setUpdateSignerIdType((UpdateSignerIdType)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_SIGNER_ID_TYPE_RESPONSE:
+				setUpdateSignerIdTypeResponse((UpdateSignerIdTypeResponse)newValue);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__VERSION_CONVERTER_CLASS_EXCEPTION:
+				setVersionConverterClassException((VersionConverterClassException)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -5871,6 +7885,165 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 			case Cm2Package.DOCUMENT_ROOT__VALIDATE_CONSENT_RESPONSE:
 				setValidateConsentResponse((ValidateConsentResponse)null);
 				return;
+			case Cm2Package.DOCUMENT_ROOT__ADD_CONSENT_TEMPLATE:
+				setAddConsentTemplate((AddConsentTemplate)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__ADD_CONSENT_TEMPLATE_RESPONSE:
+				setAddConsentTemplateResponse((AddConsentTemplateResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__ADD_MODULE:
+				setAddModule((AddModule)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__ADD_MODULE_RESPONSE:
+				setAddModuleResponse((AddModuleResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__ADD_DOMAIN:
+				setAddDomain((AddDomain)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__ADD_DOMAIN_RESPONSE:
+				setAddDomainResponse((AddDomainResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__ADD_POLICY:
+				setAddPolicy((AddPolicy)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__ADD_POLICY_RESPONSE:
+				setAddPolicyResponse((AddPolicyResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__ADD_SIGNER_ID_TYPE:
+				setAddSignerIdType((AddSignerIdType)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__ADD_SIGNER_ID_TYPE_RESPONSE:
+				setAddSignerIdTypeResponse((AddSignerIdTypeResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_CONSENT_TEMPLATE:
+				setDeleteConsentTemplate((DeleteConsentTemplate)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_CONSENT_TEMPLATE_RESPONSE:
+				setDeleteConsentTemplateResponse((DeleteConsentTemplateResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_DOMAIN:
+				setDeleteDomain((DeleteDomain)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_DOMAIN_RESPONSE:
+				setDeleteDomainResponse((DeleteDomainResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_MODULE:
+				setDeleteModule((DeleteModule)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_MODULE_RESPONSE:
+				setDeleteModuleResponse((DeleteModuleResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_POLICY:
+				setDeletePolicy((DeletePolicy)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_POLICY_RESPONSE:
+				setDeletePolicyResponse((DeletePolicyResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_SIGNER_ID_TYPE:
+				setDeleteSignerIdType((DeleteSignerIdType)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_SIGNER_ID_TYPE_RESPONSE:
+				setDeleteSignerIdTypeResponse((DeleteSignerIdTypeResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE:
+				setUpdateConsentTemplate((UpdateConsentTemplate)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE_RESPONSE:
+				setUpdateConsentTemplateResponse((UpdateConsentTemplateResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE_IN_USE:
+				setUpdateConsentTemplateInUse((UpdateConsentTemplateInUse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE_IN_USE_RESPONSE:
+				setUpdateConsentTemplateInUseResponse((UpdateConsentTemplateInUseResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_DOMAIN:
+				setUpdateDomain((UpdateDomain)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_DOMAIN_RESPONSE:
+				setUpdateDomainResponse((UpdateDomainResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_DOMAIN_IN_USE:
+				setUpdateDomainInUse((UpdateDomainInUse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_DOMAIN_IN_USE_RESPONSE:
+				setUpdateDomainInUseResponse((UpdateDomainInUseResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_MODULE:
+				setUpdateModule((UpdateModule)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_MODULE_RESPONSE:
+				setUpdateModuleResponse((UpdateModuleResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_MODULE_IN_USE:
+				setUpdateModuleInUse((UpdateModuleInUse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_MODULE_IN_USE_RESPONSE:
+				setUpdateModuleInUseResponse((UpdateModuleInUseResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_POLICY:
+				setUpdatePolicy((UpdatePolicy)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_POLICY_RESPONSE:
+				setUpdatePolicyResponse((UpdatePolicyResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_POLICY_IN_USE:
+				setUpdatePolicyInUse((UpdatePolicyInUse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_POLICY_IN_USE_RESPONSE:
+				setUpdatePolicyInUseResponse((UpdatePolicyInUseResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_ALL_FOR_DOMAIN:
+				setFinaliseAllForDomain((FinaliseAllForDomain)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_ALL_FOR_DOMAIN_RESPONSE:
+				setFinaliseAllForDomainResponse((FinaliseAllForDomainResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_DOMAIN:
+				setFinaliseDomain((FinaliseDomain)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_DOMAIN_RESPONSE:
+				setFinaliseDomainResponse((FinaliseDomainResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_MODULE:
+				setFinaliseModule((FinaliseModule)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_MODULE_RESPONSE:
+				setFinaliseModuleResponse((FinaliseModuleResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_POLICY:
+				setFinalisePolicy((FinalisePolicy)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_POLICY_RESPONSE:
+				setFinalisePolicyResponse((FinalisePolicyResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_TEMPLATE:
+				setFinaliseTemplate((FinaliseTemplate)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_TEMPLATE_RESPONSE:
+				setFinaliseTemplateResponse((FinaliseTemplateResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__FREE_TEXT_CONVERTER_STRING_EXCEPTION:
+				setFreeTextConverterStringException((FreeTextConverterStringException)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__ILLEGAL_COMPOSITION_EXCEPTION:
+				setIllegalCompositionException((IllegalCompositionException)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__INVALID_PROPERTIES_EXCEPTION:
+				setInvalidPropertiesException((InvalidPropertiesException)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__OBJECT_IN_USE_EXCEPTION:
+				setObjectInUseException((ObjectInUseException)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_SIGNER_ID_TYPE:
+				setUpdateSignerIdType((UpdateSignerIdType)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_SIGNER_ID_TYPE_RESPONSE:
+				setUpdateSignerIdTypeResponse((UpdateSignerIdTypeResponse)null);
+				return;
+			case Cm2Package.DOCUMENT_ROOT__VERSION_CONVERTER_CLASS_EXCEPTION:
+				setVersionConverterClassException((VersionConverterClassException)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -6165,6 +8338,112 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 				return getValidateConsent() != null;
 			case Cm2Package.DOCUMENT_ROOT__VALIDATE_CONSENT_RESPONSE:
 				return getValidateConsentResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__ADD_CONSENT_TEMPLATE:
+				return getAddConsentTemplate() != null;
+			case Cm2Package.DOCUMENT_ROOT__ADD_CONSENT_TEMPLATE_RESPONSE:
+				return getAddConsentTemplateResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__ADD_MODULE:
+				return getAddModule() != null;
+			case Cm2Package.DOCUMENT_ROOT__ADD_MODULE_RESPONSE:
+				return getAddModuleResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__ADD_DOMAIN:
+				return getAddDomain() != null;
+			case Cm2Package.DOCUMENT_ROOT__ADD_DOMAIN_RESPONSE:
+				return getAddDomainResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__ADD_POLICY:
+				return getAddPolicy() != null;
+			case Cm2Package.DOCUMENT_ROOT__ADD_POLICY_RESPONSE:
+				return getAddPolicyResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__ADD_SIGNER_ID_TYPE:
+				return getAddSignerIdType() != null;
+			case Cm2Package.DOCUMENT_ROOT__ADD_SIGNER_ID_TYPE_RESPONSE:
+				return getAddSignerIdTypeResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_CONSENT_TEMPLATE:
+				return getDeleteConsentTemplate() != null;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_CONSENT_TEMPLATE_RESPONSE:
+				return getDeleteConsentTemplateResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_DOMAIN:
+				return getDeleteDomain() != null;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_DOMAIN_RESPONSE:
+				return getDeleteDomainResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_MODULE:
+				return getDeleteModule() != null;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_MODULE_RESPONSE:
+				return getDeleteModuleResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_POLICY:
+				return getDeletePolicy() != null;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_POLICY_RESPONSE:
+				return getDeletePolicyResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_SIGNER_ID_TYPE:
+				return getDeleteSignerIdType() != null;
+			case Cm2Package.DOCUMENT_ROOT__DELETE_SIGNER_ID_TYPE_RESPONSE:
+				return getDeleteSignerIdTypeResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE:
+				return getUpdateConsentTemplate() != null;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE_RESPONSE:
+				return getUpdateConsentTemplateResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE_IN_USE:
+				return getUpdateConsentTemplateInUse() != null;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_CONSENT_TEMPLATE_IN_USE_RESPONSE:
+				return getUpdateConsentTemplateInUseResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_DOMAIN:
+				return getUpdateDomain() != null;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_DOMAIN_RESPONSE:
+				return getUpdateDomainResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_DOMAIN_IN_USE:
+				return getUpdateDomainInUse() != null;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_DOMAIN_IN_USE_RESPONSE:
+				return getUpdateDomainInUseResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_MODULE:
+				return getUpdateModule() != null;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_MODULE_RESPONSE:
+				return getUpdateModuleResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_MODULE_IN_USE:
+				return getUpdateModuleInUse() != null;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_MODULE_IN_USE_RESPONSE:
+				return getUpdateModuleInUseResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_POLICY:
+				return getUpdatePolicy() != null;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_POLICY_RESPONSE:
+				return getUpdatePolicyResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_POLICY_IN_USE:
+				return getUpdatePolicyInUse() != null;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_POLICY_IN_USE_RESPONSE:
+				return getUpdatePolicyInUseResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_ALL_FOR_DOMAIN:
+				return getFinaliseAllForDomain() != null;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_ALL_FOR_DOMAIN_RESPONSE:
+				return getFinaliseAllForDomainResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_DOMAIN:
+				return getFinaliseDomain() != null;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_DOMAIN_RESPONSE:
+				return getFinaliseDomainResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_MODULE:
+				return getFinaliseModule() != null;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_MODULE_RESPONSE:
+				return getFinaliseModuleResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_POLICY:
+				return getFinalisePolicy() != null;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_POLICY_RESPONSE:
+				return getFinalisePolicyResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_TEMPLATE:
+				return getFinaliseTemplate() != null;
+			case Cm2Package.DOCUMENT_ROOT__FINALISE_TEMPLATE_RESPONSE:
+				return getFinaliseTemplateResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__FREE_TEXT_CONVERTER_STRING_EXCEPTION:
+				return getFreeTextConverterStringException() != null;
+			case Cm2Package.DOCUMENT_ROOT__ILLEGAL_COMPOSITION_EXCEPTION:
+				return getIllegalCompositionException() != null;
+			case Cm2Package.DOCUMENT_ROOT__INVALID_PROPERTIES_EXCEPTION:
+				return getInvalidPropertiesException() != null;
+			case Cm2Package.DOCUMENT_ROOT__OBJECT_IN_USE_EXCEPTION:
+				return getObjectInUseException() != null;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_SIGNER_ID_TYPE:
+				return getUpdateSignerIdType() != null;
+			case Cm2Package.DOCUMENT_ROOT__UPDATE_SIGNER_ID_TYPE_RESPONSE:
+				return getUpdateSignerIdTypeResponse() != null;
+			case Cm2Package.DOCUMENT_ROOT__VERSION_CONVERTER_CLASS_EXCEPTION:
+				return getVersionConverterClassException() != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -171,6 +171,59 @@ import org.osgi.annotation.versioning.ProviderType;
  *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateConsentInUseResponse <em>Update Consent In Use Response</em>}</li>
  *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getValidateConsent <em>Validate Consent</em>}</li>
  *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getValidateConsentResponse <em>Validate Consent Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddConsentTemplate <em>Add Consent Template</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddConsentTemplateResponse <em>Add Consent Template Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddModule <em>Add Module</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddModuleResponse <em>Add Module Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddDomain <em>Add Domain</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddDomainResponse <em>Add Domain Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddPolicy <em>Add Policy</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddPolicyResponse <em>Add Policy Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddSignerIdType <em>Add Signer Id Type</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddSignerIdTypeResponse <em>Add Signer Id Type Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteConsentTemplate <em>Delete Consent Template</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteConsentTemplateResponse <em>Delete Consent Template Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteDomain <em>Delete Domain</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteDomainResponse <em>Delete Domain Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteModule <em>Delete Module</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteModuleResponse <em>Delete Module Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeletePolicy <em>Delete Policy</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeletePolicyResponse <em>Delete Policy Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteSignerIdType <em>Delete Signer Id Type</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteSignerIdTypeResponse <em>Delete Signer Id Type Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateConsentTemplate <em>Update Consent Template</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateConsentTemplateResponse <em>Update Consent Template Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateConsentTemplateInUse <em>Update Consent Template In Use</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateConsentTemplateInUseResponse <em>Update Consent Template In Use Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateDomain <em>Update Domain</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateDomainResponse <em>Update Domain Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateDomainInUse <em>Update Domain In Use</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateDomainInUseResponse <em>Update Domain In Use Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateModule <em>Update Module</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateModuleResponse <em>Update Module Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateModuleInUse <em>Update Module In Use</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateModuleInUseResponse <em>Update Module In Use Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdatePolicy <em>Update Policy</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdatePolicyResponse <em>Update Policy Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdatePolicyInUse <em>Update Policy In Use</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdatePolicyInUseResponse <em>Update Policy In Use Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseAllForDomain <em>Finalise All For Domain</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseAllForDomainResponse <em>Finalise All For Domain Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseDomain <em>Finalise Domain</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseDomainResponse <em>Finalise Domain Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseModule <em>Finalise Module</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseModuleResponse <em>Finalise Module Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinalisePolicy <em>Finalise Policy</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinalisePolicyResponse <em>Finalise Policy Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseTemplate <em>Finalise Template</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseTemplateResponse <em>Finalise Template Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFreeTextConverterStringException <em>Free Text Converter String Exception</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getIllegalCompositionException <em>Illegal Composition Exception</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getInvalidPropertiesException <em>Invalid Properties Exception</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getObjectInUseException <em>Object In Use Exception</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateSignerIdType <em>Update Signer Id Type</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateSignerIdTypeResponse <em>Update Signer Id Type Response</em>}</li>
+ *   <li>{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getVersionConverterClassException <em>Version Converter Class Exception</em>}</li>
  * </ul>
  *
  * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot()
@@ -3393,5 +3446,1224 @@ public interface DocumentRoot extends EObject {
 	 * @generated
 	 */
 	void setValidateConsentResponse(ValidateConsentResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Add Consent Template</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Add Consent Template</em>' containment reference.
+	 * @see #setAddConsentTemplate(AddConsentTemplate)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_AddConsentTemplate()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	AddConsentTemplate getAddConsentTemplate();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddConsentTemplate <em>Add Consent Template</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Add Consent Template</em>' containment reference.
+	 * @see #getAddConsentTemplate()
+	 * @generated
+	 */
+	void setAddConsentTemplate(AddConsentTemplate value);
+
+	/**
+	 * Returns the value of the '<em><b>Add Consent Template Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Add Consent Template Response</em>' containment reference.
+	 * @see #setAddConsentTemplateResponse(AddConsentTemplateResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_AddConsentTemplateResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	AddConsentTemplateResponse getAddConsentTemplateResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddConsentTemplateResponse <em>Add Consent Template Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Add Consent Template Response</em>' containment reference.
+	 * @see #getAddConsentTemplateResponse()
+	 * @generated
+	 */
+	void setAddConsentTemplateResponse(AddConsentTemplateResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Add Module</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Add Module</em>' containment reference.
+	 * @see #setAddModule(AddModule)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_AddModule()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	AddModule getAddModule();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddModule <em>Add Module</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Add Module</em>' containment reference.
+	 * @see #getAddModule()
+	 * @generated
+	 */
+	void setAddModule(AddModule value);
+
+	/**
+	 * Returns the value of the '<em><b>Add Module Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Add Module Response</em>' containment reference.
+	 * @see #setAddModuleResponse(AddModuleResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_AddModuleResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	AddModuleResponse getAddModuleResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddModuleResponse <em>Add Module Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Add Module Response</em>' containment reference.
+	 * @see #getAddModuleResponse()
+	 * @generated
+	 */
+	void setAddModuleResponse(AddModuleResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Add Domain</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Add Domain</em>' containment reference.
+	 * @see #setAddDomain(AddDomain)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_AddDomain()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	AddDomain getAddDomain();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddDomain <em>Add Domain</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Add Domain</em>' containment reference.
+	 * @see #getAddDomain()
+	 * @generated
+	 */
+	void setAddDomain(AddDomain value);
+
+	/**
+	 * Returns the value of the '<em><b>Add Domain Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Add Domain Response</em>' containment reference.
+	 * @see #setAddDomainResponse(AddDomainResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_AddDomainResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	AddDomainResponse getAddDomainResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddDomainResponse <em>Add Domain Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Add Domain Response</em>' containment reference.
+	 * @see #getAddDomainResponse()
+	 * @generated
+	 */
+	void setAddDomainResponse(AddDomainResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Add Policy</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Add Policy</em>' containment reference.
+	 * @see #setAddPolicy(AddPolicy)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_AddPolicy()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	AddPolicy getAddPolicy();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddPolicy <em>Add Policy</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Add Policy</em>' containment reference.
+	 * @see #getAddPolicy()
+	 * @generated
+	 */
+	void setAddPolicy(AddPolicy value);
+
+	/**
+	 * Returns the value of the '<em><b>Add Policy Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Add Policy Response</em>' containment reference.
+	 * @see #setAddPolicyResponse(AddPolicyResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_AddPolicyResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	AddPolicyResponse getAddPolicyResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddPolicyResponse <em>Add Policy Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Add Policy Response</em>' containment reference.
+	 * @see #getAddPolicyResponse()
+	 * @generated
+	 */
+	void setAddPolicyResponse(AddPolicyResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Add Signer Id Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Add Signer Id Type</em>' containment reference.
+	 * @see #setAddSignerIdType(AddSignerIdType)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_AddSignerIdType()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	AddSignerIdType getAddSignerIdType();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddSignerIdType <em>Add Signer Id Type</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Add Signer Id Type</em>' containment reference.
+	 * @see #getAddSignerIdType()
+	 * @generated
+	 */
+	void setAddSignerIdType(AddSignerIdType value);
+
+	/**
+	 * Returns the value of the '<em><b>Add Signer Id Type Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Add Signer Id Type Response</em>' containment reference.
+	 * @see #setAddSignerIdTypeResponse(AddSignerIdTypeResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_AddSignerIdTypeResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	AddSignerIdTypeResponse getAddSignerIdTypeResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getAddSignerIdTypeResponse <em>Add Signer Id Type Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Add Signer Id Type Response</em>' containment reference.
+	 * @see #getAddSignerIdTypeResponse()
+	 * @generated
+	 */
+	void setAddSignerIdTypeResponse(AddSignerIdTypeResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Delete Consent Template</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Delete Consent Template</em>' containment reference.
+	 * @see #setDeleteConsentTemplate(DeleteConsentTemplate)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_DeleteConsentTemplate()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	DeleteConsentTemplate getDeleteConsentTemplate();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteConsentTemplate <em>Delete Consent Template</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Delete Consent Template</em>' containment reference.
+	 * @see #getDeleteConsentTemplate()
+	 * @generated
+	 */
+	void setDeleteConsentTemplate(DeleteConsentTemplate value);
+
+	/**
+	 * Returns the value of the '<em><b>Delete Consent Template Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Delete Consent Template Response</em>' containment reference.
+	 * @see #setDeleteConsentTemplateResponse(DeleteConsentTemplateResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_DeleteConsentTemplateResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	DeleteConsentTemplateResponse getDeleteConsentTemplateResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteConsentTemplateResponse <em>Delete Consent Template Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Delete Consent Template Response</em>' containment reference.
+	 * @see #getDeleteConsentTemplateResponse()
+	 * @generated
+	 */
+	void setDeleteConsentTemplateResponse(DeleteConsentTemplateResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Delete Domain</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Delete Domain</em>' containment reference.
+	 * @see #setDeleteDomain(DeleteDomain)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_DeleteDomain()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	DeleteDomain getDeleteDomain();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteDomain <em>Delete Domain</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Delete Domain</em>' containment reference.
+	 * @see #getDeleteDomain()
+	 * @generated
+	 */
+	void setDeleteDomain(DeleteDomain value);
+
+	/**
+	 * Returns the value of the '<em><b>Delete Domain Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Delete Domain Response</em>' containment reference.
+	 * @see #setDeleteDomainResponse(DeleteDomainResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_DeleteDomainResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	DeleteDomainResponse getDeleteDomainResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteDomainResponse <em>Delete Domain Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Delete Domain Response</em>' containment reference.
+	 * @see #getDeleteDomainResponse()
+	 * @generated
+	 */
+	void setDeleteDomainResponse(DeleteDomainResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Delete Module</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Delete Module</em>' containment reference.
+	 * @see #setDeleteModule(DeleteModule)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_DeleteModule()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	DeleteModule getDeleteModule();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteModule <em>Delete Module</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Delete Module</em>' containment reference.
+	 * @see #getDeleteModule()
+	 * @generated
+	 */
+	void setDeleteModule(DeleteModule value);
+
+	/**
+	 * Returns the value of the '<em><b>Delete Module Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Delete Module Response</em>' containment reference.
+	 * @see #setDeleteModuleResponse(DeleteModuleResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_DeleteModuleResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	DeleteModuleResponse getDeleteModuleResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteModuleResponse <em>Delete Module Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Delete Module Response</em>' containment reference.
+	 * @see #getDeleteModuleResponse()
+	 * @generated
+	 */
+	void setDeleteModuleResponse(DeleteModuleResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Delete Policy</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Delete Policy</em>' containment reference.
+	 * @see #setDeletePolicy(DeletePolicy)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_DeletePolicy()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	DeletePolicy getDeletePolicy();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeletePolicy <em>Delete Policy</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Delete Policy</em>' containment reference.
+	 * @see #getDeletePolicy()
+	 * @generated
+	 */
+	void setDeletePolicy(DeletePolicy value);
+
+	/**
+	 * Returns the value of the '<em><b>Delete Policy Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Delete Policy Response</em>' containment reference.
+	 * @see #setDeletePolicyResponse(DeletePolicyResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_DeletePolicyResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	DeletePolicyResponse getDeletePolicyResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeletePolicyResponse <em>Delete Policy Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Delete Policy Response</em>' containment reference.
+	 * @see #getDeletePolicyResponse()
+	 * @generated
+	 */
+	void setDeletePolicyResponse(DeletePolicyResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Delete Signer Id Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Delete Signer Id Type</em>' containment reference.
+	 * @see #setDeleteSignerIdType(DeleteSignerIdType)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_DeleteSignerIdType()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	DeleteSignerIdType getDeleteSignerIdType();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteSignerIdType <em>Delete Signer Id Type</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Delete Signer Id Type</em>' containment reference.
+	 * @see #getDeleteSignerIdType()
+	 * @generated
+	 */
+	void setDeleteSignerIdType(DeleteSignerIdType value);
+
+	/**
+	 * Returns the value of the '<em><b>Delete Signer Id Type Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Delete Signer Id Type Response</em>' containment reference.
+	 * @see #setDeleteSignerIdTypeResponse(DeleteSignerIdTypeResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_DeleteSignerIdTypeResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	DeleteSignerIdTypeResponse getDeleteSignerIdTypeResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getDeleteSignerIdTypeResponse <em>Delete Signer Id Type Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Delete Signer Id Type Response</em>' containment reference.
+	 * @see #getDeleteSignerIdTypeResponse()
+	 * @generated
+	 */
+	void setDeleteSignerIdTypeResponse(DeleteSignerIdTypeResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Update Consent Template</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Update Consent Template</em>' containment reference.
+	 * @see #setUpdateConsentTemplate(UpdateConsentTemplate)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_UpdateConsentTemplate()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UpdateConsentTemplate getUpdateConsentTemplate();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateConsentTemplate <em>Update Consent Template</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Update Consent Template</em>' containment reference.
+	 * @see #getUpdateConsentTemplate()
+	 * @generated
+	 */
+	void setUpdateConsentTemplate(UpdateConsentTemplate value);
+
+	/**
+	 * Returns the value of the '<em><b>Update Consent Template Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Update Consent Template Response</em>' containment reference.
+	 * @see #setUpdateConsentTemplateResponse(UpdateConsentTemplateResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_UpdateConsentTemplateResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UpdateConsentTemplateResponse getUpdateConsentTemplateResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateConsentTemplateResponse <em>Update Consent Template Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Update Consent Template Response</em>' containment reference.
+	 * @see #getUpdateConsentTemplateResponse()
+	 * @generated
+	 */
+	void setUpdateConsentTemplateResponse(UpdateConsentTemplateResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Update Consent Template In Use</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Update Consent Template In Use</em>' containment reference.
+	 * @see #setUpdateConsentTemplateInUse(UpdateConsentTemplateInUse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_UpdateConsentTemplateInUse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UpdateConsentTemplateInUse getUpdateConsentTemplateInUse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateConsentTemplateInUse <em>Update Consent Template In Use</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Update Consent Template In Use</em>' containment reference.
+	 * @see #getUpdateConsentTemplateInUse()
+	 * @generated
+	 */
+	void setUpdateConsentTemplateInUse(UpdateConsentTemplateInUse value);
+
+	/**
+	 * Returns the value of the '<em><b>Update Consent Template In Use Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Update Consent Template In Use Response</em>' containment reference.
+	 * @see #setUpdateConsentTemplateInUseResponse(UpdateConsentTemplateInUseResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_UpdateConsentTemplateInUseResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UpdateConsentTemplateInUseResponse getUpdateConsentTemplateInUseResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateConsentTemplateInUseResponse <em>Update Consent Template In Use Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Update Consent Template In Use Response</em>' containment reference.
+	 * @see #getUpdateConsentTemplateInUseResponse()
+	 * @generated
+	 */
+	void setUpdateConsentTemplateInUseResponse(UpdateConsentTemplateInUseResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Update Domain</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Update Domain</em>' containment reference.
+	 * @see #setUpdateDomain(UpdateDomain)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_UpdateDomain()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UpdateDomain getUpdateDomain();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateDomain <em>Update Domain</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Update Domain</em>' containment reference.
+	 * @see #getUpdateDomain()
+	 * @generated
+	 */
+	void setUpdateDomain(UpdateDomain value);
+
+	/**
+	 * Returns the value of the '<em><b>Update Domain Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Update Domain Response</em>' containment reference.
+	 * @see #setUpdateDomainResponse(UpdateDomainResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_UpdateDomainResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UpdateDomainResponse getUpdateDomainResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateDomainResponse <em>Update Domain Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Update Domain Response</em>' containment reference.
+	 * @see #getUpdateDomainResponse()
+	 * @generated
+	 */
+	void setUpdateDomainResponse(UpdateDomainResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Update Domain In Use</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Update Domain In Use</em>' containment reference.
+	 * @see #setUpdateDomainInUse(UpdateDomainInUse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_UpdateDomainInUse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UpdateDomainInUse getUpdateDomainInUse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateDomainInUse <em>Update Domain In Use</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Update Domain In Use</em>' containment reference.
+	 * @see #getUpdateDomainInUse()
+	 * @generated
+	 */
+	void setUpdateDomainInUse(UpdateDomainInUse value);
+
+	/**
+	 * Returns the value of the '<em><b>Update Domain In Use Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Update Domain In Use Response</em>' containment reference.
+	 * @see #setUpdateDomainInUseResponse(UpdateDomainInUseResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_UpdateDomainInUseResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UpdateDomainInUseResponse getUpdateDomainInUseResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateDomainInUseResponse <em>Update Domain In Use Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Update Domain In Use Response</em>' containment reference.
+	 * @see #getUpdateDomainInUseResponse()
+	 * @generated
+	 */
+	void setUpdateDomainInUseResponse(UpdateDomainInUseResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Update Module</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Update Module</em>' containment reference.
+	 * @see #setUpdateModule(UpdateModule)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_UpdateModule()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UpdateModule getUpdateModule();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateModule <em>Update Module</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Update Module</em>' containment reference.
+	 * @see #getUpdateModule()
+	 * @generated
+	 */
+	void setUpdateModule(UpdateModule value);
+
+	/**
+	 * Returns the value of the '<em><b>Update Module Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Update Module Response</em>' containment reference.
+	 * @see #setUpdateModuleResponse(UpdateModuleResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_UpdateModuleResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UpdateModuleResponse getUpdateModuleResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateModuleResponse <em>Update Module Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Update Module Response</em>' containment reference.
+	 * @see #getUpdateModuleResponse()
+	 * @generated
+	 */
+	void setUpdateModuleResponse(UpdateModuleResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Update Module In Use</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Update Module In Use</em>' containment reference.
+	 * @see #setUpdateModuleInUse(UpdateModuleInUse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_UpdateModuleInUse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UpdateModuleInUse getUpdateModuleInUse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateModuleInUse <em>Update Module In Use</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Update Module In Use</em>' containment reference.
+	 * @see #getUpdateModuleInUse()
+	 * @generated
+	 */
+	void setUpdateModuleInUse(UpdateModuleInUse value);
+
+	/**
+	 * Returns the value of the '<em><b>Update Module In Use Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Update Module In Use Response</em>' containment reference.
+	 * @see #setUpdateModuleInUseResponse(UpdateModuleInUseResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_UpdateModuleInUseResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UpdateModuleInUseResponse getUpdateModuleInUseResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateModuleInUseResponse <em>Update Module In Use Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Update Module In Use Response</em>' containment reference.
+	 * @see #getUpdateModuleInUseResponse()
+	 * @generated
+	 */
+	void setUpdateModuleInUseResponse(UpdateModuleInUseResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Update Policy</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Update Policy</em>' containment reference.
+	 * @see #setUpdatePolicy(UpdatePolicy)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_UpdatePolicy()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UpdatePolicy getUpdatePolicy();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdatePolicy <em>Update Policy</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Update Policy</em>' containment reference.
+	 * @see #getUpdatePolicy()
+	 * @generated
+	 */
+	void setUpdatePolicy(UpdatePolicy value);
+
+	/**
+	 * Returns the value of the '<em><b>Update Policy Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Update Policy Response</em>' containment reference.
+	 * @see #setUpdatePolicyResponse(UpdatePolicyResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_UpdatePolicyResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UpdatePolicyResponse getUpdatePolicyResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdatePolicyResponse <em>Update Policy Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Update Policy Response</em>' containment reference.
+	 * @see #getUpdatePolicyResponse()
+	 * @generated
+	 */
+	void setUpdatePolicyResponse(UpdatePolicyResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Update Policy In Use</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Update Policy In Use</em>' containment reference.
+	 * @see #setUpdatePolicyInUse(UpdatePolicyInUse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_UpdatePolicyInUse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UpdatePolicyInUse getUpdatePolicyInUse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdatePolicyInUse <em>Update Policy In Use</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Update Policy In Use</em>' containment reference.
+	 * @see #getUpdatePolicyInUse()
+	 * @generated
+	 */
+	void setUpdatePolicyInUse(UpdatePolicyInUse value);
+
+	/**
+	 * Returns the value of the '<em><b>Update Policy In Use Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Update Policy In Use Response</em>' containment reference.
+	 * @see #setUpdatePolicyInUseResponse(UpdatePolicyInUseResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_UpdatePolicyInUseResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UpdatePolicyInUseResponse getUpdatePolicyInUseResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdatePolicyInUseResponse <em>Update Policy In Use Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Update Policy In Use Response</em>' containment reference.
+	 * @see #getUpdatePolicyInUseResponse()
+	 * @generated
+	 */
+	void setUpdatePolicyInUseResponse(UpdatePolicyInUseResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Finalise All For Domain</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Finalise All For Domain</em>' containment reference.
+	 * @see #setFinaliseAllForDomain(FinaliseAllForDomain)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_FinaliseAllForDomain()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	FinaliseAllForDomain getFinaliseAllForDomain();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseAllForDomain <em>Finalise All For Domain</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Finalise All For Domain</em>' containment reference.
+	 * @see #getFinaliseAllForDomain()
+	 * @generated
+	 */
+	void setFinaliseAllForDomain(FinaliseAllForDomain value);
+
+	/**
+	 * Returns the value of the '<em><b>Finalise All For Domain Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Finalise All For Domain Response</em>' containment reference.
+	 * @see #setFinaliseAllForDomainResponse(FinaliseAllForDomainResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_FinaliseAllForDomainResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	FinaliseAllForDomainResponse getFinaliseAllForDomainResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseAllForDomainResponse <em>Finalise All For Domain Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Finalise All For Domain Response</em>' containment reference.
+	 * @see #getFinaliseAllForDomainResponse()
+	 * @generated
+	 */
+	void setFinaliseAllForDomainResponse(FinaliseAllForDomainResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Finalise Domain</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Finalise Domain</em>' containment reference.
+	 * @see #setFinaliseDomain(FinaliseDomain)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_FinaliseDomain()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	FinaliseDomain getFinaliseDomain();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseDomain <em>Finalise Domain</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Finalise Domain</em>' containment reference.
+	 * @see #getFinaliseDomain()
+	 * @generated
+	 */
+	void setFinaliseDomain(FinaliseDomain value);
+
+	/**
+	 * Returns the value of the '<em><b>Finalise Domain Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Finalise Domain Response</em>' containment reference.
+	 * @see #setFinaliseDomainResponse(FinaliseDomainResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_FinaliseDomainResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	FinaliseDomainResponse getFinaliseDomainResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseDomainResponse <em>Finalise Domain Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Finalise Domain Response</em>' containment reference.
+	 * @see #getFinaliseDomainResponse()
+	 * @generated
+	 */
+	void setFinaliseDomainResponse(FinaliseDomainResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Finalise Module</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Finalise Module</em>' containment reference.
+	 * @see #setFinaliseModule(FinaliseModule)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_FinaliseModule()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	FinaliseModule getFinaliseModule();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseModule <em>Finalise Module</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Finalise Module</em>' containment reference.
+	 * @see #getFinaliseModule()
+	 * @generated
+	 */
+	void setFinaliseModule(FinaliseModule value);
+
+	/**
+	 * Returns the value of the '<em><b>Finalise Module Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Finalise Module Response</em>' containment reference.
+	 * @see #setFinaliseModuleResponse(FinaliseModuleResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_FinaliseModuleResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	FinaliseModuleResponse getFinaliseModuleResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseModuleResponse <em>Finalise Module Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Finalise Module Response</em>' containment reference.
+	 * @see #getFinaliseModuleResponse()
+	 * @generated
+	 */
+	void setFinaliseModuleResponse(FinaliseModuleResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Finalise Policy</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Finalise Policy</em>' containment reference.
+	 * @see #setFinalisePolicy(FinalisePolicy)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_FinalisePolicy()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	FinalisePolicy getFinalisePolicy();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinalisePolicy <em>Finalise Policy</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Finalise Policy</em>' containment reference.
+	 * @see #getFinalisePolicy()
+	 * @generated
+	 */
+	void setFinalisePolicy(FinalisePolicy value);
+
+	/**
+	 * Returns the value of the '<em><b>Finalise Policy Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Finalise Policy Response</em>' containment reference.
+	 * @see #setFinalisePolicyResponse(FinalisePolicyResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_FinalisePolicyResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	FinalisePolicyResponse getFinalisePolicyResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinalisePolicyResponse <em>Finalise Policy Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Finalise Policy Response</em>' containment reference.
+	 * @see #getFinalisePolicyResponse()
+	 * @generated
+	 */
+	void setFinalisePolicyResponse(FinalisePolicyResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Finalise Template</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Finalise Template</em>' containment reference.
+	 * @see #setFinaliseTemplate(FinaliseTemplate)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_FinaliseTemplate()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	FinaliseTemplate getFinaliseTemplate();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseTemplate <em>Finalise Template</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Finalise Template</em>' containment reference.
+	 * @see #getFinaliseTemplate()
+	 * @generated
+	 */
+	void setFinaliseTemplate(FinaliseTemplate value);
+
+	/**
+	 * Returns the value of the '<em><b>Finalise Template Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Finalise Template Response</em>' containment reference.
+	 * @see #setFinaliseTemplateResponse(FinaliseTemplateResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_FinaliseTemplateResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	FinaliseTemplateResponse getFinaliseTemplateResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFinaliseTemplateResponse <em>Finalise Template Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Finalise Template Response</em>' containment reference.
+	 * @see #getFinaliseTemplateResponse()
+	 * @generated
+	 */
+	void setFinaliseTemplateResponse(FinaliseTemplateResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Free Text Converter String Exception</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Free Text Converter String Exception</em>' containment reference.
+	 * @see #setFreeTextConverterStringException(FreeTextConverterStringException)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_FreeTextConverterStringException()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	FreeTextConverterStringException getFreeTextConverterStringException();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getFreeTextConverterStringException <em>Free Text Converter String Exception</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Free Text Converter String Exception</em>' containment reference.
+	 * @see #getFreeTextConverterStringException()
+	 * @generated
+	 */
+	void setFreeTextConverterStringException(FreeTextConverterStringException value);
+
+	/**
+	 * Returns the value of the '<em><b>Illegal Composition Exception</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Illegal Composition Exception</em>' containment reference.
+	 * @see #setIllegalCompositionException(IllegalCompositionException)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_IllegalCompositionException()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	IllegalCompositionException getIllegalCompositionException();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getIllegalCompositionException <em>Illegal Composition Exception</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Illegal Composition Exception</em>' containment reference.
+	 * @see #getIllegalCompositionException()
+	 * @generated
+	 */
+	void setIllegalCompositionException(IllegalCompositionException value);
+
+	/**
+	 * Returns the value of the '<em><b>Invalid Properties Exception</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Invalid Properties Exception</em>' containment reference.
+	 * @see #setInvalidPropertiesException(InvalidPropertiesException)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_InvalidPropertiesException()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	InvalidPropertiesException getInvalidPropertiesException();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getInvalidPropertiesException <em>Invalid Properties Exception</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Invalid Properties Exception</em>' containment reference.
+	 * @see #getInvalidPropertiesException()
+	 * @generated
+	 */
+	void setInvalidPropertiesException(InvalidPropertiesException value);
+
+	/**
+	 * Returns the value of the '<em><b>Object In Use Exception</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Object In Use Exception</em>' containment reference.
+	 * @see #setObjectInUseException(ObjectInUseException)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_ObjectInUseException()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	ObjectInUseException getObjectInUseException();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getObjectInUseException <em>Object In Use Exception</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Object In Use Exception</em>' containment reference.
+	 * @see #getObjectInUseException()
+	 * @generated
+	 */
+	void setObjectInUseException(ObjectInUseException value);
+
+	/**
+	 * Returns the value of the '<em><b>Update Signer Id Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Update Signer Id Type</em>' containment reference.
+	 * @see #setUpdateSignerIdType(UpdateSignerIdType)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_UpdateSignerIdType()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UpdateSignerIdType getUpdateSignerIdType();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateSignerIdType <em>Update Signer Id Type</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Update Signer Id Type</em>' containment reference.
+	 * @see #getUpdateSignerIdType()
+	 * @generated
+	 */
+	void setUpdateSignerIdType(UpdateSignerIdType value);
+
+	/**
+	 * Returns the value of the '<em><b>Update Signer Id Type Response</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Update Signer Id Type Response</em>' containment reference.
+	 * @see #setUpdateSignerIdTypeResponse(UpdateSignerIdTypeResponse)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_UpdateSignerIdTypeResponse()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAliasResponse' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	UpdateSignerIdTypeResponse getUpdateSignerIdTypeResponse();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getUpdateSignerIdTypeResponse <em>Update Signer Id Type Response</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Update Signer Id Type Response</em>' containment reference.
+	 * @see #getUpdateSignerIdTypeResponse()
+	 * @generated
+	 */
+	void setUpdateSignerIdTypeResponse(UpdateSignerIdTypeResponse value);
+
+	/**
+	 * Returns the value of the '<em><b>Version Converter Class Exception</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Version Converter Class Exception</em>' containment reference.
+	 * @see #setVersionConverterClassException(VersionConverterClassException)
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.Cm2Package#getDocumentRoot_VersionConverterClassException()
+	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
+	 *        extendedMetaData="kind='element' name='addAlias' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	VersionConverterClassException getVersionConverterClassException();
+
+	/**
+	 * Sets the value of the '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot#getVersionConverterClassException <em>Version Converter Class Exception</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Version Converter Class Exception</em>' containment reference.
+	 * @see #getVersionConverterClassException()
+	 * @generated
+	 */
+	void setVersionConverterClassException(VersionConverterClassException value);
 
 } // DocumentRoot

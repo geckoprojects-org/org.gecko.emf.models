@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://cm2.ttp.ganimed.icmvc.emau.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="GICSServiceWithNotificationImplService" targetNamespace="http://cm2.ttp.ganimed.icmvc.emau.org/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://cm2.ttp.ganimed.icmvc.emau.org/" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://cm2.ttp.ganimed.icmvc.emau.org/" version="1.0">
+  <xs:element name="addConsent" type="tns:addConsent"/>
+  <xs:element name="addConsentOptOut" type="tns:addConsentOptOut"/>
+  <xs:element name="addConsentOptOutResponse" type="tns:addConsentOptOutResponse"/>
+  <xs:element name="addConsentResponse" type="tns:addConsentResponse"/>
+  <xs:element name="refuseConsent" type="tns:refuseConsent"/>
+  <xs:element name="refuseConsentResponse" type="tns:refuseConsentResponse"/>
+  <xs:element name="setQCForConsent" type="tns:setQCForConsent"/>
+  <xs:element name="setQCForConsentResponse" type="tns:setQCForConsentResponse"/>
+  <xs:element name="updateConsentInUse" type="tns:updateConsentInUse"/>
+  <xs:element name="updateConsentInUseResponse" type="tns:updateConsentInUseResponse"/>
+  <xs:complexType name="setQCForConsent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="notificationClientID" type="xs:string"/>
+      <xs:element name="consentKey" type="tns:consentKeyDTO"/>
+      <xs:element name="qc" type="tns:qcdto"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consentKeyDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="consentDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="consentTemplateKey" type="tns:consentTemplateKeyDTO"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="signerIds" nillable="true" type="tns:signerIdDTO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consentTemplateKeyDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="domainName" type="xs:string"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="version" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="signerIdDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:fhirIdDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="creationDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="id" type="xs:string"/>
+          <xs:element minOccurs="0" name="idType" type="xs:string"/>
+          <xs:element name="orderNumber" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType abstract="true" name="fhirIdDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fhirID" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="qcdto">
+    <xs:complexContent>
+      <xs:extension base="tns:fhirIdDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="comment" type="xs:string"/>
+          <xs:element minOccurs="0" name="date" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="externProperties" type="xs:string"/>
+          <xs:element minOccurs="0" name="inspector" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="problems" nillable="true" type="tns:qcProblemDTO"/>
+          <xs:element minOccurs="0" name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="qcProblemDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:fhirIdDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="commentExtern" type="xs:string"/>
+          <xs:element minOccurs="0" name="commentIntern" type="xs:string"/>
+          <xs:element minOccurs="0" name="createdAt" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="formValue" type="xs:string"/>
+          <xs:element minOccurs="0" name="ref" type="xs:string"/>
+          <xs:element minOccurs="0" name="scanValue" type="xs:string"/>
+          <xs:element minOccurs="0" name="status" type="tns:qcProblemStatus"/>
+          <xs:element minOccurs="0" name="updatedAt" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="setQCForConsentResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="addConsentOptOut">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="tns:consentTemplateKeyDTO"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="arg2" type="tns:signerIdDTO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addConsentOptOutResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="updateConsentInUse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="notificationClientID" type="xs:string"/>
+      <xs:element name="consentKey" type="tns:consentKeyDTO"/>
+      <xs:element name="externProperties" type="xs:string"/>
+      <xs:element name="comment" type="xs:string"/>
+      <xs:element name="scan" type="tns:consentScanDTO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consentScanDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:fhirIdDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="base64" type="xs:string"/>
+          <xs:element minOccurs="0" name="consentKey" type="tns:consentKeyDTO"/>
+          <xs:element minOccurs="0" name="fileName" type="xs:string"/>
+          <xs:element minOccurs="0" name="fileType" type="xs:string"/>
+          <xs:element minOccurs="0" name="uploadDate" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="updateConsentInUseResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="addConsent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="notificationClientID" type="xs:string"/>
+      <xs:element name="consent" type="tns:consentDTO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consentDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:consentLightDTO">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="freeTextVals" nillable="true" type="tns:freeTextValDTO"/>
+          <xs:element minOccurs="0" name="patientSignatureBase64" type="xs:string"/>
+          <xs:element minOccurs="0" name="physicianSignatureBase64" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="scans" nillable="true" type="tns:consentScanDTO"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="consentLightDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:fhirIdDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="comment" type="xs:string"/>
+          <xs:element minOccurs="0" name="consentDates" type="tns:consentDateValuesDTO"/>
+          <xs:element minOccurs="0" name="creationDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="expirationProperties" type="tns:expirationPropertiesDTO"/>
+          <xs:element minOccurs="0" name="externProperties" type="xs:string"/>
+          <xs:element name="hasPatientSignature" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="key" type="tns:consentKeyDTO"/>
+          <xs:element name="moduleStates">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="entry">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element minOccurs="0" name="key" type="tns:moduleKeyDTO"/>
+                      <xs:element minOccurs="0" name="value" type="tns:moduleStateDTO"/>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="patientSignatureIsFromGuardian" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="patientSigningDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="patientSigningPlace" type="xs:string"/>
+          <xs:element minOccurs="0" name="physicianId" type="xs:string"/>
+          <xs:element minOccurs="0" name="physicianSigningDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="physicianSigningPlace" type="xs:string"/>
+          <xs:element minOccurs="0" name="qualityControl" type="tns:qcdto"/>
+          <xs:element minOccurs="0" name="templateType" type="tns:consentTemplateType"/>
+          <xs:element minOccurs="0" name="updateDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="validFromDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="validFromProperties" type="tns:validFromPropertiesDTO"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="freeTextValDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:fhirIdDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="freeTextDefName" type="xs:string"/>
+          <xs:element minOccurs="0" name="value" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="consentDateValuesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="consentExpirationDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="gicsConsentDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="legalConsentDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="maxPolicyExpirationDate" type="xs:dateTime"/>
+      <xs:element name="moduleExpirations">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="entry">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="key" type="tns:moduleKeyDTO"/>
+                  <xs:element minOccurs="0" name="value" type="xs:dateTime"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="policyExpirations">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="entry">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="key" type="tns:moduleKeyDTO"/>
+                  <xs:element minOccurs="0" name="value" type="tns:hashMap"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="moduleKeyDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="domainName" type="xs:string"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="version" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="hashMap">
+    <xs:complexContent>
+      <xs:extension base="tns:abstractMap">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType abstract="true" name="abstractMap">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="expirationPropertiesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fixedExpirationDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="validPeriod" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="moduleStateDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="consentState" type="tns:consentStatus"/>
+      <xs:element minOccurs="0" name="key" type="tns:moduleKeyDTO"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="policyKeys" nillable="true" type="tns:policyKeyDTO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="policyKeyDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="domainName" type="xs:string"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="version" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validFromPropertiesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fixedValidFromDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="invalidPeriod" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addConsentResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="refuseConsent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="notificationClientID" type="xs:string"/>
+      <xs:element name="consentTemplateKey" type="tns:consentTemplateKeyDTO"/>
+      <xs:element maxOccurs="unbounded" name="signerIds" type="tns:signerIdDTO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="refuseConsentResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:simpleType name="qcProblemStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OPEN_EXTERN"/>
+      <xs:enumeration value="OPEN_INTERN"/>
+      <xs:enumeration value="CANCELED_EXTERN"/>
+      <xs:enumeration value="CANCELED_INTERN"/>
+      <xs:enumeration value="CLOSED_EXTERN"/>
+      <xs:enumeration value="CLOSED_INTERN"/>
+      <xs:enumeration value="DELETED_INTERN"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="consentStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ACCEPTED"/>
+      <xs:enumeration value="DECLINED"/>
+      <xs:enumeration value="UNKNOWN"/>
+      <xs:enumeration value="NOT_ASKED"/>
+      <xs:enumeration value="NOT_CHOSEN"/>
+      <xs:enumeration value="WITHDRAWN"/>
+      <xs:enumeration value="INVALIDATED"/>
+      <xs:enumeration value="REFUSED"/>
+      <xs:enumeration value="EXPIRED"/>
+      <xs:enumeration value="OBJECTED"/>
+      <xs:enumeration value="ACCEPTED_OPT_OUT"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="consentTemplateType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CONSENT"/>
+      <xs:enumeration value="CONSENT_OPT_OUT"/>
+      <xs:enumeration value="REVOCATION"/>
+      <xs:enumeration value="OBJECTION"/>
+      <xs:enumeration value="REFUSAL"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UnknownDomainException" type="tns:UnknownDomainException"/>
+  <xs:complexType name="UnknownDomainException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UnknownConsentException" type="tns:UnknownConsentException"/>
+  <xs:complexType name="UnknownConsentException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvalidParameterException" type="tns:InvalidParameterException"/>
+  <xs:complexType name="InvalidParameterException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="parameterName" type="xs:string"/>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UnknownSignerIdTypeException" type="tns:UnknownSignerIdTypeException"/>
+  <xs:complexType name="UnknownSignerIdTypeException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvalidVersionException" type="tns:InvalidVersionException"/>
+  <xs:complexType name="InvalidVersionException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UnknownConsentTemplateException" type="tns:UnknownConsentTemplateException"/>
+  <xs:complexType name="UnknownConsentTemplateException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DuplicateEntryException" type="tns:DuplicateEntryException"/>
+  <xs:complexType name="DuplicateEntryException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MissingRequiredObjectException" type="tns:MissingRequiredObjectException"/>
+  <xs:complexType name="MissingRequiredObjectException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MandatoryFieldsException" type="tns:MandatoryFieldsException"/>
+  <xs:complexType name="MandatoryFieldsException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequirementsNotFullfilledException" type="tns:RequirementsNotFullfilledException"/>
+  <xs:complexType name="RequirementsNotFullfilledException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UnknownModuleException" type="tns:UnknownModuleException"/>
+  <xs:complexType name="UnknownModuleException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvalidFreeTextException" type="tns:InvalidFreeTextException"/>
+  <xs:complexType name="InvalidFreeTextException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InternalException" type="tns:InternalException"/>
+  <xs:complexType name="InternalException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="addConsentOptOutResponse">
+    <wsdl:part element="tns:addConsentOptOutResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UnknownDomainException">
+    <wsdl:part element="tns:UnknownDomainException" name="UnknownDomainException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="refuseConsentResponse">
+    <wsdl:part element="tns:refuseConsentResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="InternalException">
+    <wsdl:part element="tns:InternalException" name="InternalException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UnknownConsentException">
+    <wsdl:part element="tns:UnknownConsentException" name="UnknownConsentException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addConsent">
+    <wsdl:part element="tns:addConsent" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UnknownSignerIdTypeException">
+    <wsdl:part element="tns:UnknownSignerIdTypeException" name="UnknownSignerIdTypeException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addConsentOptOut">
+    <wsdl:part element="tns:addConsentOptOut" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="InvalidVersionException">
+    <wsdl:part element="tns:InvalidVersionException" name="InvalidVersionException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RequirementsNotFullfilledException">
+    <wsdl:part element="tns:RequirementsNotFullfilledException" name="RequirementsNotFullfilledException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UnknownModuleException">
+    <wsdl:part element="tns:UnknownModuleException" name="UnknownModuleException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="refuseConsent">
+    <wsdl:part element="tns:refuseConsent" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DuplicateEntryException">
+    <wsdl:part element="tns:DuplicateEntryException" name="DuplicateEntryException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="MissingRequiredObjectException">
+    <wsdl:part element="tns:MissingRequiredObjectException" name="MissingRequiredObjectException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="MandatoryFieldsException">
+    <wsdl:part element="tns:MandatoryFieldsException" name="MandatoryFieldsException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateConsentInUseResponse">
+    <wsdl:part element="tns:updateConsentInUseResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateConsentInUse">
+    <wsdl:part element="tns:updateConsentInUse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setQCForConsent">
+    <wsdl:part element="tns:setQCForConsent" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setQCForConsentResponse">
+    <wsdl:part element="tns:setQCForConsentResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="InvalidParameterException">
+    <wsdl:part element="tns:InvalidParameterException" name="InvalidParameterException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addConsentResponse">
+    <wsdl:part element="tns:addConsentResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="InvalidFreeTextException">
+    <wsdl:part element="tns:InvalidFreeTextException" name="InvalidFreeTextException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UnknownConsentTemplateException">
+    <wsdl:part element="tns:UnknownConsentTemplateException" name="UnknownConsentTemplateException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="GICSServiceWithNotification">
+    <wsdl:operation name="setQCForConsent">
+      <wsdl:input message="tns:setQCForConsent" name="setQCForConsent">
+    </wsdl:input>
+      <wsdl:output message="tns:setQCForConsentResponse" name="setQCForConsentResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:UnknownSignerIdTypeException" name="UnknownSignerIdTypeException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:InvalidParameterException" name="InvalidParameterException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:UnknownConsentTemplateException" name="UnknownConsentTemplateException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:InvalidVersionException" name="InvalidVersionException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:UnknownDomainException" name="UnknownDomainException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:UnknownConsentException" name="UnknownConsentException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addConsentOptOut">
+      <wsdl:input message="tns:addConsentOptOut" name="addConsentOptOut">
+    </wsdl:input>
+      <wsdl:output message="tns:addConsentOptOutResponse" name="addConsentOptOutResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:UnknownSignerIdTypeException" name="UnknownSignerIdTypeException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:InvalidParameterException" name="InvalidParameterException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:UnknownConsentTemplateException" name="UnknownConsentTemplateException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:InvalidVersionException" name="InvalidVersionException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:RequirementsNotFullfilledException" name="RequirementsNotFullfilledException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:UnknownModuleException" name="UnknownModuleException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:InvalidFreeTextException" name="InvalidFreeTextException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:UnknownDomainException" name="UnknownDomainException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:MissingRequiredObjectException" name="MissingRequiredObjectException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:MandatoryFieldsException" name="MandatoryFieldsException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:DuplicateEntryException" name="DuplicateEntryException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateConsentInUse">
+      <wsdl:input message="tns:updateConsentInUse" name="updateConsentInUse">
+    </wsdl:input>
+      <wsdl:output message="tns:updateConsentInUseResponse" name="updateConsentInUseResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:UnknownSignerIdTypeException" name="UnknownSignerIdTypeException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:InvalidParameterException" name="InvalidParameterException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:UnknownConsentTemplateException" name="UnknownConsentTemplateException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:InvalidVersionException" name="InvalidVersionException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:UnknownDomainException" name="UnknownDomainException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:UnknownConsentException" name="UnknownConsentException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addConsent">
+      <wsdl:input message="tns:addConsent" name="addConsent">
+    </wsdl:input>
+      <wsdl:output message="tns:addConsentResponse" name="addConsentResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:UnknownSignerIdTypeException" name="UnknownSignerIdTypeException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:InvalidParameterException" name="InvalidParameterException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:UnknownConsentTemplateException" name="UnknownConsentTemplateException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:UnknownModuleException" name="UnknownModuleException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:InvalidVersionException" name="InvalidVersionException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:InvalidFreeTextException" name="InvalidFreeTextException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:RequirementsNotFullfilledException" name="RequirementsNotFullfilledException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:UnknownDomainException" name="UnknownDomainException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:MissingRequiredObjectException" name="MissingRequiredObjectException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:MandatoryFieldsException" name="MandatoryFieldsException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:DuplicateEntryException" name="DuplicateEntryException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="refuseConsent">
+      <wsdl:input message="tns:refuseConsent" name="refuseConsent">
+    </wsdl:input>
+      <wsdl:output message="tns:refuseConsentResponse" name="refuseConsentResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:UnknownSignerIdTypeException" name="UnknownSignerIdTypeException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:InvalidParameterException" name="InvalidParameterException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:UnknownConsentTemplateException" name="UnknownConsentTemplateException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:InvalidVersionException" name="InvalidVersionException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:UnknownDomainException" name="UnknownDomainException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:InternalException" name="InternalException">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GICSServiceWithNotificationImplServiceSoapBinding" type="tns:GICSServiceWithNotification">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="setQCForConsent">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setQCForConsent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setQCForConsentResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="UnknownSignerIdTypeException">
+        <soap:fault name="UnknownSignerIdTypeException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InvalidParameterException">
+        <soap:fault name="InvalidParameterException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="UnknownConsentTemplateException">
+        <soap:fault name="UnknownConsentTemplateException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InvalidVersionException">
+        <soap:fault name="InvalidVersionException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="UnknownDomainException">
+        <soap:fault name="UnknownDomainException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="UnknownConsentException">
+        <soap:fault name="UnknownConsentException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addConsentOptOut">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="addConsentOptOut">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addConsentOptOutResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="UnknownSignerIdTypeException">
+        <soap:fault name="UnknownSignerIdTypeException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InvalidParameterException">
+        <soap:fault name="InvalidParameterException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="UnknownConsentTemplateException">
+        <soap:fault name="UnknownConsentTemplateException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InvalidVersionException">
+        <soap:fault name="InvalidVersionException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="RequirementsNotFullfilledException">
+        <soap:fault name="RequirementsNotFullfilledException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="UnknownModuleException">
+        <soap:fault name="UnknownModuleException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InvalidFreeTextException">
+        <soap:fault name="InvalidFreeTextException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="UnknownDomainException">
+        <soap:fault name="UnknownDomainException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="MissingRequiredObjectException">
+        <soap:fault name="MissingRequiredObjectException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="MandatoryFieldsException">
+        <soap:fault name="MandatoryFieldsException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="DuplicateEntryException">
+        <soap:fault name="DuplicateEntryException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateConsentInUse">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateConsentInUse">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateConsentInUseResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="UnknownSignerIdTypeException">
+        <soap:fault name="UnknownSignerIdTypeException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InvalidParameterException">
+        <soap:fault name="InvalidParameterException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="UnknownConsentTemplateException">
+        <soap:fault name="UnknownConsentTemplateException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InvalidVersionException">
+        <soap:fault name="InvalidVersionException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="UnknownDomainException">
+        <soap:fault name="UnknownDomainException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="UnknownConsentException">
+        <soap:fault name="UnknownConsentException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addConsent">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="addConsent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addConsentResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="UnknownSignerIdTypeException">
+        <soap:fault name="UnknownSignerIdTypeException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InvalidParameterException">
+        <soap:fault name="InvalidParameterException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="UnknownConsentTemplateException">
+        <soap:fault name="UnknownConsentTemplateException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="UnknownModuleException">
+        <soap:fault name="UnknownModuleException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InvalidVersionException">
+        <soap:fault name="InvalidVersionException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InvalidFreeTextException">
+        <soap:fault name="InvalidFreeTextException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="RequirementsNotFullfilledException">
+        <soap:fault name="RequirementsNotFullfilledException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="UnknownDomainException">
+        <soap:fault name="UnknownDomainException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="MissingRequiredObjectException">
+        <soap:fault name="MissingRequiredObjectException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="MandatoryFieldsException">
+        <soap:fault name="MandatoryFieldsException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="DuplicateEntryException">
+        <soap:fault name="DuplicateEntryException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="refuseConsent">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="refuseConsent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="refuseConsentResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="UnknownSignerIdTypeException">
+        <soap:fault name="UnknownSignerIdTypeException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InvalidParameterException">
+        <soap:fault name="InvalidParameterException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="UnknownConsentTemplateException">
+        <soap:fault name="UnknownConsentTemplateException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InvalidVersionException">
+        <soap:fault name="InvalidVersionException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="UnknownDomainException">
+        <soap:fault name="UnknownDomainException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InternalException">
+        <soap:fault name="InternalException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GICSServiceWithNotificationImplService">
+    <wsdl:port binding="tns:GICSServiceWithNotificationImplServiceSoapBinding" name="gicsServiceWithNotificationPort">
+      <soap:address location="http://localhost:8080/gics/gicsServiceWithNotification"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -25,12 +25,22 @@ import org.emau.icmvc.ganimed.ttp.cm2.AddConsent;
 import org.emau.icmvc.ganimed.ttp.cm2.AddConsentOptOut;
 import org.emau.icmvc.ganimed.ttp.cm2.AddConsentOptOutResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AddConsentResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplate;
+import org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplateResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.AddDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddModule;
+import org.emau.icmvc.ganimed.ttp.cm2.AddModuleResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddPolicy;
+import org.emau.icmvc.ganimed.ttp.cm2.AddPolicyResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AddScanToConsent;
 import org.emau.icmvc.ganimed.ttp.cm2.AddScanToConsentResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdToConsent;
 import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdToConsentResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdToSignerId;
 import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdToSignerIdResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdType;
+import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdTypeResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AssignedModuleDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.AssignedPolicyDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.ChildrenType;
@@ -49,6 +59,16 @@ import org.emau.icmvc.ganimed.ttp.cm2.CountSignedPolicies;
 import org.emau.icmvc.ganimed.ttp.cm2.CountSignedPoliciesResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.DeactivateAlias;
 import org.emau.icmvc.ganimed.ttp.cm2.DeactivateAliasResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteConsentTemplate;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteConsentTemplateResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteModule;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteModuleResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeletePolicy;
+import org.emau.icmvc.ganimed.ttp.cm2.DeletePolicyResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdType;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdTypeResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot;
 import org.emau.icmvc.ganimed.ttp.cm2.DomainDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.DuplicateEntryException;
@@ -59,6 +79,17 @@ import org.emau.icmvc.ganimed.ttp.cm2.EntryType3;
 import org.emau.icmvc.ganimed.ttp.cm2.EntryType4;
 import org.emau.icmvc.ganimed.ttp.cm2.ExpirationPropertiesDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.FhirIdDTO;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseAllForDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseAllForDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseModule;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseModuleResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FinalisePolicy;
+import org.emau.icmvc.ganimed.ttp.cm2.FinalisePolicyResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplate;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplateResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FreeTextConverterStringException;
 import org.emau.icmvc.ganimed.ttp.cm2.FreeTextDefDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.FreeTextValDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.GetAliasesForSignerId;
@@ -130,10 +161,12 @@ import org.emau.icmvc.ganimed.ttp.cm2.GetSignerIdsForAliasResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.GetTemplatesWithPolicies;
 import org.emau.icmvc.ganimed.ttp.cm2.GetTemplatesWithPoliciesResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.HashMap;
+import org.emau.icmvc.ganimed.ttp.cm2.IllegalCompositionException;
 import org.emau.icmvc.ganimed.ttp.cm2.InconsistentStatusException;
 import org.emau.icmvc.ganimed.ttp.cm2.InternalException;
 import org.emau.icmvc.ganimed.ttp.cm2.InvalidFreeTextException;
 import org.emau.icmvc.ganimed.ttp.cm2.InvalidParameterException;
+import org.emau.icmvc.ganimed.ttp.cm2.InvalidPropertiesException;
 import org.emau.icmvc.ganimed.ttp.cm2.InvalidVersionException;
 import org.emau.icmvc.ganimed.ttp.cm2.IsConsented;
 import org.emau.icmvc.ganimed.ttp.cm2.IsConsentedFromExcludingToExcluding;
@@ -166,6 +199,7 @@ import org.emau.icmvc.ganimed.ttp.cm2.ModuleKeyDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.ModuleKeyDTOArray;
 import org.emau.icmvc.ganimed.ttp.cm2.ModuleStateDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.ModuleStatesType;
+import org.emau.icmvc.ganimed.ttp.cm2.ObjectInUseException;
 import org.emau.icmvc.ganimed.ttp.cm2.PolicyDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.PolicyExpirationsType;
 import org.emau.icmvc.ganimed.ttp.cm2.PolicyKeyDTO;
@@ -223,9 +257,28 @@ import org.emau.icmvc.ganimed.ttp.cm2.UnknownSignerIdException;
 import org.emau.icmvc.ganimed.ttp.cm2.UnknownSignerIdTypeException;
 import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentInUse;
 import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplate;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateInUse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateModule;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicy;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdType;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdTypeResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.ValidFromPropertiesDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.ValidateConsent;
 import org.emau.icmvc.ganimed.ttp.cm2.ValidateConsentResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.VersionConverterClassException;
 
 /**
  * <!-- begin-user-doc -->
@@ -326,6 +379,54 @@ public class Cm2Switch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Cm2Package.ADD_CONSENT_TEMPLATE: {
+				AddConsentTemplate addConsentTemplate = (AddConsentTemplate)theEObject;
+				T result = caseAddConsentTemplate(addConsentTemplate);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.ADD_CONSENT_TEMPLATE_RESPONSE: {
+				AddConsentTemplateResponse addConsentTemplateResponse = (AddConsentTemplateResponse)theEObject;
+				T result = caseAddConsentTemplateResponse(addConsentTemplateResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.ADD_DOMAIN: {
+				AddDomain addDomain = (AddDomain)theEObject;
+				T result = caseAddDomain(addDomain);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.ADD_DOMAIN_RESPONSE: {
+				AddDomainResponse addDomainResponse = (AddDomainResponse)theEObject;
+				T result = caseAddDomainResponse(addDomainResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.ADD_MODULE: {
+				AddModule addModule = (AddModule)theEObject;
+				T result = caseAddModule(addModule);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.ADD_MODULE_RESPONSE: {
+				AddModuleResponse addModuleResponse = (AddModuleResponse)theEObject;
+				T result = caseAddModuleResponse(addModuleResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.ADD_POLICY: {
+				AddPolicy addPolicy = (AddPolicy)theEObject;
+				T result = caseAddPolicy(addPolicy);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.ADD_POLICY_RESPONSE: {
+				AddPolicyResponse addPolicyResponse = (AddPolicyResponse)theEObject;
+				T result = caseAddPolicyResponse(addPolicyResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Cm2Package.ADD_SCAN_TO_CONSENT: {
 				AddScanToConsent addScanToConsent = (AddScanToConsent)theEObject;
 				T result = caseAddScanToConsent(addScanToConsent);
@@ -335,6 +436,18 @@ public class Cm2Switch<T> extends Switch<T> {
 			case Cm2Package.ADD_SCAN_TO_CONSENT_RESPONSE: {
 				AddScanToConsentResponse addScanToConsentResponse = (AddScanToConsentResponse)theEObject;
 				T result = caseAddScanToConsentResponse(addScanToConsentResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.ADD_SIGNER_ID_TYPE: {
+				AddSignerIdType addSignerIdType = (AddSignerIdType)theEObject;
+				T result = caseAddSignerIdType(addSignerIdType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.ADD_SIGNER_ID_TYPE_RESPONSE: {
+				AddSignerIdTypeResponse addSignerIdTypeResponse = (AddSignerIdTypeResponse)theEObject;
+				T result = caseAddSignerIdTypeResponse(addSignerIdTypeResponse);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -471,6 +584,66 @@ public class Cm2Switch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Cm2Package.DELETE_CONSENT_TEMPLATE: {
+				DeleteConsentTemplate deleteConsentTemplate = (DeleteConsentTemplate)theEObject;
+				T result = caseDeleteConsentTemplate(deleteConsentTemplate);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.DELETE_CONSENT_TEMPLATE_RESPONSE: {
+				DeleteConsentTemplateResponse deleteConsentTemplateResponse = (DeleteConsentTemplateResponse)theEObject;
+				T result = caseDeleteConsentTemplateResponse(deleteConsentTemplateResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.DELETE_DOMAIN: {
+				DeleteDomain deleteDomain = (DeleteDomain)theEObject;
+				T result = caseDeleteDomain(deleteDomain);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.DELETE_DOMAIN_RESPONSE: {
+				DeleteDomainResponse deleteDomainResponse = (DeleteDomainResponse)theEObject;
+				T result = caseDeleteDomainResponse(deleteDomainResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.DELETE_MODULE: {
+				DeleteModule deleteModule = (DeleteModule)theEObject;
+				T result = caseDeleteModule(deleteModule);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.DELETE_MODULE_RESPONSE: {
+				DeleteModuleResponse deleteModuleResponse = (DeleteModuleResponse)theEObject;
+				T result = caseDeleteModuleResponse(deleteModuleResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.DELETE_POLICY: {
+				DeletePolicy deletePolicy = (DeletePolicy)theEObject;
+				T result = caseDeletePolicy(deletePolicy);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.DELETE_POLICY_RESPONSE: {
+				DeletePolicyResponse deletePolicyResponse = (DeletePolicyResponse)theEObject;
+				T result = caseDeletePolicyResponse(deletePolicyResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.DELETE_SIGNER_ID_TYPE: {
+				DeleteSignerIdType deleteSignerIdType = (DeleteSignerIdType)theEObject;
+				T result = caseDeleteSignerIdType(deleteSignerIdType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.DELETE_SIGNER_ID_TYPE_RESPONSE: {
+				DeleteSignerIdTypeResponse deleteSignerIdTypeResponse = (DeleteSignerIdTypeResponse)theEObject;
+				T result = caseDeleteSignerIdTypeResponse(deleteSignerIdTypeResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Cm2Package.DOCUMENT_ROOT: {
 				DocumentRoot documentRoot = (DocumentRoot)theEObject;
 				T result = caseDocumentRoot(documentRoot);
@@ -529,6 +702,72 @@ public class Cm2Switch<T> extends Switch<T> {
 			case Cm2Package.FHIR_ID_DTO: {
 				FhirIdDTO fhirIdDTO = (FhirIdDTO)theEObject;
 				T result = caseFhirIdDTO(fhirIdDTO);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.FINALISE_ALL_FOR_DOMAIN: {
+				FinaliseAllForDomain finaliseAllForDomain = (FinaliseAllForDomain)theEObject;
+				T result = caseFinaliseAllForDomain(finaliseAllForDomain);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.FINALISE_ALL_FOR_DOMAIN_RESPONSE: {
+				FinaliseAllForDomainResponse finaliseAllForDomainResponse = (FinaliseAllForDomainResponse)theEObject;
+				T result = caseFinaliseAllForDomainResponse(finaliseAllForDomainResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.FINALISE_DOMAIN: {
+				FinaliseDomain finaliseDomain = (FinaliseDomain)theEObject;
+				T result = caseFinaliseDomain(finaliseDomain);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.FINALISE_DOMAIN_RESPONSE: {
+				FinaliseDomainResponse finaliseDomainResponse = (FinaliseDomainResponse)theEObject;
+				T result = caseFinaliseDomainResponse(finaliseDomainResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.FINALISE_MODULE: {
+				FinaliseModule finaliseModule = (FinaliseModule)theEObject;
+				T result = caseFinaliseModule(finaliseModule);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.FINALISE_MODULE_RESPONSE: {
+				FinaliseModuleResponse finaliseModuleResponse = (FinaliseModuleResponse)theEObject;
+				T result = caseFinaliseModuleResponse(finaliseModuleResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.FINALISE_POLICY: {
+				FinalisePolicy finalisePolicy = (FinalisePolicy)theEObject;
+				T result = caseFinalisePolicy(finalisePolicy);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.FINALISE_POLICY_RESPONSE: {
+				FinalisePolicyResponse finalisePolicyResponse = (FinalisePolicyResponse)theEObject;
+				T result = caseFinalisePolicyResponse(finalisePolicyResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.FINALISE_TEMPLATE: {
+				FinaliseTemplate finaliseTemplate = (FinaliseTemplate)theEObject;
+				T result = caseFinaliseTemplate(finaliseTemplate);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.FINALISE_TEMPLATE_RESPONSE: {
+				FinaliseTemplateResponse finaliseTemplateResponse = (FinaliseTemplateResponse)theEObject;
+				T result = caseFinaliseTemplateResponse(finaliseTemplateResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.FREE_TEXT_CONVERTER_STRING_EXCEPTION: {
+				FreeTextConverterStringException freeTextConverterStringException = (FreeTextConverterStringException)theEObject;
+				T result = caseFreeTextConverterStringException(freeTextConverterStringException);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -979,6 +1218,12 @@ public class Cm2Switch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Cm2Package.ILLEGAL_COMPOSITION_EXCEPTION: {
+				IllegalCompositionException illegalCompositionException = (IllegalCompositionException)theEObject;
+				T result = caseIllegalCompositionException(illegalCompositionException);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Cm2Package.INVALID_FREE_TEXT_EXCEPTION: {
 				InvalidFreeTextException invalidFreeTextException = (InvalidFreeTextException)theEObject;
 				T result = caseInvalidFreeTextException(invalidFreeTextException);
@@ -988,6 +1233,12 @@ public class Cm2Switch<T> extends Switch<T> {
 			case Cm2Package.INVALID_PARAMETER_EXCEPTION: {
 				InvalidParameterException invalidParameterException = (InvalidParameterException)theEObject;
 				T result = caseInvalidParameterException(invalidParameterException);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.INVALID_PROPERTIES_EXCEPTION: {
+				InvalidPropertiesException invalidPropertiesException = (InvalidPropertiesException)theEObject;
+				T result = caseInvalidPropertiesException(invalidPropertiesException);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1181,6 +1432,12 @@ public class Cm2Switch<T> extends Switch<T> {
 			case Cm2Package.MODULE_STATES_TYPE: {
 				ModuleStatesType moduleStatesType = (ModuleStatesType)theEObject;
 				T result = caseModuleStatesType(moduleStatesType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.OBJECT_IN_USE_EXCEPTION: {
+				ObjectInUseException objectInUseException = (ObjectInUseException)theEObject;
+				T result = caseObjectInUseException(objectInUseException);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1536,6 +1793,114 @@ public class Cm2Switch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Cm2Package.UPDATE_CONSENT_TEMPLATE: {
+				UpdateConsentTemplate updateConsentTemplate = (UpdateConsentTemplate)theEObject;
+				T result = caseUpdateConsentTemplate(updateConsentTemplate);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.UPDATE_CONSENT_TEMPLATE_IN_USE: {
+				UpdateConsentTemplateInUse updateConsentTemplateInUse = (UpdateConsentTemplateInUse)theEObject;
+				T result = caseUpdateConsentTemplateInUse(updateConsentTemplateInUse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.UPDATE_CONSENT_TEMPLATE_IN_USE_RESPONSE: {
+				UpdateConsentTemplateInUseResponse updateConsentTemplateInUseResponse = (UpdateConsentTemplateInUseResponse)theEObject;
+				T result = caseUpdateConsentTemplateInUseResponse(updateConsentTemplateInUseResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.UPDATE_CONSENT_TEMPLATE_RESPONSE: {
+				UpdateConsentTemplateResponse updateConsentTemplateResponse = (UpdateConsentTemplateResponse)theEObject;
+				T result = caseUpdateConsentTemplateResponse(updateConsentTemplateResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.UPDATE_DOMAIN: {
+				UpdateDomain updateDomain = (UpdateDomain)theEObject;
+				T result = caseUpdateDomain(updateDomain);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.UPDATE_DOMAIN_IN_USE: {
+				UpdateDomainInUse updateDomainInUse = (UpdateDomainInUse)theEObject;
+				T result = caseUpdateDomainInUse(updateDomainInUse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.UPDATE_DOMAIN_IN_USE_RESPONSE: {
+				UpdateDomainInUseResponse updateDomainInUseResponse = (UpdateDomainInUseResponse)theEObject;
+				T result = caseUpdateDomainInUseResponse(updateDomainInUseResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.UPDATE_DOMAIN_RESPONSE: {
+				UpdateDomainResponse updateDomainResponse = (UpdateDomainResponse)theEObject;
+				T result = caseUpdateDomainResponse(updateDomainResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.UPDATE_MODULE: {
+				UpdateModule updateModule = (UpdateModule)theEObject;
+				T result = caseUpdateModule(updateModule);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.UPDATE_MODULE_IN_USE: {
+				UpdateModuleInUse updateModuleInUse = (UpdateModuleInUse)theEObject;
+				T result = caseUpdateModuleInUse(updateModuleInUse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.UPDATE_MODULE_IN_USE_RESPONSE: {
+				UpdateModuleInUseResponse updateModuleInUseResponse = (UpdateModuleInUseResponse)theEObject;
+				T result = caseUpdateModuleInUseResponse(updateModuleInUseResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.UPDATE_MODULE_RESPONSE: {
+				UpdateModuleResponse updateModuleResponse = (UpdateModuleResponse)theEObject;
+				T result = caseUpdateModuleResponse(updateModuleResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.UPDATE_POLICY: {
+				UpdatePolicy updatePolicy = (UpdatePolicy)theEObject;
+				T result = caseUpdatePolicy(updatePolicy);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.UPDATE_POLICY_IN_USE: {
+				UpdatePolicyInUse updatePolicyInUse = (UpdatePolicyInUse)theEObject;
+				T result = caseUpdatePolicyInUse(updatePolicyInUse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.UPDATE_POLICY_IN_USE_RESPONSE: {
+				UpdatePolicyInUseResponse updatePolicyInUseResponse = (UpdatePolicyInUseResponse)theEObject;
+				T result = caseUpdatePolicyInUseResponse(updatePolicyInUseResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.UPDATE_POLICY_RESPONSE: {
+				UpdatePolicyResponse updatePolicyResponse = (UpdatePolicyResponse)theEObject;
+				T result = caseUpdatePolicyResponse(updatePolicyResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.UPDATE_SIGNER_ID_TYPE: {
+				UpdateSignerIdType updateSignerIdType = (UpdateSignerIdType)theEObject;
+				T result = caseUpdateSignerIdType(updateSignerIdType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.UPDATE_SIGNER_ID_TYPE_RESPONSE: {
+				UpdateSignerIdTypeResponse updateSignerIdTypeResponse = (UpdateSignerIdTypeResponse)theEObject;
+				T result = caseUpdateSignerIdTypeResponse(updateSignerIdTypeResponse);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Cm2Package.VALIDATE_CONSENT: {
 				ValidateConsent validateConsent = (ValidateConsent)theEObject;
 				T result = caseValidateConsent(validateConsent);
@@ -1551,6 +1916,12 @@ public class Cm2Switch<T> extends Switch<T> {
 			case Cm2Package.VALID_FROM_PROPERTIES_DTO: {
 				ValidFromPropertiesDTO validFromPropertiesDTO = (ValidFromPropertiesDTO)theEObject;
 				T result = caseValidFromPropertiesDTO(validFromPropertiesDTO);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Cm2Package.VERSION_CONVERTER_CLASS_EXCEPTION: {
+				VersionConverterClassException versionConverterClassException = (VersionConverterClassException)theEObject;
+				T result = caseVersionConverterClassException(versionConverterClassException);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1664,6 +2035,126 @@ public class Cm2Switch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Add Consent Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Add Consent Template</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAddConsentTemplate(AddConsentTemplate object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Add Consent Template Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Add Consent Template Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAddConsentTemplateResponse(AddConsentTemplateResponse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Add Domain</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Add Domain</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAddDomain(AddDomain object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Add Domain Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Add Domain Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAddDomainResponse(AddDomainResponse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Add Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Add Module</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAddModule(AddModule object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Add Module Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Add Module Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAddModuleResponse(AddModuleResponse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Add Policy</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Add Policy</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAddPolicy(AddPolicy object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Add Policy Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Add Policy Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAddPolicyResponse(AddPolicyResponse object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Add Scan To Consent</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1690,6 +2181,36 @@ public class Cm2Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAddScanToConsentResponse(AddScanToConsentResponse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Add Signer Id Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Add Signer Id Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAddSignerIdType(AddSignerIdType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Add Signer Id Type Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Add Signer Id Type Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAddSignerIdTypeResponse(AddSignerIdTypeResponse object) {
 		return null;
 	}
 
@@ -2009,6 +2530,156 @@ public class Cm2Switch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Delete Consent Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Delete Consent Template</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDeleteConsentTemplate(DeleteConsentTemplate object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Delete Consent Template Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Delete Consent Template Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDeleteConsentTemplateResponse(DeleteConsentTemplateResponse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Delete Domain</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Delete Domain</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDeleteDomain(DeleteDomain object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Delete Domain Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Delete Domain Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDeleteDomainResponse(DeleteDomainResponse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Delete Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Delete Module</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDeleteModule(DeleteModule object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Delete Module Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Delete Module Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDeleteModuleResponse(DeleteModuleResponse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Delete Policy</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Delete Policy</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDeletePolicy(DeletePolicy object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Delete Policy Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Delete Policy Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDeletePolicyResponse(DeletePolicyResponse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Delete Signer Id Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Delete Signer Id Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDeleteSignerIdType(DeleteSignerIdType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Delete Signer Id Type Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Delete Signer Id Type Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDeleteSignerIdTypeResponse(DeleteSignerIdTypeResponse object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Document Root</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -2155,6 +2826,171 @@ public class Cm2Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFhirIdDTO(FhirIdDTO object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Finalise All For Domain</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Finalise All For Domain</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFinaliseAllForDomain(FinaliseAllForDomain object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Finalise All For Domain Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Finalise All For Domain Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFinaliseAllForDomainResponse(FinaliseAllForDomainResponse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Finalise Domain</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Finalise Domain</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFinaliseDomain(FinaliseDomain object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Finalise Domain Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Finalise Domain Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFinaliseDomainResponse(FinaliseDomainResponse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Finalise Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Finalise Module</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFinaliseModule(FinaliseModule object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Finalise Module Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Finalise Module Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFinaliseModuleResponse(FinaliseModuleResponse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Finalise Policy</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Finalise Policy</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFinalisePolicy(FinalisePolicy object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Finalise Policy Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Finalise Policy Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFinalisePolicyResponse(FinalisePolicyResponse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Finalise Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Finalise Template</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFinaliseTemplate(FinaliseTemplate object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Finalise Template Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Finalise Template Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFinaliseTemplateResponse(FinaliseTemplateResponse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Free Text Converter String Exception</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Free Text Converter String Exception</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFreeTextConverterStringException(FreeTextConverterStringException object) {
 		return null;
 	}
 
@@ -3269,6 +4105,21 @@ public class Cm2Switch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Illegal Composition Exception</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Illegal Composition Exception</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIllegalCompositionException(IllegalCompositionException object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Invalid Free Text Exception</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -3295,6 +4146,21 @@ public class Cm2Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseInvalidParameterException(InvalidParameterException object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Invalid Properties Exception</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Invalid Properties Exception</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInvalidPropertiesException(InvalidPropertiesException object) {
 		return null;
 	}
 
@@ -3775,6 +4641,21 @@ public class Cm2Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseModuleStatesType(ModuleStatesType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Object In Use Exception</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Object In Use Exception</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseObjectInUseException(ObjectInUseException object) {
 		return null;
 	}
 
@@ -4634,6 +5515,276 @@ public class Cm2Switch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Update Consent Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Update Consent Template</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUpdateConsentTemplate(UpdateConsentTemplate object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Update Consent Template In Use</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Update Consent Template In Use</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUpdateConsentTemplateInUse(UpdateConsentTemplateInUse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Update Consent Template In Use Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Update Consent Template In Use Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUpdateConsentTemplateInUseResponse(UpdateConsentTemplateInUseResponse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Update Consent Template Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Update Consent Template Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUpdateConsentTemplateResponse(UpdateConsentTemplateResponse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Update Domain</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Update Domain</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUpdateDomain(UpdateDomain object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Update Domain In Use</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Update Domain In Use</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUpdateDomainInUse(UpdateDomainInUse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Update Domain In Use Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Update Domain In Use Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUpdateDomainInUseResponse(UpdateDomainInUseResponse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Update Domain Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Update Domain Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUpdateDomainResponse(UpdateDomainResponse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Update Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Update Module</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUpdateModule(UpdateModule object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Update Module In Use</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Update Module In Use</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUpdateModuleInUse(UpdateModuleInUse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Update Module In Use Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Update Module In Use Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUpdateModuleInUseResponse(UpdateModuleInUseResponse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Update Module Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Update Module Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUpdateModuleResponse(UpdateModuleResponse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Update Policy</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Update Policy</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUpdatePolicy(UpdatePolicy object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Update Policy In Use</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Update Policy In Use</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUpdatePolicyInUse(UpdatePolicyInUse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Update Policy In Use Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Update Policy In Use Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUpdatePolicyInUseResponse(UpdatePolicyInUseResponse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Update Policy Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Update Policy Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUpdatePolicyResponse(UpdatePolicyResponse object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Update Signer Id Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Update Signer Id Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUpdateSignerIdType(UpdateSignerIdType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Update Signer Id Type Response</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Update Signer Id Type Response</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUpdateSignerIdTypeResponse(UpdateSignerIdTypeResponse object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Validate Consent</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -4675,6 +5826,21 @@ public class Cm2Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseValidFromPropertiesDTO(ValidFromPropertiesDTO object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Version Converter Class Exception</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Version Converter Class Exception</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVersionConverterClassException(VersionConverterClassException object) {
 		return null;
 	}
 

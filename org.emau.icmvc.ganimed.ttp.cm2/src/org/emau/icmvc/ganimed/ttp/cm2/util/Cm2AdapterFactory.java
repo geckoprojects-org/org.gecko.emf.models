@@ -27,12 +27,22 @@ import org.emau.icmvc.ganimed.ttp.cm2.AddConsent;
 import org.emau.icmvc.ganimed.ttp.cm2.AddConsentOptOut;
 import org.emau.icmvc.ganimed.ttp.cm2.AddConsentOptOutResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AddConsentResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplate;
+import org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplateResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.AddDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddModule;
+import org.emau.icmvc.ganimed.ttp.cm2.AddModuleResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddPolicy;
+import org.emau.icmvc.ganimed.ttp.cm2.AddPolicyResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AddScanToConsent;
 import org.emau.icmvc.ganimed.ttp.cm2.AddScanToConsentResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdToConsent;
 import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdToConsentResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdToSignerId;
 import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdToSignerIdResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdType;
+import org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdTypeResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.AssignedModuleDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.AssignedPolicyDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.ChildrenType;
@@ -51,6 +61,16 @@ import org.emau.icmvc.ganimed.ttp.cm2.CountSignedPolicies;
 import org.emau.icmvc.ganimed.ttp.cm2.CountSignedPoliciesResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.DeactivateAlias;
 import org.emau.icmvc.ganimed.ttp.cm2.DeactivateAliasResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteConsentTemplate;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteConsentTemplateResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteModule;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteModuleResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeletePolicy;
+import org.emau.icmvc.ganimed.ttp.cm2.DeletePolicyResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdType;
+import org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdTypeResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot;
 import org.emau.icmvc.ganimed.ttp.cm2.DomainDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.DuplicateEntryException;
@@ -61,6 +81,17 @@ import org.emau.icmvc.ganimed.ttp.cm2.EntryType3;
 import org.emau.icmvc.ganimed.ttp.cm2.EntryType4;
 import org.emau.icmvc.ganimed.ttp.cm2.ExpirationPropertiesDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.FhirIdDTO;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseAllForDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseAllForDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseModule;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseModuleResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FinalisePolicy;
+import org.emau.icmvc.ganimed.ttp.cm2.FinalisePolicyResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplate;
+import org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplateResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.FreeTextConverterStringException;
 import org.emau.icmvc.ganimed.ttp.cm2.FreeTextDefDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.FreeTextValDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.GetAliasesForSignerId;
@@ -132,10 +163,12 @@ import org.emau.icmvc.ganimed.ttp.cm2.GetSignerIdsForAliasResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.GetTemplatesWithPolicies;
 import org.emau.icmvc.ganimed.ttp.cm2.GetTemplatesWithPoliciesResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.HashMap;
+import org.emau.icmvc.ganimed.ttp.cm2.IllegalCompositionException;
 import org.emau.icmvc.ganimed.ttp.cm2.InconsistentStatusException;
 import org.emau.icmvc.ganimed.ttp.cm2.InternalException;
 import org.emau.icmvc.ganimed.ttp.cm2.InvalidFreeTextException;
 import org.emau.icmvc.ganimed.ttp.cm2.InvalidParameterException;
+import org.emau.icmvc.ganimed.ttp.cm2.InvalidPropertiesException;
 import org.emau.icmvc.ganimed.ttp.cm2.InvalidVersionException;
 import org.emau.icmvc.ganimed.ttp.cm2.IsConsented;
 import org.emau.icmvc.ganimed.ttp.cm2.IsConsentedFromExcludingToExcluding;
@@ -168,6 +201,7 @@ import org.emau.icmvc.ganimed.ttp.cm2.ModuleKeyDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.ModuleKeyDTOArray;
 import org.emau.icmvc.ganimed.ttp.cm2.ModuleStateDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.ModuleStatesType;
+import org.emau.icmvc.ganimed.ttp.cm2.ObjectInUseException;
 import org.emau.icmvc.ganimed.ttp.cm2.PolicyDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.PolicyExpirationsType;
 import org.emau.icmvc.ganimed.ttp.cm2.PolicyKeyDTO;
@@ -225,9 +259,28 @@ import org.emau.icmvc.ganimed.ttp.cm2.UnknownSignerIdException;
 import org.emau.icmvc.ganimed.ttp.cm2.UnknownSignerIdTypeException;
 import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentInUse;
 import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplate;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateInUse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateDomain;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateModule;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicy;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUseResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdType;
+import org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdTypeResponse;
 import org.emau.icmvc.ganimed.ttp.cm2.ValidFromPropertiesDTO;
 import org.emau.icmvc.ganimed.ttp.cm2.ValidateConsent;
 import org.emau.icmvc.ganimed.ttp.cm2.ValidateConsentResponse;
+import org.emau.icmvc.ganimed.ttp.cm2.VersionConverterClassException;
 
 /**
  * <!-- begin-user-doc -->
@@ -314,12 +367,52 @@ public class Cm2AdapterFactory extends AdapterFactoryImpl {
 				return createAddConsentResponseAdapter();
 			}
 			@Override
+			public Adapter caseAddConsentTemplate(AddConsentTemplate object) {
+				return createAddConsentTemplateAdapter();
+			}
+			@Override
+			public Adapter caseAddConsentTemplateResponse(AddConsentTemplateResponse object) {
+				return createAddConsentTemplateResponseAdapter();
+			}
+			@Override
+			public Adapter caseAddDomain(AddDomain object) {
+				return createAddDomainAdapter();
+			}
+			@Override
+			public Adapter caseAddDomainResponse(AddDomainResponse object) {
+				return createAddDomainResponseAdapter();
+			}
+			@Override
+			public Adapter caseAddModule(AddModule object) {
+				return createAddModuleAdapter();
+			}
+			@Override
+			public Adapter caseAddModuleResponse(AddModuleResponse object) {
+				return createAddModuleResponseAdapter();
+			}
+			@Override
+			public Adapter caseAddPolicy(AddPolicy object) {
+				return createAddPolicyAdapter();
+			}
+			@Override
+			public Adapter caseAddPolicyResponse(AddPolicyResponse object) {
+				return createAddPolicyResponseAdapter();
+			}
+			@Override
 			public Adapter caseAddScanToConsent(AddScanToConsent object) {
 				return createAddScanToConsentAdapter();
 			}
 			@Override
 			public Adapter caseAddScanToConsentResponse(AddScanToConsentResponse object) {
 				return createAddScanToConsentResponseAdapter();
+			}
+			@Override
+			public Adapter caseAddSignerIdType(AddSignerIdType object) {
+				return createAddSignerIdTypeAdapter();
+			}
+			@Override
+			public Adapter caseAddSignerIdTypeResponse(AddSignerIdTypeResponse object) {
+				return createAddSignerIdTypeResponseAdapter();
 			}
 			@Override
 			public Adapter caseAddSignerIdToConsent(AddSignerIdToConsent object) {
@@ -406,6 +499,46 @@ public class Cm2AdapterFactory extends AdapterFactoryImpl {
 				return createDeactivateAliasResponseAdapter();
 			}
 			@Override
+			public Adapter caseDeleteConsentTemplate(DeleteConsentTemplate object) {
+				return createDeleteConsentTemplateAdapter();
+			}
+			@Override
+			public Adapter caseDeleteConsentTemplateResponse(DeleteConsentTemplateResponse object) {
+				return createDeleteConsentTemplateResponseAdapter();
+			}
+			@Override
+			public Adapter caseDeleteDomain(DeleteDomain object) {
+				return createDeleteDomainAdapter();
+			}
+			@Override
+			public Adapter caseDeleteDomainResponse(DeleteDomainResponse object) {
+				return createDeleteDomainResponseAdapter();
+			}
+			@Override
+			public Adapter caseDeleteModule(DeleteModule object) {
+				return createDeleteModuleAdapter();
+			}
+			@Override
+			public Adapter caseDeleteModuleResponse(DeleteModuleResponse object) {
+				return createDeleteModuleResponseAdapter();
+			}
+			@Override
+			public Adapter caseDeletePolicy(DeletePolicy object) {
+				return createDeletePolicyAdapter();
+			}
+			@Override
+			public Adapter caseDeletePolicyResponse(DeletePolicyResponse object) {
+				return createDeletePolicyResponseAdapter();
+			}
+			@Override
+			public Adapter caseDeleteSignerIdType(DeleteSignerIdType object) {
+				return createDeleteSignerIdTypeAdapter();
+			}
+			@Override
+			public Adapter caseDeleteSignerIdTypeResponse(DeleteSignerIdTypeResponse object) {
+				return createDeleteSignerIdTypeResponseAdapter();
+			}
+			@Override
 			public Adapter caseDocumentRoot(DocumentRoot object) {
 				return createDocumentRootAdapter();
 			}
@@ -444,6 +577,50 @@ public class Cm2AdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseFhirIdDTO(FhirIdDTO object) {
 				return createFhirIdDTOAdapter();
+			}
+			@Override
+			public Adapter caseFinaliseAllForDomain(FinaliseAllForDomain object) {
+				return createFinaliseAllForDomainAdapter();
+			}
+			@Override
+			public Adapter caseFinaliseAllForDomainResponse(FinaliseAllForDomainResponse object) {
+				return createFinaliseAllForDomainResponseAdapter();
+			}
+			@Override
+			public Adapter caseFinaliseDomain(FinaliseDomain object) {
+				return createFinaliseDomainAdapter();
+			}
+			@Override
+			public Adapter caseFinaliseDomainResponse(FinaliseDomainResponse object) {
+				return createFinaliseDomainResponseAdapter();
+			}
+			@Override
+			public Adapter caseFinaliseModule(FinaliseModule object) {
+				return createFinaliseModuleAdapter();
+			}
+			@Override
+			public Adapter caseFinaliseModuleResponse(FinaliseModuleResponse object) {
+				return createFinaliseModuleResponseAdapter();
+			}
+			@Override
+			public Adapter caseFinalisePolicy(FinalisePolicy object) {
+				return createFinalisePolicyAdapter();
+			}
+			@Override
+			public Adapter caseFinalisePolicyResponse(FinalisePolicyResponse object) {
+				return createFinalisePolicyResponseAdapter();
+			}
+			@Override
+			public Adapter caseFinaliseTemplate(FinaliseTemplate object) {
+				return createFinaliseTemplateAdapter();
+			}
+			@Override
+			public Adapter caseFinaliseTemplateResponse(FinaliseTemplateResponse object) {
+				return createFinaliseTemplateResponseAdapter();
+			}
+			@Override
+			public Adapter caseFreeTextConverterStringException(FreeTextConverterStringException object) {
+				return createFreeTextConverterStringExceptionAdapter();
 			}
 			@Override
 			public Adapter caseFreeTextDefDTO(FreeTextDefDTO object) {
@@ -742,12 +919,20 @@ public class Cm2AdapterFactory extends AdapterFactoryImpl {
 				return createInternalExceptionAdapter();
 			}
 			@Override
+			public Adapter caseIllegalCompositionException(IllegalCompositionException object) {
+				return createIllegalCompositionExceptionAdapter();
+			}
+			@Override
 			public Adapter caseInvalidFreeTextException(InvalidFreeTextException object) {
 				return createInvalidFreeTextExceptionAdapter();
 			}
 			@Override
 			public Adapter caseInvalidParameterException(InvalidParameterException object) {
 				return createInvalidParameterExceptionAdapter();
+			}
+			@Override
+			public Adapter caseInvalidPropertiesException(InvalidPropertiesException object) {
+				return createInvalidPropertiesExceptionAdapter();
 			}
 			@Override
 			public Adapter caseInvalidVersionException(InvalidVersionException object) {
@@ -876,6 +1061,10 @@ public class Cm2AdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseModuleStatesType(ModuleStatesType object) {
 				return createModuleStatesTypeAdapter();
+			}
+			@Override
+			public Adapter caseObjectInUseException(ObjectInUseException object) {
+				return createObjectInUseExceptionAdapter();
 			}
 			@Override
 			public Adapter casePolicyDTO(PolicyDTO object) {
@@ -1106,6 +1295,78 @@ public class Cm2AdapterFactory extends AdapterFactoryImpl {
 				return createUpdateConsentInUseResponseAdapter();
 			}
 			@Override
+			public Adapter caseUpdateConsentTemplate(UpdateConsentTemplate object) {
+				return createUpdateConsentTemplateAdapter();
+			}
+			@Override
+			public Adapter caseUpdateConsentTemplateInUse(UpdateConsentTemplateInUse object) {
+				return createUpdateConsentTemplateInUseAdapter();
+			}
+			@Override
+			public Adapter caseUpdateConsentTemplateInUseResponse(UpdateConsentTemplateInUseResponse object) {
+				return createUpdateConsentTemplateInUseResponseAdapter();
+			}
+			@Override
+			public Adapter caseUpdateConsentTemplateResponse(UpdateConsentTemplateResponse object) {
+				return createUpdateConsentTemplateResponseAdapter();
+			}
+			@Override
+			public Adapter caseUpdateDomain(UpdateDomain object) {
+				return createUpdateDomainAdapter();
+			}
+			@Override
+			public Adapter caseUpdateDomainInUse(UpdateDomainInUse object) {
+				return createUpdateDomainInUseAdapter();
+			}
+			@Override
+			public Adapter caseUpdateDomainInUseResponse(UpdateDomainInUseResponse object) {
+				return createUpdateDomainInUseResponseAdapter();
+			}
+			@Override
+			public Adapter caseUpdateDomainResponse(UpdateDomainResponse object) {
+				return createUpdateDomainResponseAdapter();
+			}
+			@Override
+			public Adapter caseUpdateModule(UpdateModule object) {
+				return createUpdateModuleAdapter();
+			}
+			@Override
+			public Adapter caseUpdateModuleInUse(UpdateModuleInUse object) {
+				return createUpdateModuleInUseAdapter();
+			}
+			@Override
+			public Adapter caseUpdateModuleInUseResponse(UpdateModuleInUseResponse object) {
+				return createUpdateModuleInUseResponseAdapter();
+			}
+			@Override
+			public Adapter caseUpdateModuleResponse(UpdateModuleResponse object) {
+				return createUpdateModuleResponseAdapter();
+			}
+			@Override
+			public Adapter caseUpdatePolicy(UpdatePolicy object) {
+				return createUpdatePolicyAdapter();
+			}
+			@Override
+			public Adapter caseUpdatePolicyInUse(UpdatePolicyInUse object) {
+				return createUpdatePolicyInUseAdapter();
+			}
+			@Override
+			public Adapter caseUpdatePolicyInUseResponse(UpdatePolicyInUseResponse object) {
+				return createUpdatePolicyInUseResponseAdapter();
+			}
+			@Override
+			public Adapter caseUpdatePolicyResponse(UpdatePolicyResponse object) {
+				return createUpdatePolicyResponseAdapter();
+			}
+			@Override
+			public Adapter caseUpdateSignerIdType(UpdateSignerIdType object) {
+				return createUpdateSignerIdTypeAdapter();
+			}
+			@Override
+			public Adapter caseUpdateSignerIdTypeResponse(UpdateSignerIdTypeResponse object) {
+				return createUpdateSignerIdTypeResponseAdapter();
+			}
+			@Override
 			public Adapter caseValidateConsent(ValidateConsent object) {
 				return createValidateConsentAdapter();
 			}
@@ -1116,6 +1377,10 @@ public class Cm2AdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseValidFromPropertiesDTO(ValidFromPropertiesDTO object) {
 				return createValidFromPropertiesDTOAdapter();
+			}
+			@Override
+			public Adapter caseVersionConverterClassException(VersionConverterClassException object) {
+				return createVersionConverterClassExceptionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -1236,6 +1501,118 @@ public class Cm2AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplate <em>Add Consent Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplate
+	 * @generated
+	 */
+	public Adapter createAddConsentTemplateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplateResponse <em>Add Consent Template Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddConsentTemplateResponse
+	 * @generated
+	 */
+	public Adapter createAddConsentTemplateResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddDomain <em>Add Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddDomain
+	 * @generated
+	 */
+	public Adapter createAddDomainAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddDomainResponse <em>Add Domain Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddDomainResponse
+	 * @generated
+	 */
+	public Adapter createAddDomainResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddModule <em>Add Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddModule
+	 * @generated
+	 */
+	public Adapter createAddModuleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddModuleResponse <em>Add Module Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddModuleResponse
+	 * @generated
+	 */
+	public Adapter createAddModuleResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddPolicy <em>Add Policy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddPolicy
+	 * @generated
+	 */
+	public Adapter createAddPolicyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddPolicyResponse <em>Add Policy Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddPolicyResponse
+	 * @generated
+	 */
+	public Adapter createAddPolicyResponseAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddScanToConsent <em>Add Scan To Consent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1260,6 +1637,34 @@ public class Cm2AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAddScanToConsentResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdType <em>Add Signer Id Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdType
+	 * @generated
+	 */
+	public Adapter createAddSignerIdTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdTypeResponse <em>Add Signer Id Type Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.AddSignerIdTypeResponse
+	 * @generated
+	 */
+	public Adapter createAddSignerIdTypeResponseAdapter() {
 		return null;
 	}
 
@@ -1558,6 +1963,146 @@ public class Cm2AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.DeleteConsentTemplate <em>Delete Consent Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeleteConsentTemplate
+	 * @generated
+	 */
+	public Adapter createDeleteConsentTemplateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.DeleteConsentTemplateResponse <em>Delete Consent Template Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeleteConsentTemplateResponse
+	 * @generated
+	 */
+	public Adapter createDeleteConsentTemplateResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.DeleteDomain <em>Delete Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeleteDomain
+	 * @generated
+	 */
+	public Adapter createDeleteDomainAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.DeleteDomainResponse <em>Delete Domain Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeleteDomainResponse
+	 * @generated
+	 */
+	public Adapter createDeleteDomainResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.DeleteModule <em>Delete Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeleteModule
+	 * @generated
+	 */
+	public Adapter createDeleteModuleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.DeleteModuleResponse <em>Delete Module Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeleteModuleResponse
+	 * @generated
+	 */
+	public Adapter createDeleteModuleResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.DeletePolicy <em>Delete Policy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeletePolicy
+	 * @generated
+	 */
+	public Adapter createDeletePolicyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.DeletePolicyResponse <em>Delete Policy Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeletePolicyResponse
+	 * @generated
+	 */
+	public Adapter createDeletePolicyResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdType <em>Delete Signer Id Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdType
+	 * @generated
+	 */
+	public Adapter createDeleteSignerIdTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdTypeResponse <em>Delete Signer Id Type Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.DeleteSignerIdTypeResponse
+	 * @generated
+	 */
+	public Adapter createDeleteSignerIdTypeResponseAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.DocumentRoot <em>Document Root</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1694,6 +2239,160 @@ public class Cm2AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFhirIdDTOAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseAllForDomain <em>Finalise All For Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseAllForDomain
+	 * @generated
+	 */
+	public Adapter createFinaliseAllForDomainAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseAllForDomainResponse <em>Finalise All For Domain Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseAllForDomainResponse
+	 * @generated
+	 */
+	public Adapter createFinaliseAllForDomainResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseDomain <em>Finalise Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseDomain
+	 * @generated
+	 */
+	public Adapter createFinaliseDomainAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseDomainResponse <em>Finalise Domain Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseDomainResponse
+	 * @generated
+	 */
+	public Adapter createFinaliseDomainResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseModule <em>Finalise Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseModule
+	 * @generated
+	 */
+	public Adapter createFinaliseModuleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseModuleResponse <em>Finalise Module Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseModuleResponse
+	 * @generated
+	 */
+	public Adapter createFinaliseModuleResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.FinalisePolicy <em>Finalise Policy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinalisePolicy
+	 * @generated
+	 */
+	public Adapter createFinalisePolicyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.FinalisePolicyResponse <em>Finalise Policy Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinalisePolicyResponse
+	 * @generated
+	 */
+	public Adapter createFinalisePolicyResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplate <em>Finalise Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplate
+	 * @generated
+	 */
+	public Adapter createFinaliseTemplateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplateResponse <em>Finalise Template Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FinaliseTemplateResponse
+	 * @generated
+	 */
+	public Adapter createFinaliseTemplateResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.FreeTextConverterStringException <em>Free Text Converter String Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.FreeTextConverterStringException
+	 * @generated
+	 */
+	public Adapter createFreeTextConverterStringExceptionAdapter() {
 		return null;
 	}
 
@@ -2734,6 +3433,20 @@ public class Cm2AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.IllegalCompositionException <em>Illegal Composition Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.IllegalCompositionException
+	 * @generated
+	 */
+	public Adapter createIllegalCompositionExceptionAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.InvalidFreeTextException <em>Invalid Free Text Exception</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -2758,6 +3471,20 @@ public class Cm2AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createInvalidParameterExceptionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.InvalidPropertiesException <em>Invalid Properties Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.InvalidPropertiesException
+	 * @generated
+	 */
+	public Adapter createInvalidPropertiesExceptionAdapter() {
 		return null;
 	}
 
@@ -3206,6 +3933,20 @@ public class Cm2AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createModuleStatesTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.ObjectInUseException <em>Object In Use Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.ObjectInUseException
+	 * @generated
+	 */
+	public Adapter createObjectInUseExceptionAdapter() {
 		return null;
 	}
 
@@ -4008,6 +4749,258 @@ public class Cm2AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplate <em>Update Consent Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplate
+	 * @generated
+	 */
+	public Adapter createUpdateConsentTemplateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateInUse <em>Update Consent Template In Use</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateInUse
+	 * @generated
+	 */
+	public Adapter createUpdateConsentTemplateInUseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateInUseResponse <em>Update Consent Template In Use Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateInUseResponse
+	 * @generated
+	 */
+	public Adapter createUpdateConsentTemplateInUseResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateResponse <em>Update Consent Template Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateConsentTemplateResponse
+	 * @generated
+	 */
+	public Adapter createUpdateConsentTemplateResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateDomain <em>Update Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateDomain
+	 * @generated
+	 */
+	public Adapter createUpdateDomainAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse <em>Update Domain In Use</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUse
+	 * @generated
+	 */
+	public Adapter createUpdateDomainInUseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUseResponse <em>Update Domain In Use Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainInUseResponse
+	 * @generated
+	 */
+	public Adapter createUpdateDomainInUseResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainResponse <em>Update Domain Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateDomainResponse
+	 * @generated
+	 */
+	public Adapter createUpdateDomainResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateModule <em>Update Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateModule
+	 * @generated
+	 */
+	public Adapter createUpdateModuleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUse <em>Update Module In Use</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUse
+	 * @generated
+	 */
+	public Adapter createUpdateModuleInUseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUseResponse <em>Update Module In Use Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleInUseResponse
+	 * @generated
+	 */
+	public Adapter createUpdateModuleInUseResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleResponse <em>Update Module Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateModuleResponse
+	 * @generated
+	 */
+	public Adapter createUpdateModuleResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicy <em>Update Policy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicy
+	 * @generated
+	 */
+	public Adapter createUpdatePolicyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUse <em>Update Policy In Use</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUse
+	 * @generated
+	 */
+	public Adapter createUpdatePolicyInUseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUseResponse <em>Update Policy In Use Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyInUseResponse
+	 * @generated
+	 */
+	public Adapter createUpdatePolicyInUseResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyResponse <em>Update Policy Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdatePolicyResponse
+	 * @generated
+	 */
+	public Adapter createUpdatePolicyResponseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdType <em>Update Signer Id Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdType
+	 * @generated
+	 */
+	public Adapter createUpdateSignerIdTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdTypeResponse <em>Update Signer Id Type Response</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.UpdateSignerIdTypeResponse
+	 * @generated
+	 */
+	public Adapter createUpdateSignerIdTypeResponseAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.ValidateConsent <em>Validate Consent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -4046,6 +5039,20 @@ public class Cm2AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createValidFromPropertiesDTOAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.emau.icmvc.ganimed.ttp.cm2.VersionConverterClassException <em>Version Converter Class Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.emau.icmvc.ganimed.ttp.cm2.VersionConverterClassException
+	 * @generated
+	 */
+	public Adapter createVersionConverterClassExceptionAdapter() {
 		return null;
 	}
 
