@@ -1,0 +1,1277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2024 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"
+    modelDirectory="/org.openmicroscopy/src" modelPluginID="org.openmicroscopy" modelName="OME"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="11.0" copyrightFields="false" operationReflection="true" importOrganizing="true"
+    oSGiCompatible="true">
+  <foreignModel>ome.ecore</foreignModel>
+  <genPackages prefix="OME" basePackage="org.openmicroscopy" resource="XML" disposableProviderFactory="true"
+      loadInitialization="true" literalsInterface="false" ecorePackage="ome.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//AcquisitionModeType">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/WideField"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/LaserScanningConfocalMicroscopy"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/SpinningDiskConfocal"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/SlitScanConfocal"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/MultiPhotonMicroscopy"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/StructuredIllumination"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/SingleMoleculeImaging"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/TotalInternalReflection"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/FluorescenceLifetime"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/SpectralImaging"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/FluorescenceCorrelationSpectroscopy"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/NearFieldScanningOpticalMicroscopy"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/SecondHarmonicGenerationImaging"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/PALM"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/STORM"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/STED"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/TIRF"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/FSM"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/LCM"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/Other"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/BrightField"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/SweptFieldConfocal"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//AcquisitionModeType/SPIM"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//Binning">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//Binning/_1x1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//Binning/_2x2"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//Binning/_4x4"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//Binning/_8x8"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//Binning/Other"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//CompressionType">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//CompressionType/zlib"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//CompressionType/bzip2"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//CompressionType/none"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//CompressionType1">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//CompressionType1/zlib"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//CompressionType1/bzip2"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//CompressionType1/none"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//ContrastMethodType">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//ContrastMethodType/Brightfield"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//ContrastMethodType/Phase"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//ContrastMethodType/DIC"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//ContrastMethodType/HoffmanModulation"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//ContrastMethodType/ObliqueIllumination"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//ContrastMethodType/PolarizedLight"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//ContrastMethodType/Darkfield"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//ContrastMethodType/Fluorescence"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//ContrastMethodType/Other"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//CorrectionType">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//CorrectionType/UV"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//CorrectionType/PlanApo"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//CorrectionType/PlanFluor"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//CorrectionType/SuperFluor"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//CorrectionType/VioletCorrected"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//CorrectionType/Achro"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//CorrectionType/Achromat"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//CorrectionType/Fluor"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//CorrectionType/Fl"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//CorrectionType/Fluar"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//CorrectionType/Neofluar"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//CorrectionType/Fluotar"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//CorrectionType/Apo"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//CorrectionType/PlanNeofluar"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//CorrectionType/Other"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//DimensionOrderType">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//DimensionOrderType/XYZCT"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//DimensionOrderType/XYZTC"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//DimensionOrderType/XYCTZ"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//DimensionOrderType/XYCZT"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//DimensionOrderType/XYTCZ"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//DimensionOrderType/XYTZC"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//FillRuleType">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//FillRuleType/EvenOdd"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//FillRuleType/NonZero"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//FontFamily">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//FontFamily/serif"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//FontFamily/sansSerif"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//FontFamily/cursive"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//FontFamily/fantasy"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//FontFamily/monospace"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//FontFamilyType">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//FontFamilyType/serif"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//FontFamilyType/sansSerif"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//FontFamilyType/cursive"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//FontFamilyType/fantasy"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//FontFamilyType/monospace"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//FontStyleType">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//FontStyleType/Bold"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//FontStyleType/BoldItalic"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//FontStyleType/Italic"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//FontStyleType/Normal"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//IlluminationTypeType">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//IlluminationTypeType/Transmitted"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//IlluminationTypeType/Epifluorescence"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//IlluminationTypeType/Oblique"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//IlluminationTypeType/NonLinear"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//IlluminationTypeType/Other"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//ImmersionType">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//ImmersionType/Oil"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//ImmersionType/Water"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//ImmersionType/WaterDipping"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//ImmersionType/Air"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//ImmersionType/Multi"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//ImmersionType/Glycerol"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//ImmersionType/Other"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//LaserMediumType">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/Cu"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/Ag"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/ArFl"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/ArCl"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/KrFl"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/KrCl"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/XeFl"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/XeCl"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/XeBr"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/N"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/Ar"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/Kr"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/Xe"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/HeNe"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/HeCd"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/CO"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/CO2"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/H2O"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/HFl"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/NdGlass"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/NdYAG"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/ErGlass"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/ErYAG"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/HoYLF"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/HoYAG"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/Ruby"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/TiSapphire"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/Alexandrite"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/Rhodamine6G"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/CoumarinC30"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/GaAs"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/GaAlAs"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/EMinus"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//LaserMediumType/Other"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//Marker">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//Marker/Arrow"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//MediumType">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//MediumType/Air"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//MediumType/Oil"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//MediumType/Water"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//MediumType/Glycerol"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//MediumType/Other"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//NamingConvention">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//NamingConvention/letter"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//NamingConvention/number"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//PixelType">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//PixelType/int8"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//PixelType/int16"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//PixelType/int32"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//PixelType/uint8"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//PixelType/uint16"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//PixelType/uint32"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//PixelType/float"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//PixelType/double"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//PixelType/complex"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//PixelType/doubleComplex"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//PixelType/bit"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//PulseType">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//PulseType/CW"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//PulseType/Single"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//PulseType/QSwitched"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//PulseType/Repetitive"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//PulseType/ModeLocked"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//PulseType/Other"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//TypeType2">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType2/CCD"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType2/IntensifiedCCD"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType2/AnalogVideo"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType2/PMT"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType2/Photodiode"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType2/Spectroscopy"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType2/LifetimeImaging"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType2/CorrelationSpectroscopy"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType2/FTIR"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType2/EMCCD"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType2/APD"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType2/CMOS"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType2/EBCCD"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType2/Other"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//TypeType3">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType3/Excimer"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType3/Gas"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType3/MetalVapor"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType3/SolidState"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType3/Dye"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType3/Semiconductor"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType3/FreeElectron"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType3/Other"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//TypeType4">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType4/Incandescent"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType4/Halogen"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType4/Other"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//TypeType5">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType5/Upright"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType5/Inverted"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType5/Dissection"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType5/Electrophysiology"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType5/Other"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//TypeType6">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType6/Dichroic"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType6/LongPass"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType6/ShortPass"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType6/BandPass"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType6/MultiPass"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType6/NeutralDensity"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType6/Tuneable"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType6/Other"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//TypeType7">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType7/Hg"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType7/Xe"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType7/HgXe"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeType7/Other"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//TypeTypeItem">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem/FP"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem/FRET"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem/TimeLapse"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem/FourDPlus"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem/Screen"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem/Immunocytochemistry"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem/Immunofluorescence"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem/FISH"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem/Electrophysiology"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem/IonImaging"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem/Colocalization"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem/PGIDocumentation"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem/FluorescenceLifetime"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem/SpectralImaging"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem/Photobleaching"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem/SPIM"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem/Other"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//TypeTypeItem1">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem1/FRAP"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem1/FLIP"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem1/InverseFRAP"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem1/Photoablation"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem1/Photoactivation"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem1/Uncaging"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem1/OpticalTrapping"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//TypeTypeItem1/Other"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//UnitsAngle">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsAngle/deg"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsAngle/rad"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsAngle/gon"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//UnitsElectricPotential">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsElectricPotential/YV"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsElectricPotential/ZV"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsElectricPotential/EV"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsElectricPotential/PV"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsElectricPotential/TV"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsElectricPotential/GV"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsElectricPotential/MV"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsElectricPotential/kV"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsElectricPotential/hV"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsElectricPotential/daV"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsElectricPotential/V"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsElectricPotential/dV"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsElectricPotential/cV"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsElectricPotential/mV1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsElectricPotential/µV"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsElectricPotential/nV"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsElectricPotential/pV1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsElectricPotential/fV"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsElectricPotential/aV"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsElectricPotential/zV1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsElectricPotential/yV1"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//UnitsFrequency">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsFrequency/YHz"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsFrequency/ZHz"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsFrequency/EHz"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsFrequency/PHz"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsFrequency/THz"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsFrequency/GHz"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsFrequency/MHz"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsFrequency/kHz"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsFrequency/hHz"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsFrequency/daHz"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsFrequency/Hz"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsFrequency/dHz"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsFrequency/cHz"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsFrequency/mHz1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsFrequency/µHz"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsFrequency/nHz"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsFrequency/pHz1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsFrequency/fHz"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsFrequency/aHz"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsFrequency/zHz1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsFrequency/yHz1"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//UnitsLength">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/Ym"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/Zm"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/Em"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/Pm"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/Tm"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/Gm"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/Mm"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/km"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/hm"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/dam"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/m"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/dm"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/cm"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/mm1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/µm"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/nm"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/pm1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/fm"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/am"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/zm1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/ym1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/Å"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/thou"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/li"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/in"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/ft"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/yd"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/mi"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/ua"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/ly"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/pc"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/pt"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/pixel"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsLength/referenceFrame"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//UnitsPower">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPower/YW"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPower/ZW"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPower/EW"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPower/PW"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPower/TW"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPower/GW"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPower/MW"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPower/kW"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPower/hW"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPower/daW"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPower/W"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPower/dW"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPower/cW"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPower/mW1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPower/µW"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPower/nW"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPower/pW1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPower/fW"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPower/aW"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPower/zW1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPower/yW1"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//UnitsPressure">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/YPa"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/ZPa"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/EPa"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/PPa"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/TPa"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/GPa"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/MPa"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/kPa"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/hPa"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/daPa"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/Pa"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/dPa"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/cPa"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/mPa1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/µPa"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/nPa"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/pPa1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/fPa"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/aPa"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/zPa1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/yPa1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/bar"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/Mbar"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/kbar"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/dbar"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/cbar"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/mbar1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/atm"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/psi"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/Torr"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/mTorr"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsPressure/mmHg"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//UnitsTemperature">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTemperature/C"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTemperature/F"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTemperature/K"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTemperature/R"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ome.ecore#//UnitsTime">
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/Ys"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/Zs"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/Es"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/Ps"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/Ts"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/Gs"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/Ms"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/ks"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/hs"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/das"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/s"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/ds"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/cs"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/ms1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/µs"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/ns"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/ps1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/fs"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/as"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/zs1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/ys1"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/min"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/h"/>
+      <genEnumLiterals ecoreEnumLiteral="ome.ecore#//UnitsTime/d"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="ome.ecore#//AcquisitionModeTypeObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//AnnotationID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//Base64Binary"/>
+    <genDataTypes ecoreDataType="ome.ecore#//BinningObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//ChannelID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//Color"/>
+    <genDataTypes ecoreDataType="ome.ecore#//ColorObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//CompressionTypeObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//CompressionTypeObject1"/>
+    <genDataTypes ecoreDataType="ome.ecore#//ContrastMethodTypeObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//CorrectionTypeObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//DatasetID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//DescriptionType"/>
+    <genDataTypes ecoreDataType="ome.ecore#//DescriptionType1"/>
+    <genDataTypes ecoreDataType="ome.ecore#//DescriptionType2"/>
+    <genDataTypes ecoreDataType="ome.ecore#//DescriptionType3"/>
+    <genDataTypes ecoreDataType="ome.ecore#//DescriptionType4"/>
+    <genDataTypes ecoreDataType="ome.ecore#//DescriptionType5"/>
+    <genDataTypes ecoreDataType="ome.ecore#//DescriptionType6"/>
+    <genDataTypes ecoreDataType="ome.ecore#//DescriptionType7"/>
+    <genDataTypes ecoreDataType="ome.ecore#//DescriptionType8"/>
+    <genDataTypes ecoreDataType="ome.ecore#//DescriptionType9"/>
+    <genDataTypes ecoreDataType="ome.ecore#//DescriptionType10"/>
+    <genDataTypes ecoreDataType="ome.ecore#//DescriptionType11"/>
+    <genDataTypes ecoreDataType="ome.ecore#//DescriptionType12"/>
+    <genDataTypes ecoreDataType="ome.ecore#//DetectorID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//DichroicID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//DimensionOrderTypeObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//ExperimenterGroupID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//ExperimenterID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//ExperimentID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//FillRuleTypeObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//FilterID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//FilterSetID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//FolderID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//FontFamilyObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//FontFamilyTypeObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//FontStyleTypeObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//Hex40"/>
+    <genDataTypes ecoreDataType="ome.ecore#//IlluminationTypeTypeObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//ImageID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//ImmersionTypeObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//InstrumentID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//LaserMediumTypeObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//LengthType"/>
+    <genDataTypes ecoreDataType="ome.ecore#//LengthTypeObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//LightSourceID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//LSID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//MarkerObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//MediumTypeObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//MicrobeamManipulationID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//ModuleID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//NamingConventionObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//NonNegativeFloat"/>
+    <genDataTypes ecoreDataType="ome.ecore#//NonNegativeFloatObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//NonNegativeInt"/>
+    <genDataTypes ecoreDataType="ome.ecore#//NonNegativeIntObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//NonNegativeLong"/>
+    <genDataTypes ecoreDataType="ome.ecore#//NonNegativeLongObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//ObjectiveID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//PercentFraction"/>
+    <genDataTypes ecoreDataType="ome.ecore#//PercentFractionObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//PixelsID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//PixelTypeObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//PlateAcquisitionID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//PlateID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//PositiveFloat"/>
+    <genDataTypes ecoreDataType="ome.ecore#//PositiveFloatObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//PositiveInt"/>
+    <genDataTypes ecoreDataType="ome.ecore#//PositiveIntObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//ProjectID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//PulseTypeObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//ReagentID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//RightsHeldType"/>
+    <genDataTypes ecoreDataType="ome.ecore#//RightsHolderType"/>
+    <genDataTypes ecoreDataType="ome.ecore#//ROIID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//ScreenID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//ShapeID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//TypeType"/>
+    <genDataTypes ecoreDataType="ome.ecore#//TypeType1"/>
+    <genDataTypes ecoreDataType="ome.ecore#//TypeTypeItemObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//TypeTypeItemObject1"/>
+    <genDataTypes ecoreDataType="ome.ecore#//TypeTypeObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//TypeTypeObject1"/>
+    <genDataTypes ecoreDataType="ome.ecore#//TypeTypeObject2"/>
+    <genDataTypes ecoreDataType="ome.ecore#//TypeTypeObject3"/>
+    <genDataTypes ecoreDataType="ome.ecore#//TypeTypeObject4"/>
+    <genDataTypes ecoreDataType="ome.ecore#//TypeTypeObject5"/>
+    <genDataTypes ecoreDataType="ome.ecore#//UnitsAngleObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//UnitsElectricPotentialObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//UnitsFrequencyObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//UnitsLengthObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//UnitsPowerObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//UnitsPressureObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//UnitsTemperatureObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//UnitsTimeObject"/>
+    <genDataTypes ecoreDataType="ome.ecore#//UniversallyUniqueIdentifier"/>
+    <genDataTypes ecoreDataType="ome.ecore#//WellID"/>
+    <genDataTypes ecoreDataType="ome.ecore#//WellSampleID"/>
+    <genClasses ecoreClass="ome.ecore#//AffineTransform">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//AffineTransform/a00"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//AffineTransform/a01"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//AffineTransform/a02"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//AffineTransform/a10"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//AffineTransform/a11"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//AffineTransform/a12"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//Annotation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//Annotation/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//Annotation/annotationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//Annotation/annotator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//Annotation/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//Annotation/namespace"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//AnnotationRefType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//AnnotationRefType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ArcType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ArcType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//BasicAnnotation"/>
+    <genClasses ecoreClass="ome.ecore#//BinaryFileType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//BinaryFileType/external"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//BinaryFileType/binData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//BinaryFileType/fileName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//BinaryFileType/mIMEType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//BinaryFileType/size"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//BinaryOnlyType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//BinaryOnlyType/metadataFile"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//BinaryOnlyType/uUID"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//BinDataType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//BinDataType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//BinDataType/bigEndian"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//BinDataType/compression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//BinDataType/length"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//BooleanAnnotationType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//BooleanAnnotationType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ChannelRefType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ChannelRefType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ChannelType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ChannelType/lightSourceSettings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ChannelType/detectorSettings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ChannelType/filterSetRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ChannelType/annotationRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ChannelType/lightPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ChannelType/acquisitionMode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ChannelType/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ChannelType/contrastMethod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ChannelType/emissionWavelength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ChannelType/emissionWavelengthUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ChannelType/excitationWavelength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ChannelType/excitationWavelengthUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ChannelType/fluor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ChannelType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ChannelType/illuminationType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ChannelType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ChannelType/nDFilter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ChannelType/pinholeSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ChannelType/pinholeSizeUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ChannelType/pockelCellSetting"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ChannelType/samplesPerPixel"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//CommentAnnotationType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//CommentAnnotationType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//DatasetRefType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DatasetRefType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//DatasetType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DatasetType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DatasetType/experimenterRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DatasetType/experimenterGroupRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DatasetType/imageRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DatasetType/annotationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DatasetType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DatasetType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//DetectorSettingsType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DetectorSettingsType/binning"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DetectorSettingsType/gain"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DetectorSettingsType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DetectorSettingsType/integration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DetectorSettingsType/offset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DetectorSettingsType/readOutRate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DetectorSettingsType/readOutRateUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DetectorSettingsType/voltage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DetectorSettingsType/voltageUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DetectorSettingsType/zoom"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//DetectorType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DetectorType/annotationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DetectorType/amplificationGain"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DetectorType/gain"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DetectorType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DetectorType/offset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DetectorType/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DetectorType/voltage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DetectorType/voltageUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DetectorType/zoom"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//DichroicRefType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DichroicRefType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//DichroicType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DichroicType/annotationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DichroicType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/annotationRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/arc"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/lightSourceGroup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/binaryFile"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/binData"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/booleanAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/channel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/channelRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/commentAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/dataset"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/datasetRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/detector"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/detectorSettings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/dichroic"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/dichroicRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/doubleAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/ellipse"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/shapeGroup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/experiment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/experimenter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/experimenterGroup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/experimenterGroupRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/experimenterRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/experimentRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/external"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/filament"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/fileAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/filter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/filterSet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/filterSetRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/folder"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/folderRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/genericExcitationSource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/image"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/imageRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/imagingEnvironment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/instrument"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/instrumentRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/label"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/laser"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/leader"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/lightEmittingDiode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/lightPath"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/lightSourceSettings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/line"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/listAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/longAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/mapAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/mask"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/metadataOnly"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/microbeamManipulation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/microbeamManipulationRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/microscope"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/objective"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/objectiveSettings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/oME"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/pixels"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/plane"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/plate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/plateAcquisition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/point"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/polygon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/polyline"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/project"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/projectRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/pump"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/reagent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/reagentRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/rectangle"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/rights"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/rOI"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/rOIRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/screen"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/stageLabel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/structuredAnnotations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/tagAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/termAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/tiffData"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/timestampAnnotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/transmittanceRange"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/well"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/wellSample"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/wellSampleRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//DocumentRoot/xMLAnnotation"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//DoubleAnnotationType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//DoubleAnnotationType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//EllipseType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//EllipseType/radiusX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//EllipseType/radiusY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//EllipseType/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//EllipseType/y"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ExperimenterGroupRefType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ExperimenterGroupRefType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ExperimenterGroupType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ExperimenterGroupType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ExperimenterGroupType/experimenterRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ExperimenterGroupType/leader"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ExperimenterGroupType/annotationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ExperimenterGroupType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ExperimenterGroupType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ExperimenterRefType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ExperimenterRefType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ExperimenterType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ExperimenterType/annotationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ExperimenterType/email"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ExperimenterType/firstName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ExperimenterType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ExperimenterType/institution"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ExperimenterType/lastName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ExperimenterType/middleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ExperimenterType/userName"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ExperimentRefType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ExperimentRefType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ExperimentType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ExperimentType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ExperimentType/experimenterRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ExperimentType/microbeamManipulation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ExperimentType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ExperimentType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ExternalType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ExternalType/compression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ExternalType/href"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ExternalType/sHA1"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//FilamentType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//FilamentType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//FileAnnotationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//FileAnnotationType/binaryFile"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//FilterRef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//FilterRef/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//FilterSetRefType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//FilterSetRefType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//FilterSetType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//FilterSetType/excitationFilterRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//FilterSetType/dichroicRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//FilterSetType/emissionFilterRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//FilterSetType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//FilterType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//FilterType/transmittanceRange"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//FilterType/annotationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//FilterType/filterWheel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//FilterType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//FilterType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//FolderRefType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//FolderRefType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//FolderType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//FolderType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//FolderType/folderRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//FolderType/imageRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//FolderType/rOIRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//FolderType/annotationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//FolderType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//FolderType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//GenericExcitationSourceType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//GenericExcitationSourceType/map"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ImageRefType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ImageRefType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ImageType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ImageType/acquisitionDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ImageType/experimenterRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ImageType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ImageType/experimentRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ImageType/experimenterGroupRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ImageType/instrumentRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ImageType/objectiveSettings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ImageType/imagingEnvironment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ImageType/stageLabel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ImageType/pixels"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ImageType/rOIRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ImageType/microbeamManipulationRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ImageType/annotationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ImageType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ImageType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ImagingEnvironmentType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ImagingEnvironmentType/map"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ImagingEnvironmentType/airPressure"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ImagingEnvironmentType/airPressureUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ImagingEnvironmentType/cO2Percent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ImagingEnvironmentType/humidity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ImagingEnvironmentType/temperature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ImagingEnvironmentType/temperatureUnit"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//InstrumentRefType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//InstrumentRefType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//InstrumentType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//InstrumentType/microscope"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ome.ecore#//InstrumentType/lightSourceGroupGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ome.ecore#//InstrumentType/lightSourceGroup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//InstrumentType/detector"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//InstrumentType/objective"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//InstrumentType/filterSet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//InstrumentType/filter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//InstrumentType/dichroic"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//InstrumentType/annotationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//InstrumentType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//LabelType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LabelType/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LabelType/y"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//LaserType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//LaserType/pump"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LaserType/frequencyMultiplication"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LaserType/laserMedium"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LaserType/pockelCell"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LaserType/pulse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LaserType/repetitionRate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LaserType/repetitionRateUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LaserType/tuneable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LaserType/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LaserType/wavelength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LaserType/wavelengthUnit"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//LeaderType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LeaderType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//LightEmittingDiodeType"/>
+    <genClasses ecoreClass="ome.ecore#//LightPathType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//LightPathType/excitationFilterRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//LightPathType/dichroicRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//LightPathType/emissionFilterRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//LightPathType/annotationRef"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//LightSource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//LightSource/annotationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LightSource/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LightSource/power"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LightSource/powerUnit"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//LightSourceSettingsType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LightSourceSettingsType/attenuation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LightSourceSettingsType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LightSourceSettingsType/wavelength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LightSourceSettingsType/wavelengthUnit"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//LineType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LineType/markerEnd"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LineType/markerStart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LineType/x1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LineType/x2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LineType/y1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LineType/y2"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ListAnnotationType"/>
+    <genClasses ecoreClass="ome.ecore#//LongAnnotationType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//LongAnnotationType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ManufacturerSpec">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ManufacturerSpec/lotNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ManufacturerSpec/manufacturer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ManufacturerSpec/model"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ManufacturerSpec/serialNumber"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//Map">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//Map/m"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//MapAnnotationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//MapAnnotationType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//MaskType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//MaskType/binData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//MaskType/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//MaskType/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//MaskType/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//MaskType/y"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//MicrobeamManipulationRefType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//MicrobeamManipulationRefType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//MicrobeamManipulationType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//MicrobeamManipulationType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//MicrobeamManipulationType/rOIRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//MicrobeamManipulationType/experimenterRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//MicrobeamManipulationType/lightSourceSettings"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//MicrobeamManipulationType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//MicrobeamManipulationType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//MicroscopeType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//MicroscopeType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//MType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//MType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//MType/k"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//NumericAnnotation"/>
+    <genClasses ecoreClass="ome.ecore#//ObjectiveSettingsType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ObjectiveSettingsType/correctionCollar"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ObjectiveSettingsType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ObjectiveSettingsType/medium"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ObjectiveSettingsType/refractiveIndex"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ObjectiveType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ObjectiveType/annotationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ObjectiveType/calibratedMagnification"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ObjectiveType/correction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ObjectiveType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ObjectiveType/immersion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ObjectiveType/iris"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ObjectiveType/lensNA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ObjectiveType/nominalMagnification"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ObjectiveType/workingDistance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ObjectiveType/workingDistanceUnit"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//OMEType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//OMEType/rights"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//OMEType/project"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//OMEType/dataset"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//OMEType/folder"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//OMEType/experiment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//OMEType/plate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//OMEType/screen"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//OMEType/experimenter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//OMEType/experimenterGroup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//OMEType/instrument"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//OMEType/image"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//OMEType/structuredAnnotations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//OMEType/rOI"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//OMEType/binaryOnly"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//OMEType/creator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//OMEType/uUID"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//PixelsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//PixelsType/channel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//PixelsType/binData"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//PixelsType/tiffData"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//PixelsType/metadataOnly"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//PixelsType/plane"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PixelsType/bigEndian"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PixelsType/dimensionOrder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PixelsType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PixelsType/interleaved"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PixelsType/physicalSizeX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PixelsType/physicalSizeXUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PixelsType/physicalSizeY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PixelsType/physicalSizeYUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PixelsType/physicalSizeZ"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PixelsType/physicalSizeZUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PixelsType/significantBits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PixelsType/sizeC"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PixelsType/sizeT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PixelsType/sizeX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PixelsType/sizeY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PixelsType/sizeZ"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PixelsType/timeIncrement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PixelsType/timeIncrementUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PixelsType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//PlaneType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlaneType/hashSHA1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//PlaneType/annotationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlaneType/deltaT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlaneType/deltaTUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlaneType/exposureTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlaneType/exposureTimeUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlaneType/positionX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlaneType/positionXUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlaneType/positionY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlaneType/positionYUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlaneType/positionZ"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlaneType/positionZUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlaneType/theC"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlaneType/theT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlaneType/theZ"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//PlateAcquisitionType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlateAcquisitionType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//PlateAcquisitionType/wellSampleRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//PlateAcquisitionType/annotationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlateAcquisitionType/endTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlateAcquisitionType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlateAcquisitionType/maximumFieldCount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlateAcquisitionType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlateAcquisitionType/startTime"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//PlateRefType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlateRefType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//PlateType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlateType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//PlateType/well"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//PlateType/annotationRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//PlateType/plateAcquisition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlateType/columnNamingConvention"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlateType/columns"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlateType/externalIdentifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlateType/fieldIndex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlateType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlateType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlateType/rowNamingConvention"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlateType/rows"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlateType/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlateType/wellOriginX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlateType/wellOriginXUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlateType/wellOriginY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PlateType/wellOriginYUnit"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//PointType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PointType/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PointType/y"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//PolygonType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PolygonType/points"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//PolylineType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PolylineType/markerEnd"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PolylineType/markerStart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PolylineType/points"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ProjectRefType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ProjectRefType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ProjectType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ProjectType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ProjectType/experimenterRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ProjectType/experimenterGroupRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ProjectType/datasetRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ProjectType/annotationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ProjectType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ProjectType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//PumpType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//PumpType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ReagentRefType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ReagentRefType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ReagentType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ReagentType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ReagentType/annotationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ReagentType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ReagentType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ReagentType/reagentIdentifier"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//RectangleType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//RectangleType/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//RectangleType/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//RectangleType/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//RectangleType/y"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//Reference"/>
+    <genClasses ecoreClass="ome.ecore#//RightsType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//RightsType/rightsHolder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//RightsType/rightsHeld"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ROIRefType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ROIRefType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ROIType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ROIType/union"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ROIType/annotationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ROIType/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ROIType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ROIType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ScreenType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ScreenType/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ScreenType/reagent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ScreenType/plateRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//ScreenType/annotationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ScreenType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ScreenType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ScreenType/protocolDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ScreenType/protocolIdentifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ScreenType/reagentSetDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ScreenType/reagentSetIdentifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//ScreenType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//Settings"/>
+    <genClasses ecoreClass="ome.ecore#//Shape">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//Shape/transform"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//Shape/annotationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//Shape/fillColor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//Shape/fillRule"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//Shape/fontFamily"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//Shape/fontSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//Shape/fontSizeUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//Shape/fontStyle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//Shape/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//Shape/locked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//Shape/strokeColor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//Shape/strokeDashArray"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//Shape/strokeWidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//Shape/strokeWidthUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//Shape/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//Shape/theC"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//Shape/theT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//Shape/theZ"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//StageLabelType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//StageLabelType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//StageLabelType/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//StageLabelType/xUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//StageLabelType/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//StageLabelType/yUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//StageLabelType/z"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//StageLabelType/zUnit"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//StructuredAnnotationsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ome.ecore#//StructuredAnnotationsType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ome.ecore#//StructuredAnnotationsType/xMLAnnotation"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ome.ecore#//StructuredAnnotationsType/fileAnnotation"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ome.ecore#//StructuredAnnotationsType/listAnnotation"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ome.ecore#//StructuredAnnotationsType/longAnnotation"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ome.ecore#//StructuredAnnotationsType/doubleAnnotation"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ome.ecore#//StructuredAnnotationsType/commentAnnotation"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ome.ecore#//StructuredAnnotationsType/booleanAnnotation"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ome.ecore#//StructuredAnnotationsType/timestampAnnotation"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ome.ecore#//StructuredAnnotationsType/tagAnnotation"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ome.ecore#//StructuredAnnotationsType/termAnnotation"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ome.ecore#//StructuredAnnotationsType/mapAnnotation"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//TagAnnotationType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//TagAnnotationType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//TermAnnotationType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//TermAnnotationType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//TextAnnotation"/>
+    <genClasses ecoreClass="ome.ecore#//TiffDataType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//TiffDataType/uUID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//TiffDataType/firstC"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//TiffDataType/firstT"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//TiffDataType/firstZ"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//TiffDataType/iFD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//TiffDataType/planeCount"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//TimestampAnnotationType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//TimestampAnnotationType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//TransmittanceRangeType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//TransmittanceRangeType/cutIn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//TransmittanceRangeType/cutInTolerance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//TransmittanceRangeType/cutInToleranceUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//TransmittanceRangeType/cutInUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//TransmittanceRangeType/cutOut"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//TransmittanceRangeType/cutOutTolerance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//TransmittanceRangeType/cutOutToleranceUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//TransmittanceRangeType/cutOutUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//TransmittanceRangeType/transmittance"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//TypeAnnotation"/>
+    <genClasses ecoreClass="ome.ecore#//UnionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ome.ecore#//UnionType/shapeGroupGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ome.ecore#//UnionType/shapeGroup"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//UUIDType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//UUIDType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//UUIDType/fileName"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//ValueType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute ome.ecore#//ValueType/any"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//WellSampleRefType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//WellSampleRefType/iD"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//WellSampleType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//WellSampleType/imageRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//WellSampleType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//WellSampleType/index"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//WellSampleType/positionX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//WellSampleType/positionXUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//WellSampleType/positionY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//WellSampleType/positionYUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//WellSampleType/timepoint"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//WellType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//WellType/wellSample"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//WellType/reagentRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//WellType/annotationRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//WellType/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//WellType/column"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//WellType/externalDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//WellType/externalIdentifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//WellType/iD"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//WellType/row"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ome.ecore#//WellType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="ome.ecore#//XMLAnnotationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ome.ecore#//XMLAnnotationType/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
