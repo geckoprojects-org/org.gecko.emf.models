@@ -16,11 +16,11 @@
 # Bundle Annotations		
 -includeresource.model: model=model
 
-Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-Version: 2.0.2.SNAPSHOT
 
 -buildpath: \
 	org.osgi.service.condition;version=latest
 
 Bundle-Name: OMG BPMN2 Model
-Bundle-Description: Ecore and generated code for org.omg.bpmn2
+Bundle-Description: OMG Business Process Model and Notation
 

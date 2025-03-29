@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2025 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"
+    modelDirectory="/org.omg.dmn.model/src" modelPluginID="org.omg.dmn.model" modelName="DMN16"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.xsd.ecore.importer"
+    complianceLevel="11.0" copyrightFields="false" operationReflection="true" importOrganizing="true"
+    oSGiCompatible="true">
+  <foreignModel>20240513/DMN16.xsd</foreignModel>
+  <genPackages prefix="DMN" basePackage="org.omg.spec.dmn" resource="XML" disposableProviderFactory="true"
+      ecorePackage="dmn.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="dmn.ecore#//TAssociationDirection">
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//TAssociationDirection/None"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//TAssociationDirection/One"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//TAssociationDirection/Both"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="dmn.ecore#//TBuiltinAggregator">
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//TBuiltinAggregator/SUM"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//TBuiltinAggregator/COUNT"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//TBuiltinAggregator/MIN"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//TBuiltinAggregator/MAX"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="dmn.ecore#//TDecisionTableOrientation">
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//TDecisionTableOrientation/RuleAsRow"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//TDecisionTableOrientation/RuleAsColumn"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//TDecisionTableOrientation/CrossTable"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="dmn.ecore#//TFunctionKind">
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//TFunctionKind/FEEL"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//TFunctionKind/Java"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//TFunctionKind/ONNX"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//TFunctionKind/PMML"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="dmn.ecore#//THitPolicy">
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//THitPolicy/UNIQUE"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//THitPolicy/FIRST"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//THitPolicy/PRIORITY"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//THitPolicy/ANY"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//THitPolicy/COLLECT"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//THitPolicy/RULEORDER"/>
+      <genEnumLiterals ecoreEnumLiteral="dmn.ecore#//THitPolicy/OUTPUTORDER"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="dmn.ecore#//TAssociationDirectionObject"/>
+    <genDataTypes ecoreDataType="dmn.ecore#//TBuiltinAggregatorObject"/>
+    <genDataTypes ecoreDataType="dmn.ecore#//TDecisionTableOrientationObject"/>
+    <genDataTypes ecoreDataType="dmn.ecore#//TFunctionKindObject"/>
+    <genDataTypes ecoreDataType="dmn.ecore#//THitPolicyObject"/>
+    <genClasses ecoreClass="dmn.ecore#//DMNRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//DMNRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/artifact"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/dMNElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/association"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/authorityRequirement"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/businessContextElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/businessKnowledgeModel"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/invocable"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/drgElement"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/namedElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/conditional"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/context"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/contextEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/decision"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/decisionService"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/decisionTable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/definitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/elementCollection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/every"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/filter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/for"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/functionDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/functionItem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/group"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/import"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/informationItem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/informationRequirement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/inputData"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/invocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/itemDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/knowledgeRequirement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/knowledgeSource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/list"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/literalExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/organizationUnit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/performanceIndicator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/relation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/some"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//DMNRoot/textAnnotation"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//ExtensionElementsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute dmn.ecore#//ExtensionElementsType/any"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TArtifact"/>
+    <genClasses ecoreClass="dmn.ecore#//TAssociation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TAssociation/sourceRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TAssociation/targetRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TAssociation/associationDirection"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TAuthorityRequirement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TAuthorityRequirement/requiredDecision"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TAuthorityRequirement/requiredInput"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TAuthorityRequirement/requiredAuthority"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TBinding">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TBinding/parameter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute dmn.ecore#//TBinding/expressionGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference dmn.ecore#//TBinding/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TBusinessContextElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TBusinessContextElement/uRI"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TBusinessKnowledgeModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TBusinessKnowledgeModel/encapsulatedLogic"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TBusinessKnowledgeModel/knowledgeRequirement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TBusinessKnowledgeModel/authorityRequirement"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TChildExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute dmn.ecore#//TChildExpression/expressionGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference dmn.ecore#//TChildExpression/expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TChildExpression/id"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TConditional">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TConditional/if"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TConditional/then"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TConditional/else"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TContext">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TContext/contextEntry"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TContextEntry">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TContextEntry/variable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute dmn.ecore#//TContextEntry/expressionGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference dmn.ecore#//TContextEntry/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TDecision">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TDecision/question"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TDecision/allowedAnswers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDecision/variable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDecision/informationRequirement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDecision/knowledgeRequirement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDecision/authorityRequirement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDecision/supportedObjective"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDecision/impactedPerformanceIndicator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDecision/decisionMaker"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDecision/decisionOwner"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDecision/usingProcess"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDecision/usingTask"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute dmn.ecore#//TDecision/expressionGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference dmn.ecore#//TDecision/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TDecisionRule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDecisionRule/inputEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDecisionRule/outputEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDecisionRule/annotationEntry"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TDecisionService">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDecisionService/outputDecision"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDecisionService/encapsulatedDecision"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDecisionService/inputDecision"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDecisionService/inputData"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TDecisionTable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDecisionTable/input"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDecisionTable/output"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDecisionTable/annotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDecisionTable/rule"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TDecisionTable/aggregation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TDecisionTable/hitPolicy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TDecisionTable/outputLabel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TDecisionTable/preferredOrientation"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TDefinitions">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDefinitions/import"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDefinitions/itemDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute dmn.ecore#//TDefinitions/drgElementGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference dmn.ecore#//TDefinitions/drgElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute dmn.ecore#//TDefinitions/artifactGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference dmn.ecore#//TDefinitions/artifact"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDefinitions/elementCollection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute dmn.ecore#//TDefinitions/businessContextElementGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference dmn.ecore#//TDefinitions/businessContextElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDefinitions/dMNDI"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TDefinitions/exporter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TDefinitions/exporterVersion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TDefinitions/expressionLanguage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TDefinitions/namespace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TDefinitions/typeLanguage"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TDMNElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TDMNElement/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TDMNElement/extensionElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TDMNElement/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TDMNElement/label"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute dmn.ecore#//TDMNElement/anyAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TDMNElementReference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TDMNElementReference/href"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TDRGElement"/>
+    <genClasses ecoreClass="dmn.ecore#//TElementCollection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TElementCollection/drgElement"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TExpression/typeRef"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TFilter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TFilter/in"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TFilter/match"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TFor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TFor/return"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TFunctionDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TFunctionDefinition/formalParameter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute dmn.ecore#//TFunctionDefinition/expressionGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference dmn.ecore#//TFunctionDefinition/expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TFunctionDefinition/kind"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TFunctionItem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TFunctionItem/parameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TFunctionItem/outputTypeRef"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TGroup">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TGroup/name"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TImport">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TImport/importType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TImport/locationURI"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TImport/namespace"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TImportedValues">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TImportedValues/importedElement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TImportedValues/expressionLanguage"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TInformationItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TInformationItem/typeRef"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TInformationRequirement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TInformationRequirement/requiredDecision"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TInformationRequirement/requiredInput"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TInputClause">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TInputClause/inputExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TInputClause/inputValues"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TInputData">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TInputData/variable"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TInvocable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TInvocable/variable"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TInvocation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute dmn.ecore#//TInvocation/expressionGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference dmn.ecore#//TInvocation/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TInvocation/binding"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TItemDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TItemDefinition/typeRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TItemDefinition/allowedValues"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TItemDefinition/typeConstraint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TItemDefinition/itemComponent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TItemDefinition/functionItem"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TItemDefinition/isCollection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TItemDefinition/typeLanguage"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TIterator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TIterator/in"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TIterator/iteratorVariable"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TKnowledgeRequirement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TKnowledgeRequirement/requiredKnowledge"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TKnowledgeSource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TKnowledgeSource/authorityRequirement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TKnowledgeSource/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TKnowledgeSource/owner"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TKnowledgeSource/locationURI"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute dmn.ecore#//TList/expressionGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference dmn.ecore#//TList/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TLiteralExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TLiteralExpression/text"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TLiteralExpression/importedValues"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TLiteralExpression/expressionLanguage"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TNamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TNamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TOrganizationUnit">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TOrganizationUnit/decisionMade"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TOrganizationUnit/decisionOwned"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TOutputClause">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TOutputClause/outputValues"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TOutputClause/defaultOutputEntry"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TOutputClause/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TOutputClause/typeRef"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TPerformanceIndicator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TPerformanceIndicator/impactingDecision"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TQuantified">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TQuantified/satisfies"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TRelation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TRelation/column"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmn.ecore#//TRelation/row"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TRuleAnnotation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TRuleAnnotation/text"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TRuleAnnotationClause">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TRuleAnnotationClause/name"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TTextAnnotation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TTextAnnotation/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TTextAnnotation/textFormat"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TTypedChildExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TTypedChildExpression/typeRef"/>
+    </genClasses>
+    <genClasses ecoreClass="dmn.ecore#//TUnaryTests">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TUnaryTests/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmn.ecore#//TUnaryTests/expressionLanguage"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="DC" basePackage="org.omg.spec.dmn" resource="XML" disposableProviderFactory="true"
+      ecorePackage="dc.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="dc.ecore#//AlignmentKind">
+      <genEnumLiterals ecoreEnumLiteral="dc.ecore#//AlignmentKind/start"/>
+      <genEnumLiterals ecoreEnumLiteral="dc.ecore#//AlignmentKind/end"/>
+      <genEnumLiterals ecoreEnumLiteral="dc.ecore#//AlignmentKind/center"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="dc.ecore#//KnownColor">
+      <genEnumLiterals ecoreEnumLiteral="dc.ecore#//KnownColor/maroon"/>
+      <genEnumLiterals ecoreEnumLiteral="dc.ecore#//KnownColor/red"/>
+      <genEnumLiterals ecoreEnumLiteral="dc.ecore#//KnownColor/orange"/>
+      <genEnumLiterals ecoreEnumLiteral="dc.ecore#//KnownColor/yellow"/>
+      <genEnumLiterals ecoreEnumLiteral="dc.ecore#//KnownColor/olive"/>
+      <genEnumLiterals ecoreEnumLiteral="dc.ecore#//KnownColor/purple"/>
+      <genEnumLiterals ecoreEnumLiteral="dc.ecore#//KnownColor/fuchsia"/>
+      <genEnumLiterals ecoreEnumLiteral="dc.ecore#//KnownColor/white"/>
+      <genEnumLiterals ecoreEnumLiteral="dc.ecore#//KnownColor/lime"/>
+      <genEnumLiterals ecoreEnumLiteral="dc.ecore#//KnownColor/green"/>
+      <genEnumLiterals ecoreEnumLiteral="dc.ecore#//KnownColor/navy"/>
+      <genEnumLiterals ecoreEnumLiteral="dc.ecore#//KnownColor/blue"/>
+      <genEnumLiterals ecoreEnumLiteral="dc.ecore#//KnownColor/aqua"/>
+      <genEnumLiterals ecoreEnumLiteral="dc.ecore#//KnownColor/teal"/>
+      <genEnumLiterals ecoreEnumLiteral="dc.ecore#//KnownColor/black"/>
+      <genEnumLiterals ecoreEnumLiteral="dc.ecore#//KnownColor/silver"/>
+      <genEnumLiterals ecoreEnumLiteral="dc.ecore#//KnownColor/gray"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="dc.ecore#//AlignmentKindObject"/>
+    <genDataTypes ecoreDataType="dc.ecore#//KnownColorObject"/>
+    <genDataTypes ecoreDataType="dc.ecore#//Rgb"/>
+    <genDataTypes ecoreDataType="dc.ecore#//RgbObject"/>
+    <genClasses ecoreClass="dc.ecore#//Bounds">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dc.ecore#//Bounds/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dc.ecore#//Bounds/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dc.ecore#//Bounds/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dc.ecore#//Bounds/y"/>
+    </genClasses>
+    <genClasses ecoreClass="dc.ecore#//Color">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dc.ecore#//Color/blue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dc.ecore#//Color/green"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dc.ecore#//Color/red"/>
+    </genClasses>
+    <genClasses ecoreClass="dc.ecore#//Dimension">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dc.ecore#//Dimension/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dc.ecore#//Dimension/width"/>
+    </genClasses>
+    <genClasses ecoreClass="dc.ecore#//DCRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute dc.ecore#//DCRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference dc.ecore#//DCRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference dc.ecore#//DCRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dc.ecore#//DCRoot/bounds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dc.ecore#//DCRoot/color"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dc.ecore#//DCRoot/dimension"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dc.ecore#//DCRoot/point"/>
+    </genClasses>
+    <genClasses ecoreClass="dc.ecore#//Point">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dc.ecore#//Point/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dc.ecore#//Point/y"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="DMNDI" basePackage="org.omg.spec.dmn" resource="XML" disposableProviderFactory="true"
+      ecorePackage="dmndi.ecore#/">
+    <genClasses ecoreClass="dmndi.ecore#//DMNDecisionServiceDividerLine"/>
+    <genClasses ecoreClass="dmndi.ecore#//DMNDI">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmndi.ecore#//DMNDI/dMNDiagram"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmndi.ecore#//DMNDI/dMNStyle"/>
+    </genClasses>
+    <genClasses ecoreClass="dmndi.ecore#//DMNDiagram">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmndi.ecore#//DMNDiagram/size"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute dmndi.ecore#//DMNDiagram/dMNDiagramElementGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference dmndi.ecore#//DMNDiagram/dMNDiagramElement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmndi.ecore#//DMNDiagram/useAlternativeInputDataShape"/>
+    </genClasses>
+    <genClasses ecoreClass="dmndi.ecore#//DMNEdge">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmndi.ecore#//DMNEdge/dMNLabel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmndi.ecore#//DMNEdge/dmnElementRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmndi.ecore#//DMNEdge/sourceElement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmndi.ecore#//DMNEdge/targetElement"/>
+    </genClasses>
+    <genClasses ecoreClass="dmndi.ecore#//DMNLabel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmndi.ecore#//DMNLabel/text"/>
+    </genClasses>
+    <genClasses ecoreClass="dmndi.ecore#//DMNShape">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmndi.ecore#//DMNShape/dMNLabel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmndi.ecore#//DMNShape/dMNDecisionServiceDividerLine"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmndi.ecore#//DMNShape/dmnElementRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmndi.ecore#//DMNShape/isCollapsed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmndi.ecore#//DMNShape/isListedInputData"/>
+    </genClasses>
+    <genClasses ecoreClass="dmndi.ecore#//DMNStyle">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmndi.ecore#//DMNStyle/fillColor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmndi.ecore#//DMNStyle/strokeColor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmndi.ecore#//DMNStyle/fontColor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmndi.ecore#//DMNStyle/fontBold"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmndi.ecore#//DMNStyle/fontFamily"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmndi.ecore#//DMNStyle/fontItalic"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmndi.ecore#//DMNStyle/fontSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmndi.ecore#//DMNStyle/fontStrikeThrough"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmndi.ecore#//DMNStyle/fontUnderline"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmndi.ecore#//DMNStyle/labelHorizontalAlignement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dmndi.ecore#//DMNStyle/labelVerticalAlignment"/>
+    </genClasses>
+    <genClasses ecoreClass="dmndi.ecore#//DMNDIRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute dmndi.ecore#//DMNDIRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference dmndi.ecore#//DMNDIRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference dmndi.ecore#//DMNDIRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmndi.ecore#//DMNDIRoot/dMNDecisionServiceDividerLine"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmndi.ecore#//DMNDIRoot/dMNDI"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmndi.ecore#//DMNDIRoot/dMNDiagram"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmndi.ecore#//DMNDIRoot/dMNDiagramElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmndi.ecore#//DMNDIRoot/dMNEdge"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmndi.ecore#//DMNDIRoot/dMNLabel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmndi.ecore#//DMNDIRoot/dMNShape"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dmndi.ecore#//DMNDIRoot/dMNStyle"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="DI" basePackage="org.omg.spec.dmn" resource="XML" disposableProviderFactory="true"
+      ecorePackage="di.ecore#/">
+    <genClasses image="false" ecoreClass="di.ecore#//Diagram">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute di.ecore#//Diagram/documentation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute di.ecore#//Diagram/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute di.ecore#//Diagram/resolution"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="di.ecore#//DiagramElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference di.ecore#//DiagramElement/extension"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute di.ecore#//DiagramElement/styleGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference di.ecore#//DiagramElement/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute di.ecore#//DiagramElement/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute di.ecore#//DiagramElement/sharedStyle"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute di.ecore#//DiagramElement/anyAttribute"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="di.ecore#//Edge">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference di.ecore#//Edge/waypoint"/>
+    </genClasses>
+    <genClasses ecoreClass="di.ecore#//ExtensionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute di.ecore#//ExtensionType/any"/>
+    </genClasses>
+    <genClasses ecoreClass="di.ecore#//ExtensionType1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute di.ecore#//ExtensionType1/any"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="di.ecore#//Shape">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference di.ecore#//Shape/bounds"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="di.ecore#//Style">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference di.ecore#//Style/extension"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute di.ecore#//Style/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute di.ecore#//Style/anyAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="di.ecore#//DIRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute di.ecore#//DIRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference di.ecore#//DIRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference di.ecore#//DIRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference di.ecore#//DIRoot/style"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
