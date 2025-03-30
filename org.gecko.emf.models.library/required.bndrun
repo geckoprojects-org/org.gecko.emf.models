@@ -18,7 +18,9 @@
 	bnd.identity;id='org.w3.rdf.model',\
 	bnd.identity;id='de.dwd.cdc.common.model',\
 	bnd.identity;id='de.dwd.cdc.forecast.model',\
-	bnd.identity;id='de.dwd.cdc.model'
+	bnd.identity;id='de.dwd.cdc.model',\
+	bnd.identity;id='org.omg.cmmn.model',\
+	bnd.identity;id='org.omg.dmn.model'
 -runbundles: \
 	net.opengis.gml3.model;version=snapshot,\
 	net.opengis.kml.model;version=snapshot,\
