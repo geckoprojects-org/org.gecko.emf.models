@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="http://camunda.org/schema/1.0/bpmn" nsPrefix="camunda">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="camunda" nsURI="http://camunda.org/schema/1.0/bpmn" nsPrefix="camunda">
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
     <details key="documentation" value="This XML Schema defines and documents BPMN 2.0 extension elements and attributes introduced by activiti."/>
     <details key="complianceLevel" value="11.0"/>
@@ -9,7 +9,7 @@
     <details key="basePackage" value="org.camunda.bpmn"/>
     <details key="copyrightText" value="Copyright (c) 2012 - 2024 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot" eSuperTypes="../../org.omg.bpmn.model/model/BPMN20.ecore#//BPMNRoot">
+  <eClassifiers xsi:type="ecore:EClass" name="CamundaRoot" eSuperTypes="../../org.omg.bpmn.model/model/bpmn.ecore#//BPMNRoot">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value=""/>
       <details key="kind" value="mixed"/>
@@ -343,7 +343,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StartEvent" eSuperTypes="#//FormDataContainer ../../org.omg.bpmn.model/model/BPMN20.ecore#//StartEvent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StartEvent" eSuperTypes="#//FormDataContainer ../../org.omg.bpmn.model/model/bpmn.ecore#//TStartEvent"/>
   <eClassifiers xsi:type="ecore:EDataType" name="ClassType" instanceClassName="java.lang.String">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="class_._type"/>
@@ -468,12 +468,6 @@
         <details key="kind" value="element"/>
         <details key="name" value="expression"/>
         <details key="namespace" value="##targetNamespace"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression1" eType="#//TExpression">
-      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-        <details key="kind" value="attribute"/>
-        <details key="name" value="expression"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String">
@@ -779,17 +773,11 @@
       <details key="baseType" value="type_._type"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CallActivity" eSuperTypes="../../org.omg.bpmn.model/model/BPMN20.ecore#//CallActivity">
+  <eClassifiers xsi:type="ecore:EClass" name="CallActivity" eSuperTypes="../../org.omg.bpmn.model/model/bpmn.ecore#//TCallActivity">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="tCallActivity"/>
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="calledElement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-        <details key="kind" value="attribute"/>
-        <details key="name" value="calledElement"/>
-      </eAnnotations>
-    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="calledElementBinding" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="latest">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -806,7 +794,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BoundaryEvent" eSuperTypes="../../org.omg.bpmn.model/model/BPMN20.ecore#//BoundaryEvent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BoundaryEvent" eSuperTypes="../../org.omg.bpmn.model/model/bpmn.ecore#//TBoundaryEvent"/>
   <eClassifiers xsi:type="ecore:EClass" name="ValueType">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="value_._type"/>
@@ -972,9 +960,9 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UserTask" eSuperTypes="#//FormDataContainer ../../org.omg.bpmn.model/model/BPMN20.ecore#//UserTask"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UserTask" eSuperTypes="#//FormDataContainer ../../org.omg.bpmn.model/model/bpmn.ecore#//TUserTask"/>
   <eClassifiers xsi:type="ecore:EClass" name="FormDataContainer"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="../../org.omg.bpmn.model/model/BPMN20.ecore#//Expression">
+  <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="../../org.omg.bpmn.model/model/bpmn.ecore#//TExpression">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value="tExpression"/>
       <details key="kind" value="mixed"/>
@@ -982,13 +970,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="body" ordered="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" volatile="true"
         derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mixed" unique="false" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
-      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-        <details key="kind" value="elementWildcard"/>
-        <details key="name" value=":mixed"/>
-      </eAnnotations>
-    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConnectorType">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
