@@ -13,7 +13,7 @@
 mavenCentral: true
 dimcBaselining: false
 github-project: org.gecko.emf.models
-base-version: 1.0.0
+base-version: 1.0.1
 
 # Maven Central Group-Id
 # For Geckoprojects the groupid must start with org.geckoprojects
