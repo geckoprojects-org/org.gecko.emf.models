@@ -27,7 +27,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @model features="data" 
  *        dataDataType="org.geojson.DoubleArray4D" dataVolatile="true" dataSuppressedGetVisibility="true" dataSuppressedSetVisibility="true" dataSuppressedUnsetVisibility="true"
  *        dataExtendedMetaData="name='coordinates'"
- *        dataAnnotation="http://www.eclipse.org/emf/2002/GenModel get='return org.eclipse.fennec.models.geojson.util.GeoJsonHelper.getMultiPolygonData(this);'"
+ *        dataAnnotation="http://www.eclipse.org/emf/2002/GenModel get='return org.geojson.util.GeoJsonHelper.getMultiPolygonData(this);'"
  * @generated
  */
 @ProviderType

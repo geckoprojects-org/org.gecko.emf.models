@@ -1047,7 +1047,7 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 		  (getPoint__SetData__double(),
 		   source,
 		   new String[] {
-			   "body", "setCoordinates(org.eclipse.fennec.models.geojson.util.GeoJsonHelper.toCoordinates(data));",
+			   "body", "setCoordinates(org.geojson.util.GeoJsonHelper.toCoordinates(data));",
 			   "suppressedVisibility", "true"
 		   });
 		addAnnotation
@@ -1058,13 +1058,13 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 			   "suppressedIsSetVisibility", "true",
 			   "suppressedSetVisibility", "true",
 			   "suppressedUnsetVisibility", "true",
-			   "get", "return org.eclipse.fennec.models.geojson.util.GeoJsonHelper.convertCoordinates(getCoordinates());"
+			   "get", "return org.geojson.util.GeoJsonHelper.convertCoordinates(getCoordinates());"
 		   });
 		addAnnotation
 		  (getGeoJsonObject__SetBbox__double(),
 		   source,
 		   new String[] {
-			   "body", "setBoundingBox(org.eclipse.fennec.models.geojson.util.GeoJsonHelper.convertToBoundingBox(newBbox));",
+			   "body", "setBoundingBox(org.geojson.util.GeoJsonHelper.convertToBoundingBox(newBbox));",
 			   "suppressedVisibility", "true"
 		   });
 		addAnnotation
@@ -1075,7 +1075,7 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 			   "suppressedIsSetVisibility", "false",
 			   "suppressedSetVisibility", "true",
 			   "suppressedUnsetVisibility", "true",
-			   "get", "return org.eclipse.fennec.models.geojson.util.GeoJsonHelper.convertBoundingBox(getBoundingBox());"
+			   "get", "return org.geojson.util.GeoJsonHelper.convertBoundingBox(getBoundingBox());"
 		   });
 		addAnnotation
 		  (lineStringEClass,
@@ -1091,7 +1091,7 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 			   "suppressedIsSetVisibility", "false",
 			   "suppressedSetVisibility", "true",
 			   "suppressedUnsetVisibility", "true",
-			   "get", "return new org.eclipse.fennec.models.geojson.util.GenericConvertingList<double[], Coordinates>(getCoordinates(), org.eclipse.fennec.models.geojson.util.GeoJsonHelper::toCoordinates, org.eclipse.fennec.models.geojson.util.GeoJsonHelper::convertCoordinates);"
+			   "get", "return new org.geojson.util.GenericConvertingList<double[], Coordinates>(getCoordinates(), org.geojson.util.GeoJsonHelper::toCoordinates, org.geojson.util.GeoJsonHelper::convertCoordinates);"
 		   });
 		addAnnotation
 		  (geometryCollectionEClass,
@@ -1113,7 +1113,7 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 			   "suppressedIsSetVisibility", "false",
 			   "suppressedSetVisibility", "true",
 			   "suppressedUnsetVisibility", "true",
-			   "get", "return new org.eclipse.fennec.models.geojson.util.GenericConvertingList<double[], Coordinates>(getCoordinates(), org.eclipse.fennec.models.geojson.util.GeoJsonHelper::toCoordinates, org.eclipse.fennec.models.geojson.util.GeoJsonHelper::convertCoordinates);"
+			   "get", "return new org.geojson.util.GenericConvertingList<double[], Coordinates>(getCoordinates(), org.geojson.util.GeoJsonHelper::toCoordinates, org.geojson.util.GeoJsonHelper::convertCoordinates);"
 		   });
 		addAnnotation
 		  (polygonEClass,
@@ -1143,7 +1143,7 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 		  (getMultiPolygon__SetData__double(),
 		   source,
 		   new String[] {
-			   "body", "org.eclipse.fennec.models.geojson.util.GeoJsonHelper.setMultiPolygonData(this, data);",
+			   "body", "org.geojson.util.GeoJsonHelper.setMultiPolygonData(this, data);",
 			   "suppressedVisibility", "true"
 		   });
 		addAnnotation
@@ -1154,7 +1154,7 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 			   "suppressedIsSetVisibility", "false",
 			   "suppressedSetVisibility", "true",
 			   "suppressedUnsetVisibility", "true",
-			   "get", "return org.eclipse.fennec.models.geojson.util.GeoJsonHelper.getMultiPolygonData(this);"
+			   "get", "return org.geojson.util.GeoJsonHelper.getMultiPolygonData(this);"
 		   });
 		addAnnotation
 		  (simplePolygonEClass,
@@ -1166,7 +1166,7 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 		  (getSimplePolygon__SetData__double(),
 		   source,
 		   new String[] {
-			   "body", "org.eclipse.fennec.models.geojson.util.GeoJsonHelper.setSimplePolygonData(this, data);",
+			   "body", "org.geojson.util.GeoJsonHelper.setSimplePolygonData(this, data);",
 			   "suppressedVisibility", "true"
 		   });
 		addAnnotation
@@ -1177,7 +1177,7 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 			   "suppressedIsSetVisibility", "false",
 			   "suppressedSetVisibility", "true",
 			   "suppressedUnsetVisibility", "true",
-			   "get", "return org.eclipse.fennec.models.geojson.util.GeoJsonHelper.getSimplePolygonData(this);"
+			   "get", "return org.geojson.util.GeoJsonHelper.getSimplePolygonData(this);"
 		   });
 		addAnnotation
 		  (multiLineStringEClass,
@@ -1189,7 +1189,7 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 		  (getMultiLineString__SetData__double(),
 		   source,
 		   new String[] {
-			   "body", "org.eclipse.fennec.models.geojson.util.GeoJsonHelper.setMultiLineStringData(this, data);",
+			   "body", "org.geojson.util.GeoJsonHelper.setMultiLineStringData(this, data);",
 			   "suppressedVisibility", "true"
 		   });
 		addAnnotation
@@ -1200,7 +1200,7 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 			   "suppressedIsSetVisibility", "false",
 			   "suppressedSetVisibility", "true",
 			   "suppressedUnsetVisibility", "true",
-			   "get", "return org.eclipse.fennec.models.geojson.util.GeoJsonHelper.getMultiLineStringData(this);"
+			   "get", "return org.geojson.util.GeoJsonHelper.getMultiLineStringData(this);"
 		   });
 	}
 

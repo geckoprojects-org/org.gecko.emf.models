@@ -26,7 +26,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @model features="data" 
  *        dataDataType="org.geojson.DoubleArray1D" dataVolatile="true" dataSuppressedGetVisibility="true" dataSuppressedSetVisibility="true" dataSuppressedIsSetVisibility="true" dataSuppressedUnsetVisibility="true"
  *        dataExtendedMetaData="name='coordinates'"
- *        dataAnnotation="http://www.eclipse.org/emf/2002/GenModel get='return org.eclipse.fennec.models.geojson.util.GeoJsonHelper.convertCoordinates(getCoordinates());'"
+ *        dataAnnotation="http://www.eclipse.org/emf/2002/GenModel get='return org.geojson.util.GeoJsonHelper.convertCoordinates(getCoordinates());'"
  * @generated
  */
 @ProviderType
