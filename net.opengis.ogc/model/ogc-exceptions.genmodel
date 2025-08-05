@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2025 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"
+    modelDirectory="/net.opengis.ogc/src" modelPluginID="net.opengis.ogc" modelName="OGC-Exceptions"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.xsd.ecore.importer"
+    complianceLevel="11.0" copyrightFields="false" operationReflection="true" importOrganizing="true"
+    oSGiCompatible="true">
+  <foreignModel>xsd/exceptions_1_3_0.xsd</foreignModel>
+  <genPackages prefix="OGCExceptions" basePackage="net.opengis" resource="XML" disposableProviderFactory="true"
+      ecorePackage="ogc-exceptions.ecore#/">
+    <genClasses ecoreClass="ogc-exceptions.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute ogc-exceptions.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ogc-exceptions.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ogc-exceptions.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ogc-exceptions.ecore#//DocumentRoot/serviceExceptionReport"/>
+    </genClasses>
+    <genClasses ecoreClass="ogc-exceptions.ecore#//ServiceExceptionReportType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ogc-exceptions.ecore#//ServiceExceptionReportType/serviceException"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ogc-exceptions.ecore#//ServiceExceptionReportType/version"/>
+    </genClasses>
+    <genClasses ecoreClass="ogc-exceptions.ecore#//ServiceExceptionType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ogc-exceptions.ecore#//ServiceExceptionType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ogc-exceptions.ecore#//ServiceExceptionType/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ogc-exceptions.ecore#//ServiceExceptionType/locator"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

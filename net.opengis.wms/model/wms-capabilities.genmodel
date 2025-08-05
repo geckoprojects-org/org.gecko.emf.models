@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2025 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"
+    modelDirectory="/net.opengis.wms/src" modelPluginID="net.opengis.wms" modelName="WMS-Capabilities"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.xsd.ecore.importer"
+    complianceLevel="11.0" copyrightFields="false" usedGenPackages="../../org.w3.xlink.model/model/xlink.genmodel#//xlink ../../org.eclipse.emf.ecore/model/XMLNamespace.genmodel#//namespace"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>xsd/capabilities_1_3_0.xsd</foreignModel>
+  <genPackages prefix="WMS" basePackage="net.opengis" resource="XML" disposableProviderFactory="true"
+      ecorePackage="wms-capabilities.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="wms-capabilities.ecore#//NameType">
+      <genEnumLiterals ecoreEnumLiteral="wms-capabilities.ecore#//NameType/WMS"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="wms-capabilities.ecore#//LatitudeType"/>
+    <genDataTypes ecoreDataType="wms-capabilities.ecore#//LatitudeTypeObject"/>
+    <genDataTypes ecoreDataType="wms-capabilities.ecore#//LongitudeType"/>
+    <genDataTypes ecoreDataType="wms-capabilities.ecore#//LongitudeTypeObject"/>
+    <genDataTypes ecoreDataType="wms-capabilities.ecore#//NameTypeObject"/>
+    <genClasses ecoreClass="wms-capabilities.ecore#//AttributionType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//AttributionType/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//AttributionType/onlineResource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//AttributionType/logoURL"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//AuthorityURLType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//AuthorityURLType/onlineResource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//AuthorityURLType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//BoundingBoxType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//BoundingBoxType/cRS"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//BoundingBoxType/maxx"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//BoundingBoxType/maxy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//BoundingBoxType/minx"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//BoundingBoxType/miny"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//BoundingBoxType/resx"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//BoundingBoxType/resy"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//CapabilityType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//CapabilityType/request"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//CapabilityType/exception"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//CapabilityType/extendedCapabilitiesGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wms-capabilities.ecore#//CapabilityType/extendedCapabilities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//CapabilityType/layer"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//ContactAddressType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//ContactAddressType/addressType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//ContactAddressType/address"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//ContactAddressType/city"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//ContactAddressType/stateOrProvince"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//ContactAddressType/postCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//ContactAddressType/country"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//ContactInformationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//ContactInformationType/contactPersonPrimary"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//ContactInformationType/contactPosition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//ContactInformationType/contactAddress"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//ContactInformationType/contactVoiceTelephone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//ContactInformationType/contactFacsimileTelephone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//ContactInformationType/contactElectronicMailAddress"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//ContactPersonPrimaryType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//ContactPersonPrimaryType/contactPerson"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//ContactPersonPrimaryType/contactOrganization"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//DataURLType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DataURLType/format"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DataURLType/onlineResource"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//DCPTypeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DCPTypeType/hTTP"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//DimensionType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DimensionType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DimensionType/current"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DimensionType/default"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DimensionType/multipleValues"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DimensionType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DimensionType/nearestValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DimensionType/units"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DimensionType/unitSymbol"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/extendedCapabilities"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/extendedOperation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/abstract"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/accessConstraints"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/address"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/addressType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/attribution"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/authorityURL"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/boundingBox"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/capability"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/city"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/contactAddress"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/contactElectronicMailAddress"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/contactFacsimileTelephone"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/contactInformation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/contactOrganization"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/contactPerson"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/contactPersonPrimary"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/contactPosition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/contactVoiceTelephone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/country"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/cRS"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/dataURL"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/dCPType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/dimension"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/eXGeographicBoundingBox"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/exception"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/featureListURL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/fees"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/format"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/get"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/getCapabilities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/getFeatureInfo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/getMap"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/hTTP"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/identifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/keyword"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/keywordList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/layer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/layerLimit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/legendURL"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/logoURL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/maxHeight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/maxScaleDenominator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/maxWidth"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/metadataURL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/minScaleDenominator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/onlineResource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/post"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/postCode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/request"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/service"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/stateOrProvince"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/style"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/styleSheetURL"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/styleURL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//DocumentRoot/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//DocumentRoot/wMSCapabilities"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//ExceptionType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//ExceptionType/format"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//EXGeographicBoundingBoxType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//EXGeographicBoundingBoxType/westBoundLongitude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//EXGeographicBoundingBoxType/eastBoundLongitude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//EXGeographicBoundingBoxType/southBoundLatitude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//EXGeographicBoundingBoxType/northBoundLatitude"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//FeatureListURLType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//FeatureListURLType/format"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//FeatureListURLType/onlineResource"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//GetType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//GetType/onlineResource"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//HTTPType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//HTTPType/get"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//HTTPType/post"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//IdentifierType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//IdentifierType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//IdentifierType/authority"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//KeywordListType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//KeywordListType/keyword"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//KeywordType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//KeywordType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//KeywordType/vocabulary"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//LayerType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//LayerType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//LayerType/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//LayerType/abstract"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//LayerType/keywordList"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//LayerType/cRS"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//LayerType/eXGeographicBoundingBox"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//LayerType/boundingBox"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//LayerType/dimension"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//LayerType/attribution"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//LayerType/authorityURL"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//LayerType/identifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//LayerType/metadataURL"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//LayerType/dataURL"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//LayerType/featureListURL"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//LayerType/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//LayerType/minScaleDenominator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//LayerType/maxScaleDenominator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//LayerType/layer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//LayerType/cascaded"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//LayerType/fixedHeight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//LayerType/fixedWidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//LayerType/noSubsets"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//LayerType/opaque"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//LayerType/queryable"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//LegendURLType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//LegendURLType/format"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//LegendURLType/onlineResource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//LegendURLType/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//LegendURLType/width"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//LogoURLType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//LogoURLType/format"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//LogoURLType/onlineResource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//LogoURLType/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//LogoURLType/width"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//MetadataURLType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//MetadataURLType/format"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//MetadataURLType/onlineResource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//MetadataURLType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//OnlineResourceType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//OnlineResourceType/actuate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//OnlineResourceType/arcrole"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//OnlineResourceType/href"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//OnlineResourceType/role"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//OnlineResourceType/show"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//OnlineResourceType/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//OnlineResourceType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//OperationType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//OperationType/format"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//OperationType/dCPType"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//PostType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//PostType/onlineResource"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//RequestType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//RequestType/getCapabilities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//RequestType/getMap"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//RequestType/getFeatureInfo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//RequestType/extendedOperationGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference wms-capabilities.ecore#//RequestType/extendedOperation"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//ServiceType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//ServiceType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//ServiceType/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//ServiceType/abstract"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//ServiceType/keywordList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//ServiceType/onlineResource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//ServiceType/contactInformation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//ServiceType/fees"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//ServiceType/accessConstraints"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//ServiceType/layerLimit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//ServiceType/maxWidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//ServiceType/maxHeight"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//StyleSheetURLType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//StyleSheetURLType/format"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//StyleSheetURLType/onlineResource"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//StyleType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//StyleType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//StyleType/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//StyleType/abstract"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//StyleType/legendURL"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//StyleType/styleSheetURL"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//StyleType/styleURL"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//StyleURLType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//StyleURLType/format"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//StyleURLType/onlineResource"/>
+    </genClasses>
+    <genClasses ecoreClass="wms-capabilities.ecore#//WMSCapabilitiesType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//WMSCapabilitiesType/service"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wms-capabilities.ecore#//WMSCapabilitiesType/capability"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//WMSCapabilitiesType/updateSequence"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wms-capabilities.ecore#//WMSCapabilitiesType/version"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
