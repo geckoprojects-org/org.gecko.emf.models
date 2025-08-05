@@ -7,8 +7,12 @@
 	bnd.identity;id='net.opengis.kml.model',\
 	bnd.identity;id='net.opengis.wfs.model',\
 	bnd.identity;id='net.opengis.wfs2.model',\
+	bnd.identity;id='net.opengis.ogc',\
+	bnd.identity;id='net.opengis.wms',\
 	bnd.identity;id='org.camunda.bpmn.model',\
 	bnd.identity;id='org.hl7.fhir.model',\
+	bnd.identity;id='org.omg.cmmn.model',\
+	bnd.identity;id='org.omg.dmn.model',\
 	bnd.identity;id='org.omg.bpmn.model',\
 	bnd.identity;id='org.w3.atom.model',\
 	bnd.identity;id='org.w3.smil.model',\
@@ -19,8 +23,7 @@
 	bnd.identity;id='de.dwd.cdc.common.model',\
 	bnd.identity;id='de.dwd.cdc.forecast.model',\
 	bnd.identity;id='de.dwd.cdc.model',\
-	bnd.identity;id='org.omg.cmmn.model',\
-	bnd.identity;id='org.omg.dmn.model'
+	bnd.identity;id='org.geojson.model'
 -runbundles: \
 	net.opengis.gml3.model;version=snapshot,\
 	net.opengis.kml.model;version=snapshot,\
