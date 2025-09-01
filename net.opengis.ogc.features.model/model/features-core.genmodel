@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2025 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"
+    modelDirectory="/net.opengis.ogc.features.model/src" modelPluginID="net.opengis.ogc.features.model"
+    modelName="OGCFeaturesCore" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="11.0" copyrightFields="false"
+    usedGenPackages="../../org.w3.atom.model/model/atom.genmodel#//atom ../../org.eclipse.emf.ecore/model/XMLNamespace.genmodel#//namespace"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>features-core.ecore</foreignModel>
+  <genPackages prefix="OGCFeatures" basePackage="net.opengis.ogc" resource="XML" disposableProviderFactory="true"
+      contentTypeIdentifier="ogcf#1.0.1" ecorePackage="features-core.ecore#/">
+    <genDataTypes ecoreDataType="features-core.ecore#//Position"/>
+    <genDataTypes ecoreDataType="features-core.ecore#//Position2D"/>
+    <genDataTypes ecoreDataType="features-core.ecore#//VersionString"/>
+    <genDataTypes ecoreDataType="features-core.ecore#//Version"/>
+    <genClasses image="false" ecoreClass="features-core.ecore#//BaseResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//BaseResponse/service"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//BaseResponse/updateSequence"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//BaseResponse/version"/>
+    </genClasses>
+    <genClasses ecoreClass="features-core.ecore#//Begin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//Begin/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//Begin/inclusive"/>
+    </genClasses>
+    <genClasses ecoreClass="features-core.ecore#//BoundingBox">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//BoundingBox/lowerCorner"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//BoundingBox/upperCorner"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//BoundingBox/crs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//BoundingBox/dimensions"/>
+    </genClasses>
+    <genClasses ecoreClass="features-core.ecore#//FeatureCollections">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//FeatureCollections/link"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//FeatureCollections/collection"/>
+    </genClasses>
+    <genClasses ecoreClass="features-core.ecore#//FeatureCollection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//FeatureCollection/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//FeatureCollection/itemType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//FeatureCollection/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//FeatureCollection/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//FeatureCollection/link"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//FeatureCollection/extent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//FeatureCollection/crs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//FeatureCollection/storageCrs"/>
+    </genClasses>
+    <genClasses ecoreClass="features-core.ecore#//ConformsTo">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//ConformsTo/link"/>
+    </genClasses>
+    <genClasses ecoreClass="features-core.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference features-core.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference features-core.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//DocumentRoot/begin"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//DocumentRoot/collections"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//DocumentRoot/conformsTo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//DocumentRoot/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//DocumentRoot/end"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//DocumentRoot/exception"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//DocumentRoot/exceptionReport"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//DocumentRoot/extent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//DocumentRoot/landingPage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//DocumentRoot/spatial"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference features-core.ecore#//DocumentRoot/spatialExtent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//DocumentRoot/temporal"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference features-core.ecore#//DocumentRoot/temporalExtent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//DocumentRoot/title"/>
+    </genClasses>
+    <genClasses ecoreClass="features-core.ecore#//End">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//End/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//End/inclusive"/>
+    </genClasses>
+    <genClasses ecoreClass="features-core.ecore#//ExceptionReport">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//ExceptionReport/exception"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//ExceptionReport/lang"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//ExceptionReport/version"/>
+    </genClasses>
+    <genClasses ecoreClass="features-core.ecore#//Exception">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//Exception/exceptionText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//Exception/exceptionCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//Exception/locator"/>
+    </genClasses>
+    <genClasses ecoreClass="features-core.ecore#//Extent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute features-core.ecore#//Extent/spatialExtentGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference features-core.ecore#//Extent/spatialExtent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute features-core.ecore#//Extent/temporalExtentGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference features-core.ecore#//Extent/temporalExtent"/>
+    </genClasses>
+    <genClasses ecoreClass="features-core.ecore#//GregorianPeriod"/>
+    <genClasses ecoreClass="features-core.ecore#//LandingPage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//LandingPage/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//LandingPage/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//LandingPage/link"/>
+    </genClasses>
+    <genClasses ecoreClass="features-core.ecore#//LanguageString">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//LanguageString/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//LanguageString/lang"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="features-core.ecore#//SpatialExtent"/>
+    <genClasses image="false" ecoreClass="features-core.ecore#//TemporalExtent"/>
+    <genClasses ecoreClass="features-core.ecore#//TemporalPeriod">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//TemporalPeriod/begin"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference features-core.ecore#//TemporalPeriod/end"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute features-core.ecore#//TemporalPeriod/trs"/>
+    </genClasses>
+    <genClasses ecoreClass="features-core.ecore#//WGS84BoundingBox"/>
+  </genPackages>
+</genmodel:GenModel>
