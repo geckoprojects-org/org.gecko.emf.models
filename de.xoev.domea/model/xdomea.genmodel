@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.xoev.domea/src" modelPluginID="de.xoev.domea"
+    modelName="XDomea" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="11.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>basisnachricht.ecore</foreignModel>
+  <foreignModel>code.ecore</foreignModel>
+  <foreignModel>datatype-din.ecore</foreignModel>
+  <foreignModel>xdomea.ecore</foreignModel>
+  <genPackages prefix="Basisnachricht" resource="XML" disposableProviderFactory="true"
+      ecorePackage="basisnachricht.ecore#/">
+    <genDataTypes ecoreDataType="basisnachricht.ecore#//UUID"/>
+    <genClasses ecoreClass="basisnachricht.ecore#//BehoerdeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basisnachricht.ecore#//BehoerdeType/verzeichnisdienst"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht.ecore#//BehoerdeType/kennung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht.ecore#//BehoerdeType/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basisnachricht.ecore#//BehoerdeType/erreichbarkeit"/>
+    </genClasses>
+    <genClasses ecoreClass="basisnachricht.ecore#//CodeKommunikationKanalType"/>
+    <genClasses ecoreClass="basisnachricht.ecore#//CodeVerzeichnisdienstType"/>
+    <genClasses ecoreClass="basisnachricht.ecore#//IdentifikationNachrichtType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht.ecore#//IdentifikationNachrichtType/nachrichtenUUID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basisnachricht.ecore#//IdentifikationNachrichtType/nachrichtentyp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht.ecore#//IdentifikationNachrichtType/erstellungszeitpunkt"/>
+    </genClasses>
+    <genClasses ecoreClass="basisnachricht.ecore#//KommunikationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basisnachricht.ecore#//KommunikationType/kanal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht.ecore#//KommunikationType/kennung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht.ecore#//KommunikationType/zusatz"/>
+    </genClasses>
+    <genClasses ecoreClass="basisnachricht.ecore#//NachrichtenkopfG2GType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basisnachricht.ecore#//NachrichtenkopfG2GType/identifikationNachricht"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basisnachricht.ecore#//NachrichtenkopfG2GType/leser"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basisnachricht.ecore#//NachrichtenkopfG2GType/autor"/>
+    </genClasses>
+    <genClasses ecoreClass="basisnachricht.ecore#//NachrichtG2GType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basisnachricht.ecore#//NachrichtG2GType/nachrichtenkopfG2g"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht.ecore#//NachrichtG2GType/produkt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht.ecore#//NachrichtG2GType/produkthersteller"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht.ecore#//NachrichtG2GType/produktversion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht.ecore#//NachrichtG2GType/standard"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht.ecore#//NachrichtG2GType/test"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht.ecore#//NachrichtG2GType/version"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Code" resource="XML" disposableProviderFactory="true" ecorePackage="code.ecore#/">
+    <genClasses ecoreClass="code.ecore#//Code">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute code.ecore#//Code/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute code.ecore#//Code/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute code.ecore#//Code/listURI"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute code.ecore#//Code/listVersionID"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Datatypedin" disposableProviderFactory="true" ecorePackage="datatype-din.ecore#/">
+    <genDataTypes ecoreDataType="datatype-din.ecore#//DatatypeA"/>
+    <genDataTypes ecoreDataType="datatype-din.ecore#//DatatypeB"/>
+    <genDataTypes ecoreDataType="datatype-din.ecore#//DatatypeC"/>
+    <genDataTypes ecoreDataType="datatype-din.ecore#//DatatypeD"/>
+    <genDataTypes ecoreDataType="datatype-din.ecore#//DatatypeE"/>
+  </genPackages>
+  <genPackages prefix="Domea" basePackage="de.xoev.domea" resource="XML" disposableProviderFactory="true"
+      ecorePackage="xdomea.ecore#/">
+    <genDataTypes ecoreDataType="xdomea.ecore#//StringDateinameType"/>
+    <genClasses ecoreClass="xdomea.ecore#//AkteninhaltType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AkteninhaltType/dokumentOderDokumentMitSchriftstueck"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AkteninhaltType/vorgang"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AkteninhaltType/teilakte"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//AktenplaneinheitAktenplanType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AktenplaneinheitAktenplanType/aussonderungsart"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AktenplaneinheitAktenplanType/gueltigkeit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AktenplaneinheitAktenplanType/stillgelegt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AktenplaneinheitAktenplanType/aufbewahrungsdauer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AktenplaneinheitAktenplanType/einheit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AktenplaneinheitAktenplanType/verweisAktenplaneinheit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AktenplaneinheitAktenplanType/anwendungsspezifischeErweiterung"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AktenplaneinheitAktenplanType/anwendungsspezifischeErweiterungXML"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//AktenplaneinheitType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AktenplaneinheitType/kennzeichen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AktenplaneinheitType/inhaltsangabe"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AktenplaneinheitType/betreffKurz"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//AktenplanType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AktenplanType/bezeichnung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AktenplanType/typ"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AktenplanType/version"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AktenplanType/einheit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AktenplanType/gueltigkeit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AktenplanType/aktenplandatei"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//AkteType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AkteType/identifikation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AkteType/allgemeineMetadaten"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AkteType/aussonderungsmetadaten"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AkteType/standort"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AkteType/typ"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AkteType/laufzeit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AkteType/historienProtokollInformation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AkteType/internerGeschaeftsgang"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AkteType/akteninhalt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AkteType/verweis"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AkteType/kontakt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AkteType/zdA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AkteType/zdADatum"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AkteType/anwendungsspezifischeErweiterung"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AkteType/anwendungsspezifischeErweiterungXML"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//AllgemeineMetadatenType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AllgemeineMetadatenType/betreff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AllgemeineMetadatenType/kennzeichen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AllgemeineMetadatenType/federfuehrung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AllgemeineMetadatenType/aktenfuehrung"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AllgemeineMetadatenType/geheimhaltung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AllgemeineMetadatenType/bemerkung"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AllgemeineMetadatenType/medium"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AllgemeineMetadatenType/aktenplaneinheit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AllgemeineMetadatenType/zeitpunktLetzteAenderung"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AllgemeineMetadatenType/strukturpfad"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AllgemeineMetadatenType/datenschutzstufe"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AllgemeineMetadatenType/datenschutzstufeCode"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//AllgemeinerNameType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AllgemeinerNameType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//AllgemeineRueckmeldungCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//AnlageDokumentType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AnlageDokumentType/nummer"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//AnschriftstypCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//AnschriftType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AnschriftType/staat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AnschriftType/strasse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AnschriftType/hausnummer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AnschriftType/postfach"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AnschriftType/postleitzahl"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AnschriftType/ort"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AnschriftType/zusatz"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AnschriftType/typ"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//AnwendungsspezifischeErweiterungType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AnwendungsspezifischeErweiterungType/kennung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AnwendungsspezifischeErweiterungType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AnwendungsspezifischeErweiterungType/beschreibung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AnwendungsspezifischeErweiterungType/versionsnummer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AnwendungsspezifischeErweiterungType/versionsdatum"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AnwendungsspezifischeErweiterungType/feldgruppe"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AnwendungsspezifischeErweiterungType/feld"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//AnwendungsspezifischeErweiterungXMLType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute xdomea.ecore#//AnwendungsspezifischeErweiterungXMLType/any"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//AufbewahrungsdauerType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AufbewahrungsdauerType/anzahlJahre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AufbewahrungsdauerType/unbefristet"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//AussonderungsartCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//AussonderungsartType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AussonderungsartType/aussonderungsart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AussonderungsartType/aussonderungsartKonfigurierbar"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//AussonderungsmetadatenType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AussonderungsmetadatenType/aufbewahrungsdauer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AussonderungsmetadatenType/aussonderungsart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AussonderungsmetadatenType/kennung"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//AussonderungsmetadatenType/bewertungsvorschlag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AussonderungsmetadatenType/bewertungsvorschlagBegruendung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AussonderungsmetadatenType/aufbewahrungsende"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//AussonderungsmetadatenType/transferfristende"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//BearbeitungType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//BearbeitungType/bearbeiter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//BearbeitungType/datum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//BearbeitungType/uhrzeit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//BearbeitungType/vermerk"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//BearbeitungType/notiz"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//BearbeitungType/anlage"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//BehoerdeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//BehoerdeType/verzeichnisdienst"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//BehoerdeType/kennung"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//BeteiligungsschrittType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//BeteiligungsschrittType/nummer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//BeteiligungsschrittType/status"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//BeteiligungsschrittType/verfuegung"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//BeteiligungsschrittType/bearbeitung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//BeteiligungsschrittType/parallelZuBeteiligungsschritt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//BeteiligungsschrittType/versionNummer"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//BeteiligungsstatusCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//BewertungsvorschlagCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//DateiformatCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//DatenaustauschartCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//DatenschutzstufeCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//DatentypCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//DokumentMitSchriftstueckType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//DokumentMitSchriftstueckType/schriftstueck"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//DokumentOderDokumentMitSchriftstueckType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//DokumentOderDokumentMitSchriftstueckType/dokument"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//DokumentOderDokumentMitSchriftstueckType/dokumentMitSchriftstueck"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//DokumentSchriftstueckBasisType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//DokumentSchriftstueckBasisType/identifikation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//DokumentSchriftstueckBasisType/allgemeineMetadaten"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//DokumentSchriftstueckBasisType/fremdesGeschaeftszeichen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//DokumentSchriftstueckBasisType/posteingangsdatum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//DokumentSchriftstueckBasisType/postausgangsdatum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//DokumentSchriftstueckBasisType/datumDesSchreibens"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//DokumentSchriftstueckBasisType/bezug"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//DokumentSchriftstueckBasisType/hier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//DokumentSchriftstueckBasisType/bearbeiter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//DokumentSchriftstueckBasisType/typ"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//DokumentSchriftstueckBasisType/historienProtokollInformation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//DokumentSchriftstueckBasisType/internerGeschaeftsgang"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//DokumentSchriftstueckBasisType/verweis"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//DokumentSchriftstueckBasisType/anlage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//DokumentSchriftstueckBasisType/autor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//DokumentSchriftstueckBasisType/leser"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//DokumentSchriftstueckBasisType/weitererKontakt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//DokumentSchriftstueckBasisType/anwendungsspezifischeErweiterung"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//DokumentSchriftstueckBasisType/anwendungsspezifischeErweiterungXML"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//DokumentType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//DokumentType/version"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//ErfolgOderMisserfolgImportType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//ErfolgOderMisserfolgImportType/erfolgreich"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//ErfolgOderMisserfolgImportType/fehlermeldung"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//ErfolgOderMisserfolgImportType/fehlermeldungCode"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//FeldgruppeType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//FeldgruppeType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//FeldgruppeType/beschreibung"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//FeldgruppeType/unterfeldgruppe"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//FeldgruppeType/feld"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//FeldType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//FeldType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//FeldType/beschreibung"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//FeldType/datentyp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//FeldType/wert"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//FormatType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//FormatType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//FormatType/sonstigerName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//FormatType/version"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//FormatType/primaerdokument"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//GeburtType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//GeburtType/datum"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//GeheimhaltungsgradCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//GeheimhaltungType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//GeheimhaltungType/geheimhaltungsgrad"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//GeheimhaltungType/einstufungsfrist"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//GeheimhaltungType/eingestuftAm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//GeheimhaltungType/herausgeber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//GeheimhaltungType/einstufungEndetAm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//GeheimhaltungType/bemerkung"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//GeschaeftsgangType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//GeschaeftsgangType/identifikation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//GeschaeftsgangType/beteiligungsschritt"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//HashType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//HashType/wert"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//HashType/algorithmus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//HashType/sonstigerAlgorithmus"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//HistorienProtokollInformationType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//HistorienProtokollInformationType/metadatumName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//HistorienProtokollInformationType/metadatumAlterWert"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//HistorienProtokollInformationType/metadatumNeuerWert"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//HistorienProtokollInformationType/akteur"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//HistorienProtokollInformationType/datumUhrzeit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//HistorienProtokollInformationType/bemerkung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//HistorienProtokollInformationType/aktion"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//IdentifikationNachrichtType"/>
+    <genClasses ecoreClass="xdomea.ecore#//IdentifikationObjektType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//IdentifikationObjektType/xdomeaUUID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//IdentifikationObjektType/nummerImUebergeordnetenContainer"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//KommunikationType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//KommunikationType/istDienstlich"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//KommunikationType/istInstitution"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//KompressionsverfahrenCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//KonfigurationsparameterCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//KonfigurationsparameterGruppeCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//KontaktType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//KontaktType/behoerdenkennung"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//KontaktType/nameInstitution"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//KontaktType/nameOrganisationseinheit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//KontaktType/nameAnsprechpartner"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//KontaktType/taetigkeit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//KontaktType/zustaendigkeit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//KontaktType/anschrift"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//KontaktType/erreichbarkeit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//KontaktType/rolle"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//KontaktType/rolleCode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//KontaktType/unstrukturierteAnschrift"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//KontaktType/geburt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//KontaktType/anwendungsspezifischeErweiterung"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//KontaktType/anwendungsspezifischeErweiterungXML"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//KryptographischeAlgorithmenCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//MediumCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//NachrichtenkopfType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//NachrichtenkopfType/identifikationNachricht"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//NachrichtenkopfType/leser"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//NachrichtenkopfType/autor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//NachrichtenkopfType/prozessID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//NachrichtenkopfType/instanzID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//NachrichtenkopfType/hinweis"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//NachrichtenkopfType/anwendungsspezifischeErweiterung"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//NachrichtenkopfType/anwendungsspezifischeErweiterungXML"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//NachrichtentypCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//NachrichtType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//NachrichtType/nachrichtenkopf"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//NachrichtType/produkt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//NachrichtType/produkthersteller"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//NachrichtType/produktversion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//NachrichtType/standard"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//NachrichtType/test"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//NachrichtType/version"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//NameNatuerlichePersonType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//NameNatuerlichePersonType/anrede"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//NameNatuerlichePersonType/titel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//NameNatuerlichePersonType/familienname"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//NameNatuerlichePersonType/vorname"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//NameOrganisationType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//NameOrganisationType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//NameOrganisationType/kurzbezeichnung"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//NkFVDatenType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//NkFVDatenType/empfangendesSystem"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//NkNichtFVDatenEinLeserMitEmpfangsbestaetigungType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//NkNichtFVDatenEinLeserMitEmpfangsbestaetigungType/empfangsbestaetigung"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//NkNichtFVDatenWeitereLeserMitEmpfangsbestaetigungType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//NkNichtFVDatenWeitereLeserMitEmpfangsbestaetigungType/empfangsbestaetigung"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//NkNichtFVDatenWeitereLeserType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//NkNichtFVDatenWeitereLeserType/weitererLeser"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//OrganisationseinheitType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//OrganisationseinheitType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//PfadelementType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//PfadelementType/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//PfadelementType/typ"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//PfadelementType/pfadelement"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//PrimaerdokumentType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//PrimaerdokumentType/dateiname"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//PrimaerdokumentType/dateinameOriginal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//PrimaerdokumentType/ersteller"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//PrimaerdokumentType/datumUhrzeit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//PrimaerdokumentType/signaturSiegel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//PrimaerdokumentType/zeitpunktLetzteAenderung"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//PrimaerdokumentType/hash"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//RolleCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SchriftgutobjekttypCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SignaturSiegelType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//SignaturSiegelType/signaturSiegelEingebettet"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//SignaturSiegelType/signaturSiegelDatei"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//SonstigeFehlermeldungCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0601CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0602CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0603CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0604CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0605CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0606CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0607CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0608CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0609CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0610CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0611CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0612CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0613CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0614CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0615CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0616CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0617CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0618CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0619CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0620CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0621CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0622CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0623CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0624CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0625CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0626CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0627CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0628CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0631CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//SpezifischeFehlermeldung0632CodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//StaatCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//StaatType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//StaatType/staat"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//StrukturelementTypCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//StrukturpfadType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//StrukturpfadType/pfadelement"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//SystemType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//SystemType/instanzID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//SystemType/produktname"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//SystemType/produktversion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//SystemType/produkthersteller"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//TransportwegCodeType"/>
+    <genClasses ecoreClass="xdomea.ecore#//UnstrukturierteAnschriftType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//UnstrukturierteAnschriftType/typ"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//UnstrukturierteAnschriftType/zeile1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//UnstrukturierteAnschriftType/zeile2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//UnstrukturierteAnschriftType/zeile3"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//UnstrukturierteAnschriftType/zeile4"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//UnstrukturierteAnschriftType/zeile5"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//UnstrukturierteAnschriftType/zeile6"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//UnstrukturierteAnschriftType/zusatz"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//VerfuegungType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//VerfuegungType/ersteller"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//VerfuegungType/adressat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//VerfuegungType/erstellungsdatum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//VerfuegungType/erstellungsuhrzeit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//VerfuegungType/verfuegung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//VerfuegungType/terminDatum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//VerfuegungType/terminUhrzeit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//VerfuegungType/notiz"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//VersionType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//VersionType/nummer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//VersionType/format"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//VerweisType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//VerweisType/xdomeaUUID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//VerweisType/sGOTyp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//VerweisType/sGOKennzeichen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//VerweisType/bemerkung"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//VorgangType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//VorgangType/identifikation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//VorgangType/allgemeineMetadaten"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//VorgangType/aussonderungsmetadaten"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//VorgangType/aktenbetreff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//VorgangType/typ"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//VorgangType/zdA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//VorgangType/zdADatum"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//VorgangType/laufzeit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//VorgangType/historienProtokollInformation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//VorgangType/internerGeschaeftsgang"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//VorgangType/dokumentOderDokumentMitSchriftstueck"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//VorgangType/verweis"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//VorgangType/kontakt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//VorgangType/teilvorgang"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//VorgangType/anwendungsspezifischeErweiterung"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xdomea.ecore#//VorgangType/anwendungsspezifischeErweiterungXML"/>
+    </genClasses>
+    <genClasses ecoreClass="xdomea.ecore#//ZeitraumType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//ZeitraumType/beginn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xdomea.ecore#//ZeitraumType/ende"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
