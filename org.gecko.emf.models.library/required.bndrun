@@ -23,7 +23,8 @@
 	bnd.identity;id='de.dwd.cdc.common.model',\
 	bnd.identity;id='de.dwd.cdc.forecast.model',\
 	bnd.identity;id='de.dwd.cdc.model',\
-	bnd.identity;id='org.geojson.model'
+	bnd.identity;id='org.geojson.model',\
+	bnd.identity;id='de.adv-online.aaa.model'
 -runbundles: \
 	net.opengis.gml3.model;version=snapshot,\
 	net.opengis.kml.model;version=snapshot,\
@@ -34,7 +35,6 @@
 	org.eclipse.emf.common;version='[2.29.0,2.29.1)',\
 	org.eclipse.emf.ecore;version='[2.35.0,2.35.1)',\
 	org.eclipse.emf.ecore.xmi;version='[2.36.0,2.36.1)',\
-	org.gecko.emf.osgi.api;version='[6.3.0,6.3.1)',\
 	org.hl7.fhir.model;version=snapshot,\
 	org.omg.bpmn.model;version=snapshot,\
 	org.osgi.service.component;version='[1.5.1,1.5.2)',\
@@ -54,4 +54,21 @@
 	de.dwd.cdc.forecast.model;version=snapshot,\
 	de.dwd.cdc.model;version=snapshot,\
 	org.omg.cmmn.model;version=snapshot,\
-	org.omg.dmn.model;version=snapshot
+	org.omg.dmn.model;version=snapshot,\
+	com.fasterxml.jackson.core.jackson-annotations;version='[2.14.1,2.14.2)',\
+	com.fasterxml.jackson.core.jackson-core;version='[2.14.1,2.14.2)',\
+	com.fasterxml.jackson.core.jackson-databind;version='[2.14.1,2.14.2)',\
+	com.fasterxml.jackson.dataformat.jackson-dataformat-properties;version='[2.14.1,2.14.2)',\
+	com.fasterxml.jackson.dataformat.jackson-dataformat-yaml;version='[2.14.1,2.14.2)',\
+	com.fasterxml.jackson.datatype.jackson-datatype-jsr310;version='[2.14.1,2.14.2)',\
+	de.adv-online.aaa.model;version=snapshot,\
+	net.opengis.ogc;version=snapshot,\
+	net.opengis.wms;version=snapshot,\
+	org.apache.felix.configadmin;version='[1.9.26,1.9.27)',\
+	org.eclipse.emfcloud.emfjson-jackson;version='[2.2.0,2.2.1)',\
+	org.gecko.emf.json;version='[1.5.1,1.5.2)',\
+	org.gecko.emf.osgi.component.minimal;version='[6.3.0,6.3.1)',\
+	org.geojson.model;version=snapshot,\
+	org.osgi.service.cm;version='[1.6.1,1.6.2)',\
+	org.osgi.util.converter;version='[1.0.9,1.0.10)',\
+	org.yaml.snakeyaml;version='[1.33.0,1.33.1)'

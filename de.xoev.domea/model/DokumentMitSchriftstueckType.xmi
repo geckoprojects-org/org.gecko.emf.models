@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domea:DokumentMitSchriftstueckType
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:domea="urn:xoev-de:xdomea:schema:4.0.0"
+    xsi:schemaLocation="urn:xoev-de:xdomea:schema:4.0.0 xdomea.ecore">
+  <identifikation
+      xdomeaUUID="b842cc75-13bf-43f4-b19f-8edfb59dcdb7"/>
+  <allgemeineMetadaten
+      betreff="Veröffentlichung Straßen Sondernutzungssatzung"
+      kennzeichen="0815-1"
+      federfuehrung="Fachdienst Recht"
+      aktenfuehrung="Team Stadtrat"
+      bemerkung="Dokumente zur Straßensondernutznug Stand 2025"
+      zeitpunktLetzteAenderung="2025-10-12T12:00:00"
+      datenschutzstufe="öffentlich">
+    <geheimhaltung
+        einstufungsfrist="2099"
+        eingestuftAm="2025-10-12"
+        herausgeber="Oberbürgermeister"
+        einstufungEndetAm="2099-10-11"
+        bemerkung="öffentlich da im öffentlichen Teil Stadtrat">
+      <geheimhaltungsgrad
+          code="123"
+          name="öffenlich"/>
+    </geheimhaltung>
+    <medium
+        code="42"
+        name="Papier"/>
+    <aktenplaneinheit
+        xsi:type="domea:AktenplaneinheitAktenplanType"
+        stillgelegt="false">
+      <aussonderungsart
+          aussonderungsartKonfigurierbar="nein"/>
+      <gueltigkeit
+          beginn="2025-10-12"
+          ende="2099-10-11"/>
+      <aufbewahrungsdauer
+          anzahlJahre="30"
+          unbefristet="false"/>
+      <verweisAktenplaneinheit>AP-0815-42</verweisAktenplaneinheit>
+    </aktenplaneinheit>
+    <strukturpfad>
+      <pfadelement
+          name="/">
+        <typ
+            code="23"
+            name="~/OB"/>
+      </pfadelement>
+    </strukturpfad>
+    <datenschutzstufeCode
+        code="6"
+        name="öffentlich"/>
+  </allgemeineMetadaten>
+  <historienProtokollInformation
+      akteur="OB"
+      datumUhrzeit="2025-10-09T08:00:00"
+      aktion="Einreichung Stadtrat"/>
+  <historienProtokollInformation
+      akteur="OB"
+      datumUhrzeit="2025-10-07T08:00:00"
+      aktion="Einreichung Hauptausschuss"/>
+  <internerGeschaeftsgang>
+    <identifikation
+        xdomeaUUID="31102b56-b765-4a18-a8ab-a4bdeb04c7f9"/>
+    <beteiligungsschritt
+        nummer="42"
+        versionNummer="2">
+      <status
+          code="642"
+          name="OK"/>
+      <verfuegung
+          erstellungsdatum="2025-10-05"
+          erstellungsuhrzeit="09:00:00"
+          notiz="Draft">
+        <ersteller
+            rolle="Sekretariat OB"/>
+        <adressat
+            taetigkeit="rechtl. Prüfung"
+            zustaendigkeit="Fachdienst Recht"
+            rolle="Prüfer"/>
+      </verfuegung>
+    </beteiligungsschritt>
+  </internerGeschaeftsgang>
+  <anlage nummer="1">
+    <dokument
+        datumDesSchreibens="2025-01-01"
+        bezug="Straßenplan"
+        hier="Karl-Liebknecht-Straße"
+        bearbeiter="GeoInfo"
+        typ="Karte">
+      <identifikation
+          xdomeaUUID="a064fc5d-1744-4e84-a9d0-48b97a90f810"/>
+    </dokument>
+  </anlage>
+  <autor taetigkeit="Einreichung"
+      zustaendigkeit=""
+      rolle="OB"/>
+  <leser rolle="Stadtrat"/>
+  <leser rolle="Bürgee"/>
+  <weitererKontakt
+      taetigkeit="zur Kenntnisnahme"
+      rolle="Landesverwaltungsamt Thüringen"/>
+  <schriftstueck
+      hier="Original Dokument"
+      bearbeiter="xyz">
+    <identifikation
+        xdomeaUUID="d995df95-221c-47bc-ae9d-91560ffe5785"/>
+    <version
+        nummer="1.0">
+      <format
+          sonstigerName="PDF"
+          version="1.0">
+        <name
+            code="56"
+            name="PDF Datei"/>
+        <primaerdokument
+            dateiname="d995df95-221c-47bc-ae9d-91560ffe5785.pdf"
+            dateinameOriginal="dokument.pdf"
+            ersteller="DMS"
+            datumUhrzeit="2025-10-08T14:30:00"
+            zeitpunktLetzteAenderung="2025-10-08T15:43:00"/>
+      </format>
+    </version>
+  </schriftstueck>
+</domea:DokumentMitSchriftstueckType>
