@@ -25,17 +25,13 @@ import basisnachricht.NachrichtenkopfG2GType;
 
 import basisnachricht.util.BasisnachrichtValidator;
 
-import code.CodePackage;
-
-import code.impl.CodePackageImpl;
-
-import datatypedin.DatatypedinPackage;
-
-import datatypedin.impl.DatatypedinPackageImpl;
-
 import de.xoev.domea.domea.DomeaPackage;
 
 import de.xoev.domea.domea.impl.DomeaPackageImpl;
+
+import de.xoev.kosit.datentyp._202204.din91379.DIN913792204Package;
+
+import de.xoev.schemata.code.code.Code10Package;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -158,26 +154,20 @@ public class BasisnachrichtPackageImpl extends EPackageImpl implements Basisnach
 		isInited = true;
 
 		// Initialize simple dependencies
+		DIN913792204Package.eINSTANCE.eClass();
+		Code10Package.eINSTANCE.eClass();
 		XMLTypePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CodePackage.eNS_URI);
-		CodePackageImpl theCodePackage = (CodePackageImpl)(registeredPackage instanceof CodePackageImpl ? registeredPackage : CodePackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DatatypedinPackage.eNS_URI);
-		DatatypedinPackageImpl theDatatypedinPackage = (DatatypedinPackageImpl)(registeredPackage instanceof DatatypedinPackageImpl ? registeredPackage : DatatypedinPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DomeaPackage.eNS_URI);
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DomeaPackage.eNS_URI);
 		DomeaPackageImpl theDomeaPackage = (DomeaPackageImpl)(registeredPackage instanceof DomeaPackageImpl ? registeredPackage : DomeaPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theBasisnachrichtPackage.createPackageContents();
-		theCodePackage.createPackageContents();
-		theDatatypedinPackage.createPackageContents();
 		theDomeaPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theBasisnachrichtPackage.initializePackageContents();
-		theCodePackage.initializePackageContents();
-		theDatatypedinPackage.initializePackageContents();
 		theDomeaPackage.initializePackageContents();
 
 		// Register package validator
@@ -569,8 +559,8 @@ public class BasisnachrichtPackageImpl extends EPackageImpl implements Basisnach
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		DatatypedinPackage theDatatypedinPackage = (DatatypedinPackage)EPackage.Registry.INSTANCE.getEPackage(DatatypedinPackage.eNS_URI);
-		CodePackage theCodePackage = (CodePackage)EPackage.Registry.INSTANCE.getEPackage(CodePackage.eNS_URI);
+		DIN913792204Package theDIN913792204Package = (DIN913792204Package)EPackage.Registry.INSTANCE.getEPackage(DIN913792204Package.eNS_URI);
+		Code10Package theCode10Package = (Code10Package)EPackage.Registry.INSTANCE.getEPackage(Code10Package.eNS_URI);
 		XMLTypePackage theXMLTypePackage = (XMLTypePackage)EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
 
 		// Create type parameters
@@ -578,14 +568,14 @@ public class BasisnachrichtPackageImpl extends EPackageImpl implements Basisnach
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		codeKommunikationKanalTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		codeVerzeichnisdienstTypeEClass.getESuperTypes().add(theCodePackage.getCode());
+		codeKommunikationKanalTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		codeVerzeichnisdienstTypeEClass.getESuperTypes().add(theCode10Package.getCode());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(behoerdeTypeEClass, BehoerdeType.class, "BehoerdeType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBehoerdeType_Verzeichnisdienst(), this.getCodeVerzeichnisdienstType(), null, "verzeichnisdienst", null, 1, 1, BehoerdeType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBehoerdeType_Kennung(), theDatatypedinPackage.getDatatypeC(), "kennung", null, 1, 1, BehoerdeType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBehoerdeType_Name(), theDatatypedinPackage.getDatatypeC(), "name", null, 1, 1, BehoerdeType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBehoerdeType_Kennung(), theDIN913792204Package.getDatatypeC(), "kennung", null, 1, 1, BehoerdeType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBehoerdeType_Name(), theDIN913792204Package.getDatatypeC(), "name", null, 1, 1, BehoerdeType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBehoerdeType_Erreichbarkeit(), this.getKommunikationType(), null, "erreichbarkeit", null, 0, -1, BehoerdeType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(codeKommunikationKanalTypeEClass, CodeKommunikationKanalType.class, "CodeKommunikationKanalType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -594,13 +584,13 @@ public class BasisnachrichtPackageImpl extends EPackageImpl implements Basisnach
 
 		initEClass(identifikationNachrichtTypeEClass, IdentifikationNachrichtType.class, "IdentifikationNachrichtType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIdentifikationNachrichtType_NachrichtenUUID(), this.getUUID(), "nachrichtenUUID", null, 1, 1, IdentifikationNachrichtType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIdentifikationNachrichtType_Nachrichtentyp(), theCodePackage.getCode(), null, "nachrichtentyp", null, 1, 1, IdentifikationNachrichtType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIdentifikationNachrichtType_Nachrichtentyp(), theCode10Package.getCode(), null, "nachrichtentyp", null, 1, 1, IdentifikationNachrichtType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getIdentifikationNachrichtType_Erstellungszeitpunkt(), theXMLTypePackage.getDateTime(), "erstellungszeitpunkt", null, 1, 1, IdentifikationNachrichtType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(kommunikationTypeEClass, KommunikationType.class, "KommunikationType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getKommunikationType_Kanal(), this.getCodeKommunikationKanalType(), null, "kanal", null, 1, 1, KommunikationType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getKommunikationType_Kennung(), theDatatypedinPackage.getDatatypeC(), "kennung", null, 1, 1, KommunikationType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getKommunikationType_Zusatz(), theDatatypedinPackage.getDatatypeC(), "zusatz", null, 0, 1, KommunikationType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getKommunikationType_Kennung(), theDIN913792204Package.getDatatypeC(), "kennung", null, 1, 1, KommunikationType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getKommunikationType_Zusatz(), theDIN913792204Package.getDatatypeC(), "zusatz", null, 0, 1, KommunikationType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nachrichtenkopfG2GTypeEClass, NachrichtenkopfG2GType.class, "NachrichtenkopfG2GType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getNachrichtenkopfG2GType_IdentifikationNachricht(), this.getIdentifikationNachrichtType(), null, "identifikationNachricht", null, 1, 1, NachrichtenkopfG2GType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -609,12 +599,12 @@ public class BasisnachrichtPackageImpl extends EPackageImpl implements Basisnach
 
 		initEClass(nachrichtG2GTypeEClass, NachrichtG2GType.class, "NachrichtG2GType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getNachrichtG2GType_NachrichtenkopfG2g(), this.getNachrichtenkopfG2GType(), null, "nachrichtenkopfG2g", null, 1, 1, NachrichtG2GType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNachrichtG2GType_Produkt(), theDatatypedinPackage.getDatatypeC(), "produkt", null, 1, 1, NachrichtG2GType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNachrichtG2GType_Produkthersteller(), theDatatypedinPackage.getDatatypeC(), "produkthersteller", null, 1, 1, NachrichtG2GType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNachrichtG2GType_Produktversion(), theDatatypedinPackage.getDatatypeC(), "produktversion", null, 0, 1, NachrichtG2GType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNachrichtG2GType_Standard(), theDatatypedinPackage.getDatatypeC(), "standard", null, 1, 1, NachrichtG2GType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNachrichtG2GType_Test(), theDatatypedinPackage.getDatatypeC(), "test", null, 0, 1, NachrichtG2GType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNachrichtG2GType_Version(), theDatatypedinPackage.getDatatypeC(), "version", null, 1, 1, NachrichtG2GType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNachrichtG2GType_Produkt(), theDIN913792204Package.getDatatypeC(), "produkt", null, 1, 1, NachrichtG2GType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNachrichtG2GType_Produkthersteller(), theDIN913792204Package.getDatatypeC(), "produkthersteller", null, 1, 1, NachrichtG2GType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNachrichtG2GType_Produktversion(), theDIN913792204Package.getDatatypeC(), "produktversion", null, 0, 1, NachrichtG2GType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNachrichtG2GType_Standard(), theDIN913792204Package.getDatatypeC(), "standard", null, 1, 1, NachrichtG2GType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNachrichtG2GType_Test(), theDIN913792204Package.getDatatypeC(), "test", null, 0, 1, NachrichtG2GType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNachrichtG2GType_Version(), theDIN913792204Package.getDatatypeC(), "version", null, 1, 1, NachrichtG2GType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize data types
 		initEDataType(uuidEDataType, String.class, "UUID", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

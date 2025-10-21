@@ -16,7 +16,7 @@ package basisnachricht.impl;
 import basisnachricht.BasisnachrichtPackage;
 import basisnachricht.CodeKommunikationKanalType;
 
-import code.impl.CodeImpl;
+import de.xoev.schemata.code.code.impl.CodeImpl;
 
 import org.eclipse.emf.ecore.EClass;
 

@@ -631,7 +631,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AllgemeineRueckmeldungCodeType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="AllgemeineRueckmeldungCodeType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von Rückmeldungen für Fachverfahrensnachrichten unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -665,7 +665,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AnschriftstypCodeType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="AnschriftstypCodeType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von Anschriftentypen unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -911,7 +911,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AussonderungsartCodeType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="AussonderungsartCodeType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von Aussonderungsarten unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -1153,7 +1153,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kennung" lowerBound="1"
-        eType="ecore:EDataType datatype-din.ecore#//DatatypeC">
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Dieses Element enthält die eindeutige Kennzeichnung der Behörde / öffentlichen Stelle innerhalb des angegebenen Verzeichnisdienstes. Für den Verzeichnisdienst „DVDV“ enthält die Kennzeichnung das „Präfix“ und die „Kennung“ getrennt durch das Zeichen ':', also bspw. 'psw:01003110'."/>
       </eAnnotations>
@@ -1241,7 +1241,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BeteiligungsstatusCodeType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="BeteiligungsstatusCodeType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von Beteiligungsstatus unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes. Für die Umsetzung in den Systemen wird empfohlen, sofern kein anderer Wert hinterlegt wurde, als Standardwert den Wert &quot;001&quot; für &quot;Der Schritt liegt in der Zukunft.&quot; anzugeben."/>
     </eAnnotations>
@@ -1253,7 +1253,7 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BewertungsvorschlagCodeType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="BewertungsvorschlagCodeType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von Bewertungsvorschlägen unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -1265,7 +1265,7 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DateiformatCodeType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="DateiformatCodeType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von Dateiformaten unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -1277,7 +1277,7 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DatenaustauschartCodeType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="DatenaustauschartCodeType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von Datenaustauscharten unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -1289,7 +1289,7 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DatenschutzstufeCodeType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="DatenschutzstufeCodeType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von Datenschutzstufen. Hinweise zur Erstellung und Nutzung von Codelisten sind im XÖV-Handbuch 3.0.0 (siehe Abschnitt 8.3. Szenarien der Codelistennutzung unter https://docs.xoev.de/xoev-handbuch/%C3%BCbersicht#_betrieb) zu finden."/>
     </eAnnotations>
@@ -1298,7 +1298,7 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DatentypCodeType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="DatentypCodeType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von Datentypen unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -1855,7 +1855,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GeheimhaltungsgradCodeType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="GeheimhaltungsgradCodeType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von Geheimhaltungsgraden unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -2186,7 +2186,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="KompressionsverfahrenCodeType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="KompressionsverfahrenCodeType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von Kompressionsverfahren unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -2198,7 +2198,7 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="KonfigurationsparameterCodeType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="KonfigurationsparameterCodeType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von Konfigurationsparametern unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -2211,7 +2211,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="KonfigurationsparameterGruppeCodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von Konfigurationsparametergruppen unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -2395,7 +2395,7 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="KryptographischeAlgorithmenCodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von kryptographischen Algorithmen."/>
     </eAnnotations>
@@ -2407,7 +2407,7 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MediumCodeType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="MediumCodeType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von Medientypen unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -2521,7 +2521,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NachrichtentypCodeType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="NachrichtentypCodeType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von Nachrichtentypen unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -2556,7 +2556,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="produkt" lowerBound="1"
-        eType="ecore:EDataType datatype-din.ecore#//DatatypeC">
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="In diesem Attribut ist der Name des Produktes (der Software) einzutragen, mit dem die Nachricht erstellt worden ist."/>
       </eAnnotations>
@@ -2566,7 +2566,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="produkthersteller" lowerBound="1"
-        eType="ecore:EDataType datatype-din.ecore#//DatatypeC">
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="In diesem Attribut wird der Name der Organisation / Firma übermittelt, die für das Produkt (die Software) verantwortlich ist, mit dem die Nachricht erstellt wurde."/>
       </eAnnotations>
@@ -2575,7 +2575,7 @@
         <details key="name" value="produkthersteller"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="produktversion" eType="ecore:EDataType datatype-din.ecore#//DatatypeC">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="produktversion" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="In diesem Attribut werden ergänzende Hinweise zu dem Produkt eingetragen. Dies sind Angaben, die für eine möglichst präzise Identifikation im Fehlerfall hilfreich sind, wie zum Beispiel Version und Patchlevel."/>
       </eAnnotations>
@@ -2585,8 +2585,8 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="standard" lowerBound="1"
-        eType="ecore:EDataType datatype-din.ecore#//DatatypeC" defaultValueLiteral="xdomea"
-        unsettable="true">
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC"
+        defaultValueLiteral="xdomea" unsettable="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="In diesem Attribut wird der Name des XÖV-Standards angegeben, aus dem die Nachricht stammt."/>
       </eAnnotations>
@@ -2595,7 +2595,7 @@
         <details key="name" value="standard"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="test" eType="ecore:EDataType datatype-din.ecore#//DatatypeC">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="test" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Ist dieses Attribut vorhanden, handelt es sich aus Sicht des Autors um eine Testnachricht, die nicht im normalen Produktivbetrieb verarbeitet werden darf. Autor und Leser können bilateral weitere Absprachen über den konkreten Inhalt des Attributs treffen."/>
       </eAnnotations>
@@ -2605,8 +2605,8 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" lowerBound="1"
-        eType="ecore:EDataType datatype-din.ecore#//DatatypeC" defaultValueLiteral="4.0.0"
-        unsettable="true">
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC"
+        defaultValueLiteral="4.0.0" unsettable="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="In diesem Attribut wird die Version des XÖV-Standards eingetragen, aus dem die Nachricht stammt."/>
       </eAnnotations>
@@ -2959,7 +2959,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RolleCodeType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="RolleCodeType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Rolle aus einer Codeliste für Kontakte unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes. Hinweise zur Erstellung und Nutzung von Codelisten sind im XÖV-Handbuch 3.0.0 (siehe Abschnitt 8.3. Szenarien der Codelistennutzung unter https://docs.xoev.de/xoev-handbuch/%C3%BCbersicht#_betrieb) zu finden."/>
     </eAnnotations>
@@ -2968,7 +2968,7 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SchriftgutobjekttypCodeType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="SchriftgutobjekttypCodeType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von Schriftgutobjekttypen unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3015,7 +3015,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SonstigeFehlermeldungCodeType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="SonstigeFehlermeldungCodeType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zu sonstigen, nicht im Standard xdomea definierten Fehlermeldungen für die Importbestätigungen unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes. Hinweise zur Erstellung und Nutzung von Codelisten sind im XÖV-Handbuch 3.0.0 (siehe Abschnitt 8.3. Szenarien der Codelistennutzung unter https://docs.xoev.de/xoev-handbuch/%C3%BCbersicht#_betrieb) zu finden."/>
     </eAnnotations>
@@ -3025,7 +3025,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0601CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0601 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3038,7 +3038,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0602CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0602 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3051,7 +3051,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0603CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0603 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3064,7 +3064,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0604CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0604 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3077,7 +3077,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0605CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0605 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3090,7 +3090,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0606CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0606 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3103,7 +3103,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0607CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0607 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3116,7 +3116,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0608CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0608 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3129,7 +3129,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0609CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0609 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3142,7 +3142,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0610CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0610 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3155,7 +3155,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0611CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0611 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3168,7 +3168,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0612CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0612 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3181,7 +3181,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0613CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0613 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3194,7 +3194,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0614CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0614 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3207,7 +3207,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0615CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0615 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3220,7 +3220,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0616CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0616 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3233,7 +3233,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0617CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0617 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3246,7 +3246,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0618CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0618 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3259,7 +3259,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0619CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0619 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3272,7 +3272,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0620CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0620 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3285,7 +3285,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0621CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0621 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3298,7 +3298,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0622CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0622 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3311,7 +3311,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0623CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0623 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3324,7 +3324,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0624CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0624 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3337,7 +3337,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0625CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0625 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3350,7 +3350,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0626CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0626 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3363,7 +3363,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0627CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0627 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3376,7 +3376,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0628CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0628 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3389,7 +3389,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0631CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0631 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3402,7 +3402,7 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpezifischeFehlermeldung0632CodeType"
-      eSuperTypes="code.ecore#//Code">
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von spezifischen Fehlermeldungen für die Nachricht 0632 unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>
@@ -3414,7 +3414,7 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StaatCodeType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="StaatCodeType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von Staaten unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes. Genutzt wird hier die ISO-3166-1-Liste. Für den Schlüssel (code) wird die Spalte &quot;ALPHA2&quot; und für den beschreibenden Namen (name) die Spalte &quot;Name des Landes&quot; verwendet."/>
     </eAnnotations>
@@ -3459,7 +3459,7 @@
       <details key="pattern" value="[0-9|A-F|a-f]{8}-[0-9|A-F|a-f]{4}-[0-9|A-F|a-f]{4}-[0-9|A-F|a-f]{4}-[0-9|A-F|a-f]{12}[_]?.*[\.]?.*"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StrukturelementTypCodeType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="StrukturelementTypCodeType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von Typen von Strukturelementen."/>
     </eAnnotations>
@@ -3548,7 +3548,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TransportwegCodeType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="TransportwegCodeType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Der Datentyp zur Werteliste von Transportwegen unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes."/>
     </eAnnotations>

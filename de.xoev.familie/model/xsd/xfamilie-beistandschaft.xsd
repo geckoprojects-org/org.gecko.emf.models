@@ -1,0 +1,1311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:xfbss="http://www.xoev.de/xfamilie/beistandschaft/1.3.0"
+           xmlns:din91379="urn:xoev-de:kosit:xoev:datentyp:din-91379_2022-08"
+           xmlns:xfb="http://www.xoev.de/xfamilie/baukasten/1.3.0"
+           xmlns:xoev-code="http://xoev.de/schemata/code/1_0"
+           targetNamespace="http://www.xoev.de/xfamilie/beistandschaft/1.3.0"
+           version="1.3.0"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+   <xs:annotation>
+      <xs:appinfo>
+         <standard>
+            <nameLang>XFamilie</nameLang>
+            <nameKurz>XFamilie</nameKurz>
+            <nameTechnisch>xfamilie</nameTechnisch>
+            <kennung>urn:xoev-de:kosit:standard:xfamilie</kennung>
+            <beschreibung>Projektziel ist die elektronische Kommunikation im Familienbereich zwischen verschiedenen Behörden, Institutionen, Registern und Onlineportalen, die Daten untereinander austauschen, zu unterstützen. Der Nutzen des Projekts besteht in der Kostenreduktion und einer Verbesserung der Qualität von Daten für Familienleistungen, sowie einer Verbesserung der Interoperabilität von Akteuren im Familienbereich und weiteren Kommunikationspartner.</beschreibung>
+         </standard>
+         <versionStandard>
+            <version>1.3.0</version>
+            <beschreibung>Die Änderungshistorie befindet sich in Tabellenform nach Change Requests gegliedert in Kapitel E.</beschreibung>
+            <versionXOEVProfil>3.0.2</versionXOEVProfil>
+            <versionXOEVHandbuch>3.0.2</versionXOEVHandbuch>
+            <versionXGenerator>3.1.0</versionXGenerator>
+            <versionModellierungswerkzeug>19.0</versionModellierungswerkzeug>
+            <nameModellierungswerkzeug>MagicDraw</nameModellierungswerkzeug>
+         </versionStandard>
+      </xs:appinfo>
+   </xs:annotation>
+   <xs:import schemaLocation="din-norm-91379-datatypes.xsd"
+              namespace="urn:xoev-de:kosit:xoev:datentyp:din-91379_2022-08"/>
+   <xs:import schemaLocation="xfamilie-baukasten.xsd"
+              namespace="http://www.xoev.de/xfamilie/baukasten/1.3.0"/>
+   <xs:import schemaLocation="xoev-code.xsd"
+              namespace="http://xoev.de/schemata/code/1_0"/>
+   <xs:complexType name="AndererElternteilType">
+      <xs:sequence>
+         <xs:element name="angabenZumAnderenElternteil" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Können Sie Angaben zum anderen Elternteil machen? If true: Weitere Angaben in diesem Element optional auszufüllen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="namen" minOccurs="0" type="xfb:NameNatuerlichePersonType"/>
+         <xs:element name="geburtsdaten" minOccurs="0" type="xfbss:GeburtType">
+            <xs:annotation>
+               <xs:documentation>Das optionale Element Geburtsstaat wird hier nicht benötigt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="familienstand"
+                     minOccurs="0"
+                     type="xfb:Code.FamilienstandType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Familienstand: An dieser Stelle sind nur die Angaben ledig, verheiratet, geschieden, verwitwet, eingetragene Lebenspartnerschaft, aufgehobene Lebenspartnerschaft und durch Tod aufgelöste Partnerschaft zulässig.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="angabenZurAdresse" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Kennen Sie die Adresse des anderen Elternteils? If true: Adressfeld ausfüllen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="adresse"
+                     minOccurs="0"
+                     type="xfb:PostalischeInlandsanschrift.BasisType"/>
+         <xs:element name="erreichbarkeit"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ErreichbarkeitType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Erreichbarkeit des Elternteils.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anerkennungVaterschaft" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Wenn bei Anliegensklärung die Codes v oder vu ausgewählt wurden: Ist der potentielle Vater des Kindes bereit die Vaterschaft anzuerkennen?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="weitereAngabenzumAnderenElternteil"
+                     minOccurs="0"
+                     type="xfbss:WeitereAngabenZumAnderenElternteilType">
+            <xs:annotation>
+               <xs:documentation>Wenn bei der Anliegensklärung im Element anliegenBeistandschaft die Codes vu oder u enthalten sind, dann kann dieses Element optional befüllt werden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AngabenZumKindBeendigungType">
+      <xs:sequence>
+         <xs:element name="nameDesKindes"
+                     minOccurs="0"
+                     type="xfb:NameNatuerlichePersonType"/>
+         <xs:element name="geburtsdaten" minOccurs="0" type="xfb:GeburtType"/>
+         <xs:element name="anschriftStimmtMitAntragstellendemElternteilUeberein"
+                     type="xs:boolean"/>
+         <xs:element name="kindAdresse"
+                     minOccurs="0"
+                     type="xfb:PostalischeInlandsanschrift.BasisType"/>
+         <xs:element name="aktenzeichenVorgangsnummer"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Aktenzeichen oder Vorgangsnummer des Beistandschaft-Antrags.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AngabenZumKindType">
+      <xs:sequence>
+         <xs:element name="kindBereitsGeboren" type="xs:boolean"/>
+         <xs:element name="voraussichtlicherEntbindungstermin"
+                     minOccurs="0"
+                     type="xfb:TagesdatumType">
+            <xs:annotation>
+               <xs:documentation>Verpflichtende Angabe, wenn kindBereitsGeboren=false</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nameDesKindes"
+                     minOccurs="0"
+                     type="xfb:NameNatuerlichePersonOhneGeburtsnameType"/>
+         <xs:element name="geburtsdaten" minOccurs="0" type="xfb:GeburtType"/>
+         <xs:element name="geburtenregisternummer"
+                     minOccurs="0"
+                     type="din91379:datatypeC"/>
+         <xs:element name="kindWohnhaftBei"
+                     minOccurs="0"
+                     type="xfb:Code.KindWohnhaftBeiType"/>
+         <xs:element name="kindLebtBeiSonstige" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Wird zu einer Pflichtangabe, wenn kindLebtBei = Sonstiger Aufenthaltsort.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="ausbildungUndEinkuenfte"
+                     minOccurs="0"
+                     type="xfbss:AusbildungUndEinkuenfteType"/>
+         <xs:element name="weitereKinderImHaushalt"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xs:boolean"/>
+         <xs:element name="weitereKinder"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfbss:WeitereKinderType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AngabenZumUnterhaltType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum Unterhalt.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="angabenZumUnterhaltstitel"
+                     type="xfbss:Code.UnterhaltstitelBestehtType">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob ein Unterhaltstitel besteht.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="bemuehungUnterhaltszahlung" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob Bemühungen bzgl. Unterhalt erfolgten.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="bisherigeBemuehungen" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Angabe, in welcher Form die bisherigen Bemühungen stattfanden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="zahltBereits" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob der Unterhalt bereits gezahlt wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="hoeheZahlung" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Angabe, in welcher Höhe der Unterhalt gezahlt wurde.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="letzteZahlungAm" minOccurs="0" type="xfb:TagesdatumType">
+            <xs:annotation>
+               <xs:documentation>Angabe, an welchem Tag die letzte Zahlung erfolgte.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="regelmaessigeZahlung" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob regelmäßig eine Unterhaltszahlung stattfindet.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="angabenZurZahlung" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Weitere Angaben zur Zahlung.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geltendmachungUnterhaltsrueckstaende" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob Unterhaltsrückstände geltend gemacht wurden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="angabeUnterhaltsrueckstaende"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Angabe, in welcher Höhe die Unterhaltsrückstände geltend gemacht wurden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="freiwilligerVerzichtAufUnterhalt" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob ein freiwilliger Verzicht auf Unterhalt stattfindet.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="unterhaltVerzichtZeitraum"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>"Bitte geben Sie an, für welchen Zeitraum Sie auf Unterhalt verzichtet haben." Das Element soll eingeblendet werden, wenn freiwilligerVerzichtAufUnterhalt = true</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="zahlung" minOccurs="0" type="xfbss:Code.ZahlungsartBSSType">
+            <xs:annotation>
+               <xs:documentation>Angabe, in welcher Form die Zahlung des Unterhalts erfolgt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="bankverbindungZahlungJugendamt"
+                     minOccurs="0"
+                     type="xfb:BankverbindungType">
+            <xs:annotation>
+               <xs:documentation>Konto, auf das der Unterhalt gezahlt werden soll. Nur anzugeben, wenn bei zahlung die Zahlung über das Jugendamt erfolgen soll.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="bankverbindungDirektzahlung"
+                     minOccurs="0"
+                     type="xfb:BankverbindungType">
+            <xs:annotation>
+               <xs:documentation>Konto, auf das der Unterhalt gezahlt werden soll. Nur anzugeben, wenn bei zahlung eine Direktzahlung erfolgen soll.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AnliegensklaerungBSSType">
+      <xs:annotation>
+         <xs:documentation>Hier sind lediglich die Codes v, vu und u zu verwenden</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="anliegenBeistandschaft"
+                     type="xfbss:Code.AnliegenBeistandschaftType"/>
+         <xs:element name="vaterschaftAnerkannt" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Die Angabe, ob die Vaterschaft anerkannt wurde. Das Element vaterschaftAnerkannt ist nur zu befüllen, wenn für anliegenBeistandschaft u gewählt wurde.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="inhaberElterlicheSorge"
+                     minOccurs="0"
+                     type="xfbss:Code.InhaberElterlicheSorgeType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AntragstellenderElternteilBeendigungType">
+      <xs:sequence>
+         <xs:element name="namen" type="xfb:NameNatuerlichePersonType">
+            <xs:annotation>
+               <xs:documentation>Namen des beantragenden Elternteils.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburtsdaten" type="xfb:GeburtType">
+            <xs:annotation>
+               <xs:documentation>Geburtsdaten des beantragenden Elternteils.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="adresse" type="xfb:PostalischeInlandsanschrift.BasisType">
+            <xs:annotation>
+               <xs:documentation>Adresse des beantragenden Elternteils.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="abweichendeAdresse" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angaben, ob die Anschrift von der im Personalausweis angegebenen Anschrift abweicht. True: Optionales Element abweichendeAdressePerso befüllen</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="abweichendeAdressePerso"
+                     minOccurs="0"
+                     type="xfb:PostalischeInlandsanschrift.BasisType"/>
+         <xs:element name="abweichendeAdresseNachweis"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AntragstellenderElternteilType">
+      <xs:sequence>
+         <xs:element name="namen" type="xfb:NameNatuerlichePersonType"/>
+         <xs:element name="geburtsdaten" type="xfb:GeburtType">
+            <xs:annotation>
+               <xs:documentation>Das optionale Element Geburtsstaat wird hier nicht benötigt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="familienstand"
+                     minOccurs="0"
+                     type="xfb:Code.FamilienstandType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Familienstand: An dieser Stelle sind nur die Angaben ledig, verheiratet, geschieden, verwitwet, eingetragene Lebenspartnerschaft, aufgehobene Lebenspartnerschaft und durch Tod aufgelöste Partnerschaft zulässig.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="adresse" type="xfb:PostalischeInlandsanschrift.BasisType"/>
+         <xs:element name="abweichendeAdresse" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, dass die Anschrift von der im Personalausweis angegebenen Anschrift abweicht.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="abweichendeAdressePerso"
+                     minOccurs="0"
+                     type="xfb:PostalischeInlandsanschrift.BasisType"/>
+         <xs:element name="erreichbarkeit"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ErreichbarkeitType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Erreichbarkeit des Elternteils.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="oeffentlicheLeistungen"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfbss:Code.BezugOeffentlicherLeistungenType">
+            <xs:annotation>
+               <xs:documentation>Das Element vaterschaftAnerkannt ist nur zu befüllen, wenn für anliegenBeistandschaft u oder vu gewählt wurde. Wenn hier "Sonstige Leistungen" ausgewählt wurde, ist das Ausfüllen des Elements sonstigeLeistungenBeschreibung mandatorisch.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="sonstigeLeistungenBeschreibung"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Nur zu befüllen, wenn im optionalen Element oeffentlicheLeistungen "Sonstige Leistungen" ausgewählt wurde.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AusbildungUndEinkuenfteType">
+      <xs:sequence>
+         <xs:element name="kindInAusbildung" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob Kind in Ausbildung ist.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="ausbildungsjahr" minOccurs="0" type="xs:nonNegativeInteger">
+            <xs:annotation>
+               <xs:documentation>Verpflichtende Angabe, wenn kindInAusbildung = true.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkuenfteKind" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Hat Ihr Kind Einnahmen aus Vermögen (z. B. Miete, Pacht, Zinsen) oder sonstige Einkünfte?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkuenfteArt" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>"einkuenfteArt" wird nur dann eingeblendet, wenn "einkuenfteKind" = true</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kindergeld" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob Kindergeld bezogen wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Code.AnliegenBeistandschaftType">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>AnliegenBeistandschaft</nameLang>
+               <nameKurz>AnliegenBeistandschaft</nameKurz>
+               <nameTechnisch>anliegenbeistandschaft</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:anliegenbeistandschaft</kennung>
+               <beschreibung>Die Art der Anliegen für Beistandschaft.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>Gibt die Arten der Anliegen für Beistandsschaft an. </beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+            <genutzteCodeSpalte>code</genutzteCodeSpalte>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:restriction base="xoev-code:Code">
+            <xs:sequence>
+               <xs:element name="code" form="unqualified" type="xfbss:anliegenbeistandschaft"/>
+            </xs:sequence>
+            <xs:attribute name="listURI"
+                          type="xs:anyURI"
+                          use="optional"
+                          fixed="urn:xoev-de:xfamilie:codeliste:anliegenbeistandschaft"/>
+            <xs:attribute name="listVersionID"
+                          type="xs:normalizedString"
+                          use="optional"
+                          fixed="1.0"/>
+         </xs:restriction>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="Code.BezugOeffentlicherLeistungenType">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>BezugOeffentlicherLeistungen</nameLang>
+               <nameKurz>BezugOeffentlicherLeistungen</nameKurz>
+               <nameTechnisch>bezugoeffentlicherleistungen</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:bezugoeffentlicherleistungen</kennung>
+               <beschreibung>Die Liste gibt an, welche öffentlichen Leistungen von der betroffenen Person erhaten werden.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+            <genutzteCodeSpalte>code</genutzteCodeSpalte>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:restriction base="xoev-code:Code">
+            <xs:sequence>
+               <xs:element name="code"
+                           form="unqualified"
+                           type="xfbss:bezugoeffentlicherleistungen"/>
+            </xs:sequence>
+            <xs:attribute name="listURI"
+                          type="xs:anyURI"
+                          use="optional"
+                          fixed="urn:xoev-de:xfamilie:codeliste:bezugoeffentlicherleistungen"/>
+            <xs:attribute name="listVersionID"
+                          type="xs:normalizedString"
+                          use="optional"
+                          fixed="1.0"/>
+         </xs:restriction>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="Code.EinkommenAndererElternteilType">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>EinkommenAndererElternteil</nameLang>
+               <nameKurz>EinkommenAndererElternteil</nameKurz>
+               <nameTechnisch>einkommenandererelternteil</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:einkommenandererelternteil</kennung>
+               <beschreibung>Die Liste codiert die Einkommensarten des anderen Elternteils im Antrag zur Beistandschaft.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>2.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2025-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+            <genutzteCodeSpalte>code</genutzteCodeSpalte>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:restriction base="xoev-code:Code">
+            <xs:sequence>
+               <xs:element name="code"
+                           form="unqualified"
+                           type="xfbss:einkommenandererelternteil"/>
+            </xs:sequence>
+            <xs:attribute name="listURI"
+                          type="xs:anyURI"
+                          use="optional"
+                          fixed="urn:xoev-de:xfamilie:codeliste:einkommenandererelternteil"/>
+            <xs:attribute name="listVersionID"
+                          type="xs:normalizedString"
+                          use="optional"
+                          fixed="2.0"/>
+         </xs:restriction>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="Code.InhaberElterlicheSorgeType">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>InhaberElterlicheSorge</nameLang>
+               <nameKurz>InhaberElterlicheSorge</nameKurz>
+               <nameTechnisch>inhaberelterlichesorge</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:inhaberelterlichesorge</kennung>
+               <beschreibung>Die Liste gibt an, bei welcher Person die elterliche Sorge liegt.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+            <genutzteCodeSpalte>code</genutzteCodeSpalte>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:restriction base="xoev-code:Code">
+            <xs:sequence>
+               <xs:element name="code" form="unqualified" type="xfbss:inhaberelterlichesorge"/>
+            </xs:sequence>
+            <xs:attribute name="listURI"
+                          type="xs:anyURI"
+                          use="optional"
+                          fixed="urn:xoev-de:xfamilie:codeliste:inhaberelterlichesorge"/>
+            <xs:attribute name="listVersionID"
+                          type="xs:normalizedString"
+                          use="optional"
+                          fixed="1.0"/>
+         </xs:restriction>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="Code.UnterhaltstitelBestehtType">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>UnterhaltstitelBesteht</nameLang>
+               <nameKurz>UnterhaltstitelBesteht</nameKurz>
+               <nameTechnisch>unterhaltstitelbesteht</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:unterhaltstitelbesteht</kennung>
+               <beschreibung>Die Liste codiert, ob bereits ein Unterhaltstitel besteht.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+            <genutzteCodeSpalte>code</genutzteCodeSpalte>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:restriction base="xoev-code:Code">
+            <xs:sequence>
+               <xs:element name="code" form="unqualified" type="xfbss:unterhaltstitelbesteht"/>
+            </xs:sequence>
+            <xs:attribute name="listURI"
+                          type="xs:anyURI"
+                          use="optional"
+                          fixed="urn:xoev-de:xfamilie:codeliste:unterhaltstitelbesteht"/>
+            <xs:attribute name="listVersionID"
+                          type="xs:normalizedString"
+                          use="optional"
+                          fixed="1.0"/>
+         </xs:restriction>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="Code.ZahlungsartBSSType">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>ZahlungsartBSS</nameLang>
+               <nameKurz>ZahlungsartBSS</nameKurz>
+               <nameTechnisch>zahlungsartbss</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:zahlungsartbss</kennung>
+               <beschreibung>Die Liste codiert, wie eine Unterhaltszahlung geregelt sein soll.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+            <genutzteCodeSpalte>code</genutzteCodeSpalte>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:restriction base="xoev-code:Code">
+            <xs:sequence>
+               <xs:element name="code" form="unqualified" type="xfbss:zahlungsartbss"/>
+            </xs:sequence>
+            <xs:attribute name="listURI"
+                          type="xs:anyURI"
+                          use="optional"
+                          fixed="urn:xoev-de:xfamilie:codeliste:zahlungsartbss"/>
+            <xs:attribute name="listVersionID"
+                          type="xs:normalizedString"
+                          use="optional"
+                          fixed="1.0"/>
+         </xs:restriction>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="GeburtType">
+      <xs:annotation>
+         <xs:documentation>Mit diesem Datentyp werden die Geburtsinformationen einer Person abgebildet. Dabei ist es erlaubt, unvollständige Angaben zum Geburtstag zu machen, sofern dieser nicht vollständig bekannt ist. Regel: Das Geburtsdatum, Geburtsort und -staat müssen vollständig angegeben werden</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="geburtsort" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Mit diesem Element ist der Geburtsort der Person zu übermitteln.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburtsortStaat" minOccurs="0" type="xfb:Code.StaatType">
+            <xs:annotation>
+               <xs:appinfo>
+                  <implementationHint>Deutschland wird immer durch Weglassen dieses Elementes abgebildet.</implementationHint>
+               </xs:appinfo>
+               <xs:documentation>Mit diesem Element wird der Geburtsstaat der Person übermittelt.Eine Angabe in diesem Feld erfolgt nur bei nicht in der Bundesrepublik Deutschland geborenen Personen. In diesen Fällen ist das Staatsgebiet anzugeben, in dem der Einwohner geboren ist. Die Erfassung des Ersatzwertes 994 für von/nach See ist nicht zulässig.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburtsdatum" minOccurs="0" type="xfb:TeilbekanntesDatumType">
+            <xs:annotation>
+               <xs:documentation>Mit diesem Element wird das Geburtsdatum übermittelt. Sofern das vollständige Geburtsdatum vorliegt, ist das Element jahrMonatTag zu befüllen, sofern die Tagesangabe fehlt, das Element jahrMonat, sofern die Tagesangabe und die Monatsangabe fehlen, das Element jahr und sofern alle Angaben zum Geburtsdatum fehlen, das Element unbekannt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="NachweisType">
+      <xs:sequence>
+         <xs:element name="nachweisBeschreibung" minOccurs="0" type="din91379:datatypeC"/>
+         <xs:element name="nachweisDokument"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="NachweiseBSSType">
+      <xs:sequence>
+         <xs:element name="sorgerechtsnachweis"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Nachweise zur Geburt des Kindes.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="identitaetsnachweis"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Nachweise zur Meldebestätigung. Nur anzugeben, wenn die Anschriften der Beteiligten voneinander abweichen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="weitereNachweise"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu weiteren Nachweisen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisMeldebescheinigung"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Wenn die Meldeadresse von der eingegeben Adresse mittels BundID abweicht, ist ein Nachweis in Form einer Meldebescheinigung hochzuladen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anmerkungen" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Sonstige Anmerkungen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="dsgvo" type="xfb:DatenschutzerklaerungenType">
+            <xs:annotation>
+               <xs:documentation>Bestätigung zur Datenschutzerklärung des Dienst-betreibenden Landes sowie zur spezifischen Datenschutzerklärung des nachnutzenden Landes oder der nachnutzenden Kommune.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="WeitereAngabenZumAnderenElternteilType">
+      <xs:annotation>
+         <xs:documentation>Sonstige Angaben zum anderen Elternteil.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="berufausausbildung" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob Informationen zu der Berufsausbildung des anderen Elternteils vorliegen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="angabenBerufsausbildung"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Berufsausbildung des anderen Elternteils, sofern dies im Element berufsausbildung bejaht wurde.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkommensverhaeltnisse" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob Informationen zu den Einkommensverhältnissen des anderen Elternteils vorliegen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nettoeinkommen" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Angabe zum Nettoeinkommen des anderen Elternteils, sofern bestätigt wurde, dass Informationen zu den Einkommensverhältnissen vorliegen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkommen"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfbss:Code.EinkommenAndererElternteilType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Einkommen des anderen Elternteils.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="weitereKinder" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angaben zu weiteren Kindern des anderen Elternteils.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="weitereKinderImHaushalt" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob weitere Kinder zum anderen Elternteil vorhanden sind.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="weitereKinderAngaben"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfbss:WeitereKinderType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu den weiteren Kindern, sofern welche vorhanden sind.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="WeitereKinderType">
+      <xs:sequence>
+         <xs:element name="name"
+                     minOccurs="0"
+                     type="xfb:NameNatuerlichePersonOhneGeburtsnameType"/>
+         <xs:element name="geburtsdatum" minOccurs="0" type="xfb:TagesdatumType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType name="anliegenbeistandschaft">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>AnliegenBeistandschaft</nameLang>
+               <nameKurz>AnliegenBeistandschaft</nameKurz>
+               <nameTechnisch>anliegenbeistandschaft</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:anliegenbeistandschaft</kennung>
+               <beschreibung>Die Art der Anliegen für Beistandschaft.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>Gibt die Arten der Anliegen für Beistandsschaft an. </beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="b">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Beratung</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="u">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Unterhaltsansprüche des Kindes durchsetzen</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="v">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Vaterschaft des Kindes feststellen</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="vu">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Vaterschaft des Kindes feststellen lassen und Unterhaltsansprüche des Kindes durchsetzen.</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="bezugoeffentlicherleistungen">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>BezugOeffentlicherLeistungen</nameLang>
+               <nameKurz>BezugOeffentlicherLeistungen</nameKurz>
+               <nameTechnisch>bezugoeffentlicherleistungen</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:bezugoeffentlicherleistungen</kennung>
+               <beschreibung>Die Liste gibt an, welche öffentlichen Leistungen von der betroffenen Person erhaten werden.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="01">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Bezug von Sozialhilfe (SGB XII)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="02">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Bezug von Arbeitslosengeld II (SBG II)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="03">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Bezug von Unterhaltsvorschuss</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="04">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Bezug Sonstiger Leistungen</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="einkommenandererelternteil">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>EinkommenAndererElternteil</nameLang>
+               <nameKurz>EinkommenAndererElternteil</nameKurz>
+               <nameTechnisch>einkommenandererelternteil</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:einkommenandererelternteil</kennung>
+               <beschreibung>Die Liste codiert die Einkommensarten des anderen Elternteils im Antrag zur Beistandschaft.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>2.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2025-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="01">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Erwerbstätigkeit</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="02">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Arbeitslosengeld I/Bürgergeld</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="03">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Arbeitslosengeld II (SGB II)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="04">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Rente</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="05">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Sozialhilfe (SGB XII)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="06">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Vermögen</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="07">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Einkünfte aus Vermietung und Verpachtung (Paragraf21 EStG)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="inhaberelterlichesorge">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>InhaberElterlicheSorge</nameLang>
+               <nameKurz>InhaberElterlicheSorge</nameKurz>
+               <nameTechnisch>inhaberelterlichesorge</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:inhaberelterlichesorge</kennung>
+               <beschreibung>Die Liste gibt an, bei welcher Person die elterliche Sorge liegt.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="01">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Ich bin alleinige(r) Inhaber(in) der elterlichen Sorge</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="02">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Es besteht gemeinsame elterliche Sorge. Das Kind befindet sich in meiner Obhut</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="03">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Ich bin nach Paragraf 1776 BGB berufender Vormund des Kindes</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="unterhaltstitelbesteht">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>UnterhaltstitelBesteht</nameLang>
+               <nameKurz>UnterhaltstitelBesteht</nameKurz>
+               <nameTechnisch>unterhaltstitelbesteht</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:unterhaltstitelbesteht</kennung>
+               <beschreibung>Die Liste codiert, ob bereits ein Unterhaltstitel besteht.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="01">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Ja</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="02">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Nein</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="03">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Ich bin mir nicht sicher</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="zahlungsartbss">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>ZahlungsartBSS</nameLang>
+               <nameKurz>ZahlungsartBSS</nameKurz>
+               <nameTechnisch>zahlungsartbss</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:zahlungsartbss</kennung>
+               <beschreibung>Die Liste codiert, wie eine Unterhaltszahlung geregelt sein soll.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="01">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Zahlung an Jugendamt</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="02">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Direktzahlung</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:element name="beistandschaft.antrag.0601">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage/>
+         </xs:appinfo>
+         <xs:documentation>Mit dieser Nachricht werden die Daten zum Antrag einer Beistandschaft strukturiert von einem Portal an die zuständigen Jugendämter versendet.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:AntragsnachrichtType">
+               <xs:sequence>
+                  <xs:element name="anliegensklaerung" type="xfbss:AnliegensklaerungBSSType">
+                     <xs:annotation>
+                        <xs:documentation>In diesem Element wird geklärt, um welches Anliegen es im Antrag geht.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="antragstellenderElternteil"
+                              type="xfbss:AntragstellenderElternteilType">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zum antragstellenden Elternteil</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="angabenZumKind" type="xfbss:AngabenZumKindType">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zum Kind.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="angabenZumAnderenElternteil"
+                              minOccurs="0"
+                              type="xfbss:AndererElternteilType">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zum anderen Elternteil.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="angabenZumUnterhalt"
+                              minOccurs="0"
+                              type="xfbss:AngabenZumUnterhaltType">
+                     <xs:annotation>
+                        <xs:documentation>Die Angaben zum Unterhalt. Das Element ist nur zu befüllen, wenn für anliegenBeistandschaft u oder vu gewählt wurde.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="nachweise" minOccurs="0" type="xfbss:NachweiseBSSType"/>
+                  <xs:element name="wartenAufUnterschrift" type="xs:boolean">
+                     <xs:annotation>
+                        <xs:documentation>Angabe, ob noch auf Unterschrit gewartet werden muss.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="dsgvo" type="xfb:DatenschutzerklaerungenType">
+                     <xs:annotation>
+                        <xs:documentation>Angabe, ob noch auf Unterschrit gewartet werden muss.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="richtigkeitDerAngaben" type="xs:boolean"/>
+                  <xs:element name="pdfAntrag" minOccurs="0" type="xfb:NachweisdokumentType">
+                     <xs:annotation>
+                        <xs:documentation>Mit diesem Element ist es möglich, den Antrag im PDF anzuhängen.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="merkblattUVG" minOccurs="0" type="xs:boolean">
+                     <xs:annotation>
+                        <xs:documentation>Dokumentiert die Kenntnisnahme und Bestätigung des UVG Merkblatts.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="beistandschaft.beendigung.0604">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage/>
+         </xs:appinfo>
+         <xs:documentation>Mit dieser Nachricht werden die Daten zur Beendigung einer Beistandschaft strukturiert von einem Portal an die zuständigen Jugendämter versendet.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:AntragsnachrichtType">
+               <xs:sequence>
+                  <xs:element name="antragstellenderElternteilBeendigung"
+                              type="xfbss:AntragstellenderElternteilBeendigungType"/>
+                  <xs:element name="angabenZumKindBeendigung"
+                              maxOccurs="10"
+                              type="xfbss:AngabenZumKindBeendigungType"/>
+                  <xs:element name="beendigungBestaetigung" type="xs:boolean"/>
+                  <xs:element name="dsgvo" type="xfb:DatenschutzerklaerungenType">
+                     <xs:annotation>
+                        <xs:documentation>Bestätigung zur Datenschutzerklärung des Dienst-betreibenden Landes sowie zur spezifischen Datenschutzerklärung des nachnutzenden Landes oder der nachnutzenden Kommune.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="richtigkeitDerAngaben" type="xs:boolean"/>
+                  <xs:element name="wartenAufUnterschrift" type="xs:boolean">
+                     <xs:annotation>
+                        <xs:documentation>Angabe, ob noch auf Unterschrit gewartet werden muss.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>

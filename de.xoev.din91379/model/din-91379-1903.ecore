@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="din91379" nsURI="urn:xoev-de:kosit:xoev:datentyp:din-spec-91379_2019-03"
+    nsPrefix="din91379">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="Diese Schema-Datei enthält die technische Repräsentation der in der DIN SPEC 91379 definierten Datentypen."/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EDataType" name="DatatypeA" instanceClassName="java.lang.String">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Der Datentyp A gibt wieder, welche Schriftzeichen in hoheitlichen Dokumenten für Namen natürlicher Personen verwendet werden."/>
+    </eAnnotations>
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;datentyp>&#xA;                   &#xA;    &lt;nameLang>Datentyp A&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>Datentyp A&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>datatypeA&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:kosit:xoev:datentyp:din-spec-91379.datatypeA&lt;/kennung>&#xA;                   &#xA;    &lt;externeWebsite>https://www.din.de/de/wdc-beuth:din21:301228458&lt;/externeWebsite>&#xA;                &#xA;  &lt;/datentyp>&#xA;              &#xA;  &lt;versionDatentyp>&#xA;                   &#xA;    &lt;version>2019-03&lt;/version>&#xA;                   &#xA;    &lt;lizenz>Creative Commons Namensnennung - Keine Bearbeitung 4.0 International&lt;/lizenz>&#xA;                   &#xA;    &lt;bezugsort>http://www.xoev.de/de/bibliothek&lt;/bezugsort>&#xA;                &#xA;  &lt;/versionDatentyp>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="datatypeA"/>
+      <details key="baseType" value="http://www.eclipse.org/emf/2003/XMLType#string"/>
+      <details key="pattern" value="(%20|'|[,-\.]|[A-Z]|[`-z]|~|¨|´|·|[À-Ö]|[Ø-ö]|[ø-ž]|[Ƈ-ƈ]|Ə|Ɨ|[Ơ-ơ]|[Ư-ư]|Ʒ|[Ǎ-ǜ]|[Ǟ-ǟ]|[Ǣ-ǰ]|[Ǵ-ǵ]|[Ǹ-ǿ]|[Ȓ-ȓ]|[Ș-ț]|[Ȟ-ȟ]|[ȧ-ȳ]|ə|ɨ|ʒ|[ʹ-ʺ]|[ʾ-ʿ]|ˈ|ˌ|[Ḃ-ḃ]|[Ḇ-ḇ]|[Ḋ-ḑ]|[Ḝ-ḫ]|[ḯ-ḷ]|[Ḻ-ḻ]|[Ṁ-ṉ]|[Ṓ-ṛ]|[Ṟ-ṣ]|[Ṫ-ṯ]|[Ẁ-ẇ]|[Ẍ-ẗ]|ẞ|[Ạ-ỹ]|’|‡|A̋|C(̀|̄|̆|̈|̕|̣|̦|̨̆)|D̂|F(̀|̄)|G̀|H(̄|̦|̱)|J(́|̌)|K(̀|̂|̄|̇|̕|̛|̦|͟H|͟h)|L(̂|̥|̥̄|̦)|M(̀|̂|̆|̐)|N(̂|̄|̆|̦)|P(̀|̄|̕|̣)|R(̆|̥|̥̄)|S(̀|̄|̛̄|̱)|T(̀|̄|̈|̕|̛)|U̇|Z(̀|̄|̆|̈|̧)|a̋|c(̀|̄|̆|̈|̕|̣|̦|̨̆)|d̂|f(̀|̄)|g̀|h(̄|̦)|j́|k(̀|̂|̄|̇|̕|̛|̦|͟h)|l(̂|̥|̥̄|̦)|m(̀|̂|̆|̐)|n(̂|̄|̆|̦)|p(̀|̄|̕|̣)|r(̆|̥|̥̄)|s(̀|̄|̛̄|̱)|t(̀|̄|̕|̛)|u̇|z(̀|̄|̆|̈|̧)|Ç̆|Û̄|ç̆|û̄|ÿ́|Č(̕|̣)|č(̕|̣)|Ī́|ī́|Ž(̦|̧)|ž(̦|̧)|Ḳ̄|ḳ̄|Ṣ̄|ṣ̄|Ṭ̄|ṭ̄|Ạ̈|ạ̈|Ọ̈|ọ̈|Ụ(̄|̈)|ụ(̄|̈))*"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="DatatypeB" instanceClassName="java.lang.String">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Der Datentyp B wurde vor allem für sonstige Namen, wie z. B. Ortsnamen und Straßennamen mit Hausnummer, entworfen."/>
+    </eAnnotations>
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;datentyp>&#xA;                   &#xA;    &lt;nameLang>Datentyp B&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>Datentyp B&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>datatypeB&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:kosit:xoev:datentyp:din-spec-91379.datatypeB&lt;/kennung>&#xA;                   &#xA;    &lt;externeWebsite>https://www.din.de/de/wdc-beuth:din21:301228458&lt;/externeWebsite>&#xA;                &#xA;  &lt;/datentyp>&#xA;              &#xA;  &lt;versionDatentyp>&#xA;                   &#xA;    &lt;version>2019-03&lt;/version>&#xA;                   &#xA;    &lt;lizenz>Creative Commons Namensnennung - Keine Bearbeitung 4.0 International&lt;/lizenz>&#xA;                   &#xA;    &lt;bezugsort>http://www.xoev.de/de/bibliothek&lt;/bezugsort>&#xA;                &#xA;  &lt;/versionDatentyp>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="datatypeB"/>
+      <details key="baseType" value="http://www.eclipse.org/emf/2003/XMLType#string"/>
+      <details key="pattern" value="([%20-~]|[¡-£]|¥|[§-¬]|[®-·]|[¹-»]|[¿-ž]|[Ƈ-ƈ]|Ə|Ɨ|[Ơ-ơ]|[Ư-ư]|Ʒ|[Ǎ-ǜ]|[Ǟ-ǟ]|[Ǣ-ǰ]|[Ǵ-ǵ]|[Ǹ-ǿ]|[Ȓ-ȓ]|[Ș-ț]|[Ȟ-ȟ]|[ȧ-ȳ]|ə|ɨ|ʒ|[ʹ-ʺ]|[ʾ-ʿ]|ˈ|ˌ|[Ḃ-ḃ]|[Ḇ-ḇ]|[Ḋ-ḑ]|[Ḝ-ḫ]|[ḯ-ḷ]|[Ḻ-ḻ]|[Ṁ-ṉ]|[Ṓ-ṛ]|[Ṟ-ṣ]|[Ṫ-ṯ]|[Ẁ-ẇ]|[Ẍ-ẗ]|ẞ|[Ạ-ỹ]|’|‡|€|A̋|C(̀|̄|̆|̈|̕|̣|̦|̨̆)|D̂|F(̀|̄)|G̀|H(̄|̦|̱)|J(́|̌)|K(̀|̂|̄|̇|̕|̛|̦|͟H|͟h)|L(̂|̥|̥̄|̦)|M(̀|̂|̆|̐)|N(̂|̄|̆|̦)|P(̀|̄|̕|̣)|R(̆|̥|̥̄)|S(̀|̄|̛̄|̱)|T(̀|̄|̈|̕|̛)|U̇|Z(̀|̄|̆|̈|̧)|a̋|c(̀|̄|̆|̈|̕|̣|̦|̨̆)|d̂|f(̀|̄)|g̀|h(̄|̦)|j́|k(̀|̂|̄|̇|̕|̛|̦|͟h)|l(̂|̥|̥̄|̦)|m(̀|̂|̆|̐)|n(̂|̄|̆|̦)|p(̀|̄|̕|̣)|r(̆|̥|̥̄)|s(̀|̄|̛̄|̱)|t(̀|̄|̕|̛)|u̇|z(̀|̄|̆|̈|̧)|Ç̆|Û̄|ç̆|û̄|ÿ́|Č(̕|̣)|č(̕|̣)|Ī́|ī́|Ž(̦|̧)|ž(̦|̧)|Ḳ̄|ḳ̄|Ṣ̄|ṣ̄|Ṭ̄|ṭ̄|Ạ̈|ạ̈|Ọ̈|ọ̈|Ụ(̄|̈)|ụ(̄|̈))*"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="DatatypeC" instanceClassName="java.lang.String">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Der Datentyp C wurde für alle normativen Schriftzeichen der DIN SPEC entworfen. Er ist somit die technische Umsetzung der Schnittstellenvereinbarung Alle nach DIN SPEC 91379 normativen Schriftzeichen. Texte mit griechischen oder kyrillischen Buchstaben oder mit erweiterten (nicht-normativen) Nicht-Buchstaben sind unzulässig."/>
+    </eAnnotations>
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;datentyp>&#xA;                   &#xA;    &lt;nameLang>Datentyp C&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>Datentyp C&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>datatypeC&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:kosit:xoev:datentyp:din-spec-91379.datatypeC&lt;/kennung>&#xA;                   &#xA;    &lt;externeWebsite>https://www.din.de/de/wdc-beuth:din21:301228458&lt;/externeWebsite>&#xA;                &#xA;  &lt;/datentyp>&#xA;              &#xA;  &lt;versionDatentyp>&#xA;                   &#xA;    &lt;version>2019-03&lt;/version>&#xA;                   &#xA;    &lt;lizenz>Creative Commons Namensnennung - Keine Bearbeitung 4.0 International&lt;/lizenz>&#xA;                   &#xA;    &lt;bezugsort>http://www.xoev.de/de/bibliothek&lt;/bezugsort>&#xA;                &#xA;  &lt;/versionDatentyp>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="datatypeC"/>
+      <details key="baseType" value="http://www.eclipse.org/emf/2003/XMLType#string"/>
+      <details key="pattern" value="([&#x9;-&#xA;]|&#xD;|[%20-~]|[ -¬]|[®-ž]|[Ƈ-ƈ]|Ə|Ɨ|[Ơ-ơ]|[Ư-ư]|Ʒ|[Ǎ-ǜ]|[Ǟ-ǟ]|[Ǣ-ǰ]|[Ǵ-ǵ]|[Ǹ-ǿ]|[Ȓ-ȓ]|[Ș-ț]|[Ȟ-ȟ]|[ȧ-ȳ]|ə|ɨ|ʒ|[ʹ-ʺ]|[ʾ-ʿ]|ˈ|ˌ|[Ḃ-ḃ]|[Ḇ-ḇ]|[Ḋ-ḑ]|[Ḝ-ḫ]|[ḯ-ḷ]|[Ḻ-ḻ]|[Ṁ-ṉ]|[Ṓ-ṛ]|[Ṟ-ṣ]|[Ṫ-ṯ]|[Ẁ-ẇ]|[Ẍ-ẗ]|ẞ|[Ạ-ỹ]|’|‡|€|A̋|C(̀|̄|̆|̈|̕|̣|̦|̨̆)|D̂|F(̀|̄)|G̀|H(̄|̦|̱)|J(́|̌)|K(̀|̂|̄|̇|̕|̛|̦|͟H|͟h)|L(̂|̥|̥̄|̦)|M(̀|̂|̆|̐)|N(̂|̄|̆|̦)|P(̀|̄|̕|̣)|R(̆|̥|̥̄)|S(̀|̄|̛̄|̱)|T(̀|̄|̈|̕|̛)|U̇|Z(̀|̄|̆|̈|̧)|a̋|c(̀|̄|̆|̈|̕|̣|̦|̨̆)|d̂|f(̀|̄)|g̀|h(̄|̦)|j́|k(̀|̂|̄|̇|̕|̛|̦|͟h)|l(̂|̥|̥̄|̦)|m(̀|̂|̆|̐)|n(̂|̄|̆|̦)|p(̀|̄|̕|̣)|r(̆|̥|̥̄)|s(̀|̄|̛̄|̱)|t(̀|̄|̕|̛)|u̇|z(̀|̄|̆|̈|̧)|Ç̆|Û̄|ç̆|û̄|ÿ́|Č(̕|̣)|č(̕|̣)|Ī́|ī́|Ž(̦|̧)|ž(̦|̧)|Ḳ̄|ḳ̄|Ṣ̄|ṣ̄|Ṭ̄|ṭ̄|Ạ̈|ạ̈|Ọ̈|ọ̈|Ụ(̄|̈)|ụ(̄|̈))*"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="DatatypeD" instanceClassName="java.lang.String">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Der Datentyp D wurde vor allem für Namen juristischer Personen und für Produktnamen entworfen."/>
+    </eAnnotations>
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;datentyp>&#xA;                   &#xA;    &lt;nameLang>Datentyp D&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>Datentyp D&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>datatypeD&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:kosit:xoev:datentyp:din-spec-91379.datatypeD&lt;/kennung>&#xA;                   &#xA;    &lt;externeWebsite>https://www.din.de/de/wdc-beuth:din21:301228458&lt;/externeWebsite>&#xA;                &#xA;  &lt;/datentyp>&#xA;              &#xA;  &lt;versionDatentyp>&#xA;                   &#xA;    &lt;version>2019-03&lt;/version>&#xA;                   &#xA;    &lt;lizenz>Creative Commons Namensnennung - Keine Bearbeitung 4.0 International&lt;/lizenz>&#xA;                   &#xA;    &lt;bezugsort>http://www.xoev.de/de/bibliothek&lt;/bezugsort>&#xA;                &#xA;  &lt;/versionDatentyp>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="datatypeD"/>
+      <details key="baseType" value="http://www.eclipse.org/emf/2003/XMLType#string"/>
+      <details key="pattern" value="([%20-~]|[¡-¬]|[®-ž]|[Ƈ-ƈ]|Ə|ƒ|Ɨ|[Ơ-ơ]|[Ư-ư]|Ʒ|[Ǎ-ǜ]|[Ǟ-ǟ]|[Ǣ-ǰ]|[Ǵ-ǵ]|[Ǹ-ǿ]|[Ȓ-ȓ]|[Ș-ț]|[Ȟ-ȟ]|[ȧ-ȳ]|ə|ɨ|ʒ|ʰ|ʳ|[ʹ-ʺ]|[ʾ-ʿ]|ˆ|ˈ|ˌ|˜|ˢ|Ά|[Έ-Ί]|Ό|[Ύ-Ρ]|[Σ-ώ]|ᵈ|ᵗ|[Ḃ-ḃ]|[Ḇ-ḇ]|[Ḋ-ḑ]|[Ḝ-ḫ]|[ḯ-ḷ]|[Ḻ-ḻ]|[Ṁ-ṉ]|[Ṓ-ṛ]|[Ṟ-ṣ]|[Ṫ-ṯ]|[Ẁ-ẇ]|[Ẍ-ẗ]|ẞ|[Ạ-ỹ]|[‘-‚]|[“-„]|[†-‡]|…|‰|[‹-›]|⁰|[⁴-⁹]|[ⁿ-₉]|€|™|∞|[≤-≥]|A̋|C(̀|̄|̆|̈|̕|̣|̦|̨̆)|D̂|F(̀|̄)|G̀|H(̄|̦|̱)|J(́|̌)|K(̀|̂|̄|̇|̕|̛|̦|͟H|͟h)|L(̂|̥|̥̄|̦)|M(̀|̂|̆|̐)|N(̂|̄|̆|̦)|P(̀|̄|̕|̣)|R(̆|̥|̥̄)|S(̀|̄|̛̄|̱)|T(̀|̄|̈|̕|̛)|U̇|Z(̀|̄|̆|̈|̧)|a̋|c(̀|̄|̆|̈|̕|̣|̦|̨̆)|d̂|f(̀|̄)|g̀|h(̄|̦)|j́|k(̀|̂|̄|̇|̕|̛|̦|͟h)|l(̂|̥|̥̄|̦)|m(̀|̂|̆|̐)|n(̂|̄|̆|̦)|p(̀|̄|̕|̣)|r(̆|̥|̥̄)|s(̀|̄|̛̄|̱)|t(̀|̄|̕|̛)|u̇|z(̀|̄|̆|̈|̧)|Ç̆|Û̄|ç̆|û̄|ÿ́|Č(̕|̣)|č(̕|̣)|Ī́|ī́|Ž(̦|̧)|ž(̦|̧)|Ḳ̄|ḳ̄|Ṣ̄|ṣ̄|Ṭ̄|ṭ̄|Ạ̈|ạ̈|Ọ̈|ọ̈|Ụ(̄|̈)|ụ(̄|̈))*"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="DatatypeE" instanceClassName="java.lang.String">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Der Datentyp E wurde für alle normativen und erweiterten Schriftzeichen der DIN SPEC entworfen. Ein Einsatzgebiet dieses Datentyps kann der grenzüberschreitende Datenaustausch sein, wenn auch griechische und kyrillische Buchstaben benötigt werden. Er ist somit die technische Umsetzung der Schnittstellenvereinbarung Alle nach DIN SPEC 91379 normativen und nicht-normativen Schriftzeichen. Texte mit Buchstaben oder Nicht-Buchstaben, die in der DIN SPEC nicht enthalten sind, wie z. B. asiatische oder arabische Buchstaben, sind unzulässig."/>
+    </eAnnotations>
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;datentyp>&#xA;                   &#xA;    &lt;nameLang>Datentyp E&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>Datentyp E&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>datatypeE&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:kosit:xoev:datentyp:din-spec-91379.datatypeE&lt;/kennung>&#xA;                   &#xA;    &lt;externeWebsite>https://www.din.de/de/wdc-beuth:din21:301228458&lt;/externeWebsite>&#xA;                &#xA;  &lt;/datentyp>&#xA;              &#xA;  &lt;versionDatentyp>&#xA;                   &#xA;    &lt;version>2019-03&lt;/version>&#xA;                   &#xA;    &lt;lizenz>Creative Commons Namensnennung - Keine Bearbeitung 4.0 International&lt;/lizenz>&#xA;                   &#xA;    &lt;bezugsort>http://www.xoev.de/de/bibliothek&lt;/bezugsort>&#xA;                &#xA;  &lt;/versionDatentyp>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="datatypeE"/>
+      <details key="baseType" value="http://www.eclipse.org/emf/2003/XMLType#string"/>
+      <details key="pattern" value="([&#x9;-&#xA;]|&#xD;|[%20-~]|[ -¬]|[®-ž]|[Ƈ-ƈ]|Ə|ƒ|Ɨ|[Ơ-ơ]|[Ư-ư]|Ʒ|[Ǎ-ǜ]|[Ǟ-ǟ]|[Ǣ-ǰ]|[Ǵ-ǵ]|[Ǹ-ǿ]|[Ȓ-ȓ]|[Ș-ț]|[Ȟ-ȟ]|[ȧ-ȳ]|ə|ɨ|ʒ|ʰ|ʳ|[ʹ-ʺ]|[ʾ-ʿ]|ˆ|ˈ|ˌ|˜|ˢ|Ά|[Έ-Ί]|Ό|[Ύ-Ρ]|[Σ-ώ]|Ѝ|[А-Ъ]|Ь|[Ю-ъ]|ь|[ю-я]|ѝ|ᵈ|ᵗ|[Ḃ-ḃ]|[Ḇ-ḇ]|[Ḋ-ḑ]|[Ḝ-ḫ]|[ḯ-ḷ]|[Ḻ-ḻ]|[Ṁ-ṉ]|[Ṓ-ṛ]|[Ṟ-ṣ]|[Ṫ-ṯ]|[Ẁ-ẇ]|[Ẍ-ẗ]|ẞ|[Ạ-ỹ]|[‘-‚]|[“-„]|[†-‡]|…|‰|[‹-›]|⁰|[⁴-⁹]|[ⁿ-₉]|€|™|∞|[≤-≥]|A̋|C(̀|̄|̆|̈|̕|̣|̦|̨̆)|D̂|F(̀|̄)|G̀|H(̄|̦|̱)|J(́|̌)|K(̀|̂|̄|̇|̕|̛|̦|͟H|͟h)|L(̂|̥|̥̄|̦)|M(̀|̂|̆|̐)|N(̂|̄|̆|̦)|P(̀|̄|̕|̣)|R(̆|̥|̥̄)|S(̀|̄|̛̄|̱)|T(̀|̄|̈|̕|̛)|U̇|Z(̀|̄|̆|̈|̧)|a̋|c(̀|̄|̆|̈|̕|̣|̦|̨̆)|d̂|f(̀|̄)|g̀|h(̄|̦)|j́|k(̀|̂|̄|̇|̕|̛|̦|͟h)|l(̂|̥|̥̄|̦)|m(̀|̂|̆|̐)|n(̂|̄|̆|̦)|p(̀|̄|̕|̣)|r(̆|̥|̥̄)|s(̀|̄|̛̄|̱)|t(̀|̄|̕|̛)|u̇|z(̀|̄|̆|̈|̧)|Ç̆|Û̄|ç̆|û̄|ÿ́|Č(̕|̣)|č(̕|̣)|Ī́|ī́|Ž(̦|̧)|ž(̦|̧)|Ḳ̄|ḳ̄|Ṣ̄|ṣ̄|Ṭ̄|ṭ̄|Ạ̈|ạ̈|Ọ̈|ọ̈|Ụ(̄|̈)|ụ(̄|̈))*"/>
+    </eAnnotations>
+  </eClassifiers>
+</ecore:EPackage>

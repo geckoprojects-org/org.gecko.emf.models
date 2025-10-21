@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:xfa="http://www.xoev.de/xfamilie/dsrv/1.3.0"
+           xmlns:din91379="urn:xoev-de:kosit:xoev:datentyp:din-91379_2022-08"
+           xmlns:xfb="http://www.xoev.de/xfamilie/baukasten/1.3.0"
+           xmlns:xoev-code="http://xoev.de/schemata/code/1_0"
+           targetNamespace="http://www.xoev.de/xfamilie/dsrv/1.3.0"
+           version="1.3.0"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+   <xs:annotation>
+      <xs:appinfo>
+         <standard>
+            <nameLang>XFamilie</nameLang>
+            <nameKurz>XFamilie</nameKurz>
+            <nameTechnisch>xfamilie</nameTechnisch>
+            <kennung>urn:xoev-de:kosit:standard:xfamilie</kennung>
+            <beschreibung>Projektziel ist die elektronische Kommunikation im Familienbereich zwischen verschiedenen Behörden, Institutionen, Registern und Onlineportalen, die Daten untereinander austauschen, zu unterstützen. Der Nutzen des Projekts besteht in der Kostenreduktion und einer Verbesserung der Qualität von Daten für Familienleistungen, sowie einer Verbesserung der Interoperabilität von Akteuren im Familienbereich und weiteren Kommunikationspartner.</beschreibung>
+         </standard>
+         <versionStandard>
+            <version>1.3.0</version>
+            <beschreibung>Die Änderungshistorie befindet sich in Tabellenform nach Change Requests gegliedert in Kapitel E.</beschreibung>
+            <versionXOEVProfil>3.0.2</versionXOEVProfil>
+            <versionXOEVHandbuch>3.0.2</versionXOEVHandbuch>
+            <versionXGenerator>3.1.0</versionXGenerator>
+            <versionModellierungswerkzeug>19.0</versionModellierungswerkzeug>
+            <nameModellierungswerkzeug>MagicDraw</nameModellierungswerkzeug>
+         </versionStandard>
+      </xs:appinfo>
+   </xs:annotation>
+   <xs:import schemaLocation="din-norm-91379-datatypes.xsd"
+              namespace="urn:xoev-de:kosit:xoev:datentyp:din-91379_2022-08"/>
+   <xs:import schemaLocation="xfamilie-baukasten.xsd"
+              namespace="http://www.xoev.de/xfamilie/baukasten/1.3.0"/>
+   <xs:import schemaLocation="xoev-code.xsd"
+              namespace="http://xoev.de/schemata/code/1_0"/>
+   <xs:complexType name="AnyTypeFamilieDSRVType">
+      <xs:annotation>
+         <xs:documentation>Der Typ schränkt xs:anyType ein, indem nur zwei namespaces möglich sind.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:any minOccurs="0"
+                 maxOccurs="unbounded"
+                 namespace="http://www.rvbea.de/XMLSchema/DXWL http://www.rvbea.de/XMLSchema/RVBEA_Antwort "
+                 processContents="lax"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="dsrv.anfragervbea.0401">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Rechtsgrundlage</rechtsgrundlage>
+         </xs:appinfo>
+         <xs:documentation>Das ELFE-Backend schickt zur Ermittlung der Einkommensdaten eine initiale Anfragenachricht per OSCI an die DSRV.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:NachrichtType">
+               <xs:sequence>
+                  <xs:element name="abfrageID" type="xfb:UUIDType">
+                     <xs:annotation>
+                        <xs:documentation>Eindeutige ID, mit der sämtliche Antworten zu dieser Abfrage versehen werden.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="anforderungsgrund" type="din91379:datatypeC">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zum Grund der Abfrage (z.B.: "ELFE")</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="einkommensDatenBisDatum" type="xfb:JahrMonatType">
+                     <xs:annotation>
+                        <xs:documentation>Einkommensdaten bis zu diesem Jahr/Monat der gesuchten Person.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="einkommensDatenVonDatum" type="xfb:JahrMonatType">
+                     <xs:annotation>
+                        <xs:documentation>Einkommensdaten ab diesem Jahr/Monat der gesuchten Person.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="geburt" type="xfb:GeburtGeburtsortOptionalType">
+                     <xs:annotation>
+                        <xs:documentation>Geburtsdatum einer gesuchten Person.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="nameNatuerlichePerson" type="xfb:NameNatuerlichePersonType">
+                     <xs:annotation>
+                        <xs:documentation>Informationen zum Namen einer gesuchten Person.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="anschrift" type="xfb:PostalischeInlandsanschrift.BasisType">
+                     <xs:annotation>
+                        <xs:documentation>Aktueller Wohnort einer gesuchten Person.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="dsrv.einkommensdatenrvbea.0402">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Rechtsgrundlage</rechtsgrundlage>
+         </xs:appinfo>
+         <xs:documentation>Für jeden gefundenen Arbeitgeber wird eine Abfrage über rvBEA gestartet, um die Einkommensdaten für den angefragten Zeitraum zu ermitteln. Die Antworten der Arbeitgeber erfolgen im Format DXEB welches, versehen mit einer Präambel, sofort an ELFE zurückgemeldet wird.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:NachrichtType">
+               <xs:sequence>
+                  <xs:element name="dxeb" minOccurs="0" type="xfa:AnyTypeFamilieDSRVType">
+                     <xs:annotation>
+                        <xs:documentation>Antwort auf eine rvBEA-Anforderung.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="ifdNrArbeitgeber" minOccurs="0" type="xs:integer">
+                     <xs:annotation>
+                        <xs:documentation>Im Kontext der Abfrage (abfrageID) verwendete eindeutige ID des Arbeitgebers.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="abfrageID" type="xfb:UUIDType">
+                     <xs:annotation>
+                        <xs:documentation>Eindeutige ID, mit der sämtliche Antworten zu dieser Abfrage versehen werden.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="dsrv.statusantwortrvbea.0403">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Rechtsgrundlage</rechtsgrundlage>
+         </xs:appinfo>
+         <xs:documentation>Ausgehend von der initialen Anfrage wird versucht in den Datenbanken der DSRV eine Versicherungsnummer zu ermitteln. Falls dies nicht eindeutig gelingt, wird eine Fehlermeldung zurückgeschickt. Beide Varianten haben einen gemeinsamen Datenkopf.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:NachrichtType">
+               <xs:sequence>
+                  <xs:element name="abfrageID" type="xfb:UUIDType">
+                     <xs:annotation>
+                        <xs:documentation>Eindeutige ID, mit der sämtliche Antworten zu dieser Abfrage versehen werden.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="rueckmeldung" minOccurs="0" type="xfa:AnyTypeFamilieDSRVType">
+                     <xs:annotation>
+                        <xs:documentation>Falls keine oder mehrere Personen zu einer Anfrage gefunden werden kann, wird lediglich eine kurze Rückmeldung gegeben. Falls eine Person eindeutig identifiziert werden konnte, wird eine Rückmeldung zur Person und den Arbeitgebern gegeben.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>

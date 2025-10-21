@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="allgemeinenachrichten" nsURI="http://www.xoev.de/xfamilie/allgemeinenachrichten/1.3.0"
+    nsPrefix="allgemeinenachrichten">
+  <eAnnotations>
+    <details key="appinfo" value="&#xA;           &#xA;  &lt;standard>&#xA;                &#xA;    &lt;nameLang>XFamilie&lt;/nameLang>&#xA;                &#xA;    &lt;nameKurz>XFamilie&lt;/nameKurz>&#xA;                &#xA;    &lt;nameTechnisch>xfamilie&lt;/nameTechnisch>&#xA;                &#xA;    &lt;kennung>urn:xoev-de:kosit:standard:xfamilie&lt;/kennung>&#xA;                &#xA;    &lt;beschreibung>Projektziel ist die elektronische Kommunikation im Familienbereich zwischen verschiedenen Behörden, Institutionen, Registern und Onlineportalen, die Daten untereinander austauschen, zu unterstützen. Der Nutzen des Projekts besteht in der Kostenreduktion und einer Verbesserung der Qualität von Daten für Familienleistungen, sowie einer Verbesserung der Interoperabilität von Akteuren im Familienbereich und weiteren Kommunikationspartner.&lt;/beschreibung>&#xA;             &#xA;  &lt;/standard>&#xA;           &#xA;  &lt;versionStandard>&#xA;                &#xA;    &lt;version>1.3.0&lt;/version>&#xA;                &#xA;    &lt;beschreibung>Die Änderungshistorie befindet sich in Tabellenform nach Change Requests gegliedert in Kapitel E.&lt;/beschreibung>&#xA;                &#xA;    &lt;versionXOEVProfil>3.0.2&lt;/versionXOEVProfil>&#xA;                &#xA;    &lt;versionXOEVHandbuch>3.0.2&lt;/versionXOEVHandbuch>&#xA;                &#xA;    &lt;versionXGenerator>3.1.0&lt;/versionXGenerator>&#xA;                &#xA;    &lt;versionModellierungswerkzeug>19.0&lt;/versionModellierungswerkzeug>&#xA;                &#xA;    &lt;nameModellierungswerkzeug>MagicDraw&lt;/nameModellierungswerkzeug>&#xA;             &#xA;  &lt;/versionStandard>&#xA;        &#xA;&#xA;&#xA;           &#xA;  &lt;standard>&#xA;                &#xA;    &lt;nameLang>XFamilie&lt;/nameLang>&#xA;                &#xA;    &lt;nameKurz>XFamilie&lt;/nameKurz>&#xA;                &#xA;    &lt;nameTechnisch>xfamilie&lt;/nameTechnisch>&#xA;                &#xA;    &lt;kennung>urn:xoev-de:kosit:standard:xfamilie&lt;/kennung>&#xA;                &#xA;    &lt;beschreibung>Projektziel ist die elektronische Kommunikation im Familienbereich zwischen verschiedenen Behörden, Institutionen, Registern und Onlineportalen, die Daten untereinander austauschen, zu unterstützen. Der Nutzen des Projekts besteht in der Kostenreduktion und einer Verbesserung der Qualität von Daten für Familienleistungen, sowie einer Verbesserung der Interoperabilität von Akteuren im Familienbereich und weiteren Kommunikationspartner.&lt;/beschreibung>&#xA;             &#xA;  &lt;/standard>&#xA;           &#xA;  &lt;versionStandard>&#xA;                &#xA;    &lt;version>1.3.0&lt;/version>&#xA;                &#xA;    &lt;beschreibung>Die Änderungshistorie befindet sich in Tabellenform nach Change Requests gegliedert in Kapitel E.&lt;/beschreibung>&#xA;                &#xA;    &lt;versionXOEVProfil>3.0.2&lt;/versionXOEVProfil>&#xA;                &#xA;    &lt;versionXOEVHandbuch>3.0.2&lt;/versionXOEVHandbuch>&#xA;                &#xA;    &lt;versionXGenerator>3.1.0&lt;/versionXGenerator>&#xA;                &#xA;    &lt;versionModellierungswerkzeug>19.0&lt;/versionModellierungswerkzeug>&#xA;                &#xA;    &lt;nameModellierungswerkzeug>MagicDraw&lt;/nameModellierungswerkzeug>&#xA;             &#xA;  &lt;/versionStandard>&#xA;        &#xA;"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="Diese Schema-Datei enthält die technische Repräsentation der in der Norm DIN 91379 definierten Datentypen."/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="AllgemeinenachrichtenQuittung0011Type"
+      eSuperTypes="baukasten.ecore#//NachrichtType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="allgemeinenachrichten.quittung.0011_._type"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="identifikationNachricht"
+        lowerBound="1" eType="ecore:EClass baukasten.ecore#//IdentifikationNachrichtType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Identifikation der Ursprungsnachricht (nicht: Transaktions-ID), die quittiert wird."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="identifikation.nachricht"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AllgemeinenachrichtenRueckweisung0001Type"
+      eSuperTypes="baukasten.ecore#//NachrichtType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="allgemeinenachrichten.rueckweisung.0001_._type"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rueckweisendeStelle" eType="#//RueckweisendeStelleType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Dieses Kindelement ist nur dann zu übermitteln, wenn die Nachricht nicht von dem ursprünglich adressierten Leser zurückgesandt wird, sondern von einer anderen Stelle (zum Beispiel einer Clearingstelle, die im Auftrag der ursprünglich adressierten Behörde eine Prüfung eingehender Nachrichten nach formalen Kriterien durchführt)."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="rueckweisendeStelle"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rueckweisungsgrund" lowerBound="1"
+        upperBound="-1" eType="#//RueckweisungsgrundType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="In diesem Element werden die Gründe mitgeteilt, aufgrund derer die Nachricht zurückgewiesen wird. Generell ist so vorzugehen, dass die Gründe für die Rückweisung so präzise und vollständig wie möglich bezeichnet werden, um eine schnelle Klärung des Sachverhalts zu ermöglichen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="rueckweisungsgrund"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transportinformationen"
+        eType="#//TransportinformationenType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="In diesem Element sind Informationen zu übermitteln, die bei dem Empfang einer als fehlerhaft betrachteten Nachricht möglicherweise der Transportebene entnommen werden konnten. Diese Angaben können gemacht werden, um dem Leser oder Empfänger einer Rücksendenachricht die Identifikation der als fehlerhaft betrachteten und nunmehr zurückgesandten Nachricht zu erleichtern. Alle Kindelemente dieses Elementes sind optional, da keine verbindlichen Anforderungen an das Transportprotokoll gestellt werden können."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="transportinformationen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="identifikationNachricht"
+        eType="ecore:EClass baukasten.ecore#//IdentifikationNachrichtType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="In diesem Kindelement wird die die Rückweisung auslösende fachliche Nachricht identifiziert. Sofern kein Transportfehler vorliegt und die Ursprungsnachricht schemakonform ist, muss das Element übermittelt werden. Ist die Ursprungsnachricht nicht schemakonform, kann die Übermittlung des Elements entfallen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="identifikation.nachricht"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nachricht" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Base64Binary">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Dieses Element enthält die aus den genannten Gründen zurückgewiesene ursprüngliche Nachricht. Um technische Probleme mit verschachtelten XML-Dokumenten zu vermeiden, ist der zurückgewiesene Inhalt immer base64-codiert zurückzusenden. Dieses Element ist nur anzugeben, wenn die zurückgewiesene Nachricht nicht schema-konform ist."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="nachricht"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CodeRueckweisungsgrundType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>Rueckweisungsgruende&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>Rueckweisungsgruende&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>rueckweisungsgruende&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:rueckweisungsgruende&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Diese Tabelle führt mögliche Gründe für eine Rücksendung einer Nachricht an den Absender auf. Mit dem Präfix des jeweiligen Schlüssels wird folgende Systematik festgelegt: T (Transportproblem), X (formales Problem mit XML), V (Versionsproblem), S (nicht spezifikationskonform).&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>1.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>[nd]&lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2022-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;              &#xA;  &lt;genutzteCodeSpalte>code&lt;/genutzteCodeSpalte>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Code.RueckweisungsgrundType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value=""/>
+      <details key="kind" value="mixed"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mixed" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="elementWildcard"/>
+        <details key="name" value=":mixed"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="xMLNSPrefixMap" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStringToStringMapEntry"
+        transient="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="xmlns:prefix"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="xSISchemaLocation" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStringToStringMapEntry"
+        transient="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="xsi:schemaLocation"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="allgemeinenachrichtenQuittung0011"
+        upperBound="-2" eType="#//AllgemeinenachrichtenQuittung0011Type" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mit dieser Nachricht quittiert die fachlich zuständige Stelle dem Antragsservice, dass sie eine zuvor erhaltene Nachricht erfolgreich erhalten und auf Spezifikationskonformität geprüft hat und somit aus technische Sicht einer Weiterverarbeitung im Fachverfahren der zuständigen Stelle nichts im Wege steht. Die Quittungsnachricht ist von allen fachlichen Bereichen umzusetzen."/>
+      </eAnnotations>
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;              &#xA;  &lt;rechtsgrundlage>Rechtsgrundlage&lt;/rechtsgrundlage>&#xA;           &#xA;"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="allgemeinenachrichten.quittung.0011"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="allgemeinenachrichtenRueckweisung0001"
+        upperBound="-2" eType="#//AllgemeinenachrichtenRueckweisung0001Type" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mit dieser Nachricht wird eine an den Leser gerichtete Ursprungsnachricht als fehlerhaft an den Autor zurückgewiesen."/>
+      </eAnnotations>
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;              &#xA;  &lt;rechtsgrundlage>Rechtsgrundlage&lt;/rechtsgrundlage>&#xA;           &#xA;"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="allgemeinenachrichten.rueckweisung.0001"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RueckweisendeStelleType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="RueckweisendeStelleType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pruefinstanz" lowerBound="1"
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mit diesem Element wird die Stelle bezeichnet, die die Nachricht beanstandet hat."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="pruefinstanz"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="erreichbarkeit" lowerBound="1"
+        upperBound="-1" eType="ecore:EClass baukasten.ecore#//ErreichbarkeitType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angaben zur Erreichbarkeit"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="erreichbarkeit"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Rueckweisungsgruende">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>Rueckweisungsgruende&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>Rueckweisungsgruende&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>rueckweisungsgruende&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:rueckweisungsgruende&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Diese Tabelle führt mögliche Gründe für eine Rücksendung einer Nachricht an den Absender auf. Mit dem Präfix des jeweiligen Schlüssels wird folgende Systematik festgelegt: T (Transportproblem), X (formales Problem mit XML), V (Versionsproblem), S (nicht spezifikationskonform).&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>1.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>[nd]&lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2022-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="rueckweisungsgruende"/>
+    </eAnnotations>
+    <eLiterals name="S001">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Nicht spezifikationskonform: Die Nachricht ist nicht UTF-8 codiert&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="S010" value="1">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Nicht spezifikationskonform: Ungültige Codeliste&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="S011" value="2">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Nicht spezifikationskonform: Ungültiger Code in einer Codeliste&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="S100" value="3">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Nicht spezifikationskonform: Rückweisung aufgrund erneuter Lieferung eines bereits erfolgreich verarbeiteten Datensatzes&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="S999" value="4">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Nicht spezifikationskonform aus anderen Gründen&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="T000" value="5">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Das Zertifikat des Absenders ist abgelaufen&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="T001" value="6">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Das Zertifikat des Absenders ist widerrufen&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="T002" value="7">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Das Zertifikat des Absenders ist nicht gültig&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="T003" value="8">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Das Zertifikat des Absenders fehlt&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="T010" value="9">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Die Signatur der Inhaltsdaten fehlt oder hat nicht das geforderte Signaturniveau&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="T011" value="10">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Die Signatur der Inhaltsdaten ist nicht gültig (Integrität verletzt)&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="T020" value="11">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Die Inhaltsdaten können von dem Empfänger nicht dechiffriert werden&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="T070" value="12">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Der Absender ist zur Inanspruchnahme dieses Dienstes nicht berechtigt&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="T080" value="13">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Die Nachricht ist dem falschen Empfänger / Leser zugestellt worden, d. h. im Nachrichtenkopf ist eine abweichende Empfängerbehörde eingetragen (Irrläufer)&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="T099" value="14">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Sonstiger Verstoß gegen Anforderungen des OSCI-Transport-Profils&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="V000" value="15">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Nicht spezifikationskonform: Die Nachricht kann in der Version, die in der Nachricht angegeben wird, vom Empfänger nicht bearbeitet werden (Der Dienst ist in dieser Version nicht oder nicht mehr bereit)&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="X000" value="16">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Die Nachricht ist kein wohlgeformtes XML-Dokument&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="X001" value="17">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Die Nachricht ist nicht valide zu dem Schema der in der Nachricht angegebenen Version&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="X002" value="18">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Die Nachricht ist nicht valide zu den Schematron-Regeln, die für diese Nachricht gelten. Schematron-Fehlercode(s) werden als Unter-Codes mitgeteilt&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="RueckweisungsgruendeObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="rueckweisungsgruende:Object"/>
+      <details key="baseType" value="rueckweisungsgruende"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RueckweisungsgrundSpezifischType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="In diesem Datentyp wird ein Grund für die Rückweisung der Nachricht in Form eines beliebigen kontextspezifischen Fehlercodes und/oder einer Fehlerbeschreibung genauer spezifiziert."/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="RueckweisungsgrundSpezifischType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="code" eType="ecore:EClass ../../de.xoev.code/model/xoev-code.ecore#//Code"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="code"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beschreibung" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="beschreibung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RueckweisungsgrundType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="RueckweisungsgrundType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="grund" lowerBound="1" eType="#//CodeRueckweisungsgrundType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mit diesem Element wird ein Grund übermittelt, aus dem die Nachricht zurückgewiesen wird."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="grund"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="grundSpezifisch" upperBound="-1"
+        eType="#//RueckweisungsgrundSpezifischType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="In diesem Element können weitere - im Allgemeinen kontextspezifische Angaben - zu dem Grund übermittelt werden, aus dem die Nachricht zurückgewiesen wird."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="grundSpezifisch"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TransportinformationenType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="TransportinformationenType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nachrichtenId" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hier kann eine Identifikation der aus den genannten Gründen zurückgewiesenen Nachricht übermittelt werden, sofern sich diese aus dem Transportprotokoll entnehmen lässt. Im Falle von OSCI-Transport wäre hier die messageID des Transportumschlages zu nutzen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="nachrichtenId"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="betreff" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hier kann der Inhalt der Betreff- oder Subject-Zeile der aus den genannten Gründen zurückgewiesenen Nachricht übermittelt werden, sofern sich diese aus dem Transportprotokoll entnehmen lässt."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="betreff"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sendezeitpunkt" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//DateTime">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hier kann der Zeitpunkt des Versands der aus den genannten Gründen zurückgewiesenen Nachricht übermittelt werden, sofern sich dieser aus dem Transportprotokoll entnehmen lässt."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="sendezeitpunkt"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ergaenzendeHinweise" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hier können weitere Angaben gemacht werden, die dem Empfänger der aus den genannten Gründen zurückgewiesenen Nachricht helfen, diese in seinem Verfahren zu identifizieren."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="ergaenzendeHinweise"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>

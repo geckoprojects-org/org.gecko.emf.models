@@ -1,0 +1,1971 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:xap="http://www.xoev.de/xfamilie/adoptionundpflegekinder/1.3.0"
+           xmlns:din91379="urn:xoev-de:kosit:xoev:datentyp:din-91379_2022-08"
+           xmlns:xfb="http://www.xoev.de/xfamilie/baukasten/1.3.0"
+           xmlns:xoev-code="http://xoev.de/schemata/code/1_0"
+           targetNamespace="http://www.xoev.de/xfamilie/adoptionundpflegekinder/1.3.0"
+           version="1.3.0"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+   <xs:annotation>
+      <xs:appinfo>
+         <standard>
+            <nameLang>XFamilie</nameLang>
+            <nameKurz>XFamilie</nameKurz>
+            <nameTechnisch>xfamilie</nameTechnisch>
+            <kennung>urn:xoev-de:kosit:standard:xfamilie</kennung>
+            <beschreibung>Projektziel ist die elektronische Kommunikation im Familienbereich zwischen verschiedenen Behörden, Institutionen, Registern und Onlineportalen, die Daten untereinander austauschen, zu unterstützen. Der Nutzen des Projekts besteht in der Kostenreduktion und einer Verbesserung der Qualität von Daten für Familienleistungen, sowie einer Verbesserung der Interoperabilität von Akteuren im Familienbereich und weiteren Kommunikationspartner.</beschreibung>
+         </standard>
+         <versionStandard>
+            <version>1.3.0</version>
+            <beschreibung>Die Änderungshistorie befindet sich in Tabellenform nach Change Requests gegliedert in Kapitel E.</beschreibung>
+            <versionXOEVProfil>3.0.2</versionXOEVProfil>
+            <versionXOEVHandbuch>3.0.2</versionXOEVHandbuch>
+            <versionXGenerator>3.1.0</versionXGenerator>
+            <versionModellierungswerkzeug>19.0</versionModellierungswerkzeug>
+            <nameModellierungswerkzeug>MagicDraw</nameModellierungswerkzeug>
+         </versionStandard>
+      </xs:appinfo>
+   </xs:annotation>
+   <xs:import schemaLocation="din-norm-91379-datatypes.xsd"
+              namespace="urn:xoev-de:kosit:xoev:datentyp:din-91379_2022-08"/>
+   <xs:import schemaLocation="xfamilie-baukasten.xsd"
+              namespace="http://www.xoev.de/xfamilie/baukasten/1.3.0"/>
+   <xs:import schemaLocation="xoev-code.xsd"
+              namespace="http://xoev.de/schemata/code/1_0"/>
+   <xs:complexType name="AbgebenderElternteilType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum abgebenden Elternteil</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="elternteil" type="xfb:Code.KindschaftsbeziehungType">
+            <xs:annotation>
+               <xs:documentation>Verhältnis vom Kind zum Elternteil</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="personendaten" minOccurs="0" type="xap:PersonendatenType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Person</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburt" minOccurs="0" type="xfb:GeburtOptionalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Geburtsdatum</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="staatsangehoerigkeit"
+                     minOccurs="0"
+                     type="xfb:Code.StaatsangehoerigkeitType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Staatsangehörigkeit</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einstellungAdoptionsabsicht"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Wie steht der abgebende Elternteil zur Adoptionsabsicht?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aufenthaltsstatus"
+                     minOccurs="0"
+                     type="xfb:Code.AufenthaltsstatusType">
+            <xs:annotation>
+               <xs:documentation>Ein unsicherer Aufenthaltsstatus der Bewerbenden kann ein Indiz für sachfremde Motive für die gewünschte Adoption sein. Daher ist eine Abfrage erforderlich. Rechtsgrundlage: §§ 68 I Nr. 12, 60 ff. SGB I, §§ 7 I, II, 7e S. 1 Nr. 1, 9e AdVermiG.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="elternteilVerstorben"
+                     minOccurs="0"
+                     type="xfb:TeilbekanntesDatumType">
+            <xs:annotation>
+               <xs:documentation>Falls verstorben, bitte Sterbedatum eintragen. Falls ein abgebender Elternteil bereits verstorben ist, ist die Beratungspflicht nach § 9a I Nr. 1 nicht mehr umsetzbar und daher nicht mehr von Bedeutung. Rechtsgrundlage: §§ 68 I Nr. 12, 60 ff. SGB I, §§ 7 I, II, 7e S. 1 Nr. 1, 9a I, 9e AdVermiG.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AllgemeineAngabenFremdkindadoptionType">
+      <xs:annotation>
+         <xs:documentation>Allgemeine Angaben zum Kind</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="personendaten" type="xap:PersonendatenType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Person</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburt" minOccurs="0" type="xfb:GeburtOptionalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Geburtsdatum und Geburtsort</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="staatsangehoerigkeit"
+                     minOccurs="0"
+                     type="xfb:Code.StaatsangehoerigkeitType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Staatsangehörigkeit</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="religionszugehoerigkeit"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Religionszugehörigkeit</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aktuelleBeruflicheTaetigkeit"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Aktuelle berufliche Tätigkeit</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkuenfteAusTaetigkeit" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Einkünfte aus Tätigkeit</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="andereEinkuenfte" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Angabe von anderen Einkünften</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="schuldverpflichtungen" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Schuldverpflichtungen (z.B. Kredite).</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="unterhaltsverpflichtungen" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Unterhaltsverpflichtungen</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="monatlicheFixkostenUnterkunft" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Monatliche Fixkosten für Unterkunft.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aufenthaltsstatus"
+                     minOccurs="0"
+                     type="xfb:Code.AufenthaltsstatusType">
+            <xs:annotation>
+               <xs:documentation>Ein unsicherer Aufenthaltsstatus der Bewerbenden kann ein Indiz für sachfremde Motive für die gewünschte Adoption sein. Daher ist eine Abfrage erforderlich. Rechtsgrundlage: §§ 68 I Nr. 12, 60 ff. SGB I, §§ 7 I, II, 7e S. 1 Nr. 1, 9e AdVermiG.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aktuellerFamilienstand"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Der Familienstand hat Auswirkungen auf die weiteren Beratungsgespräche und in welchem Umfang näher auf die Partnerschaft bzw. das soziale Umfeld eingegangen wird. Rechtsgrundlage: §§ 68 I Nr. 12, 60 ff. SGB I, §§ 7 I, II, 7e S. 1 Nr. 1, 9e AdVermiG.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geschlecht" minOccurs="0" type="xfb:Code.GeschlechtType">
+            <xs:annotation>
+               <xs:documentation>Bei Bewerbungen von gleichgeschlechtlichen Paaren ergeben sich spezifische Themen, die in den Beratungsgespräche miteinbezogen werden müssen. Rechtsgrundlage: §§ 68 I Nr. 12, 60 ff. SGB I, §§ 7 I, II, 7e S. 1 Nr. 1, 9e AdVermiG.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="bereitsVerheiratet" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Waren Sie bereits verheiratet? Die Frage gibt Hinweise auf die aktuelle partnerschaftliche Stabilität und ist daher von Bedeutung zur Gesamtbeurteilung. Rechtsgrundlage: §§ 68 I Nr. 12, 60 ff. SGB I, §§ 7 I, II, 7e S. 1 Nr. 1, 9e AdVermiG.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="umfangVerheiratet" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Wenn ja, wie oft und wie lange waren Sie verheiratet? Die Frage gibt Hinweise auf die aktuelle partnerschaftliche Stabilität und ist daher von Bedeutung zur Gesamtbeurteilung. Rechtsgrundlage: §§ 68 I Nr. 12, 60 ff. SGB I, §§ 7 I, II, 7e S. 1 Nr. 1, 9e AdVermiG.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AllgemeineAngabenPflegeType">
+      <xs:annotation>
+         <xs:documentation>Formular Altersvorsorge von Pflegepersonen</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="xap:PflegepersonBasisType">
+            <xs:sequence>
+               <xs:element name="wochenstunden" minOccurs="0" type="din91379:datatypeC">
+                  <xs:annotation>
+                     <xs:documentation>Wie viele Wochenstunden arbeiten Sie?</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="anschrift" minOccurs="0" type="xfb:MeldeanschriftType">
+                  <xs:annotation>
+                     <xs:documentation>Angaben zu Straße, Hausnummer, PLZ und Wohnort</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="geschlecht" minOccurs="0" type="xfb:Code.GeschlechtType">
+                  <xs:annotation>
+                     <xs:documentation>Bei Bewerbungen von gleichgeschlechtlichen Paaren ergeben sich spezifische Themen, die in den Beratungsgespräche miteinbezogen werden müssen. Rechtsgrundlage: §§ 68 I Nr. 12, 60 ff. SGB I, §§ 7 I, II, 7e S. 1 Nr. 1, 9e AdVermiG.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="AllgemeineAngabenStiefkindadoptionType">
+      <xs:annotation>
+         <xs:documentation>Allgemeine Angaben zu Stiefkindadoption</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="kontaktZuLeiblicherFamilie" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Hat das Kind Kontakt zu seinen leiblichen Eltern oder sonstigen Familienmitgliedern?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="erlaeuterungKontaktZuLeiblicherFamilie"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Erläuterung: Wenn ja, zu wem? Wenn nein, warum nicht?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="personensorgerecht"
+                     minOccurs="0"
+                     type="xfb:Code.PersonensorgerechtType">
+            <xs:annotation>
+               <xs:documentation>Bei wem liegt das Personensorgerecht?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="personensorgerechtBeiSonstige"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Wenn Sonstige, bitte hier angeben</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geschpraechUeberAdoption" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Wurde bereits mit dem Kind über die geplante Adoption gesprochen?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="reaktionKindGespraech"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Wenn ja, wann und wie hat das Kind darauf reagiert?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kontaktJugendamt" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Hatten Sie bereits neben der Adoptionsstelle Kontakt zu anderen Stellen des Jugendamtes?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="artKontaktJugendamt" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Hatten Sie bereits Kontakt zum Jugendamt?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="gerichtlicheRegelung" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Liegt eine gerichtliche Regelung vor?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AllgemeineAngabenVerwandtenadoptionType">
+      <xs:annotation>
+         <xs:documentation>Allgemeine Angaben zum Kind</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="herkunftBekannt" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Kennt das Kind seine Herkunft?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kontaktZuLeiblicherFamilie" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Hat das Kind Kontakt zu dem leiblichen Elternteil, der nicht verbleiben soll oder zu sonstigen Familienmitgliedern?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="erlaeuterungKontaktZuLeiblicherFamilie"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Erläuterung: Wenn ja, zu wem? Wenn nein, warum nicht?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="personensorgerecht"
+                     minOccurs="0"
+                     type="xfb:Code.PersonensorgerechtType">
+            <xs:annotation>
+               <xs:documentation>Bei wem liegt das Personensorgerecht?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="personensorgerechtBeiSonstige"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Wenn Sonstige, bitte hier angeben</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geschpraechUeberAdoption" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Wurde bereits mit dem Kind über die geplante Adoption gesprochen?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="reaktionKindGespraech"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Wenn ja, wann und wie hat das Kind darauf reagiert?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AlterssicherungPflegepersonType">
+      <xs:annotation>
+         <xs:documentation>Formular Altersvorsorge von Pflegepersonen</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="datenschutzUndEinwilligung"
+                     type="xap:DatenschutzUndEinwilligungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Datenschutz</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="allgemeineAngaben"
+                     maxOccurs="2"
+                     type="xap:AllgemeineAngabenPflegeType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Person</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="antragdetailsAlterssicherung"
+                     type="xap:AntragdetailsAlterssicherungType">
+            <xs:annotation>
+               <xs:documentation>Weitere Angaben zur Beantragung von Zuschüssen</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="pflegekinder"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xap:PflegekindType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu den Pflegekindern</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweise"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Nachweisdokument(e)</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="datenschutzDerFachbehoerde"
+                     maxOccurs="unbounded"
+                     type="xap:DatenschutzUndEinwilligungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Datenschutz der Fachbehörde</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="signatur" type="xap:SignaturType">
+            <xs:annotation>
+               <xs:documentation>Information zur elektronischen Signatur</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="digitalerRueckkanal"
+                     minOccurs="0"
+                     type="xap:DigitalerRueckkanalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum digitalen Rückkanal</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AngabenDesZuAdoptierendenKindesType">
+      <xs:annotation>
+         <xs:documentation>Angaben des zu adoptierenden Kindes</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="personendaten" minOccurs="0" type="xap:PersonendatenType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Person</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburt" minOccurs="0" type="xfb:GeburtOptionalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Geburtsdatum und Geburtsort</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="staatsangehoerigkeit"
+                     minOccurs="0"
+                     type="xfb:Code.StaatsangehoerigkeitType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Staatsangehörigkeit</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="religionszugehoerigkeit"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Religionszugehörigkeit</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="ausAuslandGeholt" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Wurde das Kind innerhalb von zwei Jahren vor der Antragstellung aus dem Ausland nach Deutschland geholt?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anschrift" minOccurs="0" type="xfb:MeldeanschriftType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Straße, Hausnummer, PLZ und Wohnort</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aufenthaltsstatus"
+                     minOccurs="0"
+                     type="xfb:Code.AufenthaltsstatusType">
+            <xs:annotation>
+               <xs:documentation>Ein unsicherer Aufenthaltsstatus der Bewerbenden kann ein Indiz für sachfremde Motive für die gewünschte Adoption sein. Daher ist eine Abfrage erforderlich. Rechtsgrundlage: §§ 68 I Nr. 12, 60 ff. SGB I, §§ 7 I, II, 7e S. 1 Nr. 1, 9e AdVermiG.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AngabenPflegekindType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum Pflegekind</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="personendaten" minOccurs="0" type="xap:PersonendatenType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Person</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburt" minOccurs="0" type="xfb:GeburtOptionalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Geburtsdatum und Geburtsort</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anschrift" type="xfb:MeldeanschriftType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Straße, Hausnummer, PLZ und Wohnort</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="beginnPflegeverhaeltnis" minOccurs="0" type="xs:date">
+            <xs:annotation>
+               <xs:documentation>Beginn des Pflegeverhältnisses</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="krankenversichert" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Krankenversichert bei</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="krankenversichertUeberPflegeperson"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Das Pflegekind ist über mich/uns krankenversichert</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="schuleAusbildungsstaette"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Schule/Ausbildungsstätte</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="klassenstufeAusbildungsjahr" minOccurs="0" type="xs:integer">
+            <xs:annotation>
+               <xs:documentation>Klassenstufe/Ausbildungsjahr</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkommenPflegekind"
+                     minOccurs="0"
+                     type="xap:EinkommenPflegekindType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Einkommen des Pflegekindes</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AngabenZuKindernDerFamilieType">
+      <xs:annotation>
+         <xs:documentation>Angaben zu Kindern in der Familie</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="personendaten" minOccurs="0" type="xap:PersonendatenType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Person</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburt" minOccurs="0" type="xfb:GeburtOptionalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Geburtsdatum und Geburtsort</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="verhaeltnisKind" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Verhältnis zu dem Kind</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="elternteilDesKindes" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Wer ist Elternteil von dem Kind?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kindWohnhaftHaushalt" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Lebt das Kind im Haushalt?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kindWohnhaftAlterntive"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Lebt das Kind im Haushalt? Wenn nein, wo lebt das Kind?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kindVerstorben"
+                     minOccurs="0"
+                     type="xfb:TeilbekanntesDatumType">
+            <xs:annotation>
+               <xs:documentation>Falls verstorben, bitte Sterbedatum eintragen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AngabenZurPartnerschaftType">
+      <xs:annotation>
+         <xs:documentation>Angaben zur Partnerschaft</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="dauerPartnerschaft" minOccurs="0" type="xs:integer">
+            <xs:annotation>
+               <xs:documentation>Seit wann besteht Ihre Partnerschaft?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="dauerGemeinsamerHaushalt" minOccurs="0" type="xs:integer">
+            <xs:annotation>
+               <xs:documentation>Seit wann leben Sie in einem gemeinsamen Haushalt?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="verheiratetOderLebenspartnerschaft"
+                     minOccurs="0"
+                     type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Sind Sie verheiratet oder leben Sie in einer eingetragenen Lebenspartnerschaft?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="dauerVerheiratetOderLebenspartnerschaft"
+                     minOccurs="0"
+                     type="xs:integer">
+            <xs:annotation>
+               <xs:documentation>Sind Sie verheiratet oder leben Sie in einer eingetragenen Lebenspartnerschaft? Wenn ja, seit wann?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="gespraechUeberAdoption" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Haben Sie mit den Kindern aus bestehender Ehe/Partnerschaft und früheren Ehen/Partnerschaften über die beabsichtigte Adoption gesprochen?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="meinungFamilieUndFreunde"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Wie stehen Ihre Familien/Freunde zur beabsichtigten Adoption?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anschrift" minOccurs="0" type="xfb:MeldeanschriftType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Straße, Hausnummer, PLZ und Wohnort</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="wohnverhaeltnisseAnzahlZimmer" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Anzahl Zimmer</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="wohnverhaeltnisseWohnflaeche" minOccurs="0" type="xs:integer">
+            <xs:annotation>
+               <xs:documentation>Wohnfläche</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="mieteOderEigentum" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Handelt es sich um ein Mietverhältnis oder Wohneigentum?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="garten" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Ist ein Garten vorhanden?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kinderzimmer" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Steht ein eigenes Kinderzimmer für das zu adoptierende Kind zur Verfügung?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="haustiere" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Haben Sie Haustiere?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AnliegenType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum Anliegen</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="wunschBeratung" minOccurs="0" type="xs:anyType">
+            <xs:annotation>
+               <xs:documentation>Ich/Wir wüsche(n) eine Beratung zu. Hier kommen kommunalspezifische Codelisten zum Einsatz.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kommentar" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Kommentar zu dem Anliegen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AnnehmenderElternteilType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum annehmenden Elternteil</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="personendaten" type="xap:PersonendatenType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Person</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="staatsangehoerigkeit"
+                     minOccurs="0"
+                     type="xfb:Code.StaatsangehoerigkeitType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Staatsangehörigkeit</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburt" minOccurs="0" type="xfb:GeburtOptionalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Geburtsdatum und Geburtsort</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aktuelleBeruflicheTaetigkeit"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Aktuelle berufliche Tätigkeit</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="gruendeMotiveFuerAdoption"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Gründe und Motive für die Adoption.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="veraenderungDurchAdoption"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Was verändert sich durch die Adoption an der bisherigen Situation für das Kind und für Sie selbst?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkuenfteAusTaetigkeit" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Einkünfte aus Tätigkeit</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="andereEinkuenfte" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Angabe von anderen Einkünften</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="schuldverpflichtungen" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Schuldverpflichtungen (z.B. Kredite).</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="unterhaltsverpflichtungen" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Unterhaltsverpflichtungen</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="monatlicheFixkostenUnterkunft" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Monatliche Fixkosten für Unterkunft.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="religionszugehoerigkeit"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Religionszugehörigkeit</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aufenthaltsstatus"
+                     minOccurs="0"
+                     type="xfb:Code.AufenthaltsstatusType">
+            <xs:annotation>
+               <xs:documentation>Ein unsicherer Aufenthaltsstatus der Bewerbenden kann ein Indiz für sachfremde Motive für die gewünschte Adoption sein. Daher ist eine Abfrage erforderlich. Rechtsgrundlage: §§ 68 I Nr. 12, 60 ff. SGB I, §§ 7 I, II, 7e S. 1 Nr. 1, 9e AdVermiG.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geschlecht" minOccurs="0" type="xfb:Code.GeschlechtType">
+            <xs:annotation>
+               <xs:documentation>Eine Angabe des Geschlechts ist notwendig, da sich bei Bewerbungen von gleichgeschlechtlichen Paaren möglicherweise spezifische Beratungsbedarfe ergeben und es regional Unterschiede diesbezüglich geben kann. Rechtsgrundlage: § 39 SGB VIII i. V. m. §§ 27, 33, 35 SGB VIII, §§ 62 SGB VIII.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AntragdetailsAlterssicherungType">
+      <xs:annotation>
+         <xs:documentation>Weitere Angaben zur Beantragung von Zuschüssen</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="beantragungZuschussAlterssicherung" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Hiermit beantrage ich/beantragen wir die Bezuschussung/Übernahme der Kosten meiner/unserer privaten Unfallversicherung.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="zuschuesse" type="xfb:Code.ZuschuesseType">
+            <xs:annotation>
+               <xs:documentation>Ich erhalte/Wir erhalten keine Zuschüsse/Zuschüsse</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="hoeheZuschuesse" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Zuschüsse in Höhe von (monatlich)</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="vonAndererStelle" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Von dieser anderen Stelle</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="artHoeheAbsicherung" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Eine Bescheinigung über Art und Höhe der Absicherung ist beigefügt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="alleinigePflegeperson" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Ich betreue die unten aufgeführten Pflegekinder als alleinige Pflegeperson.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="hauptpflegeperson" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Ich betreue die unten aufgeführten Pflegekinder als Hauptpflegeperson. Mein Partner erhält keinen Zuschuss aus Jugendhilfemitteln zu seiner Altersvorsorge. (Hauptpflegeperson ist in der Regel die Pflegeperson, die sich aufgrund einer verringerten Erwerbstätigkeit überwiegend um die Pflege und Erziehung der Kinder kümmert.)</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AntragdetailsType">
+      <xs:annotation>
+         <xs:documentation>Weitere Angaben zum Antrag</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="antrag" type="xs:anyType">
+            <xs:annotation>
+               <xs:documentation>Vorgabeliste für sonstige Anträge - aus Kommunenliste, z. B. einmalige Leistungen beantragen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="information" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Informationen zum Antrag</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AntragdetailsUnfallversicherungType">
+      <xs:annotation>
+         <xs:documentation>Weitere Angaben zur Beantragung von Zuschüssen</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="beantragungKostenUnfallversicherung" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Hiermit beantrage ich/beantragen wir die Bezuschussung/Übernahme der Kosten meiner/unserer privaten Unfallversicherung.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="zuschuesse" type="xfb:Code.ZuschuesseType">
+            <xs:annotation>
+               <xs:documentation>Ich erhalte/Wir erhalten keine Zuschüsse/Zuschüsse</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="hoeheZuschuesse" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Zuschüsse in Höhe von</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AntragstellerType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum/zur Antragsteller:in</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="personendaten" type="xap:PersonendatenType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Person.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="fallnummer" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Bearbeitungsnummer/Fall-Nummer</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="antragsdatum" minOccurs="0" type="xs:date">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Antragsdatum</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburt" minOccurs="0" type="xfb:GeburtOptionalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Person</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="BeitragsuebernahmeUnfallversicherungType">
+      <xs:annotation>
+         <xs:documentation>Formular Beitragsübernahme der Unfallversicherung</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="datenschutzUndEinwilligung"
+                     type="xap:DatenschutzUndEinwilligungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Datenschutz</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="allgemeineAngaben"
+                     maxOccurs="unbounded"
+                     type="xap:AllgemeineAngabenPflegeType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Person und zur Anschrift.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="antragdetailsUnfallversicherung"
+                     type="xap:AntragdetailsUnfallversicherungType">
+            <xs:annotation>
+               <xs:documentation>Weitere Angaben zur Beantragung von Zuschüssen</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="pflegekinder"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xap:PflegekindType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu den Pflegekindern</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweise"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xap:NachweisType">
+            <xs:annotation>
+               <xs:documentation>Nachweisdokument(e)</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="datenschutzDerFachbehoerde"
+                     maxOccurs="unbounded"
+                     type="xap:DatenschutzUndEinwilligungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Datenschutz der Fachbehörde</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="signatur" type="xap:SignaturType">
+            <xs:annotation>
+               <xs:documentation>Information zur elektronischen Signatur</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="digitalerRueckkanal"
+                     minOccurs="0"
+                     type="xap:DigitalerRueckkanalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum digitalen Rückkanal</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="BestimmtesKindType">
+      <xs:annotation>
+         <xs:documentation>Angaben zu einem bestimmten Kind</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="personendaten" minOccurs="0" type="xap:PersonendatenType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Person</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburt" minOccurs="0" type="xfb:GeburtOptionalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Geburtsdatum und Geburtsort</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="zustaendigesJugendamt"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Zuständiges Jugendamt</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="DatenschutzUndEinwilligungType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum Datenschutz</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="allgemeineDatenschutzerklaerung" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Allgemeine Datenschutzerklärung.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kenntnissnahmeDatenschutzerklaerung"
+                     default="false"
+                     type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Ich/Wir nehme(n) die oben stehenden Datenschutzerklärungen zur Kenntnis.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="DigitalerRueckkanalType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum digitalen Rückkanal</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="postfachUUID" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>PostfachUUID</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einverstaendnisDigitalerRueckkanal" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Ich bin damit einverstanden, dass meine Bescheide in mein elektronisches Postfach zugestellt werden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="EinkommenPflegekindType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum Einkommen des Pflegekindes</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="einkommenAb" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Einkommen des Pflegekindes ab</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="hoeheEinkommen" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>In Höhe von mtl. €</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="bezugKindergeldAb" minOccurs="0" type="xs:date">
+            <xs:annotation>
+               <xs:documentation>Kindergeld wird bezogen ab</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="hoeheKindergeld" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>In Höhe von mtl. €</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="artDesEinkommens"
+                     minOccurs="0"
+                     type="xfb:Code.EinkommensartenType">
+            <xs:annotation>
+               <xs:documentation>Art des Einkommens</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="sonstigesEinkommen" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Wenn Sonstiges, bitte hier angeben</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="zustaendigeFamilienkasse"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Die ergänzende Angabe der zuständigen bzw. auszahlenden Familienkasse zu Bezugsbeginn und der Höhe des Kindergeldes wird für Rückfragen bei auftretenden Unklarheiten zur Höhe des Einkommens des Pflegekindes benötigt. Rechtsgrundlage: § 39 Abs. 4 SGB VIII i: V. m. 633, 35a SGB VIII.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="EinkommenUndWohnenType">
+      <xs:annotation>
+         <xs:documentation>Angaben zu Einkommen und Wohnen</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="einkuenfteAusTaetigkeit" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Einkünfte aus Tätigkeit</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="andereEinkuenfte" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Angabe von anderen Einkünften</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="schuldverpflichtungen" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Schuldverpflichtungen (z.B. Kredite).</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="unterhaltsverpflichtungen" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Unterhaltsverpflichtungen</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="monatlicheFixkostenUnterkunft" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Monatliche Fixkosten für Unterkunft</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="wohnverhaeltnisseAnzahlZimmer" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Anzahl Zimmer</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="wohnverhaeltnisseWohnflaeche" minOccurs="0" type="xs:integer">
+            <xs:annotation>
+               <xs:documentation>Wohnfläche</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="FremdkindadoptionType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum Datenschutz, Personendaten, Anschrift, dem Anliegen, Datenschutz der Fachbehörde und dem digitalen Rückkanal</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="beratungscode" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Eingabe des Beratungscodes</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="allgemeineAngaben"
+                     maxOccurs="2"
+                     type="xap:AllgemeineAngabenFremdkindadoptionType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Person</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="angabenZurPartnerschaft" type="xap:AngabenZurPartnerschaftType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Partnerschaft</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="angabenZuKindernDerFamilie"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xap:AngabenZuKindernDerFamilieType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Kindern in der Familie</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="weiterePersonenImHauhalt"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xap:WeiterePersonenImHauhaltType">
+            <xs:annotation>
+               <xs:documentation>Weitere Personen im Haushalt (über 18 Jahren).</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="auseinandersetzungThemaAdoption"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Seit wann setzen Sie sich mit einer Adoption auseinander? Was sind die Gründe, warum Sie sich jetzt bewerben?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweise"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xap:NachweisType">
+            <xs:annotation>
+               <xs:documentation>Nachweisdokument(e)</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="datenschutzDerFachbehoerde"
+                     maxOccurs="unbounded"
+                     type="xap:DatenschutzUndEinwilligungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Datenschutz der Fachbehörde</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="signatur" type="xap:SignaturType">
+            <xs:annotation>
+               <xs:documentation>Information zur elektronischen Signatur</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="digitalerRueckkanal"
+                     minOccurs="0"
+                     type="xap:DigitalerRueckkanalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum digitalen Rückkanal</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="datenschutzUndEinwilligung"
+                     type="xap:DatenschutzUndEinwilligungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Datenschutz</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aertzlicheBehandlung" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Befinden Sie sich zurzeit in ärztlicher Behandlung wegen einem unerfüllten Kinderwunsch?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="KontakformularType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum Datenschutz, Personendaten, Anschrift, dem Anliegen, Datenschutz der Fachbehörde und dem digitalen Rückkanal.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="datenschutzUndEinwilligung"
+                     type="xap:DatenschutzUndEinwilligungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Datenschutz.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="personendaten" type="xap:PersonendatenType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Person.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anschrift" type="xfb:MeldeanschriftType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Straße, Hausnummer, PLZ und Wohnort</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anliegen" type="xap:AnliegenType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Anliegen</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="datenschutzDerFachbehoerde"
+                     maxOccurs="unbounded"
+                     type="xap:DatenschutzUndEinwilligungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Datenschutz der Fachbehörde</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="digitalerRueckkanal"
+                     minOccurs="0"
+                     type="xap:DigitalerRueckkanalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum digitalen Rückkanal</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="KontoinformationenType">
+      <xs:annotation>
+         <xs:documentation>Angaben zu Kontoinformationen</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="beantragungJugendhilfe"
+                     minOccurs="0"
+                     type="xfb:Code.EigenschaftType">
+            <xs:annotation>
+               <xs:documentation>In meiner/unserer Eigenschaft als … beantrage/n ich/wir Jugendhilfe in Form von Leistungen zum Unterhalt gemäß § 39 i. V. m. § 33 SGB VIII und bitte/n um Überweisung der Pflegegeldzahlungen unter Verwendung folgender Bankverbindung:</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="bankverbindung"
+                     minOccurs="0"
+                     type="xfb:BankverbindungIBANOptionalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Bankverbindung</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="MoeglichkeitenUndGrenzenType">
+      <xs:annotation>
+         <xs:documentation>Angaben zu Möglichkeiten und Genzen</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="zutrauenKindJedenAlters" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Ich traue mir/ Wir trauen uns zu, ein Kind jeden Alters aufzunehmen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="zutrauenKindAltersangabe"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Ich traue mir/ Wir trauen uns zu ein Kind im Alter von ... bis ... Aufzunehmen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="zutrauenKindBeeintraechtigung"
+                     minOccurs="0"
+                     type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Ich traue mir/ Wir trauen uns zu, ein Kind mit einer Beeinträchtigung aufzunehmen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="zutrauenKindKoerperlicheBeeintraechtigung"
+                     minOccurs="0"
+                     type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Ich traue mir/ Wir trauen uns zu, ein Kind mit körperlicher Beeinträchtigung aufzunehmen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="zutrauenKindGeistigerBeeintraechtigung"
+                     minOccurs="0"
+                     type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Ich traue mir/ Wir trauen uns zu, ein Kind mit geistiger Beeinträchtigung aufzunehmen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="zutrauenKindPsychischerBeeintraechtigung"
+                     minOccurs="0"
+                     type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Ich traue mir/ Wir trauen uns zu, ein Kind mit seelischer oder psychischer Beeinträchtigung aufzunehmen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="NachweisType">
+      <xs:annotation>
+         <xs:documentation>Beschreibungstext zu Nachweisen</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="xfb:NachweisdokumentType">
+            <xs:sequence>
+               <xs:element name="beschreibung" minOccurs="0" type="din91379:datatypeC">
+                  <xs:annotation>
+                     <xs:documentation>Angabe eines Beschreibungstextes</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="NachweiseEinreichenType">
+      <xs:annotation>
+         <xs:documentation>Formular Nachweise einreichen</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="datenschutzUndEinwilligung"
+                     type="xap:DatenschutzUndEinwilligungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Datenschutz</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="antragsteller" type="xap:AntragstellerType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum/zur Antragsteller:in</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweise" maxOccurs="unbounded" type="xap:NachweisType">
+            <xs:annotation>
+               <xs:documentation>Nachweisdokument(e)</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="datenschutzDerFachbehoerde"
+                     maxOccurs="unbounded"
+                     type="xap:DatenschutzUndEinwilligungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Datenschutz der Fachbehörde</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="digitalerRueckkanal"
+                     minOccurs="0"
+                     type="xap:DigitalerRueckkanalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum digitalen Rückkanal</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="PauschalbetragGezahltVonType">
+      <xs:annotation>
+         <xs:documentation>Angaben zu Stadt, Bezirk/Stadtteil und Aktenzeichen der wirtschaftlichen Jugendhilfe</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="stadt" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Stadt</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="bezirkStadtteil" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Bezirk/Stadtteil</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aktenzeichenWirtschaftlicheJugendhilfe"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Aktenzeichen der wirtschaftlichen Jugendhilfe</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="PauschalbetragVollzeitpflegeType">
+      <xs:annotation>
+         <xs:documentation>Formular Monatlicher Pauschalbetrag in der Vollzeitpflege (Leistungen gem. §33 i.V.m. §39 SGB VIII)</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="datenschutzUndEinwilligung"
+                     type="xap:DatenschutzUndEinwilligungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Datenschutz</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="angabenPflegekind" type="xap:AngabenPflegekindType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Pflegekind</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="pflegeperson"
+                     maxOccurs="unbounded"
+                     type="xap:PflegepersonBasisType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Pflegeperson</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kinder"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xap:PflegekindBasisType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Kindern der Pflegeeltern und weiteren Pflegekindern in der Hausgemeinschaft, für die Kindergeld bezogen wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kontoinformationen"
+                     minOccurs="0"
+                     type="xap:KontoinformationenType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Kontoinformationen</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweise" maxOccurs="unbounded" type="xap:NachweisType">
+            <xs:annotation>
+               <xs:documentation>Nachweisdokument(e)</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="datenschutzDerFachbehoerde"
+                     maxOccurs="unbounded"
+                     type="xap:DatenschutzUndEinwilligungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Datenschutz der Fachbehörde</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="signatur" type="xap:SignaturType">
+            <xs:annotation>
+               <xs:documentation>Information zur elektronischen Signatur</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="digitalerRueckkanal"
+                     minOccurs="0"
+                     type="xap:DigitalerRueckkanalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum digitalen Rückkanal</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="PersonendatenType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum Geburtsdatum</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="name" type="xfb:NameNatuerlichePersonType">
+            <xs:annotation>
+               <xs:documentation>Angabe des Namens und des Vornamens.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kontakt"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ErreichbarkeitType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Telefonnummer und der E-Mail-Adresse.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="PflegekindBasisType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum Pflegekind</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="personendaten" type="xap:PersonendatenType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Person.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburt" minOccurs="0" type="xfb:GeburtOptionalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Geburtsdatum und Geburtsort</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="PflegekindType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum Pflegekind</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="xap:PflegekindBasisType">
+            <xs:sequence>
+               <xs:element name="inPflegeSeit" minOccurs="0" type="xs:date">
+                  <xs:annotation>
+                     <xs:documentation>Bei mir/uns in Pflege seit.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="pflegeform" minOccurs="0" type="xs:anyType">
+                  <xs:annotation>
+                     <xs:documentation>Abgaben zur Pflegeform des Pflegekindes</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="pauschalbetragGezahltVon" type="xap:PauschalbetragGezahltVonType">
+                  <xs:annotation>
+                     <xs:documentation>Monatlicher Pauschalbetrag in der Vollzeitpflege (Leistungen gem. §33 i.V.m. §39 SGB VIII) wird gezahlt von</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="PflegepersonBasisType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum Pflegekind</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="personendaten" type="xap:PersonendatenType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Person</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburt" minOccurs="0" type="xfb:GeburtOptionalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Geburtsdatum und Geburtsort</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="steueridentifikationsnummer"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Steueridentifikationsnummer</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="PflegepersonType">
+      <xs:annotation>
+         <xs:documentation>Angaben zur Pflegeperson</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="beratungscode" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Eingabe des Beratungscodes</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="datenschutzUndEinwilligung"
+                     type="xap:DatenschutzUndEinwilligungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Datenschutz</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="allgemeineAngaben"
+                     maxOccurs="2"
+                     type="xap:AllgemeineAngabenPflegeType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Person</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkommenUndWohnen" type="xap:EinkommenUndWohnenType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Einkommen und Wohnen</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="angabenZuKindernDerFamilie"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xap:AngabenZuKindernDerFamilieType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Kindern in der Familie</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="weiterePersonenImHauhalt"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xap:WeiterePersonenImHauhaltType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu weiteren Personen im Haushalt</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="bestimmtesKind" minOccurs="0" type="xap:BestimmtesKindType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu einem bestimmten Kind</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="moeglichkeitenUndGrenzen" type="xap:MoeglichkeitenUndGrenzenType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Möglichkeiten und Genzen</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweise"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xap:NachweisType">
+            <xs:annotation>
+               <xs:documentation>Nachweisdokument(e)</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="datenschutzDerFachbehoerde"
+                     maxOccurs="unbounded"
+                     type="xap:DatenschutzUndEinwilligungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Datenschutz der Fachbehörde</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="signatur" type="xap:SignaturType">
+            <xs:annotation>
+               <xs:documentation>Information zur elektronischen Signatur</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="digitalerRueckkanal"
+                     minOccurs="0"
+                     type="xap:DigitalerRueckkanalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum digitalen Rückkanal</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="SignaturType">
+      <xs:annotation>
+         <xs:documentation>Information zur elektronischen Signatur</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="elektronischSignieren" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Wollen Sie das Formular elektronisch signieren?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anlage" minOccurs="0" type="xap:NachweisType">
+            <xs:annotation>
+               <xs:documentation>Unterschriebenes Formular hochladen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="SonstigeAntraegeSendenType">
+      <xs:annotation>
+         <xs:documentation>Formular sonstige Anträge senden</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="datenschutzUndEinwilligung"
+                     type="xap:DatenschutzUndEinwilligungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Datenschutz</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="allgemeineAngaben" type="xap:AllgemeineAngabenPflegeType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Person</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="antragdetails" type="xap:AntragdetailsType">
+            <xs:annotation>
+               <xs:documentation>Weitere Angaben zum Antrag</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="pflegekinder" maxOccurs="unbounded" type="xap:PflegekindType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu den Pflegekindern</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweise"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xap:NachweisType">
+            <xs:annotation>
+               <xs:documentation>Nachweisdokument(e)</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="datenschutzDerFachbehoerde"
+                     maxOccurs="unbounded"
+                     type="xap:DatenschutzUndEinwilligungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Datenschutz der Fachbehörde</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="signatur" type="xap:SignaturType">
+            <xs:annotation>
+               <xs:documentation>Information zur elektronischen Signatur</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="digitalerRueckkanal"
+                     minOccurs="0"
+                     type="xap:DigitalerRueckkanalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum digitalen Rückkanal</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="StiefkindadoptionType">
+      <xs:annotation>
+         <xs:documentation>Formular Stiefkindadoption</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="beratungscode" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Eingabe des Beratungscodes</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="datenschutzUndEinwilligung"
+                     type="xap:DatenschutzUndEinwilligungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Datenschutz</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="angabenDesZuAdoptierendenKindes"
+                     type="xap:AngabenDesZuAdoptierendenKindesType">
+            <xs:annotation>
+               <xs:documentation>Angaben des zu adoptierenden Kindes</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="allgemeineAngaben"
+                     type="xap:AllgemeineAngabenStiefkindadoptionType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Person</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="verbleibenderSorgeberechtigterElternteil"
+                     type="xap:VerbleibenderSorgeberechtigterElternteilType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum verbleibenden/sorgeberechtigten Elternteil</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="annehmenderElternteil" type="xap:AnnehmenderElternteilType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum annehmenden Elternteil</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="angabenZurPartnerschaft" type="xap:AngabenZurPartnerschaftType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Partnerschaft</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="angabenZuKindernDerFamilie"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xap:AngabenZuKindernDerFamilieType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Kindern in der Familie</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="weiterePersonenImHauhalt"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xap:WeiterePersonenImHauhaltType">
+            <xs:annotation>
+               <xs:documentation>Weitere Personen im Haushalt (über 18 Jahren)</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="abgebenderElternteil" type="xap:AbgebenderElternteilType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum abgebenden Elternteil</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweise"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xap:NachweisType">
+            <xs:annotation>
+               <xs:documentation>Nachweisdokument(e)</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="datenschutzDerFachbehoerde"
+                     maxOccurs="unbounded"
+                     type="xap:DatenschutzUndEinwilligungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Datenschutz der Fachbehörde</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="signatur" type="xap:SignaturType">
+            <xs:annotation>
+               <xs:documentation>Information zur elektronischen Signatur</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="digitalerRueckkanal"
+                     minOccurs="0"
+                     type="xap:DigitalerRueckkanalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum digitalen Rückkanal</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="VerbleibenderSorgeberechtigterElternteilType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum verbleibenden/sorgeberechtigten Elternteil</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="personendaten" type="xap:PersonendatenType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Person</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="staatsangehoerigkeit"
+                     minOccurs="0"
+                     type="xfb:Code.StaatsangehoerigkeitType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Staatsangehörigkeit</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburt" minOccurs="0" type="xfb:GeburtOptionalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Geburtsdatum</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkuenfteAusTaetigkeit" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Einkünfte aus Tätigkeit</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="andereEinkuenfte" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Angabe von anderen Einkünften</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="schuldverpflichtungen" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Schuldverpflichtungen (z.B. Kredite)</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="unterhaltsverpflichtungen" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Unterhaltsverpflichtungen</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="monatlicheFixkostenUnterkunft" minOccurs="0" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Monatliche Fixkosten für Unterkunft.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aufenthaltsstatus"
+                     minOccurs="0"
+                     type="xfb:Code.AufenthaltsstatusType">
+            <xs:annotation>
+               <xs:documentation>Ein unsicherer Aufenthaltsstatus der Bewerbenden kann ein Indiz für sachfremde Motive für die gewünschte Adoption sein. Daher ist eine Abfrage erforderlich. Rechtsgrundlage: §§ 68 I Nr. 12, 60 ff. SGB I, §§ 7 I, II, 7e S. 1 Nr. 1, 9e AdVermiG.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geschlecht" minOccurs="0" type="xfb:Code.GeschlechtType">
+            <xs:annotation>
+               <xs:documentation>Bei Bewerbungen von gleichgeschlechtlichen Paaren ergeben sich spezifische Themen, die in den Beratungsgespräche miteinbezogen werden müssen. Rechtsgrundlage: §§ 68 I Nr. 12, 60 ff. SGB I, §§ 7 I, II, 7e S. 1 Nr. 1, 9e AdVermiG.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="VerwandtenadoptionType">
+      <xs:annotation>
+         <xs:documentation>Formular Verwandtenadoption</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="beratungscode" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Eingabe des Beratungscodes</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="datenschutzUndEinwilligung"
+                     type="xap:DatenschutzUndEinwilligungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Datenschutz.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="angabenDesZuAdoptierendenKindes"
+                     type="xap:AngabenDesZuAdoptierendenKindesType">
+            <xs:annotation>
+               <xs:documentation>Angaben des zu adoptierenden Kindes</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="allgemeineAngaben"
+                     type="xap:AllgemeineAngabenVerwandtenadoptionType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Person</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="annehmenderElternteil"
+                     maxOccurs="unbounded"
+                     type="xap:AnnehmenderElternteilType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum annehmenden Elternteil</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="angabenZurPartnerschaft" type="xap:AngabenZurPartnerschaftType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Partnerschaft</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="angabenZuKindernDerFamilie"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xap:AngabenZuKindernDerFamilieType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Kindern in der Familie</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="weiterePersonenImHauhalt"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xap:WeiterePersonenImHauhaltType">
+            <xs:annotation>
+               <xs:documentation>Weitere Personen im Haushalt (ab 14 Jahren)</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="abgebenderElternteil"
+                     maxOccurs="2"
+                     type="xap:AbgebenderElternteilType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum abgebenden Elternteil</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweise"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xap:NachweisType">
+            <xs:annotation>
+               <xs:documentation>Nachweisdokument(e)</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="datenschutzDerFachbehoerde"
+                     maxOccurs="unbounded"
+                     type="xap:DatenschutzUndEinwilligungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Datenschutz der Fachbehörde</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="signatur" type="xap:SignaturType">
+            <xs:annotation>
+               <xs:documentation>Information zur elektronischen Signatur</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="digitalerRueckkanal"
+                     minOccurs="0"
+                     type="xap:DigitalerRueckkanalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum digitalen Rückkanal</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="WeiterePersonenImHauhaltType">
+      <xs:annotation>
+         <xs:documentation>Weitere Personen im Haushalt (über 18 Jahren)</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="personendaten" type="xap:PersonendatenType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Person</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="beziehungZurPerson" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>In welcher Beziehung stehen Sie zu der Person?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburt" minOccurs="0" type="xfb:GeburtOptionalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Geburtsdatum und Geburtsort</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="adoptionundpflegekinder.adoption.0901">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Rechtsgrundlage</rechtsgrundlage>
+         </xs:appinfo>
+         <xs:documentation>Formulare des Online-Dienstes</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:NachrichtType">
+               <xs:sequence>
+                  <xs:element name="kontaktformular" type="xap:KontakformularType">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zum Datenschutz, Personendaten, Anschrift, dem Anliegen, Datenschutz der Fachbehörde und dem digitalen Rückkanal</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="nachweiseEinreichen" type="xap:NachweiseEinreichenType">
+                     <xs:annotation>
+                        <xs:documentation>Formular Nachweise einreichen</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="stiefkindadoption" type="xap:StiefkindadoptionType">
+                     <xs:annotation>
+                        <xs:documentation>Formular Stiefkindadoption</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="verwandtenadoption" type="xap:VerwandtenadoptionType">
+                     <xs:annotation>
+                        <xs:documentation>Formular Verwandtenadoption</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="fremdkindadoption" type="xap:FremdkindadoptionType">
+                     <xs:annotation>
+                        <xs:documentation>Formular Fremdkindadoption</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="adoptionundpflegekinder.pflegekinder.0902">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Rechtsgrundlage</rechtsgrundlage>
+         </xs:appinfo>
+         <xs:documentation>Formulare des Online-Dienstes</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:NachrichtType">
+               <xs:sequence>
+                  <xs:element name="kontaktformular" type="xap:KontakformularType">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zum Datenschutz, Personendaten, Anschrift, dem Anliegen, Datenschutz der Fachbehörde und dem digitalen Rückkanal.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="nachweiseEinreichen" type="xap:NachweiseEinreichenType">
+                     <xs:annotation>
+                        <xs:documentation>Formular Nachweise einreichen</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="pflegeperson" type="xap:PflegepersonType">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zur Pflegeperson</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="sonstigeAntraegeSenden" type="xap:SonstigeAntraegeSendenType">
+                     <xs:annotation>
+                        <xs:documentation>Formular sonstige Anträge senden</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="beitragsuebernahmeUnfallversicherung"
+                              type="xap:BeitragsuebernahmeUnfallversicherungType">
+                     <xs:annotation>
+                        <xs:documentation>Formular Beitragsübernahme der Unfallversicherung von Pflegepersonen</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="alterssicherungPflegeperson"
+                              type="xap:AlterssicherungPflegepersonType">
+                     <xs:annotation>
+                        <xs:documentation>Formular Altersvorsorge von Pflegepersonen</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="pauschalbetragVollzeitpflege"
+                              type="xap:PauschalbetragVollzeitpflegeType">
+                     <xs:annotation>
+                        <xs:documentation>Formular monatlicher Pauschalbetrag in der Vollzeitpflege</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>

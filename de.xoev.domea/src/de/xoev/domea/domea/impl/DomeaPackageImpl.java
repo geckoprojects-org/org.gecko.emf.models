@@ -17,14 +17,6 @@ import basisnachricht.BasisnachrichtPackage;
 
 import basisnachricht.impl.BasisnachrichtPackageImpl;
 
-import code.CodePackage;
-
-import code.impl.CodePackageImpl;
-
-import datatypedin.DatatypedinPackage;
-
-import datatypedin.impl.DatatypedinPackageImpl;
-
 import de.xoev.domea.domea.AkteType;
 import de.xoev.domea.domea.AkteninhaltType;
 import de.xoev.domea.domea.AktenplanType;
@@ -136,6 +128,10 @@ import de.xoev.domea.domea.VorgangType;
 import de.xoev.domea.domea.ZeitraumType;
 
 import de.xoev.domea.domea.util.DomeaValidator;
+
+import de.xoev.kosit.datentyp._202204.din91379.DIN913792204Package;
+
+import de.xoev.schemata.code.code.Code10Package;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -958,27 +954,21 @@ public class DomeaPackageImpl extends EPackageImpl implements DomeaPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
+		DIN913792204Package.eINSTANCE.eClass();
+		Code10Package.eINSTANCE.eClass();
 		XMLTypePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
 		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(BasisnachrichtPackage.eNS_URI);
 		BasisnachrichtPackageImpl theBasisnachrichtPackage = (BasisnachrichtPackageImpl)(registeredPackage instanceof BasisnachrichtPackageImpl ? registeredPackage : BasisnachrichtPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(CodePackage.eNS_URI);
-		CodePackageImpl theCodePackage = (CodePackageImpl)(registeredPackage instanceof CodePackageImpl ? registeredPackage : CodePackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(DatatypedinPackage.eNS_URI);
-		DatatypedinPackageImpl theDatatypedinPackage = (DatatypedinPackageImpl)(registeredPackage instanceof DatatypedinPackageImpl ? registeredPackage : DatatypedinPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theDomeaPackage.createPackageContents();
 		theBasisnachrichtPackage.createPackageContents();
-		theCodePackage.createPackageContents();
-		theDatatypedinPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theDomeaPackage.initializePackageContents();
 		theBasisnachrichtPackage.initializePackageContents();
-		theCodePackage.initializePackageContents();
-		theDatatypedinPackage.initializePackageContents();
 
 		// Register package validator
 		EValidator.Registry.INSTANCE.put
@@ -5089,9 +5079,9 @@ public class DomeaPackageImpl extends EPackageImpl implements DomeaPackage {
 
 		// Obtain other dependent packages
 		XMLTypePackage theXMLTypePackage = (XMLTypePackage)EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
-		CodePackage theCodePackage = (CodePackage)EPackage.Registry.INSTANCE.getEPackage(CodePackage.eNS_URI);
+		Code10Package theCode10Package = (Code10Package)EPackage.Registry.INSTANCE.getEPackage(Code10Package.eNS_URI);
 		BasisnachrichtPackage theBasisnachrichtPackage = (BasisnachrichtPackage)EPackage.Registry.INSTANCE.getEPackage(BasisnachrichtPackage.eNS_URI);
-		DatatypedinPackage theDatatypedinPackage = (DatatypedinPackage)EPackage.Registry.INSTANCE.getEPackage(DatatypedinPackage.eNS_URI);
+		DIN913792204Package theDIN913792204Package = (DIN913792204Package)EPackage.Registry.INSTANCE.getEPackage(DIN913792204Package.eNS_URI);
 
 		// Create type parameters
 
@@ -5099,67 +5089,67 @@ public class DomeaPackageImpl extends EPackageImpl implements DomeaPackage {
 
 		// Add supertypes to classes
 		aktenplaneinheitAktenplanTypeEClass.getESuperTypes().add(this.getAktenplaneinheitType());
-		allgemeineRueckmeldungCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
+		allgemeineRueckmeldungCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
 		anlageDokumentTypeEClass.getESuperTypes().add(this.getDokumentOderDokumentMitSchriftstueckType());
-		anschriftstypCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		aussonderungsartCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		beteiligungsstatusCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		bewertungsvorschlagCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		dateiformatCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		datenaustauschartCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		datenschutzstufeCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		datentypCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
+		anschriftstypCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		aussonderungsartCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		beteiligungsstatusCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		bewertungsvorschlagCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		dateiformatCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		datenaustauschartCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		datenschutzstufeCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		datentypCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
 		dokumentMitSchriftstueckTypeEClass.getESuperTypes().add(this.getDokumentSchriftstueckBasisType());
 		dokumentTypeEClass.getESuperTypes().add(this.getDokumentSchriftstueckBasisType());
-		geheimhaltungsgradCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
+		geheimhaltungsgradCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
 		identifikationNachrichtTypeEClass.getESuperTypes().add(theBasisnachrichtPackage.getIdentifikationNachrichtType());
 		kommunikationTypeEClass.getESuperTypes().add(theBasisnachrichtPackage.getKommunikationType());
-		kompressionsverfahrenCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		konfigurationsparameterCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		konfigurationsparameterGruppeCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		kryptographischeAlgorithmenCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		mediumCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		nachrichtentypCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
+		kompressionsverfahrenCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		konfigurationsparameterCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		konfigurationsparameterGruppeCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		kryptographischeAlgorithmenCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		mediumCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		nachrichtentypCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
 		nkFVDatenTypeEClass.getESuperTypes().add(this.getNachrichtType());
 		nkNichtFVDatenEinLeserMitEmpfangsbestaetigungTypeEClass.getESuperTypes().add(this.getNachrichtType());
 		nkNichtFVDatenWeitereLeserMitEmpfangsbestaetigungTypeEClass.getESuperTypes().add(this.getNkNichtFVDatenWeitereLeserType());
 		nkNichtFVDatenWeitereLeserTypeEClass.getESuperTypes().add(this.getNachrichtType());
-		rolleCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		schriftgutobjekttypCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		sonstigeFehlermeldungCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0601CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0602CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0603CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0604CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0605CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0606CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0607CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0608CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0609CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0610CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0611CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0612CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0613CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0614CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0615CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0616CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0617CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0618CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0619CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0620CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0621CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0622CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0623CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0624CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0625CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0626CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0627CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0628CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0631CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		spezifischeFehlermeldung0632CodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		staatCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		strukturelementTypCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
-		transportwegCodeTypeEClass.getESuperTypes().add(theCodePackage.getCode());
+		rolleCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		schriftgutobjekttypCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		sonstigeFehlermeldungCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0601CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0602CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0603CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0604CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0605CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0606CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0607CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0608CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0609CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0610CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0611CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0612CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0613CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0614CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0615CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0616CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0617CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0618CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0619CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0620CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0621CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0622CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0623CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0624CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0625CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0626CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0627CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0628CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0631CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		spezifischeFehlermeldung0632CodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		staatCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		strukturelementTypCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
+		transportwegCodeTypeEClass.getESuperTypes().add(theCode10Package.getCode());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(akteninhaltTypeEClass, AkteninhaltType.class, "AkteninhaltType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -5282,7 +5272,7 @@ public class DomeaPackageImpl extends EPackageImpl implements DomeaPackage {
 
 		initEClass(behoerdeTypeEClass, BehoerdeType.class, "BehoerdeType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBehoerdeType_Verzeichnisdienst(), theBasisnachrichtPackage.getCodeVerzeichnisdienstType(), null, "verzeichnisdienst", null, 1, 1, BehoerdeType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBehoerdeType_Kennung(), theDatatypedinPackage.getDatatypeC(), "kennung", null, 1, 1, BehoerdeType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBehoerdeType_Kennung(), theDIN913792204Package.getDatatypeC(), "kennung", null, 1, 1, BehoerdeType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(beteiligungsschrittTypeEClass, BeteiligungsschrittType.class, "BeteiligungsschrittType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBeteiligungsschrittType_Nummer(), theXMLTypePackage.getString(), "nummer", null, 1, 1, BeteiligungsschrittType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5439,12 +5429,12 @@ public class DomeaPackageImpl extends EPackageImpl implements DomeaPackage {
 
 		initEClass(nachrichtTypeEClass, NachrichtType.class, "NachrichtType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getNachrichtType_Nachrichtenkopf(), this.getNachrichtenkopfType(), null, "nachrichtenkopf", null, 1, 1, NachrichtType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNachrichtType_Produkt(), theDatatypedinPackage.getDatatypeC(), "produkt", null, 1, 1, NachrichtType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNachrichtType_Produkthersteller(), theDatatypedinPackage.getDatatypeC(), "produkthersteller", null, 1, 1, NachrichtType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNachrichtType_Produktversion(), theDatatypedinPackage.getDatatypeC(), "produktversion", null, 0, 1, NachrichtType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNachrichtType_Standard(), theDatatypedinPackage.getDatatypeC(), "standard", "xdomea", 1, 1, NachrichtType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNachrichtType_Test(), theDatatypedinPackage.getDatatypeC(), "test", null, 0, 1, NachrichtType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNachrichtType_Version(), theDatatypedinPackage.getDatatypeC(), "version", "4.0.0", 1, 1, NachrichtType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNachrichtType_Produkt(), theDIN913792204Package.getDatatypeC(), "produkt", null, 1, 1, NachrichtType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNachrichtType_Produkthersteller(), theDIN913792204Package.getDatatypeC(), "produkthersteller", null, 1, 1, NachrichtType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNachrichtType_Produktversion(), theDIN913792204Package.getDatatypeC(), "produktversion", null, 0, 1, NachrichtType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNachrichtType_Standard(), theDIN913792204Package.getDatatypeC(), "standard", "xdomea", 1, 1, NachrichtType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNachrichtType_Test(), theDIN913792204Package.getDatatypeC(), "test", null, 0, 1, NachrichtType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNachrichtType_Version(), theDIN913792204Package.getDatatypeC(), "version", "4.0.0", 1, 1, NachrichtType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nameNatuerlichePersonTypeEClass, NameNatuerlichePersonType.class, "NameNatuerlichePersonType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNameNatuerlichePersonType_Anrede(), theXMLTypePackage.getString(), "anrede", null, 0, 1, NameNatuerlichePersonType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

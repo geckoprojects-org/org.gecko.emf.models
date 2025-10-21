@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2025 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"
+    modelDirectory="/de.xoev.basisnachricht/src" modelPluginID="de.xoev.basisnachricht"
+    modelName="Basisnachricht" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.xsd.ecore.importer" complianceLevel="11.0" copyrightFields="false"
+    usedGenPackages="../../de.xoev.din91379/model/din-91379-1903.genmodel#//din91379 ../../de.xoev.code/model/xoev-code.genmodel#//code"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>xsd/xoev-basisnachricht-g2g.xsd</foreignModel>
+  <genPackages prefix="BasisG2G" basePackage="de.xoev.schemata.basisnachricht.g2g"
+      resource="XML" disposableProviderFactory="true" ecorePackage="basisnachricht-g2g.ecore#/">
+    <genDataTypes ecoreDataType="basisnachricht-g2g.ecore#//UUID"/>
+    <genClasses ecoreClass="basisnachricht-g2g.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute basisnachricht-g2g.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference basisnachricht-g2g.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference basisnachricht-g2g.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basisnachricht-g2g.ecore#//DocumentRoot/autor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basisnachricht-g2g.ecore#//DocumentRoot/identifikationNachricht"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basisnachricht-g2g.ecore#//DocumentRoot/leser"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basisnachricht-g2g.ecore#//DocumentRoot/nachrichtenkopfG2g"/>
+    </genClasses>
+    <genClasses ecoreClass="basisnachricht-g2g.ecore#//IdentifikationNachrichtType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht-g2g.ecore#//IdentifikationNachrichtType/nachrichtenUUID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basisnachricht-g2g.ecore#//IdentifikationNachrichtType/nachrichtentyp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht-g2g.ecore#//IdentifikationNachrichtType/erstellungszeitpunkt"/>
+    </genClasses>
+    <genClasses ecoreClass="basisnachricht-g2g.ecore#//NachrichtenkopfG2GType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basisnachricht-g2g.ecore#//NachrichtenkopfG2GType/identifikationNachricht"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basisnachricht-g2g.ecore#//NachrichtenkopfG2GType/leser"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basisnachricht-g2g.ecore#//NachrichtenkopfG2GType/autor"/>
+    </genClasses>
+    <genClasses ecoreClass="basisnachricht-g2g.ecore#//NachrichtG2GType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basisnachricht-g2g.ecore#//NachrichtG2GType/nachrichtenkopfG2g"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht-g2g.ecore#//NachrichtG2GType/produkt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht-g2g.ecore#//NachrichtG2GType/produkthersteller"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht-g2g.ecore#//NachrichtG2GType/produktversion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht-g2g.ecore#//NachrichtG2GType/standard"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht-g2g.ecore#//NachrichtG2GType/test"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht-g2g.ecore#//NachrichtG2GType/version"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="BasisBehoerde" basePackage="de.xoev.schemata.basisnachricht.behoerde"
+      resource="XML" disposableProviderFactory="true" ecorePackage="basisnachricht-behoerde.ecore#/">
+    <genClasses ecoreClass="basisnachricht-behoerde.ecore#//BehoerdeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basisnachricht-behoerde.ecore#//BehoerdeType/verzeichnisdienst"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht-behoerde.ecore#//BehoerdeType/kennung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht-behoerde.ecore#//BehoerdeType/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basisnachricht-behoerde.ecore#//BehoerdeType/erreichbarkeit"/>
+    </genClasses>
+    <genClasses ecoreClass="basisnachricht-behoerde.ecore#//CodeVerzeichnisdienstType"/>
+  </genPackages>
+  <genPackages prefix="BasisKommunikation" basePackage="de.xoev.schemata.basisnachricht.kommunikation"
+      resource="XML" disposableProviderFactory="true" ecorePackage="basisnachricht-kommunikation.ecore#/">
+    <genClasses ecoreClass="basisnachricht-kommunikation.ecore#//CodeKommunikationKanalType"/>
+    <genClasses ecoreClass="basisnachricht-kommunikation.ecore#//KommunikationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basisnachricht-kommunikation.ecore#//KommunikationType/kanal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht-kommunikation.ecore#//KommunikationType/kennung"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht-kommunikation.ecore#//KommunikationType/zusatz"/>
+    </genClasses>
+    <genClasses ecoreClass="basisnachricht-kommunikation.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute basisnachricht-kommunikation.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference basisnachricht-kommunikation.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference basisnachricht-kommunikation.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basisnachricht-kommunikation.ecore#//DocumentRoot/erreichbarkeit"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

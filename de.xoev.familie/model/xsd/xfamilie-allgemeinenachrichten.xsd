@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:xfa="http://www.xoev.de/xfamilie/allgemeinenachrichten/1.3.0"
+           xmlns:din91379="urn:xoev-de:kosit:xoev:datentyp:din-91379_2022-08"
+           xmlns:xfb="http://www.xoev.de/xfamilie/baukasten/1.3.0"
+           xmlns:xoev-code="http://xoev.de/schemata/code/1_0"
+           targetNamespace="http://www.xoev.de/xfamilie/allgemeinenachrichten/1.3.0"
+           version="1.3.0"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+   <xs:annotation>
+      <xs:appinfo>
+         <standard>
+            <nameLang>XFamilie</nameLang>
+            <nameKurz>XFamilie</nameKurz>
+            <nameTechnisch>xfamilie</nameTechnisch>
+            <kennung>urn:xoev-de:kosit:standard:xfamilie</kennung>
+            <beschreibung>Projektziel ist die elektronische Kommunikation im Familienbereich zwischen verschiedenen Behörden, Institutionen, Registern und Onlineportalen, die Daten untereinander austauschen, zu unterstützen. Der Nutzen des Projekts besteht in der Kostenreduktion und einer Verbesserung der Qualität von Daten für Familienleistungen, sowie einer Verbesserung der Interoperabilität von Akteuren im Familienbereich und weiteren Kommunikationspartner.</beschreibung>
+         </standard>
+         <versionStandard>
+            <version>1.3.0</version>
+            <beschreibung>Die Änderungshistorie befindet sich in Tabellenform nach Change Requests gegliedert in Kapitel E.</beschreibung>
+            <versionXOEVProfil>3.0.2</versionXOEVProfil>
+            <versionXOEVHandbuch>3.0.2</versionXOEVHandbuch>
+            <versionXGenerator>3.1.0</versionXGenerator>
+            <versionModellierungswerkzeug>19.0</versionModellierungswerkzeug>
+            <nameModellierungswerkzeug>MagicDraw</nameModellierungswerkzeug>
+         </versionStandard>
+      </xs:appinfo>
+   </xs:annotation>
+   <xs:import schemaLocation="din-norm-91379-datatypes.xsd"
+              namespace="urn:xoev-de:kosit:xoev:datentyp:din-91379_2022-08"/>
+   <xs:import schemaLocation="xfamilie-baukasten.xsd"
+              namespace="http://www.xoev.de/xfamilie/baukasten/1.3.0"/>
+   <xs:import schemaLocation="xoev-code.xsd"
+              namespace="http://xoev.de/schemata/code/1_0"/>
+   <xs:complexType name="Code.RueckweisungsgrundType">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Rueckweisungsgruende</nameLang>
+               <nameKurz>Rueckweisungsgruende</nameKurz>
+               <nameTechnisch>rueckweisungsgruende</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:rueckweisungsgruende</kennung>
+               <beschreibung>Diese Tabelle führt mögliche Gründe für eine Rücksendung einer Nachricht an den Absender auf. Mit dem Präfix des jeweiligen Schlüssels wird folgende Systematik festgelegt: T (Transportproblem), X (formales Problem mit XML), V (Versionsproblem), S (nicht spezifikationskonform).</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+            <genutzteCodeSpalte>code</genutzteCodeSpalte>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:restriction base="xoev-code:Code">
+            <xs:sequence>
+               <xs:element name="code" form="unqualified" type="xfa:rueckweisungsgruende"/>
+            </xs:sequence>
+            <xs:attribute name="listURI"
+                          type="xs:anyURI"
+                          use="optional"
+                          fixed="urn:xoev-de:xfamilie:codeliste:rueckweisungsgruende"/>
+            <xs:attribute name="listVersionID"
+                          type="xs:normalizedString"
+                          use="optional"
+                          fixed="1.0"/>
+         </xs:restriction>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="RueckweisendeStelleType">
+      <xs:sequence>
+         <xs:element name="pruefinstanz" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Mit diesem Element wird die Stelle bezeichnet, die die Nachricht beanstandet hat.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="erreichbarkeit"
+                     maxOccurs="unbounded"
+                     type="xfb:ErreichbarkeitType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Erreichbarkeit</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="RueckweisungsgrundSpezifischType">
+      <xs:annotation>
+         <xs:documentation>In diesem Datentyp wird ein Grund für die Rückweisung der Nachricht in Form eines beliebigen kontextspezifischen Fehlercodes und/oder einer Fehlerbeschreibung genauer spezifiziert.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="code" minOccurs="0" type="xoev-code:Code"/>
+         <xs:element name="beschreibung" minOccurs="0" type="din91379:datatypeC"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="RueckweisungsgrundType">
+      <xs:sequence>
+         <xs:element name="grund" type="xfa:Code.RueckweisungsgrundType">
+            <xs:annotation>
+               <xs:documentation>Mit diesem Element wird ein Grund übermittelt, aus dem die Nachricht zurückgewiesen wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="grundSpezifisch"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfa:RueckweisungsgrundSpezifischType">
+            <xs:annotation>
+               <xs:documentation>In diesem Element können weitere - im Allgemeinen kontextspezifische Angaben - zu dem Grund übermittelt werden, aus dem die Nachricht zurückgewiesen wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="TransportinformationenType">
+      <xs:sequence>
+         <xs:element name="nachrichtenId" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Hier kann eine Identifikation der aus den genannten Gründen zurückgewiesenen Nachricht übermittelt werden, sofern sich diese aus dem Transportprotokoll entnehmen lässt. Im Falle von OSCI-Transport wäre hier die messageID des Transportumschlages zu nutzen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="betreff" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Hier kann der Inhalt der Betreff- oder Subject-Zeile der aus den genannten Gründen zurückgewiesenen Nachricht übermittelt werden, sofern sich diese aus dem Transportprotokoll entnehmen lässt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="sendezeitpunkt" minOccurs="0" type="xs:dateTime">
+            <xs:annotation>
+               <xs:documentation>Hier kann der Zeitpunkt des Versands der aus den genannten Gründen zurückgewiesenen Nachricht übermittelt werden, sofern sich dieser aus dem Transportprotokoll entnehmen lässt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="ergaenzendeHinweise" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Hier können weitere Angaben gemacht werden, die dem Empfänger der aus den genannten Gründen zurückgewiesenen Nachricht helfen, diese in seinem Verfahren zu identifizieren.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType name="rueckweisungsgruende">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Rueckweisungsgruende</nameLang>
+               <nameKurz>Rueckweisungsgruende</nameKurz>
+               <nameTechnisch>rueckweisungsgruende</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:rueckweisungsgruende</kennung>
+               <beschreibung>Diese Tabelle führt mögliche Gründe für eine Rücksendung einer Nachricht an den Absender auf. Mit dem Präfix des jeweiligen Schlüssels wird folgende Systematik festgelegt: T (Transportproblem), X (formales Problem mit XML), V (Versionsproblem), S (nicht spezifikationskonform).</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="S001">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Nicht spezifikationskonform: Die Nachricht ist nicht UTF-8 codiert</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="S010">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Nicht spezifikationskonform: Ungültige Codeliste</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="S011">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Nicht spezifikationskonform: Ungültiger Code in einer Codeliste</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="S100">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Nicht spezifikationskonform: Rückweisung aufgrund erneuter Lieferung eines bereits erfolgreich verarbeiteten Datensatzes</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="S999">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Nicht spezifikationskonform aus anderen Gründen</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="T000">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Das Zertifikat des Absenders ist abgelaufen</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="T001">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Das Zertifikat des Absenders ist widerrufen</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="T002">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Das Zertifikat des Absenders ist nicht gültig</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="T003">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Das Zertifikat des Absenders fehlt</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="T010">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Die Signatur der Inhaltsdaten fehlt oder hat nicht das geforderte Signaturniveau</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="T011">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Die Signatur der Inhaltsdaten ist nicht gültig (Integrität verletzt)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="T020">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Die Inhaltsdaten können von dem Empfänger nicht dechiffriert werden</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="T070">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Der Absender ist zur Inanspruchnahme dieses Dienstes nicht berechtigt</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="T080">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Die Nachricht ist dem falschen Empfänger / Leser zugestellt worden, d. h. im Nachrichtenkopf ist eine abweichende Empfängerbehörde eingetragen (Irrläufer)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="T099">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Sonstiger Verstoß gegen Anforderungen des OSCI-Transport-Profils</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="V000">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Nicht spezifikationskonform: Die Nachricht kann in der Version, die in der Nachricht angegeben wird, vom Empfänger nicht bearbeitet werden (Der Dienst ist in dieser Version nicht oder nicht mehr bereit)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="X000">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Die Nachricht ist kein wohlgeformtes XML-Dokument</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="X001">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Die Nachricht ist nicht valide zu dem Schema der in der Nachricht angegebenen Version</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="X002">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Die Nachricht ist nicht valide zu den Schematron-Regeln, die für diese Nachricht gelten. Schematron-Fehlercode(s) werden als Unter-Codes mitgeteilt</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:element name="allgemeinenachrichten.rueckweisung.0001">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Rechtsgrundlage</rechtsgrundlage>
+         </xs:appinfo>
+         <xs:documentation>Mit dieser Nachricht wird eine an den Leser gerichtete Ursprungsnachricht als fehlerhaft an den Autor zurückgewiesen.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:NachrichtType">
+               <xs:sequence>
+                  <xs:element name="rueckweisendeStelle"
+                              minOccurs="0"
+                              type="xfa:RueckweisendeStelleType">
+                     <xs:annotation>
+                        <xs:documentation>Dieses Kindelement ist nur dann zu übermitteln, wenn die Nachricht nicht von dem ursprünglich adressierten Leser zurückgesandt wird, sondern von einer anderen Stelle (zum Beispiel einer Clearingstelle, die im Auftrag der ursprünglich adressierten Behörde eine Prüfung eingehender Nachrichten nach formalen Kriterien durchführt).</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="rueckweisungsgrund"
+                              maxOccurs="unbounded"
+                              type="xfa:RueckweisungsgrundType">
+                     <xs:annotation>
+                        <xs:documentation>In diesem Element werden die Gründe mitgeteilt, aufgrund derer die Nachricht zurückgewiesen wird. Generell ist so vorzugehen, dass die Gründe für die Rückweisung so präzise und vollständig wie möglich bezeichnet werden, um eine schnelle Klärung des Sachverhalts zu ermöglichen.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="transportinformationen"
+                              minOccurs="0"
+                              type="xfa:TransportinformationenType">
+                     <xs:annotation>
+                        <xs:documentation>In diesem Element sind Informationen zu übermitteln, die bei dem Empfang einer als fehlerhaft betrachteten Nachricht möglicherweise der Transportebene entnommen werden konnten. Diese Angaben können gemacht werden, um dem Leser oder Empfänger einer Rücksendenachricht die Identifikation der als fehlerhaft betrachteten und nunmehr zurückgesandten Nachricht zu erleichtern. Alle Kindelemente dieses Elementes sind optional, da keine verbindlichen Anforderungen an das Transportprotokoll gestellt werden können.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="identifikation.nachricht"
+                              minOccurs="0"
+                              type="xfb:Identifikation.NachrichtType">
+                     <xs:annotation>
+                        <xs:documentation>In diesem Kindelement wird die die Rückweisung auslösende fachliche Nachricht identifiziert. Sofern kein Transportfehler vorliegt und die Ursprungsnachricht schemakonform ist, muss das Element übermittelt werden. Ist die Ursprungsnachricht nicht schemakonform, kann die Übermittlung des Elements entfallen.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="nachricht" minOccurs="0" type="xs:base64Binary">
+                     <xs:annotation>
+                        <xs:documentation>Dieses Element enthält die aus den genannten Gründen zurückgewiesene ursprüngliche Nachricht. Um technische Probleme mit verschachtelten XML-Dokumenten zu vermeiden, ist der zurückgewiesene Inhalt immer base64-codiert zurückzusenden. Dieses Element ist nur anzugeben, wenn die zurückgewiesene Nachricht nicht schema-konform ist.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="allgemeinenachrichten.quittung.0011">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Rechtsgrundlage</rechtsgrundlage>
+         </xs:appinfo>
+         <xs:documentation>Mit dieser Nachricht quittiert die fachlich zuständige Stelle dem Antragsservice, dass sie eine zuvor erhaltene Nachricht erfolgreich erhalten und auf Spezifikationskonformität geprüft hat und somit aus technische Sicht einer Weiterverarbeitung im Fachverfahren der zuständigen Stelle nichts im Wege steht. Die Quittungsnachricht ist von allen fachlichen Bereichen umzusetzen.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:NachrichtType">
+               <xs:sequence>
+                  <xs:element name="identifikation.nachricht" type="xfb:Identifikation.NachrichtType">
+                     <xs:annotation>
+                        <xs:documentation>Identifikation der Ursprungsnachricht (nicht: Transaktions-ID), die quittiert wird.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>

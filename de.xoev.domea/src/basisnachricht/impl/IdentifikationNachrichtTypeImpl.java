@@ -16,7 +16,7 @@ package basisnachricht.impl;
 import basisnachricht.BasisnachrichtPackage;
 import basisnachricht.IdentifikationNachrichtType;
 
-import code.Code;
+import de.xoev.schemata.code.code.Code;
 
 import javax.xml.datatype.XMLGregorianCalendar;
 

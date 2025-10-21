@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="dsrv" nsURI="http://www.xoev.de/xfamilie/dsrv/1.3.0" nsPrefix="dsrv">
+  <eAnnotations>
+    <details key="appinfo" value="&#xA;           &#xA;  &lt;standard>&#xA;                &#xA;    &lt;nameLang>XFamilie&lt;/nameLang>&#xA;                &#xA;    &lt;nameKurz>XFamilie&lt;/nameKurz>&#xA;                &#xA;    &lt;nameTechnisch>xfamilie&lt;/nameTechnisch>&#xA;                &#xA;    &lt;kennung>urn:xoev-de:kosit:standard:xfamilie&lt;/kennung>&#xA;                &#xA;    &lt;beschreibung>Projektziel ist die elektronische Kommunikation im Familienbereich zwischen verschiedenen Behörden, Institutionen, Registern und Onlineportalen, die Daten untereinander austauschen, zu unterstützen. Der Nutzen des Projekts besteht in der Kostenreduktion und einer Verbesserung der Qualität von Daten für Familienleistungen, sowie einer Verbesserung der Interoperabilität von Akteuren im Familienbereich und weiteren Kommunikationspartner.&lt;/beschreibung>&#xA;             &#xA;  &lt;/standard>&#xA;           &#xA;  &lt;versionStandard>&#xA;                &#xA;    &lt;version>1.3.0&lt;/version>&#xA;                &#xA;    &lt;beschreibung>Die Änderungshistorie befindet sich in Tabellenform nach Change Requests gegliedert in Kapitel E.&lt;/beschreibung>&#xA;                &#xA;    &lt;versionXOEVProfil>3.0.2&lt;/versionXOEVProfil>&#xA;                &#xA;    &lt;versionXOEVHandbuch>3.0.2&lt;/versionXOEVHandbuch>&#xA;                &#xA;    &lt;versionXGenerator>3.1.0&lt;/versionXGenerator>&#xA;                &#xA;    &lt;versionModellierungswerkzeug>19.0&lt;/versionModellierungswerkzeug>&#xA;                &#xA;    &lt;nameModellierungswerkzeug>MagicDraw&lt;/nameModellierungswerkzeug>&#xA;             &#xA;  &lt;/versionStandard>&#xA;        &#xA;&#xA;&#xA;           &#xA;  &lt;standard>&#xA;                &#xA;    &lt;nameLang>XFamilie&lt;/nameLang>&#xA;                &#xA;    &lt;nameKurz>XFamilie&lt;/nameKurz>&#xA;                &#xA;    &lt;nameTechnisch>xfamilie&lt;/nameTechnisch>&#xA;                &#xA;    &lt;kennung>urn:xoev-de:kosit:standard:xfamilie&lt;/kennung>&#xA;                &#xA;    &lt;beschreibung>Projektziel ist die elektronische Kommunikation im Familienbereich zwischen verschiedenen Behörden, Institutionen, Registern und Onlineportalen, die Daten untereinander austauschen, zu unterstützen. Der Nutzen des Projekts besteht in der Kostenreduktion und einer Verbesserung der Qualität von Daten für Familienleistungen, sowie einer Verbesserung der Interoperabilität von Akteuren im Familienbereich und weiteren Kommunikationspartner.&lt;/beschreibung>&#xA;             &#xA;  &lt;/standard>&#xA;           &#xA;  &lt;versionStandard>&#xA;                &#xA;    &lt;version>1.3.0&lt;/version>&#xA;                &#xA;    &lt;beschreibung>Die Änderungshistorie befindet sich in Tabellenform nach Change Requests gegliedert in Kapitel E.&lt;/beschreibung>&#xA;                &#xA;    &lt;versionXOEVProfil>3.0.2&lt;/versionXOEVProfil>&#xA;                &#xA;    &lt;versionXOEVHandbuch>3.0.2&lt;/versionXOEVHandbuch>&#xA;                &#xA;    &lt;versionXGenerator>3.1.0&lt;/versionXGenerator>&#xA;                &#xA;    &lt;versionModellierungswerkzeug>19.0&lt;/versionModellierungswerkzeug>&#xA;                &#xA;    &lt;nameModellierungswerkzeug>MagicDraw&lt;/nameModellierungswerkzeug>&#xA;             &#xA;  &lt;/versionStandard>&#xA;        &#xA;"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="Diese Schema-Datei enthält die technische Repräsentation der in der Norm DIN 91379 definierten Datentypen."/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="AnyTypeFamilieDSRVType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Der Typ schränkt xs:anyType ein, indem nur zwei namespaces möglich sind."/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AnyTypeFamilieDSRVType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="any" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="elementWildcard"/>
+        <details key="wildcards" value="http://www.rvbea.de/XMLSchema/DXWL http://www.rvbea.de/XMLSchema/RVBEA_Antwort"/>
+        <details key="name" value=":0"/>
+        <details key="processing" value="lax"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value=""/>
+      <details key="kind" value="mixed"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mixed" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="elementWildcard"/>
+        <details key="name" value=":mixed"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="xMLNSPrefixMap" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStringToStringMapEntry"
+        transient="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="xmlns:prefix"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="xSISchemaLocation" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStringToStringMapEntry"
+        transient="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="xsi:schemaLocation"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dsrvAnfragervbea0401" upperBound="-2"
+        eType="#//DsrvAnfragervbea0401Type" volatile="true" transient="true" derived="true"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Das ELFE-Backend schickt zur Ermittlung der Einkommensdaten eine initiale Anfragenachricht per OSCI an die DSRV."/>
+      </eAnnotations>
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;              &#xA;  &lt;rechtsgrundlage>Rechtsgrundlage&lt;/rechtsgrundlage>&#xA;           &#xA;"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="dsrv.anfragervbea.0401"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dsrvEinkommensdatenrvbea0402"
+        upperBound="-2" eType="#//DsrvEinkommensdatenrvbea0402Type" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Für jeden gefundenen Arbeitgeber wird eine Abfrage über rvBEA gestartet, um die Einkommensdaten für den angefragten Zeitraum zu ermitteln. Die Antworten der Arbeitgeber erfolgen im Format DXEB welches, versehen mit einer Präambel, sofort an ELFE zurückgemeldet wird."/>
+      </eAnnotations>
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;              &#xA;  &lt;rechtsgrundlage>Rechtsgrundlage&lt;/rechtsgrundlage>&#xA;           &#xA;"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="dsrv.einkommensdatenrvbea.0402"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dsrvStatusantwortrvbea0403"
+        upperBound="-2" eType="#//DsrvStatusantwortrvbea0403Type" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Ausgehend von der initialen Anfrage wird versucht in den Datenbanken der DSRV eine Versicherungsnummer zu ermitteln. Falls dies nicht eindeutig gelingt, wird eine Fehlermeldung zurückgeschickt. Beide Varianten haben einen gemeinsamen Datenkopf."/>
+      </eAnnotations>
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;              &#xA;  &lt;rechtsgrundlage>Rechtsgrundlage&lt;/rechtsgrundlage>&#xA;           &#xA;"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="dsrv.statusantwortrvbea.0403"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DsrvAnfragervbea0401Type" eSuperTypes="baukasten.ecore#//NachrichtType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="dsrv.anfragervbea.0401_._type"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="abfrageID" lowerBound="1"
+        eType="ecore:EDataType baukasten.ecore#//UUIDType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Eindeutige ID, mit der sämtliche Antworten zu dieser Abfrage versehen werden."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="abfrageID"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anforderungsgrund" lowerBound="1"
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angaben zum Grund der Abfrage (z.B.: &quot;ELFE&quot;)"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="anforderungsgrund"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="einkommensDatenBisDatum"
+        lowerBound="1" eType="ecore:EDataType baukasten.ecore#//JahrMonatType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Einkommensdaten bis zu diesem Jahr/Monat der gesuchten Person."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="einkommensDatenBisDatum"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="einkommensDatenVonDatum"
+        lowerBound="1" eType="ecore:EDataType baukasten.ecore#//JahrMonatType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Einkommensdaten ab diesem Jahr/Monat der gesuchten Person."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="einkommensDatenVonDatum"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="geburt" lowerBound="1"
+        eType="ecore:EClass baukasten.ecore#//GeburtGeburtsortOptionalType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Geburtsdatum einer gesuchten Person."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburt"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nameNatuerlichePerson"
+        lowerBound="1" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Informationen zum Namen einer gesuchten Person."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="nameNatuerlichePerson"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="anschrift" lowerBound="1"
+        eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Aktueller Wohnort einer gesuchten Person."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="anschrift"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DsrvEinkommensdatenrvbea0402Type" eSuperTypes="baukasten.ecore#//NachrichtType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="dsrv.einkommensdatenrvbea.0402_._type"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dxeb" eType="#//AnyTypeFamilieDSRVType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Antwort auf eine rvBEA-Anforderung."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="dxeb"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ifdNrArbeitgeber" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Integer">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Im Kontext der Abfrage (abfrageID) verwendete eindeutige ID des Arbeitgebers."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="ifdNrArbeitgeber"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="abfrageID" lowerBound="1"
+        eType="ecore:EDataType baukasten.ecore#//UUIDType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Eindeutige ID, mit der sämtliche Antworten zu dieser Abfrage versehen werden."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="abfrageID"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DsrvStatusantwortrvbea0403Type" eSuperTypes="baukasten.ecore#//NachrichtType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="dsrv.statusantwortrvbea.0403_._type"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="abfrageID" lowerBound="1"
+        eType="ecore:EDataType baukasten.ecore#//UUIDType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Eindeutige ID, mit der sämtliche Antworten zu dieser Abfrage versehen werden."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="abfrageID"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rueckmeldung" eType="#//AnyTypeFamilieDSRVType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Falls keine oder mehrere Personen zu einer Anfrage gefunden werden kann, wird lediglich eine kurze Rückmeldung gegeben. Falls eine Person eindeutig identifiziert werden konnte, wird eine Rückmeldung zur Person und den Arbeitgebern gegeben."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="rueckmeldung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>

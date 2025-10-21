@@ -1,0 +1,1255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:xfhze="http://www.xoev.de/xfamilie/hilfenZurErziehung/1.3.0"
+           xmlns:din91379="urn:xoev-de:kosit:xoev:datentyp:din-91379_2022-08"
+           xmlns:xfb="http://www.xoev.de/xfamilie/baukasten/1.3.0"
+           xmlns:xfbss="http://www.xoev.de/xfamilie/beistandschaft/1.3.0"
+           xmlns:xoev-code="http://xoev.de/schemata/code/1_0"
+           targetNamespace="http://www.xoev.de/xfamilie/hilfenZurErziehung/1.3.0"
+           version="1.3.0"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+   <xs:annotation>
+      <xs:appinfo>
+         <standard>
+            <nameLang>XFamilie</nameLang>
+            <nameKurz>XFamilie</nameKurz>
+            <nameTechnisch>xfamilie</nameTechnisch>
+            <kennung>urn:xoev-de:kosit:standard:xfamilie</kennung>
+            <beschreibung>Projektziel ist die elektronische Kommunikation im Familienbereich zwischen verschiedenen Behörden, Institutionen, Registern und Onlineportalen, die Daten untereinander austauschen, zu unterstützen. Der Nutzen des Projekts besteht in der Kostenreduktion und einer Verbesserung der Qualität von Daten für Familienleistungen, sowie einer Verbesserung der Interoperabilität von Akteuren im Familienbereich und weiteren Kommunikationspartner.</beschreibung>
+         </standard>
+         <versionStandard>
+            <version>1.3.0</version>
+            <beschreibung>Die Änderungshistorie befindet sich in Tabellenform nach Change Requests gegliedert in Kapitel E.</beschreibung>
+            <versionXOEVProfil>3.0.2</versionXOEVProfil>
+            <versionXOEVHandbuch>3.0.2</versionXOEVHandbuch>
+            <versionXGenerator>3.1.0</versionXGenerator>
+            <versionModellierungswerkzeug>19.0</versionModellierungswerkzeug>
+            <nameModellierungswerkzeug>MagicDraw</nameModellierungswerkzeug>
+         </versionStandard>
+      </xs:appinfo>
+   </xs:annotation>
+   <xs:import schemaLocation="din-norm-91379-datatypes.xsd"
+              namespace="urn:xoev-de:kosit:xoev:datentyp:din-91379_2022-08"/>
+   <xs:import schemaLocation="xfamilie-baukasten.xsd"
+              namespace="http://www.xoev.de/xfamilie/baukasten/1.3.0"/>
+   <xs:import schemaLocation="xfamilie-beistandschaft.xsd"
+              namespace="http://www.xoev.de/xfamilie/beistandschaft/1.3.0"/>
+   <xs:import schemaLocation="xoev-code.xsd"
+              namespace="http://xoev.de/schemata/code/1_0"/>
+   <xs:complexType name="AngabenETType">
+      <xs:annotation>
+         <xs:documentation>Zu befüllen, wenn Vormund*in/Pfleger*in UND sorgeberechtigt != True</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="namen" type="xfb:NameNatuerlichePersonVornameVerpflichtendType"/>
+         <xs:element name="kontaktdaten"
+                     minOccurs="0"
+                     maxOccurs="2"
+                     type="xfb:ErreichbarkeitType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AngabenElternteilEingliederungType">
+      <xs:annotation>
+         <xs:documentation>Angaben zu weiteren Elternteilen für Eingliederungshilfe.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="namen" type="xfb:NameNatuerlichePersonVornameVerpflichtendType"/>
+         <xs:element name="angabenGeburtElternteil"
+                     minOccurs="0"
+                     type="xfb:GeburtGeburtsortOptionalType"/>
+         <xs:element name="aktuelleAnschrift"
+                     type="xfb:PostalischeInlandsanschrift.BasisType">
+            <xs:annotation>
+               <xs:documentation>Adresse, die im Personalausweis steht.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kontaktdaten" minOccurs="0" type="xfb:ErreichbarkeitType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AngabenElternteilHJVType">
+      <xs:annotation>
+         <xs:documentation>Zu befüllen, wenn Vormund*in/Pfleger*in UND sorgeberechtigt != True</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="namen" type="xfb:NameNatuerlichePersonVornameVerpflichtendType"/>
+         <xs:element name="geburtsdatum" type="xfb:TagesdatumType"/>
+         <xs:element name="aktuelleAnschrift"
+                     type="xfb:PostalischeInlandsanschrift.BasisType">
+            <xs:annotation>
+               <xs:documentation>Adresse, die im Personalausweis steht.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kontaktdaten" minOccurs="0" type="xfb:ErreichbarkeitType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AngabenKindEingliederungType">
+      <xs:sequence>
+         <xs:element name="namen" type="xfb:NameNatuerlichePersonVornameVerpflichtendType">
+            <xs:annotation>
+               <xs:documentation>Vorname, Familienname sind verpflichtend, Geburtsname ist an dieser Stelle irrelevant</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburtsdatum" type="xfb:TagesdatumType"/>
+         <xs:element name="geschlecht" type="xfb:Code.GeschlechtType"/>
+         <xs:element name="aufenthaltsort" type="xfhze:Code.AufenthaltType">
+            <xs:annotation>
+               <xs:documentation>Angabe zum Aufenthalt der Person.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="jugendlichAufenthaltsortSonstige"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Wird zu einer Pflichtangabe, wenn aufenthaltsort = Sonstiger Aufenthaltsort.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aktuelleAnschrift"
+                     type="xfb:PostalischeInlandsanschrift.BasisType"/>
+         <xs:element name="anschriftsaenderung" type="xs:boolean"/>
+         <xs:element name="seelischeBehinderung" minOccurs="0" type="xs:boolean"/>
+         <xs:element name="artDerBehinderung" minOccurs="0" type="din91379:datatypeC"/>
+         <xs:element name="aerztlicherNachweis" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Wird zu einer Pflichtangabe, wenn seelischeBehinderung = true.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AngabenKindHJVType">
+      <xs:sequence>
+         <xs:element name="namen" type="xfb:NameNatuerlichePersonVornameVerpflichtendType">
+            <xs:annotation>
+               <xs:documentation>Vorname, Familienname sind verpflichtend, Geburtsname ist an dieser Stelle irrelevant</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburtsdatum" type="xfb:TagesdatumType"/>
+         <xs:element name="geschlecht" type="xfb:Code.GeschlechtType"/>
+         <xs:element name="aufenthaltsort" type="xfhze:Code.AufenthaltType">
+            <xs:annotation>
+               <xs:documentation>Angabe zum Aufenthalt der Person.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="jugendlichAufenthaltsortSonstige"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Wird zu einer Pflichtangabe, wenn aufenthaltsort = Sonstiger Aufenthaltsort.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aktuelleAnschrift"
+                     type="xfb:PostalischeInlandsanschrift.BasisType"/>
+         <xs:element name="anschriftsaenderung" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Hat sich der Aufenthalt des Kindes in den letzten 6 Monaten geändert?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AngabenKindHZEType">
+      <xs:sequence>
+         <xs:element name="namen"
+                     minOccurs="0"
+                     type="xfb:NameNatuerlichePersonOhneGeburtsnameType">
+            <xs:annotation>
+               <xs:documentation>Angabe des Vor- und Familiennamens des Antragskindes.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburtsdatum" minOccurs="0" type="xfb:TagesdatumType">
+            <xs:annotation>
+               <xs:documentation>Geburtsdatum des Antragskindes.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AngabenZuJugendlichHZEType">
+      <xs:sequence>
+         <xs:element name="nameDerDesJugendlichen"
+                     maxOccurs="unbounded"
+                     type="xfb:NameNatuerlichePersonVornameVerpflichtendType">
+            <xs:annotation>
+               <xs:documentation>Vorname, Familienname sind verpflichtend, Geburtsname ist an dieser Stelle irrelevant</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburtsdatum" type="xfb:TagesdatumType"/>
+         <xs:element name="aktuelleAnschrift"
+                     type="xfb:PostalischeInlandsanschrift.BasisType"/>
+         <xs:element name="anschriftsaenderung" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Adresse weicht von der Adresse im Peronsalausweis ab.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="abweichendeAnschrift"
+                     minOccurs="0"
+                     type="xfb:PostalischeInlandsanschrift.BasisType">
+            <xs:annotation>
+               <xs:documentation>Adressdaten der vom Personalausweis abweichenden Anschrift.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AngabenZuJugendlichKontaktformularType">
+      <xs:sequence>
+         <xs:element name="nameDerDesJugendlichen"
+                     maxOccurs="unbounded"
+                     type="xfb:NameNatuerlichePersonVornameVerpflichtendType">
+            <xs:annotation>
+               <xs:documentation>Vorname, Familienname sind verpflichtend, Geburtsname ist an dieser Stelle irrelevant</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburtsdatum" minOccurs="0" type="xfb:TagesdatumType"/>
+         <xs:element name="anschriftStimmtUeberein" minOccurs="0" type="xs:boolean"/>
+         <xs:element name="aktuelleAnschrift"
+                     minOccurs="0"
+                     type="xfb:PostalischeInlandsanschrift.BasisType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AnliegensklaerungAnfrageType">
+      <xs:annotation>
+         <xs:documentation>Hier sind lediglich die Codes v, vu und u zu verwenden</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="anliegenVerhaeltnisJugendlich"
+                     type="xfhze:Code.VerhaeltnisJugendlichHZEType"/>
+         <xs:element name="sorgeberechtigtAbfrage" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Sind Sie für das Kind sorgeberechtigt?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="gemeinsamSorgeberechtigt" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Üben Sie das Sorgerecht mit dem anderen Elternteil gemeinsam aus?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AnliegensklaerungType">
+      <xs:annotation>
+         <xs:documentation>Hier sind lediglich die Codes v, vu und u zu verwenden</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="anliegenVerhaeltnisJugendlich"
+                     type="xfhze:Code.VerhaeltnisJugendlichHZEType">
+            <xs:annotation>
+               <xs:documentation>Wenn es sich bei der antragstellenden Person um eine:n junge:n Volljährigen handelt, müssen hier keine Angaben zum Sorgerecht gemacht werden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="gemeinsamSorgeberechtigt" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Üben Sie das Sorgerecht mit dem anderen Elternteil gemeinsam aus?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AntragstellenderETType">
+      <xs:sequence>
+         <xs:element name="namen" type="xfb:NameNatuerlichePersonVornameVerpflichtendType"/>
+         <xs:element name="geburtsort" minOccurs="0" type="din91379:datatypeC"/>
+         <xs:element name="geburtsdatum" type="xfb:TagesdatumType"/>
+         <xs:element name="adresse" type="xfb:PostalischeInlandsanschrift.BasisType"/>
+         <xs:element name="abweichendeAdresse" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob die Anschrift von der im Personalausweis angegebenen Anschrift abweicht. True: Optionales Element abweichendeAdressePerso befüllen</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="abweichendeAdressePerso"
+                     minOccurs="0"
+                     type="xfb:PostalischeInlandsanschrift.BasisType"/>
+         <xs:element name="kontaktdaten" minOccurs="0" type="xfb:ErreichbarkeitType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="BegruendungDesHilfebedarfsType">
+      <xs:sequence>
+         <xs:element name="grundBeantragung" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Bitte schildern Sie den Grund, warum Sie Hilfe oder Unterstützung benötigen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="hilfeVomJugendamt" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Welche Hilfe wünschen Sie sich vom Jugendamt?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Code.AufenthaltType">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Aufenthaltsort</nameLang>
+               <nameKurz>Aufenthaltsort</nameKurz>
+               <nameTechnisch>aufenthaltsort</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:aufenthaltsort</kennung>
+               <beschreibung>Die Liste codiert den Aufenthaltsort im Antrag zur Jugendhilfe.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+            <genutzteCodeSpalte>code</genutzteCodeSpalte>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:restriction base="xoev-code:Code">
+            <xs:sequence>
+               <xs:element name="code" form="unqualified" type="xfhze:aufenthaltsort"/>
+            </xs:sequence>
+            <xs:attribute name="listURI"
+                          type="xs:anyURI"
+                          use="optional"
+                          fixed="urn:xoev-de:xfamilie:codeliste:aufenthaltsort"/>
+            <xs:attribute name="listVersionID"
+                          type="xs:normalizedString"
+                          use="optional"
+                          fixed="1.0"/>
+         </xs:restriction>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="Code.AuswahlDerHilfeHzEType">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>AuswahlDerHilfeHzE</nameLang>
+               <nameKurz>AuswahlDerHilfeHzE</nameKurz>
+               <nameTechnisch>auswahlderhilfehze</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:auswahlderhilfehze</kennung>
+               <beschreibung>Die Art der Hilfe für Hilfe zur Erziehung.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>Gibt die Arten der Anliegen für Hilfen zur Erziehung an. </beschreibung>
+               <datumGueltigkeitAb>2023-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+            <genutzteCodeSpalte>code</genutzteCodeSpalte>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:restriction base="xoev-code:Code">
+            <xs:sequence>
+               <xs:element name="code" form="unqualified" type="xfhze:auswahlderhilfehze"/>
+            </xs:sequence>
+            <xs:attribute name="listURI"
+                          type="xs:anyURI"
+                          use="optional"
+                          fixed="urn:xoev-de:xfamilie:codeliste:auswahlderhilfehze"/>
+            <xs:attribute name="listVersionID"
+                          type="xs:normalizedString"
+                          use="optional"
+                          fixed="1.0"/>
+         </xs:restriction>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="Code.HZEIchBinType"/>
+   <xs:complexType name="Code.VerhaeltnisJugendlichHZEType">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>VerhaeltnisJugendlichHZE</nameLang>
+               <nameKurz>VerhaeltnisJugendlichHZE</nameKurz>
+               <nameTechnisch>verhaeltnisjugendlichhze</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:verhaeltnisjugendlichhze</kennung>
+               <beschreibung>Die Liste codiert das Verhältnis der antragstellenden Person zum Kind bzw. zur/m Jungendichen.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+            <genutzteCodeSpalte>code</genutzteCodeSpalte>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:restriction base="xoev-code:Code">
+            <xs:sequence>
+               <xs:element name="code"
+                           form="unqualified"
+                           type="xfhze:verhaeltnisjugendlichhze"/>
+            </xs:sequence>
+            <xs:attribute name="listURI"
+                          type="xs:anyURI"
+                          use="optional"
+                          fixed="urn:xoev-de:xfamilie:codeliste:verhaeltnisjugendlichhze"/>
+            <xs:attribute name="listVersionID"
+                          type="xs:normalizedString"
+                          use="optional"
+                          fixed="1.0"/>
+         </xs:restriction>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="ErreichbarkeitHZEType">
+      <xs:annotation>
+         <xs:documentation>Erweiterung der Erreichbarkeit um die Abfrage "Wann können wir Sie erreichen?"</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="xfb:ErreichbarkeitType">
+            <xs:sequence>
+               <xs:element name="zeitErreichbarkeitHZE"
+                           minOccurs="0"
+                           type="din91379:datatypeC">
+                  <xs:annotation>
+                     <xs:documentation>Wann können wir Sie erreichen?</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="NachweisType">
+      <xs:sequence>
+         <xs:element name="nachweisBeschreibung" minOccurs="0" type="din91379:datatypeC"/>
+         <xs:element name="nachweisDokument" type="xfb:NachweisdokumentType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="NachweiseDatenschutzType">
+      <xs:sequence>
+         <xs:element name="nachweis"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfhze:NachweisType"/>
+         <xs:element name="zustimmungET2"
+                     minOccurs="0"
+                     fixed="false"
+                     type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Zustimmung der Sorgeberechtigten. Hiermit bestätige ich, dass beide sorgeberechtigten Elternteile der Beantragung der Leitung zustimmen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="richtigkeitAngaben"
+                     minOccurs="0"
+                     fixed="false"
+                     type="xs:boolean"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="NachweiseHZEType">
+      <xs:sequence>
+         <xs:element name="sorgerechtsnachweis"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Nachweise zur Geburt des Kindes.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="identitaetsnachweis"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Nachweise zur Meldebestätigung. Nur anzugeben, wenn die Anschriften der Beteiligten voneinander abweichen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="weitereNachweise"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu weiteren Nachweisen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisMeldebescheinigung"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Wenn die Meldeadresse von der eingegeben Adresse mittels BundID abweicht, ist ein Nachweis in Form einer Meldebescheinigung hochzuladen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anmerkungen" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Sonstige Anmerkungen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="dsgvo" type="xfb:DatenschutzerklaerungenType">
+            <xs:annotation>
+               <xs:documentation>Bestätigung zur Datenschutzerklärung des Dienst-betreibenden Landes sowie zur spezifischen Datenschutzerklärung des nachnutzenden Landes oder der nachnutzenden Kommune.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="richtigkeitAngaben" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob die Richtigkeit der Daten bestätigt wurde oder nicht.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="PersoenlicheAngabenEingliederungType">
+      <xs:sequence>
+         <xs:element name="namen" type="xfb:NameNatuerlichePersonVornameVerpflichtendType"/>
+         <xs:element name="geburtsdatum" type="xfb:TagesdatumType"/>
+         <xs:element name="aktuelleAnschrift"
+                     type="xfb:PostalischeInlandsanschrift.BasisType"/>
+         <xs:element name="anschriftsaenderung" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Hat sich Ihr Aufenthalt in den letzten 6 Monaten geändert? </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="weichtAnschriftAb" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>WENN weichtAnschriftAb = true, DANN muss abweichende Anschrift befüllt sein.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="abweichendeAnschrift"
+                     minOccurs="0"
+                     type="xfb:PostalischeInlandsanschrift.BasisType">
+            <xs:annotation>
+               <xs:documentation>WENN weichtAnschriftAb = true, DANN muss abweichendeAnschrift befüllt sein.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kontaktdaten"
+                     maxOccurs="unbounded"
+                     type="xfhze:ErreichbarkeitHZEType"/>
+         <xs:element name="seelischeBehinderung" minOccurs="0" type="xs:boolean"/>
+         <xs:element name="artDerBehinderung" minOccurs="0" type="din91379:datatypeC"/>
+         <xs:element name="aerztlicherNachweis" minOccurs="0" type="xs:boolean"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="PersoenlicheAngabenHJVType">
+      <xs:sequence>
+         <xs:element name="namen" type="xfb:NameNatuerlichePersonVornameVerpflichtendType"/>
+         <xs:element name="geburtsdatum" type="xfb:TagesdatumType"/>
+         <xs:element name="aktuelleAnschrift"
+                     type="xfb:PostalischeInlandsanschrift.BasisType">
+            <xs:annotation>
+               <xs:documentation>Adresse, die im Personalausweis steht.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anschriftsaenderung" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Hat sich Ihr Aufenthalt in den letzten 6 Monaten geändert?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="weichtAnschriftAb" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>WENN weichtAnschriftAb = true, DANN muss abweichendeAnschrift befüllt werden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="abweichendeAnschrift"
+                     minOccurs="0"
+                     type="xfb:PostalischeInlandsanschrift.BasisType">
+            <xs:annotation>
+               <xs:documentation>WENN weichtAnschriftAb = true, DANN muss abweichendeAnschrift befüllt sein.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kontaktdaten"
+                     maxOccurs="unbounded"
+                     type="xfhze:ErreichbarkeitHZEType">
+            <xs:annotation>
+               <xs:documentation>Hier können die Telefonnummer und optional die E-Mail-Adresse angeben werden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aufenthaltsortSonstige"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Wenn Aufenthaltsort = Sonstiger Aufenthaltsort, dann muss dieses Feld befüllt sein.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="PersoenlicheAngabenHZEType">
+      <xs:sequence>
+         <xs:element name="namen" type="xfb:NameNatuerlichePersonVornameVerpflichtendType"/>
+         <xs:element name="geburtsdatum" type="xfb:TagesdatumType"/>
+         <xs:element name="aktuelleAnschrift"
+                     type="xfb:PostalischeInlandsanschrift.BasisType">
+            <xs:annotation>
+               <xs:documentation>Adresse, die im Personalausweis steht.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="weichtAnschriftAb" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>WENN weichtAnschrift ab = true, DANN muss abweichendeAnschrift befüllt werden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="abweichendeAnschrift"
+                     minOccurs="0"
+                     type="xfb:PostalischeInlandsanschrift.BasisType">
+            <xs:annotation>
+               <xs:documentation>WENN weichtAnschriftAb = true, DANN muss abweichendeAnschrift befüllt sein.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kontaktdaten"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfhze:ErreichbarkeitHZEType">
+            <xs:annotation>
+               <xs:documentation>Hier können die Telefonnummer und optional die E-Mail-Adresse angeben werden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="PersoenlicheAngabenKontaktformularType">
+      <xs:sequence>
+         <xs:element name="namen" type="xfb:NameNatuerlichePersonVornameVerpflichtendType"/>
+         <xs:element name="aktuelleAnschrift"
+                     minOccurs="0"
+                     type="xfb:PostalischeInlandsanschrift.BasisType"/>
+         <xs:element name="kontaktdaten"
+                     maxOccurs="unbounded"
+                     type="xfb:ErreichbarkeitType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="PersonIdentifikationType">
+      <xs:sequence>
+         <xs:element name="namen" type="xfb:NameNatuerlichePersonType"/>
+         <xs:element name="geburtsdatum" type="xfb:TagesdatumType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType name="aufenthaltsort">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Aufenthaltsort</nameLang>
+               <nameKurz>Aufenthaltsort</nameKurz>
+               <nameTechnisch>aufenthaltsort</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:aufenthaltsort</kennung>
+               <beschreibung>Die Liste codiert den Aufenthaltsort im Antrag zur Jugendhilfe.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="eiha">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Eigener Haushalt</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="elha">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Elterlicher Haushalt</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="juhi">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Jugendhilfeeinrichtung</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="krha">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Krankenhaus</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="soau">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Sonstiger Aufenthalt</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="auswahlBescheidartHZE">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>BescheidartHZE</nameLang>
+               <nameKurz>BescheidartHZE</nameKurz>
+               <nameTechnisch>auswahlBescheidartHZE</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:auswahlbescheidarthze</kennung>
+               <beschreibung>Auswahl der Bescheidart für HZE.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>Gibt die Arten der Anliegen für Beistandsschaft an. </beschreibung>
+               <datumGueltigkeitAb>2023-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="01">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Bewilligungsbescheid</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="02">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Ablehnungsbescheid</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="03">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Zahlungsbescheid</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="auswahlderhilfehze">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>AuswahlDerHilfeHzE</nameLang>
+               <nameKurz>AuswahlDerHilfeHzE</nameKurz>
+               <nameTechnisch>auswahlderhilfehze</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:auswahlderhilfehze</kennung>
+               <beschreibung>Die Art der Hilfe für Hilfe zur Erziehung.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>Gibt die Arten der Anliegen für Hilfen zur Erziehung an. </beschreibung>
+               <datumGueltigkeitAb>2023-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="01">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Hilfen zur Erziehung</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="02">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Hilfe für junge Volljährige</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="03">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Eingliederungshilfe</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="verhaeltnisjugendlichhze">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>VerhaeltnisJugendlichHZE</nameLang>
+               <nameKurz>VerhaeltnisJugendlichHZE</nameKurz>
+               <nameTechnisch>verhaeltnisjugendlichhze</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:verhaeltnisjugendlichhze</kennung>
+               <beschreibung>Die Liste codiert das Verhältnis der antragstellenden Person zum Kind bzw. zur/m Jungendichen.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="jm">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Junge*r Mensch (zwischen 15 und 21 Jahre)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="jv">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Junge*r Volljährige*r (zwischen 18 und 27 Jahre alt)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="mu">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Mutter des Kindes</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="pf">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Pfleger*in</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="un">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Keine der genannten Personen</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="va">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Vater des Kindes</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="vo">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Vormund*in</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:element name="hilfenZurErziehung.antrag.0701">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Rechtgrundlage</rechtsgrundlage>
+         </xs:appinfo>
+         <xs:documentation>Mit dieser Nachricht werden die Daten zur Hilfe zur Erziehung strukturiert von einem Portal an die zuständigen Jugendämter versendet.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:AntragsnachrichtType">
+               <xs:sequence>
+                  <xs:element name="auswahlDerHilfeHZE" type="xfhze:Code.AuswahlDerHilfeHzEType"/>
+                  <xs:element name="anliegensklaerungHZE" type="xfhze:AnliegensklaerungType">
+                     <xs:annotation>
+                        <xs:documentation>In diesem Element wird geklärt, um welches Anliegen es im Antrag geht.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="pruefcodeHZE" type="din91379:datatypeC">
+                     <xs:annotation>
+                        <xs:documentation>Angabe eines Prüfcodes, der ein Beratungsgespräch sicherstellt.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="persoenlicheAngabenZuIhrerPerson"
+                              type="xfhze:PersoenlicheAngabenHZEType">
+                     <xs:annotation>
+                        <xs:documentation>Die persoenlichen Angaben sind immer auszufuellen.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="andererElternteil" type="xfhze:AngabenETType">
+                     <xs:annotation>
+                        <xs:documentation>Auszufuellen, wenn Mutter ODER Vater</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="angabenKindHZE" minOccurs="0" type="xfhze:AngabenKindHZEType">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zum Antragskind. Das Element angabenKindHZE ist nicht anzugeben, wenn auswahlDerHilfeHZE = 02 Hilfe für junge Volljährige</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="nachweiseHZE" type="xfhze:NachweiseHZEType">
+                     <xs:annotation>
+                        <xs:documentation>Bitte laden Sie hier die vom Jugendamt angeforderten Nachweise hoch. Sie finden die Auflistung der notwendigen Nachweise auf dem Dokument, dass Sie vom Jugendamt bekommen haben.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="dsgvo" minOccurs="0" type="xfb:DatenschutzerklaerungenType">
+                     <xs:annotation>
+                        <xs:documentation>Bestätigung zur Datenschutzerklärung des Dienst-betreibenden Landes sowie zur spezifischen Datenschutzerklärung des nachnutzenden Landes oder der nachnutzenden Kommune.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="zusatzNachrichtHZE" minOccurs="0" type="din91379:datatypeC">
+                     <xs:annotation>
+                        <xs:documentation>Möchten Sie dem Jugendamt noch etwas mitteilen?</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="einwilligungZwischenspeichern"
+                              minOccurs="0"
+                              type="xs:boolean">
+                     <xs:annotation>
+                        <xs:documentation>Einwilligung zur Zwischenspeicherung der Antragsdaten.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="hilfenZurErziehung.anfrageHJV.0702">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Rechtgrundlage</rechtsgrundlage>
+         </xs:appinfo>
+         <xs:documentation>Mit dieser Nachricht werden die Daten zur Eingliederungshilfe strukturiert von einem Portal an die zuständigen Jugendämter versendet.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:AntragsnachrichtType">
+               <xs:sequence>
+                  <xs:element name="auswahlAnfrageHJV" type="xfhze:Code.AuswahlDerHilfeHzEType">
+                     <xs:annotation>
+                        <xs:documentation>In diesem Element wird geklärt, um welches Anliegen es im Antrag geht. Hier sind die Codes HzE, HjV und "Ich weiß es nicht" zulässig.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="anliegensklaerungHJV"
+                              minOccurs="0"
+                              type="xfhze:AnliegensklaerungAnfrageType">
+                     <xs:annotation>
+                        <xs:documentation>In diesem Element wird geklärt, um welches Anliegen es im Antrag geht.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="persoenlicheAngabenHJV"
+                              minOccurs="0"
+                              type="xfhze:PersoenlicheAngabenHJVType">
+                     <xs:annotation>
+                        <xs:documentation>Auszufuellen, wenn Mutter ODER Vater ODER Vormund*in/Pfleger*in UND sorgeberechtigt = True ODER wenn Anfrage von jungen Volljaehrigen.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="begruendungHJV"
+                              minOccurs="0"
+                              type="xfhze:BegruendungDesHilfebedarfsType"/>
+                  <xs:element name="angabenAndererElternteil"
+                              minOccurs="0"
+                              type="xfhze:AngabenElternteilHJVType">
+                     <xs:annotation>
+                        <xs:documentation>Auszufuellen, wenn Mutter ODER Vater ODER Vormund*in/Pfleger*in UND sorgeberechtigt = True; NICHT auszufuellen, wenn Anfrage von jungen Volljaehrigen.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="dsgvo" minOccurs="0" type="xfb:DatenschutzerklaerungenType">
+                     <xs:annotation>
+                        <xs:documentation>Bestätigung zur Datenschutzerklärung des Dienst-betreibenden Landes sowie zur spezifischen Datenschutzerklärung des nachnutzenden Landes oder der nachnutzenden Kommune.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="richtigkeitAngaben" fixed="true" type="xs:boolean">
+                     <xs:annotation>
+                        <xs:documentation>Hiermit bestätige ich die Richtigkeit meiner Angaben. Ich versichere, dass ich diese nach bestem Wissen und Gewissen gemacht habe.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="einwilligungZwischenspeichern"
+                              minOccurs="0"
+                              type="xs:boolean">
+                     <xs:annotation>
+                        <xs:documentation>Einwilligung zur Zwischenspeicherung der Antragsdaten.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="hilfenZurErziehung.eingliederungshilfe.0703">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Rechtgrundlage</rechtsgrundlage>
+         </xs:appinfo>
+         <xs:documentation>Mit dieser Nachricht werden die Daten zur Eingliederungshilfe strukturiert von einem Portal an die zuständigen Jugendämter versendet.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:AntragsnachrichtType">
+               <xs:sequence>
+                  <xs:element name="auswahlAnfrageEingliederung"
+                              type="xfhze:Code.AuswahlDerHilfeHzEType">
+                     <xs:annotation>
+                        <xs:documentation>Hier ist nur der Code Eingliederung zulässig.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="anliegensklaerungEingliederung"
+                              minOccurs="0"
+                              type="xfhze:AnliegensklaerungAnfrageType">
+                     <xs:annotation>
+                        <xs:documentation>In diesem Element wird geklärt, um welches Anliegen es im Antrag geht.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="persoenlicheAngabenZuIhrerPerson"
+                              minOccurs="0"
+                              type="xfhze:PersoenlicheAngabenEingliederungType">
+                     <xs:annotation>
+                        <xs:documentation>Auszufuellen, wenn junge*r Volljaehrige*r</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="angabenKind"
+                              minOccurs="0"
+                              type="xfhze:AngabenKindEingliederungType">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zum Kind, für das eine Eingliederungshilfe beantragt wird.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="begruendungHZE"
+                              minOccurs="0"
+                              type="xfhze:BegruendungDesHilfebedarfsType"/>
+                  <xs:element name="angabenElternteile"
+                              minOccurs="0"
+                              maxOccurs="2"
+                              type="xfhze:AngabenElternteilEingliederungType">
+                     <xs:annotation>
+                        <xs:documentation>Auszufuellen, wenn Mutter ODER Vater ODER Vormund Oder Pfleger:in ODER junger Mensch UND dieser unter 18 Jahre.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="dsgvo" minOccurs="0" type="xfb:DatenschutzerklaerungenType">
+                     <xs:annotation>
+                        <xs:documentation>Bestätigung zur Datenschutzerklärung des Dienst-betreibenden Landes sowie zur spezifischen Datenschutzerklärung des nachnutzenden Landes oder der nachnutzenden Kommune.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="richtigkeitAngaben"
+                              minOccurs="0"
+                              fixed="true"
+                              type="xs:boolean">
+                     <xs:annotation>
+                        <xs:documentation>Hiermit bestätige ich die Richtigkeit meiner Angaben. Ich versichere, dass ich diese nach bestem Wissen und Gewissen gemacht habe.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="einwilligungZwischenspeichern"
+                              minOccurs="0"
+                              type="xs:boolean">
+                     <xs:annotation>
+                        <xs:documentation>Einwilligung zur Zwischenspeicherung der Antragsdaten.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="hilfenZurErziehung.widerspruch.0704">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Rechtsgrundlage sind die Sozialgesetzbuecher aber kann je nach der jeweiligen Fachnachricht abweichen. </rechtsgrundlage>
+         </xs:appinfo>
+         <xs:documentation>Mit dieser Nachricht kann ein Widerspruch an die zuständige Stelle übermittelt werden.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:NachrichtType">
+               <xs:sequence>
+                  <xs:element name="persoenlicheAngabenZuIhrerPerson"
+                              type="xfhze:PersoenlicheAngabenHZEType">
+                     <xs:annotation>
+                        <xs:documentation>Hiermit werden die persönlichen Angaben zur antragstellenden Person übermittelt.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="aktenzeichen" type="din91379:datatypeC">
+                     <xs:annotation>
+                        <xs:documentation>Hiermit wird das Aktenzeichen übermittelt.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="bescheiddatum" type="xfb:TagesdatumType">
+                     <xs:annotation>
+                        <xs:documentation>In diesem Datenfeld wird das Bescheiddatum übertragen.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="begruendungWiderspruch" type="din91379:datatypeC">
+                     <xs:annotation>
+                        <xs:documentation>In diesem Datenfeld wird die Begründung des Widerspruchs übertragen.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="bestaetigungWiderspruch" fixed="false" type="xs:boolean">
+                     <xs:annotation>
+                        <xs:documentation>Hiermit wird der Widerspruch bestätigt.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="nachweis"
+                              minOccurs="0"
+                              maxOccurs="unbounded"
+                              type="xfhze:NachweiseHZEType">
+                     <xs:annotation>
+                        <xs:documentation>Hier werden Informationen zum Nachweis und der Nachweis selbst übertragen.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="auswahlBescheidart">
+                     <xs:annotation>
+                        <xs:documentation>An dieser Stelle wird die Art des Bescheides ausgewählt.</xs:documentation>
+                     </xs:annotation>
+                     <xs:complexType>
+                        <xs:complexContent>
+                           <xs:restriction base="xoev-code:Code">
+                              <xs:sequence>
+                                 <xs:element name="code" form="unqualified" type="xfhze:auswahlBescheidartHZE"/>
+                              </xs:sequence>
+                              <xs:attribute name="listURI"
+                                            type="xs:anyURI"
+                                            use="optional"
+                                            fixed="urn:xoev-de:xfamilie:codeliste:auswahlbescheidarthze"/>
+                              <xs:attribute name="listVersionID"
+                                            type="xs:normalizedString"
+                                            use="optional"
+                                            fixed="1.0"/>
+                           </xs:restriction>
+                        </xs:complexContent>
+                     </xs:complexType>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="hilfenZurErziehung.nachweisnachricht.0711">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Rechtsgrundlage sind die Sozialgesetzbuecher aber kann je nach der jeweiligen Fachnachricht abweichen. </rechtsgrundlage>
+         </xs:appinfo>
+         <xs:documentation>Mit dieser Nachricht können Nachweise vom Portal an die zuständige Stelle transportiert werden.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:NachrichtType">
+               <xs:sequence>
+                  <xs:element name="persoenlicheAngabenZuIhrerPerson"
+                              type="xfhze:PersoenlicheAngabenHZEType">
+                     <xs:annotation>
+                        <xs:documentation>Hiermit werden die persönlichen Angaben zur antragstellenden Person übermittelt.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="angabenKind" type="xfhze:AngabenKindHZEType">
+                     <xs:annotation>
+                        <xs:documentation>Hiermit werden die Angaben zum betroffenen Kind übermittelt.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="jugendamt" type="din91379:datatypeC">
+                     <xs:annotation>
+                        <xs:documentation>In diesem Datenfeld werden Angaben zum zuständigen Jugendamt übertragen.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="bearbeitungsnummer" type="din91379:datatypeC">
+                     <xs:annotation>
+                        <xs:documentation>In diesem Datenfeld wird die Bearbeitungsnummer übertragen.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="antragsdatum" type="xfb:TagesdatumType">
+                     <xs:annotation>
+                        <xs:documentation>In diesem Datenfeld wird das Antragsdatum übertragen.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="nachweis" maxOccurs="unbounded" type="xfhze:NachweiseHZEType">
+                     <xs:annotation>
+                        <xs:documentation>Hier werden Informationen zum Nachweis und der Nachweis selbst übertragen.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="zusatznachrichtHZE" minOccurs="0" type="din91379:datatypeC">
+                     <xs:annotation>
+                        <xs:documentation>In diesem Datenfeld werden Zusatzangaben zur Nachweisübermittlung erfasst.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>

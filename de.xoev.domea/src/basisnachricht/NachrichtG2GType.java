@@ -81,7 +81,7 @@ public interface NachrichtG2GType extends EObject {
 	 * @return the value of the '<em>Produkt</em>' attribute.
 	 * @see #setProdukt(String)
 	 * @see basisnachricht.BasisnachrichtPackage#getNachrichtG2GType_Produkt()
-	 * @model dataType="datatypedin.DatatypeC" required="true"
+	 * @model dataType="de.xoev.kosit.datentyp._202204.din91379.DatatypeC" required="true"
 	 *        extendedMetaData="kind='attribute' name='produkt'"
 	 * @generated
 	 */
@@ -107,7 +107,7 @@ public interface NachrichtG2GType extends EObject {
 	 * @return the value of the '<em>Produkthersteller</em>' attribute.
 	 * @see #setProdukthersteller(String)
 	 * @see basisnachricht.BasisnachrichtPackage#getNachrichtG2GType_Produkthersteller()
-	 * @model dataType="datatypedin.DatatypeC" required="true"
+	 * @model dataType="de.xoev.kosit.datentyp._202204.din91379.DatatypeC" required="true"
 	 *        extendedMetaData="kind='attribute' name='produkthersteller'"
 	 * @generated
 	 */
@@ -133,7 +133,7 @@ public interface NachrichtG2GType extends EObject {
 	 * @return the value of the '<em>Produktversion</em>' attribute.
 	 * @see #setProduktversion(String)
 	 * @see basisnachricht.BasisnachrichtPackage#getNachrichtG2GType_Produktversion()
-	 * @model dataType="datatypedin.DatatypeC"
+	 * @model dataType="de.xoev.kosit.datentyp._202204.din91379.DatatypeC"
 	 *        extendedMetaData="kind='attribute' name='produktversion'"
 	 * @generated
 	 */
@@ -159,7 +159,7 @@ public interface NachrichtG2GType extends EObject {
 	 * @return the value of the '<em>Standard</em>' attribute.
 	 * @see #setStandard(String)
 	 * @see basisnachricht.BasisnachrichtPackage#getNachrichtG2GType_Standard()
-	 * @model dataType="datatypedin.DatatypeC" required="true"
+	 * @model dataType="de.xoev.kosit.datentyp._202204.din91379.DatatypeC" required="true"
 	 *        extendedMetaData="kind='attribute' name='standard'"
 	 * @generated
 	 */
@@ -185,7 +185,7 @@ public interface NachrichtG2GType extends EObject {
 	 * @return the value of the '<em>Test</em>' attribute.
 	 * @see #setTest(String)
 	 * @see basisnachricht.BasisnachrichtPackage#getNachrichtG2GType_Test()
-	 * @model dataType="datatypedin.DatatypeC"
+	 * @model dataType="de.xoev.kosit.datentyp._202204.din91379.DatatypeC"
 	 *        extendedMetaData="kind='attribute' name='test'"
 	 * @generated
 	 */
@@ -211,7 +211,7 @@ public interface NachrichtG2GType extends EObject {
 	 * @return the value of the '<em>Version</em>' attribute.
 	 * @see #setVersion(String)
 	 * @see basisnachricht.BasisnachrichtPackage#getNachrichtG2GType_Version()
-	 * @model dataType="datatypedin.DatatypeC" required="true"
+	 * @model dataType="de.xoev.kosit.datentyp._202204.din91379.DatatypeC" required="true"
 	 *        extendedMetaData="kind='attribute' name='version'"
 	 * @generated
 	 */

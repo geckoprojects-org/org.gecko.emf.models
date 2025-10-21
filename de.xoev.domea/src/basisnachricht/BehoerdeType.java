@@ -80,7 +80,7 @@ public interface BehoerdeType extends EObject {
 	 * @return the value of the '<em>Kennung</em>' attribute.
 	 * @see #setKennung(String)
 	 * @see basisnachricht.BasisnachrichtPackage#getBehoerdeType_Kennung()
-	 * @model dataType="datatypedin.DatatypeC" required="true"
+	 * @model dataType="de.xoev.kosit.datentyp._202204.din91379.DatatypeC" required="true"
 	 *        extendedMetaData="kind='element' name='kennung'"
 	 * @generated
 	 */
@@ -106,7 +106,7 @@ public interface BehoerdeType extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see basisnachricht.BasisnachrichtPackage#getBehoerdeType_Name()
-	 * @model dataType="datatypedin.DatatypeC" required="true"
+	 * @model dataType="de.xoev.kosit.datentyp._202204.din91379.DatatypeC" required="true"
 	 *        extendedMetaData="kind='element' name='name'"
 	 * @generated
 	 */

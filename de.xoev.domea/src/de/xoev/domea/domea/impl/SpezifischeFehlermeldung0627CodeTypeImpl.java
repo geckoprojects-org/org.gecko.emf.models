@@ -13,10 +13,10 @@
  */
 package de.xoev.domea.domea.impl;
 
-import code.impl.CodeImpl;
-
 import de.xoev.domea.domea.DomeaPackage;
 import de.xoev.domea.domea.SpezifischeFehlermeldung0627CodeType;
+
+import de.xoev.schemata.code.code.impl.CodeImpl;
 
 import org.eclipse.emf.ecore.EClass;
 

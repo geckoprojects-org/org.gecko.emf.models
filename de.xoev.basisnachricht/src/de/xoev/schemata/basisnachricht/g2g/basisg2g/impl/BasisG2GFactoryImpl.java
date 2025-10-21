@@ -1,0 +1,196 @@
+/**
+ * Copyright (c) 2012 - 2025 Data In Motion and others.
+ * All rights reserved. 
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *      Mark Hoffmann - initial API and implementation
+ */
+package de.xoev.schemata.basisnachricht.g2g.basisg2g.impl;
+
+import de.xoev.schemata.basisnachricht.g2g.basisg2g.*;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
+
+import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import org.eclipse.emf.ecore.xml.type.XMLTypeFactory;
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Factory</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class BasisG2GFactoryImpl extends EFactoryImpl implements BasisG2GFactory {
+	/**
+	 * Creates the default factory implementation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static BasisG2GFactory init() {
+		try {
+			BasisG2GFactory theBasisG2GFactory = (BasisG2GFactory)EPackage.Registry.INSTANCE.getEFactory(BasisG2GPackage.eNS_URI);
+			if (theBasisG2GFactory != null) {
+				return theBasisG2GFactory;
+			}
+		}
+		catch (Exception exception) {
+			EcorePlugin.INSTANCE.log(exception);
+		}
+		return new BasisG2GFactoryImpl();
+	}
+
+	/**
+	 * Creates an instance of the factory.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BasisG2GFactoryImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EObject create(EClass eClass) {
+		switch (eClass.getClassifierID()) {
+			case BasisG2GPackage.DOCUMENT_ROOT: return createDocumentRoot();
+			case BasisG2GPackage.IDENTIFIKATION_NACHRICHT_TYPE: return createIdentifikationNachrichtType();
+			case BasisG2GPackage.NACHRICHTENKOPF_G2G_TYPE: return createNachrichtenkopfG2GType();
+			case BasisG2GPackage.NACHRICHT_G2G_TYPE: return createNachrichtG2GType();
+			default:
+				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case BasisG2GPackage.UUID:
+				return createUUIDFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case BasisG2GPackage.UUID:
+				return convertUUIDToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DocumentRoot createDocumentRoot() {
+		DocumentRootImpl documentRoot = new DocumentRootImpl();
+		return documentRoot;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public IdentifikationNachrichtType createIdentifikationNachrichtType() {
+		IdentifikationNachrichtTypeImpl identifikationNachrichtType = new IdentifikationNachrichtTypeImpl();
+		return identifikationNachrichtType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NachrichtenkopfG2GType createNachrichtenkopfG2GType() {
+		NachrichtenkopfG2GTypeImpl nachrichtenkopfG2GType = new NachrichtenkopfG2GTypeImpl();
+		return nachrichtenkopfG2GType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NachrichtG2GType createNachrichtG2GType() {
+		NachrichtG2GTypeImpl nachrichtG2GType = new NachrichtG2GTypeImpl();
+		return nachrichtG2GType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String createUUIDFromString(EDataType eDataType, String initialValue) {
+		return (String)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.NORMALIZED_STRING, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertUUIDToString(EDataType eDataType, Object instanceValue) {
+		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.NORMALIZED_STRING, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public BasisG2GPackage getBasisG2GPackage() {
+		return (BasisG2GPackage)getEPackage();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @deprecated
+	 * @generated
+	 */
+	@Deprecated
+	public static BasisG2GPackage getPackage() {
+		return BasisG2GPackage.eINSTANCE;
+	}
+
+} //BasisG2GFactoryImpl

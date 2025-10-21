@@ -14,7 +14,7 @@
 package basisnachricht;
 
 
-import code.CodePackage;
+import de.xoev.schemata.code.code.Code10Package;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -160,7 +160,7 @@ public interface BasisnachrichtPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_KOMMUNIKATION_KANAL_TYPE__CODE = CodePackage.CODE__CODE;
+	int CODE_KOMMUNIKATION_KANAL_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -169,7 +169,7 @@ public interface BasisnachrichtPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_KOMMUNIKATION_KANAL_TYPE__NAME = CodePackage.CODE__NAME;
+	int CODE_KOMMUNIKATION_KANAL_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -178,7 +178,7 @@ public interface BasisnachrichtPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_KOMMUNIKATION_KANAL_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int CODE_KOMMUNIKATION_KANAL_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -187,7 +187,7 @@ public interface BasisnachrichtPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_KOMMUNIKATION_KANAL_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int CODE_KOMMUNIKATION_KANAL_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Code Kommunikation Kanal Type</em>' class.
@@ -196,7 +196,7 @@ public interface BasisnachrichtPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_KOMMUNIKATION_KANAL_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int CODE_KOMMUNIKATION_KANAL_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Code Kommunikation Kanal Type</em>' class.
@@ -205,7 +205,7 @@ public interface BasisnachrichtPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_KOMMUNIKATION_KANAL_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int CODE_KOMMUNIKATION_KANAL_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link basisnachricht.impl.CodeVerzeichnisdienstTypeImpl <em>Code Verzeichnisdienst Type</em>}' class.
@@ -224,7 +224,7 @@ public interface BasisnachrichtPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_VERZEICHNISDIENST_TYPE__CODE = CodePackage.CODE__CODE;
+	int CODE_VERZEICHNISDIENST_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -233,7 +233,7 @@ public interface BasisnachrichtPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_VERZEICHNISDIENST_TYPE__NAME = CodePackage.CODE__NAME;
+	int CODE_VERZEICHNISDIENST_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -242,7 +242,7 @@ public interface BasisnachrichtPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_VERZEICHNISDIENST_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int CODE_VERZEICHNISDIENST_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -251,7 +251,7 @@ public interface BasisnachrichtPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_VERZEICHNISDIENST_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int CODE_VERZEICHNISDIENST_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Code Verzeichnisdienst Type</em>' class.
@@ -260,7 +260,7 @@ public interface BasisnachrichtPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_VERZEICHNISDIENST_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int CODE_VERZEICHNISDIENST_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Code Verzeichnisdienst Type</em>' class.
@@ -269,7 +269,7 @@ public interface BasisnachrichtPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_VERZEICHNISDIENST_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int CODE_VERZEICHNISDIENST_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link basisnachricht.impl.IdentifikationNachrichtTypeImpl <em>Identifikation Nachricht Type</em>}' class.

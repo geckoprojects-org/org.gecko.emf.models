@@ -77,7 +77,7 @@ public interface KommunikationType extends EObject {
 	 * @return the value of the '<em>Kennung</em>' attribute.
 	 * @see #setKennung(String)
 	 * @see basisnachricht.BasisnachrichtPackage#getKommunikationType_Kennung()
-	 * @model dataType="datatypedin.DatatypeC" required="true"
+	 * @model dataType="de.xoev.kosit.datentyp._202204.din91379.DatatypeC" required="true"
 	 *        extendedMetaData="kind='element' name='kennung'"
 	 * @generated
 	 */
@@ -103,7 +103,7 @@ public interface KommunikationType extends EObject {
 	 * @return the value of the '<em>Zusatz</em>' attribute.
 	 * @see #setZusatz(String)
 	 * @see basisnachricht.BasisnachrichtPackage#getKommunikationType_Zusatz()
-	 * @model dataType="datatypedin.DatatypeC"
+	 * @model dataType="de.xoev.kosit.datentyp._202204.din91379.DatatypeC"
 	 *        extendedMetaData="kind='element' name='zusatz'"
 	 * @generated
 	 */

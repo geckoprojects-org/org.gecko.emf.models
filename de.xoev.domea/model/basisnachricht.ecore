@@ -27,7 +27,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kennung" lowerBound="1"
-        eType="ecore:EDataType datatype-din.ecore#//DatatypeC">
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Dieses Element enthält die eindeutige Kennzeichnung der Behörde / öffentlichen Stelle innerhalb des angegebenen Verzeichnisdienstes. Für den Verzeichnisdienst „DVDV“ enthält die Kennzeichnung das „Präfix“ und die „Kennung“ getrennt durch das Zeichen ':', also bspw. 'psw:01003110'."/>
       </eAnnotations>
@@ -36,7 +36,7 @@
         <details key="name" value="kennung"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType datatype-din.ecore#//DatatypeC">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Dieses Element enthält den Namen der Behörde / öffentlichen Stelle."/>
       </eAnnotations>
@@ -56,7 +56,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CodeKommunikationKanalType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="CodeKommunikationKanalType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations>
       <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>Kommunikationskanal / Erreichbarkeit&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>Erreichbarkeit&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>erreichbarkeit&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:de:xoev:codeliste:erreichbarkeit&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Eine Liste der Kommunikationsmedien und -kanäle, über die man eine Person oder Institution erreichen kann.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>Koordinierungsstelle für IT-Standards&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>KoSIT&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;           &#xA;"/>
     </eAnnotations>
@@ -65,7 +65,7 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CodeVerzeichnisdienstType" eSuperTypes="code.ecore#//Code">
+  <eClassifiers xsi:type="ecore:EClass" name="CodeVerzeichnisdienstType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
     <eAnnotations>
       <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>Verzeichnisdienst&#xA;&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>Verzeichnisdienst&#xA;&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>verzeichnisdienst&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:kosit:codeliste:verzeichnisdienst&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Liste der Verzeichnisdienste, in die Behörden / öffentliche Stellen eingetragen sein können&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>Koordinierungsstelle für IT-Standards&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>KoSIT&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;           &#xA;"/>
     </eAnnotations>
@@ -93,7 +93,8 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nachrichtentyp" lowerBound="1"
-        eType="ecore:EClass code.ecore#//Code" containment="true" resolveProxies="false">
+        eType="ecore:EClass ../../de.xoev.code/model/xoev-code.ecore#//Code" containment="true"
+        resolveProxies="false">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Dieses Element enthält eine eindeutige Kennzeichnung des Nachrichtentyps. Die Identifikation erfolgt über eine Codeliste des entsprechenden XÖV-Standards."/>
       </eAnnotations>
@@ -132,7 +133,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kennung" lowerBound="1"
-        eType="ecore:EDataType datatype-din.ecore#//DatatypeC">
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Die Kennung beinhaltet die konkreten Angaben zur Erreichbarkeit über einen Kommunikationskanal, d. h. die Telefonnummer, E-Mail-Adresse oder dergleichen."/>
       </eAnnotations>
@@ -141,7 +142,7 @@
         <details key="name" value="kennung"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zusatz" eType="ecore:EDataType datatype-din.ecore#//DatatypeC">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zusatz" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Eine zusätzliche Bemerkung."/>
       </eAnnotations>
@@ -209,7 +210,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="produkt" lowerBound="1"
-        eType="ecore:EDataType datatype-din.ecore#//DatatypeC">
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="In diesem Attribut ist der Name des Produktes (der Software) einzutragen, mit dem die Nachricht erstellt worden ist."/>
       </eAnnotations>
@@ -219,7 +220,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="produkthersteller" lowerBound="1"
-        eType="ecore:EDataType datatype-din.ecore#//DatatypeC">
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="In diesem Attribut wird der Name der Organisation / Firma übermittelt, die für das Produkt (die Software) verantwortlich ist, mit dem die Nachricht erstellt wurde."/>
       </eAnnotations>
@@ -228,7 +229,7 @@
         <details key="name" value="produkthersteller"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="produktversion" eType="ecore:EDataType datatype-din.ecore#//DatatypeC">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="produktversion" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="In diesem Attribut werden ergänzende Hinweise zu dem Produkt eingetragen. Dies sind Angaben, die für eine möglichst präzise Identifikation im Fehlerfall hilfreich sind, wie zum Beispiel Version und Patchlevel."/>
       </eAnnotations>
@@ -238,7 +239,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="standard" lowerBound="1"
-        eType="ecore:EDataType datatype-din.ecore#//DatatypeC">
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="In diesem Attribut wird der Name des XÖV-Standards angegeben, aus dem die Nachricht stammt."/>
       </eAnnotations>
@@ -247,7 +248,7 @@
         <details key="name" value="standard"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="test" eType="ecore:EDataType datatype-din.ecore#//DatatypeC">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="test" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Ist dieses Attribut vorhanden, handelt es sich aus Sicht des Autors um eine Testnachricht, die nicht im normalen Produktivbetrieb verarbeitet werden darf. Autor und Leser können bilateral weitere Absprachen über den konkreten Inhalt des Attributs treffen."/>
       </eAnnotations>
@@ -257,7 +258,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" lowerBound="1"
-        eType="ecore:EDataType datatype-din.ecore#//DatatypeC">
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="In diesem Attribut wird die Version des XÖV-Standards eingetragen, aus dem die Nachricht stammt."/>
       </eAnnotations>

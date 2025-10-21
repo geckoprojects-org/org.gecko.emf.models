@@ -16,7 +16,7 @@ package de.xoev.domea.domea;
 
 import basisnachricht.BasisnachrichtPackage;
 
-import code.CodePackage;
+import de.xoev.schemata.code.code.Code10Package;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -755,7 +755,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALLGEMEINE_RUECKMELDUNG_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int ALLGEMEINE_RUECKMELDUNG_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -764,7 +764,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALLGEMEINE_RUECKMELDUNG_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int ALLGEMEINE_RUECKMELDUNG_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -773,7 +773,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALLGEMEINE_RUECKMELDUNG_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int ALLGEMEINE_RUECKMELDUNG_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -782,7 +782,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALLGEMEINE_RUECKMELDUNG_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int ALLGEMEINE_RUECKMELDUNG_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Allgemeine Rueckmeldung Code Type</em>' class.
@@ -791,7 +791,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALLGEMEINE_RUECKMELDUNG_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int ALLGEMEINE_RUECKMELDUNG_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Allgemeine Rueckmeldung Code Type</em>' class.
@@ -800,7 +800,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALLGEMEINE_RUECKMELDUNG_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int ALLGEMEINE_RUECKMELDUNG_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.DokumentOderDokumentMitSchriftstueckTypeImpl <em>Dokument Oder Dokument Mit Schriftstueck Type</em>}' class.
@@ -920,7 +920,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANSCHRIFTSTYP_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int ANSCHRIFTSTYP_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -929,7 +929,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANSCHRIFTSTYP_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int ANSCHRIFTSTYP_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -938,7 +938,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANSCHRIFTSTYP_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int ANSCHRIFTSTYP_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -947,7 +947,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANSCHRIFTSTYP_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int ANSCHRIFTSTYP_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Anschriftstyp Code Type</em>' class.
@@ -956,7 +956,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANSCHRIFTSTYP_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int ANSCHRIFTSTYP_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Anschriftstyp Code Type</em>' class.
@@ -965,7 +965,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANSCHRIFTSTYP_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int ANSCHRIFTSTYP_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.AnschriftTypeImpl <em>Anschrift Type</em>}' class.
@@ -1258,7 +1258,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUSSONDERUNGSART_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int AUSSONDERUNGSART_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1267,7 +1267,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUSSONDERUNGSART_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int AUSSONDERUNGSART_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -1276,7 +1276,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUSSONDERUNGSART_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int AUSSONDERUNGSART_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -1285,7 +1285,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUSSONDERUNGSART_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int AUSSONDERUNGSART_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Aussonderungsart Code Type</em>' class.
@@ -1294,7 +1294,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUSSONDERUNGSART_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int AUSSONDERUNGSART_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Aussonderungsart Code Type</em>' class.
@@ -1303,7 +1303,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUSSONDERUNGSART_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int AUSSONDERUNGSART_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.AussonderungsartTypeImpl <em>Aussonderungsart Type</em>}' class.
@@ -1669,7 +1669,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BETEILIGUNGSSTATUS_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int BETEILIGUNGSSTATUS_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1678,7 +1678,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BETEILIGUNGSSTATUS_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int BETEILIGUNGSSTATUS_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -1687,7 +1687,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BETEILIGUNGSSTATUS_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int BETEILIGUNGSSTATUS_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -1696,7 +1696,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BETEILIGUNGSSTATUS_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int BETEILIGUNGSSTATUS_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Beteiligungsstatus Code Type</em>' class.
@@ -1705,7 +1705,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BETEILIGUNGSSTATUS_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int BETEILIGUNGSSTATUS_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Beteiligungsstatus Code Type</em>' class.
@@ -1714,7 +1714,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BETEILIGUNGSSTATUS_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int BETEILIGUNGSSTATUS_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.BewertungsvorschlagCodeTypeImpl <em>Bewertungsvorschlag Code Type</em>}' class.
@@ -1733,7 +1733,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BEWERTUNGSVORSCHLAG_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int BEWERTUNGSVORSCHLAG_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1742,7 +1742,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BEWERTUNGSVORSCHLAG_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int BEWERTUNGSVORSCHLAG_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -1751,7 +1751,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BEWERTUNGSVORSCHLAG_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int BEWERTUNGSVORSCHLAG_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -1760,7 +1760,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BEWERTUNGSVORSCHLAG_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int BEWERTUNGSVORSCHLAG_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Bewertungsvorschlag Code Type</em>' class.
@@ -1769,7 +1769,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BEWERTUNGSVORSCHLAG_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int BEWERTUNGSVORSCHLAG_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Bewertungsvorschlag Code Type</em>' class.
@@ -1778,7 +1778,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BEWERTUNGSVORSCHLAG_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int BEWERTUNGSVORSCHLAG_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.DateiformatCodeTypeImpl <em>Dateiformat Code Type</em>}' class.
@@ -1797,7 +1797,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATEIFORMAT_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int DATEIFORMAT_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1806,7 +1806,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATEIFORMAT_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int DATEIFORMAT_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -1815,7 +1815,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATEIFORMAT_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int DATEIFORMAT_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -1824,7 +1824,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATEIFORMAT_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int DATEIFORMAT_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Dateiformat Code Type</em>' class.
@@ -1833,7 +1833,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATEIFORMAT_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int DATEIFORMAT_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Dateiformat Code Type</em>' class.
@@ -1842,7 +1842,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATEIFORMAT_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int DATEIFORMAT_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.DatenaustauschartCodeTypeImpl <em>Datenaustauschart Code Type</em>}' class.
@@ -1861,7 +1861,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATENAUSTAUSCHART_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int DATENAUSTAUSCHART_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1870,7 +1870,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATENAUSTAUSCHART_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int DATENAUSTAUSCHART_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -1879,7 +1879,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATENAUSTAUSCHART_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int DATENAUSTAUSCHART_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -1888,7 +1888,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATENAUSTAUSCHART_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int DATENAUSTAUSCHART_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Datenaustauschart Code Type</em>' class.
@@ -1897,7 +1897,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATENAUSTAUSCHART_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int DATENAUSTAUSCHART_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Datenaustauschart Code Type</em>' class.
@@ -1906,7 +1906,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATENAUSTAUSCHART_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int DATENAUSTAUSCHART_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.DatenschutzstufeCodeTypeImpl <em>Datenschutzstufe Code Type</em>}' class.
@@ -1925,7 +1925,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATENSCHUTZSTUFE_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int DATENSCHUTZSTUFE_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1934,7 +1934,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATENSCHUTZSTUFE_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int DATENSCHUTZSTUFE_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -1943,7 +1943,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATENSCHUTZSTUFE_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int DATENSCHUTZSTUFE_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -1952,7 +1952,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATENSCHUTZSTUFE_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int DATENSCHUTZSTUFE_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Datenschutzstufe Code Type</em>' class.
@@ -1961,7 +1961,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATENSCHUTZSTUFE_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int DATENSCHUTZSTUFE_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Datenschutzstufe Code Type</em>' class.
@@ -1970,7 +1970,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATENSCHUTZSTUFE_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int DATENSCHUTZSTUFE_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.DatentypCodeTypeImpl <em>Datentyp Code Type</em>}' class.
@@ -1989,7 +1989,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATENTYP_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int DATENTYP_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1998,7 +1998,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATENTYP_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int DATENTYP_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -2007,7 +2007,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATENTYP_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int DATENTYP_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -2016,7 +2016,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATENTYP_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int DATENTYP_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Datentyp Code Type</em>' class.
@@ -2025,7 +2025,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATENTYP_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int DATENTYP_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Datentyp Code Type</em>' class.
@@ -2034,7 +2034,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATENTYP_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int DATENTYP_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.DokumentSchriftstueckBasisTypeImpl <em>Dokument Schriftstueck Basis Type</em>}' class.
@@ -2952,7 +2952,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEHEIMHALTUNGSGRAD_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int GEHEIMHALTUNGSGRAD_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2961,7 +2961,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEHEIMHALTUNGSGRAD_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int GEHEIMHALTUNGSGRAD_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -2970,7 +2970,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEHEIMHALTUNGSGRAD_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int GEHEIMHALTUNGSGRAD_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -2979,7 +2979,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEHEIMHALTUNGSGRAD_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int GEHEIMHALTUNGSGRAD_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Geheimhaltungsgrad Code Type</em>' class.
@@ -2988,7 +2988,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEHEIMHALTUNGSGRAD_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int GEHEIMHALTUNGSGRAD_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Geheimhaltungsgrad Code Type</em>' class.
@@ -2997,7 +2997,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GEHEIMHALTUNGSGRAD_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int GEHEIMHALTUNGSGRAD_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.GeheimhaltungTypeImpl <em>Geheimhaltung Type</em>}' class.
@@ -3464,7 +3464,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KOMPRESSIONSVERFAHREN_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int KOMPRESSIONSVERFAHREN_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3473,7 +3473,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KOMPRESSIONSVERFAHREN_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int KOMPRESSIONSVERFAHREN_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -3482,7 +3482,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KOMPRESSIONSVERFAHREN_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int KOMPRESSIONSVERFAHREN_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -3491,7 +3491,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KOMPRESSIONSVERFAHREN_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int KOMPRESSIONSVERFAHREN_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Kompressionsverfahren Code Type</em>' class.
@@ -3500,7 +3500,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KOMPRESSIONSVERFAHREN_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int KOMPRESSIONSVERFAHREN_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Kompressionsverfahren Code Type</em>' class.
@@ -3509,7 +3509,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KOMPRESSIONSVERFAHREN_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int KOMPRESSIONSVERFAHREN_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.KonfigurationsparameterCodeTypeImpl <em>Konfigurationsparameter Code Type</em>}' class.
@@ -3528,7 +3528,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KONFIGURATIONSPARAMETER_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int KONFIGURATIONSPARAMETER_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3537,7 +3537,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KONFIGURATIONSPARAMETER_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int KONFIGURATIONSPARAMETER_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -3546,7 +3546,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KONFIGURATIONSPARAMETER_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int KONFIGURATIONSPARAMETER_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -3555,7 +3555,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KONFIGURATIONSPARAMETER_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int KONFIGURATIONSPARAMETER_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Konfigurationsparameter Code Type</em>' class.
@@ -3564,7 +3564,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KONFIGURATIONSPARAMETER_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int KONFIGURATIONSPARAMETER_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Konfigurationsparameter Code Type</em>' class.
@@ -3573,7 +3573,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KONFIGURATIONSPARAMETER_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int KONFIGURATIONSPARAMETER_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.KonfigurationsparameterGruppeCodeTypeImpl <em>Konfigurationsparameter Gruppe Code Type</em>}' class.
@@ -3592,7 +3592,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KONFIGURATIONSPARAMETER_GRUPPE_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int KONFIGURATIONSPARAMETER_GRUPPE_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3601,7 +3601,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KONFIGURATIONSPARAMETER_GRUPPE_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int KONFIGURATIONSPARAMETER_GRUPPE_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -3610,7 +3610,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KONFIGURATIONSPARAMETER_GRUPPE_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int KONFIGURATIONSPARAMETER_GRUPPE_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -3619,7 +3619,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KONFIGURATIONSPARAMETER_GRUPPE_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int KONFIGURATIONSPARAMETER_GRUPPE_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Konfigurationsparameter Gruppe Code Type</em>' class.
@@ -3628,7 +3628,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KONFIGURATIONSPARAMETER_GRUPPE_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int KONFIGURATIONSPARAMETER_GRUPPE_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Konfigurationsparameter Gruppe Code Type</em>' class.
@@ -3637,7 +3637,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KONFIGURATIONSPARAMETER_GRUPPE_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int KONFIGURATIONSPARAMETER_GRUPPE_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.KontaktTypeImpl <em>Kontakt Type</em>}' class.
@@ -3810,7 +3810,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KRYPTOGRAPHISCHE_ALGORITHMEN_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int KRYPTOGRAPHISCHE_ALGORITHMEN_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3819,7 +3819,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KRYPTOGRAPHISCHE_ALGORITHMEN_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int KRYPTOGRAPHISCHE_ALGORITHMEN_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -3828,7 +3828,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KRYPTOGRAPHISCHE_ALGORITHMEN_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int KRYPTOGRAPHISCHE_ALGORITHMEN_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -3837,7 +3837,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KRYPTOGRAPHISCHE_ALGORITHMEN_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int KRYPTOGRAPHISCHE_ALGORITHMEN_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Kryptographische Algorithmen Code Type</em>' class.
@@ -3846,7 +3846,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KRYPTOGRAPHISCHE_ALGORITHMEN_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int KRYPTOGRAPHISCHE_ALGORITHMEN_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Kryptographische Algorithmen Code Type</em>' class.
@@ -3855,7 +3855,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int KRYPTOGRAPHISCHE_ALGORITHMEN_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int KRYPTOGRAPHISCHE_ALGORITHMEN_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.MediumCodeTypeImpl <em>Medium Code Type</em>}' class.
@@ -3874,7 +3874,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDIUM_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int MEDIUM_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3883,7 +3883,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDIUM_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int MEDIUM_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -3892,7 +3892,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDIUM_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int MEDIUM_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -3901,7 +3901,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDIUM_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int MEDIUM_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Medium Code Type</em>' class.
@@ -3910,7 +3910,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDIUM_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int MEDIUM_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Medium Code Type</em>' class.
@@ -3919,7 +3919,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDIUM_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int MEDIUM_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.NachrichtenkopfTypeImpl <em>Nachrichtenkopf Type</em>}' class.
@@ -4038,7 +4038,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NACHRICHTENTYP_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int NACHRICHTENTYP_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4047,7 +4047,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NACHRICHTENTYP_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int NACHRICHTENTYP_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -4056,7 +4056,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NACHRICHTENTYP_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int NACHRICHTENTYP_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -4065,7 +4065,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NACHRICHTENTYP_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int NACHRICHTENTYP_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Nachrichtentyp Code Type</em>' class.
@@ -4074,7 +4074,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NACHRICHTENTYP_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int NACHRICHTENTYP_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Nachrichtentyp Code Type</em>' class.
@@ -4083,7 +4083,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NACHRICHTENTYP_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int NACHRICHTENTYP_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.NachrichtTypeImpl <em>Nachricht Type</em>}' class.
@@ -4895,7 +4895,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROLLE_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int ROLLE_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4904,7 +4904,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROLLE_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int ROLLE_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -4913,7 +4913,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROLLE_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int ROLLE_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -4922,7 +4922,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROLLE_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int ROLLE_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Rolle Code Type</em>' class.
@@ -4931,7 +4931,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROLLE_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int ROLLE_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Rolle Code Type</em>' class.
@@ -4940,7 +4940,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROLLE_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int ROLLE_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SchriftgutobjekttypCodeTypeImpl <em>Schriftgutobjekttyp Code Type</em>}' class.
@@ -4959,7 +4959,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHRIFTGUTOBJEKTTYP_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SCHRIFTGUTOBJEKTTYP_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4968,7 +4968,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHRIFTGUTOBJEKTTYP_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SCHRIFTGUTOBJEKTTYP_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -4977,7 +4977,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHRIFTGUTOBJEKTTYP_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SCHRIFTGUTOBJEKTTYP_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -4986,7 +4986,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHRIFTGUTOBJEKTTYP_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SCHRIFTGUTOBJEKTTYP_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Schriftgutobjekttyp Code Type</em>' class.
@@ -4995,7 +4995,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHRIFTGUTOBJEKTTYP_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SCHRIFTGUTOBJEKTTYP_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Schriftgutobjekttyp Code Type</em>' class.
@@ -5004,7 +5004,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHRIFTGUTOBJEKTTYP_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SCHRIFTGUTOBJEKTTYP_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SignaturSiegelTypeImpl <em>Signatur Siegel Type</em>}' class.
@@ -5069,7 +5069,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SONSTIGE_FEHLERMELDUNG_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SONSTIGE_FEHLERMELDUNG_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5078,7 +5078,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SONSTIGE_FEHLERMELDUNG_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SONSTIGE_FEHLERMELDUNG_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -5087,7 +5087,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SONSTIGE_FEHLERMELDUNG_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SONSTIGE_FEHLERMELDUNG_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -5096,7 +5096,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SONSTIGE_FEHLERMELDUNG_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SONSTIGE_FEHLERMELDUNG_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Sonstige Fehlermeldung Code Type</em>' class.
@@ -5105,7 +5105,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SONSTIGE_FEHLERMELDUNG_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SONSTIGE_FEHLERMELDUNG_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Sonstige Fehlermeldung Code Type</em>' class.
@@ -5114,7 +5114,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SONSTIGE_FEHLERMELDUNG_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SONSTIGE_FEHLERMELDUNG_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0601CodeTypeImpl <em>Spezifische Fehlermeldung0601 Code Type</em>}' class.
@@ -5133,7 +5133,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0601_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0601_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5142,7 +5142,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0601_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0601_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -5151,7 +5151,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0601_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0601_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -5160,7 +5160,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0601_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0601_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0601 Code Type</em>' class.
@@ -5169,7 +5169,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0601_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0601_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0601 Code Type</em>' class.
@@ -5178,7 +5178,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0601_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0601_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0602CodeTypeImpl <em>Spezifische Fehlermeldung0602 Code Type</em>}' class.
@@ -5197,7 +5197,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0602_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0602_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5206,7 +5206,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0602_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0602_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -5215,7 +5215,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0602_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0602_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -5224,7 +5224,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0602_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0602_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0602 Code Type</em>' class.
@@ -5233,7 +5233,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0602_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0602_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0602 Code Type</em>' class.
@@ -5242,7 +5242,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0602_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0602_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0603CodeTypeImpl <em>Spezifische Fehlermeldung0603 Code Type</em>}' class.
@@ -5261,7 +5261,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0603_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0603_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5270,7 +5270,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0603_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0603_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -5279,7 +5279,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0603_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0603_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -5288,7 +5288,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0603_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0603_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0603 Code Type</em>' class.
@@ -5297,7 +5297,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0603_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0603_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0603 Code Type</em>' class.
@@ -5306,7 +5306,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0603_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0603_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0604CodeTypeImpl <em>Spezifische Fehlermeldung0604 Code Type</em>}' class.
@@ -5325,7 +5325,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0604_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0604_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5334,7 +5334,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0604_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0604_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -5343,7 +5343,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0604_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0604_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -5352,7 +5352,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0604_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0604_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0604 Code Type</em>' class.
@@ -5361,7 +5361,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0604_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0604_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0604 Code Type</em>' class.
@@ -5370,7 +5370,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0604_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0604_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0605CodeTypeImpl <em>Spezifische Fehlermeldung0605 Code Type</em>}' class.
@@ -5389,7 +5389,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0605_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0605_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5398,7 +5398,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0605_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0605_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -5407,7 +5407,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0605_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0605_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -5416,7 +5416,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0605_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0605_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0605 Code Type</em>' class.
@@ -5425,7 +5425,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0605_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0605_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0605 Code Type</em>' class.
@@ -5434,7 +5434,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0605_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0605_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0606CodeTypeImpl <em>Spezifische Fehlermeldung0606 Code Type</em>}' class.
@@ -5453,7 +5453,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0606_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0606_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5462,7 +5462,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0606_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0606_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -5471,7 +5471,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0606_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0606_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -5480,7 +5480,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0606_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0606_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0606 Code Type</em>' class.
@@ -5489,7 +5489,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0606_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0606_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0606 Code Type</em>' class.
@@ -5498,7 +5498,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0606_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0606_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0607CodeTypeImpl <em>Spezifische Fehlermeldung0607 Code Type</em>}' class.
@@ -5517,7 +5517,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0607_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0607_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5526,7 +5526,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0607_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0607_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -5535,7 +5535,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0607_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0607_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -5544,7 +5544,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0607_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0607_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0607 Code Type</em>' class.
@@ -5553,7 +5553,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0607_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0607_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0607 Code Type</em>' class.
@@ -5562,7 +5562,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0607_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0607_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0608CodeTypeImpl <em>Spezifische Fehlermeldung0608 Code Type</em>}' class.
@@ -5581,7 +5581,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0608_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0608_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5590,7 +5590,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0608_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0608_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -5599,7 +5599,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0608_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0608_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -5608,7 +5608,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0608_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0608_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0608 Code Type</em>' class.
@@ -5617,7 +5617,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0608_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0608_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0608 Code Type</em>' class.
@@ -5626,7 +5626,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0608_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0608_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0609CodeTypeImpl <em>Spezifische Fehlermeldung0609 Code Type</em>}' class.
@@ -5645,7 +5645,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0609_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0609_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5654,7 +5654,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0609_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0609_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -5663,7 +5663,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0609_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0609_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -5672,7 +5672,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0609_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0609_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0609 Code Type</em>' class.
@@ -5681,7 +5681,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0609_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0609_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0609 Code Type</em>' class.
@@ -5690,7 +5690,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0609_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0609_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0610CodeTypeImpl <em>Spezifische Fehlermeldung0610 Code Type</em>}' class.
@@ -5709,7 +5709,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0610_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0610_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5718,7 +5718,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0610_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0610_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -5727,7 +5727,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0610_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0610_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -5736,7 +5736,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0610_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0610_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0610 Code Type</em>' class.
@@ -5745,7 +5745,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0610_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0610_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0610 Code Type</em>' class.
@@ -5754,7 +5754,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0610_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0610_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0611CodeTypeImpl <em>Spezifische Fehlermeldung0611 Code Type</em>}' class.
@@ -5773,7 +5773,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0611_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0611_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5782,7 +5782,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0611_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0611_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -5791,7 +5791,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0611_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0611_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -5800,7 +5800,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0611_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0611_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0611 Code Type</em>' class.
@@ -5809,7 +5809,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0611_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0611_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0611 Code Type</em>' class.
@@ -5818,7 +5818,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0611_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0611_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0612CodeTypeImpl <em>Spezifische Fehlermeldung0612 Code Type</em>}' class.
@@ -5837,7 +5837,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0612_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0612_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5846,7 +5846,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0612_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0612_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -5855,7 +5855,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0612_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0612_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -5864,7 +5864,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0612_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0612_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0612 Code Type</em>' class.
@@ -5873,7 +5873,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0612_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0612_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0612 Code Type</em>' class.
@@ -5882,7 +5882,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0612_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0612_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0613CodeTypeImpl <em>Spezifische Fehlermeldung0613 Code Type</em>}' class.
@@ -5901,7 +5901,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0613_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0613_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5910,7 +5910,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0613_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0613_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -5919,7 +5919,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0613_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0613_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -5928,7 +5928,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0613_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0613_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0613 Code Type</em>' class.
@@ -5937,7 +5937,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0613_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0613_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0613 Code Type</em>' class.
@@ -5946,7 +5946,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0613_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0613_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0614CodeTypeImpl <em>Spezifische Fehlermeldung0614 Code Type</em>}' class.
@@ -5965,7 +5965,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0614_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0614_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5974,7 +5974,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0614_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0614_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -5983,7 +5983,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0614_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0614_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -5992,7 +5992,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0614_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0614_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0614 Code Type</em>' class.
@@ -6001,7 +6001,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0614_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0614_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0614 Code Type</em>' class.
@@ -6010,7 +6010,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0614_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0614_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0615CodeTypeImpl <em>Spezifische Fehlermeldung0615 Code Type</em>}' class.
@@ -6029,7 +6029,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0615_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0615_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6038,7 +6038,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0615_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0615_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -6047,7 +6047,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0615_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0615_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -6056,7 +6056,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0615_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0615_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0615 Code Type</em>' class.
@@ -6065,7 +6065,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0615_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0615_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0615 Code Type</em>' class.
@@ -6074,7 +6074,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0615_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0615_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0616CodeTypeImpl <em>Spezifische Fehlermeldung0616 Code Type</em>}' class.
@@ -6093,7 +6093,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0616_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0616_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6102,7 +6102,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0616_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0616_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -6111,7 +6111,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0616_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0616_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -6120,7 +6120,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0616_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0616_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0616 Code Type</em>' class.
@@ -6129,7 +6129,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0616_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0616_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0616 Code Type</em>' class.
@@ -6138,7 +6138,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0616_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0616_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0617CodeTypeImpl <em>Spezifische Fehlermeldung0617 Code Type</em>}' class.
@@ -6157,7 +6157,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0617_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0617_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6166,7 +6166,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0617_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0617_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -6175,7 +6175,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0617_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0617_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -6184,7 +6184,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0617_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0617_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0617 Code Type</em>' class.
@@ -6193,7 +6193,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0617_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0617_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0617 Code Type</em>' class.
@@ -6202,7 +6202,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0617_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0617_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0618CodeTypeImpl <em>Spezifische Fehlermeldung0618 Code Type</em>}' class.
@@ -6221,7 +6221,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0618_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0618_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6230,7 +6230,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0618_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0618_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -6239,7 +6239,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0618_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0618_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -6248,7 +6248,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0618_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0618_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0618 Code Type</em>' class.
@@ -6257,7 +6257,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0618_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0618_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0618 Code Type</em>' class.
@@ -6266,7 +6266,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0618_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0618_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0619CodeTypeImpl <em>Spezifische Fehlermeldung0619 Code Type</em>}' class.
@@ -6285,7 +6285,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0619_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0619_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6294,7 +6294,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0619_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0619_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -6303,7 +6303,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0619_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0619_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -6312,7 +6312,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0619_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0619_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0619 Code Type</em>' class.
@@ -6321,7 +6321,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0619_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0619_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0619 Code Type</em>' class.
@@ -6330,7 +6330,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0619_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0619_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0620CodeTypeImpl <em>Spezifische Fehlermeldung0620 Code Type</em>}' class.
@@ -6349,7 +6349,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0620_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0620_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6358,7 +6358,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0620_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0620_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -6367,7 +6367,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0620_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0620_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -6376,7 +6376,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0620_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0620_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0620 Code Type</em>' class.
@@ -6385,7 +6385,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0620_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0620_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0620 Code Type</em>' class.
@@ -6394,7 +6394,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0620_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0620_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0621CodeTypeImpl <em>Spezifische Fehlermeldung0621 Code Type</em>}' class.
@@ -6413,7 +6413,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0621_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0621_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6422,7 +6422,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0621_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0621_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -6431,7 +6431,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0621_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0621_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -6440,7 +6440,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0621_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0621_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0621 Code Type</em>' class.
@@ -6449,7 +6449,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0621_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0621_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0621 Code Type</em>' class.
@@ -6458,7 +6458,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0621_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0621_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0622CodeTypeImpl <em>Spezifische Fehlermeldung0622 Code Type</em>}' class.
@@ -6477,7 +6477,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0622_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0622_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6486,7 +6486,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0622_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0622_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -6495,7 +6495,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0622_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0622_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -6504,7 +6504,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0622_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0622_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0622 Code Type</em>' class.
@@ -6513,7 +6513,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0622_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0622_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0622 Code Type</em>' class.
@@ -6522,7 +6522,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0622_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0622_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0623CodeTypeImpl <em>Spezifische Fehlermeldung0623 Code Type</em>}' class.
@@ -6541,7 +6541,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0623_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0623_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6550,7 +6550,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0623_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0623_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -6559,7 +6559,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0623_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0623_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -6568,7 +6568,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0623_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0623_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0623 Code Type</em>' class.
@@ -6577,7 +6577,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0623_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0623_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0623 Code Type</em>' class.
@@ -6586,7 +6586,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0623_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0623_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0624CodeTypeImpl <em>Spezifische Fehlermeldung0624 Code Type</em>}' class.
@@ -6605,7 +6605,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0624_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0624_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6614,7 +6614,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0624_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0624_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -6623,7 +6623,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0624_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0624_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -6632,7 +6632,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0624_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0624_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0624 Code Type</em>' class.
@@ -6641,7 +6641,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0624_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0624_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0624 Code Type</em>' class.
@@ -6650,7 +6650,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0624_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0624_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0625CodeTypeImpl <em>Spezifische Fehlermeldung0625 Code Type</em>}' class.
@@ -6669,7 +6669,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0625_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0625_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6678,7 +6678,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0625_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0625_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -6687,7 +6687,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0625_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0625_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -6696,7 +6696,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0625_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0625_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0625 Code Type</em>' class.
@@ -6705,7 +6705,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0625_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0625_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0625 Code Type</em>' class.
@@ -6714,7 +6714,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0625_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0625_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0626CodeTypeImpl <em>Spezifische Fehlermeldung0626 Code Type</em>}' class.
@@ -6733,7 +6733,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0626_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0626_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6742,7 +6742,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0626_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0626_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -6751,7 +6751,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0626_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0626_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -6760,7 +6760,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0626_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0626_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0626 Code Type</em>' class.
@@ -6769,7 +6769,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0626_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0626_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0626 Code Type</em>' class.
@@ -6778,7 +6778,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0626_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0626_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0627CodeTypeImpl <em>Spezifische Fehlermeldung0627 Code Type</em>}' class.
@@ -6797,7 +6797,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0627_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0627_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6806,7 +6806,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0627_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0627_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -6815,7 +6815,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0627_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0627_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -6824,7 +6824,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0627_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0627_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0627 Code Type</em>' class.
@@ -6833,7 +6833,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0627_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0627_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0627 Code Type</em>' class.
@@ -6842,7 +6842,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0627_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0627_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0628CodeTypeImpl <em>Spezifische Fehlermeldung0628 Code Type</em>}' class.
@@ -6861,7 +6861,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0628_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0628_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6870,7 +6870,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0628_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0628_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -6879,7 +6879,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0628_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0628_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -6888,7 +6888,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0628_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0628_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0628 Code Type</em>' class.
@@ -6897,7 +6897,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0628_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0628_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0628 Code Type</em>' class.
@@ -6906,7 +6906,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0628_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0628_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0631CodeTypeImpl <em>Spezifische Fehlermeldung0631 Code Type</em>}' class.
@@ -6925,7 +6925,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0631_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0631_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6934,7 +6934,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0631_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0631_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -6943,7 +6943,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0631_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0631_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -6952,7 +6952,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0631_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0631_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0631 Code Type</em>' class.
@@ -6961,7 +6961,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0631_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0631_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0631 Code Type</em>' class.
@@ -6970,7 +6970,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0631_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0631_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.SpezifischeFehlermeldung0632CodeTypeImpl <em>Spezifische Fehlermeldung0632 Code Type</em>}' class.
@@ -6989,7 +6989,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0632_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int SPEZIFISCHE_FEHLERMELDUNG0632_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6998,7 +6998,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0632_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int SPEZIFISCHE_FEHLERMELDUNG0632_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -7007,7 +7007,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0632_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int SPEZIFISCHE_FEHLERMELDUNG0632_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -7016,7 +7016,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0632_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int SPEZIFISCHE_FEHLERMELDUNG0632_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Spezifische Fehlermeldung0632 Code Type</em>' class.
@@ -7025,7 +7025,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0632_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0632_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Spezifische Fehlermeldung0632 Code Type</em>' class.
@@ -7034,7 +7034,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPEZIFISCHE_FEHLERMELDUNG0632_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int SPEZIFISCHE_FEHLERMELDUNG0632_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.StaatCodeTypeImpl <em>Staat Code Type</em>}' class.
@@ -7053,7 +7053,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAAT_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int STAAT_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7062,7 +7062,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAAT_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int STAAT_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -7071,7 +7071,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAAT_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int STAAT_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -7080,7 +7080,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAAT_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int STAAT_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Staat Code Type</em>' class.
@@ -7089,7 +7089,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAAT_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int STAAT_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Staat Code Type</em>' class.
@@ -7098,7 +7098,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STAAT_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int STAAT_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.StaatTypeImpl <em>Staat Type</em>}' class.
@@ -7154,7 +7154,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUKTURELEMENT_TYP_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int STRUKTURELEMENT_TYP_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7163,7 +7163,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUKTURELEMENT_TYP_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int STRUKTURELEMENT_TYP_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -7172,7 +7172,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUKTURELEMENT_TYP_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int STRUKTURELEMENT_TYP_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -7181,7 +7181,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUKTURELEMENT_TYP_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int STRUKTURELEMENT_TYP_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Strukturelement Typ Code Type</em>' class.
@@ -7190,7 +7190,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUKTURELEMENT_TYP_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int STRUKTURELEMENT_TYP_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Strukturelement Typ Code Type</em>' class.
@@ -7199,7 +7199,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUKTURELEMENT_TYP_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int STRUKTURELEMENT_TYP_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.StrukturpfadTypeImpl <em>Strukturpfad Type</em>}' class.
@@ -7319,7 +7319,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSPORTWEG_CODE_TYPE__CODE = CodePackage.CODE__CODE;
+	int TRANSPORTWEG_CODE_TYPE__CODE = Code10Package.CODE__CODE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7328,7 +7328,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSPORTWEG_CODE_TYPE__NAME = CodePackage.CODE__NAME;
+	int TRANSPORTWEG_CODE_TYPE__NAME = Code10Package.CODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>List URI</b></em>' attribute.
@@ -7337,7 +7337,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSPORTWEG_CODE_TYPE__LIST_URI = CodePackage.CODE__LIST_URI;
+	int TRANSPORTWEG_CODE_TYPE__LIST_URI = Code10Package.CODE__LIST_URI;
 
 	/**
 	 * The feature id for the '<em><b>List Version ID</b></em>' attribute.
@@ -7346,7 +7346,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSPORTWEG_CODE_TYPE__LIST_VERSION_ID = CodePackage.CODE__LIST_VERSION_ID;
+	int TRANSPORTWEG_CODE_TYPE__LIST_VERSION_ID = Code10Package.CODE__LIST_VERSION_ID;
 
 	/**
 	 * The number of structural features of the '<em>Transportweg Code Type</em>' class.
@@ -7355,7 +7355,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSPORTWEG_CODE_TYPE_FEATURE_COUNT = CodePackage.CODE_FEATURE_COUNT + 0;
+	int TRANSPORTWEG_CODE_TYPE_FEATURE_COUNT = Code10Package.CODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Transportweg Code Type</em>' class.
@@ -7364,7 +7364,7 @@ public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSPORTWEG_CODE_TYPE_OPERATION_COUNT = CodePackage.CODE_OPERATION_COUNT + 0;
+	int TRANSPORTWEG_CODE_TYPE_OPERATION_COUNT = Code10Package.CODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.xoev.domea.domea.impl.UnstrukturierteAnschriftTypeImpl <em>Unstrukturierte Anschrift Type</em>}' class.

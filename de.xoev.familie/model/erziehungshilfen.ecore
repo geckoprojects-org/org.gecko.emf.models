@@ -1,0 +1,1835 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="erziehungshilfen" nsURI="http://www.xoev.de/xfamilie/hilfenZurErziehung/1.3.0"
+    nsPrefix="erziehungshilfen">
+  <eAnnotations>
+    <details key="appinfo" value="&#xA;           &#xA;  &lt;standard>&#xA;                &#xA;    &lt;nameLang>XFamilie&lt;/nameLang>&#xA;                &#xA;    &lt;nameKurz>XFamilie&lt;/nameKurz>&#xA;                &#xA;    &lt;nameTechnisch>xfamilie&lt;/nameTechnisch>&#xA;                &#xA;    &lt;kennung>urn:xoev-de:kosit:standard:xfamilie&lt;/kennung>&#xA;                &#xA;    &lt;beschreibung>Projektziel ist die elektronische Kommunikation im Familienbereich zwischen verschiedenen Behörden, Institutionen, Registern und Onlineportalen, die Daten untereinander austauschen, zu unterstützen. Der Nutzen des Projekts besteht in der Kostenreduktion und einer Verbesserung der Qualität von Daten für Familienleistungen, sowie einer Verbesserung der Interoperabilität von Akteuren im Familienbereich und weiteren Kommunikationspartner.&lt;/beschreibung>&#xA;             &#xA;  &lt;/standard>&#xA;           &#xA;  &lt;versionStandard>&#xA;                &#xA;    &lt;version>1.3.0&lt;/version>&#xA;                &#xA;    &lt;beschreibung>Die Änderungshistorie befindet sich in Tabellenform nach Change Requests gegliedert in Kapitel E.&lt;/beschreibung>&#xA;                &#xA;    &lt;versionXOEVProfil>3.0.2&lt;/versionXOEVProfil>&#xA;                &#xA;    &lt;versionXOEVHandbuch>3.0.2&lt;/versionXOEVHandbuch>&#xA;                &#xA;    &lt;versionXGenerator>3.1.0&lt;/versionXGenerator>&#xA;                &#xA;    &lt;versionModellierungswerkzeug>19.0&lt;/versionModellierungswerkzeug>&#xA;                &#xA;    &lt;nameModellierungswerkzeug>MagicDraw&lt;/nameModellierungswerkzeug>&#xA;             &#xA;  &lt;/versionStandard>&#xA;        &#xA;&#xA;&#xA;           &#xA;  &lt;standard>&#xA;                &#xA;    &lt;nameLang>XFamilie&lt;/nameLang>&#xA;                &#xA;    &lt;nameKurz>XFamilie&lt;/nameKurz>&#xA;                &#xA;    &lt;nameTechnisch>xfamilie&lt;/nameTechnisch>&#xA;                &#xA;    &lt;kennung>urn:xoev-de:kosit:standard:xfamilie&lt;/kennung>&#xA;                &#xA;    &lt;beschreibung>Projektziel ist die elektronische Kommunikation im Familienbereich zwischen verschiedenen Behörden, Institutionen, Registern und Onlineportalen, die Daten untereinander austauschen, zu unterstützen. Der Nutzen des Projekts besteht in der Kostenreduktion und einer Verbesserung der Qualität von Daten für Familienleistungen, sowie einer Verbesserung der Interoperabilität von Akteuren im Familienbereich und weiteren Kommunikationspartner.&lt;/beschreibung>&#xA;             &#xA;  &lt;/standard>&#xA;           &#xA;  &lt;versionStandard>&#xA;                &#xA;    &lt;version>1.3.0&lt;/version>&#xA;                &#xA;    &lt;beschreibung>Die Änderungshistorie befindet sich in Tabellenform nach Change Requests gegliedert in Kapitel E.&lt;/beschreibung>&#xA;                &#xA;    &lt;versionXOEVProfil>3.0.2&lt;/versionXOEVProfil>&#xA;                &#xA;    &lt;versionXOEVHandbuch>3.0.2&lt;/versionXOEVHandbuch>&#xA;                &#xA;    &lt;versionXGenerator>3.1.0&lt;/versionXGenerator>&#xA;                &#xA;    &lt;versionModellierungswerkzeug>19.0&lt;/versionModellierungswerkzeug>&#xA;                &#xA;    &lt;nameModellierungswerkzeug>MagicDraw&lt;/nameModellierungswerkzeug>&#xA;             &#xA;  &lt;/versionStandard>&#xA;        &#xA;&#xA;&#xA;           &#xA;  &lt;standard>&#xA;                &#xA;    &lt;nameLang>XFamilie&lt;/nameLang>&#xA;                &#xA;    &lt;nameKurz>XFamilie&lt;/nameKurz>&#xA;                &#xA;    &lt;nameTechnisch>xfamilie&lt;/nameTechnisch>&#xA;                &#xA;    &lt;kennung>urn:xoev-de:kosit:standard:xfamilie&lt;/kennung>&#xA;                &#xA;    &lt;beschreibung>Projektziel ist die elektronische Kommunikation im Familienbereich zwischen verschiedenen Behörden, Institutionen, Registern und Onlineportalen, die Daten untereinander austauschen, zu unterstützen. Der Nutzen des Projekts besteht in der Kostenreduktion und einer Verbesserung der Qualität von Daten für Familienleistungen, sowie einer Verbesserung der Interoperabilität von Akteuren im Familienbereich und weiteren Kommunikationspartner.&lt;/beschreibung>&#xA;             &#xA;  &lt;/standard>&#xA;           &#xA;  &lt;versionStandard>&#xA;                &#xA;    &lt;version>1.3.0&lt;/version>&#xA;                &#xA;    &lt;beschreibung>Die Änderungshistorie befindet sich in Tabellenform nach Change Requests gegliedert in Kapitel E.&lt;/beschreibung>&#xA;                &#xA;    &lt;versionXOEVProfil>3.0.2&lt;/versionXOEVProfil>&#xA;                &#xA;    &lt;versionXOEVHandbuch>3.0.2&lt;/versionXOEVHandbuch>&#xA;                &#xA;    &lt;versionXGenerator>3.1.0&lt;/versionXGenerator>&#xA;                &#xA;    &lt;versionModellierungswerkzeug>19.0&lt;/versionModellierungswerkzeug>&#xA;                &#xA;    &lt;nameModellierungswerkzeug>MagicDraw&lt;/nameModellierungswerkzeug>&#xA;             &#xA;  &lt;/versionStandard>&#xA;        &#xA;"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="Diese Schema-Datei enthält die technische Repräsentation der in der Norm DIN 91379 definierten Datentypen."/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="AngabenElternteilEingliederungType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Angaben zu weiteren Elternteilen für Eingliederungshilfe."/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AngabenElternteilEingliederungType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namen" lowerBound="1" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonVornameVerpflichtendType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="namen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angabenGeburtElternteil"
+        eType="ecore:EClass baukasten.ecore#//GeburtGeburtsortOptionalType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="angabenGeburtElternteil"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aktuelleAnschrift" lowerBound="1"
+        eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Adresse, die im Personalausweis steht."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="aktuelleAnschrift"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kontaktdaten" eType="ecore:EClass baukasten.ecore#//ErreichbarkeitType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="kontaktdaten"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AngabenElternteilHJVType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Zu befüllen, wenn Vormund*in/Pfleger*in UND sorgeberechtigt != True"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AngabenElternteilHJVType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namen" lowerBound="1" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonVornameVerpflichtendType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="namen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geburtsdatum" lowerBound="1"
+        eType="ecore:EDataType baukasten.ecore#//TagesdatumType">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtsdatum"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aktuelleAnschrift" lowerBound="1"
+        eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Adresse, die im Personalausweis steht."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="aktuelleAnschrift"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kontaktdaten" eType="ecore:EClass baukasten.ecore#//ErreichbarkeitType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="kontaktdaten"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AngabenETType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Zu befüllen, wenn Vormund*in/Pfleger*in UND sorgeberechtigt != True"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AngabenETType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namen" lowerBound="1" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonVornameVerpflichtendType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="namen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kontaktdaten" upperBound="2"
+        eType="ecore:EClass baukasten.ecore#//ErreichbarkeitType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="kontaktdaten"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AngabenKindEingliederungType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AngabenKindEingliederungType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namen" lowerBound="1" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonVornameVerpflichtendType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Vorname, Familienname sind verpflichtend, Geburtsname ist an dieser Stelle irrelevant"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="namen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geburtsdatum" lowerBound="1"
+        eType="ecore:EDataType baukasten.ecore#//TagesdatumType">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtsdatum"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="geschlecht" lowerBound="1"
+        eType="ecore:EClass baukasten.ecore#//CodeGeschlechtType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geschlecht"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aufenthaltsort" lowerBound="1"
+        eType="#//CodeAufenthaltType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe zum Aufenthalt der Person."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="aufenthaltsort"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="jugendlichAufenthaltsortSonstige"
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Wird zu einer Pflichtangabe, wenn aufenthaltsort = Sonstiger Aufenthaltsort."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="jugendlichAufenthaltsortSonstige"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aktuelleAnschrift" lowerBound="1"
+        eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="aktuelleAnschrift"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anschriftsaenderung" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="anschriftsaenderung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="seelischeBehinderung" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="seelischeBehinderung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="artDerBehinderung" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="artDerBehinderung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="aerztlicherNachweis" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Wird zu einer Pflichtangabe, wenn seelischeBehinderung = true."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="aerztlicherNachweis"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AngabenKindHJVType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AngabenKindHJVType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namen" lowerBound="1" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonVornameVerpflichtendType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Vorname, Familienname sind verpflichtend, Geburtsname ist an dieser Stelle irrelevant"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="namen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geburtsdatum" lowerBound="1"
+        eType="ecore:EDataType baukasten.ecore#//TagesdatumType">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtsdatum"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="geschlecht" lowerBound="1"
+        eType="ecore:EClass baukasten.ecore#//CodeGeschlechtType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geschlecht"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aufenthaltsort" lowerBound="1"
+        eType="#//CodeAufenthaltType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe zum Aufenthalt der Person."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="aufenthaltsort"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="jugendlichAufenthaltsortSonstige"
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Wird zu einer Pflichtangabe, wenn aufenthaltsort = Sonstiger Aufenthaltsort."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="jugendlichAufenthaltsortSonstige"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aktuelleAnschrift" lowerBound="1"
+        eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="aktuelleAnschrift"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anschriftsaenderung" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hat sich der Aufenthalt des Kindes in den letzten 6 Monaten geändert?"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="anschriftsaenderung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AngabenKindHZEType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AngabenKindHZEType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namen" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonOhneGeburtsnameType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe des Vor- und Familiennamens des Antragskindes."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="namen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geburtsdatum" eType="ecore:EDataType baukasten.ecore#//TagesdatumType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Geburtsdatum des Antragskindes."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtsdatum"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AngabenZuJugendlichHZEType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AngabenZuJugendlichHZEType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nameDerDesJugendlichen"
+        lowerBound="1" upperBound="-1" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonVornameVerpflichtendType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Vorname, Familienname sind verpflichtend, Geburtsname ist an dieser Stelle irrelevant"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="nameDerDesJugendlichen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geburtsdatum" lowerBound="1"
+        eType="ecore:EDataType baukasten.ecore#//TagesdatumType">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtsdatum"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aktuelleAnschrift" lowerBound="1"
+        eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="aktuelleAnschrift"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anschriftsaenderung" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Adresse weicht von der Adresse im Peronsalausweis ab."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="anschriftsaenderung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abweichendeAnschrift" eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Adressdaten der vom Personalausweis abweichenden Anschrift."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="abweichendeAnschrift"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AngabenZuJugendlichKontaktformularType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AngabenZuJugendlichKontaktformularType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nameDerDesJugendlichen"
+        lowerBound="1" upperBound="-1" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonVornameVerpflichtendType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Vorname, Familienname sind verpflichtend, Geburtsname ist an dieser Stelle irrelevant"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="nameDerDesJugendlichen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geburtsdatum" eType="ecore:EDataType baukasten.ecore#//TagesdatumType">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtsdatum"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anschriftStimmtUeberein"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="anschriftStimmtUeberein"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aktuelleAnschrift" eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="aktuelleAnschrift"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AnliegensklaerungAnfrageType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Hier sind lediglich die Codes v, vu und u zu verwenden"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AnliegensklaerungAnfrageType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="anliegenVerhaeltnisJugendlich"
+        lowerBound="1" eType="#//CodeVerhaeltnisJugendlichHZEType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="anliegenVerhaeltnisJugendlich"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sorgeberechtigtAbfrage"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Sind Sie für das Kind sorgeberechtigt?"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="sorgeberechtigtAbfrage"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gemeinsamSorgeberechtigt"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Üben Sie das Sorgerecht mit dem anderen Elternteil gemeinsam aus?"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="gemeinsamSorgeberechtigt"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AnliegensklaerungType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Hier sind lediglich die Codes v, vu und u zu verwenden"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AnliegensklaerungType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="anliegenVerhaeltnisJugendlich"
+        lowerBound="1" eType="#//CodeVerhaeltnisJugendlichHZEType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Wenn es sich bei der antragstellenden Person um eine:n junge:n Volljährigen handelt, müssen hier keine Angaben zum Sorgerecht gemacht werden."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="anliegenVerhaeltnisJugendlich"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gemeinsamSorgeberechtigt"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Üben Sie das Sorgerecht mit dem anderen Elternteil gemeinsam aus?"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="gemeinsamSorgeberechtigt"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AntragstellenderETType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AntragstellenderETType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namen" lowerBound="1" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonVornameVerpflichtendType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="namen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geburtsort" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtsort"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geburtsdatum" lowerBound="1"
+        eType="ecore:EDataType baukasten.ecore#//TagesdatumType">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtsdatum"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="adresse" lowerBound="1"
+        eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="adresse"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="abweichendeAdresse" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, ob die Anschrift von der im Personalausweis angegebenen Anschrift abweicht. True: Optionales Element abweichendeAdressePerso befüllen"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="abweichendeAdresse"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abweichendeAdressePerso"
+        eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="abweichendeAdressePerso"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kontaktdaten" eType="ecore:EClass baukasten.ecore#//ErreichbarkeitType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="kontaktdaten"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Aufenthaltsort">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>Aufenthaltsort&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>Aufenthaltsort&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>aufenthaltsort&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:aufenthaltsort&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Die Liste codiert den Aufenthaltsort im Antrag zur Jugendhilfe.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>1.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>[nd]&lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2022-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="aufenthaltsort"/>
+    </eAnnotations>
+    <eLiterals name="eiha">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Eigener Haushalt&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="elha" value="1">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Elterlicher Haushalt&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="juhi" value="2">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Jugendhilfeeinrichtung&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="krha" value="3">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Krankenhaus&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="soau" value="4">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Sonstiger Aufenthalt&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="AufenthaltsortObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="aufenthaltsort:Object"/>
+      <details key="baseType" value="aufenthaltsort"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AuswahlBescheidartHZE">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>BescheidartHZE&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>BescheidartHZE&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>auswahlBescheidartHZE&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:auswahlbescheidarthze&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Auswahl der Bescheidart für HZE.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>1.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>Gibt die Arten der Anliegen für Beistandsschaft an. &lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2023-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="auswahlBescheidartHZE"/>
+    </eAnnotations>
+    <eLiterals name="_01" literal="01">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Bewilligungsbescheid&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_02" value="1" literal="02">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Ablehnungsbescheid&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_03" value="2" literal="03">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Zahlungsbescheid&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="AuswahlBescheidartHZEObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="auswahlBescheidartHZE:Object"/>
+      <details key="baseType" value="auswahlBescheidartHZE"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AuswahlBescheidartType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="auswahlBescheidart_._type"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Auswahlderhilfehze">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>AuswahlDerHilfeHzE&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>AuswahlDerHilfeHzE&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>auswahlderhilfehze&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:auswahlderhilfehze&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Die Art der Hilfe für Hilfe zur Erziehung.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>1.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>Gibt die Arten der Anliegen für Hilfen zur Erziehung an. &lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2023-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="auswahlderhilfehze"/>
+    </eAnnotations>
+    <eLiterals name="_01" literal="01">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Hilfen zur Erziehung&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_02" value="1" literal="02">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Hilfe für junge Volljährige&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_03" value="2" literal="03">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Eingliederungshilfe&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="AuswahlderhilfehzeObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="auswahlderhilfehze:Object"/>
+      <details key="baseType" value="auswahlderhilfehze"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BegruendungDesHilfebedarfsType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="BegruendungDesHilfebedarfsType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="grundBeantragung" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Bitte schildern Sie den Grund, warum Sie Hilfe oder Unterstützung benötigen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="grundBeantragung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hilfeVomJugendamt" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Welche Hilfe wünschen Sie sich vom Jugendamt?"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="hilfeVomJugendamt"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CodeAufenthaltType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>Aufenthaltsort&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>Aufenthaltsort&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>aufenthaltsort&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:aufenthaltsort&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Die Liste codiert den Aufenthaltsort im Antrag zur Jugendhilfe.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>1.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>[nd]&lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2022-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;              &#xA;  &lt;genutzteCodeSpalte>code&lt;/genutzteCodeSpalte>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Code.AufenthaltType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CodeAuswahlDerHilfeHzEType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>AuswahlDerHilfeHzE&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>AuswahlDerHilfeHzE&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>auswahlderhilfehze&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:auswahlderhilfehze&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Die Art der Hilfe für Hilfe zur Erziehung.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>1.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>Gibt die Arten der Anliegen für Hilfen zur Erziehung an. &lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2023-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;              &#xA;  &lt;genutzteCodeSpalte>code&lt;/genutzteCodeSpalte>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Code.AuswahlDerHilfeHzEType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CodeHZEIchBinType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Code.HZEIchBinType"/>
+      <details key="kind" value="empty"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CodeVerhaeltnisJugendlichHZEType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>VerhaeltnisJugendlichHZE&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>VerhaeltnisJugendlichHZE&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>verhaeltnisjugendlichhze&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:verhaeltnisjugendlichhze&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Die Liste codiert das Verhältnis der antragstellenden Person zum Kind bzw. zur/m Jungendichen.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>1.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>[nd]&lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2022-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;              &#xA;  &lt;genutzteCodeSpalte>code&lt;/genutzteCodeSpalte>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Code.VerhaeltnisJugendlichHZEType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value=""/>
+      <details key="kind" value="mixed"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mixed" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="elementWildcard"/>
+        <details key="name" value=":mixed"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="xMLNSPrefixMap" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStringToStringMapEntry"
+        transient="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="xmlns:prefix"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="xSISchemaLocation" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStringToStringMapEntry"
+        transient="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="xsi:schemaLocation"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hilfenZurErziehungAnfrageHJV0702"
+        upperBound="-2" eType="#//HilfenZurErziehungAnfrageHJV0702Type" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mit dieser Nachricht werden die Daten zur Eingliederungshilfe strukturiert von einem Portal an die zuständigen Jugendämter versendet."/>
+      </eAnnotations>
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;              &#xA;  &lt;rechtsgrundlage>Rechtgrundlage&lt;/rechtsgrundlage>&#xA;           &#xA;"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="hilfenZurErziehung.anfrageHJV.0702"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hilfenZurErziehungAntrag0701"
+        upperBound="-2" eType="#//HilfenZurErziehungAntrag0701Type" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mit dieser Nachricht werden die Daten zur Hilfe zur Erziehung strukturiert von einem Portal an die zuständigen Jugendämter versendet."/>
+      </eAnnotations>
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;              &#xA;  &lt;rechtsgrundlage>Rechtgrundlage&lt;/rechtsgrundlage>&#xA;           &#xA;"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="hilfenZurErziehung.antrag.0701"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hilfenZurErziehungEingliederungshilfe0703"
+        upperBound="-2" eType="#//HilfenZurErziehungEingliederungshilfe0703Type" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mit dieser Nachricht werden die Daten zur Eingliederungshilfe strukturiert von einem Portal an die zuständigen Jugendämter versendet."/>
+      </eAnnotations>
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;              &#xA;  &lt;rechtsgrundlage>Rechtgrundlage&lt;/rechtsgrundlage>&#xA;           &#xA;"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="hilfenZurErziehung.eingliederungshilfe.0703"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hilfenZurErziehungNachweisnachricht0711"
+        upperBound="-2" eType="#//HilfenZurErziehungNachweisnachricht0711Type" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mit dieser Nachricht können Nachweise vom Portal an die zuständige Stelle transportiert werden."/>
+      </eAnnotations>
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;              &#xA;  &lt;rechtsgrundlage>Rechtsgrundlage sind die Sozialgesetzbuecher aber kann je nach der jeweiligen Fachnachricht abweichen. &lt;/rechtsgrundlage>&#xA;           &#xA;"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="hilfenZurErziehung.nachweisnachricht.0711"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hilfenZurErziehungWiderspruch0704"
+        upperBound="-2" eType="#//HilfenZurErziehungWiderspruch0704Type" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mit dieser Nachricht kann ein Widerspruch an die zuständige Stelle übermittelt werden."/>
+      </eAnnotations>
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;              &#xA;  &lt;rechtsgrundlage>Rechtsgrundlage sind die Sozialgesetzbuecher aber kann je nach der jeweiligen Fachnachricht abweichen. &lt;/rechtsgrundlage>&#xA;           &#xA;"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="hilfenZurErziehung.widerspruch.0704"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ErreichbarkeitHZEType" eSuperTypes="baukasten.ecore#//ErreichbarkeitType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Erweiterung der Erreichbarkeit um die Abfrage &quot;Wann können wir Sie erreichen?&quot;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="ErreichbarkeitHZEType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zeitErreichbarkeitHZE"
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Wann können wir Sie erreichen?"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="zeitErreichbarkeitHZE"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HilfenZurErziehungAnfrageHJV0702Type"
+      eSuperTypes="baukasten.ecore#//AntragsnachrichtType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="hilfenZurErziehung.anfrageHJV.0702_._type"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="auswahlAnfrageHJV" lowerBound="1"
+        eType="#//CodeAuswahlDerHilfeHzEType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="In diesem Element wird geklärt, um welches Anliegen es im Antrag geht. Hier sind die Codes HzE, HjV und &quot;Ich weiß es nicht&quot; zulässig."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="auswahlAnfrageHJV"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="anliegensklaerungHJV" eType="#//AnliegensklaerungAnfrageType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="In diesem Element wird geklärt, um welches Anliegen es im Antrag geht."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="anliegensklaerungHJV"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="persoenlicheAngabenHJV"
+        eType="#//PersoenlicheAngabenHJVType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Auszufuellen, wenn Mutter ODER Vater ODER Vormund*in/Pfleger*in UND sorgeberechtigt = True ODER wenn Anfrage von jungen Volljaehrigen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="persoenlicheAngabenHJV"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="begruendungHJV" eType="#//BegruendungDesHilfebedarfsType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="begruendungHJV"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angabenAndererElternteil"
+        eType="#//AngabenElternteilHJVType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Auszufuellen, wenn Mutter ODER Vater ODER Vormund*in/Pfleger*in UND sorgeberechtigt = True; NICHT auszufuellen, wenn Anfrage von jungen Volljaehrigen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="angabenAndererElternteil"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dsgvo" eType="ecore:EClass baukasten.ecore#//DatenschutzerklaerungenType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Bestätigung zur Datenschutzerklärung des Dienst-betreibenden Landes sowie zur spezifischen Datenschutzerklärung des nachnutzenden Landes oder der nachnutzenden Kommune."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="dsgvo"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="richtigkeitAngaben" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="true" unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hiermit bestätige ich die Richtigkeit meiner Angaben. Ich versichere, dass ich diese nach bestem Wissen und Gewissen gemacht habe."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="richtigkeitAngaben"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="einwilligungZwischenspeichern"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Einwilligung zur Zwischenspeicherung der Antragsdaten."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="einwilligungZwischenspeichern"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HilfenZurErziehungAntrag0701Type" eSuperTypes="baukasten.ecore#//AntragsnachrichtType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="hilfenZurErziehung.antrag.0701_._type"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="auswahlDerHilfeHZE" lowerBound="1"
+        eType="#//CodeAuswahlDerHilfeHzEType" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="auswahlDerHilfeHZE"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="anliegensklaerungHZE" lowerBound="1"
+        eType="#//AnliegensklaerungType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="In diesem Element wird geklärt, um welches Anliegen es im Antrag geht."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="anliegensklaerungHZE"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pruefcodeHZE" lowerBound="1"
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe eines Prüfcodes, der ein Beratungsgespräch sicherstellt."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="pruefcodeHZE"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="persoenlicheAngabenZuIhrerPerson"
+        lowerBound="1" eType="#//PersoenlicheAngabenHZEType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Die persoenlichen Angaben sind immer auszufuellen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="persoenlicheAngabenZuIhrerPerson"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="andererElternteil" lowerBound="1"
+        eType="#//AngabenETType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Auszufuellen, wenn Mutter ODER Vater"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="andererElternteil"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angabenKindHZE" eType="#//AngabenKindHZEType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angaben zum Antragskind. Das Element angabenKindHZE ist nicht anzugeben, wenn auswahlDerHilfeHZE = 02 Hilfe für junge Volljährige"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="angabenKindHZE"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nachweiseHZE" lowerBound="1"
+        eType="#//NachweiseHZEType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Bitte laden Sie hier die vom Jugendamt angeforderten Nachweise hoch. Sie finden die Auflistung der notwendigen Nachweise auf dem Dokument, dass Sie vom Jugendamt bekommen haben."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="nachweiseHZE"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dsgvo" eType="ecore:EClass baukasten.ecore#//DatenschutzerklaerungenType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Bestätigung zur Datenschutzerklärung des Dienst-betreibenden Landes sowie zur spezifischen Datenschutzerklärung des nachnutzenden Landes oder der nachnutzenden Kommune."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="dsgvo"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zusatzNachrichtHZE" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Möchten Sie dem Jugendamt noch etwas mitteilen?"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="zusatzNachrichtHZE"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="einwilligungZwischenspeichern"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Einwilligung zur Zwischenspeicherung der Antragsdaten."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="einwilligungZwischenspeichern"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HilfenZurErziehungEingliederungshilfe0703Type"
+      eSuperTypes="baukasten.ecore#//AntragsnachrichtType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="hilfenZurErziehung.eingliederungshilfe.0703_._type"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="auswahlAnfrageEingliederung"
+        lowerBound="1" eType="#//CodeAuswahlDerHilfeHzEType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hier ist nur der Code Eingliederung zulässig."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="auswahlAnfrageEingliederung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="anliegensklaerungEingliederung"
+        eType="#//AnliegensklaerungAnfrageType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="In diesem Element wird geklärt, um welches Anliegen es im Antrag geht."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="anliegensklaerungEingliederung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="persoenlicheAngabenZuIhrerPerson"
+        eType="#//PersoenlicheAngabenEingliederungType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Auszufuellen, wenn junge*r Volljaehrige*r"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="persoenlicheAngabenZuIhrerPerson"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angabenKind" eType="#//AngabenKindEingliederungType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angaben zum Kind, für das eine Eingliederungshilfe beantragt wird."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="angabenKind"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="begruendungHZE" eType="#//BegruendungDesHilfebedarfsType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="begruendungHZE"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angabenElternteile" upperBound="2"
+        eType="#//AngabenElternteilEingliederungType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Auszufuellen, wenn Mutter ODER Vater ODER Vormund Oder Pfleger:in ODER junger Mensch UND dieser unter 18 Jahre."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="angabenElternteile"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dsgvo" eType="ecore:EClass baukasten.ecore#//DatenschutzerklaerungenType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Bestätigung zur Datenschutzerklärung des Dienst-betreibenden Landes sowie zur spezifischen Datenschutzerklärung des nachnutzenden Landes oder der nachnutzenden Kommune."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="dsgvo"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="richtigkeitAngaben" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="true" unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hiermit bestätige ich die Richtigkeit meiner Angaben. Ich versichere, dass ich diese nach bestem Wissen und Gewissen gemacht habe."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="richtigkeitAngaben"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="einwilligungZwischenspeichern"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Einwilligung zur Zwischenspeicherung der Antragsdaten."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="einwilligungZwischenspeichern"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HilfenZurErziehungNachweisnachricht0711Type"
+      eSuperTypes="baukasten.ecore#//NachrichtType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="hilfenZurErziehung.nachweisnachricht.0711_._type"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="persoenlicheAngabenZuIhrerPerson"
+        lowerBound="1" eType="#//PersoenlicheAngabenHZEType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hiermit werden die persönlichen Angaben zur antragstellenden Person übermittelt."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="persoenlicheAngabenZuIhrerPerson"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angabenKind" lowerBound="1"
+        eType="#//AngabenKindHZEType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hiermit werden die Angaben zum betroffenen Kind übermittelt."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="angabenKind"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="jugendamt" lowerBound="1"
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="In diesem Datenfeld werden Angaben zum zuständigen Jugendamt übertragen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="jugendamt"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bearbeitungsnummer" lowerBound="1"
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="In diesem Datenfeld wird die Bearbeitungsnummer übertragen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="bearbeitungsnummer"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="antragsdatum" lowerBound="1"
+        eType="ecore:EDataType baukasten.ecore#//TagesdatumType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="In diesem Datenfeld wird das Antragsdatum übertragen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="antragsdatum"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nachweis" lowerBound="1"
+        upperBound="-1" eType="#//NachweiseHZEType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hier werden Informationen zum Nachweis und der Nachweis selbst übertragen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="nachweis"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zusatznachrichtHZE" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="In diesem Datenfeld werden Zusatzangaben zur Nachweisübermittlung erfasst."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="zusatznachrichtHZE"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HilfenZurErziehungWiderspruch0704Type"
+      eSuperTypes="baukasten.ecore#//NachrichtType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="hilfenZurErziehung.widerspruch.0704_._type"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="persoenlicheAngabenZuIhrerPerson"
+        lowerBound="1" eType="#//PersoenlicheAngabenHZEType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hiermit werden die persönlichen Angaben zur antragstellenden Person übermittelt."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="persoenlicheAngabenZuIhrerPerson"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="aktenzeichen" lowerBound="1"
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hiermit wird das Aktenzeichen übermittelt."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="aktenzeichen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bescheiddatum" lowerBound="1"
+        eType="ecore:EDataType baukasten.ecore#//TagesdatumType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="In diesem Datenfeld wird das Bescheiddatum übertragen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="bescheiddatum"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="begruendungWiderspruch"
+        lowerBound="1" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="In diesem Datenfeld wird die Begründung des Widerspruchs übertragen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="begruendungWiderspruch"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bestaetigungWiderspruch"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="false" unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hiermit wird der Widerspruch bestätigt."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="bestaetigungWiderspruch"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nachweis" upperBound="-1"
+        eType="#//NachweiseHZEType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hier werden Informationen zum Nachweis und der Nachweis selbst übertragen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="nachweis"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="auswahlBescheidart" lowerBound="1"
+        eType="#//AuswahlBescheidartType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="An dieser Stelle wird die Art des Bescheides ausgewählt."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="auswahlBescheidart"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NachweiseDatenschutzType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="NachweiseDatenschutzType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nachweis" upperBound="-1"
+        eType="#//NachweisType" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="nachweis"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zustimmungET2" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="false" unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Zustimmung der Sorgeberechtigten. Hiermit bestätige ich, dass beide sorgeberechtigten Elternteile der Beantragung der Leitung zustimmen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="zustimmungET2"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="richtigkeitAngaben" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="false" unsettable="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="richtigkeitAngaben"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NachweiseHZEType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="NachweiseHZEType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sorgerechtsnachweis" upperBound="-1"
+        eType="ecore:EClass baukasten.ecore#//NachweisdokumentType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Nachweise zur Geburt des Kindes."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="sorgerechtsnachweis"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="identitaetsnachweis" upperBound="-1"
+        eType="ecore:EClass baukasten.ecore#//NachweisdokumentType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Nachweise zur Meldebestätigung. Nur anzugeben, wenn die Anschriften der Beteiligten voneinander abweichen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="identitaetsnachweis"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="weitereNachweise" upperBound="-1"
+        eType="ecore:EClass baukasten.ecore#//NachweisdokumentType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angaben zu weiteren Nachweisen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="weitereNachweise"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nachweisMeldebescheinigung"
+        upperBound="-1" eType="ecore:EClass baukasten.ecore#//NachweisdokumentType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Wenn die Meldeadresse von der eingegeben Adresse mittels BundID abweicht, ist ein Nachweis in Form einer Meldebescheinigung hochzuladen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="nachweisMeldebescheinigung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anmerkungen" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Sonstige Anmerkungen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="anmerkungen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dsgvo" lowerBound="1" eType="ecore:EClass baukasten.ecore#//DatenschutzerklaerungenType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Bestätigung zur Datenschutzerklärung des Dienst-betreibenden Landes sowie zur spezifischen Datenschutzerklärung des nachnutzenden Landes oder der nachnutzenden Kommune."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="dsgvo"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="richtigkeitAngaben" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, ob die Richtigkeit der Daten bestätigt wurde oder nicht."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="richtigkeitAngaben"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NachweisType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="NachweisType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nachweisBeschreibung" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="nachweisBeschreibung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nachweisDokument" lowerBound="1"
+        eType="ecore:EClass baukasten.ecore#//NachweisdokumentType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="nachweisDokument"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PersoenlicheAngabenEingliederungType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="PersoenlicheAngabenEingliederungType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namen" lowerBound="1" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonVornameVerpflichtendType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="namen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geburtsdatum" lowerBound="1"
+        eType="ecore:EDataType baukasten.ecore#//TagesdatumType">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtsdatum"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aktuelleAnschrift" lowerBound="1"
+        eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="aktuelleAnschrift"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anschriftsaenderung" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hat sich Ihr Aufenthalt in den letzten 6 Monaten geändert? "/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="anschriftsaenderung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weichtAnschriftAb" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="WENN weichtAnschriftAb = true, DANN muss abweichende Anschrift befüllt sein."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="weichtAnschriftAb"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abweichendeAnschrift" eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="WENN weichtAnschriftAb = true, DANN muss abweichendeAnschrift befüllt sein."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="abweichendeAnschrift"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kontaktdaten" lowerBound="1"
+        upperBound="-1" eType="#//ErreichbarkeitHZEType" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="kontaktdaten"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="seelischeBehinderung" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="seelischeBehinderung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="artDerBehinderung" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="artDerBehinderung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="aerztlicherNachweis" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="aerztlicherNachweis"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PersoenlicheAngabenHJVType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="PersoenlicheAngabenHJVType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namen" lowerBound="1" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonVornameVerpflichtendType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="namen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geburtsdatum" lowerBound="1"
+        eType="ecore:EDataType baukasten.ecore#//TagesdatumType">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtsdatum"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aktuelleAnschrift" lowerBound="1"
+        eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Adresse, die im Personalausweis steht."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="aktuelleAnschrift"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anschriftsaenderung" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hat sich Ihr Aufenthalt in den letzten 6 Monaten geändert?"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="anschriftsaenderung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weichtAnschriftAb" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="WENN weichtAnschriftAb = true, DANN muss abweichendeAnschrift befüllt werden."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="weichtAnschriftAb"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abweichendeAnschrift" eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="WENN weichtAnschriftAb = true, DANN muss abweichendeAnschrift befüllt sein."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="abweichendeAnschrift"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kontaktdaten" lowerBound="1"
+        upperBound="-1" eType="#//ErreichbarkeitHZEType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hier können die Telefonnummer und optional die E-Mail-Adresse angeben werden."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="kontaktdaten"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="aufenthaltsortSonstige"
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Wenn Aufenthaltsort = Sonstiger Aufenthaltsort, dann muss dieses Feld befüllt sein."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="aufenthaltsortSonstige"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PersoenlicheAngabenHZEType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="PersoenlicheAngabenHZEType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namen" lowerBound="1" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonVornameVerpflichtendType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="namen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geburtsdatum" lowerBound="1"
+        eType="ecore:EDataType baukasten.ecore#//TagesdatumType">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtsdatum"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aktuelleAnschrift" lowerBound="1"
+        eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Adresse, die im Personalausweis steht."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="aktuelleAnschrift"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weichtAnschriftAb" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="WENN weichtAnschrift ab = true, DANN muss abweichendeAnschrift befüllt werden."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="weichtAnschriftAb"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abweichendeAnschrift" eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="WENN weichtAnschriftAb = true, DANN muss abweichendeAnschrift befüllt sein."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="abweichendeAnschrift"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kontaktdaten" upperBound="-1"
+        eType="#//ErreichbarkeitHZEType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hier können die Telefonnummer und optional die E-Mail-Adresse angeben werden."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="kontaktdaten"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PersoenlicheAngabenKontaktformularType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="PersoenlicheAngabenKontaktformularType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namen" lowerBound="1" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonVornameVerpflichtendType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="namen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aktuelleAnschrift" eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="aktuelleAnschrift"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kontaktdaten" lowerBound="1"
+        upperBound="-1" eType="ecore:EClass baukasten.ecore#//ErreichbarkeitType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="kontaktdaten"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PersonIdentifikationType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="PersonIdentifikationType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namen" lowerBound="1" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="namen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geburtsdatum" lowerBound="1"
+        eType="ecore:EDataType baukasten.ecore#//TagesdatumType">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtsdatum"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Verhaeltnisjugendlichhze">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>VerhaeltnisJugendlichHZE&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>VerhaeltnisJugendlichHZE&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>verhaeltnisjugendlichhze&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:verhaeltnisjugendlichhze&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Die Liste codiert das Verhältnis der antragstellenden Person zum Kind bzw. zur/m Jungendichen.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>1.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>[nd]&lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2022-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="verhaeltnisjugendlichhze"/>
+    </eAnnotations>
+    <eLiterals name="jm">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Junge*r Mensch (zwischen 15 und 21 Jahre)&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="jv" value="1">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Junge*r Volljährige*r (zwischen 18 und 27 Jahre alt)&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="mu" value="2">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Mutter des Kindes&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="pf" value="3">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Pfleger*in&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="un" value="4">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Keine der genannten Personen&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="va" value="5">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Vater des Kindes&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="vo" value="6">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Vormund*in&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="VerhaeltnisjugendlichhzeObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="verhaeltnisjugendlichhze:Object"/>
+      <details key="baseType" value="verhaeltnisjugendlichhze"/>
+    </eAnnotations>
+  </eClassifiers>
+</ecore:EPackage>

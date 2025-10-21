@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    copyrightText="Copyright (c) 2012 - 2025 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"
+    modelDirectory="/de.xoev.din91379/src" modelPluginID="de.xoev.din91379" modelName="DIN91379-2204"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.xsd.ecore.importer"
+    complianceLevel="11.0" copyrightFields="false" operationReflection="true" importOrganizing="true"
+    oSGiCompatible="true">
+  <foreignModel>xsd/din-91379-datatypes-2022-04.xsd</foreignModel>
+  <genPackages prefix="DIN913792204" basePackage="de.xoev.kosit.datentyp._202204"
+      resource="XML" disposableProviderFactory="true" ecorePackage="din-91379-2204.ecore#/">
+    <genDataTypes ecoreDataType="din-91379-2204.ecore#//DatatypeA"/>
+    <genDataTypes ecoreDataType="din-91379-2204.ecore#//DatatypeB"/>
+    <genDataTypes ecoreDataType="din-91379-2204.ecore#//DatatypeC"/>
+    <genDataTypes ecoreDataType="din-91379-2204.ecore#//DatatypeD"/>
+    <genDataTypes ecoreDataType="din-91379-2204.ecore#//DatatypeE"/>
+  </genPackages>
+</genmodel:GenModel>

@@ -13,9 +13,9 @@
  */
 package de.xoev.domea.domea.util;
 
-import code.Code;
-
 import de.xoev.domea.domea.*;
+
+import de.xoev.schemata.code.code.Code;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;

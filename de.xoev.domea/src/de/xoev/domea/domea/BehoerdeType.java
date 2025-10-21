@@ -78,7 +78,7 @@ public interface BehoerdeType extends EObject {
 	 * @return the value of the '<em>Kennung</em>' attribute.
 	 * @see #setKennung(String)
 	 * @see de.xoev.domea.domea.DomeaPackage#getBehoerdeType_Kennung()
-	 * @model dataType="datatypedin.DatatypeC" required="true"
+	 * @model dataType="de.xoev.kosit.datentyp._202204.din91379.DatatypeC" required="true"
 	 *        extendedMetaData="kind='element' name='kennung' namespace='##targetNamespace'"
 	 * @generated
 	 */

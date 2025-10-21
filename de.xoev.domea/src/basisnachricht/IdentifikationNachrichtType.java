@@ -13,7 +13,7 @@
  */
 package basisnachricht;
 
-import code.Code;
+import de.xoev.schemata.code.code.Code;
 
 import javax.xml.datatype.XMLGregorianCalendar;
 

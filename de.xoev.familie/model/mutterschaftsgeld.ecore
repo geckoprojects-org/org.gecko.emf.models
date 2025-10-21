@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="mutterschaftsgeld" nsURI="http://www.xoev.de/xfamilie/mutterschaftsgeldmeldung/1.3.0"
+    nsPrefix="mutterschaftsgeld">
+  <eAnnotations>
+    <details key="appinfo" value="&#xA;           &#xA;  &lt;standard>&#xA;                &#xA;    &lt;nameLang>XFamilie&lt;/nameLang>&#xA;                &#xA;    &lt;nameKurz>XFamilie&lt;/nameKurz>&#xA;                &#xA;    &lt;nameTechnisch>xfamilie&lt;/nameTechnisch>&#xA;                &#xA;    &lt;kennung>urn:xoev-de:kosit:standard:xfamilie&lt;/kennung>&#xA;                &#xA;    &lt;beschreibung>Projektziel ist die elektronische Kommunikation im Familienbereich zwischen verschiedenen Behörden, Institutionen, Registern und Onlineportalen, die Daten untereinander austauschen, zu unterstützen. Der Nutzen des Projekts besteht in der Kostenreduktion und einer Verbesserung der Qualität von Daten für Familienleistungen, sowie einer Verbesserung der Interoperabilität von Akteuren im Familienbereich und weiteren Kommunikationspartner.&lt;/beschreibung>&#xA;             &#xA;  &lt;/standard>&#xA;           &#xA;  &lt;versionStandard>&#xA;                &#xA;    &lt;version>1.3.0&lt;/version>&#xA;                &#xA;    &lt;beschreibung>Die Änderungshistorie befindet sich in Tabellenform nach Change Requests gegliedert in Kapitel E.&lt;/beschreibung>&#xA;                &#xA;    &lt;versionXOEVProfil>3.0.2&lt;/versionXOEVProfil>&#xA;                &#xA;    &lt;versionXOEVHandbuch>3.0.2&lt;/versionXOEVHandbuch>&#xA;                &#xA;    &lt;versionXGenerator>3.1.0&lt;/versionXGenerator>&#xA;                &#xA;    &lt;versionModellierungswerkzeug>19.0&lt;/versionModellierungswerkzeug>&#xA;                &#xA;    &lt;nameModellierungswerkzeug>MagicDraw&lt;/nameModellierungswerkzeug>&#xA;             &#xA;  &lt;/versionStandard>&#xA;        &#xA;&#xA;&#xA;           &#xA;  &lt;standard>&#xA;                &#xA;    &lt;nameLang>XFamilie&lt;/nameLang>&#xA;                &#xA;    &lt;nameKurz>XFamilie&lt;/nameKurz>&#xA;                &#xA;    &lt;nameTechnisch>xfamilie&lt;/nameTechnisch>&#xA;                &#xA;    &lt;kennung>urn:xoev-de:kosit:standard:xfamilie&lt;/kennung>&#xA;                &#xA;    &lt;beschreibung>Projektziel ist die elektronische Kommunikation im Familienbereich zwischen verschiedenen Behörden, Institutionen, Registern und Onlineportalen, die Daten untereinander austauschen, zu unterstützen. Der Nutzen des Projekts besteht in der Kostenreduktion und einer Verbesserung der Qualität von Daten für Familienleistungen, sowie einer Verbesserung der Interoperabilität von Akteuren im Familienbereich und weiteren Kommunikationspartner.&lt;/beschreibung>&#xA;             &#xA;  &lt;/standard>&#xA;           &#xA;  &lt;versionStandard>&#xA;                &#xA;    &lt;version>1.3.0&lt;/version>&#xA;                &#xA;    &lt;beschreibung>Die Änderungshistorie befindet sich in Tabellenform nach Change Requests gegliedert in Kapitel E.&lt;/beschreibung>&#xA;                &#xA;    &lt;versionXOEVProfil>3.0.2&lt;/versionXOEVProfil>&#xA;                &#xA;    &lt;versionXOEVHandbuch>3.0.2&lt;/versionXOEVHandbuch>&#xA;                &#xA;    &lt;versionXGenerator>3.1.0&lt;/versionXGenerator>&#xA;                &#xA;    &lt;versionModellierungswerkzeug>19.0&lt;/versionModellierungswerkzeug>&#xA;                &#xA;    &lt;nameModellierungswerkzeug>MagicDraw&lt;/nameModellierungswerkzeug>&#xA;             &#xA;  &lt;/versionStandard>&#xA;        &#xA;"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="Diese Schema-Datei enthält die technische Repräsentation der in der Norm DIN 91379 definierten Datentypen."/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="AngabenEntbindungType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AngabenEntbindungType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angabenMutterschaftsgeld"
+        lowerBound="1" upperBound="-1" eType="#//AngabenMutterschaftsgeldType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="angabenMutterschaftsgeld"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="entbindungstagKrankenkasse"
+        eType="ecore:EDataType baukasten.ecore#//TagesdatumType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe des Entbindungstages laut Nachweis, der der Krankenkasse vorliegt, sofern dieses vom gemeldeten Entbindungstag der Elterngeldstelle abweicht. Bei einer Mehrlingsgeburt, die an unterschiedlichen Tagen erfolgte, ist das Datum der letzten nachgewiesenen Entbindung anzugeben."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="entbindungstagKrankenkasse"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AngabenMutterschaftsgeldType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="angabenMutterschaftsgeld_._type"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mutterschaftsgeldzahlungAb"
+        lowerBound="1" eType="ecore:EDataType baukasten.ecore#//TagesdatumType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Beginn der Mutterschaftsgeldzahlung von der Krankenkasse."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="mutterschaftsgeldzahlungAb"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mutterschaftsgeldzahlungBis"
+        eType="ecore:EDataType baukasten.ecore#//TagesdatumType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Ende der Mutterschaftsgeldzahlung von der Krankenkasse."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="mutterschaftsgeldzahlungBis"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mutterschaftsgeldzahlungHoehe"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Decimal">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Höhe des bewilligten grundsätzlich zustehenden kalendertäglichen Anspruchs auf Mutterschaftsgeld von der Krankenkasse ohne Berücksichtigung von Ruhens- und Kürzungstatbeständen. Der Betrag ist mit zwei Nachkommastellen anzugeben."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="mutterschaftsgeldzahlungHoehe"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AntragstellenderElternteilMutterschaftsgeldmeldungRueckType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Daten zum antragstellenden Elternteil. Diese Daten sind nur anzugeben, wenn die Daten der Krankenkasse von den Daten der Anforderung durch die Elterngeldstelle abweichen."/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AntragstellenderElternteil.MutterschaftsgeldmeldungRueckType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Der Name des antragstellenden Elternteils. Das Element Geburtsname.unstrukturiert ist im Elterngeldantrag nicht zu verwenden."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="name"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="geburt" eType="ecore:EClass baukasten.ecore#//TeilbekanntesDatumType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Daten zur Geburt des antragstellenden Elternteils"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburt"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="krankenversichertennummer"
+        eType="ecore:EDataType baukasten.ecore#//KrankenversichertennummerType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Die Krankenversichertennummer, die den Versicherten bei einer Krankenkasse identifiziert."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="krankenversichertennummer"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AntragstellenderElternteilMutterschaftsgeldmeldungType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Daten zum antragstellenden Elternteil."/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AntragstellenderElternteil.MutterschaftsgeldmeldungType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" lowerBound="1" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Der Name des antragstellenden Elternteils. Das Element Geburtsname.unstrukturiert ist im Elterngeldantrag nicht zu verwenden."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="name"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="geburt" lowerBound="1"
+        eType="ecore:EClass baukasten.ecore#//TeilbekanntesDatumType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Daten zur Geburt des antragstellenden Elternteils"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburt"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="entbindungstag" lowerBound="1"
+        eType="ecore:EDataType baukasten.ecore#//TagesdatumType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe des Entbindungstages"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="entbindungstag"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kennzeichenMehrlingsgeburt"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Bestätigung, sofern der Elterngeldstelle die Mehrlingsgeburt nachgewiesen wird"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="kennzeichenMehrlingsgeburt"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="krankenversichertennummer"
+        lowerBound="1" eType="ecore:EDataType baukasten.ecore#//KrankenversichertennummerType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Die Krankenversichertennummer, die den Versicherten bei einer Krankenkasse identifiziert."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="krankenversichertennummer"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CodeKennzeichenMutterschaftsgeldType"
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Codedatentyp Kennzeichen zum Mutterschaftsgeld."/>
+    </eAnnotations>
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>KennzeichenMutterschaftsgeld&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>KennzeichenMutterschaftsgeld&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>kennzeichenmutterschaftsgeld&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:kennzeichenmutterschaftsgeld&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Die Liste codiert das Kennzeichen zum Mutterschaftsgeld.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>1.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>[nd]&lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2022-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;              &#xA;  &lt;genutzteCodeSpalte>code&lt;/genutzteCodeSpalte>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Code.KennzeichenMutterschaftsgeldType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value=""/>
+      <details key="kind" value="mixed"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mixed" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="elementWildcard"/>
+        <details key="name" value=":mixed"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="xMLNSPrefixMap" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStringToStringMapEntry"
+        transient="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="xmlns:prefix"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="xSISchemaLocation" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStringToStringMapEntry"
+        transient="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="xsi:schemaLocation"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mutterschaftsgeldmeldungAnforderung0501"
+        upperBound="-2" eType="#//MutterschaftsgeldmeldungAnforderung0501Type" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Antrag zur Anforderung von Mutterschaftsgeld."/>
+      </eAnnotations>
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;              &#xA;  &lt;rechtsgrundlage>Paragraf 203 SGB V&lt;/rechtsgrundlage>&#xA;           &#xA;"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="mutterschaftsgeldmeldung.anforderung.0501"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mutterschaftsgeldmeldungRueckmeldung0502"
+        upperBound="-2" eType="#//MutterschaftsgeldmeldungRueckmeldung0502Type" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Rückmeldung zum Muttergeld nach Entbindung."/>
+      </eAnnotations>
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;              &#xA;  &lt;rechtsgrundlage>Paragraf 203 SGB V&lt;/rechtsgrundlage>&#xA;           &#xA;"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="mutterschaftsgeldmeldung.rueckmeldung.0502"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Kennzeichenmutterschaftsgeld">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>KennzeichenMutterschaftsgeld&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>KennzeichenMutterschaftsgeld&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>kennzeichenmutterschaftsgeld&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:kennzeichenmutterschaftsgeld&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Die Liste codiert das Kennzeichen zum Mutterschaftsgeld.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>1.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>[nd]&lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2022-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="kennzeichenmutterschaftsgeld"/>
+    </eAnnotations>
+    <eLiterals name="_01" literal="01">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Keine Mitgliedschaft&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_02" value="1" literal="02">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Kein Anspruch auf Mutterschaftsgeld&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_03" value="2" literal="03">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Kein Antrag auf Mutterschaftsgeld gestellt&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_04" value="3" literal="04">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Noch keine Angabe möglich&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_05" value="4" literal="05">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Mehrlingsgeburt&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_06" value="5" literal="06">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Mehrlingsschwangerschaft, kein Ende der Mutterschaftsgeldzahlung bestimmbar&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="KennzeichenmutterschaftsgeldObject"
+      instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="kennzeichenmutterschaftsgeld:Object"/>
+      <details key="baseType" value="kennzeichenmutterschaftsgeld"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MutterschaftsgeldmeldungAnforderung0501Type"
+      eSuperTypes="baukasten.ecore#//NachrichtType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="mutterschaftsgeldmeldung.anforderung.0501_._type"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="aktenzeichenElterngeldstelle"
+        lowerBound="1" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Aktenzeichen/Geschäftszeichen der Elterngeldstelle für die Elterngeldbeantragende."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="aktenzeichenElterngeldstelle"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="antragstellenderElternteil"
+        lowerBound="1" eType="#//AntragstellenderElternteilMutterschaftsgeldmeldungType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="antragstellenderElternteil"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="einwilligung" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="true" unsettable="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="einwilligung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stornierung" eType="#//StornierungType1"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="stornierung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MutterschaftsgeldmeldungRueckmeldung0502Type"
+      eSuperTypes="baukasten.ecore#//NachrichtType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="mutterschaftsgeldmeldung.rueckmeldung.0502_._type"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="aktenzeichenElterngeldstelle"
+        lowerBound="1" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Aktenzeichen/Geschäftszeichen der Elterngeldstelle für die Elterngeldbeantragende."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="aktenzeichenElterngeldstelle"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="antragstellenderElternteil"
+        eType="#//AntragstellenderElternteilMutterschaftsgeldmeldungRueckType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="antragstellenderElternteil"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angabenEntbindung" eType="#//AngabenEntbindungType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="angabenEntbindung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stornierung" eType="#//StornierungType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="stornierung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kennzeichenMutterschaftsgeld"
+        eType="#//CodeKennzeichenMutterschaftsgeldType" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="kennzeichenMutterschaftsgeld"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StornierungType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="stornierung_._1_._type"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stornokennzeichen" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="stornokennzeichen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="datensatzIDUrsprungsmeldung"
+        lowerBound="1" eType="ecore:EDataType baukasten.ecore#//UUIDType">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="datensatzID.Ursprungsmeldung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StornierungType1">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="stornierung_._type"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stornokennzeichen" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="stornokennzeichen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="datensatzIDUrsprungsmeldung"
+        lowerBound="1" eType="ecore:EDataType baukasten.ecore#//UUIDType">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="datensatzID.Ursprungsmeldung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>

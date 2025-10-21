@@ -1,0 +1,3394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:xfe="http://www.xoev.de/xfamilie/elterngeldantrag/1.3.0"
+           xmlns:din91379="urn:xoev-de:kosit:xoev:datentyp:din-91379_2022-08"
+           xmlns:xfb="http://www.xoev.de/xfamilie/baukasten/1.3.0"
+           xmlns:xoev-code="http://xoev.de/schemata/code/1_0"
+           targetNamespace="http://www.xoev.de/xfamilie/elterngeldantrag/1.3.0"
+           version="1.3.0"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+   <xs:annotation>
+      <xs:appinfo>
+         <standard>
+            <nameLang>XFamilie</nameLang>
+            <nameKurz>XFamilie</nameKurz>
+            <nameTechnisch>xfamilie</nameTechnisch>
+            <kennung>urn:xoev-de:kosit:standard:xfamilie</kennung>
+            <beschreibung>Projektziel ist die elektronische Kommunikation im Familienbereich zwischen verschiedenen Behörden, Institutionen, Registern und Onlineportalen, die Daten untereinander austauschen, zu unterstützen. Der Nutzen des Projekts besteht in der Kostenreduktion und einer Verbesserung der Qualität von Daten für Familienleistungen, sowie einer Verbesserung der Interoperabilität von Akteuren im Familienbereich und weiteren Kommunikationspartner.</beschreibung>
+         </standard>
+         <versionStandard>
+            <version>1.3.0</version>
+            <beschreibung>Die Änderungshistorie befindet sich in Tabellenform nach Change Requests gegliedert in Kapitel E.</beschreibung>
+            <versionXOEVProfil>3.0.2</versionXOEVProfil>
+            <versionXOEVHandbuch>3.0.2</versionXOEVHandbuch>
+            <versionXGenerator>3.1.0</versionXGenerator>
+            <versionModellierungswerkzeug>19.0</versionModellierungswerkzeug>
+            <nameModellierungswerkzeug>MagicDraw</nameModellierungswerkzeug>
+         </versionStandard>
+      </xs:appinfo>
+   </xs:annotation>
+   <xs:import schemaLocation="din-norm-91379-datatypes.xsd"
+              namespace="urn:xoev-de:kosit:xoev:datentyp:din-91379_2022-08"/>
+   <xs:import schemaLocation="xfamilie-baukasten.xsd"
+              namespace="http://www.xoev.de/xfamilie/baukasten/1.3.0"/>
+   <xs:import schemaLocation="xoev-code.xsd"
+              namespace="http://xoev.de/schemata/code/1_0"/>
+   <xs:complexType name="ALGIType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum Bezug von Arbeitslosengeld I (ALG I).</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="bezugALGI" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob ALG I bezogen wird/wurde.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="zeitraumALGI"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ZeitraumType">
+            <xs:annotation>
+               <xs:documentation>Zeitraum des Bezuges von ALG I.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisALGI"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Möglichkeit, Nachweise über den Bezug von ALG I zu übertragen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AdoptionType">
+      <xs:sequence>
+         <xs:element name="adoption" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Adoption des Kindes. Hierzu gehören auch Adoptionspflege und Stiefkindadoption.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="adoptionHaushaltsaufnahme"
+                     minOccurs="0"
+                     type="xfb:TagesdatumType">
+            <xs:annotation>
+               <xs:documentation>Datum der Aufnahme des Kindes in den Haushalt oder Beginn der Adoptionspflege.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisAdoption"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.). Siehe auch .</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AlleinerziehendenanspruchType">
+      <xs:sequence>
+         <xs:element name="entlastungsbetragAlleinerziehende"
+                     minOccurs="0"
+                     type="xs:boolean"/>
+         <xs:element name="nachweisEntlastungsbetrag"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.). Siehe auch .</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="betreuungDurchAnderenETUnmoeglich"
+                     minOccurs="0"
+                     type="xs:boolean"/>
+         <xs:element name="nachweisBetreuung"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.). Siehe auch .</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kindeswohlgefaehrdungDurchAnderenET"
+                     minOccurs="0"
+                     type="xs:boolean"/>
+         <xs:element name="nachweisKindeswohlgefaehrdung"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.). Siehe auch .</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AndereLeistungenType">
+      <xs:annotation>
+         <xs:documentation>Hiermit kann beispielsweise auch Insolvenz-, Kurzarbeitergeld oder Gründungszuschuss abgebildet werden.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="bezugAndereLeistungen" type="xs:boolean"/>
+         <xs:element name="zeitraumAndereLeistungen"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ZeitraumType"/>
+         <xs:element name="nachweisAndereLeistungen"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType"/>
+         <xs:element name="artAndereLeistungen"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="din91379:datatypeC"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AngabenSozialversicherungType">
+      <xs:annotation>
+         <xs:documentation>Angaben zu den Sozialversicherungen der Antragsstellenden.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="pflichtbeitraegeKrankenkasse" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Pﬂichtbeiträge zur Krankenkasse- und Pflegeversicherung oder KSK.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="pflichtbeitraegeRentenversicherung" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Pflichtbeiträge zur Rentenversicherung / zum Berufsständischen Versorgungswerk.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="pflichtbeitraegeArbeitslosenversicherung" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angaben zu den Pflichtbeiträgen zur Arbeitslosenversicherung.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisPflichtbetrag"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Nachweise zu den Pflichtbeiträgen. Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.). Siehe auch .</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AngabenWeiteresKindType">
+      <xs:sequence>
+         <xs:element name="nameWeiteresKind"
+                     minOccurs="0"
+                     type="xfb:NameNatuerlichePerson.NachweisbezugType">
+            <xs:annotation>
+               <xs:documentation>Name eines weiteren im Haushalt lebenden Kindes.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburtsdatum" type="xfb:TagesdatumType"/>
+         <xs:element name="geburtsdatumNachweis"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType"/>
+         <xs:element name="haushaltsaufnahme" minOccurs="0" type="xfb:TagesdatumType"/>
+         <xs:element name="haushaltsaufnahmeNachweis"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType"/>
+         <xs:element name="behinderungsgrad" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>True: Der Behinderungsgrad des weiteren Kindes liegt über oder ist gleich 20. False: Der Behinderungsgrad des weiteren Kindes liegt unter 20.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="behinderungsgradNachweis"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType"/>
+         <xs:element name="verhaeltnisET1" type="xfe:Code.KindschaftsverhaeltnisType"/>
+         <xs:element name="verhaeltnisET2"
+                     minOccurs="0"
+                     type="xfe:Code.KindschaftsverhaeltnisType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AnschriftKind.optionalType">
+      <xs:annotation>
+         <xs:documentation>Angaben zur Anschrift des Kindes zum Zeitpunkt der ersten Antragstellung. Hierbei handelt es sich nicht zwangsläufig um die Meldeanschrift des Kindes.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="hausnummer"
+                     minOccurs="0"
+                     type="xfb:Meldeanschrift.HausnummerType">
+            <xs:annotation>
+               <xs:documentation>Es sind nur die Ziffern einer Hausnummer anzugeben.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="postleitzahl"
+                     minOccurs="0"
+                     type="xfb:Meldeanschrift.PostleitzahlType">
+            <xs:annotation>
+               <xs:documentation>Es ist die Postleitzahl anzugeben.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="strasse" minOccurs="0" type="xfb:Meldeanschrift.StrasseType">
+            <xs:annotation>
+               <xs:documentation>Es ist die Bezeichnung der Straße in der amtlichen Schreibweise anzugeben. Es ist möglich hier Straße, Hausnummer und Hausnummerzusatz in einem Feld zu übertragen, damit Daten aus der E-ID direkt übernehmbar sind. Es wird aber davon abgeraten. Bei Überschreitung einer Feldlänge von 55 Zeichen muss sinnvoll abgekürzt werden. Ist keine Straßenbezeichnung - wohl aber eine Hausnummer - vorhanden, so ist die Zeichenkette Hausnummer anzugeben. Sind weder Straßenbezeichnung noch Hausnummer vorhanden, so ist die Zeichenkette ohne Hausnummer anzugeben. Zusätze, die nicht der Straßenbezeichnung dienen, sind nicht zulässig. Soweit Angaben wie z. B. Weg A 2 und 12 oder Weg B zur Adressierung benötigt werden, sind diese im Element zusatzangaben zu übermitteln. Siehe DSMeld-Blatt 1205.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="wohnort" minOccurs="0" type="xfb:Meldeanschrift.WohnortType">
+            <xs:annotation>
+               <xs:documentation>Es ist die postalische Wohnortsbezeichnung anzugeben. Bei Überschreitung einer Länge von 25 Zeichen darf sinnvoll abgekürzt werden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AnschriftType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum Wohnsitz.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="anschriftInlandOderAusland" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Anschrift, wenn =true, ist AnschriftInland, wenn =false, dann AnschriftAusland zu befüllen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anschriftInland"
+                     minOccurs="0"
+                     type="xfb:PostalischeInlandsanschrift.Gebaeudeanschrift.NachweisbezugType">
+            <xs:annotation>
+               <xs:documentation>Die Angaben zur Inlandsadresse des antragstellenden Elternteils, verpflichtende Angabe, wenn anschriftInlandOderAusland = true</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anschriftAusland"
+                     minOccurs="0"
+                     type="xfb:AuslandsanschriftType">
+            <xs:annotation>
+               <xs:documentation>Die Angaben zur Auslandsadresse des antragstellenden Elternteils, verpflichtende Angabe, wenn anschriftInlandOderAusland = false</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AntragstellenderElternteil.VorabmeldungType">
+      <xs:annotation>
+         <xs:documentation>Grunddaten des antragstellenden Elternteils werden mit der Vorabmeldung an die zuständige Stelle versendet.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="name" type="xfb:NameNatuerlichePersonType">
+            <xs:annotation>
+               <xs:documentation>Name des antragstellenden Elternteils.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburtsdatum" type="xfb:TeilbekanntesDatumType">
+            <xs:annotation>
+               <xs:documentation>Geburtsdatum des antragstellenden Elternteils.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anschrift"
+                     type="xfb:PostalischeInlandsanschrift.GebaeudeanschriftType">
+            <xs:annotation>
+               <xs:documentation>Anschrift des antragstellenden Elternteils.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ArbeitszeitType">
+      <xs:annotation>
+         <xs:documentation>Angaben zur Arbeitszeit des antragstellenden Elternteils</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="arbeitszeitWochenstunden" type="xs:nonNegativeInteger">
+            <xs:annotation>
+               <xs:documentation>Die Angabe der Arbeitszeit pro Woche in Stunden</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="abweichendeBezugsgroesse"
+                     minOccurs="0"
+                     type="xs:nonNegativeInteger">
+            <xs:annotation>
+               <xs:documentation>Eine abweichende berufsspezifische Anzahl von Wochenstunden, die einer Vollzeitbeschäftigung entspricht (z. B. bei Lehrern).</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AuslaendischesArbeitsverhaeltnisType">
+      <xs:sequence>
+         <xs:element name="auslaendischesArbeitsverhaeltnis" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Arbeiten Sie in Deutschland (nicht-selbstständig oder selbstständig) oder haben Sie einen Arbeitsvertrag nach deutschem Recht?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="beschaeftigungsland" minOccurs="0" type="xfb:Code.StaatType"/>
+         <xs:element name="auslaendischesArbeitsverhaeltnisAndererET"
+                     minOccurs="0"
+                     type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Arbeitet der andere Elternteil in Deutschland (nicht-selbstständig oder selbstständig) oder hat der andere Elternteil einen Arbeitsvertrag nach deutschem Recht?</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AuslandsaufenthaltBefrType">
+      <xs:sequence>
+         <xs:element name="befristeterAufenthalt" type="xfe:AuslandsaufenthaltType"/>
+         <xs:element name="endeAufenthalt" type="xfb:TagesdatumType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AuslandsaufenthaltType">
+      <xs:sequence>
+         <xs:element name="grundDesAufenthalts" type="din91379:datatypeC"/>
+         <xs:element name="aufenthaltsland" type="xfb:Code.StaatType"/>
+         <xs:element name="nachweisAuslandsaufenthalt"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.). Siehe auch .</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="inlaendischesArbeitsverhaeltnis" type="xs:boolean"/>
+         <xs:element name="plzArbeitgeber" minOccurs="0" type="din91379:datatypeC"/>
+         <xs:element name="ortArbeitgeber" minOccurs="0" type="din91379:datatypeC"/>
+         <xs:element name="beginnAufenthalt" type="xfb:TagesdatumType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="BeantragungElterngeldType">
+      <xs:sequence>
+         <xs:element name="leistungshoehe"
+                     minOccurs="0"
+                     type="xfe:Code.LeistungshoeheType">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob Elterngeld aus Erwerbseinkommen berechnet werden soll, oder der Mindestbetrag gewählt wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="basisElterngeld" type="xs:boolean"/>
+         <xs:element name="zeitraumBasisElterngeld"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xs:nonNegativeInteger">
+            <xs:annotation>
+               <xs:documentation>Angabe der beantragten Lebensmonate.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="elterngeldPlus" type="xs:boolean"/>
+         <xs:element name="zeitraumElterngeldPlus"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xs:nonNegativeInteger">
+            <xs:annotation>
+               <xs:documentation>Angabe der beantragten Lebensmonate.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="partnerschaftsBonusMonate" type="xs:boolean"/>
+         <xs:element name="zeitraumPartnerschaftsBonusMonate"
+                     minOccurs="0"
+                     maxOccurs="4"
+                     type="xs:nonNegativeInteger">
+            <xs:annotation>
+               <xs:documentation>Angabe der beantragten Lebensmonate.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="BehinderungKindType">
+      <xs:annotation>
+         <xs:documentation>Angabe über Behindertenstatus des Kindes, relevant für Anzahl gemeinsamer Partnermonate</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="behinderungKind" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe über Behindertenstatus des Kindes, relevant für Anzahl gemeinsamer Partnermonate</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisBehinderungKind"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Angabe über Behindertenstatus des Kindes, relevant für Anzahl gemeinsamer Partnermonate</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="BerufsausbildungType">
+      <xs:sequence>
+         <xs:element name="berufsbildung" minOccurs="0" type="xs:boolean"/>
+         <xs:element name="zeitraum" minOccurs="0" type="xs:date"/>
+         <xs:element name="wochenstundenJeTaetigkeit"
+                     minOccurs="0"
+                     type="din91379:datatypeC"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="BerufsbildungType">
+      <xs:annotation>
+         <xs:documentation>Angabe, ob die antragstellende Person sich im Bezugszeitraum in Berufsbildung befindet. Voraussichtliches Ende: Datumsangabe des vorraussichtlichen Endes der Berufsbildung.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="berufsbildung" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob die antragstellende Person sich im Bezugszeitraum in Berufsbildung befindet. Voraussichtliches Ende: Datumsangabe des vorraussichtlichen Endes der Berufsbildung.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="ausbildungEndeVoraussichtlich" minOccurs="0" type="xs:date"/>
+         <xs:element name="nachweis"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="BuergergeldType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum Bezug und zum Beginn und Ende des Bezugs von ALGII/ Bürgergeld.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="bezugBuergergeld" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Bezug von ALGII/ Bürgergeld.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="beginnZeitraumBuergergeld" minOccurs="0" type="xs:date">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Beginn des Bezugs von ALGII/ Bürgergeld.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="endeZeitraumBuergergeld" minOccurs="0" type="xs:date">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Ende des Bezugs von ALGII/ Bürgergeld.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Code.AbbruchgrundType">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Abbruchgrund</nameLang>
+               <nameKurz>Abbruchgrund</nameKurz>
+               <nameTechnisch>abbruchgrund</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:abbruchgrund</kennung>
+               <beschreibung>Die Liste codiert die Abbruchgruende.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2024-05-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+            <genutzteCodeSpalte>code</genutzteCodeSpalte>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:restriction base="xoev-code:Code">
+            <xs:sequence>
+               <xs:element name="code" form="unqualified" type="xfe:abbruchgrund"/>
+            </xs:sequence>
+            <xs:attribute name="listURI"
+                          type="xs:anyURI"
+                          use="optional"
+                          fixed="urn:xoev-de:xfamilie:codeliste:abbruchgrund"/>
+            <xs:attribute name="listVersionID"
+                          type="xs:normalizedString"
+                          use="optional"
+                          fixed="1.0"/>
+         </xs:restriction>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="Code.AnfragegrundType">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Anfragegrund</nameLang>
+               <nameKurz>Anfragegrund</nameKurz>
+               <nameTechnisch>anfragegrund</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:anfragegrund</kennung>
+               <beschreibung>Die Liste codiert die Anfragegruende.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2024-05-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+            <genutzteCodeSpalte>code</genutzteCodeSpalte>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:restriction base="xoev-code:Code">
+            <xs:sequence>
+               <xs:element name="code" form="unqualified" type="xfe:anfragegrund"/>
+            </xs:sequence>
+            <xs:attribute name="listURI"
+                          type="xs:anyURI"
+                          use="optional"
+                          fixed="urn:xoev-de:xfamilie:codeliste:anfragegrund"/>
+            <xs:attribute name="listVersionID"
+                          type="xs:normalizedString"
+                          use="optional"
+                          fixed="1.0"/>
+         </xs:restriction>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="Code.ElterngeldantragType">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Elterngeldantrag</nameLang>
+               <nameKurz>Elterngeldantrag</nameKurz>
+               <nameTechnisch>elterngeldantrag</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:elterngeldantrag</kennung>
+               <beschreibung>Die Codeliste enthält mögliche Werte, die beschreiben welche Elternteile an der Antragstellung beteiligt sind.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+            <genutzteCodeSpalte>code</genutzteCodeSpalte>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:restriction base="xoev-code:Code">
+            <xs:sequence>
+               <xs:element name="code" form="unqualified" type="xfe:elterngeldantrag"/>
+            </xs:sequence>
+            <xs:attribute name="listURI"
+                          type="xs:anyURI"
+                          use="optional"
+                          fixed="urn:xoev-de:xfamilie:codeliste:elterngeldantrag"/>
+            <xs:attribute name="listVersionID"
+                          type="xs:normalizedString"
+                          use="optional"
+                          fixed="1.0"/>
+         </xs:restriction>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="Code.FehlerfallType">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Fehlerfall</nameLang>
+               <nameKurz>Fehlerfall</nameKurz>
+               <nameTechnisch>fehlerfall</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:fehlerfall</kennung>
+               <beschreibung>Die Liste codiert die Fehlerfaelle.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2024-05-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+            <genutzteCodeSpalte>code</genutzteCodeSpalte>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:restriction base="xoev-code:Code">
+            <xs:sequence>
+               <xs:element name="code" form="unqualified" type="xfe:fehlerfall"/>
+            </xs:sequence>
+            <xs:attribute name="listURI"
+                          type="xs:anyURI"
+                          use="optional"
+                          fixed="urn:xoev-de:xfamilie:codeliste:fehlerfall"/>
+            <xs:attribute name="listVersionID"
+                          type="xs:normalizedString"
+                          use="optional"
+                          fixed="1.0"/>
+         </xs:restriction>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="Code.GesamteinkommenType">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Gesamteinkommen</nameLang>
+               <nameKurz>Gesamteinkommen</nameKurz>
+               <nameTechnisch>gesamteinkommen</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:gesamteinkommen</kennung>
+               <beschreibung>Die Liste codiert, die verschiedenen möglichen Klassen des Gesamteinkommen der Antragstellenden Elternteile. Dabei wird auch zwischen alleinerziehend und Elternpaare unterschieden.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>3.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2025-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+               <gueltigkeit>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </gueltigkeit>
+            </codelistenspalten>
+            <genutzteCodeSpalte>code</genutzteCodeSpalte>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:restriction base="xoev-code:Code">
+            <xs:sequence>
+               <xs:element name="code" form="unqualified" type="xfe:gesamteinkommen"/>
+            </xs:sequence>
+            <xs:attribute name="listURI"
+                          type="xs:anyURI"
+                          use="optional"
+                          fixed="urn:xoev-de:xfamilie:codeliste:gesamteinkommen"/>
+            <xs:attribute name="listVersionID"
+                          type="xs:normalizedString"
+                          use="optional"
+                          fixed="3.0"/>
+         </xs:restriction>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="Code.KindschaftsverhaeltnisType">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Kindschaftsverhaeltnis</nameLang>
+               <nameKurz>Kindschaftsverhaeltnis</nameKurz>
+               <nameTechnisch>kindschaftsverhaeltnis</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:kindschaftsverhaeltnis</kennung>
+               <beschreibung>Beschreibt das Verhältnis und den Verwandschaftsgrad vom Kind zum Elternteil.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+            <genutzteCodeSpalte>code</genutzteCodeSpalte>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:restriction base="xoev-code:Code">
+            <xs:sequence>
+               <xs:element name="code" form="unqualified" type="xfe:kindschaftsverhaeltnis"/>
+            </xs:sequence>
+            <xs:attribute name="listURI"
+                          type="xs:anyURI"
+                          use="optional"
+                          fixed="urn:xoev-de:xfamilie:codeliste:kindschaftsverhaeltnis"/>
+            <xs:attribute name="listVersionID"
+                          type="xs:normalizedString"
+                          use="optional"
+                          fixed="1.0"/>
+         </xs:restriction>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="Code.LeistungshoeheType">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Leistungshoehe</nameLang>
+               <nameKurz>Leistungshoehe</nameKurz>
+               <nameTechnisch>leistungshoehe</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:leistungshoehe</kennung>
+               <beschreibung>Die Liste codiert die Entscheidung auf welcher Basis das Elterngeld berechnet werden soll.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+            <genutzteCodeSpalte>code</genutzteCodeSpalte>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:restriction base="xoev-code:Code">
+            <xs:sequence>
+               <xs:element name="code" form="unqualified" type="xfe:leistungshoehe"/>
+            </xs:sequence>
+            <xs:attribute name="listURI"
+                          type="xs:anyURI"
+                          use="optional"
+                          fixed="urn:xoev-de:xfamilie:codeliste:leistungshoehe"/>
+            <xs:attribute name="listVersionID"
+                          type="xs:normalizedString"
+                          use="optional"
+                          fixed="1.0"/>
+         </xs:restriction>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="Code.VersandwegType">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Versandweg</nameLang>
+               <nameKurz>Versandweg</nameKurz>
+               <nameTechnisch>versandweg</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:versandweg</kennung>
+               <beschreibung>Die Liste codiert den Versandweg für den Bescheid zum Elterngeldantrag.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+            <genutzteCodeSpalte>code</genutzteCodeSpalte>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:restriction base="xoev-code:Code">
+            <xs:sequence>
+               <xs:element name="code" form="unqualified" type="xfe:versandweg"/>
+            </xs:sequence>
+            <xs:attribute name="listURI"
+                          type="xs:anyURI"
+                          use="optional"
+                          fixed="urn:xoev-de:xfamilie:codeliste:versandweg"/>
+            <xs:attribute name="listVersionID"
+                          type="xs:normalizedString"
+                          use="optional"
+                          fixed="1.0"/>
+         </xs:restriction>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="Code.VersicherungsartType">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Versicherungsart</nameLang>
+               <nameKurz>Versicherungsart</nameKurz>
+               <nameTechnisch>versicherungsart</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:versicherungsart</kennung>
+               <beschreibung>Beschreibt das Versicherungsverhältnis einer Person.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+            <genutzteCodeSpalte>code</genutzteCodeSpalte>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:restriction base="xoev-code:Code">
+            <xs:sequence>
+               <xs:element name="code" form="unqualified" type="xfe:versicherungsart"/>
+            </xs:sequence>
+            <xs:attribute name="listURI"
+                          type="xs:anyURI"
+                          use="optional"
+                          fixed="urn:xoev-de:xfamilie:codeliste:versicherungsart"/>
+            <xs:attribute name="listVersionID"
+                          type="xs:normalizedString"
+                          use="optional"
+                          fixed="1.0"/>
+         </xs:restriction>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="EGAelteresKindType">
+      <xs:sequence>
+         <xs:element name="bezugEGAelteresKind" type="xs:boolean"/>
+         <xs:element name="zeitraumEGAelteresKind"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ZeitraumType"/>
+         <xs:element name="nachweisEGAelteresKind"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Einkommen.VorGeburtType">
+      <xs:annotation>
+         <xs:documentation>Daten zum Einkommen des antragstellenden Elternteils vor Geburt des Kindes.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="nichtselbststaendigeBeschaeftigung"
+                     minOccurs="0"
+                     type="xfe:NichtselbststaendigeBeschaeftigung.VorGeburtType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur abhängigen Beschäftigung.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="beruecksichtigungAusschliesslichEinkommenNichtselbststaendig"
+                     minOccurs="0"
+                     type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Hatten Sie im letzten und aktuellen steuerlichen Veranlagungszeitraum aus selbstständiger Arbeit jeweils einen Gewinn von weniger als 35,00 €</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkommenAusNichtselbststaendigerTaetigkeit" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe zum Einkommen aus einer nichtselbstständigen Beschäftigung, beispielsweise Lohn, Gehalt, auch aus einem Mini-Job.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="selbstaendigeBeschaeftigung" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob voraussichtlich Einkommen aus einer selbständigen Beschäftigung im Bezugszeitraum erzielt wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geringesEinkommenCovid19"
+                     minOccurs="0"
+                     type="xfe:GeringesEinkommenCovid19Type"/>
+         <xs:element name="entgeltdaten.dsrv"
+                     minOccurs="0"
+                     type="xfb:Entgeltdaten.Dsrv.NachweisbezugType"/>
+         <xs:element name="gewerbebetrieb" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob voraussichtlich Einkommen aus einer Tätigkeit in einem Gewerbebetrieb erzielt wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="landUndForstwirtschaft" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob voraussichtlich Einkommen aus einer Tätigkeit in der Land- und Forstwirtschaft im Bezugszeitraum erzielt wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="freiwilligendienst" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob die antragstellende Person einem Freiwilligendienst nachgeht.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisMutter"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Hier können Nachweise zu Mutterschutz und Mutterschaftsgeld hochgeladen werden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="selbststaendigkeitGewerbeLandForstwirtschaft"
+                     minOccurs="0"
+                     type="xfe:SelbststaendigkeitGewerbeLandForstwirtschaft.VorGeburtType">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob voraussichtlich Einkommen aus einer selbständigen Beschäftigung erzielt wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkommensersatzleistungen"
+                     type="xfe:EinkommensersatzleistungenVorGeburtType">
+            <xs:annotation>
+               <xs:documentation>Daten zu Einkommensersatzleistungen</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Einkommen.WaehrendBezugszeitraumType">
+      <xs:annotation>
+         <xs:documentation>Daten zum Einkommen des antragstellenden Elternteils nach Geburt des Kindes.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="nichtselbststaendigeBeschaeftigung"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfe:NichtselbststaendigeBeschaeftigung.WaehrendBezugszeitraumType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur abhängigen Beschäftigung.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="selbstaendigeBeschaeftigung" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob voraussichtlich Einkommen aus einer selbständigen Beschäftigung im Bezugszeitraum erzielt wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="landUndForstwirtschaft" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob voraussichtlich Einkommen aus einer Tätigkeit in der Land- und Forstwirtschaft im Bezugszeitraum erzielt wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="gewerbebetrieb" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob voraussichtlich Einkommen aus einer Tätigkeit in einem Gewerbebetrieb im Bezugszeitraum erzielt wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkuenfteSelbststaendigkeitGewerbeLandForstwirtschaft"
+                     minOccurs="0"
+                     type="xfe:EinkuenfteSelbststaendigkeitGewerbeLandForstwirtschaft.WaehrendBezugszeitraumType"/>
+         <xs:element name="beruecksichtigungBetriebsausgaben"
+                     minOccurs="0"
+                     type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe zur Berücksichtigung der Betriebsausgaben.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisBetriebsausgaben"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Der Nachweis über die Betriebsausgaben.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkommensersatzleistungenBezugszeitraum"
+                     type="xfe:EinkommensersatzleistungenBezugszeitraumType">
+            <xs:annotation>
+               <xs:documentation>Daten zu Einkommensersatzleistungen</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkommenAusNichtselbststaendigerTaetigkeit" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe zum Einkommen aus einer nichtselbstständigen Beschäftigung, beispielsweise Lohn, Gehalt, auch aus einem Mini-Job.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="arbeitgeberformblatt"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Das Arbeitgeberformblatt kann hier hochgeladen werden, um die Höhe und Dauer der Sachbezüge nachzuweisen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="freiwilligendienst" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob die antragstellende Person einem Freiwilligendienst nachgeht.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="EinkommensersatzleistungenBezugszeitraumType">
+      <xs:sequence>
+         <xs:element name="bezugEinkommensersatzleistungen" type="xs:boolean"/>
+         <xs:element name="bezugALGI" minOccurs="0" type="xfe:ALGIType">
+            <xs:annotation>
+               <xs:documentation>Angaben über den Bezug von ALG I.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="bezugKrankentagegeld"
+                     minOccurs="0"
+                     type="xfe:KrankentagegeldType"/>
+         <xs:element name="bezugKrankengeld" minOccurs="0" type="xfe:KrankengeldType"/>
+         <xs:element name="bezugEGAelteresKind"
+                     minOccurs="0"
+                     type="xfe:EGAelteresKindType"/>
+         <xs:element name="bezugRenten" minOccurs="0" type="xfe:RentenType"/>
+         <xs:element name="bezugSonstigeLeistungen"
+                     type="xfe:SonstigeLeistungenBezugszeitraumType"/>
+         <xs:element name="andereLeistungen"
+                     minOccurs="0"
+                     type="xfe:AndereLeistungenType"/>
+         <xs:element name="bezugAuslLeistungenKind" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Bezug von Leistungen aus dem Ausland für dieses Kind oder ein älteres Kind, die mit dem Elterngeld oder den Mutterschaftsleistungen vergleichbar sind.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="bezugZwischenstaatlLeistungen"
+                     minOccurs="0"
+                     type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Bezug von Leistungen von einer zwischenstaatlichen Organisation für dieses Kind oder ein älteres Kind, die mit dem Elterngeld oder den Mutterschaftsleistungen vergleichbar sind (zum Beispiel von der EU oder der UN)</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="EinkommensersatzleistungenVorGeburtType">
+      <xs:sequence>
+         <xs:element name="bezugEinkommensersatzleistungen" type="xs:boolean"/>
+         <xs:element name="bezugALGI" minOccurs="0" type="xfe:ALGIType">
+            <xs:annotation>
+               <xs:documentation>Angaben über den Bezug von ALG I.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="bezugKrankentagegeld"
+                     minOccurs="0"
+                     type="xfe:KrankentagegeldType"/>
+         <xs:element name="bezugKrankengeldSchwangerschaft"
+                     minOccurs="0"
+                     type="xfe:KrankengeldType"/>
+         <xs:element name="bezugEGAelteresKind"
+                     minOccurs="0"
+                     type="xfe:EGAelteresKindType"/>
+         <xs:element name="bezugRenten" minOccurs="0" type="xfe:RentenType"/>
+         <xs:element name="bezugAndereLeistungen"
+                     minOccurs="0"
+                     type="xfe:AndereLeistungenType"/>
+         <xs:element name="bezugAuslLeistungenKind" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Bezug von Leistungen aus dem Ausland für dieses Kind oder ein älteres Kind, die mit dem Elterngeld oder den Mutterschaftsleistungen vergleichbar sind.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="bezugZwischenstaatlLeistungen"
+                     minOccurs="0"
+                     type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Bezug von Leistungen von einer zwischenstaatlichen Organisation für dieses Kind oder ein älteres Kind, die mit dem Elterngeld oder den Mutterschaftsleistungen vergleichbar sind (zum Beispiel von der EU oder der UN)</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="buergergeld" minOccurs="0" type="xfe:BuergergeldType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Bezug und zum Beginn und Ende des Bezugs von ALGII/ Bürgergeld.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="EinkuenfteBeantragterZeitraumType">
+      <xs:annotation>
+         <xs:documentation>Angaben über die Einfünfte im beantragten Zeitraum.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="zeitraum" type="xfb:ZeitraumType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Zeitraum.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="durchschnittlicheEinkuenfteJeTaetigkeitSelbststaendigkeit"
+                     type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Angaben zu den durchschnittlichen Einkünften bei der Tätigkeit in Selbstständigkeit.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="wochenstundenJeTaetigkeitSelbststaendigkeit" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Angaben zu den Wochenstunden je Tätigkeit in Selbstständigkeit.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisEinkommenssteuerbescheid"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Nachweis zur Einkommenssteuer.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="EinkuenfteSelbststaendigkeitGewerbeLandForstwirtschaft.WaehrendBezugszeitraumType">
+      <xs:sequence>
+         <xs:element name="steuerfreibetragSelbstaendigkeit" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe zum Steuerfreibetrag.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkuenfteBeantragterZeitraum"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfe:EinkuenfteBeantragterZeitraumType">
+            <xs:annotation>
+               <xs:documentation>Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.). Siehe auch .</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ElternteilEins.ElterngeldantragType">
+      <xs:annotation>
+         <xs:documentation>Daten zum antragstellenden Elternteil.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="persoenlicheAngaben" type="xfe:PersoenlicheAngabenETType"/>
+         <xs:element name="anschrift" type="xfe:AnschriftType"/>
+         <xs:element name="gewoehnlicherAufenthalt" type="xfe:GewoehnlicherAufenthaltType"/>
+         <xs:element name="kindschaftsverhaeltnis" type="xfe:KindschaftsverhaeltnisType"/>
+         <xs:element name="haushaltszugehoerigkeitDesKindes"
+                     type="xfe:HaushaltszugehoerigkeitDesKindesType">
+            <xs:annotation>
+               <xs:documentation>Daten zur Haushaltszugehörigkeit des Kindes</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="alleinerziehendenanspruch"
+                     minOccurs="0"
+                     type="xfe:AlleinerziehendenanspruchType"/>
+         <xs:element name="beantragungElterngeld" type="xfe:BeantragungElterngeldType">
+            <xs:annotation>
+               <xs:documentation>Ergänzende Anmerkungen zum Einkommen</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="krankenversicherung" type="xfe:KrankenversicherungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Krankenversicherung</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkommenVorGeburt"
+                     minOccurs="0"
+                     type="xfe:Einkommen.VorGeburtType">
+            <xs:annotation>
+               <xs:documentation>Daten zum Einkommen des antragstellenden Elternteils vor Geburt des Kindes. Dieses Element ist optional, da es im Zusammenhang mit der Berechnung des Elterngeldes steht. Wenn Elterngeld individuell auf Basis des Erwerbseinkommens im Bemessungszeitraum berechnet wird, dann müssen die Daten für Einkommen vor Geburt angegeben werden. Wenn der Pauschalbetrag (Mindestbeitrag 300€) für das Elterngeld angesetzt wird, müssen keine Daten für Einkommen vor Geburt angegeben werden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkommenWaehrendBezugszeitraum"
+                     type="xfe:Einkommen.WaehrendBezugszeitraumType">
+            <xs:annotation>
+               <xs:documentation>Daten zum Einkommen des antragstellenden Elternteils im Bezugszeitraum</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="bankverbindung" type="xfb:BankverbindungInhaberOptionalType">
+            <xs:annotation>
+               <xs:documentation>Daten zur Bankverbindung Hinweis: Antragsfälle ohne Bankverbindung werden durch XFamilie in der aktuellen Fassung nicht unterstützt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="zustimmungDatenabrufe"
+                     minOccurs="0"
+                     type="xfe:ZustimmungDatenabrufeType"/>
+         <xs:element name="zustimmungAuskunftseinholungJobcenterArbeitsamt"
+                     minOccurs="0"
+                     type="xs:boolean"/>
+         <xs:element name="kontaktmoeglichkeit"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ErreichbarkeitType"/>
+         <xs:element name="steuerlicheIdentifikationsnummer"
+                     type="xfb:SteuerlicheIdentifikationsnummerType">
+            <xs:annotation>
+               <xs:documentation>Die steuerliche Identifikationsnummer des antragstellenden Elternteils.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nutzerkonto" minOccurs="0" type="xfb:NutzerkontoType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum verwendeten Nutzerkonto.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="erwerbstaetigkeitBezugszeitraum"
+                     type="xfe:ErwerbstaetigkeitBezugszeitraumType">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob die antragstellende Person im Bezugszeitraum einer beruflichen Tätigkeit nachgeht.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="bescheidzustellungVersandweg" type="xfe:Code.VersandwegType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Versandweg für den Bescheid zum Elterngeldantrag.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="gesetzlicheVertretung"
+                     minOccurs="0"
+                     type="xfe:GesetzlicheVertretungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur gesetzlichen Vertretung, z.B. bei minderjährigen Antragstellenden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="elternzeit" minOccurs="0" type="xfe:ElternzeitType"/>
+         <xs:element name="zusammenveranlagungLiegtVor" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Wenn eine steuerliche Zusammenveranlagung mit Ja beantwortet wird, muss die Elterngeldstelle eine zusätzliche Einwilligung des Partners einholen. Bei einem Nein kann der Datenabruf ohne zusätzliche Einwilligung erfolgen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="mitteilungAnBehoerde" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Mitteilungen an die Behörde.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ElternteilZwei.ElterngeldantragType">
+      <xs:annotation>
+         <xs:documentation>Daten zum antragstellenden Elternteil.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="persoenlicheAngaben" type="xfe:PersoenlicheAngabenETType"/>
+         <xs:element name="anschrift" minOccurs="0" type="xfe:AnschriftType"/>
+         <xs:element name="gewoehnlicherAufenthalt"
+                     minOccurs="0"
+                     type="xfe:GewoehnlicherAufenthaltType"/>
+         <xs:element name="kindschaftsverhaeltnis"
+                     minOccurs="0"
+                     type="xfe:KindschaftsverhaeltnisType"/>
+         <xs:element name="haushaltszugehoerigkeitDesKindes"
+                     minOccurs="0"
+                     type="xfe:HaushaltszugehoerigkeitDesKindesType">
+            <xs:annotation>
+               <xs:documentation>Daten zur Haushaltszugehörigkeit des Kindes</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="beantragungElterngeld"
+                     minOccurs="0"
+                     type="xfe:BeantragungElterngeldType">
+            <xs:annotation>
+               <xs:documentation>Ergänzende Anmerkungen zum Einkommen</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="krankenversicherung"
+                     minOccurs="0"
+                     type="xfe:KrankenversicherungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Krankenversicherung</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkommenVorGeburt"
+                     minOccurs="0"
+                     type="xfe:Einkommen.VorGeburtType">
+            <xs:annotation>
+               <xs:documentation>Daten zum Einkommen des antragstellenden Elternteils vor Geburt des Kindes. Dieses Element ist optional, da es im Zusammenhang mit der Berechnung des Elterngeldes steht. Wenn Elterngeld individuell auf Basis des Erwerbseinkommens im Bemessungszeitraum berechnet wird, dann müssen die Daten für Einkommen vor Geburt angegeben werden. Wenn der Pauschalbetrag (Mindestbeitrag 300€) für das Elterngeld angesetzt wird, müssen keine Daten für Einkommen vor Geburt angegeben werden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkommenWaehrendBezugszeitraum"
+                     minOccurs="0"
+                     type="xfe:Einkommen.WaehrendBezugszeitraumType">
+            <xs:annotation>
+               <xs:documentation>Daten zum Einkommen des antragstellenden Elternteils im Bezugszeitraum</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="bankverbindung"
+                     minOccurs="0"
+                     type="xfb:BankverbindungInhaberOptionalType">
+            <xs:annotation>
+               <xs:documentation>Daten zur Bankverbindung Hinweis: Antragsfälle ohne Bankverbindung werden durch XFamilie in der aktuellen Fassung nicht unterstützt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="zustimmungDatenabrufe"
+                     minOccurs="0"
+                     type="xfe:ZustimmungDatenabrufeType"/>
+         <xs:element name="zustimmungAuskunftseinholungJobcenterArbeitsamt"
+                     minOccurs="0"
+                     type="xs:boolean"/>
+         <xs:element name="kontaktmoeglichkeit"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ErreichbarkeitType"/>
+         <xs:element name="steuerlicheIdentifikationsnummer"
+                     minOccurs="0"
+                     type="xfb:SteuerlicheIdentifikationsnummerType">
+            <xs:annotation>
+               <xs:documentation>Die steuerliche Identifikationsnummer des antragstellenden Elternteils.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nutzerkonto" minOccurs="0" type="xfb:NutzerkontoType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum verwendeten Nutzerkonto.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="erwerbstaetigkeitBezugszeitraum"
+                     type="xfe:ErwerbstaetigkeitBezugszeitraumType">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob die antragstellende Person im Bezugszeitraum einer beruflichen Tätigkeit nachgeht.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="bescheidzustellungVersandweg" type="xfe:Code.VersandwegType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Versandweg für den Bescheid zum Elterngeldantrag.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="gesetzlicheVertretung"
+                     minOccurs="0"
+                     type="xfe:GesetzlicheVertretungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur gesetzlichen Vertretung, z.B. bei minderjährigen Antragstellenden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="elternzeit" minOccurs="0" type="xfe:ElternzeitType"/>
+         <xs:element name="zusammenveranlagungLiegtVor" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Wenn eine steuerliche Zusammenveranlagung mit Ja beantwortet wird, muss die Elterngeldstelle eine zusätzliche Einwilligung des Partners einholen. Bei einem Nein kann der Datenabruf ohne zusätzliche Einwilligung erfolgen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="mitteilungAnBehoerde" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Bemerkungen an die Behörde.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ElternzeitType">
+      <xs:annotation>
+         <xs:documentation>Angaben des Zeitraums der geplanten Elternzeit.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="zeitraumVon" type="xs:date">
+            <xs:annotation>
+               <xs:documentation>Beginn des Zeitraums der Elternzeit.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="zeitraumBis" type="xs:date">
+            <xs:annotation>
+               <xs:documentation>Ende des Zeitraums der Elternzeit.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ErwerbstaetigkeitBezugszeitraumType">
+      <xs:annotation>
+         <xs:documentation>Angabe, ob die antragstellende Person im Bezugszeitraum einer beruflichen Tätigkeit nachgeht.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="einkuenfteErwerbstaetigkeitBezugszeitraum" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob die antragstellende Person im Bezugszeitraum einer beruflichen Tätigkeit nachgeht.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="resturlaub"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfe:ResturlaubType">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob Resturlaub aus der Zeit vor der Geburt im Bezugszeitraum genommen wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="berufsbildung" minOccurs="0" type="xfe:BerufsbildungType">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob die antragstellende Person sich im Bezugszeitraum in Berufsbildung befindet. Voraussichtliches Ende: Datumsangabe des vorraussichtlichen Endes der Berufsbildung.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="tagespflege" minOccurs="0" type="xfe:TagespflegeType">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob die antragstellende Person eine Tagespflegeperson ist. Anzahl der Kinder: Anzahl der Kinder, die betreut werden (ohne eigene Kinder).</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="FreiwilligendienstType">
+      <xs:sequence>
+         <xs:element name="freiwilligendienst" minOccurs="0" type="xs:boolean"/>
+         <xs:element name="zeitraum" minOccurs="0" type="xs:date"/>
+         <xs:element name="wochenstundenJeTaetigkeit"
+                     minOccurs="0"
+                     type="din91379:datatypeC"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="GeringesEinkommenCovid19Type">
+      <xs:sequence>
+         <xs:element name="geringesEinkommenCovid19" type="xs:boolean"/>
+         <xs:element name="antragAusklammerungMonateNichtselbststaendige"
+                     minOccurs="0"
+                     type="xs:boolean"/>
+         <xs:element name="zeitraum"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ZeitraumType"/>
+         <xs:element name="antragVerschiebungBemessungszeitraumesSelbststaendige"
+                     minOccurs="0"
+                     type="xs:boolean"/>
+         <xs:element name="verschiebungBemessungszeitraumesSelbststaendige"
+                     minOccurs="0"
+                     type="xs:nonNegativeInteger"/>
+         <xs:element name="nachweisGeringesEinkommenCovid19"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.). Siehe auch .</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="GesamteinkommenType">
+      <xs:sequence>
+         <xs:element name="gesamteinkommen" type="xfe:Code.GesamteinkommenType"/>
+         <xs:element name="nachweisGesamteinkommen"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.). Siehe auch .</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="GesetzlicheVertretungType">
+      <xs:sequence>
+         <xs:element name="anredeGesetzlicheVertretung" type="xfb:Code.AnredeType"/>
+         <xs:element name="nameGesetzlicheVertretung" type="xfb:NameNatuerlichePersonType"/>
+         <xs:element name="anschriftGesetzlicheVertretung"
+                     minOccurs="0"
+                     type="xfb:PostalischeInlandsanschrift.BasisType">
+            <xs:annotation>
+               <xs:documentation>Die Anschrift des antragstellenden Elternteils</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nutzerkontoGesetzlicheVertretung"
+                     minOccurs="0"
+                     type="xfb:NutzerkontoType"/>
+         <xs:element name="nachweisGesetzlicheVertretung"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="GewoehnlicherAufenthaltType">
+      <xs:sequence>
+         <xs:element name="wohnsitz" type="xfb:Code.WohnsitzType"/>
+         <xs:element name="beginnAufenthaltD" minOccurs="0" type="xfb:TagesdatumType"/>
+         <xs:element name="befristeterAuslandsaufenthalt"
+                     minOccurs="0"
+                     type="xfe:AuslandsaufenthaltBefrType"/>
+         <xs:element name="unbefristeterAuslandsaufenthalt"
+                     minOccurs="0"
+                     type="xfe:AuslandsaufenthaltType"/>
+         <xs:element name="auslaendischesArbeitsverhaeltnis"
+                     type="xfe:AuslaendischesArbeitsverhaeltnisType"/>
+         <xs:element name="mitgliedNatoZivilesGefolge" type="xs:boolean"/>
+         <xs:element name="mitgliedDiplomatischeMissionOderKonsularischeVertretung"
+                     type="xs:boolean"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="HaushaltszugehoerigkeitDesKindesType">
+      <xs:annotation>
+         <xs:documentation>Angabe, ob das Kind mit dem antragstellenden Elternteil in einem Haushalt lebt und von dem Elternteil betreut und erzogen wird.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="betreuungUndErziehungImEigenenHaushalt"
+                     type="xfb:TatsacheMitZeitraumType">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob das Kind mit dem antragstellenden Elternteil in einem Haushalt lebt und von dem Elternteil betreut und erzogen wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Kind.ElterngeldType">
+      <xs:annotation>
+         <xs:documentation>Daten zum Kind des antragstellenden Elternteils.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="nameKind" type="xfb:NameNatuerlichePersonType">
+            <xs:annotation>
+               <xs:documentation>Name des Kindes</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburtsdatum" type="xfb:GeburtGeburtsortOptionalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Geburt des Kindes. Das Geburtsdatum muss vollständig sein, also auch Tag und Monat beinhalten.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburtsurkunde"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.). Siehe auch .</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anschriftBeiAntragstellung"
+                     minOccurs="0"
+                     type="xfe:AnschriftKind.optionalType">
+            <xs:annotation>
+               <xs:documentation>Optionale Angaben zur Anschrift des Kindes.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="besondersFruehGeborenesKind">
+            <xs:annotation>
+               <xs:documentation>Angaben, ob es sich um ein besonders früh geborenes Kind handelt.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element name="besondersFruehGeborenesKind" type="xs:boolean">
+                     <xs:annotation>
+                        <xs:documentation>Angabe, ob es sich um ein besonders früh geborenes Kind handelt.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="errechneterGeburtstermin"
+                              minOccurs="0"
+                              type="xfb:TagesdatumType">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zum durch medizinisches Fachpersonal errechneten Geburtstermin.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="nachweisBesondersFruehGeboren"
+                              minOccurs="0"
+                              maxOccurs="unbounded"
+                              type="xfb:NachweisdokumentType">
+                     <xs:annotation>
+                        <xs:documentation>Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.). Siehe auch .</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="adoption" type="xfe:AdoptionType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Adoption des Kindes</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="mehrlingsgeburt" type="xfe:MehrlingsgeburtType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu einer Mehrlingsgeburt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="behinderungKind" minOccurs="0" type="xfe:BehinderungKindType">
+            <xs:annotation>
+               <xs:documentation>Angabe über Behindertenstatus des Kindes, relevant für Anzahl gemeinsamer Partnermonate</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nummerGeburtsstandesamt"
+                     minOccurs="0"
+                     type="xfb:Code.StandesamtnummernType">
+            <xs:annotation>
+               <xs:documentation>Name des Kindes</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Kind.VorabmeldungType">
+      <xs:annotation>
+         <xs:documentation>Daten zum Kind des antragstellenden Elternteils.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="nameKind" type="xfb:NameNatuerlichePersonType">
+            <xs:annotation>
+               <xs:documentation>Name des Kindes</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburtsdatum" type="xfb:GeburtGeburtsortOptionalType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Geburt des Kindes. Das Geburtsdatum muss vollständig sein, also auch Tag und Monat beinhalten.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="KindschaftsverhaeltnisType">
+      <xs:sequence>
+         <xs:element name="kindschaftsverhaeltnis"
+                     type="xfe:Code.KindschaftsverhaeltnisType"/>
+         <xs:element name="nachweis"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.). Siehe auch .</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="KrankengeldType">
+      <xs:sequence>
+         <xs:element name="bezugKrankengeldSchwangerschaft" type="xs:boolean"/>
+         <xs:element name="zeitraumKrankengeldSchwangerschaft"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ZeitraumType"/>
+         <xs:element name="nachweisKrankengeldSchwangerschaft"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="KrankentagegeldType">
+      <xs:sequence>
+         <xs:element name="bezugKrankentagegeld" type="xs:boolean"/>
+         <xs:element name="zeitraumKrankentagegeld"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ZeitraumType"/>
+         <xs:element name="nachweisKrankentagegeld"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="KrankenversicherungType">
+      <xs:annotation>
+         <xs:documentation>Angaben zur Krankenversicherung des antragstellenden Elternteils.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="versicherungsart" type="xfe:Code.VersicherungsartType">
+            <xs:annotation>
+               <xs:documentation>Art der Versicherung. Für den Elterngeldantrag sind folgende Codewerte zu nutzen: 02, 03 , 04, 07, 08, 09.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="bezeichnungKrankenkasse"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Bezeichnung der Krankenkasse, nur zu befüllen, wenn freiwillig gesetzlich oder gesetzlich pflichtversichert</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anschriftKrankenkasse"
+                     minOccurs="0"
+                     type="xfb:PostalischeInlandsanschrift.BasisType">
+            <xs:annotation>
+               <xs:documentation>Anschrift der Krankenkassenur zu befüllen, wenn freiwillig gesetzlich oder gesetzlich pflichtversichert</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="versichertennummer" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Die Krankenversichertennummer, die den Versicherten bei einer Krankenkasse identifiziert.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anschriftPostfachKrankenkasse"
+                     minOccurs="0"
+                     type="xfb:PostalischeInlandsanschrift.PostfachanschriftType"/>
+         <xs:element name="nachweisKrankenversicherung"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Hier können Nachweise zur Krankenversicherung hochgeladen werden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="LebenssituationType">
+      <xs:annotation>
+         <xs:documentation>Das Verhältnis des antragstellenden Elternteils zum anderen Elternteil. Regel: Man darf nicht gleichzeitig unverheiratet zusammen und getrennt leben.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="unverheiratetesZusammenleben" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob der antragstellende Elternteil unverheiratet mit dem anderen Elternteil zusammenlebt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="unverheiratetesZusammenlebenSeit"
+                     minOccurs="0"
+                     type="xfb:TeilbekanntesDatumType">
+            <xs:annotation>
+               <xs:documentation>Der Zeitraum, in dem der antragstellende Elternteil unverheiratet mit dem anderen Elternteil zusammenlebt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="dauerndesGetrenntLeben" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob der antragstellende Elternteil dauernd getrennt vom anderen Elternteil lebt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="dauerndesGetrenntLebenSeit"
+                     minOccurs="0"
+                     type="xfb:TeilbekanntesDatumType">
+            <xs:annotation>
+               <xs:documentation>Der Zeitraum, in dem der antragstellende Elternteil dauernd getrennt vom anderen Elternteil lebt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="MehrlingsgeburtType">
+      <xs:sequence>
+         <xs:element name="mehrlingsgeburt" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob es sich um eine Mehrlingsgeburt handelt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anzahlMehrlinge" minOccurs="0" type="xs:nonNegativeInteger">
+            <xs:annotation>
+               <xs:documentation>Angabe der Anzahl der Mehrlinge.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="vornamenMehrlingskind"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Vornamen des Mehrlingskindes. Hierzu sind für jedes Mehrlingskind die Vornamen anzugeben.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisMehrlingsgeburt"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.).</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="MidijobType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum Midijob.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="zeitraum" type="xfb:ZeitraumType">
+            <xs:annotation>
+               <xs:documentation>Die Art des Einkommens, das voraussichtlich im Bemessungszeitraum erzielt wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="wochenstundenJeTaetigkeitMidijob" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Angabe zu den Wochenstunden je nach Tätigkeit.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisMidijob"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Die Art des Einkommens, das voraussichtlich im Bemessungszeitraum erzielt wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="MinijobType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum Minijob.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="zeitraum" type="xfb:ZeitraumType">
+            <xs:annotation>
+               <xs:documentation>Zeitraum, in der die Tätigkeit ausgeführt wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="wochenstundenJeTaetigkeitMinijob" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Angabe, der Wochenstunden, die durchschnittlich gearbeitet werden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisMinijob"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Die Art des Einkommens, das voraussichtlich im Bemessungszeitraum erzielt wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="MutterschaftsgeldArbeitgeberzuschussVergleichbareLeistungenType">
+      <xs:sequence>
+         <xs:element name="mutterschaftsgeld" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Erhalt von oder Anspruch auf Mutterschaftsgeld.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="mutterschaftsgeldZeitraum"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ZeitraumType"/>
+         <xs:element name="mutterschaftsgeldNachweis"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType"/>
+         <xs:element name="arbeitgeberzuschuss" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Erhalt von Arbeitsgeberzuschüssen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="arbeitgeberzuschussZeitraum"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ZeitraumType"/>
+         <xs:element name="arbeitgeberzuschussNachweis"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType"/>
+         <xs:element name="krankentagegeld" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Erhalt von Krankentagegeld.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="krankentagegeldZeitraum"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ZeitraumType"/>
+         <xs:element name="krankentagegeldNachweis"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType"/>
+         <xs:element name="dienstAnwaerterbezug" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Erhalt von Dienst- oder Anwärterbezügen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="dienstAnwaerterbezugZeitraum"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ZeitraumType"/>
+         <xs:element name="dienstAnwaerterbezugNachweis"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType"/>
+         <xs:element name="beamtenSoldatenrecht" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Erhalt von Beamten- oder Soldatenrechtlichen Bezügen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="beamtenSoldatenrechtZeitraum"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ZeitraumType"/>
+         <xs:element name="beamtenSodatenrechtNachweis"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType"/>
+         <xs:element name="auslFamilienleistungen" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Erhalt von ausländischen Familienleistungen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="auslFamilienleistungenZeitraum"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ZeitraumType"/>
+         <xs:element name="auslFamilienleistungenNachweis"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="NichtselbststaendigeBeschaeftigung.VorGeburtType">
+      <xs:annotation>
+         <xs:documentation>Daten zur abhängigen Beschäftigung des antragstellenden Elternteils vor Geburt des Kindes.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="nichtselbststaendigkeitAusklammerungstatbestaende"
+                     minOccurs="0"
+                     type="xfe:NichtselbststaendigkeitAusklammerungstatbestaendeType">
+            <xs:annotation>
+               <xs:documentation>Die Art des Einkommens, das voraussichtlich im Bemessungszeitraum erzielt wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="berufsbildung" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Berufsausbildung</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="midijob" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Midijobs.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="steuerfreibetrag" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Steuerfreibetrag nach Paragraf 3 Nr. 26 EStG.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="minijob" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Minijobs.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="freiwilligendienst" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Freiwilligendienst</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="NichtselbststaendigeBeschaeftigung.WaehrendBezugszeitraumType">
+      <xs:annotation>
+         <xs:documentation>Daten zur voraussichtlichennichtselbstständigen Beschäftigung des antragstellenden Elternteils im Bezugszeitraum.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="teilzeittaetigkeit" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob voraussichtlich Einkommen aus einer selbständigen Beschäftigung im Bezugszeitraum erzielt wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="angabenTeilzeittaetigkeit"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfe:TeilzeittaetigkeitType"/>
+         <xs:element name="midijob" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Midijobs.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="angabenMidijob"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfe:MidijobType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Midijob.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="minijob" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Minijobs.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="angabenMinijob"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfe:MinijobType"/>
+         <xs:element name="steuerfreibetrag" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Steuerfreibetrag nach Paragraf 3 Nr. 26 EStG.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="berufsausbildung"
+                     minOccurs="0"
+                     type="xfe:BerufsausbildungType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Berufsausbildung</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="freiwilligendienst"
+                     minOccurs="0"
+                     type="xfe:FreiwilligendienstType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Freiwilligendienst</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="NichtselbststaendigkeitAusklammerungstatbestaendeType">
+      <xs:annotation>
+         <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="mutterschaftsgeldbezugVorGeburtAntragskind" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisMutterschaftsgeldbezugAntragskind"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend. Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.).</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="mutterschaftsgeldbezugVorGeburtaelteresKind" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisMutterschaftsgeldbezugAelteresKind"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend. Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.).</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="elterngeldbezugAelteresKind" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisElterngeldbezugAelteresKind"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend. Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.).</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="moeglicheEinkommensverluste" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisMoeglicheEinkommensverluste"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkommensverlustWehrUndZivildienst" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisEinkommensverlustWehrUndZivildienst"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="antragAusklammerungsverzicht" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="zeitraumAntragAusklammerungsverzicht"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ZeitraumType">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="elterngeldbezugFuerBesondersFruehGeborenesAelteresKind"
+                     type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisAelteresBesondersFruehGeborenesKind"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkommensverlustDurchSchwangerschaftsbedingteErkrankung"
+                     minOccurs="0"
+                     type="xs:boolean"/>
+         <xs:element name="einkommensverlustDurchSchwangerschaftsbedingteErkrankungNachweis"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xs:boolean"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="PersoenlicheAngabenETType">
+      <xs:sequence>
+         <xs:element name="name" type="xfb:NameNatuerlichePerson.NachweisbezugType">
+            <xs:annotation>
+               <xs:documentation>Der Name des antragstellenden Elternteils</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburtsdatum" type="xfb:TagesdatumType"/>
+         <xs:element name="geburtsort" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Der Geburtsort der betroffenen Person kann optional an dieser Stelle als Freitext übermittelt werden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geschlecht" type="xfb:Code.GeschlechtType">
+            <xs:annotation>
+               <xs:documentation>Das Geschlecht des antragstellenden Elternteils</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="familienstand" type="xfb:Familienstand.NachweisbezugType">
+            <xs:annotation>
+               <xs:documentation>Der Familienstand des antragstellenden Elternteils. Für die Elterngeldnachricht sind nur die folgenden fünf Codewerte zu nutzen: LD, VH, LP, GS, VW.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="verheiratetVerpartnertMitET" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Diese Boolean-Angabe ist verpflichtend auszufüllen, wenn in der Codeliste Familienstand die Werte VH oder LP ausgewählt wurden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="unverheiratetesZusammenleben" type="xs:boolean"/>
+         <xs:element name="alleinerziehend" type="xs:boolean"/>
+         <xs:element name="staatsangehoerigkeit" type="xfe:StaatsangehoerigkeitType">
+            <xs:annotation>
+               <xs:documentation>Staatsangehörigkeiten des antragstellenden Elternteils.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisPersonalausweisPass"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.). Siehe auch .</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="meldedatenabgleich"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="RentenType">
+      <xs:sequence>
+         <xs:element name="bezugRente" type="xs:boolean"/>
+         <xs:element name="zeitraumRente"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ZeitraumType"/>
+         <xs:element name="nachweisRente"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType"/>
+         <xs:element name="artRente"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="din91379:datatypeC"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ResturlaubType">
+      <xs:annotation>
+         <xs:documentation>Angabe, ob Resturlaub aus der Zeit vor der Geburt im Bezugszeitraum genommen wird.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="anzahlTage" minOccurs="0" type="xs:integer"/>
+         <xs:element name="zeitraum" minOccurs="0" type="xfb:ZeitraumType"/>
+         <xs:element name="anzahlDerWochenstunden" minOccurs="0" type="xs:integer"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="SelbststaendigkeitGewerbeLandForstwirtschaft.VorGeburtType">
+      <xs:sequence>
+         <xs:element name="angabenSozialversicherung"
+                     minOccurs="0"
+                     type="xfe:AngabenSozialversicherungType">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob Einkommen aus einer Tätigkeit in einem Gewerbebetrieb vor Geburt des Kindes erzielt wurde.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kirchensteuerpflicht" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Kirchensteuerpflicht.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="verschiebetatbestaende"
+                     minOccurs="0"
+                     type="xfe:SelbststaendigkeitVerschiebetatbestaendeType">
+            <xs:annotation>
+               <xs:documentation>Angaben zu Verschiebebeständen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="steuerfreibetrag" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Steuerfreibetrag nach Paragraf 3 Nr. 26 EStG.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisEinkommenssteuerbescheid"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.). Siehe auch .</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="SelbststaendigkeitVerschiebetatbestaendeType">
+      <xs:sequence>
+         <xs:element name="mutterschaftsgeldbezugVorGeburtAntragskind" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisMutterschaftsgeldbezugAntragskind"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend. Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.).</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="mutterschaftsgeldbezugVorGeburtaelteresKind" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisMutterschaftsgeldbezugAelteresKind"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend. Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.).</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="elterngeldbezugAelteresKind" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisElterngeldbezugAelteresKind"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend. Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.).</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="moeglicheEinkommensverluste" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisMoeglicheEinkommensverluste"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkommensverlustWehrUndZivildienst" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisEinkommensverlustWehrUndZivildienst"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="antragVerschiebungBemessungszeitraum" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="angabeKalenderjahrZurBerechnung"
+                     minOccurs="0"
+                     type="xs:nonNegativeInteger">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="elterngeldbezugFuerBesondersFruehGeborenesAelteresKind"
+                     type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisAelteresBesondersFruehGeborenesKind"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Bei der Bestimmung der zwölf Kalendermonate sind Kalendermonate auszuklammern, in denen ein Ausklammerungstatbestand nach Satz 2 Paragraf 2b BEEG erfüllt ist. Die Aufzählung der Ausklammerungstatbestände ist abschließend.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="einkommensverlustDurchSchwangerschaftsbedingteErkrankung"
+                     minOccurs="0"
+                     type="xs:boolean"/>
+         <xs:element name="einkommensverlustDurchSchwangerschaftsbedingteErkrankungNachweis"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xs:boolean"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="SonstigeLeistungenBezugszeitraumType">
+      <xs:annotation>
+         <xs:documentation>Daten zu sonstigen Leistungen (z.B. SGB-II-Bezug o der Elterngeld für ein älteres Kind).</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="bezugElterngeldAusland" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Art der sonstigen Leistung. Die Literale 11 bis 19 sind für sonstige Leistung für das Kind möglich auszufüllen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisElterngeldAusland"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType"/>
+         <xs:element name="bezugALGII" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob ALG II /Bürgergeld bezogen wird/wurde.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisALGII"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Möglichkeit, Nachweise über den Bezug von ALG II /Bürgergeld zu übertragen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nameSozialleistungstraeger"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Art der sonstigen Leistung. Die Literale 11 bis 19 sind für sonstige Leistung für das Kind möglich auszufüllen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anschriftSozialleistungstraeger"
+                     minOccurs="0"
+                     type="xfb:PostalischeInlandsanschrift.BasisType">
+            <xs:annotation>
+               <xs:documentation>Art der sonstigen Leistung. Die Literale 11 bis 19 sind für sonstige Leistung für das Kind möglich auszufüllen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="StaatsangehoerigkeitType">
+      <xs:sequence>
+         <xs:element name="staatsangehoerigkeiten"
+                     type="xfb:Staatsangehoerigkeiten.NachweisbezugType">
+            <xs:annotation>
+               <xs:documentation>Die Staatsangehörigkeiten des antragstellenden Elternteils</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="verlustFreizuegigkeit" minOccurs="0" type="xs:boolean"/>
+         <xs:element name="aufenthaltstitel"
+                     minOccurs="0"
+                     type="xfb:Aufenthaltstitel.NachweisbezugType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Aufenthaltstitel.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="TagespflegeType">
+      <xs:annotation>
+         <xs:documentation>Angabe, ob die antragstellende Person eine Tagespflegeperson ist. Anzahl der Kinder: Anzahl der Kinder, die betreut werden (ohne eigene Kinder).</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="tagespflege" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob die antragstellende Person eine Tagespflegeperson ist. Anzahl der Kinder: Anzahl der Kinder, die betreut werden (ohne eigene Kinder).</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anzahlDerKinderOhneEigeneKinder"
+                     minOccurs="0"
+                     type="xs:integer"/>
+         <xs:element name="nachweis"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="TeilzeittaetigkeitType">
+      <xs:annotation>
+         <xs:documentation>Daten zur abhängigen Beschäftigung des antragstellenden Elternteils vor Geburt des Kindes.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="zeitraum" type="xfb:ZeitraumType">
+            <xs:annotation>
+               <xs:documentation>Die Art des Einkommens, das voraussichtlich im Bemessungszeitraum erzielt wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="wochenstundenJeTaetigkeitTeilzeit" type="xs:float">
+            <xs:annotation>
+               <xs:documentation>Angabe, zu welchem Datum das Arbeitsverhältnis beendet wurde oder wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisTeilzeit"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Die Art des Einkommens, das voraussichtlich im Bemessungszeitraum erzielt wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="WeitereKinderType">
+      <xs:sequence>
+         <xs:element name="anzahlAllerImHaushaltLebendenKinder" type="xs:nonNegativeInteger"/>
+         <xs:element name="angabenWeiteresKind"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfe:AngabenWeiteresKindType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ZustimmungDatenabrufeType">
+      <xs:annotation>
+         <xs:documentation>Daten zu sonstigen Leistungen (z.B. SGB-II-Bezug o der Elterngeld für ein älteres Kind)</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="zustimmungDatenabrufDSRV" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Hier wird die Zustimmung zum Datenabruf DSRV abgefragt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="zustimmungDatenabrufStandesamt" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Hier wird die Zustimmung zum Datenabruf beim Standesamt abgefragt</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="zustimmungDatenabrufKrankenkasse" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Hier wird die Zustimmung zum Datenabruf bei der Krankenkasse abgefragt</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="zustimmungDatenabrufFinanzamt" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Hier wird die Zustimmung zum Datenabruf bei dem Finanzamt abgefragt</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="zustimmungDatenabrufBeamte" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Hier wird die Zustimmung zum Datenabruf für Beamte abgefragt</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType name="abbruchgrund">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Abbruchgrund</nameLang>
+               <nameKurz>Abbruchgrund</nameKurz>
+               <nameTechnisch>abbruchgrund</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:abbruchgrund</kennung>
+               <beschreibung>Die Liste codiert die Abbruchgruende.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2024-05-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="01">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Widerruf durch Antragsteller</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="02">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Anfrage obsolet</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="03">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>anderer Grund</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="anfragegrund">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Anfragegrund</nameLang>
+               <nameKurz>Anfragegrund</nameKurz>
+               <nameTechnisch>anfragegrund</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:anfragegrund</kennung>
+               <beschreibung>Die Liste codiert die Anfragegruende.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2024-05-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="01">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>RVBEA</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="02">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Mutterschutz</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="03">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Finanzverwaltung</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="04">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>anderer Grund</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="elterngeldantrag">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Elterngeldantrag</nameLang>
+               <nameKurz>Elterngeldantrag</nameKurz>
+               <nameTechnisch>elterngeldantrag</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:elterngeldantrag</kennung>
+               <beschreibung>Die Codeliste enthält mögliche Werte, die beschreiben welche Elternteile an der Antragstellung beteiligt sind.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="01">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Das Elterngeld wird beantragt für beide Elternteile.</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="02">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Das Elterngeld wird beantragt für einen Elternteil, der andere entscheidet später.</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="03">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Das Elterngeld wird beantragt für einen Elternteil, der andere hat bereits Elterngeld beantragt.</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="04">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Das Elterngeld wird für einen Elternteil beantragt.</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="fehlerfall">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Fehlerfall</nameLang>
+               <nameKurz>Fehlerfall</nameKurz>
+               <nameTechnisch>fehlerfall</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:fehlerfall</kennung>
+               <beschreibung>Die Liste codiert die Fehlerfaelle.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2024-05-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="01">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Timeout</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="02">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Auskunftssperre</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="03">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Anderes</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="gesamteinkommen">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Gesamteinkommen</nameLang>
+               <nameKurz>Gesamteinkommen</nameKurz>
+               <nameTechnisch>gesamteinkommen</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:gesamteinkommen</kennung>
+               <beschreibung>Die Liste codiert, die verschiedenen möglichen Klassen des Gesamteinkommen der Antragstellenden Elternteile. Dabei wird auch zwischen alleinerziehend und Elternpaare unterschieden.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>3.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2025-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+               <gueltigkeit>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </gueltigkeit>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="01">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>nicht über 250.000 Euro (alleinerziehend)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="02">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>voraussichtlich nicht über 250.000 Euro (alleinerziehend)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="03">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>über 250.000 Euro (alleinerziehend)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="04">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>nicht über 300.000 Euro (Elternpaare)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="05">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>voraussichtlich nicht über 300.000 Euro (Elternpaare)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="06">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>über 300.000 Euro (Elternpaare)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="07">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>nicht über 200.000</beschreibung>
+                  <gueltigkeit>ab 01.04.2024</gueltigkeit>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="08">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>voraussichtlich nicht über 200.000 Euro</beschreibung>
+                  <gueltigkeit>ab 01.04.2024</gueltigkeit>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="09">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>über 200.000</beschreibung>
+                  <gueltigkeit>ab 01.04.2024</gueltigkeit>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="10">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>unter 175.000 Euro oder genau 175.000 Euro</beschreibung>
+                  <gueltigkeit>ab 01.04.2025</gueltigkeit>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="11">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>mehr als 175.000 Euro</beschreibung>
+                  <gueltigkeit>ab 01.04.2025</gueltigkeit>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="12">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>voraussichtlich etwa 175.000 Euro; der genaue Betrag steht noch nicht fest</beschreibung>
+                  <gueltigkeit>ab 01.04.2025</gueltigkeit>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="13">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>mehr als 175.000 Euro: der genaue Betrag steht schon fest</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="14">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>voraussichtlich mehr als 175.000 Euro: der genaue Betrag steht noch nicht fest</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="15">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>voraussichtlich weniger als 175.000 Euro: der genaue Betrag steht noch nicht fest</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="kindschaftsverhaeltnis">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Kindschaftsverhaeltnis</nameLang>
+               <nameKurz>Kindschaftsverhaeltnis</nameKurz>
+               <nameTechnisch>kindschaftsverhaeltnis</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:kindschaftsverhaeltnis</kennung>
+               <beschreibung>Beschreibt das Verhältnis und den Verwandschaftsgrad vom Kind zum Elternteil.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="01">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Das Kind ist das leibliche Kind</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="02">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Das Kind ist das Adoptivkind</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="03">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Das Kind steht zu der Person in einem anderen Kindschaftsverhältnis</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="04">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>nicht leiblich und nicht rechtlich</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="leistungshoehe">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Leistungshoehe</nameLang>
+               <nameKurz>Leistungshoehe</nameKurz>
+               <nameTechnisch>leistungshoehe</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:leistungshoehe</kennung>
+               <beschreibung>Die Liste codiert die Entscheidung auf welcher Basis das Elterngeld berechnet werden soll.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="01">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Elterngeld individuell berechnet aus meinem Erwerbseinkommen vor der Geburt</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="02">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Elterngeld ohne Berücksichtigung des Erwerbseinkommen vor der Geburt (Mindestbetrag)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="versandweg">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Versandweg</nameLang>
+               <nameKurz>Versandweg</nameKurz>
+               <nameTechnisch>versandweg</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:versandweg</kennung>
+               <beschreibung>Die Liste codiert den Versandweg für den Bescheid zum Elterngeldantrag.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="01">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>postalisch</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="02">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>digital</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="03">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>digital und postalisch</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="versicherungsart">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>Versicherungsart</nameLang>
+               <nameKurz>Versicherungsart</nameKurz>
+               <nameTechnisch>versicherungsart</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:versicherungsart</kennung>
+               <beschreibung>Beschreibt das Versicherungsverhältnis einer Person.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="01">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>gesetzlich (ohne weitere Angabe)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="02">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>gesetzlich (pflichtversichert)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="03">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>gesetzlich (freiwillig versichert)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="04">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>privat (ohne weitere Angabe)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="05">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>privat (mit Krankentagegeldanspruch)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="06">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>privat (ohne Krankentagegeldanspruch)</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="07">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>nicht in Deutschland versichert</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="08">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>freie Heilfürsorge</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="09">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>familienversichert</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="10">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Kostenerstattung § 264 SGB V</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:element name="elterngeldantrag.antrag.0201">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Gesetz zum Elterngeld und zur Elternzeit (Bundeselterngeld- und Elternzeitgesetz - BEEG)</rechtsgrundlage>
+         </xs:appinfo>
+         <xs:documentation>Nachricht vom Portal an die Elterngeldstelle für einen Elterngeldantrag</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:AntragsnachrichtType">
+               <xs:sequence>
+                  <xs:element name="kind" type="xfe:Kind.ElterngeldType">
+                     <xs:annotation>
+                        <xs:documentation>Daten zum Kind oder den Kindern, für die Elterngeld beantragt wird.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="elterngeldantrag" type="xfe:Code.ElterngeldantragType">
+                     <xs:annotation>
+                        <xs:documentation>Daten dazu, welche Elternteile den Antrag stellen.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="gesamteinkommen" type="xfe:Code.GesamteinkommenType">
+                     <xs:annotation>
+                        <xs:documentation>Daten zum Gesamteinkommen im letzten steuerlichen Veranlagungszeitraum der Elternteile.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="elternteilEins" type="xfe:ElternteilEins.ElterngeldantragType">
+                     <xs:annotation>
+                        <xs:documentation>Daten zum Elternteil, der Elterngeld beantragt.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="elternteilZwei"
+                              minOccurs="0"
+                              type="xfe:ElternteilZwei.ElterngeldantragType">
+                     <xs:annotation>
+                        <xs:documentation>Daten zum zweiten Elternteil. Diese Angaben sind optional, da auch ein einzelner Elternteil den Antrag stellen kann.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="mutterschaftsgeldArbeitgeberzuschussVglLeistungen"
+                              type="xfe:MutterschaftsgeldArbeitgeberzuschussVergleichbareLeistungenType">
+                     <xs:annotation>
+                        <xs:documentation>Daten zu Mutterschaftsgeld, Arbeitgeberzuschuss und vergleichbaren Leistungen.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="weitereKinderImHaushalt" type="xfe:WeitereKinderType">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zu weiteren Kindern im Haushalt.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="nachweisdokument.antragsservice"
+                              minOccurs="0"
+                              maxOccurs="unbounded"
+                              type="xfb:NachweisdokumentType">
+                     <xs:annotation>
+                        <xs:documentation>Vom Antragsservice selbst erstellte Nachweisdokumente zur Ablage in der Akte der Fachbehörde. Beispiel: Die Willenserklärung eines oder der Antragstellenden "im Original".</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="pdfAntrag"
+                              minOccurs="0"
+                              maxOccurs="unbounded"
+                              type="xfb:NachweisdokumentType"/>
+                  <xs:element name="nachweisdokument.antragsteller"
+                              minOccurs="0"
+                              maxOccurs="unbounded"
+                              type="xfb:NachweisdokumentType">
+                     <xs:annotation>
+                        <xs:documentation>Von den Antragstellenden im Antragsservice bereitgestellte Nachweisdokumente (hochgeladene Fotos, Scans, etc.).</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="datenabruf"
+                              minOccurs="0"
+                              maxOccurs="unbounded"
+                              type="xfb:DatenabrufType"/>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="elterngeldantrag.vorabmeldung.0202">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Gesetz zum Elterngeld und zur Elternzeit (Bundeselterngeld- und Elternzeitgesetz - BEEG)</rechtsgrundlage>
+         </xs:appinfo>
+         <xs:documentation>Die Vorabmeldung dient der Informierung der zuständige Stelle über einen Eingang eines Elterngeldantrags im Portal oder Antragsservice.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:AntragsnachrichtType">
+               <xs:sequence>
+                  <xs:element name="antragstellenerElternteil.Vorabmeldung"
+                              maxOccurs="2"
+                              type="xfe:AntragstellenderElternteil.VorabmeldungType">
+                     <xs:annotation>
+                        <xs:documentation>Grunddaten zum antragstellenden Elternteil, die der Identifizierung des antragstellenden Elternteils durch die zuständigen Stelle dienen.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="angabenKind.Vorabmeldung" type="xfe:Kind.VorabmeldungType">
+                     <xs:annotation>
+                        <xs:documentation>Daten zum Kind oder den Kindern, für die Elterngeld beantragt wird.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="antragsdokumente"
+                              minOccurs="0"
+                              maxOccurs="unbounded"
+                              type="xfb:NachweisdokumentType">
+                     <xs:annotation>
+                        <xs:documentation>Hier können “Antragsdokumente” mitgeliefert werden. Dies können neben dem eigentlichen Elterngeldantrag (PDF und XML) auch vom Nutzer hochgeladene Dokumente sein.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="elterngeldantrag.standesamtsmeldung.0203">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Gesetz zum Elterngeld und zur Elternzeit (Bundeselterngeld- und Elternzeitgesetz - BEEG)</rechtsgrundlage>
+         </xs:appinfo>
+         <xs:documentation>Die Ankündigung, dass die Geburtsurkunde durch ELFE beim Standesamt angefordert wurde, erfolgt anhand einer XML-Datei.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:AntragsnachrichtType">
+               <xs:sequence>
+                  <xs:element name="anforderungErfolgt" type="xs:boolean">
+                     <xs:annotation>
+                        <xs:documentation>true, falls das Standesamt die Anforderung einer Geburtsurkunde erhalten hat, sonst false</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="elterngeldantrag.anfrage.0204">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Gesetz zum Elterngeld und zur Elternzeit (Bundeselterngeld- und Elternzeitgesetz - BEEG)</rechtsgrundlage>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:AntragsnachrichtType">
+               <xs:sequence>
+                  <xs:element name="anfrageID" type="xfb:UUIDType"/>
+                  <xs:element name="antragsReferenz" minOccurs="0" type="din91379:datatypeC"/>
+                  <xs:element name="anfragegrund" type="xfe:Code.AnfragegrundType"/>
+                  <xs:element name="anfrageparameter" type="xs:anyType"/>
+                  <xs:element name="anfragendesSystem" type="din91379:datatypeC"/>
+                  <xs:element name="anfragerOrganisationsID" type="xfb:UUIDType"/>
+                  <xs:element name="antwortAbweichenderEmpfaenger"
+                              minOccurs="0"
+                              type="xfb:BehoerdenkennungType"/>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="elterngeldantrag.anfrageabschluss.0205">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Gesetz zum Elterngeld und zur Elternzeit (Bundeselterngeld- und Elternzeitgesetz - BEEG)</rechtsgrundlage>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:AntragsnachrichtType">
+               <xs:sequence>
+                  <xs:element name="anfrageID" type="xfb:UUIDType"/>
+                  <xs:element name="antragsReferenz" minOccurs="0" type="din91379:datatypeC"/>
+                  <xs:element name="anfragegrund" type="xfe:Code.AnfragegrundType"/>
+                  <xs:element name="anfrageparameter" type="xs:anyType"/>
+                  <xs:element name="anfragendesSystem" type="din91379:datatypeC"/>
+                  <xs:element name="anfragerOrganisationsID" type="xfb:UUIDType"/>
+                  <xs:element name="antwortAbweichenderEmpfaenger"
+                              minOccurs="0"
+                              type="xfb:BehoerdenkennungType"/>
+                  <xs:element name="anfrageergebnis"
+                              minOccurs="0"
+                              maxOccurs="unbounded"
+                              type="xs:anyType"/>
+                  <xs:element name="fehlerfall" minOccurs="0" type="xfe:Code.FehlerfallType"/>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="elterngeldantrag.abbruch.0206">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Gesetz zum Elterngeld und zur Elternzeit (Bundeselterngeld- und Elternzeitgesetz - BEEG)</rechtsgrundlage>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:AntragsnachrichtType">
+               <xs:sequence>
+                  <xs:element name="anfrageID" type="xfb:UUIDType"/>
+                  <xs:element name="grundAbbruch" type="xfe:Code.AbbruchgrundType"/>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>

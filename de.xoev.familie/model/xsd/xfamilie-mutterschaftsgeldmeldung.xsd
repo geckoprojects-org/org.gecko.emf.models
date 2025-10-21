@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:xfm="http://www.xoev.de/xfamilie/mutterschaftsgeldmeldung/1.3.0"
+           xmlns:din91379="urn:xoev-de:kosit:xoev:datentyp:din-91379_2022-08"
+           xmlns:xfb="http://www.xoev.de/xfamilie/baukasten/1.3.0"
+           xmlns:xoev-code="http://xoev.de/schemata/code/1_0"
+           targetNamespace="http://www.xoev.de/xfamilie/mutterschaftsgeldmeldung/1.3.0"
+           version="1.3.0"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+   <xs:annotation>
+      <xs:appinfo>
+         <standard>
+            <nameLang>XFamilie</nameLang>
+            <nameKurz>XFamilie</nameKurz>
+            <nameTechnisch>xfamilie</nameTechnisch>
+            <kennung>urn:xoev-de:kosit:standard:xfamilie</kennung>
+            <beschreibung>Projektziel ist die elektronische Kommunikation im Familienbereich zwischen verschiedenen Behörden, Institutionen, Registern und Onlineportalen, die Daten untereinander austauschen, zu unterstützen. Der Nutzen des Projekts besteht in der Kostenreduktion und einer Verbesserung der Qualität von Daten für Familienleistungen, sowie einer Verbesserung der Interoperabilität von Akteuren im Familienbereich und weiteren Kommunikationspartner.</beschreibung>
+         </standard>
+         <versionStandard>
+            <version>1.3.0</version>
+            <beschreibung>Die Änderungshistorie befindet sich in Tabellenform nach Change Requests gegliedert in Kapitel E.</beschreibung>
+            <versionXOEVProfil>3.0.2</versionXOEVProfil>
+            <versionXOEVHandbuch>3.0.2</versionXOEVHandbuch>
+            <versionXGenerator>3.1.0</versionXGenerator>
+            <versionModellierungswerkzeug>19.0</versionModellierungswerkzeug>
+            <nameModellierungswerkzeug>MagicDraw</nameModellierungswerkzeug>
+         </versionStandard>
+      </xs:appinfo>
+   </xs:annotation>
+   <xs:import schemaLocation="din-norm-91379-datatypes.xsd"
+              namespace="urn:xoev-de:kosit:xoev:datentyp:din-91379_2022-08"/>
+   <xs:import schemaLocation="xfamilie-baukasten.xsd"
+              namespace="http://www.xoev.de/xfamilie/baukasten/1.3.0"/>
+   <xs:import schemaLocation="xoev-code.xsd"
+              namespace="http://xoev.de/schemata/code/1_0"/>
+   <xs:complexType name="AngabenEntbindungType">
+      <xs:sequence>
+         <xs:element name="angabenMutterschaftsgeld" maxOccurs="unbounded">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element name="mutterschaftsgeldzahlungAb" type="xfb:TagesdatumType">
+                     <xs:annotation>
+                        <xs:documentation>Beginn der Mutterschaftsgeldzahlung von der Krankenkasse.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="mutterschaftsgeldzahlungBis"
+                              minOccurs="0"
+                              type="xfb:TagesdatumType">
+                     <xs:annotation>
+                        <xs:documentation>Ende der Mutterschaftsgeldzahlung von der Krankenkasse.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="mutterschaftsgeldzahlungHoehe"
+                              minOccurs="0"
+                              type="xs:decimal">
+                     <xs:annotation>
+                        <xs:documentation>Höhe des bewilligten grundsätzlich zustehenden kalendertäglichen Anspruchs auf Mutterschaftsgeld von der Krankenkasse ohne Berücksichtigung von Ruhens- und Kürzungstatbeständen. Der Betrag ist mit zwei Nachkommastellen anzugeben.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="entbindungstagKrankenkasse"
+                     minOccurs="0"
+                     type="xfb:TagesdatumType">
+            <xs:annotation>
+               <xs:documentation>Angabe des Entbindungstages laut Nachweis, der der Krankenkasse vorliegt, sofern dieses vom gemeldeten Entbindungstag der Elterngeldstelle abweicht. Bei einer Mehrlingsgeburt, die an unterschiedlichen Tagen erfolgte, ist das Datum der letzten nachgewiesenen Entbindung anzugeben.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AntragstellenderElternteil.MutterschaftsgeldmeldungRueckType">
+      <xs:annotation>
+         <xs:documentation>Daten zum antragstellenden Elternteil. Diese Daten sind nur anzugeben, wenn die Daten der Krankenkasse von den Daten der Anforderung durch die Elterngeldstelle abweichen.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="name" minOccurs="0" type="xfb:NameNatuerlichePersonType">
+            <xs:annotation>
+               <xs:documentation>Der Name des antragstellenden Elternteils. Das Element Geburtsname.unstrukturiert ist im Elterngeldantrag nicht zu verwenden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburt" minOccurs="0" type="xfb:TeilbekanntesDatumType">
+            <xs:annotation>
+               <xs:documentation>Daten zur Geburt des antragstellenden Elternteils</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="krankenversichertennummer"
+                     minOccurs="0"
+                     type="xfb:KrankenversichertennummerType">
+            <xs:annotation>
+               <xs:documentation>Die Krankenversichertennummer, die den Versicherten bei einer Krankenkasse identifiziert.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AntragstellenderElternteil.MutterschaftsgeldmeldungType">
+      <xs:annotation>
+         <xs:documentation>Daten zum antragstellenden Elternteil.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="name" type="xfb:NameNatuerlichePersonType">
+            <xs:annotation>
+               <xs:documentation>Der Name des antragstellenden Elternteils. Das Element Geburtsname.unstrukturiert ist im Elterngeldantrag nicht zu verwenden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburt" type="xfb:TeilbekanntesDatumType">
+            <xs:annotation>
+               <xs:documentation>Daten zur Geburt des antragstellenden Elternteils</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="entbindungstag" type="xfb:TagesdatumType">
+            <xs:annotation>
+               <xs:documentation>Angabe des Entbindungstages</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kennzeichenMehrlingsgeburt" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Bestätigung, sofern der Elterngeldstelle die Mehrlingsgeburt nachgewiesen wird</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="krankenversichertennummer"
+                     type="xfb:KrankenversichertennummerType">
+            <xs:annotation>
+               <xs:documentation>Die Krankenversichertennummer, die den Versicherten bei einer Krankenkasse identifiziert.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Code.KennzeichenMutterschaftsgeldType">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>KennzeichenMutterschaftsgeld</nameLang>
+               <nameKurz>KennzeichenMutterschaftsgeld</nameKurz>
+               <nameTechnisch>kennzeichenmutterschaftsgeld</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:kennzeichenmutterschaftsgeld</kennung>
+               <beschreibung>Die Liste codiert das Kennzeichen zum Mutterschaftsgeld.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+            <genutzteCodeSpalte>code</genutzteCodeSpalte>
+         </xs:appinfo>
+         <xs:documentation>Codedatentyp Kennzeichen zum Mutterschaftsgeld.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:restriction base="xoev-code:Code">
+            <xs:sequence>
+               <xs:element name="code"
+                           form="unqualified"
+                           type="xfm:kennzeichenmutterschaftsgeld"/>
+            </xs:sequence>
+            <xs:attribute name="listURI"
+                          type="xs:anyURI"
+                          use="optional"
+                          fixed="urn:xoev-de:xfamilie:codeliste:kennzeichenmutterschaftsgeld"/>
+            <xs:attribute name="listVersionID"
+                          type="xs:normalizedString"
+                          use="optional"
+                          fixed="1.0"/>
+         </xs:restriction>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:simpleType name="kennzeichenmutterschaftsgeld">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>KennzeichenMutterschaftsgeld</nameLang>
+               <nameKurz>KennzeichenMutterschaftsgeld</nameKurz>
+               <nameTechnisch>kennzeichenmutterschaftsgeld</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:kennzeichenmutterschaftsgeld</kennung>
+               <beschreibung>Die Liste codiert das Kennzeichen zum Mutterschaftsgeld.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>1.0</version>
+               <beschreibung>[nd]</beschreibung>
+               <datumGueltigkeitAb>2022-11-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="01">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Keine Mitgliedschaft</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="02">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Kein Anspruch auf Mutterschaftsgeld</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="03">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Kein Antrag auf Mutterschaftsgeld gestellt</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="04">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Noch keine Angabe möglich</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="05">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Mehrlingsgeburt</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="06">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Mehrlingsschwangerschaft, kein Ende der Mutterschaftsgeldzahlung bestimmbar</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:element name="mutterschaftsgeldmeldung.anforderung.0501">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Paragraf 203 SGB V</rechtsgrundlage>
+         </xs:appinfo>
+         <xs:documentation>Antrag zur Anforderung von Mutterschaftsgeld.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:NachrichtType">
+               <xs:sequence>
+                  <xs:element name="aktenzeichenElterngeldstelle" type="din91379:datatypeC">
+                     <xs:annotation>
+                        <xs:documentation>Aktenzeichen/Geschäftszeichen der Elterngeldstelle für die Elterngeldbeantragende.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="antragstellenderElternteil"
+                              type="xfm:AntragstellenderElternteil.MutterschaftsgeldmeldungType"/>
+                  <xs:element name="einwilligung" fixed="true" type="xs:boolean"/>
+                  <xs:element name="stornierung" minOccurs="0">
+                     <xs:complexType>
+                        <xs:sequence>
+                           <xs:element name="stornokennzeichen" type="xs:boolean"/>
+                           <xs:element name="datensatzID.Ursprungsmeldung" type="xfb:UUIDType"/>
+                        </xs:sequence>
+                     </xs:complexType>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="mutterschaftsgeldmeldung.rueckmeldung.0502">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Paragraf 203 SGB V</rechtsgrundlage>
+         </xs:appinfo>
+         <xs:documentation>Rückmeldung zum Muttergeld nach Entbindung.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:NachrichtType">
+               <xs:sequence>
+                  <xs:element name="aktenzeichenElterngeldstelle" type="din91379:datatypeC">
+                     <xs:annotation>
+                        <xs:documentation>Aktenzeichen/Geschäftszeichen der Elterngeldstelle für die Elterngeldbeantragende.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="antragstellenderElternteil"
+                              minOccurs="0"
+                              type="xfm:AntragstellenderElternteil.MutterschaftsgeldmeldungRueckType"/>
+                  <xs:element name="angabenEntbindung"
+                              minOccurs="0"
+                              type="xfm:AngabenEntbindungType"/>
+                  <xs:element name="stornierung" minOccurs="0">
+                     <xs:complexType>
+                        <xs:sequence>
+                           <xs:element name="stornokennzeichen" type="xs:boolean"/>
+                           <xs:element name="datensatzID.Ursprungsmeldung" type="xfb:UUIDType"/>
+                        </xs:sequence>
+                     </xs:complexType>
+                  </xs:element>
+                  <xs:element name="kennzeichenMutterschaftsgeld"
+                              minOccurs="0"
+                              type="xfm:Code.KennzeichenMutterschaftsgeldType"/>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:xfkw="http://www.xoev.de/xfamilie/kinderwunsch/1.3.0"
+           xmlns:din91379="urn:xoev-de:kosit:xoev:datentyp:din-91379_2022-08"
+           xmlns:xfb="http://www.xoev.de/xfamilie/baukasten/1.3.0"
+           xmlns:xfe="http://www.xoev.de/xfamilie/elterngeldantrag/1.3.0"
+           xmlns:xoev-code="http://xoev.de/schemata/code/1_0"
+           targetNamespace="http://www.xoev.de/xfamilie/kinderwunsch/1.3.0"
+           version="1.3.0"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+   <xs:annotation>
+      <xs:appinfo>
+         <standard>
+            <nameLang>XFamilie</nameLang>
+            <nameKurz>XFamilie</nameKurz>
+            <nameTechnisch>xfamilie</nameTechnisch>
+            <kennung>urn:xoev-de:kosit:standard:xfamilie</kennung>
+            <beschreibung>Projektziel ist die elektronische Kommunikation im Familienbereich zwischen verschiedenen Behörden, Institutionen, Registern und Onlineportalen, die Daten untereinander austauschen, zu unterstützen. Der Nutzen des Projekts besteht in der Kostenreduktion und einer Verbesserung der Qualität von Daten für Familienleistungen, sowie einer Verbesserung der Interoperabilität von Akteuren im Familienbereich und weiteren Kommunikationspartner.</beschreibung>
+         </standard>
+         <versionStandard>
+            <version>1.3.0</version>
+            <beschreibung>Die Änderungshistorie befindet sich in Tabellenform nach Change Requests gegliedert in Kapitel E.</beschreibung>
+            <versionXOEVProfil>3.0.2</versionXOEVProfil>
+            <versionXOEVHandbuch>3.0.2</versionXOEVHandbuch>
+            <versionXGenerator>3.1.0</versionXGenerator>
+            <versionModellierungswerkzeug>19.0</versionModellierungswerkzeug>
+            <nameModellierungswerkzeug>MagicDraw</nameModellierungswerkzeug>
+         </versionStandard>
+      </xs:appinfo>
+   </xs:annotation>
+   <xs:import schemaLocation="din-norm-91379-datatypes.xsd"
+              namespace="urn:xoev-de:kosit:xoev:datentyp:din-91379_2022-08"/>
+   <xs:import schemaLocation="xfamilie-baukasten.xsd"
+              namespace="http://www.xoev.de/xfamilie/baukasten/1.3.0"/>
+   <xs:import schemaLocation="xfamilie-elterngeldantrag.xsd"
+              namespace="http://www.xoev.de/xfamilie/elterngeldantrag/1.3.0"/>
+   <xs:import schemaLocation="xoev-code.xsd"
+              namespace="http://xoev.de/schemata/code/1_0"/>
+   <xs:complexType name="AltersgrenzeType">
+      <xs:sequence>
+         <xs:element name="geburtsdatumAustragendenPerson" type="xs:date"/>
+         <xs:element name="geburtsdatumNichtaustragendenPerson" type="xs:date"/>
+         <xs:element name="keinerKannAustragen" type="xs:boolean"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AngabenZurBehandlungType">
+      <xs:sequence>
+         <xs:element name="erstantrag" type="xs:boolean"/>
+         <xs:element name="aktenzeichenVorherigerAntrag"
+                     minOccurs="0"
+                     type="din91379:datatypeC"/>
+         <xs:element name="vorherigeBehandlungen"
+                     minOccurs="0"
+                     type="xfkw:VorherigeBehandlungenType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ArtDerBehandlungType">
+      <xs:sequence>
+         <xs:element name="artDerBehandlung" type="din91379:datatypeC"/>
+         <xs:element name="nummerDesBehandlungszyklus" type="din91379:datatypeC"/>
+         <xs:element name="vollstaendigeDurchfuehrungBehandlung"
+                     minOccurs="0"
+                     type="xs:boolean"/>
+         <xs:element name="schwangerschaftEingetreten" minOccurs="0" type="xs:boolean"/>
+         <xs:element name="nummerBehandlungszyklus"
+                     minOccurs="0"
+                     type="din91379:datatypeC"/>
+         <xs:element name="bestaetigungBehandlungNnichtBegonnen" type="xs:boolean"/>
+         <xs:element name="voraussichtlicherBehandlungsbeginn" type="xs:date"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AuszahlungsantragType">
+      <xs:sequence>
+         <xs:element name="abfrageBewilligungsbescheid" type="xs:boolean"/>
+         <xs:element name="bundeslandFoerderstelle" type="din91379:datatypeC"/>
+         <xs:element name="aktenzeichenBewilligungsantrag" type="din91379:datatypeC"/>
+         <xs:element name="datenschutzerklaerungSchwangerschaft" type="din91379:datatypeC"/>
+         <xs:element name="zustimmungDatenschutzerklaerungHerbeifuehrung" type="xs:boolean"/>
+         <xs:element name="konfigurationsfragen" type="xfkw:KonfigurationsfragenType"/>
+         <xs:element name="antragstellendePerson" type="xfkw:PersonendatenType"/>
+         <xs:element name="nichtaustragendePerson" type="xfkw:PersonendatenType"/>
+         <xs:element name="angabenBankverbindung" type="xfb:BankverbindungType"/>
+         <xs:element name="nachweiseBerechnungZuwendung"
+                     type="xfkw:NachweiseBerechnungZuwendungType"/>
+         <xs:element name="einwilligungenAuszahlungsantrag"
+                     type="xfkw:EinwilligungenAuszahlungsantragType"/>
+         <xs:element name="bestaetigungRichtigkeitAngaben" type="xs:boolean"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="BefruchtungsbehandlungenType">
+      <xs:sequence>
+         <xs:element name="versuch"
+                     minOccurs="0"
+                     maxOccurs="4"
+                     type="xfkw:VersuchType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="BewilligungsantragType">
+      <xs:sequence>
+         <xs:element name="standortReproduktionsklinik"
+                     minOccurs="0"
+                     type="din91379:datatypeC"/>
+         <xs:element name="bundesland" type="xfb:Code.BundeslandType"/>
+         <xs:element name="datenschutzerklaerungSchwangerschaft" type="din91379:datatypeC"/>
+         <xs:element name="datenschutzerklaerungherbeifuehrungSchwangerschaft"
+                     type="din91379:datatypeC"/>
+         <xs:element name="konfigurationsfragen"
+                     type="xfkw:KonfigurationsfragenBewilligungType"/>
+         <xs:element name="familienstand" type="xfb:FamilienstandType"/>
+         <xs:element name="gleicherHaushalt" minOccurs="0" type="xs:boolean"/>
+         <xs:element name="gruendegetrennterWohnsitz"
+                     minOccurs="0"
+                     type="din91379:datatypeC"/>
+         <xs:element name="altersgrenze" type="xfkw:AltersgrenzeType"/>
+         <xs:element name="artBehandlung" type="xfkw:ArtDerBehandlungType"/>
+         <xs:element name="antragstellendePerson" type="xfkw:PersonendatenType"/>
+         <xs:element name="nichtaustragendePerson" type="xfkw:PersonendatenType"/>
+         <xs:element name="angabenBehandlung" type="xfkw:AngabenZurBehandlungType"/>
+         <xs:element name="finanzierungsplan"
+                     minOccurs="0"
+                     type="xfkw:FinanzierungsplanType"/>
+         <xs:element name="nachweise"
+                     minOccurs="0"
+                     type="xfkw:NachweiseKinderwunschType"/>
+         <xs:element name="einwilligungen" type="xfkw:EinwilligungenType"/>
+         <xs:element name="bestaetigungRichtigkeitAngaben" type="xs:boolean"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="EinwilligungenAuszahlungsantragType">
+      <xs:sequence>
+         <xs:element name="zustimmungDatenschutz" type="xs:boolean"/>
+         <xs:element name="elektronischeBescheidzustellung" type="xs:boolean"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="EinwilligungenType">
+      <xs:sequence>
+         <xs:element name="einwilligungZurAuskunftseinholung" type="xs:boolean"/>
+         <xs:element name="einwilligungZurAuskunftseinholungEinschraenkungen"
+                     minOccurs="0"
+                     type="xs:boolean"/>
+         <xs:element name="entbindungSchweigepflichtDerAerzte" type="xs:boolean"/>
+         <xs:element name="einwilligungKostenuebernahmeregelungBehandlungsabbruch"
+                     minOccurs="0"
+                     type="xs:boolean"/>
+         <xs:element name="datenschutzerklaerungHerbeifuehrungSchwangerschaft"
+                     type="xs:boolean"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="FinanzierungsplanType">
+      <xs:sequence>
+         <xs:element name="gesamtkosten" minOccurs="0" type="xs:decimal"/>
+         <xs:element name="voraussichtlicheErstattungGesetzlicheKrankenkasse"
+                     minOccurs="0"
+                     type="xs:decimal"/>
+         <xs:element name="voraussichtlicheErstattungPrivateKrankenkasse"
+                     minOccurs="0"
+                     type="xs:decimal"/>
+         <xs:element name="voraussichtlicheErstattungBeihilfe"
+                     minOccurs="0"
+                     type="xs:decimal"/>
+         <xs:element name="voraussichtlicheErstattungHeilfuersorge"
+                     minOccurs="0"
+                     type="xs:decimal"/>
+         <xs:element name="verbleibenderEigenanteilSelbstkostenanteil"
+                     minOccurs="0"
+                     type="xs:decimal"/>
+         <xs:element name="zuwendungenGesamt" minOccurs="0" type="xs:decimal"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="KonfigurationsfragenBewilligungType">
+      <xs:sequence>
+         <xs:element name="gleicherHaushalt" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Prüfung, ob Antragsteller im gleichen Haushalt wohnen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="KonfigurationsfragenType">
+      <xs:sequence>
+         <xs:element name="gleicherHaushalt" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Prüfung, ob Antragsteller im gleichen Haushalt wohnen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="angabenZurBehandlung" type="xfkw:ArtDerBehandlungType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="KrankenkasseType">
+      <xs:sequence>
+         <xs:element name="artKrankenkasse" type="xfe:Code.VersicherungsartType"/>
+         <xs:element name="nameKrankenkasse" type="din91379:datatypeC"/>
+         <xs:element name="nameBeihilfestelle" type="din91379:datatypeC"/>
+         <xs:element name="nameHeilfuersorge" type="din91379:datatypeC"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="NachreichungType">
+      <xs:sequence>
+         <xs:element name="artNachreichung">
+            <xs:complexType>
+               <xs:complexContent>
+                  <xs:restriction base="xoev-code:Code">
+                     <xs:sequence>
+                        <xs:element name="code" form="unqualified" type="xfb:artnachweis"/>
+                     </xs:sequence>
+                     <xs:attribute name="listURI"
+                                   type="xs:anyURI"
+                                   use="optional"
+                                   fixed="urn:xoev-de:xfamilie:codeliste:artnachweis"/>
+                     <xs:attribute name="listVersionID"
+                                   type="xs:normalizedString"
+                                   use="optional"
+                                   fixed="1.0"/>
+                  </xs:restriction>
+               </xs:complexContent>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="nachweis" type="xfb:NachweisdokumentType"/>
+         <xs:element name="einwilligungDatenverarbeitungDurchFoerderstelle"
+                     type="xs:boolean"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="NachweisType">
+      <xs:sequence>
+         <xs:element name="nachweisVorhanden" minOccurs="0" type="xs:boolean"/>
+         <xs:element name="nachweis" minOccurs="0" type="xfb:NachweisdokumentType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="NachweiseBerechnungZuwendungType">
+      <xs:sequence>
+         <xs:element name="negativbescheinigungVersicherungKostentraeger"
+                     minOccurs="0"
+                     type="xfb:NachweisdokumentType"/>
+         <xs:element name="zuschuesseKrankenversicherung"
+                     type="xfkw:ZuschuesseKrankenversicherungType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="NachweiseKinderwunschType">
+      <xs:sequence>
+         <xs:element name="nachweisAktuellerWohnsitz"
+                     minOccurs="0"
+                     type="xfkw:NachweisType"/>
+         <xs:element name="nachweisEheurkunde" minOccurs="0" type="xfkw:NachweisType"/>
+         <xs:element name="dauerAngelegtePartnerschaft"
+                     minOccurs="0"
+                     type="xfkw:NachweisType"/>
+         <xs:element name="kostenuebernahmeerklaerungNegativbescheid"
+                     minOccurs="0"
+                     type="xfkw:NachweisType"/>
+         <xs:element name="notwendigkeitsbescheinigungDesArztes"
+                     minOccurs="0"
+                     type="xfkw:NachweisType"/>
+         <xs:element name="behandlungsplanKostenvoranschlag"
+                     minOccurs="0"
+                     type="xfkw:NachweisType"/>
+         <xs:element name="erklaerungReproduktionseinrichtung"
+                     minOccurs="0"
+                     type="xfkw:NachweisType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="NachweiseRechnungenType">
+      <xs:sequence>
+         <xs:element name="rechnungsdatum" type="xs:date"/>
+         <xs:element name="rechnungssteller" type="din91379:datatypeC"/>
+         <xs:element name="betrag" type="xs:decimal"/>
+         <xs:element name="summeGesamtkosten" type="xs:decimal"/>
+         <xs:element name="nachweis" minOccurs="0" type="xfb:NachweisdokumentType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="PersonendatenType">
+      <xs:sequence>
+         <xs:element name="name" type="xfb:NameNatuerlichePersonType"/>
+         <xs:element name="wohnsitz" maxOccurs="unbounded" type="xfkw:WohnsitzType"/>
+         <xs:element name="krankenkasse"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfkw:KrankenkasseType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="VersuchType">
+      <xs:sequence>
+         <xs:element name="nummerDesVersuchs" minOccurs="0" type="din91379:datatypeC"/>
+         <xs:element name="datumDesVersuchs" minOccurs="0" type="xs:date"/>
+         <xs:element name="nachweisVierterVersuch"
+                     minOccurs="0"
+                     type="xfb:NachweisdokumentType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="VorherigeBehandlungenType">
+      <xs:sequence>
+         <xs:element name="bisherGefoerderteBehandlungen" type="xs:boolean"/>
+         <xs:element name="befruchtungsbehandlungen"
+                     minOccurs="0"
+                     type="xfkw:BefruchtungsbehandlungenType"/>
+         <xs:element name="wiederholungsversuch" minOccurs="0" type="xs:boolean"/>
+         <xs:element name="nameReproduktionseinrichtung" type="din91379:datatypeC"/>
+         <xs:element name="postleitzahlReproduktionseinrichtung"
+                     minOccurs="0"
+                     type="din91379:datatypeC"/>
+         <xs:element name="beratung" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Beratung über die medizinischen, psychischen und sozialen Aspekte</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweisVierterVersuch"
+                     minOccurs="0"
+                     type="xfb:NachweisdokumentType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="WohnsitzType">
+      <xs:sequence>
+         <xs:element name="anschriftInlandStrassenanschrift" type="xfb:MeldeanschriftType"/>
+         <xs:element name="abweichendeAdresseNPA" minOccurs="0" type="xs:boolean"/>
+         <xs:element name="erreichbarkeit" minOccurs="0" type="xfb:ErreichbarkeitType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Erreichbarkeit.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ZusaetzlicheBeteiligungType">
+      <xs:sequence>
+         <xs:element name="zusaetzlicheBeteiligung" minOccurs="0" type="xs:boolean"/>
+         <xs:element name="vorliegenNachweis" minOccurs="0" type="xs:boolean"/>
+         <xs:element name="betrag" minOccurs="0" type="xs:decimal"/>
+         <xs:element name="nachweis" minOccurs="0" type="xfb:NachweisdokumentType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ZuschuesseKrankenversicherungType">
+      <xs:sequence>
+         <xs:element name="beteiligteKrankenkassen" type="din91379:datatypeC"/>
+         <xs:element name="negativbescheinigungVersicherungKostentraeger"
+                     minOccurs="0"
+                     type="xfb:NachweisdokumentType"/>
+         <xs:element name="zusaetzlicheBeteiligungGKV"
+                     minOccurs="0"
+                     type="xfkw:ZusaetzlicheBeteiligungType"/>
+         <xs:element name="zusaetzlicheBeteiligungPKV"
+                     minOccurs="0"
+                     type="xfkw:ZusaetzlicheBeteiligungType"/>
+         <xs:element name="beteiligungBeihilfe"
+                     minOccurs="0"
+                     type="xfkw:ZusaetzlicheBeteiligungType"/>
+         <xs:element name="nachweiseRechnungen"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfkw:NachweiseRechnungenType"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="kinderwunsch.bewilligungsantrag.1001">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Richtlinie des Bundesministeriums für Familie, Senioren, Frauen und Jugend über die Gewährung von Zuwendungen zur Förderung von Maßnahmen der assistierten Reproduktion</rechtsgrundlage>
+         </xs:appinfo>
+         <xs:documentation>Maßnahmen zur Herbeiführung einer Schwangerschaft (künstliche Befruchtung) sind Regel- und Rechtsanspruchsleistungen der gesetzlichen Krankenversicherung und unterliegen einem antrags- und gebührenpflichtigen Erlaubnisverfahren. Die Finanzierung der Maßnahmen zur Herbeiführung einer Schwangerschaft ist nach deren Bewilligung an einer Durchführung durch Ärzte und Einrichtungen, die an der vertragsärztlichen Versorgung teilnehmen, sowie an zugelassene Krankenhäuser gebunden.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:AntragsnachrichtType">
+               <xs:sequence>
+                  <xs:element name="bewilligungsantrag" type="xfkw:BewilligungsantragType"/>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="kinderwunsch.verwendungsnachweispruefung.1002">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>Richtlinie des Bundesministeriums für Familie, Senioren, Frauen und Jugend über die Gewährung von Zuwendungen zur Förderung von Maßnahmen der assistierten Reproduktion</rechtsgrundlage>
+         </xs:appinfo>
+         <xs:documentation>Förderung von Kinderwunschbehandlungen Verwendungsnachweisprüfung</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:AntragsnachrichtType">
+               <xs:sequence>
+                  <xs:element name="auszahlungsantrag" type="xfkw:AuszahlungsantragType"/>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="kinderwunsch.nachreichung.1003">
+      <xs:annotation>
+         <xs:documentation>Mit dieser Nachricht können Dokumente nachgereicht werden.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:AntragsnachrichtType">
+               <xs:sequence>
+                  <xs:element name="bundesland" type="xfb:Code.BundeslandType"/>
+                  <xs:element name="bearbeitungsnummer" type="din91379:datatypeC"/>
+                  <xs:element name="nichtaustragendePerson" type="xfkw:PersonendatenType"/>
+                  <xs:element name="antragstellendePerson" type="xfkw:PersonendatenType"/>
+                  <xs:element name="nachreichung" type="xfkw:NachreichungType"/>
+                  <xs:element name="datenschutzerklaerungDerFoerderstelle" type="xs:boolean"/>
+                  <xs:element name="bestaetigungRichtigkeitAngaben" type="xs:boolean"/>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>

@@ -19,5 +19,7 @@
 Bundle-Version: 4.0.0.SNAPSHOT
 
 -buildpath: \
-	org.osgi.service.condition;version=latest
+	org.osgi.service.condition;version=latest,\
+	de.xoev.code;version=snapshot,\
+	de.xoev.din91379;version=snapshot
 

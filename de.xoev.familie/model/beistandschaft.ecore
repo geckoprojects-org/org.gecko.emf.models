@@ -1,0 +1,1467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="beistandschaft" nsURI="http://www.xoev.de/xfamilie/beistandschaft/1.3.0"
+    nsPrefix="beistandschaft">
+  <eAnnotations>
+    <details key="appinfo" value="&#xA;           &#xA;  &lt;standard>&#xA;                &#xA;    &lt;nameLang>XFamilie&lt;/nameLang>&#xA;                &#xA;    &lt;nameKurz>XFamilie&lt;/nameKurz>&#xA;                &#xA;    &lt;nameTechnisch>xfamilie&lt;/nameTechnisch>&#xA;                &#xA;    &lt;kennung>urn:xoev-de:kosit:standard:xfamilie&lt;/kennung>&#xA;                &#xA;    &lt;beschreibung>Projektziel ist die elektronische Kommunikation im Familienbereich zwischen verschiedenen Behörden, Institutionen, Registern und Onlineportalen, die Daten untereinander austauschen, zu unterstützen. Der Nutzen des Projekts besteht in der Kostenreduktion und einer Verbesserung der Qualität von Daten für Familienleistungen, sowie einer Verbesserung der Interoperabilität von Akteuren im Familienbereich und weiteren Kommunikationspartner.&lt;/beschreibung>&#xA;             &#xA;  &lt;/standard>&#xA;           &#xA;  &lt;versionStandard>&#xA;                &#xA;    &lt;version>1.3.0&lt;/version>&#xA;                &#xA;    &lt;beschreibung>Die Änderungshistorie befindet sich in Tabellenform nach Change Requests gegliedert in Kapitel E.&lt;/beschreibung>&#xA;                &#xA;    &lt;versionXOEVProfil>3.0.2&lt;/versionXOEVProfil>&#xA;                &#xA;    &lt;versionXOEVHandbuch>3.0.2&lt;/versionXOEVHandbuch>&#xA;                &#xA;    &lt;versionXGenerator>3.1.0&lt;/versionXGenerator>&#xA;                &#xA;    &lt;versionModellierungswerkzeug>19.0&lt;/versionModellierungswerkzeug>&#xA;                &#xA;    &lt;nameModellierungswerkzeug>MagicDraw&lt;/nameModellierungswerkzeug>&#xA;             &#xA;  &lt;/versionStandard>&#xA;        &#xA;&#xA;&#xA;           &#xA;  &lt;standard>&#xA;                &#xA;    &lt;nameLang>XFamilie&lt;/nameLang>&#xA;                &#xA;    &lt;nameKurz>XFamilie&lt;/nameKurz>&#xA;                &#xA;    &lt;nameTechnisch>xfamilie&lt;/nameTechnisch>&#xA;                &#xA;    &lt;kennung>urn:xoev-de:kosit:standard:xfamilie&lt;/kennung>&#xA;                &#xA;    &lt;beschreibung>Projektziel ist die elektronische Kommunikation im Familienbereich zwischen verschiedenen Behörden, Institutionen, Registern und Onlineportalen, die Daten untereinander austauschen, zu unterstützen. Der Nutzen des Projekts besteht in der Kostenreduktion und einer Verbesserung der Qualität von Daten für Familienleistungen, sowie einer Verbesserung der Interoperabilität von Akteuren im Familienbereich und weiteren Kommunikationspartner.&lt;/beschreibung>&#xA;             &#xA;  &lt;/standard>&#xA;           &#xA;  &lt;versionStandard>&#xA;                &#xA;    &lt;version>1.3.0&lt;/version>&#xA;                &#xA;    &lt;beschreibung>Die Änderungshistorie befindet sich in Tabellenform nach Change Requests gegliedert in Kapitel E.&lt;/beschreibung>&#xA;                &#xA;    &lt;versionXOEVProfil>3.0.2&lt;/versionXOEVProfil>&#xA;                &#xA;    &lt;versionXOEVHandbuch>3.0.2&lt;/versionXOEVHandbuch>&#xA;                &#xA;    &lt;versionXGenerator>3.1.0&lt;/versionXGenerator>&#xA;                &#xA;    &lt;versionModellierungswerkzeug>19.0&lt;/versionModellierungswerkzeug>&#xA;                &#xA;    &lt;nameModellierungswerkzeug>MagicDraw&lt;/nameModellierungswerkzeug>&#xA;             &#xA;  &lt;/versionStandard>&#xA;        &#xA;"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="Diese Schema-Datei enthält die technische Repräsentation der in der Norm DIN 91379 definierten Datentypen."/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="AndererElternteilType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AndererElternteilType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="angabenZumAnderenElternteil"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Können Sie Angaben zum anderen Elternteil machen? If true: Weitere Angaben in diesem Element optional auszufüllen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="angabenZumAnderenElternteil"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namen" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="namen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="geburtsdaten" eType="#//GeburtType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Das optionale Element Geburtsstaat wird hier nicht benötigt."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtsdaten"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="familienstand" eType="ecore:EClass baukasten.ecore#//CodeFamilienstandType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angaben zum Familienstand: An dieser Stelle sind nur die Angaben ledig, verheiratet, geschieden, verwitwet, eingetragene Lebenspartnerschaft, aufgehobene Lebenspartnerschaft und durch Tod aufgelöste Partnerschaft zulässig."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="familienstand"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="angabenZurAdresse" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Kennen Sie die Adresse des anderen Elternteils? If true: Adressfeld ausfüllen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="angabenZurAdresse"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="adresse" eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="adresse"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="erreichbarkeit" upperBound="-1"
+        eType="ecore:EClass baukasten.ecore#//ErreichbarkeitType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angaben zur Erreichbarkeit des Elternteils."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="erreichbarkeit"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anerkennungVaterschaft"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Wenn bei Anliegensklärung die Codes v oder vu ausgewählt wurden: Ist der potentielle Vater des Kindes bereit die Vaterschaft anzuerkennen?"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="anerkennungVaterschaft"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="weitereAngabenzumAnderenElternteil"
+        eType="#//WeitereAngabenZumAnderenElternteilType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Wenn bei der Anliegensklärung im Element anliegenBeistandschaft die Codes vu oder u enthalten sind, dann kann dieses Element optional befüllt werden."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="weitereAngabenzumAnderenElternteil"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AngabenZumKindBeendigungType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AngabenZumKindBeendigungType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nameDesKindes" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="nameDesKindes"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="geburtsdaten" eType="ecore:EClass baukasten.ecore#//GeburtType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtsdaten"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anschriftStimmtMitAntragstellendemElternteilUeberein"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="anschriftStimmtMitAntragstellendemElternteilUeberein"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kindAdresse" eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="kindAdresse"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="aktenzeichenVorgangsnummer"
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Aktenzeichen oder Vorgangsnummer des Beistandschaft-Antrags."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="aktenzeichenVorgangsnummer"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AngabenZumKindType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AngabenZumKindType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kindBereitsGeboren" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="kindBereitsGeboren"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="voraussichtlicherEntbindungstermin"
+        eType="ecore:EDataType baukasten.ecore#//TagesdatumType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Verpflichtende Angabe, wenn kindBereitsGeboren=false"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="voraussichtlicherEntbindungstermin"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nameDesKindes" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonOhneGeburtsnameType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="nameDesKindes"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="geburtsdaten" eType="ecore:EClass baukasten.ecore#//GeburtType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtsdaten"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geburtenregisternummer"
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtenregisternummer"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kindWohnhaftBei" eType="ecore:EClass baukasten.ecore#//CodeKindWohnhaftBeiType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="kindWohnhaftBei"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kindLebtBeiSonstige" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Wird zu einer Pflichtangabe, wenn kindLebtBei = Sonstiger Aufenthaltsort."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="kindLebtBeiSonstige"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ausbildungUndEinkuenfte"
+        eType="#//AusbildungUndEinkuenfteType" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="ausbildungUndEinkuenfte"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weitereKinderImHaushalt"
+        unique="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="weitereKinderImHaushalt"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="weitereKinder" upperBound="-1"
+        eType="#//WeitereKinderType" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="weitereKinder"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AngabenZumUnterhaltType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Angaben zum Unterhalt."/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AngabenZumUnterhaltType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angabenZumUnterhaltstitel"
+        lowerBound="1" eType="#//CodeUnterhaltstitelBestehtType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, ob ein Unterhaltstitel besteht."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="angabenZumUnterhaltstitel"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bemuehungUnterhaltszahlung"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, ob Bemühungen bzgl. Unterhalt erfolgten."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="bemuehungUnterhaltszahlung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bisherigeBemuehungen" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, in welcher Form die bisherigen Bemühungen stattfanden."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="bisherigeBemuehungen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zahltBereits" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, ob der Unterhalt bereits gezahlt wird."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="zahltBereits"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hoeheZahlung" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Float"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, in welcher Höhe der Unterhalt gezahlt wurde."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="hoeheZahlung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="letzteZahlungAm" eType="ecore:EDataType baukasten.ecore#//TagesdatumType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, an welchem Tag die letzte Zahlung erfolgte."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="letzteZahlungAm"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="regelmaessigeZahlung" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, ob regelmäßig eine Unterhaltszahlung stattfindet."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="regelmaessigeZahlung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="angabenZurZahlung" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Weitere Angaben zur Zahlung."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="angabenZurZahlung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geltendmachungUnterhaltsrueckstaende"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, ob Unterhaltsrückstände geltend gemacht wurden."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geltendmachungUnterhaltsrueckstaende"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="angabeUnterhaltsrueckstaende"
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, in welcher Höhe die Unterhaltsrückstände geltend gemacht wurden."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="angabeUnterhaltsrueckstaende"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="freiwilligerVerzichtAufUnterhalt"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, ob ein freiwilliger Verzicht auf Unterhalt stattfindet."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="freiwilligerVerzichtAufUnterhalt"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unterhaltVerzichtZeitraum"
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&quot;Bitte geben Sie an, für welchen Zeitraum Sie auf Unterhalt verzichtet haben.&quot; Das Element soll eingeblendet werden, wenn freiwilligerVerzichtAufUnterhalt = true"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="unterhaltVerzichtZeitraum"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="zahlung" eType="#//CodeZahlungsartBSSType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, in welcher Form die Zahlung des Unterhalts erfolgt."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="zahlung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bankverbindungZahlungJugendamt"
+        eType="ecore:EClass baukasten.ecore#//BankverbindungType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Konto, auf das der Unterhalt gezahlt werden soll. Nur anzugeben, wenn bei zahlung die Zahlung über das Jugendamt erfolgen soll."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="bankverbindungZahlungJugendamt"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bankverbindungDirektzahlung"
+        eType="ecore:EClass baukasten.ecore#//BankverbindungType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Konto, auf das der Unterhalt gezahlt werden soll. Nur anzugeben, wenn bei zahlung eine Direktzahlung erfolgen soll."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="bankverbindungDirektzahlung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Anliegenbeistandschaft">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>AnliegenBeistandschaft&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>AnliegenBeistandschaft&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>anliegenbeistandschaft&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:anliegenbeistandschaft&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Die Art der Anliegen für Beistandschaft.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>1.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>Gibt die Arten der Anliegen für Beistandsschaft an. &lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2022-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="anliegenbeistandschaft"/>
+    </eAnnotations>
+    <eLiterals name="b">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Beratung&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="u" value="1">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Unterhaltsansprüche des Kindes durchsetzen&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="v" value="2">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Vaterschaft des Kindes feststellen&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="vu" value="3">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Vaterschaft des Kindes feststellen lassen und Unterhaltsansprüche des Kindes durchsetzen.&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="AnliegenbeistandschaftObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="anliegenbeistandschaft:Object"/>
+      <details key="baseType" value="anliegenbeistandschaft"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AnliegensklaerungBSSType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Hier sind lediglich die Codes v, vu und u zu verwenden"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AnliegensklaerungBSSType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="anliegenBeistandschaft"
+        lowerBound="1" eType="#//CodeAnliegenBeistandschaftType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="anliegenBeistandschaft"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vaterschaftAnerkannt" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Die Angabe, ob die Vaterschaft anerkannt wurde. Das Element vaterschaftAnerkannt ist nur zu befüllen, wenn für anliegenBeistandschaft u gewählt wurde."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="vaterschaftAnerkannt"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inhaberElterlicheSorge"
+        eType="#//CodeInhaberElterlicheSorgeType" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="inhaberElterlicheSorge"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AntragstellenderElternteilBeendigungType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AntragstellenderElternteilBeendigungType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namen" lowerBound="1" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Namen des beantragenden Elternteils."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="namen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="geburtsdaten" lowerBound="1"
+        eType="ecore:EClass baukasten.ecore#//GeburtType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Geburtsdaten des beantragenden Elternteils."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtsdaten"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="adresse" lowerBound="1"
+        eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Adresse des beantragenden Elternteils."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="adresse"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="abweichendeAdresse" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angaben, ob die Anschrift von der im Personalausweis angegebenen Anschrift abweicht. True: Optionales Element abweichendeAdressePerso befüllen"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="abweichendeAdresse"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abweichendeAdressePerso"
+        eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="abweichendeAdressePerso"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abweichendeAdresseNachweis"
+        upperBound="-1" eType="ecore:EClass baukasten.ecore#//NachweisdokumentType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="abweichendeAdresseNachweis"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AntragstellenderElternteilType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AntragstellenderElternteilType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namen" lowerBound="1" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="namen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="geburtsdaten" lowerBound="1"
+        eType="ecore:EClass baukasten.ecore#//GeburtType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Das optionale Element Geburtsstaat wird hier nicht benötigt."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtsdaten"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="familienstand" eType="ecore:EClass baukasten.ecore#//CodeFamilienstandType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angaben zum Familienstand: An dieser Stelle sind nur die Angaben ledig, verheiratet, geschieden, verwitwet, eingetragene Lebenspartnerschaft, aufgehobene Lebenspartnerschaft und durch Tod aufgelöste Partnerschaft zulässig."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="familienstand"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="adresse" lowerBound="1"
+        eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="adresse"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="abweichendeAdresse" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, dass die Anschrift von der im Personalausweis angegebenen Anschrift abweicht."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="abweichendeAdresse"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abweichendeAdressePerso"
+        eType="ecore:EClass baukasten.ecore#//PostalischeInlandsanschriftBasisType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="abweichendeAdressePerso"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="erreichbarkeit" upperBound="-1"
+        eType="ecore:EClass baukasten.ecore#//ErreichbarkeitType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angaben zur Erreichbarkeit des Elternteils."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="erreichbarkeit"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oeffentlicheLeistungen"
+        upperBound="-1" eType="#//CodeBezugOeffentlicherLeistungenType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Das Element vaterschaftAnerkannt ist nur zu befüllen, wenn für anliegenBeistandschaft u oder vu gewählt wurde. Wenn hier &quot;Sonstige Leistungen&quot; ausgewählt wurde, ist das Ausfüllen des Elements sonstigeLeistungenBeschreibung mandatorisch."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="oeffentlicheLeistungen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sonstigeLeistungenBeschreibung"
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Nur zu befüllen, wenn im optionalen Element oeffentlicheLeistungen &quot;Sonstige Leistungen&quot; ausgewählt wurde."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="sonstigeLeistungenBeschreibung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AusbildungUndEinkuenfteType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="AusbildungUndEinkuenfteType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kindInAusbildung" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, ob Kind in Ausbildung ist."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="kindInAusbildung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ausbildungsjahr" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//NonNegativeInteger">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Verpflichtende Angabe, wenn kindInAusbildung = true."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="ausbildungsjahr"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="einkuenfteKind" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hat Ihr Kind Einnahmen aus Vermögen (z. B. Miete, Pacht, Zinsen) oder sonstige Einkünfte?"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="einkuenfteKind"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="einkuenfteArt" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="&quot;einkuenfteArt&quot; wird nur dann eingeblendet, wenn &quot;einkuenfteKind&quot; = true"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="einkuenfteArt"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kindergeld" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, ob Kindergeld bezogen wird."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="kindergeld"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BeistandschaftAntrag0601Type" eSuperTypes="baukasten.ecore#//AntragsnachrichtType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="beistandschaft.antrag.0601_._type"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="anliegensklaerung" lowerBound="1"
+        eType="#//AnliegensklaerungBSSType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="In diesem Element wird geklärt, um welches Anliegen es im Antrag geht."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="anliegensklaerung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="antragstellenderElternteil"
+        lowerBound="1" eType="#//AntragstellenderElternteilType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angaben zum antragstellenden Elternteil"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="antragstellenderElternteil"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angabenZumKind" lowerBound="1"
+        eType="#//AngabenZumKindType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angaben zum Kind."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="angabenZumKind"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angabenZumAnderenElternteil"
+        eType="#//AndererElternteilType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angaben zum anderen Elternteil."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="angabenZumAnderenElternteil"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angabenZumUnterhalt" eType="#//AngabenZumUnterhaltType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Die Angaben zum Unterhalt. Das Element ist nur zu befüllen, wenn für anliegenBeistandschaft u oder vu gewählt wurde."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="angabenZumUnterhalt"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nachweise" eType="#//NachweiseBSSType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="nachweise"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="wartenAufUnterschrift"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, ob noch auf Unterschrit gewartet werden muss."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="wartenAufUnterschrift"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dsgvo" lowerBound="1" eType="ecore:EClass baukasten.ecore#//DatenschutzerklaerungenType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, ob noch auf Unterschrit gewartet werden muss."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="dsgvo"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="richtigkeitDerAngaben"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="richtigkeitDerAngaben"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pdfAntrag" eType="ecore:EClass baukasten.ecore#//NachweisdokumentType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mit diesem Element ist es möglich, den Antrag im PDF anzuhängen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="pdfAntrag"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="merkblattUVG" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Dokumentiert die Kenntnisnahme und Bestätigung des UVG Merkblatts."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="merkblattUVG"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BeistandschaftBeendigung0604Type" eSuperTypes="baukasten.ecore#//AntragsnachrichtType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="beistandschaft.beendigung.0604_._type"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="antragstellenderElternteilBeendigung"
+        lowerBound="1" eType="#//AntragstellenderElternteilBeendigungType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="antragstellenderElternteilBeendigung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angabenZumKindBeendigung"
+        lowerBound="1" upperBound="10" eType="#//AngabenZumKindBeendigungType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="angabenZumKindBeendigung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beendigungBestaetigung"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="beendigungBestaetigung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dsgvo" lowerBound="1" eType="ecore:EClass baukasten.ecore#//DatenschutzerklaerungenType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Bestätigung zur Datenschutzerklärung des Dienst-betreibenden Landes sowie zur spezifischen Datenschutzerklärung des nachnutzenden Landes oder der nachnutzenden Kommune."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="dsgvo"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="richtigkeitDerAngaben"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="richtigkeitDerAngaben"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="wartenAufUnterschrift"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, ob noch auf Unterschrit gewartet werden muss."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="wartenAufUnterschrift"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Bezugoeffentlicherleistungen">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>BezugOeffentlicherLeistungen&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>BezugOeffentlicherLeistungen&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>bezugoeffentlicherleistungen&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:bezugoeffentlicherleistungen&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Die Liste gibt an, welche öffentlichen Leistungen von der betroffenen Person erhaten werden.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>1.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>[nd]&lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2022-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="bezugoeffentlicherleistungen"/>
+    </eAnnotations>
+    <eLiterals name="_01" literal="01">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Bezug von Sozialhilfe (SGB XII)&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_02" value="1" literal="02">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Bezug von Arbeitslosengeld II (SBG II)&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_03" value="2" literal="03">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Bezug von Unterhaltsvorschuss&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_04" value="3" literal="04">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Bezug Sonstiger Leistungen&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="BezugoeffentlicherleistungenObject"
+      instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="bezugoeffentlicherleistungen:Object"/>
+      <details key="baseType" value="bezugoeffentlicherleistungen"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CodeAnliegenBeistandschaftType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>AnliegenBeistandschaft&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>AnliegenBeistandschaft&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>anliegenbeistandschaft&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:anliegenbeistandschaft&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Die Art der Anliegen für Beistandschaft.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>1.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>Gibt die Arten der Anliegen für Beistandsschaft an. &lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2022-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;              &#xA;  &lt;genutzteCodeSpalte>code&lt;/genutzteCodeSpalte>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Code.AnliegenBeistandschaftType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CodeBezugOeffentlicherLeistungenType"
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>BezugOeffentlicherLeistungen&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>BezugOeffentlicherLeistungen&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>bezugoeffentlicherleistungen&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:bezugoeffentlicherleistungen&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Die Liste gibt an, welche öffentlichen Leistungen von der betroffenen Person erhaten werden.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>1.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>[nd]&lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2022-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;              &#xA;  &lt;genutzteCodeSpalte>code&lt;/genutzteCodeSpalte>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Code.BezugOeffentlicherLeistungenType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CodeEinkommenAndererElternteilType"
+      eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>EinkommenAndererElternteil&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>EinkommenAndererElternteil&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>einkommenandererelternteil&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:einkommenandererelternteil&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Die Liste codiert die Einkommensarten des anderen Elternteils im Antrag zur Beistandschaft.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>2.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>[nd]&lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2025-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;              &#xA;  &lt;genutzteCodeSpalte>code&lt;/genutzteCodeSpalte>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Code.EinkommenAndererElternteilType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CodeInhaberElterlicheSorgeType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>InhaberElterlicheSorge&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>InhaberElterlicheSorge&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>inhaberelterlichesorge&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:inhaberelterlichesorge&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Die Liste gibt an, bei welcher Person die elterliche Sorge liegt.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>1.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>[nd]&lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2022-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;              &#xA;  &lt;genutzteCodeSpalte>code&lt;/genutzteCodeSpalte>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Code.InhaberElterlicheSorgeType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CodeUnterhaltstitelBestehtType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>UnterhaltstitelBesteht&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>UnterhaltstitelBesteht&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>unterhaltstitelbesteht&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:unterhaltstitelbesteht&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Die Liste codiert, ob bereits ein Unterhaltstitel besteht.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>1.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>[nd]&lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2022-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;              &#xA;  &lt;genutzteCodeSpalte>code&lt;/genutzteCodeSpalte>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Code.UnterhaltstitelBestehtType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CodeZahlungsartBSSType" eSuperTypes="../../de.xoev.code/model/xoev-code.ecore#//Code">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>ZahlungsartBSS&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>ZahlungsartBSS&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>zahlungsartbss&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:zahlungsartbss&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Die Liste codiert, wie eine Unterhaltszahlung geregelt sein soll.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>1.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>[nd]&lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2022-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;              &#xA;  &lt;genutzteCodeSpalte>code&lt;/genutzteCodeSpalte>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Code.ZahlungsartBSSType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value=""/>
+      <details key="kind" value="mixed"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mixed" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="elementWildcard"/>
+        <details key="name" value=":mixed"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="xMLNSPrefixMap" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStringToStringMapEntry"
+        transient="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="xmlns:prefix"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="xSISchemaLocation" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStringToStringMapEntry"
+        transient="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="xsi:schemaLocation"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="beistandschaftAntrag0601"
+        upperBound="-2" eType="#//BeistandschaftAntrag0601Type" volatile="true" transient="true"
+        derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mit dieser Nachricht werden die Daten zum Antrag einer Beistandschaft strukturiert von einem Portal an die zuständigen Jugendämter versendet."/>
+      </eAnnotations>
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;              &#xA;  &lt;rechtsgrundlage/>&#xA;           &#xA;"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="beistandschaft.antrag.0601"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="beistandschaftBeendigung0604"
+        upperBound="-2" eType="#//BeistandschaftBeendigung0604Type" volatile="true"
+        transient="true" derived="true" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mit dieser Nachricht werden die Daten zur Beendigung einer Beistandschaft strukturiert von einem Portal an die zuständigen Jugendämter versendet."/>
+      </eAnnotations>
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;              &#xA;  &lt;rechtsgrundlage/>&#xA;           &#xA;"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="beistandschaft.beendigung.0604"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Einkommenandererelternteil">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>EinkommenAndererElternteil&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>EinkommenAndererElternteil&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>einkommenandererelternteil&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:einkommenandererelternteil&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Die Liste codiert die Einkommensarten des anderen Elternteils im Antrag zur Beistandschaft.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>2.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>[nd]&lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2025-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="einkommenandererelternteil"/>
+    </eAnnotations>
+    <eLiterals name="_01" literal="01">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Erwerbstätigkeit&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_02" value="1" literal="02">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Arbeitslosengeld I/Bürgergeld&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_03" value="2" literal="03">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Arbeitslosengeld II (SGB II)&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_04" value="3" literal="04">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Rente&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_05" value="4" literal="05">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Sozialhilfe (SGB XII)&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_06" value="5" literal="06">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Vermögen&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_07" value="6" literal="07">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Einkünfte aus Vermietung und Verpachtung (Paragraf21 EStG)&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="EinkommenandererelternteilObject"
+      instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="einkommenandererelternteil:Object"/>
+      <details key="baseType" value="einkommenandererelternteil"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GeburtType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Mit diesem Datentyp werden die Geburtsinformationen einer Person abgebildet. Dabei ist es erlaubt, unvollständige Angaben zum Geburtstag zu machen, sofern dieser nicht vollständig bekannt ist. Regel: Das Geburtsdatum, Geburtsort und -staat müssen vollständig angegeben werden"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="GeburtType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geburtsort" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mit diesem Element ist der Geburtsort der Person zu übermitteln."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtsort"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="geburtsortStaat" eType="ecore:EClass baukasten.ecore#//CodeStaatType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mit diesem Element wird der Geburtsstaat der Person übermittelt.Eine Angabe in diesem Feld erfolgt nur bei nicht in der Bundesrepublik Deutschland geborenen Personen. In diesen Fällen ist das Staatsgebiet anzugeben, in dem der Einwohner geboren ist. Die Erfassung des Ersatzwertes 994 für von/nach See ist nicht zulässig."/>
+      </eAnnotations>
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;implementationHint>Deutschland wird immer durch Weglassen dieses Elementes abgebildet.&lt;/implementationHint>&#xA;                 &#xA;"/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtsortStaat"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="geburtsdatum" eType="ecore:EClass baukasten.ecore#//TeilbekanntesDatumType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Mit diesem Element wird das Geburtsdatum übermittelt. Sofern das vollständige Geburtsdatum vorliegt, ist das Element jahrMonatTag zu befüllen, sofern die Tagesangabe fehlt, das Element jahrMonat, sofern die Tagesangabe und die Monatsangabe fehlen, das Element jahr und sofern alle Angaben zum Geburtsdatum fehlen, das Element unbekannt."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtsdatum"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Inhaberelterlichesorge">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>InhaberElterlicheSorge&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>InhaberElterlicheSorge&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>inhaberelterlichesorge&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:inhaberelterlichesorge&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Die Liste gibt an, bei welcher Person die elterliche Sorge liegt.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>1.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>[nd]&lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2022-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="inhaberelterlichesorge"/>
+    </eAnnotations>
+    <eLiterals name="_01" literal="01">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Ich bin alleinige(r) Inhaber(in) der elterlichen Sorge&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_02" value="1" literal="02">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Es besteht gemeinsame elterliche Sorge. Das Kind befindet sich in meiner Obhut&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_03" value="2" literal="03">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Ich bin nach Paragraf 1776 BGB berufender Vormund des Kindes&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="InhaberelterlichesorgeObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="inhaberelterlichesorge:Object"/>
+      <details key="baseType" value="inhaberelterlichesorge"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NachweiseBSSType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="NachweiseBSSType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sorgerechtsnachweis" upperBound="-1"
+        eType="ecore:EClass baukasten.ecore#//NachweisdokumentType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Nachweise zur Geburt des Kindes."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="sorgerechtsnachweis"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="identitaetsnachweis" upperBound="-1"
+        eType="ecore:EClass baukasten.ecore#//NachweisdokumentType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Nachweise zur Meldebestätigung. Nur anzugeben, wenn die Anschriften der Beteiligten voneinander abweichen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="identitaetsnachweis"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="weitereNachweise" upperBound="-1"
+        eType="ecore:EClass baukasten.ecore#//NachweisdokumentType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angaben zu weiteren Nachweisen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="weitereNachweise"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nachweisMeldebescheinigung"
+        upperBound="-1" eType="ecore:EClass baukasten.ecore#//NachweisdokumentType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Wenn die Meldeadresse von der eingegeben Adresse mittels BundID abweicht, ist ein Nachweis in Form einer Meldebescheinigung hochzuladen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="nachweisMeldebescheinigung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anmerkungen" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Sonstige Anmerkungen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="anmerkungen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dsgvo" lowerBound="1" eType="ecore:EClass baukasten.ecore#//DatenschutzerklaerungenType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Bestätigung zur Datenschutzerklärung des Dienst-betreibenden Landes sowie zur spezifischen Datenschutzerklärung des nachnutzenden Landes oder der nachnutzenden Kommune."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="dsgvo"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NachweisType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="NachweisType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nachweisBeschreibung" eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="nachweisBeschreibung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nachweisDokument" upperBound="-1"
+        eType="ecore:EClass baukasten.ecore#//NachweisdokumentType" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="nachweisDokument"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Unterhaltstitelbesteht">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>UnterhaltstitelBesteht&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>UnterhaltstitelBesteht&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>unterhaltstitelbesteht&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:unterhaltstitelbesteht&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Die Liste codiert, ob bereits ein Unterhaltstitel besteht.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>1.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>[nd]&lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2022-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="unterhaltstitelbesteht"/>
+    </eAnnotations>
+    <eLiterals name="_01" literal="01">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Ja&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_02" value="1" literal="02">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Nein&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_03" value="2" literal="03">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Ich bin mir nicht sicher&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="UnterhaltstitelbestehtObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="unterhaltstitelbesteht:Object"/>
+      <details key="baseType" value="unterhaltstitelbesteht"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WeitereAngabenZumAnderenElternteilType">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Sonstige Angaben zum anderen Elternteil."/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="WeitereAngabenZumAnderenElternteilType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="berufausausbildung" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, ob Informationen zu der Berufsausbildung des anderen Elternteils vorliegen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="berufausausbildung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="angabenBerufsausbildung"
+        eType="ecore:EDataType ../../de.xoev.din91379/model/din-91379-2204.ecore#//DatatypeC">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angaben zur Berufsausbildung des anderen Elternteils, sofern dies im Element berufsausbildung bejaht wurde."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="angabenBerufsausbildung"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="einkommensverhaeltnisse"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, ob Informationen zu den Einkommensverhältnissen des anderen Elternteils vorliegen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="einkommensverhaeltnisse"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nettoeinkommen" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Float"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe zum Nettoeinkommen des anderen Elternteils, sofern bestätigt wurde, dass Informationen zu den Einkommensverhältnissen vorliegen."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="nettoeinkommen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="einkommen" upperBound="-1"
+        eType="#//CodeEinkommenAndererElternteilType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angaben zum Einkommen des anderen Elternteils."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="einkommen"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weitereKinder" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angaben zu weiteren Kindern des anderen Elternteils."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="weitereKinder"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weitereKinderImHaushalt"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angabe, ob weitere Kinder zum anderen Elternteil vorhanden sind."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="weitereKinderImHaushalt"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="weitereKinderAngaben" upperBound="-1"
+        eType="#//WeitereKinderType" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Angaben zu den weiteren Kindern, sofern welche vorhanden sind."/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="weitereKinderAngaben"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WeitereKinderType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="WeitereKinderType"/>
+      <details key="kind" value="elementOnly"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="ecore:EClass baukasten.ecore#//NameNatuerlichePersonOhneGeburtsnameType"
+        containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="name"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geburtsdatum" eType="ecore:EDataType baukasten.ecore#//TagesdatumType">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="geburtsdatum"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Zahlungsartbss">
+    <eAnnotations>
+      <details key="appinfo" value="&#xA;              &#xA;  &lt;codeliste>&#xA;                   &#xA;    &lt;nameLang>ZahlungsartBSS&lt;/nameLang>&#xA;                   &#xA;    &lt;nameKurz>ZahlungsartBSS&lt;/nameKurz>&#xA;                   &#xA;    &lt;nameTechnisch>zahlungsartbss&lt;/nameTechnisch>&#xA;                   &#xA;    &lt;kennung>urn:xoev-de:xfamilie:codeliste:zahlungsartbss&lt;/kennung>&#xA;                   &#xA;    &lt;beschreibung>Die Liste codiert, wie eine Unterhaltszahlung geregelt sein soll.&lt;/beschreibung>&#xA;                   &#xA;    &lt;herausgebernameLang>XFamilie&lt;/herausgebernameLang>&#xA;                   &#xA;    &lt;herausgebernameKurz>XFamilie&lt;/herausgebernameKurz>&#xA;                &#xA;  &lt;/codeliste>&#xA;              &#xA;  &lt;versionCodeliste>&#xA;                   &#xA;    &lt;version>1.0&lt;/version>&#xA;                   &#xA;    &lt;beschreibung>[nd]&lt;/beschreibung>&#xA;                   &#xA;    &lt;datumGueltigkeitAb>2022-11-01&lt;/datumGueltigkeitAb>&#xA;                   &#xA;    &lt;versionCodelistenHandbuch>1.2&lt;/versionCodelistenHandbuch>&#xA;                &#xA;  &lt;/versionCodeliste>&#xA;              &#xA;  &lt;codelistenspalten>&#xA;                   &#xA;    &lt;code>&#xA;                        &#xA;      &lt;spaltennameLang>Code&lt;/spaltennameLang>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>true&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>true&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/code>&#xA;                   &#xA;    &lt;beschreibung>&#xA;                        &#xA;      &lt;datentyp>string&lt;/datentyp>&#xA;                        &#xA;      &lt;codeSpalte>false&lt;/codeSpalte>&#xA;                        &#xA;      &lt;verwendung>required&lt;/verwendung>&#xA;                        &#xA;      &lt;empfohleneCodeSpalte>false&lt;/empfohleneCodeSpalte>&#xA;                     &#xA;    &lt;/beschreibung>&#xA;                &#xA;  &lt;/codelistenspalten>&#xA;           &#xA;"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="zahlungsartbss"/>
+    </eAnnotations>
+    <eLiterals name="_01" literal="01">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Zahlung an Jugendamt&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="_02" value="1" literal="02">
+      <eAnnotations>
+        <details key="appinfo" value="&#xA;                    &#xA;  &lt;beschreibung>Direktzahlung&lt;/beschreibung>&#xA;                 &#xA;"/>
+      </eAnnotations>
+    </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="ZahlungsartbssObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="zahlungsartbss:Object"/>
+      <details key="baseType" value="zahlungsartbss"/>
+    </eAnnotations>
+  </eClassifiers>
+</ecore:EPackage>

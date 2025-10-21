@@ -3,11 +3,9 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2025 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"
     modelDirectory="/de.xoev.domea/src" modelPluginID="de.xoev.domea" modelName="XDomea"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="11.0" copyrightFields="false" operationReflection="true" importOrganizing="true"
-    oSGiCompatible="true">
+    complianceLevel="11.0" copyrightFields="false" usedGenPackages="../../de.xoev.din91379/model/din-91379-2204.genmodel#//din91379 ../../de.xoev.code/model/xoev-code.genmodel#//code"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
   <foreignModel>basisnachricht.ecore</foreignModel>
-  <foreignModel>code.ecore</foreignModel>
-  <foreignModel>datatype-din.ecore</foreignModel>
   <foreignModel>xdomea.ecore</foreignModel>
   <genPackages prefix="Basisnachricht" resource="XML" disposableProviderFactory="true"
       ecorePackage="basisnachricht.ecore#/">
@@ -44,21 +42,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht.ecore#//NachrichtG2GType/test"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basisnachricht.ecore#//NachrichtG2GType/version"/>
     </genClasses>
-  </genPackages>
-  <genPackages prefix="Code" resource="XML" disposableProviderFactory="true" ecorePackage="code.ecore#/">
-    <genClasses ecoreClass="code.ecore#//Code">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute code.ecore#//Code/code"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute code.ecore#//Code/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute code.ecore#//Code/listURI"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute code.ecore#//Code/listVersionID"/>
-    </genClasses>
-  </genPackages>
-  <genPackages prefix="Datatypedin" disposableProviderFactory="true" ecorePackage="datatype-din.ecore#/">
-    <genDataTypes ecoreDataType="datatype-din.ecore#//DatatypeA"/>
-    <genDataTypes ecoreDataType="datatype-din.ecore#//DatatypeB"/>
-    <genDataTypes ecoreDataType="datatype-din.ecore#//DatatypeC"/>
-    <genDataTypes ecoreDataType="datatype-din.ecore#//DatatypeD"/>
-    <genDataTypes ecoreDataType="datatype-din.ecore#//DatatypeE"/>
   </genPackages>
   <genPackages prefix="Domea" basePackage="de.xoev.domea" resource="XML" disposableProviderFactory="true"
       ecorePackage="xdomea.ecore#/">

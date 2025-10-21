@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:xfg="http://www.xoev.de/xfamilie/geburt/1.3.0"
+           xmlns:din91379="urn:xoev-de:kosit:xoev:datentyp:din-91379_2022-08"
+           xmlns:xfb="http://www.xoev.de/xfamilie/baukasten/1.3.0"
+           xmlns:xoev-code="http://xoev.de/schemata/code/1_0"
+           targetNamespace="http://www.xoev.de/xfamilie/geburt/1.3.0"
+           version="1.3.0"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+   <xs:annotation>
+      <xs:appinfo>
+         <standard>
+            <nameLang>XFamilie</nameLang>
+            <nameKurz>XFamilie</nameKurz>
+            <nameTechnisch>xfamilie</nameTechnisch>
+            <kennung>urn:xoev-de:kosit:standard:xfamilie</kennung>
+            <beschreibung>Projektziel ist die elektronische Kommunikation im Familienbereich zwischen verschiedenen Behörden, Institutionen, Registern und Onlineportalen, die Daten untereinander austauschen, zu unterstützen. Der Nutzen des Projekts besteht in der Kostenreduktion und einer Verbesserung der Qualität von Daten für Familienleistungen, sowie einer Verbesserung der Interoperabilität von Akteuren im Familienbereich und weiteren Kommunikationspartner.</beschreibung>
+         </standard>
+         <versionStandard>
+            <version>1.3.0</version>
+            <beschreibung>Die Änderungshistorie befindet sich in Tabellenform nach Change Requests gegliedert in Kapitel E.</beschreibung>
+            <versionXOEVProfil>3.0.2</versionXOEVProfil>
+            <versionXOEVHandbuch>3.0.2</versionXOEVHandbuch>
+            <versionXGenerator>3.1.0</versionXGenerator>
+            <versionModellierungswerkzeug>19.0</versionModellierungswerkzeug>
+            <nameModellierungswerkzeug>MagicDraw</nameModellierungswerkzeug>
+         </versionStandard>
+      </xs:appinfo>
+   </xs:annotation>
+   <xs:import schemaLocation="din-norm-91379-datatypes.xsd"
+              namespace="urn:xoev-de:kosit:xoev:datentyp:din-91379_2022-08"/>
+   <xs:import schemaLocation="xfamilie-baukasten.xsd"
+              namespace="http://www.xoev.de/xfamilie/baukasten/1.3.0"/>
+   <xs:import schemaLocation="xoev-code.xsd"
+              namespace="http://xoev.de/schemata/code/1_0"/>
+   <xs:complexType name="AngabenGesetzlicherVertreterElternteilType">
+      <xs:annotation>
+         <xs:documentation>Angaben zur gesetzlichen Vertretung.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="name" minOccurs="0" type="xfb:NameNatuerlichePersonType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Vornamen, Nachnamen und Geburtsnamen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburt" type="xfb:GeburtType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Geburt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anschrift" type="xfb:MeldeanschriftType">
+            <xs:annotation>
+               <xs:documentation>Meldeanschrift.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anschriftAusland"
+                     minOccurs="0"
+                     type="xfb:AuslandsanschriftType">
+            <xs:annotation>
+               <xs:documentation>Angabe einer ausländischen Anschrift.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kontakt"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ErreichbarkeitType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Erreichbarkeit.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AngabenZumElternteil1Type">
+      <xs:annotation>
+         <xs:documentation>Angaben zum Vater des Kindes.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="nameElternteil1"
+                     minOccurs="0"
+                     type="xfb:NameNatuerlichePersonType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Vornamen, Nachnamen und Geburtsnamen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburt" type="xfb:GeburtType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Geburt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="staatsangehoerigkeit"
+                     maxOccurs="unbounded"
+                     type="xfb:Code.StaatsangehoerigkeitType">
+            <xs:annotation>
+               <xs:documentation>Staatsangehörigkeit.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="dolmetscherBenoetigt" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob ein Dolmentscher benötigt wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anschrift"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:MeldeanschriftType">
+            <xs:annotation>
+               <xs:documentation>Meldeanschrift.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anschriftAusland"
+                     minOccurs="0"
+                     type="xfb:AuslandsanschriftType">
+            <xs:annotation>
+               <xs:documentation>Angabe einer ausländischen Anschrift.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kontakt"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ErreichbarkeitType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Erreichbarkeit.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="familienstand"
+                     minOccurs="0"
+                     type="xfb:Code.FamilienstandType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Familienstand.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anschriftPostalisch"
+                     minOccurs="0"
+                     type="xfb:PostalischeInlandsanschriftType">
+            <xs:annotation>
+               <xs:documentation>Aktueller Wohnsitz/ Postanschrift.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AngabenZumElternteil2Type">
+      <xs:annotation>
+         <xs:documentation>Angaben zur Mutter des Kindes.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="nameElternteil2" type="xfb:NameNatuerlichePersonType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Vornamen, Nachnamen und Geburtsnamen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburt" type="xfb:GeburtType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Geburt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="dolmetscherBenoetigt" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob ein Dolmetscher benötigt wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anschrift"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:MeldeanschriftType">
+            <xs:annotation>
+               <xs:documentation>Meldeanschrift.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anschriftAusland"
+                     minOccurs="0"
+                     type="xfb:AuslandsanschriftType">
+            <xs:annotation>
+               <xs:documentation>Angabe einer ausländischen Anschrift.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="kontakt"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:ErreichbarkeitType">
+            <xs:annotation>
+               <xs:documentation>Angaben zur Erreichbarkeit.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="aenderungAnschriftLetzte5Jahre"
+                     minOccurs="0"
+                     type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob sich die Anschrift in den letzten 5 Jahren geändert hat.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="familienstand"
+                     minOccurs="0"
+                     type="xfb:Code.FamilienstandType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Familienstand.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="anschriftPostalisch"
+                     minOccurs="0"
+                     type="xfb:PostalischeInlandsanschriftType">
+            <xs:annotation>
+               <xs:documentation>Aktueller Wohnsitz/ Postanschrift.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AngabenZumKindType">
+      <xs:annotation>
+         <xs:documentation>Angaben zum Kind.</xs:documentation>
+      </xs:annotation>
+      <xs:choice>
+         <xs:element name="nachgeburtlicheAngabenZumKind"
+                     minOccurs="0"
+                     type="xfg:NachgeburtlicheAngabenZumKindType">
+            <xs:annotation>
+               <xs:documentation>Nachgeburtliche Angaben zum Kind.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="angabenZumKindVorGeburt"
+                     minOccurs="0"
+                     type="xfb:TeilbekanntesDatumType">
+            <xs:annotation>
+               <xs:documentation>Vorgeburtliche Angaben zum Kind.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:choice>
+   </xs:complexType>
+   <xs:complexType name="Code.AlleinsorgeEintragungType">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>AlleinsorgeEintragung</nameLang>
+               <nameKurz>AlleinsorgeEintragung</nameKurz>
+               <nameTechnisch>alleinsorgeEintragung</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:alleinsorgeeintragung</kennung>
+               <beschreibung>Art der Eintragung in einem Sorgeregister.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>2.0</version>
+               <beschreibung>Art der Eintragung in einem Sorgeregister.</beschreibung>
+               <datumGueltigkeitAb>2024-05-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+            <genutzteCodeSpalte>code</genutzteCodeSpalte>
+         </xs:appinfo>
+         <xs:documentation>Art der Eintragung in einem Sorgeregister.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:restriction base="xoev-code:Code">
+            <xs:sequence>
+               <xs:element name="code" form="unqualified" type="xfg:alleinsorgeEintragung"/>
+            </xs:sequence>
+            <xs:attribute name="listURI"
+                          type="xs:anyURI"
+                          use="optional"
+                          fixed="urn:xoev-de:xfamilie:codeliste:alleinsorgeeintragung"/>
+            <xs:attribute name="listVersionID"
+                          type="xs:normalizedString"
+                          use="optional"
+                          fixed="2.0"/>
+         </xs:restriction>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="EintragungNachweisregisterType">
+      <xs:annotation>
+         <xs:documentation>Angaben zur Eintragung im Nachweisregister.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="eintragungVorhanden" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob für das betreffende Kind ein Eintrag in einem Sorgeregister vorliegt. Ist dieser boolean [false] kann ein automatisierter Negativbescheid ausgestellt werden. Ist er [true] muss ein Wert der Codeliste AlleinsorgeEintragung mitgesendet werden.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="eintragungSorgeregisterArt"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfg:Code.AlleinsorgeEintragungType">
+            <xs:annotation>
+               <xs:documentation>Art der Eintragung im Sorgeregister.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="wohnortJugendamtMutter"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Das für die Mutter des Kindes zuständige Wohnortjugendamt gemäß § 87c Absatz 6 Satz 1 SGB VIII. Die Zuständigkeit ergibt sich aus dem gewöhnlichen bzw. tatsächlichem Aufenthaltsort der Mutter.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="registerfuerhrendesJugendamt"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Das für den Sorgeregistereintrag des Kinds zuständige Jugendamt gemäß 87c Absatz 6 Satz 2 SGB VIII.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="NachgeburtlicheAngabenZumKindType">
+      <xs:annotation>
+         <xs:documentation>Mit diesem Datentyp werden die Geburtsinformationen des Kindes abgebildet. Dabei ist es erlaubt, unvollständige Angaben zum Geburtstag zu machen, sofern dieser nicht vollständig bekannt ist. Regel: Das Geburtsdatum, Geburtsort und -staat müssen vollständig angegeben werden</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="nameDesKindes"
+                     maxOccurs="unbounded"
+                     type="xfb:NameNatuerlichePersonType">
+            <xs:annotation>
+               <xs:documentation>Angaben zum Vornamen, Nachnamen und Geburtsnamen des Kindes. Für die Nachricht 0801 sind Vorname und Familienname zu Identifikationszwecken verpflichtend auszufüllen.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburtsort" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Geburtsort des Kindes.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburtsortStaat" minOccurs="0" type="xfb:Code.StaatType">
+            <xs:annotation>
+               <xs:appinfo>
+                  <implementationHint>Deutschland wird immer durch Weglassen dieses Elementes abgebildet.</implementationHint>
+               </xs:appinfo>
+               <xs:documentation>Mit diesem Element wird der Geburtsstaat des Kindes übermittelt.Eine Angabe in diesem Feld erfolgt nur bei nicht in der Bundesrepublik Deutschland geborenen Personen. In diesen Fällen ist das Staatsgebiet anzugeben, in dem der Einwohner geboren ist. Die Erfassung des Ersatzwertes 994 für von/nach See ist nicht zulässig.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburtsdatum" type="xfb:TeilbekanntesDatumType">
+            <xs:annotation>
+               <xs:documentation>Mit diesem Element wird das Geburtsdatum übermittelt. Sofern das vollständige Geburtsdatum vorliegt, ist das Element jahrMonatTag zu befüllen, sofern die Tagesangabe fehlt, das Element jahrMonat, sofern die Tagesangabe und die Monatsangabe fehlen, das Element jahr.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburtsregisterNummer"
+                     minOccurs="0"
+                     type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Geburtsregisternummer des Kindes.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="geburtsstandesamt" minOccurs="0" type="din91379:datatypeC">
+            <xs:annotation>
+               <xs:documentation>Geburtsstandesamt des Kindes.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="registerfuehrendeStelleARS"
+                     minOccurs="0"
+                     type="xfb:Code.GemeindeVZ.RegionalschluesselType">
+            <xs:annotation>
+               <xs:documentation>Mit diesem Datenfeld kann der ARS des Geburtsjugendamtes des Kindes übertragen werden. Für die Ausstellung einer Auskunft über die Alleinsorge aus dem Sorgeregister nach § 58 SGB VIII ist die Angabe des ARS des Geburtsorts vom Kind erforderlich.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ZusatzangabenType">
+      <xs:annotation>
+         <xs:documentation>Angaben zur Prüfung der berechtigten Antragstellung.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="mutterIstWarMitVaterVerheiratet" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob die Mutter mit dem Vater des Kindes verheiratet war oder ist.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="gerichtlicheEntscheidungElterlicheSorgeAuchVorlaeufige"
+                     type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob eine gerichtliche Entscheidung über die Regelung der elterlichen Sorge getroffen wurde bzw. ob ein entsprechendes Verfahren anhängig ist.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="nachweise"
+                     minOccurs="0"
+                     maxOccurs="unbounded"
+                     type="xfb:NachweisdokumentType">
+            <xs:annotation>
+               <xs:documentation>Nicht relevant, wenn der Antrag an das Register geht. Wenn ein Jugendamt mit der 0801 adressiert wird, können ggf. Nachweise (ausländische Urkunden o.ä.) mitgeschickt werden</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="mutterZumZeitpunktDerGeburtVerheiratet"
+                     minOccurs="0"
+                     type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob die Mutter zum Zeitpunkt der Geburt verheiratet war. In diesen Fällen steht das Sorgerecht der Mutter und dem Ehemann (Vater) zunächst gemeinsam zu, sofern nicht beispielsweise nach § 1599 BGB das Nichtbestehen der Vaterschaft festgestellt wird.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="gemeinsameSorgeerklaerung" minOccurs="0" type="xs:boolean">
+            <xs:annotation>
+               <xs:documentation>Angabe, ob die Elternteile eine gemeinsame Sorgererklärung gemäß § 1626a Abs.1 S. 1 BGB abgegeben haben..</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType name="alleinsorgeEintragung">
+      <xs:annotation>
+         <xs:appinfo>
+            <codeliste>
+               <nameLang>AlleinsorgeEintragung</nameLang>
+               <nameKurz>AlleinsorgeEintragung</nameKurz>
+               <nameTechnisch>alleinsorgeEintragung</nameTechnisch>
+               <kennung>urn:xoev-de:xfamilie:codeliste:alleinsorgeeintragung</kennung>
+               <beschreibung>Art der Eintragung in einem Sorgeregister.</beschreibung>
+               <herausgebernameLang>XFamilie</herausgebernameLang>
+               <herausgebernameKurz>XFamilie</herausgebernameKurz>
+            </codeliste>
+            <versionCodeliste>
+               <version>2.0</version>
+               <beschreibung>Art der Eintragung in einem Sorgeregister.</beschreibung>
+               <datumGueltigkeitAb>2024-05-01</datumGueltigkeitAb>
+               <versionCodelistenHandbuch>1.2</versionCodelistenHandbuch>
+            </versionCodeliste>
+            <codelistenspalten>
+               <code>
+                  <spaltennameLang>Code</spaltennameLang>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>true</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>true</empfohleneCodeSpalte>
+               </code>
+               <beschreibung>
+                  <datentyp>string</datentyp>
+                  <codeSpalte>false</codeSpalte>
+                  <verwendung>required</verwendung>
+                  <empfohleneCodeSpalte>false</empfohleneCodeSpalte>
+               </beschreibung>
+            </codelistenspalten>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="01">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Sorgeerklärung</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="02">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Gerichtliche Entscheidung</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="03">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Sperrvermerk</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="04">
+            <xs:annotation>
+               <xs:appinfo>
+                  <beschreibung>Gerichtliche Entscheidung: Alleinsorge</beschreibung>
+               </xs:appinfo>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:element name="sorge.alleinsorge.antrag.0801">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>§58a SGB 8</rechtsgrundlage>
+         </xs:appinfo>
+         <xs:documentation>Hierbei handelt es sich um den Antrag auf Auskunft über die Alleinsorge aus dem Sorgeregister nach § 58 SGB VIII. Liegen keine Eintragungen im Sorgeregister vor, so erhält die mit dem Vater des Kindes nicht verheiratete Mutter auf Antrag hierüber eine schriftliche Auskunft ("Negativattest) von dem nach § 87c Absatz 6 Satz 1 zuständigen Jugendamt ("Geburtsjugendamt").</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:AntragsnachrichtType">
+               <xs:sequence>
+                  <xs:element name="angabenZurMutter" type="xfg:AngabenZumElternteil2Type">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zur Mutter des Kindes, die den Antrag auf Auskunft einer Alleinsorge stellt.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="angabenZumKind" type="xfg:AngabenZumKindType">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zum Kind, für das die Mutter die Auskunft einer Alleinsorge beantragt.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="zusatzangaben" minOccurs="0" type="xfg:ZusatzangabenType">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zur Prüfung der berechtigten Antragstellung.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="terminwuensche"
+                              minOccurs="0"
+                              maxOccurs="unbounded"
+                              type="xfb:TerminwunschType">
+                     <xs:annotation>
+                        <xs:documentation>Ist der Antrag an ein Jugendamt gerichtet und wird durch die Antragstellerin ein persönlicher Termin gewünscht, so können hier Terminwünsche übermittelt werden.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="sorge.erklaerung.vorbeitung.0802">
+      <xs:annotation>
+         <xs:appinfo>
+            <rechtsgrundlage>§§ 1626ff BGB; §§ 59, 87e SGB VIII; §§ 10, 12, 13, 17, 51 BeurkG; §33 PStV</rechtsgrundlage>
+         </xs:appinfo>
+         <xs:documentation>Mit dieser Nachricht werden Daten zur Vorbereitung einer öffentlichen Beurkundung einer gemeinsamen Sorgeerklärung gemäß § 1626a Abs.1 Nr.1 BGB i.V.m. § 1626d Abs.1 von den Eltern an eine beurkundende Stelle übermittelt.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:AntragsnachrichtType">
+               <xs:sequence>
+                  <xs:element name="angabenZumVater" type="xfg:AngabenZumElternteil1Type">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zum Vater des Kindes für die gemeinsame Sorgeerklärung.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="angabenGesetzlicherVertreterVater"
+                              minOccurs="0"
+                              maxOccurs="unbounded"
+                              type="xfg:AngabenGesetzlicherVertreterElternteilType">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zur gesetzlichen Vertretung des Vaters.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="angabenZurMutter" type="xfg:AngabenZumElternteil2Type">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zur Mutter des Kindes für die gemeinsame Sorgeerklärung.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="angabenGesetzlicherVertreterMutter"
+                              minOccurs="0"
+                              maxOccurs="unbounded"
+                              type="xfg:AngabenGesetzlicherVertreterElternteilType">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zur gesetzlichen Vertretung der Mutter.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="angabenZumKind" type="xfg:AngabenZumKindType">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zum Kind, für das eine gemeinsame Sorgererklärung beurkundet werden soll.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="terminwunsch"
+                              minOccurs="0"
+                              maxOccurs="unbounded"
+                              type="xfb:TerminwunschType">
+                     <xs:annotation>
+                        <xs:documentation>Terminwunsch der Elternteile für die Beurkundung bei der beurkundenden Stelle.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="sorge.alleinsorge.auskunft.0803">
+      <xs:annotation>
+         <xs:documentation>Diese Nachricht dient der Übermittlung einer Auskunft nach § 58 Abs.2 S.1 SGV VIII für die nicht mit dem Vater des Kindes verheiratete Mutter. Diese Nachricht kann auch dann übermittelt werden, wenn im Sorgeregister Eintragungen vorliegen und eine Auskunft nach § 58 Abs. 2 S.1 SGB VIII nicht möglich ist. In diesen Fällen hat die Nachricht rein informativen Charakter, indem sie dem Empfänger den Grund der Nichtausstellbarkeit mitteilt (z.B. wegen Vorliegen einer Sorgeerklärung).</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:AntragsnachrichtType">
+               <xs:sequence>
+                  <xs:element name="angabenZurMutter" type="xfg:AngabenZumElternteil2Type">
+                     <xs:annotation>
+                        <xs:documentation>Mutter des Kindes, die eine Auskunft über die Alleinsorge beantragt hat.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="angabenZumKind" type="xfg:AngabenZumKindType">
+                     <xs:annotation>
+                        <xs:documentation>Kind für das die Auskunft über die Alleinsorge ausgestellt werden soll.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="zusatzangaben" minOccurs="0" type="xfg:ZusatzangabenType">
+                     <xs:annotation>
+                        <xs:documentation>Angaben der beantragenden Mutter bei der Antragstellung.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="eintragungNachweisregister"
+                              type="xfg:EintragungNachweisregisterType">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zur Eintragung im Nachweisregister.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="sorge.nachweisregister.eintragung.0804">
+      <xs:annotation>
+         <xs:documentation>Mit dieser Nachricht werden die für Auskunftserteilung mit der Nachricht sorge.alleinsorge.auskunft.0803 erforderlichen Daten aus einem Sorgeregister zu einem Nachweisregister übermittelt.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:AntragsnachrichtType">
+               <xs:sequence>
+                  <xs:element name="angabenZurMutter" type="xfg:AngabenZumElternteil2Type">
+                     <xs:annotation>
+                        <xs:documentation>Mutter des Kindes.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="angabenZumKind" type="xfg:AngabenZumKindType">
+                     <xs:annotation>
+                        <xs:documentation>Kind, zu dem Eintragungen im Nachweisregister vorgenommen werden.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="eintragungNachweisregister"
+                              type="xfg:EintragungNachweisregisterType">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zur Eintragung im Sorgeregister.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="sorge.nachweisregister.korrektur.0805">
+      <xs:annotation>
+         <xs:documentation>Mit dieser Nachricht können die für Auskunftserteilung mit der Nachricht sorge.alleinsorge.auskunft.0803 erforderlichen Daten aus einem Sorgeregister zu einem Nachweisregister korrigiert werden.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:AntragsnachrichtType">
+               <xs:sequence>
+                  <xs:element name="angabenZurMutterAlt" type="xfg:AngabenZumElternteil2Type">
+                     <xs:annotation>
+                        <xs:documentation>Mutter des Kindes.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="angabenZumKindAlt" type="xfg:AngabenZumKindType">
+                     <xs:annotation>
+                        <xs:documentation>Kind, zu dem Eintragungen im Nachweisregister vorgenommen werden.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="eintragungNachweisregisterAlt"
+                              type="xfg:EintragungNachweisregisterType">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zur Eintragung im Sorgeregister.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="angabenZurMutterNeu"
+                              minOccurs="0"
+                              type="xfg:AngabenZumElternteil2Type">
+                     <xs:annotation>
+                        <xs:documentation>Mutter des Kindes.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="angabenZumKindNeu"
+                              minOccurs="0"
+                              type="xfg:AngabenZumKindType">
+                     <xs:annotation>
+                        <xs:documentation>Kind, zu dem Eintragungen im Nachweisregister vorgenommen werden.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="eintragungNachweisregisterNeu"
+                              minOccurs="0"
+                              type="xfg:EintragungNachweisregisterType">
+                     <xs:annotation>
+                        <xs:documentation>Angaben zur Eintragung im Sorgeregister.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="sorge.nachweisregister.loeschung.0806">
+      <xs:annotation>
+         <xs:documentation>Wird diese Nachricht ausgelöst, ist der Datensatz im Nachweisregister vollständig zu entfernen.</xs:documentation>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="xfb:AntragsnachrichtType">
+               <xs:sequence>
+                  <xs:element name="angabenZurMutter" type="xfg:AngabenZumElternteil2Type">
+                     <xs:annotation>
+                        <xs:documentation>Mutter des Kindes.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+                  <xs:element name="angabenZumKind" type="xfg:AngabenZumKindType">
+                     <xs:annotation>
+                        <xs:documentation>Kind, zu dem Eintragungen im Nachweisregister vorgenommen werden.</xs:documentation>
+                     </xs:annotation>
+                  </xs:element>
+               </xs:sequence>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>

@@ -15,7 +15,7 @@ package basisnachricht.util;
 
 import basisnachricht.*;
 
-import code.Code;
+import de.xoev.schemata.code.code.Code;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -231,13 +231,13 @@ public class BasisnachrichtAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link code.Code <em>Code</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.xoev.schemata.code.code.Code <em>Code</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see code.Code
+	 * @see de.xoev.schemata.code.code.Code
 	 * @generated
 	 */
 	public Adapter createCodeAdapter() {

@@ -13,7 +13,7 @@
  */
 package de.xoev.domea.domea;
 
-import code.Code;
+import de.xoev.schemata.code.code.Code;
 
 import org.osgi.annotation.versioning.ProviderType;
 
