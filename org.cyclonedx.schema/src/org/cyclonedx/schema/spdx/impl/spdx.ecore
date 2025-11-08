@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="spdx" nsURI="http://cyclonedx.org/schema/spdx" nsPrefix="spdx">
+  <eClassifiers xsi:type="ecore:EEnum" name="LicenseId">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="licenseId"/>
+    </eAnnotations>
+    <eLiterals name="_0BSD" literal="0BSD"/>
+    <eLiterals name="_3DSlicer10" value="1" literal="3D-Slicer-1.0"/>
+    <eLiterals name="AAL" value="2"/>
+    <eLiterals name="Abstyles" value="3"/>
+    <eLiterals name="AdaCoreDoc" value="4" literal="AdaCore-doc"/>
+    <eLiterals name="Adobe2006" value="5" literal="Adobe-2006"/>
+    <eLiterals name="AdobeDisplayPostScript" value="6" literal="Adobe-Display-PostScript"/>
+    <eLiterals name="AdobeGlyph" value="7" literal="Adobe-Glyph"/>
+    <eLiterals name="AdobeUtopia" value="8" literal="Adobe-Utopia"/>
+    <eLiterals name="ADSL" value="9"/>
+    <eLiterals name="AFL11" value="10" literal="AFL-1.1"/>
+    <eLiterals name="AFL12" value="11" literal="AFL-1.2"/>
+    <eLiterals name="AFL20" value="12" literal="AFL-2.0"/>
+    <eLiterals name="AFL21" value="13" literal="AFL-2.1"/>
+    <eLiterals name="AFL30" value="14" literal="AFL-3.0"/>
+    <eLiterals name="Afmparse" value="15"/>
+    <eLiterals name="AGPL10" value="16" literal="AGPL-1.0"/>
+    <eLiterals name="AGPL10Only" value="17" literal="AGPL-1.0-only"/>
+    <eLiterals name="AGPL10OrLater" value="18" literal="AGPL-1.0-or-later"/>
+    <eLiterals name="AGPL30" value="19" literal="AGPL-3.0"/>
+    <eLiterals name="AGPL30Only" value="20" literal="AGPL-3.0-only"/>
+    <eLiterals name="AGPL30OrLater" value="21" literal="AGPL-3.0-or-later"/>
+    <eLiterals name="Aladdin" value="22"/>
+    <eLiterals name="AMDNewlib" value="23" literal="AMD-newlib"/>
+    <eLiterals name="AMDPLPA" value="24"/>
+    <eLiterals name="AML" value="25"/>
+    <eLiterals name="AMLGlslang" value="26" literal="AML-glslang"/>
+    <eLiterals name="AMPAS" value="27"/>
+    <eLiterals name="ANTLRPD" value="28" literal="ANTLR-PD"/>
+    <eLiterals name="ANTLRPDFallback" value="29" literal="ANTLR-PD-fallback"/>
+    <eLiterals name="anyOSI" value="30" literal="any-OSI"/>
+    <eLiterals name="anyOSIPerlModules" value="31" literal="any-OSI-perl-modules"/>
+    <eLiterals name="Apache10" value="32" literal="Apache-1.0"/>
+    <eLiterals name="Apache11" value="33" literal="Apache-1.1"/>
+    <eLiterals name="Apache20" value="34" literal="Apache-2.0"/>
+    <eLiterals name="APAFML" value="35"/>
+    <eLiterals name="APL10" value="36" literal="APL-1.0"/>
+    <eLiterals name="AppS2p" value="37" literal="App-s2p"/>
+    <eLiterals name="APSL10" value="38" literal="APSL-1.0"/>
+    <eLiterals name="APSL11" value="39" literal="APSL-1.1"/>
+    <eLiterals name="APSL12" value="40" literal="APSL-1.2"/>
+    <eLiterals name="APSL20" value="41" literal="APSL-2.0"/>
+    <eLiterals name="Arphic1999" value="42" literal="Arphic-1999"/>
+    <eLiterals name="Artistic10" value="43" literal="Artistic-1.0"/>
+    <eLiterals name="Artistic10Cl8" value="44" literal="Artistic-1.0-cl8"/>
+    <eLiterals name="Artistic10Perl" value="45" literal="Artistic-1.0-Perl"/>
+    <eLiterals name="Artistic20" value="46" literal="Artistic-2.0"/>
+    <eLiterals name="ArtisticDist" value="47" literal="Artistic-dist"/>
+    <eLiterals name="AspellRU" value="48" literal="Aspell-RU"/>
+    <eLiterals name="ASWFDigitalAssets10" value="49" literal="ASWF-Digital-Assets-1.0"/>
+    <eLiterals name="ASWFDigitalAssets11" value="50" literal="ASWF-Digital-Assets-1.1"/>
+    <eLiterals name="Baekmuk" value="51"/>
+    <eLiterals name="Bahyph" value="52"/>
+    <eLiterals name="Barr" value="53"/>
+    <eLiterals name="bcryptSolarDesigner" value="54" literal="bcrypt-Solar-Designer"/>
+    <eLiterals name="Beerware" value="55"/>
+    <eLiterals name="BitstreamCharter" value="56" literal="Bitstream-Charter"/>
+    <eLiterals name="BitstreamVera" value="57" literal="Bitstream-Vera"/>
+    <eLiterals name="BitTorrent10" value="58" literal="BitTorrent-1.0"/>
+    <eLiterals name="BitTorrent11" value="59" literal="BitTorrent-1.1"/>
+    <eLiterals name="blessing" value="60"/>
+    <eLiterals name="BlueOak100" value="61" literal="BlueOak-1.0.0"/>
+    <eLiterals name="BoehmGC" value="62" literal="Boehm-GC"/>
+    <eLiterals name="BoehmGCWithoutFee" value="63" literal="Boehm-GC-without-fee"/>
+    <eLiterals name="Borceux" value="64"/>
+    <eLiterals name="BrianGladman2Clause" value="65" literal="Brian-Gladman-2-Clause"/>
+    <eLiterals name="BrianGladman3Clause" value="66" literal="Brian-Gladman-3-Clause"/>
+    <eLiterals name="BSD1Clause" value="67" literal="BSD-1-Clause"/>
+    <eLiterals name="BSD2Clause" value="68" literal="BSD-2-Clause"/>
+    <eLiterals name="BSD2ClauseDarwin" value="69" literal="BSD-2-Clause-Darwin"/>
+    <eLiterals name="BSD2ClauseFirstLines" value="70" literal="BSD-2-Clause-first-lines"/>
+    <eLiterals name="BSD2ClauseFreeBSD" value="71" literal="BSD-2-Clause-FreeBSD"/>
+    <eLiterals name="BSD2ClauseNetBSD" value="72" literal="BSD-2-Clause-NetBSD"/>
+    <eLiterals name="BSD2ClausePatent" value="73" literal="BSD-2-Clause-Patent"/>
+    <eLiterals name="BSD2ClausePkgconfDisclaimer" value="74" literal="BSD-2-Clause-pkgconf-disclaimer"/>
+    <eLiterals name="BSD2ClauseViews" value="75" literal="BSD-2-Clause-Views"/>
+    <eLiterals name="BSD3Clause" value="76" literal="BSD-3-Clause"/>
+    <eLiterals name="BSD3ClauseAcpica" value="77" literal="BSD-3-Clause-acpica"/>
+    <eLiterals name="BSD3ClauseAttribution" value="78" literal="BSD-3-Clause-Attribution"/>
+    <eLiterals name="BSD3ClauseClear" value="79" literal="BSD-3-Clause-Clear"/>
+    <eLiterals name="BSD3ClauseFlex" value="80" literal="BSD-3-Clause-flex"/>
+    <eLiterals name="BSD3ClauseHP" value="81" literal="BSD-3-Clause-HP"/>
+    <eLiterals name="BSD3ClauseLBNL" value="82" literal="BSD-3-Clause-LBNL"/>
+    <eLiterals name="BSD3ClauseModification" value="83" literal="BSD-3-Clause-Modification"/>
+    <eLiterals name="BSD3ClauseNoMilitaryLicense" value="84" literal="BSD-3-Clause-No-Military-License"/>
+    <eLiterals name="BSD3ClauseNoNuclearLicense" value="85" literal="BSD-3-Clause-No-Nuclear-License"/>
+    <eLiterals name="BSD3ClauseNoNuclearLicense2014" value="86" literal="BSD-3-Clause-No-Nuclear-License-2014"/>
+    <eLiterals name="BSD3ClauseNoNuclearWarranty" value="87" literal="BSD-3-Clause-No-Nuclear-Warranty"/>
+    <eLiterals name="BSD3ClauseOpenMPI" value="88" literal="BSD-3-Clause-Open-MPI"/>
+    <eLiterals name="BSD3ClauseSun" value="89" literal="BSD-3-Clause-Sun"/>
+    <eLiterals name="BSD4Clause" value="90" literal="BSD-4-Clause"/>
+    <eLiterals name="BSD4ClauseShortened" value="91" literal="BSD-4-Clause-Shortened"/>
+    <eLiterals name="BSD4ClauseUC" value="92" literal="BSD-4-Clause-UC"/>
+    <eLiterals name="BSD43RENO" value="93" literal="BSD-4.3RENO"/>
+    <eLiterals name="BSD43TAHOE" value="94" literal="BSD-4.3TAHOE"/>
+    <eLiterals name="BSDAdvertisingAcknowledgement" value="95" literal="BSD-Advertising-Acknowledgement"/>
+    <eLiterals name="BSDAttributionHPNDDisclaimer" value="96" literal="BSD-Attribution-HPND-disclaimer"/>
+    <eLiterals name="BSDInfernoNettverk" value="97" literal="BSD-Inferno-Nettverk"/>
+    <eLiterals name="BSDProtection" value="98" literal="BSD-Protection"/>
+    <eLiterals name="BSDSourceBeginningFile" value="99" literal="BSD-Source-beginning-file"/>
+    <eLiterals name="BSDSourceCode" value="100" literal="BSD-Source-Code"/>
+    <eLiterals name="BSDSystemics" value="101" literal="BSD-Systemics"/>
+    <eLiterals name="BSDSystemicsW3Works" value="102" literal="BSD-Systemics-W3Works"/>
+    <eLiterals name="BSL10" value="103" literal="BSL-1.0"/>
+    <eLiterals name="BUSL11" value="104" literal="BUSL-1.1"/>
+    <eLiterals name="bzip2105" value="105" literal="bzip2-1.0.5"/>
+    <eLiterals name="bzip2106" value="106" literal="bzip2-1.0.6"/>
+    <eLiterals name="CUDA10" value="107" literal="C-UDA-1.0"/>
+    <eLiterals name="CAL10" value="108" literal="CAL-1.0"/>
+    <eLiterals name="CAL10CombinedWorkException" value="109" literal="CAL-1.0-Combined-Work-Exception"/>
+    <eLiterals name="Caldera" value="110"/>
+    <eLiterals name="CalderaNoPreamble" value="111" literal="Caldera-no-preamble"/>
+    <eLiterals name="Catharon" value="112"/>
+    <eLiterals name="CATOSL11" value="113" literal="CATOSL-1.1"/>
+    <eLiterals name="CCBY10" value="114" literal="CC-BY-1.0"/>
+    <eLiterals name="CCBY20" value="115" literal="CC-BY-2.0"/>
+    <eLiterals name="CCBY25" value="116" literal="CC-BY-2.5"/>
+    <eLiterals name="CCBY25AU" value="117" literal="CC-BY-2.5-AU"/>
+    <eLiterals name="CCBY30" value="118" literal="CC-BY-3.0"/>
+    <eLiterals name="CCBY30AT" value="119" literal="CC-BY-3.0-AT"/>
+    <eLiterals name="CCBY30AU" value="120" literal="CC-BY-3.0-AU"/>
+    <eLiterals name="CCBY30DE" value="121" literal="CC-BY-3.0-DE"/>
+    <eLiterals name="CCBY30IGO" value="122" literal="CC-BY-3.0-IGO"/>
+    <eLiterals name="CCBY30NL" value="123" literal="CC-BY-3.0-NL"/>
+    <eLiterals name="CCBY30US" value="124" literal="CC-BY-3.0-US"/>
+    <eLiterals name="CCBY40" value="125" literal="CC-BY-4.0"/>
+    <eLiterals name="CCBYNC10" value="126" literal="CC-BY-NC-1.0"/>
+    <eLiterals name="CCBYNC20" value="127" literal="CC-BY-NC-2.0"/>
+    <eLiterals name="CCBYNC25" value="128" literal="CC-BY-NC-2.5"/>
+    <eLiterals name="CCBYNC30" value="129" literal="CC-BY-NC-3.0"/>
+    <eLiterals name="CCBYNC30DE" value="130" literal="CC-BY-NC-3.0-DE"/>
+    <eLiterals name="CCBYNC40" value="131" literal="CC-BY-NC-4.0"/>
+    <eLiterals name="CCBYNCND10" value="132" literal="CC-BY-NC-ND-1.0"/>
+    <eLiterals name="CCBYNCND20" value="133" literal="CC-BY-NC-ND-2.0"/>
+    <eLiterals name="CCBYNCND25" value="134" literal="CC-BY-NC-ND-2.5"/>
+    <eLiterals name="CCBYNCND30" value="135" literal="CC-BY-NC-ND-3.0"/>
+    <eLiterals name="CCBYNCND30DE" value="136" literal="CC-BY-NC-ND-3.0-DE"/>
+    <eLiterals name="CCBYNCND30IGO" value="137" literal="CC-BY-NC-ND-3.0-IGO"/>
+    <eLiterals name="CCBYNCND40" value="138" literal="CC-BY-NC-ND-4.0"/>
+    <eLiterals name="CCBYNCSA10" value="139" literal="CC-BY-NC-SA-1.0"/>
+    <eLiterals name="CCBYNCSA20" value="140" literal="CC-BY-NC-SA-2.0"/>
+    <eLiterals name="CCBYNCSA20DE" value="141" literal="CC-BY-NC-SA-2.0-DE"/>
+    <eLiterals name="CCBYNCSA20FR" value="142" literal="CC-BY-NC-SA-2.0-FR"/>
+    <eLiterals name="CCBYNCSA20UK" value="143" literal="CC-BY-NC-SA-2.0-UK"/>
+    <eLiterals name="CCBYNCSA25" value="144" literal="CC-BY-NC-SA-2.5"/>
+    <eLiterals name="CCBYNCSA30" value="145" literal="CC-BY-NC-SA-3.0"/>
+    <eLiterals name="CCBYNCSA30DE" value="146" literal="CC-BY-NC-SA-3.0-DE"/>
+    <eLiterals name="CCBYNCSA30IGO" value="147" literal="CC-BY-NC-SA-3.0-IGO"/>
+    <eLiterals name="CCBYNCSA40" value="148" literal="CC-BY-NC-SA-4.0"/>
+    <eLiterals name="CCBYND10" value="149" literal="CC-BY-ND-1.0"/>
+    <eLiterals name="CCBYND20" value="150" literal="CC-BY-ND-2.0"/>
+    <eLiterals name="CCBYND25" value="151" literal="CC-BY-ND-2.5"/>
+    <eLiterals name="CCBYND30" value="152" literal="CC-BY-ND-3.0"/>
+    <eLiterals name="CCBYND30DE" value="153" literal="CC-BY-ND-3.0-DE"/>
+    <eLiterals name="CCBYND40" value="154" literal="CC-BY-ND-4.0"/>
+    <eLiterals name="CCBYSA10" value="155" literal="CC-BY-SA-1.0"/>
+    <eLiterals name="CCBYSA20" value="156" literal="CC-BY-SA-2.0"/>
+    <eLiterals name="CCBYSA20UK" value="157" literal="CC-BY-SA-2.0-UK"/>
+    <eLiterals name="CCBYSA21JP" value="158" literal="CC-BY-SA-2.1-JP"/>
+    <eLiterals name="CCBYSA25" value="159" literal="CC-BY-SA-2.5"/>
+    <eLiterals name="CCBYSA30" value="160" literal="CC-BY-SA-3.0"/>
+    <eLiterals name="CCBYSA30AT" value="161" literal="CC-BY-SA-3.0-AT"/>
+    <eLiterals name="CCBYSA30DE" value="162" literal="CC-BY-SA-3.0-DE"/>
+    <eLiterals name="CCBYSA30IGO" value="163" literal="CC-BY-SA-3.0-IGO"/>
+    <eLiterals name="CCBYSA40" value="164" literal="CC-BY-SA-4.0"/>
+    <eLiterals name="CCPDDC" value="165" literal="CC-PDDC"/>
+    <eLiterals name="CCPDM10" value="166" literal="CC-PDM-1.0"/>
+    <eLiterals name="CCSA10" value="167" literal="CC-SA-1.0"/>
+    <eLiterals name="CC010" value="168" literal="CC0-1.0"/>
+    <eLiterals name="CDDL10" value="169" literal="CDDL-1.0"/>
+    <eLiterals name="CDDL11" value="170" literal="CDDL-1.1"/>
+    <eLiterals name="CDL10" value="171" literal="CDL-1.0"/>
+    <eLiterals name="CDLAPermissive10" value="172" literal="CDLA-Permissive-1.0"/>
+    <eLiterals name="CDLAPermissive20" value="173" literal="CDLA-Permissive-2.0"/>
+    <eLiterals name="CDLASharing10" value="174" literal="CDLA-Sharing-1.0"/>
+    <eLiterals name="CECILL10" value="175" literal="CECILL-1.0"/>
+    <eLiterals name="CECILL11" value="176" literal="CECILL-1.1"/>
+    <eLiterals name="CECILL20" value="177" literal="CECILL-2.0"/>
+    <eLiterals name="CECILL21" value="178" literal="CECILL-2.1"/>
+    <eLiterals name="CECILLB" value="179" literal="CECILL-B"/>
+    <eLiterals name="CECILLC" value="180" literal="CECILL-C"/>
+    <eLiterals name="CERNOHL11" value="181" literal="CERN-OHL-1.1"/>
+    <eLiterals name="CERNOHL12" value="182" literal="CERN-OHL-1.2"/>
+    <eLiterals name="CERNOHLP20" value="183" literal="CERN-OHL-P-2.0"/>
+    <eLiterals name="CERNOHLS20" value="184" literal="CERN-OHL-S-2.0"/>
+    <eLiterals name="CERNOHLW20" value="185" literal="CERN-OHL-W-2.0"/>
+    <eLiterals name="CFITSIO" value="186"/>
+    <eLiterals name="checkCvs" value="187" literal="check-cvs"/>
+    <eLiterals name="checkmk" value="188"/>
+    <eLiterals name="ClArtistic" value="189"/>
+    <eLiterals name="Clips" value="190"/>
+    <eLiterals name="CMUMach" value="191" literal="CMU-Mach"/>
+    <eLiterals name="CMUMachNodoc" value="192" literal="CMU-Mach-nodoc"/>
+    <eLiterals name="CNRIJython" value="193" literal="CNRI-Jython"/>
+    <eLiterals name="CNRIPython" value="194" literal="CNRI-Python"/>
+    <eLiterals name="CNRIPythonGPLCompatible" value="195" literal="CNRI-Python-GPL-Compatible"/>
+    <eLiterals name="COIL10" value="196" literal="COIL-1.0"/>
+    <eLiterals name="CommunitySpec10" value="197" literal="Community-Spec-1.0"/>
+    <eLiterals name="Condor11" value="198" literal="Condor-1.1"/>
+    <eLiterals name="copyleftNext030" value="199" literal="copyleft-next-0.3.0"/>
+    <eLiterals name="copyleftNext031" value="200" literal="copyleft-next-0.3.1"/>
+    <eLiterals name="CornellLosslessJPEG" value="201" literal="Cornell-Lossless-JPEG"/>
+    <eLiterals name="CPAL10" value="202" literal="CPAL-1.0"/>
+    <eLiterals name="CPL10" value="203" literal="CPL-1.0"/>
+    <eLiterals name="CPOL102" value="204" literal="CPOL-1.02"/>
+    <eLiterals name="Cronyx" value="205"/>
+    <eLiterals name="Crossword" value="206"/>
+    <eLiterals name="CryptoSwift" value="207"/>
+    <eLiterals name="CrystalStacker" value="208"/>
+    <eLiterals name="CUAOPL10" value="209" literal="CUA-OPL-1.0"/>
+    <eLiterals name="Cube" value="210"/>
+    <eLiterals name="curl" value="211"/>
+    <eLiterals name="cveTou" value="212" literal="cve-tou"/>
+    <eLiterals name="DFSL10" value="213" literal="D-FSL-1.0"/>
+    <eLiterals name="DEC3Clause" value="214" literal="DEC-3-Clause"/>
+    <eLiterals name="diffmark" value="215"/>
+    <eLiterals name="DLDEBY20" value="216" literal="DL-DE-BY-2.0"/>
+    <eLiterals name="DLDEZERO20" value="217" literal="DL-DE-ZERO-2.0"/>
+    <eLiterals name="DOC" value="218"/>
+    <eLiterals name="DocBookDTD" value="219" literal="DocBook-DTD"/>
+    <eLiterals name="DocBookSchema" value="220" literal="DocBook-Schema"/>
+    <eLiterals name="DocBookStylesheet" value="221" literal="DocBook-Stylesheet"/>
+    <eLiterals name="DocBookXML" value="222" literal="DocBook-XML"/>
+    <eLiterals name="Dotseqn" value="223"/>
+    <eLiterals name="DRL10" value="224" literal="DRL-1.0"/>
+    <eLiterals name="DRL11" value="225" literal="DRL-1.1"/>
+    <eLiterals name="DSDP" value="226"/>
+    <eLiterals name="dtoa" value="227"/>
+    <eLiterals name="dvipdfm" value="228"/>
+    <eLiterals name="ECL10" value="229" literal="ECL-1.0"/>
+    <eLiterals name="ECL20" value="230" literal="ECL-2.0"/>
+    <eLiterals name="eCos20" value="231" literal="eCos-2.0"/>
+    <eLiterals name="EFL10" value="232" literal="EFL-1.0"/>
+    <eLiterals name="EFL20" value="233" literal="EFL-2.0"/>
+    <eLiterals name="eGenix" value="234"/>
+    <eLiterals name="Elastic20" value="235" literal="Elastic-2.0"/>
+    <eLiterals name="Entessa" value="236"/>
+    <eLiterals name="EPICS" value="237"/>
+    <eLiterals name="EPL10" value="238" literal="EPL-1.0"/>
+    <eLiterals name="EPL20" value="239" literal="EPL-2.0"/>
+    <eLiterals name="ErlPL11" value="240" literal="ErlPL-1.1"/>
+    <eLiterals name="etalab20" value="241" literal="etalab-2.0"/>
+    <eLiterals name="EUDatagrid" value="242"/>
+    <eLiterals name="EUPL10" value="243" literal="EUPL-1.0"/>
+    <eLiterals name="EUPL11" value="244" literal="EUPL-1.1"/>
+    <eLiterals name="EUPL12" value="245" literal="EUPL-1.2"/>
+    <eLiterals name="Eurosym" value="246"/>
+    <eLiterals name="Fair" value="247"/>
+    <eLiterals name="FBM" value="248"/>
+    <eLiterals name="FDKAAC" value="249" literal="FDK-AAC"/>
+    <eLiterals name="FergusonTwofish" value="250" literal="Ferguson-Twofish"/>
+    <eLiterals name="Frameworx10" value="251" literal="Frameworx-1.0"/>
+    <eLiterals name="FreeBSDDOC" value="252" literal="FreeBSD-DOC"/>
+    <eLiterals name="FreeImage" value="253"/>
+    <eLiterals name="FSFAP" value="254"/>
+    <eLiterals name="FSFAPNoWarrantyDisclaimer" value="255" literal="FSFAP-no-warranty-disclaimer"/>
+    <eLiterals name="FSFUL" value="256"/>
+    <eLiterals name="FSFULLR" value="257"/>
+    <eLiterals name="FSFULLRSD" value="258"/>
+    <eLiterals name="FSFULLRWD" value="259"/>
+    <eLiterals name="FSL11ALv2" value="260" literal="FSL-1.1-ALv2"/>
+    <eLiterals name="FSL11MIT" value="261" literal="FSL-1.1-MIT"/>
+    <eLiterals name="FTL" value="262"/>
+    <eLiterals name="Furuseth" value="263"/>
+    <eLiterals name="fwlw" value="264"/>
+    <eLiterals name="GameProgrammingGems" value="265" literal="Game-Programming-Gems"/>
+    <eLiterals name="GCRDocs" value="266" literal="GCR-docs"/>
+    <eLiterals name="GD" value="267"/>
+    <eLiterals name="genericXts" value="268" literal="generic-xts"/>
+    <eLiterals name="GFDL11" value="269" literal="GFDL-1.1"/>
+    <eLiterals name="GFDL11InvariantsOnly" value="270" literal="GFDL-1.1-invariants-only"/>
+    <eLiterals name="GFDL11InvariantsOrLater" value="271" literal="GFDL-1.1-invariants-or-later"/>
+    <eLiterals name="GFDL11NoInvariantsOnly" value="272" literal="GFDL-1.1-no-invariants-only"/>
+    <eLiterals name="GFDL11NoInvariantsOrLater" value="273" literal="GFDL-1.1-no-invariants-or-later"/>
+    <eLiterals name="GFDL11Only" value="274" literal="GFDL-1.1-only"/>
+    <eLiterals name="GFDL11OrLater" value="275" literal="GFDL-1.1-or-later"/>
+    <eLiterals name="GFDL12" value="276" literal="GFDL-1.2"/>
+    <eLiterals name="GFDL12InvariantsOnly" value="277" literal="GFDL-1.2-invariants-only"/>
+    <eLiterals name="GFDL12InvariantsOrLater" value="278" literal="GFDL-1.2-invariants-or-later"/>
+    <eLiterals name="GFDL12NoInvariantsOnly" value="279" literal="GFDL-1.2-no-invariants-only"/>
+    <eLiterals name="GFDL12NoInvariantsOrLater" value="280" literal="GFDL-1.2-no-invariants-or-later"/>
+    <eLiterals name="GFDL12Only" value="281" literal="GFDL-1.2-only"/>
+    <eLiterals name="GFDL12OrLater" value="282" literal="GFDL-1.2-or-later"/>
+    <eLiterals name="GFDL13" value="283" literal="GFDL-1.3"/>
+    <eLiterals name="GFDL13InvariantsOnly" value="284" literal="GFDL-1.3-invariants-only"/>
+    <eLiterals name="GFDL13InvariantsOrLater" value="285" literal="GFDL-1.3-invariants-or-later"/>
+    <eLiterals name="GFDL13NoInvariantsOnly" value="286" literal="GFDL-1.3-no-invariants-only"/>
+    <eLiterals name="GFDL13NoInvariantsOrLater" value="287" literal="GFDL-1.3-no-invariants-or-later"/>
+    <eLiterals name="GFDL13Only" value="288" literal="GFDL-1.3-only"/>
+    <eLiterals name="GFDL13OrLater" value="289" literal="GFDL-1.3-or-later"/>
+    <eLiterals name="Giftware" value="290"/>
+    <eLiterals name="GL2PS" value="291"/>
+    <eLiterals name="Glide" value="292"/>
+    <eLiterals name="Glulxe" value="293"/>
+    <eLiterals name="GLWTPL" value="294"/>
+    <eLiterals name="gnuplot" value="295"/>
+    <eLiterals name="GPL10" value="296" literal="GPL-1.0"/>
+    <eLiterals name="GPL101" value="297" literal="GPL-1.0+"/>
+    <eLiterals name="GPL10Only" value="298" literal="GPL-1.0-only"/>
+    <eLiterals name="GPL10OrLater" value="299" literal="GPL-1.0-or-later"/>
+    <eLiterals name="GPL20" value="300" literal="GPL-2.0"/>
+    <eLiterals name="GPL201" value="301" literal="GPL-2.0+"/>
+    <eLiterals name="GPL20Only" value="302" literal="GPL-2.0-only"/>
+    <eLiterals name="GPL20OrLater" value="303" literal="GPL-2.0-or-later"/>
+    <eLiterals name="GPL20WithAutoconfException" value="304" literal="GPL-2.0-with-autoconf-exception"/>
+    <eLiterals name="GPL20WithBisonException" value="305" literal="GPL-2.0-with-bison-exception"/>
+    <eLiterals name="GPL20WithClasspathException" value="306" literal="GPL-2.0-with-classpath-exception"/>
+    <eLiterals name="GPL20WithFontException" value="307" literal="GPL-2.0-with-font-exception"/>
+    <eLiterals name="GPL20WithGCCException" value="308" literal="GPL-2.0-with-GCC-exception"/>
+    <eLiterals name="GPL30" value="309" literal="GPL-3.0"/>
+    <eLiterals name="GPL301" value="310" literal="GPL-3.0+"/>
+    <eLiterals name="GPL30Only" value="311" literal="GPL-3.0-only"/>
+    <eLiterals name="GPL30OrLater" value="312" literal="GPL-3.0-or-later"/>
+    <eLiterals name="GPL30WithAutoconfException" value="313" literal="GPL-3.0-with-autoconf-exception"/>
+    <eLiterals name="GPL30WithGCCException" value="314" literal="GPL-3.0-with-GCC-exception"/>
+    <eLiterals name="GraphicsGems" value="315" literal="Graphics-Gems"/>
+    <eLiterals name="gSOAP13b" value="316" literal="gSOAP-1.3b"/>
+    <eLiterals name="gtkbook" value="317"/>
+    <eLiterals name="Gutmann" value="318"/>
+    <eLiterals name="HaskellReport" value="319"/>
+    <eLiterals name="HDF5" value="320"/>
+    <eLiterals name="hdparm" value="321"/>
+    <eLiterals name="HIDAPI" value="322"/>
+    <eLiterals name="Hippocratic21" value="323" literal="Hippocratic-2.1"/>
+    <eLiterals name="HP1986" value="324" literal="HP-1986"/>
+    <eLiterals name="HP1989" value="325" literal="HP-1989"/>
+    <eLiterals name="HPND" value="326"/>
+    <eLiterals name="HPNDDEC" value="327" literal="HPND-DEC"/>
+    <eLiterals name="HPNDDoc" value="328" literal="HPND-doc"/>
+    <eLiterals name="HPNDDocSell" value="329" literal="HPND-doc-sell"/>
+    <eLiterals name="HPNDExportUS" value="330" literal="HPND-export-US"/>
+    <eLiterals name="HPNDExportUSAcknowledgement" value="331" literal="HPND-export-US-acknowledgement"/>
+    <eLiterals name="HPNDExportUSModify" value="332" literal="HPND-export-US-modify"/>
+    <eLiterals name="HPNDExport2US" value="333" literal="HPND-export2-US"/>
+    <eLiterals name="HPNDFennebergLivingston" value="334" literal="HPND-Fenneberg-Livingston"/>
+    <eLiterals name="HPNDINRIAIMAG" value="335" literal="HPND-INRIA-IMAG"/>
+    <eLiterals name="HPNDIntel" value="336" literal="HPND-Intel"/>
+    <eLiterals name="HPNDKevlinHenney" value="337" literal="HPND-Kevlin-Henney"/>
+    <eLiterals name="HPNDMarkusKuhn" value="338" literal="HPND-Markus-Kuhn"/>
+    <eLiterals name="HPNDMerchantabilityVariant" value="339" literal="HPND-merchantability-variant"/>
+    <eLiterals name="HPNDMITDisclaimer" value="340" literal="HPND-MIT-disclaimer"/>
+    <eLiterals name="HPNDNetrek" value="341" literal="HPND-Netrek"/>
+    <eLiterals name="HPNDPbmplus" value="342" literal="HPND-Pbmplus"/>
+    <eLiterals name="HPNDSellMITDisclaimerXserver" value="343" literal="HPND-sell-MIT-disclaimer-xserver"/>
+    <eLiterals name="HPNDSellRegexpr" value="344" literal="HPND-sell-regexpr"/>
+    <eLiterals name="HPNDSellVariant" value="345" literal="HPND-sell-variant"/>
+    <eLiterals name="HPNDSellVariantMITDisclaimer" value="346" literal="HPND-sell-variant-MIT-disclaimer"/>
+    <eLiterals name="HPNDSellVariantMITDisclaimerRev" value="347" literal="HPND-sell-variant-MIT-disclaimer-rev"/>
+    <eLiterals name="HPNDUC" value="348" literal="HPND-UC"/>
+    <eLiterals name="HPNDUCExportUS" value="349" literal="HPND-UC-export-US"/>
+    <eLiterals name="HTMLTIDY" value="350"/>
+    <eLiterals name="IBMPibs" value="351" literal="IBM-pibs"/>
+    <eLiterals name="ICU" value="352"/>
+    <eLiterals name="IECCodeComponentsEULA" value="353" literal="IEC-Code-Components-EULA"/>
+    <eLiterals name="IJG" value="354"/>
+    <eLiterals name="IJGShort" value="355" literal="IJG-short"/>
+    <eLiterals name="ImageMagick" value="356"/>
+    <eLiterals name="iMatix" value="357"/>
+    <eLiterals name="Imlib2" value="358"/>
+    <eLiterals name="InfoZIP" value="359" literal="Info-ZIP"/>
+    <eLiterals name="InnerNet20" value="360" literal="Inner-Net-2.0"/>
+    <eLiterals name="InnoSetup" value="361"/>
+    <eLiterals name="Intel" value="362"/>
+    <eLiterals name="IntelACPI" value="363" literal="Intel-ACPI"/>
+    <eLiterals name="Interbase10" value="364" literal="Interbase-1.0"/>
+    <eLiterals name="IPA" value="365"/>
+    <eLiterals name="IPL10" value="366" literal="IPL-1.0"/>
+    <eLiterals name="ISC" value="367"/>
+    <eLiterals name="ISCVeillard" value="368" literal="ISC-Veillard"/>
+    <eLiterals name="Jam" value="369"/>
+    <eLiterals name="JasPer20" value="370" literal="JasPer-2.0"/>
+    <eLiterals name="jove" value="371"/>
+    <eLiterals name="JPLImage" value="372" literal="JPL-image"/>
+    <eLiterals name="JPNIC" value="373"/>
+    <eLiterals name="JSON" value="374"/>
+    <eLiterals name="Kastrup" value="375"/>
+    <eLiterals name="Kazlib" value="376"/>
+    <eLiterals name="KnuthCTAN" value="377" literal="Knuth-CTAN"/>
+    <eLiterals name="LAL12" value="378" literal="LAL-1.2"/>
+    <eLiterals name="LAL13" value="379" literal="LAL-1.3"/>
+    <eLiterals name="Latex2e" value="380"/>
+    <eLiterals name="Latex2eTranslatedNotice" value="381" literal="Latex2e-translated-notice"/>
+    <eLiterals name="Leptonica" value="382"/>
+    <eLiterals name="LGPL20" value="383" literal="LGPL-2.0"/>
+    <eLiterals name="LGPL201" value="384" literal="LGPL-2.0+"/>
+    <eLiterals name="LGPL20Only" value="385" literal="LGPL-2.0-only"/>
+    <eLiterals name="LGPL20OrLater" value="386" literal="LGPL-2.0-or-later"/>
+    <eLiterals name="LGPL21" value="387" literal="LGPL-2.1"/>
+    <eLiterals name="LGPL211" value="388" literal="LGPL-2.1+"/>
+    <eLiterals name="LGPL21Only" value="389" literal="LGPL-2.1-only"/>
+    <eLiterals name="LGPL21OrLater" value="390" literal="LGPL-2.1-or-later"/>
+    <eLiterals name="LGPL30" value="391" literal="LGPL-3.0"/>
+    <eLiterals name="LGPL301" value="392" literal="LGPL-3.0+"/>
+    <eLiterals name="LGPL30Only" value="393" literal="LGPL-3.0-only"/>
+    <eLiterals name="LGPL30OrLater" value="394" literal="LGPL-3.0-or-later"/>
+    <eLiterals name="LGPLLR" value="395"/>
+    <eLiterals name="Libpng" value="396"/>
+    <eLiterals name="libpng1635" value="397" literal="libpng-1.6.35"/>
+    <eLiterals name="libpng20" value="398" literal="libpng-2.0"/>
+    <eLiterals name="libselinux10" value="399" literal="libselinux-1.0"/>
+    <eLiterals name="libtiff" value="400"/>
+    <eLiterals name="libutilDavidNugent" value="401" literal="libutil-David-Nugent"/>
+    <eLiterals name="LiLiQP11" value="402" literal="LiLiQ-P-1.1"/>
+    <eLiterals name="LiLiQR11" value="403" literal="LiLiQ-R-1.1"/>
+    <eLiterals name="LiLiQRplus11" value="404" literal="LiLiQ-Rplus-1.1"/>
+    <eLiterals name="LinuxManPages1Para" value="405" literal="Linux-man-pages-1-para"/>
+    <eLiterals name="LinuxManPagesCopyleft" value="406" literal="Linux-man-pages-copyleft"/>
+    <eLiterals name="LinuxManPagesCopyleft2Para" value="407" literal="Linux-man-pages-copyleft-2-para"/>
+    <eLiterals name="LinuxManPagesCopyleftVar" value="408" literal="Linux-man-pages-copyleft-var"/>
+    <eLiterals name="LinuxOpenIB" value="409" literal="Linux-OpenIB"/>
+    <eLiterals name="LOOP" value="410"/>
+    <eLiterals name="LPDDocument" value="411" literal="LPD-document"/>
+    <eLiterals name="LPL10" value="412" literal="LPL-1.0"/>
+    <eLiterals name="LPL102" value="413" literal="LPL-1.02"/>
+    <eLiterals name="LPPL10" value="414" literal="LPPL-1.0"/>
+    <eLiterals name="LPPL11" value="415" literal="LPPL-1.1"/>
+    <eLiterals name="LPPL12" value="416" literal="LPPL-1.2"/>
+    <eLiterals name="LPPL13a" value="417" literal="LPPL-1.3a"/>
+    <eLiterals name="LPPL13c" value="418" literal="LPPL-1.3c"/>
+    <eLiterals name="lsof" value="419"/>
+    <eLiterals name="LucidaBitmapFonts" value="420" literal="Lucida-Bitmap-Fonts"/>
+    <eLiterals name="LZMASDK911To920" value="421" literal="LZMA-SDK-9.11-to-9.20"/>
+    <eLiterals name="LZMASDK922" value="422" literal="LZMA-SDK-9.22"/>
+    <eLiterals name="Mackerras3Clause" value="423" literal="Mackerras-3-Clause"/>
+    <eLiterals name="Mackerras3ClauseAcknowledgment" value="424" literal="Mackerras-3-Clause-acknowledgment"/>
+    <eLiterals name="magaz" value="425"/>
+    <eLiterals name="mailprio" value="426"/>
+    <eLiterals name="MakeIndex" value="427"/>
+    <eLiterals name="man2html" value="428"/>
+    <eLiterals name="MartinBirgmeier" value="429" literal="Martin-Birgmeier"/>
+    <eLiterals name="McPheeSlideshow" value="430" literal="McPhee-slideshow"/>
+    <eLiterals name="metamail" value="431"/>
+    <eLiterals name="Minpack" value="432"/>
+    <eLiterals name="MIPS" value="433"/>
+    <eLiterals name="MirOS" value="434"/>
+    <eLiterals name="MIT" value="435"/>
+    <eLiterals name="MIT0" value="436" literal="MIT-0"/>
+    <eLiterals name="MITAdvertising" value="437" literal="MIT-advertising"/>
+    <eLiterals name="MITClick" value="438" literal="MIT-Click"/>
+    <eLiterals name="MITCMU" value="439" literal="MIT-CMU"/>
+    <eLiterals name="MITEnna" value="440" literal="MIT-enna"/>
+    <eLiterals name="MITFeh" value="441" literal="MIT-feh"/>
+    <eLiterals name="MITFestival" value="442" literal="MIT-Festival"/>
+    <eLiterals name="MITKhronosOld" value="443" literal="MIT-Khronos-old"/>
+    <eLiterals name="MITModernVariant" value="444" literal="MIT-Modern-Variant"/>
+    <eLiterals name="MITOpenGroup" value="445" literal="MIT-open-group"/>
+    <eLiterals name="MITTestregex" value="446" literal="MIT-testregex"/>
+    <eLiterals name="MITWu" value="447" literal="MIT-Wu"/>
+    <eLiterals name="MITNFA" value="448"/>
+    <eLiterals name="MMIXware" value="449"/>
+    <eLiterals name="Motosoto" value="450"/>
+    <eLiterals name="MPEGSSG" value="451" literal="MPEG-SSG"/>
+    <eLiterals name="mpiPermissive" value="452" literal="mpi-permissive"/>
+    <eLiterals name="mpich2" value="453"/>
+    <eLiterals name="MPL10" value="454" literal="MPL-1.0"/>
+    <eLiterals name="MPL11" value="455" literal="MPL-1.1"/>
+    <eLiterals name="MPL20" value="456" literal="MPL-2.0"/>
+    <eLiterals name="MPL20NoCopyleftException" value="457" literal="MPL-2.0-no-copyleft-exception"/>
+    <eLiterals name="mplus" value="458"/>
+    <eLiterals name="MSLPL" value="459" literal="MS-LPL"/>
+    <eLiterals name="MSPL" value="460" literal="MS-PL"/>
+    <eLiterals name="MSRL" value="461" literal="MS-RL"/>
+    <eLiterals name="MTLL" value="462"/>
+    <eLiterals name="MulanPSL10" value="463" literal="MulanPSL-1.0"/>
+    <eLiterals name="MulanPSL20" value="464" literal="MulanPSL-2.0"/>
+    <eLiterals name="Multics" value="465"/>
+    <eLiterals name="Mup" value="466"/>
+    <eLiterals name="NAIST2003" value="467" literal="NAIST-2003"/>
+    <eLiterals name="NASA13" value="468" literal="NASA-1.3"/>
+    <eLiterals name="Naumen" value="469"/>
+    <eLiterals name="NBPL10" value="470" literal="NBPL-1.0"/>
+    <eLiterals name="NCBIPD" value="471" literal="NCBI-PD"/>
+    <eLiterals name="NCGLUK20" value="472" literal="NCGL-UK-2.0"/>
+    <eLiterals name="NCL" value="473"/>
+    <eLiterals name="NCSA" value="474"/>
+    <eLiterals name="NetSNMP" value="475" literal="Net-SNMP"/>
+    <eLiterals name="NetCDF" value="476"/>
+    <eLiterals name="Newsletr" value="477"/>
+    <eLiterals name="NGPL" value="478"/>
+    <eLiterals name="ngrep" value="479"/>
+    <eLiterals name="NICTA10" value="480" literal="NICTA-1.0"/>
+    <eLiterals name="NISTPD" value="481" literal="NIST-PD"/>
+    <eLiterals name="NISTPDFallback" value="482" literal="NIST-PD-fallback"/>
+    <eLiterals name="NISTSoftware" value="483" literal="NIST-Software"/>
+    <eLiterals name="NLOD10" value="484" literal="NLOD-1.0"/>
+    <eLiterals name="NLOD20" value="485" literal="NLOD-2.0"/>
+    <eLiterals name="NLPL" value="486"/>
+    <eLiterals name="Nokia" value="487"/>
+    <eLiterals name="NOSL" value="488"/>
+    <eLiterals name="Noweb" value="489"/>
+    <eLiterals name="NPL10" value="490" literal="NPL-1.0"/>
+    <eLiterals name="NPL11" value="491" literal="NPL-1.1"/>
+    <eLiterals name="NPOSL30" value="492" literal="NPOSL-3.0"/>
+    <eLiterals name="NRL" value="493"/>
+    <eLiterals name="NTIAPD" value="494" literal="NTIA-PD"/>
+    <eLiterals name="NTP" value="495"/>
+    <eLiterals name="NTP0" value="496" literal="NTP-0"/>
+    <eLiterals name="Nunit" value="497"/>
+    <eLiterals name="OUDA10" value="498" literal="O-UDA-1.0"/>
+    <eLiterals name="OAR" value="499"/>
+    <eLiterals name="OCCTPL" value="500" literal="OCCT-PL"/>
+    <eLiterals name="OCLC20" value="501" literal="OCLC-2.0"/>
+    <eLiterals name="ODbL10" value="502" literal="ODbL-1.0"/>
+    <eLiterals name="ODCBy10" value="503" literal="ODC-By-1.0"/>
+    <eLiterals name="OFFIS" value="504"/>
+    <eLiterals name="OFL10" value="505" literal="OFL-1.0"/>
+    <eLiterals name="OFL10NoRFN" value="506" literal="OFL-1.0-no-RFN"/>
+    <eLiterals name="OFL10RFN" value="507" literal="OFL-1.0-RFN"/>
+    <eLiterals name="OFL11" value="508" literal="OFL-1.1"/>
+    <eLiterals name="OFL11NoRFN" value="509" literal="OFL-1.1-no-RFN"/>
+    <eLiterals name="OFL11RFN" value="510" literal="OFL-1.1-RFN"/>
+    <eLiterals name="OGC10" value="511" literal="OGC-1.0"/>
+    <eLiterals name="OGDLTaiwan10" value="512" literal="OGDL-Taiwan-1.0"/>
+    <eLiterals name="OGLCanada20" value="513" literal="OGL-Canada-2.0"/>
+    <eLiterals name="OGLUK10" value="514" literal="OGL-UK-1.0"/>
+    <eLiterals name="OGLUK20" value="515" literal="OGL-UK-2.0"/>
+    <eLiterals name="OGLUK30" value="516" literal="OGL-UK-3.0"/>
+    <eLiterals name="OGTSL" value="517"/>
+    <eLiterals name="OLDAP11" value="518" literal="OLDAP-1.1"/>
+    <eLiterals name="OLDAP12" value="519" literal="OLDAP-1.2"/>
+    <eLiterals name="OLDAP13" value="520" literal="OLDAP-1.3"/>
+    <eLiterals name="OLDAP14" value="521" literal="OLDAP-1.4"/>
+    <eLiterals name="OLDAP20" value="522" literal="OLDAP-2.0"/>
+    <eLiterals name="OLDAP201" value="523" literal="OLDAP-2.0.1"/>
+    <eLiterals name="OLDAP21" value="524" literal="OLDAP-2.1"/>
+    <eLiterals name="OLDAP22" value="525" literal="OLDAP-2.2"/>
+    <eLiterals name="OLDAP221" value="526" literal="OLDAP-2.2.1"/>
+    <eLiterals name="OLDAP222" value="527" literal="OLDAP-2.2.2"/>
+    <eLiterals name="OLDAP23" value="528" literal="OLDAP-2.3"/>
+    <eLiterals name="OLDAP24" value="529" literal="OLDAP-2.4"/>
+    <eLiterals name="OLDAP25" value="530" literal="OLDAP-2.5"/>
+    <eLiterals name="OLDAP26" value="531" literal="OLDAP-2.6"/>
+    <eLiterals name="OLDAP27" value="532" literal="OLDAP-2.7"/>
+    <eLiterals name="OLDAP28" value="533" literal="OLDAP-2.8"/>
+    <eLiterals name="OLFL13" value="534" literal="OLFL-1.3"/>
+    <eLiterals name="OML" value="535"/>
+    <eLiterals name="OpenPBS23" value="536" literal="OpenPBS-2.3"/>
+    <eLiterals name="OpenSSL" value="537"/>
+    <eLiterals name="OpenSSLStandalone" value="538" literal="OpenSSL-standalone"/>
+    <eLiterals name="OpenVision" value="539"/>
+    <eLiterals name="OPL10" value="540" literal="OPL-1.0"/>
+    <eLiterals name="OPLUK30" value="541" literal="OPL-UK-3.0"/>
+    <eLiterals name="OPUBL10" value="542" literal="OPUBL-1.0"/>
+    <eLiterals name="OSETPL21" value="543" literal="OSET-PL-2.1"/>
+    <eLiterals name="OSL10" value="544" literal="OSL-1.0"/>
+    <eLiterals name="OSL11" value="545" literal="OSL-1.1"/>
+    <eLiterals name="OSL20" value="546" literal="OSL-2.0"/>
+    <eLiterals name="OSL21" value="547" literal="OSL-2.1"/>
+    <eLiterals name="OSL30" value="548" literal="OSL-3.0"/>
+    <eLiterals name="PADL" value="549"/>
+    <eLiterals name="Parity600" value="550" literal="Parity-6.0.0"/>
+    <eLiterals name="Parity700" value="551" literal="Parity-7.0.0"/>
+    <eLiterals name="PDDL10" value="552" literal="PDDL-1.0"/>
+    <eLiterals name="PHP30" value="553" literal="PHP-3.0"/>
+    <eLiterals name="PHP301" value="554" literal="PHP-3.01"/>
+    <eLiterals name="Pixar" value="555"/>
+    <eLiterals name="pkgconf" value="556"/>
+    <eLiterals name="Plexus" value="557"/>
+    <eLiterals name="pnmstitch" value="558"/>
+    <eLiterals name="PolyFormNoncommercial100" value="559" literal="PolyForm-Noncommercial-1.0.0"/>
+    <eLiterals name="PolyFormSmallBusiness100" value="560" literal="PolyForm-Small-Business-1.0.0"/>
+    <eLiterals name="PostgreSQL" value="561"/>
+    <eLiterals name="PPL" value="562"/>
+    <eLiterals name="PSF20" value="563" literal="PSF-2.0"/>
+    <eLiterals name="psfrag" value="564"/>
+    <eLiterals name="psutils" value="565"/>
+    <eLiterals name="Python20" value="566" literal="Python-2.0"/>
+    <eLiterals name="Python201" value="567" literal="Python-2.0.1"/>
+    <eLiterals name="pythonLdap" value="568" literal="python-ldap"/>
+    <eLiterals name="Qhull" value="569"/>
+    <eLiterals name="QPL10" value="570" literal="QPL-1.0"/>
+    <eLiterals name="QPL10INRIA2004" value="571" literal="QPL-1.0-INRIA-2004"/>
+    <eLiterals name="radvd" value="572"/>
+    <eLiterals name="Rdisc" value="573"/>
+    <eLiterals name="RHeCos11" value="574" literal="RHeCos-1.1"/>
+    <eLiterals name="RPL11" value="575" literal="RPL-1.1"/>
+    <eLiterals name="RPL15" value="576" literal="RPL-1.5"/>
+    <eLiterals name="RPSL10" value="577" literal="RPSL-1.0"/>
+    <eLiterals name="RSAMD" value="578" literal="RSA-MD"/>
+    <eLiterals name="RSCPL" value="579"/>
+    <eLiterals name="Ruby" value="580"/>
+    <eLiterals name="RubyPty" value="581" literal="Ruby-pty"/>
+    <eLiterals name="SAXPD" value="582" literal="SAX-PD"/>
+    <eLiterals name="SAXPD20" value="583" literal="SAX-PD-2.0"/>
+    <eLiterals name="Saxpath" value="584"/>
+    <eLiterals name="SCEA" value="585"/>
+    <eLiterals name="SchemeReport" value="586"/>
+    <eLiterals name="Sendmail" value="587"/>
+    <eLiterals name="Sendmail823" value="588" literal="Sendmail-8.23"/>
+    <eLiterals name="SendmailOpenSource11" value="589" literal="Sendmail-Open-Source-1.1"/>
+    <eLiterals name="SGIB10" value="590" literal="SGI-B-1.0"/>
+    <eLiterals name="SGIB11" value="591" literal="SGI-B-1.1"/>
+    <eLiterals name="SGIB20" value="592" literal="SGI-B-2.0"/>
+    <eLiterals name="SGIOpenGL" value="593" literal="SGI-OpenGL"/>
+    <eLiterals name="SGP4" value="594"/>
+    <eLiterals name="SHL05" value="595" literal="SHL-0.5"/>
+    <eLiterals name="SHL051" value="596" literal="SHL-0.51"/>
+    <eLiterals name="SimPL20" value="597" literal="SimPL-2.0"/>
+    <eLiterals name="SISSL" value="598"/>
+    <eLiterals name="SISSL12" value="599" literal="SISSL-1.2"/>
+    <eLiterals name="SL" value="600"/>
+    <eLiterals name="Sleepycat" value="601"/>
+    <eLiterals name="SMAILGPL" value="602" literal="SMAIL-GPL"/>
+    <eLiterals name="SMLNJ" value="603"/>
+    <eLiterals name="SMPPL" value="604"/>
+    <eLiterals name="SNIA" value="605"/>
+    <eLiterals name="snprintf" value="606"/>
+    <eLiterals name="SOFA" value="607"/>
+    <eLiterals name="softSurfer" value="608"/>
+    <eLiterals name="Soundex" value="609"/>
+    <eLiterals name="Spencer86" value="610" literal="Spencer-86"/>
+    <eLiterals name="Spencer94" value="611" literal="Spencer-94"/>
+    <eLiterals name="Spencer99" value="612" literal="Spencer-99"/>
+    <eLiterals name="SPL10" value="613" literal="SPL-1.0"/>
+    <eLiterals name="sshKeyscan" value="614" literal="ssh-keyscan"/>
+    <eLiterals name="SSHOpenSSH" value="615" literal="SSH-OpenSSH"/>
+    <eLiterals name="SSHShort" value="616" literal="SSH-short"/>
+    <eLiterals name="SSLeayStandalone" value="617" literal="SSLeay-standalone"/>
+    <eLiterals name="SSPL10" value="618" literal="SSPL-1.0"/>
+    <eLiterals name="StandardMLNJ" value="619" literal="StandardML-NJ"/>
+    <eLiterals name="SugarCRM113" value="620" literal="SugarCRM-1.1.3"/>
+    <eLiterals name="SUL10" value="621" literal="SUL-1.0"/>
+    <eLiterals name="SunPPP" value="622" literal="Sun-PPP"/>
+    <eLiterals name="SunPPP2000" value="623" literal="Sun-PPP-2000"/>
+    <eLiterals name="SunPro" value="624"/>
+    <eLiterals name="SWL" value="625"/>
+    <eLiterals name="swrule" value="626"/>
+    <eLiterals name="Symlinks" value="627"/>
+    <eLiterals name="TAPROHL10" value="628" literal="TAPR-OHL-1.0"/>
+    <eLiterals name="TCL" value="629"/>
+    <eLiterals name="TCPWrappers" value="630" literal="TCP-wrappers"/>
+    <eLiterals name="TermReadKey" value="631"/>
+    <eLiterals name="TGPPL10" value="632" literal="TGPPL-1.0"/>
+    <eLiterals name="ThirdEye" value="633"/>
+    <eLiterals name="threeparttable" value="634"/>
+    <eLiterals name="TMate" value="635"/>
+    <eLiterals name="TORQUE11" value="636" literal="TORQUE-1.1"/>
+    <eLiterals name="TOSL" value="637"/>
+    <eLiterals name="TPDL" value="638"/>
+    <eLiterals name="TPL10" value="639" literal="TPL-1.0"/>
+    <eLiterals name="TrustedQSL" value="640"/>
+    <eLiterals name="TTWL" value="641"/>
+    <eLiterals name="TTYP0" value="642"/>
+    <eLiterals name="TUBerlin10" value="643" literal="TU-Berlin-1.0"/>
+    <eLiterals name="TUBerlin20" value="644" literal="TU-Berlin-2.0"/>
+    <eLiterals name="UbuntuFont10" value="645" literal="Ubuntu-font-1.0"/>
+    <eLiterals name="UCAR" value="646"/>
+    <eLiterals name="UCL10" value="647" literal="UCL-1.0"/>
+    <eLiterals name="ulem" value="648"/>
+    <eLiterals name="UMichMerit" value="649" literal="UMich-Merit"/>
+    <eLiterals name="Unicode30" value="650" literal="Unicode-3.0"/>
+    <eLiterals name="UnicodeDFS2015" value="651" literal="Unicode-DFS-2015"/>
+    <eLiterals name="UnicodeDFS2016" value="652" literal="Unicode-DFS-2016"/>
+    <eLiterals name="UnicodeTOU" value="653" literal="Unicode-TOU"/>
+    <eLiterals name="UnixCrypt" value="654"/>
+    <eLiterals name="Unlicense" value="655"/>
+    <eLiterals name="UnlicenseLibtelnet" value="656" literal="Unlicense-libtelnet"/>
+    <eLiterals name="UnlicenseLibwhirlpool" value="657" literal="Unlicense-libwhirlpool"/>
+    <eLiterals name="UPL10" value="658" literal="UPL-1.0"/>
+    <eLiterals name="URTRLE" value="659" literal="URT-RLE"/>
+    <eLiterals name="Vim" value="660"/>
+    <eLiterals name="VOSTROM" value="661"/>
+    <eLiterals name="VSL10" value="662" literal="VSL-1.0"/>
+    <eLiterals name="W3C" value="663"/>
+    <eLiterals name="W3C19980720" value="664" literal="W3C-19980720"/>
+    <eLiterals name="W3C20150513" value="665" literal="W3C-20150513"/>
+    <eLiterals name="w3m" value="666"/>
+    <eLiterals name="Watcom10" value="667" literal="Watcom-1.0"/>
+    <eLiterals name="WidgetWorkshop" value="668" literal="Widget-Workshop"/>
+    <eLiterals name="Wsuipa" value="669"/>
+    <eLiterals name="WTFPL" value="670"/>
+    <eLiterals name="wwl" value="671"/>
+    <eLiterals name="wxWindows" value="672"/>
+    <eLiterals name="X11" value="673"/>
+    <eLiterals name="X11DistributeModificationsVariant" value="674" literal="X11-distribute-modifications-variant"/>
+    <eLiterals name="X11Swapped" value="675" literal="X11-swapped"/>
+    <eLiterals name="Xdebug103" value="676" literal="Xdebug-1.03"/>
+    <eLiterals name="Xerox" value="677"/>
+    <eLiterals name="Xfig" value="678"/>
+    <eLiterals name="XFree8611" value="679" literal="XFree86-1.1"/>
+    <eLiterals name="xinetd" value="680"/>
+    <eLiterals name="xkeyboardConfigZinoviev" value="681" literal="xkeyboard-config-Zinoviev"/>
+    <eLiterals name="xlock" value="682"/>
+    <eLiterals name="Xnet" value="683"/>
+    <eLiterals name="xpp" value="684"/>
+    <eLiterals name="XSkat" value="685"/>
+    <eLiterals name="xzoom" value="686"/>
+    <eLiterals name="YPL10" value="687" literal="YPL-1.0"/>
+    <eLiterals name="YPL11" value="688" literal="YPL-1.1"/>
+    <eLiterals name="Zed" value="689"/>
+    <eLiterals name="Zeeff" value="690"/>
+    <eLiterals name="Zend20" value="691" literal="Zend-2.0"/>
+    <eLiterals name="Zimbra13" value="692" literal="Zimbra-1.3"/>
+    <eLiterals name="Zimbra14" value="693" literal="Zimbra-1.4"/>
+    <eLiterals name="Zlib" value="694"/>
+    <eLiterals name="zlibAcknowledgement" value="695" literal="zlib-acknowledgement"/>
+    <eLiterals name="ZPL11" value="696" literal="ZPL-1.1"/>
+    <eLiterals name="ZPL20" value="697" literal="ZPL-2.0"/>
+    <eLiterals name="ZPL21" value="698" literal="ZPL-2.1"/>
+    <eLiterals name="_389Exception" value="699" literal="389-exception"/>
+    <eLiterals name="AsteriskException" value="700" literal="Asterisk-exception"/>
+    <eLiterals name="AsteriskLinkingProtocolsException" value="701" literal="Asterisk-linking-protocols-exception"/>
+    <eLiterals name="AutoconfException20" value="702" literal="Autoconf-exception-2.0"/>
+    <eLiterals name="AutoconfException30" value="703" literal="Autoconf-exception-3.0"/>
+    <eLiterals name="AutoconfExceptionGeneric" value="704" literal="Autoconf-exception-generic"/>
+    <eLiterals name="AutoconfExceptionGeneric30" value="705" literal="Autoconf-exception-generic-3.0"/>
+    <eLiterals name="AutoconfExceptionMacro" value="706" literal="Autoconf-exception-macro"/>
+    <eLiterals name="BisonException124" value="707" literal="Bison-exception-1.24"/>
+    <eLiterals name="BisonException22" value="708" literal="Bison-exception-2.2"/>
+    <eLiterals name="BootloaderException" value="709" literal="Bootloader-exception"/>
+    <eLiterals name="CGALLinkingException" value="710" literal="CGAL-linking-exception"/>
+    <eLiterals name="ClasspathException20" value="711" literal="Classpath-exception-2.0"/>
+    <eLiterals name="CLISPException20" value="712" literal="CLISP-exception-2.0"/>
+    <eLiterals name="cryptsetupOpenSSLException" value="713" literal="cryptsetup-OpenSSL-exception"/>
+    <eLiterals name="DigiaQtLGPLException11" value="714" literal="Digia-Qt-LGPL-exception-1.1"/>
+    <eLiterals name="DigiRuleFOSSException" value="715" literal="DigiRule-FOSS-exception"/>
+    <eLiterals name="eCosException20" value="716" literal="eCos-exception-2.0"/>
+    <eLiterals name="erlangOtpLinkingException" value="717" literal="erlang-otp-linking-exception"/>
+    <eLiterals name="FawkesRuntimeException" value="718" literal="Fawkes-Runtime-exception"/>
+    <eLiterals name="FLTKException" value="719" literal="FLTK-exception"/>
+    <eLiterals name="fmtException" value="720" literal="fmt-exception"/>
+    <eLiterals name="FontException20" value="721" literal="Font-exception-2.0"/>
+    <eLiterals name="freertosException20" value="722" literal="freertos-exception-2.0"/>
+    <eLiterals name="GCCException20" value="723" literal="GCC-exception-2.0"/>
+    <eLiterals name="GCCException20Note" value="724" literal="GCC-exception-2.0-note"/>
+    <eLiterals name="GCCException31" value="725" literal="GCC-exception-3.1"/>
+    <eLiterals name="GmshException" value="726" literal="Gmsh-exception"/>
+    <eLiterals name="GNATException" value="727" literal="GNAT-exception"/>
+    <eLiterals name="GNOMEExamplesException" value="728" literal="GNOME-examples-exception"/>
+    <eLiterals name="GNUCompilerException" value="729" literal="GNU-compiler-exception"/>
+    <eLiterals name="gnuJavamailException" value="730" literal="gnu-javamail-exception"/>
+    <eLiterals name="GPL30389DsBaseException" value="731" literal="GPL-3.0-389-ds-base-exception"/>
+    <eLiterals name="GPL30InterfaceException" value="732" literal="GPL-3.0-interface-exception"/>
+    <eLiterals name="GPL30LinkingException" value="733" literal="GPL-3.0-linking-exception"/>
+    <eLiterals name="GPL30LinkingSourceException" value="734" literal="GPL-3.0-linking-source-exception"/>
+    <eLiterals name="GPLCC10" value="735" literal="GPL-CC-1.0"/>
+    <eLiterals name="GStreamerException2005" value="736" literal="GStreamer-exception-2005"/>
+    <eLiterals name="GStreamerException2008" value="737" literal="GStreamer-exception-2008"/>
+    <eLiterals name="harbourException" value="738" literal="harbour-exception"/>
+    <eLiterals name="i2pGplJavaException" value="739" literal="i2p-gpl-java-exception"/>
+    <eLiterals name="IndependentModulesException" value="740" literal="Independent-modules-exception"/>
+    <eLiterals name="KiCadLibrariesException" value="741" literal="KiCad-libraries-exception"/>
+    <eLiterals name="LGPL30LinkingException" value="742" literal="LGPL-3.0-linking-exception"/>
+    <eLiterals name="libpriOpenH323Exception" value="743" literal="libpri-OpenH323-exception"/>
+    <eLiterals name="LibtoolException" value="744" literal="Libtool-exception"/>
+    <eLiterals name="LinuxSyscallNote" value="745" literal="Linux-syscall-note"/>
+    <eLiterals name="LLGPL" value="746"/>
+    <eLiterals name="LLVMException" value="747" literal="LLVM-exception"/>
+    <eLiterals name="LZMAException" value="748" literal="LZMA-exception"/>
+    <eLiterals name="mifException" value="749" literal="mif-exception"/>
+    <eLiterals name="mxmlException" value="750" literal="mxml-exception"/>
+    <eLiterals name="NokiaQtException11" value="751" literal="Nokia-Qt-exception-1.1"/>
+    <eLiterals name="OCamlLGPLLinkingException" value="752" literal="OCaml-LGPL-linking-exception"/>
+    <eLiterals name="OCCTException10" value="753" literal="OCCT-exception-1.0"/>
+    <eLiterals name="OpenJDKAssemblyException10" value="754" literal="OpenJDK-assembly-exception-1.0"/>
+    <eLiterals name="openvpnOpensslException" value="755" literal="openvpn-openssl-exception"/>
+    <eLiterals name="PCRE2Exception" value="756" literal="PCRE2-exception"/>
+    <eLiterals name="polyparseException" value="757" literal="polyparse-exception"/>
+    <eLiterals name="PSOrPDFFontException20170817" value="758" literal="PS-or-PDF-font-exception-20170817"/>
+    <eLiterals name="QPL10INRIA2004Exception" value="759" literal="QPL-1.0-INRIA-2004-exception"/>
+    <eLiterals name="QtGPLException10" value="760" literal="Qt-GPL-exception-1.0"/>
+    <eLiterals name="QtLGPLException11" value="761" literal="Qt-LGPL-exception-1.1"/>
+    <eLiterals name="QwtException10" value="762" literal="Qwt-exception-1.0"/>
+    <eLiterals name="romicException" value="763" literal="romic-exception"/>
+    <eLiterals name="RRDtoolFLOSSException20" value="764" literal="RRDtool-FLOSS-exception-2.0"/>
+    <eLiterals name="SANEException" value="765" literal="SANE-exception"/>
+    <eLiterals name="SHL20" value="766" literal="SHL-2.0"/>
+    <eLiterals name="SHL21" value="767" literal="SHL-2.1"/>
+    <eLiterals name="stunnelException" value="768" literal="stunnel-exception"/>
+    <eLiterals name="SWIException" value="769" literal="SWI-exception"/>
+    <eLiterals name="SwiftException" value="770" literal="Swift-exception"/>
+    <eLiterals name="TexinfoException" value="771" literal="Texinfo-exception"/>
+    <eLiterals name="uBootException20" value="772" literal="u-boot-exception-2.0"/>
+    <eLiterals name="UBDLException" value="773" literal="UBDL-exception"/>
+    <eLiterals name="UniversalFOSSException10" value="774" literal="Universal-FOSS-exception-1.0"/>
+    <eLiterals name="vsftpdOpensslException" value="775" literal="vsftpd-openssl-exception"/>
+    <eLiterals name="WxWindowsException31" value="776" literal="WxWindows-exception-3.1"/>
+    <eLiterals name="x11vncOpensslException" value="777" literal="x11vnc-openssl-exception"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="LicenseIdObject" instanceClassName="org.eclipse.emf.common.util.Enumerator">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="licenseId:Object"/>
+      <details key="baseType" value="licenseId"/>
+    </eAnnotations>
+  </eClassifiers>
+</ecore:EPackage>
