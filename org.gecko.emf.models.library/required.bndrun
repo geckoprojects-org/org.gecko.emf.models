@@ -66,7 +66,6 @@
 	de.adv-online.aaa.model;version=snapshot,\
 	net.opengis.ogc;version=snapshot,\
 	net.opengis.wms;version=snapshot,\
-	org.apache.felix.configadmin;version='[1.9.26,1.9.27)',\
 	org.eclipse.emfcloud.emfjson-jackson;version='[2.2.0,2.2.1)',\
 	org.gecko.emf.json;version='[1.5.1,1.5.2)',\
 	org.gecko.emf.osgi.component.minimal;version='[6.3.0,6.3.1)',\
