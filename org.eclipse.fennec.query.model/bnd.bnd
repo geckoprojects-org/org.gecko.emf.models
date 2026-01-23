@@ -20,5 +20,5 @@ Bundle-Version: 1.0.0.SNAPSHOT
 
 -buildpath: \
 	org.osgi.service.condition;version=latest,\
-	org.gecko.emf.util.model
+	org.gecko.emf.util.model;version=latest
 
