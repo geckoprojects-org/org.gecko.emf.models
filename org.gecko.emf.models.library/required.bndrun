@@ -11,6 +11,7 @@
 	bnd.identity;id='net.opengis.wms',\
 	bnd.identity;id='org.camunda.bpmn.model',\
 	bnd.identity;id='org.hl7.fhir.model',\
+	bnd.identity;id='org.docbook.model',\
 	bnd.identity;id='org.omg.cmmn.model',\
 	bnd.identity;id='org.omg.dmn.model',\
 	bnd.identity;id='org.omg.bpmn.model',\
@@ -18,6 +19,7 @@
 	bnd.identity;id='org.w3.smil.model',\
 	bnd.identity;id='org.w3.xhtml.model',\
 	bnd.identity;id='org.w3.xlink.model',\
+	bnd.identity;id='org.w3.xinclude.model',\
 	bnd.identity;id='org.xmlsoap.model',\
 	bnd.identity;id='org.w3.rdf.model',\
 	bnd.identity;id='de.dwd.cdc.common.model',\
@@ -76,4 +78,6 @@
 	org.apache.maven.model;version=snapshot,\
 	org.cyclonedx.schema;version=snapshot,\
 	org.eclipse.fennec.query.model;version=snapshot,\
-	org.gecko.emf.util.model;version='[2.2.2,2.2.3)'
+	org.gecko.emf.util.model;version='[2.2.2,2.2.3)',\
+	org.docbook.model;version=snapshot,\
+	org.w3.xinclude.model;version=snapshot

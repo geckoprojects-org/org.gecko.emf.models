@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2012 - 2026 Data In Motion and others.&#xA;All rights reserved.&#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;    Data In Motion - initial API and implementation"
+    modelDirectory="/org.w3c.xinclude.model/src" modelPluginID="org.w3c.xinclude.model"
+    modelName="XInclude" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>xinclude.ecore</foreignModel>
+  <genPackages prefix="Include" basePackage="org.w3._2001" resource="XML" disposableProviderFactory="true"
+      ecorePackage="xinclude.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xinclude.ecore#//ParseType">
+      <genEnumLiterals ecoreEnumLiteral="xinclude.ecore#//ParseType/xml"/>
+      <genEnumLiterals ecoreEnumLiteral="xinclude.ecore#//ParseType/text"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="xinclude.ecore#//ParseTypeObject"/>
+    <genClasses ecoreClass="xinclude.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute xinclude.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xinclude.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xinclude.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xinclude.ecore#//DocumentRoot/fallback"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xinclude.ecore#//DocumentRoot/include"/>
+    </genClasses>
+    <genClasses ecoreClass="xinclude.ecore#//FallbackType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute xinclude.ecore#//FallbackType/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute xinclude.ecore#//FallbackType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xinclude.ecore#//FallbackType/include"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute xinclude.ecore#//FallbackType/any"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute xinclude.ecore#//FallbackType/any1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute xinclude.ecore#//FallbackType/anyAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="xinclude.ecore#//IncludeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute xinclude.ecore#//IncludeType/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute xinclude.ecore#//IncludeType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xinclude.ecore#//IncludeType/fallback"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute xinclude.ecore#//IncludeType/any"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute xinclude.ecore#//IncludeType/any1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xinclude.ecore#//IncludeType/accept"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xinclude.ecore#//IncludeType/acceptLanguage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xinclude.ecore#//IncludeType/encoding"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xinclude.ecore#//IncludeType/href"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xinclude.ecore#//IncludeType/parse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xinclude.ecore#//IncludeType/xpointer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute xinclude.ecore#//IncludeType/anyAttribute"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
